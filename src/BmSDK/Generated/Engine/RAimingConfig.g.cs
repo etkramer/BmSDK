@@ -36,54 +36,54 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Spine
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Spine
+    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig Spine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// StructProperty: Head
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Head
+    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig Head
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: LeftArm
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LeftArm
+    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig LeftArm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// StructProperty: RightArm
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RightArm
+    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig RightArm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// StructProperty: LookAt
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookAt
+    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig LookAt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// ByteProperty: Reference
     /// </summary>
-    public unsafe byte Reference
+    public unsafe BmSDK.Engine.RAimingConfig.EAimingReference Reference
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.EAimingReference>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
@@ -101,8 +101,8 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool Reference_AxisNegate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool Reference_YawOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool LookAt_Reference_YawOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
     }
 
     /// <summary>
@@ -170,8 +170,8 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// </summary>
         public unsafe bool Enabled
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>

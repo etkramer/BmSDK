@@ -36,9 +36,9 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: NextEvaluator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextEvaluator
+    public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator NextEvaluator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -56,8 +56,8 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bAlwaysCallEvaluateGoal
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDoPartialAStar
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -105,9 +105,9 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// ObjectProperty: Goal
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Goal
+        public unsafe BmSDK.Engine.Actor Goal
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

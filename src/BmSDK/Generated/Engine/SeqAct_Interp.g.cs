@@ -36,9 +36,9 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: VfTable_AkEvaluate
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkEvaluate
+    public unsafe System.IntPtr VfTable_AkEvaluate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -63,45 +63,45 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// ObjectProperty: OriginActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OriginActor
+    public unsafe BmSDK.Engine.RCinematicOriginActor OriginActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RCinematicOriginActor>(Ptr + 528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
     }
 
     /// <summary>
     /// ObjectProperty: InterpData
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterpData
+    public unsafe BmSDK.Engine.InterpData InterpData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpData>(Ptr + 536); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
     }
 
     /// <summary>
     /// ObjectProperty: ReplicatedActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReplicatedActor
+    public unsafe BmSDK.Engine.MatineeActor ReplicatedActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MatineeActor>(Ptr + 544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
     }
 
     /// <summary>
     /// ObjectProperty: PropertySheet
     /// </summary>
-    public unsafe BmSDK.Engine.SeqAct_Interp.RocksteadyOwner PropertySheet
+    public unsafe BmSDK.Engine.AkProperties PropertySheet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqAct_Interp.RocksteadyOwner>(Ptr + 552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkProperties>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
     /// <summary>
     /// ClassProperty: ReplicatedActorClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReplicatedActorClass
+    public unsafe BmSDK.Class ReplicatedActorClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
@@ -110,8 +110,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bOriginActorWasNULL
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool ForceEnableDebugOverlayIfNotRendering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool ForceEnableDebugOverlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsPlaying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bPaused
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsBeingEdited
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bLooping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bDisableLoopingWhenAutoCapturing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bTriggerStoppedInsteadOfCompleted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRewindOnPlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRewindToEndOnReverse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bNoResetOnRewind
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSingleScreenCutscene
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRewindIfAlreadyPlaying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bReversePlayback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bInterpForPathBuilding
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bForceStartPos
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSynchroniseWithOtherMatinees
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bDisableRadioFilter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bClientSideOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSkipUpdateIfNotVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSkippedUpdateBecauseNotVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -308,8 +308,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSkipUpdateIfGameNotRendering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -317,8 +317,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSkippedUpdateBecausefGameNotRendering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -326,8 +326,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsSkippable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -335,8 +335,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bDoNotSetMainViewTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool AutoCapture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -353,8 +353,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool ExitAutoCapture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -362,8 +362,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool GivePlayerControlDone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -371,8 +371,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool PendingSkipOutputOnUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -380,8 +380,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool PendingSkipOutputOnDeactivate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -389,8 +389,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool PendingStoppedOutputOnDeactivate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
     /// <summary>
@@ -398,8 +398,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool WasSkipped
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -407,8 +407,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool LoadedBanks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -416,8 +416,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool TriggerCompletedIfSkipped
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -425,8 +425,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bShouldShowGore
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -434,8 +434,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bWasStopped
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -443,8 +443,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool HACK_SyncTimeToAudio
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -452,8 +452,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool EnableAudioTimeSmoothing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -461,8 +461,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool UseMasterSyncTrackIfAvailable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -470,8 +470,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool dbgFirstStep
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -479,8 +479,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool AudioOnSkipSetMusicToSilenceBriefly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -488,8 +488,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool DisableEventsOnDirectorTrack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -497,8 +497,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool mCaseFileActivated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -506,8 +506,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bPreviewCameraBlends
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -515,8 +515,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bAllowSkippingDialoguelines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -524,8 +524,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRegisterAsConversation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -533,8 +533,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bTerminated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -542,8 +542,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsGameplayControlled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 572); }
     }
 
     /// <summary>
@@ -630,18 +630,18 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// ByteProperty: SkipPosition
     /// </summary>
-    public unsafe byte SkipPosition
+    public unsafe BmSDK.Engine.SeqAct_Interp.EMatineeSkipPosition SkipPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqAct_Interp.EMatineeSkipPosition>(Ptr + 636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
     }
 
     /// <summary>
     /// ByteProperty: GivePlayerControlPosition
     /// </summary>
-    public unsafe byte GivePlayerControlPosition
+    public unsafe BmSDK.Engine.SeqAct_Interp.EMatineeSkipPosition GivePlayerControlPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 637); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqAct_Interp.EMatineeSkipPosition>(Ptr + 637); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 637); }
     }
 
@@ -675,27 +675,27 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// ArrayProperty: LinkedCover
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> LinkedCover
+    public unsafe BmSDK.TArray<BmSDK.Engine.CoverLink> LinkedCover
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.CoverLink>>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
 
     /// <summary>
     /// ArrayProperty: GroupInst
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> GroupInst
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroupInst> GroupInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroupInst>>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
     /// <summary>
     /// ArrayProperty: DelayedStartupGroups
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> DelayedStartupGroups
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroup> DelayedStartupGroups
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroup>>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
@@ -711,18 +711,18 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// ArrayProperty: CameraCuts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> CameraCuts
+    public unsafe BmSDK.TArray<BmSDK.Engine.SeqAct_Interp.FCameraCutInfo> CameraCuts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SeqAct_Interp.FCameraCutInfo>>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
     /// <summary>
     /// ArrayProperty: CameraCutsNV
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CameraCutsNV
+    public unsafe BmSDK.TArray<BmSDK.Engine.SeqAct_Interp.FCameraCutInfoNV> CameraCutsNV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SeqAct_Interp.FCameraCutInfoNV>>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
@@ -756,18 +756,18 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: m_AudioLastSyncTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_AudioLastSyncTime
+    public unsafe double m_AudioLastSyncTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 
     /// <summary>
     /// StructProperty: dbgStartTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT dbgStartTime
+    public unsafe double dbgStartTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
@@ -801,36 +801,36 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: dbgDisplayTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT dbgDisplayTime
+    public unsafe double dbgDisplayTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// StructProperty: dbgUnclampedTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT dbgUnclampedTime
+    public unsafe double dbgUnclampedTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// StructProperty: dbgAudioTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT dbgAudioTime
+    public unsafe double dbgAudioTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
     /// <summary>
     /// StructProperty: RenderingOverrides
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RenderingOverrides
+    public unsafe BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides RenderingOverrides
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides>(Ptr + 808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
     }
 
@@ -846,9 +846,9 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: DialogueLines
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DialogueLines
+    public unsafe System.IntPtr DialogueLines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 

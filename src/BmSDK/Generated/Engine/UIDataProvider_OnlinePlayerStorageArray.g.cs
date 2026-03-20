@@ -36,9 +36,9 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     /// <summary>
     /// ObjectProperty: PlayerStorage
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerStorage
+    public unsafe BmSDK.Engine.OnlinePlayerStorage PlayerStorage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlinePlayerStorage>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
@@ -63,9 +63,9 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     /// <summary>
     /// ArrayProperty: Values
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Values
+    public unsafe BmSDK.TArray<BmSDK.FName> Values
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 }

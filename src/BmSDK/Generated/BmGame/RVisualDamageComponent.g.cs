@@ -36,18 +36,18 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// ArrayProperty: BonesToHide
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> BonesToHide
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVisualDamageComponent.FBoneToHide> BonesToHide
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVisualDamageComponent.FBoneToHide>>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ArrayProperty: Effects
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Effects
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVisualDamageComponent.FVisualDamageEffect> Effects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVisualDamageComponent.FVisualDamageEffect>>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
@@ -81,27 +81,27 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// ObjectProperty: ImpactParticlesSmall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesSmall
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesSmall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactParticlesMedium
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesMedium
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesMedium
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactParticlesLarge
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesLarge
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesLarge
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
@@ -126,9 +126,9 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// ArrayProperty: InitiallyBrokenOffBones
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT InitiallyBrokenOffBones
+    public unsafe BmSDK.TArray<BmSDK.FName> InitiallyBrokenOffBones
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
@@ -141,9 +141,9 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
         /// <summary>
         /// ComponentProperty: SkelComp
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkelComp
+        public unsafe BmSDK.Engine.SkeletalMeshComponent SkelComp
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

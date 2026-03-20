@@ -36,27 +36,27 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// ObjectProperty: OnlineSub
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OnlineSub
+    public unsafe BmSDK.IpDrv.OnlineSubsystemCommonImpl OnlineSub
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.OnlineSubsystemCommonImpl>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: RequestInProgress
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RequestInProgress
+    public unsafe BmSDK.Engine.OnlineCustomContentRequestCacheableHydra RequestInProgress
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentState
     /// </summary>
-    public unsafe byte CurrentState
+    public unsafe BmSDK.IpDrv.ROnlineCustomContentCacheManager.QueuePriorityState CurrentState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.ROnlineCustomContentCacheManager.QueuePriorityState>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -65,52 +65,52 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// </summary>
     public unsafe bool FileSystemBusy
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
     /// ArrayProperty: ReadQueue
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>> ReadQueue
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra> ReadQueue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra>>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ArrayProperty: WriteQueue
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>> WriteQueue
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra> WriteQueue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra>>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ArrayProperty: DeleteQueue
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>> DeleteQueue
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra> DeleteQueue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineCustomContentRequestCacheableHydra>>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// ArrayProperty: Registries
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> Registries
+    public unsafe BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FRegistryFolder> Registries
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FRegistryFolder>>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// ArrayProperty: ActivityLog
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> ActivityLog
+    public unsafe BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FCacheActivityEntry> ActivityLog
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FCacheActivityEntry>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
@@ -168,18 +168,18 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
         /// <summary>
         /// ByteProperty: OpType
         /// </summary>
-        public unsafe byte OpType
+        public unsafe BmSDK.IpDrv.ROnlineCustomContentCacheManager.CacheActivityType OpType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.ROnlineCustomContentCacheManager.CacheActivityType>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// ByteProperty: Status
         /// </summary>
-        public unsafe byte Status
+        public unsafe BmSDK.IpDrv.ROnlineCustomContentCacheManager.CacheActivityStatus Status
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 17); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.ROnlineCustomContentCacheManager.CacheActivityStatus>(Ptr + 17); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17); }; }
         }
 
@@ -264,9 +264,9 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
         /// <summary>
         /// ArrayProperty: Entries
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Entries
+        public unsafe BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FRegistryEntry> Entries
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.IpDrv.ROnlineCustomContentCacheManager.FRegistryEntry>>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
@@ -318,8 +318,8 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
         /// </summary>
         public unsafe bool Obsolete
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
         }
     }
 }

@@ -36,9 +36,9 @@ public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMulti
     /// <summary>
     /// ArrayProperty: GunSourceActorList
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> GunSourceActorList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> GunSourceActorList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 }

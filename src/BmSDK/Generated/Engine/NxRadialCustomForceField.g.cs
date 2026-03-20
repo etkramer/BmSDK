@@ -80,9 +80,9 @@ public partial class NxRadialCustomForceField : BmSDK.Engine.NxRadialForceField,
     /// <summary>
     /// StructProperty: Kernel
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Kernel
+    public unsafe System.IntPtr Kernel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 }

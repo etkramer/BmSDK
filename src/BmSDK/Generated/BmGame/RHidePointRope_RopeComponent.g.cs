@@ -36,17 +36,17 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.RopeRenderUpdater RopeEndAttachDatas_0
+    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.RopeRenderUpdater>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.RopeRenderUpdater RopeEndAttachDatas_1
+    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.RopeRenderUpdater>(Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 
@@ -71,36 +71,36 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// <summary>
     /// ObjectProperty: RopeRenderUpdater
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.RopePhysicsUpdater RopeRenderUpdater
+    public unsafe BmSDK.BmGame.RRope2RenderUpdater RopeRenderUpdater
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.RopePhysicsUpdater>(Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2RenderUpdater>(Ptr + 612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
     /// <summary>
     /// ObjectProperty: RopePhysicsUpdater
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.RopeUpdaters RopePhysicsUpdater
+    public unsafe BmSDK.BmGame.RRope2PhysicsUpdater RopePhysicsUpdater
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.RopeUpdaters>(Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2PhysicsUpdater>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
 
     /// <summary>
     /// ObjectProperty: XRayMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayMaterial
+    public unsafe BmSDK.Engine.MaterialInterface XRayMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
     }
 
     /// <summary>
     /// ArrayProperty: RopeUpdaters
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> RopeUpdaters
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRope2Updater> RopeUpdaters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRope2Updater>>(Ptr + 636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
     }
 
@@ -127,8 +127,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bInitialised
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bPhysicsDirtied
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bRenderDirtied
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bInitialisationDataNeedsUpdating
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bAllowPhysInitialise
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -172,16 +172,16 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
     /// </summary>
     public unsafe bool bAllowStasis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
     /// ArrayProperty: DependentRopeSections
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DependentRopeSections
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRope2Component> DependentRopeSections
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRope2Component>>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
@@ -194,18 +194,18 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Position
+        public unsafe System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Rotation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Rotation
+        public unsafe BmSDK.GameObject.FQuat Rotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
@@ -219,27 +219,27 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// <summary>
         /// StructProperty: ConnectActor
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConnectActor
+        public unsafe System.IntPtr ConnectActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: ActorAttachPose
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActorAttachPose
+        public unsafe BmSDK.GameObject.FMatrix ActorAttachPose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: RopeAttachPose
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeAttachPose
+        public unsafe BmSDK.GameObject.FMatrix RopeAttachPose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 80); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
 
@@ -275,8 +275,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bSpringConnection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }; }
         }
     }
 
@@ -289,18 +289,18 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// <summary>
         /// ArrayProperty: RopeEndConnections
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT RopeEndConnections
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RRope2Component.FRopeConnectData> RopeEndConnections
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRope2Component.FRopeConnectData>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: RopeEndRenderOffset
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeEndRenderOffset
+        public unsafe System.Numerics.Vector3 RopeEndRenderOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
@@ -309,8 +309,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bInludeEndBeforeEndWithRenderOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 28); }; }
         }
     }
 
@@ -323,9 +323,9 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// <summary>
         /// ComponentProperty: ConnectComponent
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConnectComponent
+        public unsafe BmSDK.Engine.PrimitiveComponent ConnectComponent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -350,36 +350,36 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// <summary>
         /// StructProperty: ConnectComponentLocation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConnectComponentLocation
+        public unsafe System.Numerics.Vector3 ConnectComponentLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>
         /// StructProperty: ConnectComponentRotation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConnectComponentRotation
+        public unsafe BmSDK.Rotator ConnectComponentRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
         /// StructProperty: ConnectRopeLocation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConnectRopeLocation
+        public unsafe System.Numerics.Vector3 ConnectRopeLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 48); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>
         /// StructProperty: ConnectRopeRotation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConnectRopeRotation
+        public unsafe BmSDK.Rotator ConnectRopeRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 60); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 60); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
         }
 
@@ -415,8 +415,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bSpringConnection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
         }
 
         /// <summary>
@@ -424,8 +424,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bDisableEndCollision
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
         }
 
         /// <summary>
@@ -433,8 +433,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bAllowDirectConnection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
         }
 
         /// <summary>
@@ -442,8 +442,8 @@ public partial class RHidePointRope_RopeComponent : BmSDK.BmGame.RRope2Component
         /// </summary>
         public unsafe bool bAllowRenderToConnection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 8) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }; }
         }
     }
 

@@ -36,18 +36,18 @@ public partial class RSeqAct_LinkGangPoints : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// ArrayProperty: Point1
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Point1
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase> Point1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: Point2
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Point2
+    public unsafe BmSDK.BmGame.RGangInteractPointBase Point2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGangInteractPointBase>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

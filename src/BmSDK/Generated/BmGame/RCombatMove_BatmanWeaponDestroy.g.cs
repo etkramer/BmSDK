@@ -71,45 +71,45 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: WeaponDestroyInfo
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.Components WeaponDestroyInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FWeaponDestroyInfo WeaponDestroyInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.Components>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FWeaponDestroyInfo>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
     /// <summary>
     /// ByteProperty: WeaponDestroyType
     /// </summary>
-    public unsafe byte WeaponDestroyType
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.EWeaponDestroyType WeaponDestroyType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.EWeaponDestroyType>(Ptr + 916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
 
     /// <summary>
     /// StructProperty: BatmanWeaponDestroyID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanWeaponDestroyID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanWeaponDestroyID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
 
     /// <summary>
     /// StructProperty: TargetWeaponDestroyID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetWeaponDestroyID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetWeaponDestroyID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
     }
 
     /// <summary>
     /// StructProperty: IntoWeaponDestroyAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT IntoWeaponDestroyAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IntoWeaponDestroyAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 928); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
     }
 
@@ -125,9 +125,9 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: TargetDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetDir
+    public unsafe System.Numerics.Vector3 TargetDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
     }
 
@@ -143,9 +143,9 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimPos
+    public unsafe System.Numerics.Vector3 AnimPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 
@@ -154,8 +154,8 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// </summary>
     public unsafe bool bInstantStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 964) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 964); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 964); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 964) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 964); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 964); }
     }
 
     /// <summary>
@@ -170,9 +170,9 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// ObjectProperty: ShatteredWeapon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ShatteredWeapon
+    public unsafe BmSDK.BmGame.RBMCombatThrownObject ShatteredWeapon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatThrownObject>(Ptr + 972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 }

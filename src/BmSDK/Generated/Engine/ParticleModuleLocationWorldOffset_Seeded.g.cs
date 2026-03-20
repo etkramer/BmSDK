@@ -36,9 +36,9 @@ public partial class ParticleModuleLocationWorldOffset_Seeded : BmSDK.Engine.Par
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocation.StartLocation RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocation.StartLocation>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 }

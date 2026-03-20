@@ -73,7 +73,7 @@ public partial class RCombatMove_ThrowGrenadeAtBatmobile : BmSDK.BmGame.RCombatM
     /// </summary>
     public unsafe bool bEndInCombatAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 828) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 828); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 828); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 828) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 828); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 828); }
     }
 }

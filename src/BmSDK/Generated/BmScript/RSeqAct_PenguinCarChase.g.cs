@@ -38,8 +38,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bRunning
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bDrawDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bAwareOfPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bAbandonmentCriteriaCurrentlyMet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bFleeing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bPlayerInVehicle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bSuspendedExceptHUD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bSpawnedPassengers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool prevCarCountsAsVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -119,70 +119,70 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bForceStopFleeing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
     /// ObjectProperty: Car
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Car
+    public unsafe BmSDK.Engine.Actor Car
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
     /// ObjectProperty: Driver
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Driver
+    public unsafe BmSDK.Engine.Actor Driver
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 
     /// <summary>
     /// ObjectProperty: Passenger
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Passenger
+    public unsafe BmSDK.Engine.Actor Passenger
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 
     /// <summary>
     /// ObjectProperty: CarVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CarVehicle
+    public unsafe BmSDK.BmGame.RVehicleNPC CarVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 
     /// <summary>
     /// ObjectProperty: BoxMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BoxMesh
+    public unsafe BmSDK.Engine.StaticMesh BoxMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// ObjectProperty: forensicsDevice
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT forensicsDevice
+    public unsafe BmSDK.BmScript.RBatmanForensicsDevice forensicsDevice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RBatmanForensicsDevice>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
     /// <summary>
     /// ComponentProperty: SimCarNPC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SimCarNPC
+    public unsafe BmSDK.BmGame.RVehicleSimCarNPC SimCarNPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleSimCarNPC>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
@@ -378,9 +378,9 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: boxSpawnOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT boxSpawnOffset
+    public unsafe System.Numerics.Vector3 boxSpawnOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
     }
 
@@ -441,9 +441,9 @@ public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ArrayProperty: droppedBoxes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> droppedBoxes
+    public unsafe BmSDK.TArray<BmSDK.BmScript.RSeqAct_PenguinCarChase.FdroppedBoxInfo> droppedBoxes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RSeqAct_PenguinCarChase.FdroppedBoxInfo>>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 

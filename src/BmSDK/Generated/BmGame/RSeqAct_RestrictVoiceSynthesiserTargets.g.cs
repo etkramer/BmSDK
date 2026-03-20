@@ -36,18 +36,18 @@ public partial class RSeqAct_RestrictVoiceSynthesiserTargets : BmSDK.Engine.Sequ
     /// <summary>
     /// ArrayProperty: AllowedTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> AllowedTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> AllowedTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ArrayProperty: BlockedTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> BlockedTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> BlockedTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
@@ -56,7 +56,7 @@ public partial class RSeqAct_RestrictVoiceSynthesiserTargets : BmSDK.Engine.Sequ
     /// </summary>
     public unsafe bool bAllowPathingToReachableFloor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 384); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 384); }
     }
 }

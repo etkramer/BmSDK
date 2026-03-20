@@ -54,9 +54,9 @@ public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// ByteProperty: ControlType
     /// </summary>
-    public unsafe byte ControlType
+    public unsafe BmSDK.BmGame.RAnimNotify_CurveFloat.EFloatControlType ControlType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_CurveFloat.EFloatControlType>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

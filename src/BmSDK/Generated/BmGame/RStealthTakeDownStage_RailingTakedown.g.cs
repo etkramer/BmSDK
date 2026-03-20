@@ -71,9 +71,9 @@ public partial class RStealthTakedownStage_RailingTakedown : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: TwistScreenShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TwistScreenShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct TwistScreenShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 }

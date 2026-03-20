@@ -65,8 +65,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bGetUpWhenHitFloor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPlayedEmote
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bKillWhenFinished
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHitWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShouldPlayHitWallImpactSFX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDamagedTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTickMe
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFrozen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFullMotorWeightWhenHitWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceHitWallNextImpact
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFacingUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRevertTempPhysicsWalkingOnExit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -173,16 +173,16 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTempDeactivated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: WritheDmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RRagdollProcessor.HitPawns WritheDmgInfo
+    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo WritheDmgInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRagdollProcessor.HitPawns>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -225,9 +225,9 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: HitPawns
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> HitPawns
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat> HitPawns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnCombat>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
@@ -252,9 +252,9 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: HostPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostPawn
+    public unsafe BmSDK.BmGame.RPawnCombat HostPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat>(Ptr + 396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 
@@ -315,27 +315,27 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: DefaultWritheDescriptions
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DefaultWritheDescriptions
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat.FWritheDescription> DefaultWritheDescriptions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnCombat.FWritheDescription>>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
     /// <summary>
     /// StructProperty: CurrWrithePhase
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrWrithePhase
+    public unsafe BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc CurrWrithePhase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
     /// <summary>
     /// StructProperty: HitWallWrithePhase
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HitWallWrithePhase
+    public unsafe BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc HitWallWrithePhase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
@@ -360,9 +360,9 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: CurrState
     /// </summary>
-    public unsafe byte CurrState
+    public unsafe BmSDK.BmGame.RRagdollProcessor.RagdollState CurrState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRagdollProcessor.RagdollState>(Ptr + 508); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
     }
 }

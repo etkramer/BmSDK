@@ -71,27 +71,27 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: Inventory
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Inventory
+    public unsafe BmSDK.Engine.Inventory Inventory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Inventory>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ObjectProperty: PickupCache
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PickupCache
+    public unsafe BmSDK.Engine.NavigationPoint PickupCache
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationPoint>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ClassProperty: InventoryClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InventoryClass
+    public unsafe BmSDK.Class InventoryClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
@@ -100,7 +100,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFadeOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
     }
 }

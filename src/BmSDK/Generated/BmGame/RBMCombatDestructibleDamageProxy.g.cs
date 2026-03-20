@@ -71,27 +71,27 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// ObjectProperty: ParentCombatPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentCombatPawn
+    public unsafe BmSDK.BmGame.RPawnCombat ParentCombatPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ComponentProperty: DamageCylinder
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageCylinder
+    public unsafe BmSDK.Engine.CylinderComponent DamageCylinder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CylinderComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ComponentProperty: AttachMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AttachMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent AttachMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
@@ -100,8 +100,8 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// </summary>
     public unsafe bool bActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
     }
 
     /// <summary>
@@ -125,9 +125,9 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// StructProperty: CylinderProjection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CylinderProjection
+    public unsafe System.Numerics.Vector3 CylinderProjection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
@@ -143,9 +143,9 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// ArrayProperty: LocationHistory
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> LocationHistory
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> LocationHistory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 }

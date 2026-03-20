@@ -36,117 +36,117 @@ public partial class RDoorDefinition : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SkeletalMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletalMesh
+    public unsafe BmSDK.Engine.SkeletalMesh SkeletalMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: PhysicsAsset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysicsAsset
+    public unsafe BmSDK.Engine.PhysicsAsset PhysicsAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicsAsset>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ObjectProperty: AnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimSet
+    public unsafe BmSDK.Engine.AnimSet AnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigOpenDoorFront
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigOpenDoorFront
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigOpenDoorFront
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigOpenDoorBack
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigOpenDoorBack
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigOpenDoorBack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigLockedDoorFront
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigLockedDoorFront
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigLockedDoorFront
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigLockedDoorBack
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigLockedDoorBack
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigLockedDoorBack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigOpenDoorFrontDual
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigOpenDoorFrontDual
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigOpenDoorFrontDual
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigOpenDoorBackDual
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigOpenDoorBackDual
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigOpenDoorBackDual
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfigBlockedOpenDoor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfigBlockedOpenDoor
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ConfigBlockedOpenDoor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// ObjectProperty: LockedSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockedSound
+    public unsafe BmSDK.Engine.AkEvent LockedSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioDoorSwitch
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioDoorSwitch
+    public unsafe BmSDK.Engine.AkSwitchName AudioDoorSwitch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkSwitchName>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ObjectProperty: DoorPhysicalMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DoorPhysicalMaterial
+    public unsafe BmSDK.Engine.PhysicalMaterial DoorPhysicalMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 

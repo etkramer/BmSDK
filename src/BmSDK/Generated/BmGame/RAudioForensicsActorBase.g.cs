@@ -71,9 +71,9 @@ public partial class RAudioForensicsActorBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: ForensicsState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForensicsState
+    public unsafe BmSDK.Engine.AkStateName ForensicsState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

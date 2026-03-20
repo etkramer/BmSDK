@@ -36,27 +36,27 @@ public partial class MaterialExpressionSmoothStep : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionSmoothStep.Min Input
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSmoothStep.Min>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Min
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionSmoothStep.Max Min
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Min
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSmoothStep.Max>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Max
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Max
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Max
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 }

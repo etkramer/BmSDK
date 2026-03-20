@@ -45,18 +45,18 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: FollowActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FollowActor
+    public unsafe BmSDK.Engine.Actor FollowActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
     }
 
     /// <summary>
     /// ObjectProperty: NavHandle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NavHandle
+    public unsafe BmSDK.BmGame.RNavigationHandle NavHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
@@ -65,8 +65,8 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// </summary>
     public unsafe bool bFaceFollowActor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 608); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 608); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// </summary>
     public unsafe bool bNeverAvoid
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 608); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 608); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 608); }
     }
 
     /// <summary>
@@ -99,9 +99,9 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// ByteProperty: Speed
     /// </summary>
-    public unsafe byte Speed
+    public unsafe BmSDK.BmGame.RBMBehaviour_Follow.MoveSpeed Speed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Follow.MoveSpeed>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
 

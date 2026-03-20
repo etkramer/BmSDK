@@ -71,52 +71,52 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     /// <summary>
     /// ObjectProperty: CECombatAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CECombatAnimset
+    public unsafe BmSDK.Engine.AnimSet CECombatAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6724); }
     }
 
     /// <summary>
     /// ObjectProperty: BMCombatAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BMCombatAnimset
+    public unsafe BmSDK.Engine.AnimSet BMCombatAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6732); }
     }
 
     /// <summary>
     /// ObjectProperty: InteractionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InteractionAnimset_0
+    public unsafe BmSDK.Engine.AnimSet InteractionAnimset_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6740); }
     }
     /// <summary>
     /// ObjectProperty: InteractionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InteractionAnimset_1
+    public unsafe BmSDK.Engine.AnimSet InteractionAnimset_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6748); }
     }
 
     /// <summary>
     /// ObjectProperty: AllyInteractionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AllyInteractionAnimset_0
+    public unsafe BmSDK.Engine.AnimSet AllyInteractionAnimset_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6756); }
     }
     /// <summary>
     /// ObjectProperty: AllyInteractionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AllyInteractionAnimset_1
+    public unsafe BmSDK.Engine.AnimSet AllyInteractionAnimset_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6764); }
     }
 

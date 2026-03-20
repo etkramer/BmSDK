@@ -36,27 +36,27 @@ public partial class MaterialExpressionRotateAboutAxis : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: NormalizedRotationAxisAndAngle
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionRotateAboutAxis.PositionOnAxis NormalizedRotationAxisAndAngle
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput NormalizedRotationAxisAndAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRotateAboutAxis.PositionOnAxis>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: PositionOnAxis
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionRotateAboutAxis.Position PositionOnAxis
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput PositionOnAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRotateAboutAxis.Position>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Position
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Position
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Position
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OmnitronOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronOffset
+    public unsafe System.Numerics.Vector3 OmnitronOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
@@ -89,27 +89,27 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: OldMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> OldMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> OldMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ComponentProperty: StaticMeshComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMeshComponent
+    public unsafe BmSDK.Engine.StaticMeshComponent StaticMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
     /// ObjectProperty: ExternalCamera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExternalCamera
+    public unsafe BmSDK.BmGame.RCinematicCameraActor ExternalCamera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicCameraActor>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
@@ -145,7 +145,7 @@ public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanTargetThrougWalls
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
     }
 }

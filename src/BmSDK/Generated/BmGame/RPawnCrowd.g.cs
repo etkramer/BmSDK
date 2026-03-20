@@ -71,9 +71,9 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: PlayerPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerPawn
+    public unsafe BmSDK.BmGame.RPawnPlayer PlayerPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 4632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4632); }
     }
 }

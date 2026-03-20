@@ -54,9 +54,9 @@ public partial class ApexTurbulenceHeatSourceComponent : BmSDK.Engine.ApexFieldS
     /// <summary>
     /// ByteProperty: GeometryType
     /// </summary>
-    public unsafe byte GeometryType
+    public unsafe BmSDK.Engine.ApexFieldSamplerComponent.EGeometryType GeometryType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent.EGeometryType>(Ptr + 612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
@@ -72,18 +72,18 @@ public partial class ApexTurbulenceHeatSourceComponent : BmSDK.Engine.ApexFieldS
     /// <summary>
     /// StructProperty: Extents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Extents
+    public unsafe System.Numerics.Vector3 Extents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
 
     /// <summary>
     /// ComponentProperty: BoxComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BoxComponent
+    public unsafe BmSDK.Engine.DrawBoxComponent BoxComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawBoxComponent>(Ptr + 632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 }

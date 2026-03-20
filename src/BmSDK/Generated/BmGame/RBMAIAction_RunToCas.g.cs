@@ -71,9 +71,9 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// ObjectProperty: Casualty
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Casualty
+    public unsafe BmSDK.BmGame.RPawnVillain Casualty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
     }
 
@@ -82,8 +82,8 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// </summary>
     public unsafe bool bCasStartedStrungUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// </summary>
     public unsafe bool bHoldOffMoving
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
     }
 
     /// <summary>
@@ -107,9 +107,9 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// ByteProperty: runToCasType
     /// </summary>
-    public unsafe byte runToCasType
+    public unsafe BmSDK.BmGame.RBMAIAction_RunToCas.eRunToCasType runToCasType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_RunToCas.eRunToCasType>(Ptr + 916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
 

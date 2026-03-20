@@ -36,18 +36,18 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// <summary>
     /// ObjectProperty: TargetVantagePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetVantagePoint
+    public unsafe BmSDK.Engine.Actor TargetVantagePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: teleportLocation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT teleportLocation
+    public unsafe BmSDK.Engine.Actor teleportLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
@@ -56,8 +56,8 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// </summary>
     public unsafe bool bGrappleIfAlreadyOnVantagePoint
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// </summary>
     public unsafe bool bNoGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// </summary>
     public unsafe bool bCleanBatmanPoseAfterNoGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// </summary>
     public unsafe bool bResetCameraBehindBatmanAfterNoGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -92,7 +92,7 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
     /// </summary>
     public unsafe bool bUseCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 }

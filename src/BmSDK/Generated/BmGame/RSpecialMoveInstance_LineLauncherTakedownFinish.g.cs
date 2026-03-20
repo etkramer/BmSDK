@@ -71,18 +71,18 @@ public partial class RSpecialMoveInstance_LineLauncherTakedownFinish : BmSDK.BmG
     /// <summary>
     /// ObjectProperty: GrabbedVictim
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrabbedVictim
+    public unsafe BmSDK.BmGame.RPawnVillain GrabbedVictim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 
     /// <summary>
     /// ObjectProperty: ControlledBehaviour
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControlledBehaviour
+    public unsafe BmSDK.BmGame.RBMBehaviour ControlledBehaviour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour>(Ptr + 996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
     }
 }

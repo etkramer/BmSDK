@@ -71,9 +71,9 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// ByteProperty: ConvergeTarget
     /// </summary>
-    public unsafe byte ConvergeTarget
+    public unsafe BmSDK.BmGame.RAEC_ConvergeMine.ConvergeTargetType ConvergeTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_ConvergeMine.ConvergeTargetType>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
@@ -89,18 +89,18 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// StructProperty: TargetLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetLoc
+    public unsafe System.Numerics.Vector3 TargetLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
     /// ArrayProperty: ConvergeNavReq
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> ConvergeNavReq
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RNavigationHandle> ConvergeNavReq
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RNavigationHandle>>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 

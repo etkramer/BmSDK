@@ -73,25 +73,25 @@ public partial class MCrowdAttractor_CrowAttack : BmSDK.BmGame.RCrowdAttractor, 
     /// </summary>
     public unsafe bool bKillAllAgent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
     /// StructProperty: CrowedAcceleration
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CrowedAcceleration
+    public unsafe System.Numerics.Vector3 CrowedAcceleration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 
     /// <summary>
     /// StructProperty: SpeedVector
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SpeedVector
+    public unsafe System.Numerics.Vector3 SpeedVector
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 }

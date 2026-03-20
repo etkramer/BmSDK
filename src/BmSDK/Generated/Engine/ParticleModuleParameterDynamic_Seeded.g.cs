@@ -36,9 +36,9 @@ public partial class ParticleModuleParameterDynamic_Seeded : BmSDK.Engine.Partic
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleParameterDynamic.DynamicParams RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleParameterDynamic.DynamicParams>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

@@ -36,36 +36,36 @@ public partial class ParticleModuleLocationDirect : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.LocationOffset Location
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector Location
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.LocationOffset>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: LocationOffset
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.ScaleFactor LocationOffset
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector LocationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.ScaleFactor>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// StructProperty: ScaleFactor
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.Direction ScaleFactor
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector ScaleFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.Direction>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Direction
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 }

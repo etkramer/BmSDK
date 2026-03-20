@@ -71,54 +71,54 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// ObjectProperty: destructibleWall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT destructibleWall
+    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall destructibleWall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp_FractureWall>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
     /// ObjectProperty: ChildGroupCheck
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChildGroupCheck
+    public unsafe BmSDK.BmGame.RAEC_ExplodedWall_GroupCheck ChildGroupCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_ExplodedWall_GroupCheck>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
     /// ObjectProperty: ChildPauseGroup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChildPauseGroup
+    public unsafe BmSDK.BmGame.RAEC_GroupPauseAndLook ChildPauseGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_GroupPauseAndLook>(Ptr + 736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
     /// <summary>
     /// ObjectProperty: OverlookSearch
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverlookSearch
+    public unsafe BmSDK.BmGame.RGroupOverlookNavHandleWrapper OverlookSearch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGroupOverlookNavHandleWrapper>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
     /// StructProperty: ExplosionCentre
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExplosionCentre
+    public unsafe System.Numerics.Vector3 ExplosionCentre
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
     /// StructProperty: WallNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallNormal
+    public unsafe System.Numerics.Vector3 WallNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
@@ -127,8 +127,8 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// </summary>
     public unsafe bool bPlayedCheckWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 776) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 776); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 776); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 776) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 776); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 776); }
     }
 
     /// <summary>

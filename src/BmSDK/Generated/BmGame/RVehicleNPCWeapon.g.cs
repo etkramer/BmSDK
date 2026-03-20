@@ -71,27 +71,27 @@ public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: PawnWeaponType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnWeaponType
+    public unsafe BmSDK.Class PawnWeaponType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ObjectProperty: ProjectileArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileArchetype
+    public unsafe BmSDK.BmGame.RProjectile ProjectileArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectile>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ObjectProperty: HostVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostVehicle
+    public unsafe BmSDK.BmGame.RVehicleNPC HostVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
@@ -100,8 +100,8 @@ public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanDoSimultaneousAttack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool PreppingToFire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool HasEverFired
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 692); }
     }
 }

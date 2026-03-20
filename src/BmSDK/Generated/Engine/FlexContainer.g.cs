@@ -56,8 +56,8 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDebugDrawPoints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFixedTimeStep
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnableCCD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bComplexCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFluid
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -135,9 +135,9 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Gravity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Gravity
+    public unsafe System.Numerics.Vector3 Gravity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
@@ -180,18 +180,18 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: RBChannel
     /// </summary>
-    public unsafe byte RBChannel
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel RBChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RBCollideWithChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
@@ -288,9 +288,9 @@ public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Wind
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Wind
+    public unsafe System.Numerics.Vector3 Wind
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 

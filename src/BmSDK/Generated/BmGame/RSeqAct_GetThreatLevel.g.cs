@@ -36,18 +36,18 @@ public partial class RSeqAct_GetThreatLevel : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// ByteProperty: District
     /// </summary>
-    public unsafe byte District
+    public unsafe BmSDK.BmGame.RGameInfo.EDistrict District
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: ThreatType
     /// </summary>
-    public unsafe byte ThreatType
+    public unsafe BmSDK.BmGame.RPopulationManager.EThreatType ThreatType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPopulationManager.EThreatType>(Ptr + 353); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 

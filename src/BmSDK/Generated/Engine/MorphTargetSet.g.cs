@@ -36,27 +36,27 @@ public partial class MorphTargetSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Targets
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Targets
+    public unsafe BmSDK.TArray<BmSDK.Engine.MorphTarget> Targets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MorphTarget>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: BaseSkelMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BaseSkelMesh
+    public unsafe BmSDK.Engine.SkeletalMesh BaseSkelMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: RawWedgePointIndices
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RawWedgePointIndices
+    public unsafe BmSDK.GameObject.FArray_Mirror RawWedgePointIndices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

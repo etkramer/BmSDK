@@ -71,9 +71,9 @@ public partial class RSpecialMoveInstance_CatchLedge : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// StructProperty: AnimStartLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimStartLocation
+    public unsafe System.Numerics.Vector3 AnimStartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 }

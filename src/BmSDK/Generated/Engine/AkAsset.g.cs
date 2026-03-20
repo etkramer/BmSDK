@@ -36,9 +36,9 @@ public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: ParentBank
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentBank
+    public unsafe BmSDK.Engine.AkBank ParentBank
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkBank>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

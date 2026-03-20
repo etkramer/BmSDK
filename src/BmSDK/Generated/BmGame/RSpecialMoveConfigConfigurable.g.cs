@@ -36,9 +36,9 @@ public partial class RSpecialMoveConfigConfigurable : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// ObjectProperty: Config
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Config
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig Config
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 }

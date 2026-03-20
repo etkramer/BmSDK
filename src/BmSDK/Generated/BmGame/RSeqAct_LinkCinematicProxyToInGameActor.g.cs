@@ -36,27 +36,27 @@ public partial class RSeqAct_LinkCinematicProxyToInGameActor : BmSDK.Engine.SeqA
     /// <summary>
     /// ObjectProperty: InGameActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InGameActor
+    public unsafe BmSDK.Engine.Actor InGameActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// ObjectProperty: CinematicActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CinematicActor
+    public unsafe BmSDK.BmGame.RCinematicActor CinematicActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicActor>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ObjectProperty: CinematicVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CinematicVehicle
+    public unsafe BmSDK.BmGame.RCinematicVehicle CinematicVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicVehicle>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 

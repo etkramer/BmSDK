@@ -71,9 +71,9 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: TrackingPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TrackingPlayer
+    public unsafe BmSDK.BmGame.RPlayerController TrackingPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 1248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
     }
 
@@ -82,8 +82,8 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool Tracking
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool BlendingBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool AudioStartedWater
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool DontPlayWaterSound
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool bUnderFearGas
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
@@ -127,34 +127,34 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// </summary>
     public unsafe bool bUnderWater
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1256); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1256); }
     }
 
     /// <summary>
     /// StructProperty: TrackingOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TrackingOffset
+    public unsafe BmSDK.Rotator TrackingOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
     }
 
     /// <summary>
     /// StructProperty: TrackingLocationOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TrackingLocationOffset
+    public unsafe System.Numerics.Vector3 TrackingLocationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
     }
 
     /// <summary>
     /// StructProperty: TrackingLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TrackingLocation
+    public unsafe System.Numerics.Vector3 TrackingLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 

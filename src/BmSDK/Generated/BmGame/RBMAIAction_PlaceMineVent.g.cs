@@ -71,9 +71,9 @@ public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAn
     /// <summary>
     /// ObjectProperty: MinePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MinePoint
+    public unsafe BmSDK.BmGame.RThugMineablePointVent MinePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RThugMineablePointVent>(Ptr + 948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
 }

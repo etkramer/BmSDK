@@ -74,7 +74,7 @@ public partial class RSeqEvent_Rescued : BmSDK.Engine.SequenceEvent, BmSDK.IGame
     /// </summary>
     public unsafe bool bAllowWhileTalking
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
     }
 }

@@ -71,117 +71,117 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// ComponentProperty: DustComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustComponent
+    public unsafe BmSDK.Engine.RDustComponent DustComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDustComponent>(Ptr + 888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
     }
 
     /// <summary>
     /// ComponentProperty: DustMap
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustMap
+    public unsafe BmSDK.Engine.RDustMapComponent DustMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDustMapComponent>(Ptr + 896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
     }
 
     /// <summary>
     /// ObjectProperty: InsideGasPPVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InsideGasPPVolume
+    public unsafe BmSDK.Engine.PostProcessVolume InsideGasPPVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 
     /// <summary>
     /// ObjectProperty: DustTrailTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustTrailTemplate
+    public unsafe BmSDK.Engine.ParticleSystem DustTrailTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
     }
 
     /// <summary>
     /// ObjectProperty: DustTopFXTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustTopFXTemplate
+    public unsafe BmSDK.Engine.ParticleSystem DustTopFXTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
 
     /// <summary>
     /// ObjectProperty: PyroFearGasCanopy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PyroFearGasCanopy
+    public unsafe BmSDK.Engine.RPyroFearGasAttachedToCamera PyroFearGasCanopy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 928); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPyroFearGasAttachedToCamera>(Ptr + 928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
     }
 
     /// <summary>
     /// ObjectProperty: SmallSparkSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmallSparkSound
+    public unsafe BmSDK.Engine.AkEvent SmallSparkSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
     }
 
     /// <summary>
     /// ObjectProperty: LargeSparkSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LargeSparkSound
+    public unsafe BmSDK.Engine.AkEvent LargeSparkSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 
     /// <summary>
     /// ComponentProperty: ThickFearGasComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThickFearGasComponent
+    public unsafe BmSDK.Engine.RThickFearGasComponent ThickFearGasComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RThickFearGasComponent>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 
     /// <summary>
     /// ComponentProperty: DustGasFollowVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustGasFollowVFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent DustGasFollowVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
     /// <summary>
     /// ComponentProperty: DustSparkBigVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustSparkBigVFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent DustSparkBigVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 
     /// <summary>
     /// ComponentProperty: DustSparkVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustSparkVFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent DustSparkVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 
     /// <summary>
     /// ComponentProperty: FarDustMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FarDustMesh
+    public unsafe BmSDK.Engine.StaticMeshComponent FarDustMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
     }
 
@@ -208,8 +208,8 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// </summary>
     public unsafe bool bFearGasActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// </summary>
     public unsafe bool bStateTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// </summary>
     public unsafe bool bForceStateUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// </summary>
     public unsafe bool bWasInGas
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1000); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1000); }
     }
 
     /// <summary>
@@ -269,27 +269,27 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// ArrayProperty: DustTrailsVFX
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>> DustTrailsVFX
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent> DustTrailsVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>(Ptr + 1016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent>>(Ptr + 1016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
 
     /// <summary>
     /// ArrayProperty: DustTrailsAlloc
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>> DustTrailsAlloc
+    public unsafe BmSDK.TArray<bool> DustTrailsAlloc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>(Ptr + 1032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 1032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
     }
 
     /// <summary>
     /// ArrayProperty: DustTrailsLife
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>> DustTrailsLife
+    public unsafe BmSDK.TArray<float> DustTrailsLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>(Ptr + 1048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
     }
 
@@ -305,27 +305,27 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// ArrayProperty: DustTopVFX
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>> DustTopVFX
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent> DustTopVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>(Ptr + 1068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent>>(Ptr + 1068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
     }
 
     /// <summary>
     /// ArrayProperty: DustTopFXAlloc
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>> DustTopFXAlloc
+    public unsafe BmSDK.TArray<bool> DustTopFXAlloc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>(Ptr + 1084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 1084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
     }
 
     /// <summary>
     /// ArrayProperty: DustTopFXLife
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>> DustTopFXLife
+    public unsafe BmSDK.TArray<float> DustTopFXLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>(Ptr + 1100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
     }
 
@@ -359,27 +359,27 @@ public partial class RDustVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.I
     /// <summary>
     /// StructProperty: prevPlayerPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT prevPlayerPos
+    public unsafe System.Numerics.Vector3 prevPlayerPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
     }
 
     /// <summary>
     /// StructProperty: prevUpdatedPlayerPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT prevUpdatedPlayerPos
+    public unsafe System.Numerics.Vector3 prevUpdatedPlayerPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
     }
 
     /// <summary>
     /// StructProperty: prevUpdatedPlayerPos2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT prevUpdatedPlayerPos2
+    public unsafe System.Numerics.Vector3 prevUpdatedPlayerPos2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
     }
 

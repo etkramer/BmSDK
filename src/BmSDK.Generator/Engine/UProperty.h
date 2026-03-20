@@ -10,7 +10,7 @@ enum class EPropertyFlags : DWORD
 	CPF_ReturnParm = 0x80
 };
 
-CLASS(UProperty, 88)
+CLASS(UProperty, 148)
 class UProperty : public UField
 {
 	FIELD(INT, ArrayDim)
@@ -18,7 +18,7 @@ class UProperty : public UField
 	BYTE UNK1[4];
 	FIELD(WORD, ElementSize)
 	FIELD(WORD, Offset)
-	BYTE UNK2[24];
+	BYTE UNK2[40];
 
 public:
 	string GetInnerTypeNameManaged() const;
@@ -70,7 +70,7 @@ public:
 	STATIC_CLASS("Core.BoolProperty")
 };
 
-// CHECK_CLASS(UProperty)
+CHECK_CLASS(UProperty)
 // CHECK_CLASS(UStructProperty)
 // CHECK_CLASS(UObjectProperty)
 // CHECK_CLASS(UByteProperty)

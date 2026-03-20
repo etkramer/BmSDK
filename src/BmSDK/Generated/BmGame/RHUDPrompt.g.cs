@@ -36,18 +36,18 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: PC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
+    public unsafe BmSDK.BmGame.RPlayerController PC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: FromKismet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FromKismet
+    public unsafe BmSDK.BmGame.RSeqAct_HelpText FromKismet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_HelpText>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
@@ -56,8 +56,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverridePromptIsActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverridePromptShouldBeActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForcePromptUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -83,52 +83,52 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisplayWhetherHelpTextIsHintOrTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: OverridePrompt
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.MainLine OverridePrompt
+    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.MainLine>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// StructProperty: MainLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.MainLineLast MainLine
+    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.MainLineLast>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// StructProperty: MainLineLast
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.Lines MainLineLast
+    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.Lines>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// ArrayProperty: Lines
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> Lines
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine> Lines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine>>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ArrayProperty: LinesLast
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> LinesLast
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine> LinesLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine>>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
@@ -177,9 +177,9 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ByteProperty: Icon
         /// </summary>
-        public unsafe byte Icon
+        public unsafe BmSDK.BmGame.RHUDPrompt.EControlIcon Icon
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.EControlIcon>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
@@ -197,8 +197,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         /// </summary>
         public unsafe bool bAsSecondaryMain
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
         }
     }
 

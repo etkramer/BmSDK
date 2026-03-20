@@ -45,9 +45,9 @@ public partial class ParticleModuleColorByParameter : BmSDK.Engine.ParticleModul
     /// <summary>
     /// StructProperty: DefaultColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultColor
+    public unsafe BmSDK.GameObject.FColor DefaultColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

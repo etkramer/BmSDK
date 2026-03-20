@@ -47,8 +47,8 @@ public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmS
     /// </summary>
     public unsafe bool bAllowAddIfNew
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmS
     /// </summary>
     public unsafe bool bAddToPercent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -117,18 +117,18 @@ public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// ByteProperty: bLocked
     /// </summary>
-    public unsafe byte bLocked
+    public unsafe BmSDK.BmScript.RSeqAct_SideStory_Update.SS_TriBool bLocked
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_SideStory_Update.SS_TriBool>(Ptr + 396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 
     /// <summary>
     /// ByteProperty: bIdentityUnknown
     /// </summary>
-    public unsafe byte bIdentityUnknown
+    public unsafe BmSDK.BmScript.RSeqAct_SideStory_Update.SS_TriBool bIdentityUnknown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 397); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_SideStory_Update.SS_TriBool>(Ptr + 397); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 397); }
     }
 

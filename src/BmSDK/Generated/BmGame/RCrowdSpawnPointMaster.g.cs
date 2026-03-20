@@ -71,9 +71,9 @@ public partial class RCrowdSpawnPointMaster : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// ArrayProperty: CrowdChilds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> CrowdChilds
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCrowdSpawnPointChild> CrowdChilds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCrowdSpawnPointChild>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
@@ -107,18 +107,18 @@ public partial class RCrowdSpawnPointMaster : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// ByteProperty: Shape
     /// </summary>
-    public unsafe byte Shape
+    public unsafe BmSDK.BmGame.RCrowdSpawnPointMaster.SpawnShape Shape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdSpawnPointMaster.SpawnShape>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ByteProperty: Grouping
     /// </summary>
-    public unsafe byte Grouping
+    public unsafe BmSDK.BmGame.RCrowdSpawnPointMaster.SpawnGrouping Grouping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 697); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdSpawnPointMaster.SpawnGrouping>(Ptr + 697); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 697); }
     }
 
@@ -161,18 +161,18 @@ public partial class RCrowdSpawnPointMaster : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// StructProperty: OldLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OldLocation
+    public unsafe System.Numerics.Vector3 OldLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
     /// <summary>
     /// StructProperty: OldRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OldRotation
+    public unsafe BmSDK.Rotator OldRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
@@ -181,8 +181,8 @@ public partial class RCrowdSpawnPointMaster : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// </summary>
     public unsafe bool bRegenerateChildren
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
     }
 
     /// <summary>

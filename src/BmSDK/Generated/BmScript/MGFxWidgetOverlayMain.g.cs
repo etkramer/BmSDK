@@ -36,18 +36,18 @@ public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: _parent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT _parent
+    public unsafe BmSDK.BmScript.MGFxMovieUI_WBIDMain _parent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.MGFxMovieUI_WBIDMain>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
     /// ObjectProperty: Screen_Current
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Screen_Current
+    public unsafe BmSDK.BmScript.MGFxWidgetOverlayScreen Screen_Current
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.MGFxWidgetOverlayScreen>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 }

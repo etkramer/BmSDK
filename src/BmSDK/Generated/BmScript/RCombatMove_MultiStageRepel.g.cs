@@ -71,36 +71,36 @@ public partial class RCombatMove_MultiStageRepel : BmSDK.BmGame.RCombatMove, BmS
     /// <summary>
     /// ObjectProperty: MWLt
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MWLt
+    public unsafe BmSDK.BmScript.RPawnVillainMultiStage MWLt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnVillainMultiStage>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// ObjectProperty: Target
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Target
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// StructProperty: KnockBackDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT KnockBackDir
+    public unsafe System.Numerics.Vector3 KnockBackDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimId
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 

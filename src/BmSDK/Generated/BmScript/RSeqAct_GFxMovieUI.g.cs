@@ -36,45 +36,45 @@ public partial class RSeqAct_GFxMovieUI : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: TheMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie TheMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: RenderTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderTexture
+    public unsafe BmSDK.Engine.TextureRenderTarget2D RenderTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTarget2D>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// ObjectProperty: MovieUI
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MovieUI
+    public unsafe BmSDK.BmGame.RGFxMovieUI MovieUI
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// ClassProperty: TheClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheClass
+    public unsafe BmSDK.Class TheClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// ByteProperty: RenderTextureMode
     /// </summary>
-    public unsafe byte RenderTextureMode
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer.GFxRenderTextureMode RenderTextureMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer.GFxRenderTextureMode>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
@@ -90,9 +90,9 @@ public partial class RSeqAct_GFxMovieUI : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: AssetReferences
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> AssetReferences
+    public unsafe BmSDK.TArray<BmSDK.GameObject> AssetReferences
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 }

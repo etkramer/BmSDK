@@ -38,8 +38,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bRiotingThugs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bPassiveRiotingThugs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bWanderingThugs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetVehiclePopulations
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetDronePopulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetHumveePopulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bWarmUpVehiclePopulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bDisableExtraCarScenarios
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool SetRandomPopulationForChallenge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetVehiclePopulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetRiotPopulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetVehicleFormations
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// </summary>
     public unsafe bool bSetAPCSideStory
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
     }
 
     /// <summary>
@@ -216,18 +216,18 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// <summary>
     /// StructProperty: WandererData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WandererData
+    public unsafe BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.FWanderingData WandererData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.FWanderingData>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// StructProperty: RiotWeaponData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.Scenarios RiotWeaponData
+    public unsafe BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.FRiotWeapons RiotWeaponData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.Scenarios>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetRandomPopulationBase.FRiotWeapons>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
@@ -243,54 +243,54 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// <summary>
     /// ArrayProperty: Scenarios
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> Scenarios
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleScenario> Scenarios
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleScenario>>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
     /// <summary>
     /// ArrayProperty: ScenarioInfos
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> ScenarioInfos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo> ScenarioInfos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 
     /// <summary>
     /// ArrayProperty: DroneScenarioInfos
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> DroneScenarioInfos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo> DroneScenarioInfos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>>(Ptr + 452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
     }
 
     /// <summary>
     /// ArrayProperty: HumveeScenarioInfos
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> HumveeScenarioInfos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo> HumveeScenarioInfos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
     }
 
     /// <summary>
     /// ArrayProperty: ThugCarScenarioInfos
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> ThugCarScenarioInfos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo> ThugCarScenarioInfos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FVehicleScenarioInfo>>(Ptr + 484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
     }
 
     /// <summary>
     /// ArrayProperty: DroneFormationScenarios
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> DroneFormationScenarios
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleScenario> DroneFormationScenarios
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleScenario>>(Ptr + 500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
     }
 
@@ -378,9 +378,9 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// <summary>
     /// ArrayProperty: APCSideStoryScenarios
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> APCSideStoryScenarios
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleScenario> APCSideStoryScenarios
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleScenario>>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
@@ -405,9 +405,9 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// <summary>
     /// ByteProperty: DistrictOverride
     /// </summary>
-    public unsafe byte DistrictOverride
+    public unsafe BmSDK.BmGame.RGameInfo.EDistrict DistrictOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
     }
 
@@ -423,9 +423,9 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
     /// <summary>
     /// ClassProperty: MilitiaGun
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MilitiaGun
+    public unsafe BmSDK.Class MilitiaGun
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
@@ -456,9 +456,9 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
         /// <summary>
         /// ArrayProperty: AllowedWeapons
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AllowedWeapons
+        public unsafe BmSDK.TArray<BmSDK.Class> AllowedWeapons
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
@@ -483,8 +483,8 @@ public partial class RSeqAct_SetRandomVehicleFormationsForPopulation : BmSDK.BmG
         /// </summary>
         public unsafe bool bIsMilitia
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4); }; }
         }
     }
 }

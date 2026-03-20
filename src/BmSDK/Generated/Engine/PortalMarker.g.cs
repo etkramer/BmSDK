@@ -71,9 +71,9 @@ public partial class PortalMarker : BmSDK.Engine.NavigationPoint, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: MyPortal
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyPortal
+    public unsafe BmSDK.Engine.PortalTeleporter MyPortal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PortalTeleporter>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 }

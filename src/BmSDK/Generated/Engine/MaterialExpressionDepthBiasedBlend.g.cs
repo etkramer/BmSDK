@@ -38,8 +38,8 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
     /// </summary>
     public unsafe bool bNormalize
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
     }
 
     /// <summary>
@@ -54,27 +54,27 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: RGB
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionDepthBiasedBlend.Alpha RGB
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput RGB
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDepthBiasedBlend.Alpha>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: Alpha
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionDepthBiasedBlend.Bias Alpha
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Alpha
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDepthBiasedBlend.Bias>(Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
     /// <summary>
     /// StructProperty: Bias
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Bias
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Bias
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 }

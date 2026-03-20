@@ -71,9 +71,9 @@ public partial class RHotWireBoxBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGa
     /// <summary>
     /// ComponentProperty: RewireBox
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RewireBox
+    public unsafe BmSDK.Engine.SkeletalMeshComponent RewireBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 }

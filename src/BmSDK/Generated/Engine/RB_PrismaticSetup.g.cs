@@ -63,72 +63,72 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// <summary>
     /// StructProperty: Pos1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Pos1
+    public unsafe System.Numerics.Vector3 Pos1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// StructProperty: PriAxis1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PriAxis1
+    public unsafe System.Numerics.Vector3 PriAxis1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// StructProperty: SecAxis1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SecAxis1
+    public unsafe System.Numerics.Vector3 SecAxis1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// StructProperty: Pos2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Pos2
+    public unsafe System.Numerics.Vector3 Pos2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// StructProperty: PriAxis2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PriAxis2
+    public unsafe System.Numerics.Vector3 PriAxis2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// StructProperty: SecAxis2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SecAxis2
+    public unsafe System.Numerics.Vector3 SecAxis2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
     /// StructProperty: PulleyPivot1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PulleyPivot1
+    public unsafe System.Numerics.Vector3 PulleyPivot1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: PulleyPivot2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PulleyPivot2
+    public unsafe System.Numerics.Vector3 PulleyPivot2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
@@ -137,8 +137,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bEnableProjection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bEnableCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bRampDownBreakThresholds
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bLinearLimitSoft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bLinearBreakable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bSwingLimited
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bTwistLimited
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bSwingLimitSoft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bTwistLimitSoft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bAngularBreakable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bIsPulley
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bMaintainMinDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
@@ -245,16 +245,16 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// </summary>
     public unsafe bool bIsDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 204); }
     }
 
     /// <summary>
     /// ByteProperty: ProjectionMode
     /// </summary>
-    public unsafe byte ProjectionMode
+    public unsafe BmSDK.Engine.RB_ConstraintSetup.ConstraintProjectionMode ProjectionMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.ConstraintProjectionMode>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -279,27 +279,27 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
     /// <summary>
     /// StructProperty: LinearXSetup
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinearXSetup
+    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearXSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// StructProperty: LinearYSetup
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinearYSetup
+    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearYSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
     /// StructProperty: LinearZSetup
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinearZSetup
+    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearZSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 

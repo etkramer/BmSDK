@@ -71,27 +71,27 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// <summary>
     /// ObjectProperty: CurrentGadget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentGadget
+    public unsafe BmSDK.BmGame.RInventoryGadget CurrentGadget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
     /// ObjectProperty: PrevGadget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PrevGadget
+    public unsafe BmSDK.BmGame.RInventoryGadget PrevGadget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
     /// ObjectProperty: DisplayedGadget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DisplayedGadget
+    public unsafe BmSDK.BmGame.RInventoryGadget DisplayedGadget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
@@ -116,75 +116,75 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BatarangGadgets AvailableGadgets_0
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BatarangGadgets>(Ptr + 744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BatarangGadgets AvailableGadgets_1
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BatarangGadgets>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BatarangGadgets AvailableGadgets_2
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BatarangGadgets>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BatarangGadgets AvailableGadgets_3
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BatarangGadgets>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets BatarangGadgets_0
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets>(Ptr + 808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
     }
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets BatarangGadgets_1
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets>(Ptr + 824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
     }
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets BatarangGadgets_2
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets BatarangGadgets_3
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.BM2SelectableGadgets>(Ptr + 856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentGadgetDir
     /// </summary>
-    public unsafe byte CurrentGadgetDir
+    public unsafe BmSDK.BmGame.RInventoryManager.GadgetSelectionDirection CurrentGadgetDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.GadgetSelectionDirection>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 
@@ -209,18 +209,18 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// <summary>
     /// ArrayProperty: BM2SelectableGadgets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> BM2SelectableGadgets
+    public unsafe BmSDK.TArray<BmSDK.FName> BM2SelectableGadgets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 
     /// <summary>
     /// ArrayProperty: PCSelectableGadgets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> PCSelectableGadgets
+    public unsafe BmSDK.TArray<BmSDK.FName> PCSelectableGadgets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
     }
 }

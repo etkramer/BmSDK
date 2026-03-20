@@ -45,9 +45,9 @@ public partial class RSeqAct_AwardXP : BmSDK.Engine.SequenceAction, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: XPTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XPTarget
+    public unsafe BmSDK.GameObject XPTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 }

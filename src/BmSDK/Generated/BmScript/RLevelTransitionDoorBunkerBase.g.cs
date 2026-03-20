@@ -73,8 +73,8 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// </summary>
     public unsafe bool StartedStreamingWait
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// </summary>
     public unsafe bool SupportsSlowOpen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// </summary>
     public unsafe bool bIsSlowOpening
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// </summary>
     public unsafe bool bBlockVillains
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 796); }
     }
 
     /// <summary>
@@ -170,45 +170,45 @@ public partial class RLevelTransitionDoorBunkerBase : BmSDK.BmGame.RLevelTransit
     /// <summary>
     /// ObjectProperty: DoorMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DoorMaterial
+    public unsafe BmSDK.Engine.MaterialInstanceConstant DoorMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
     }
 
     /// <summary>
     /// ComponentProperty: InvestigationMesh2
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InvestigationMesh2
+    public unsafe BmSDK.Engine.StaticMeshComponent InvestigationMesh2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
     }
 
     /// <summary>
     /// ComponentProperty: InvestigationMesh1
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InvestigationMesh1
+    public unsafe BmSDK.Engine.StaticMeshComponent InvestigationMesh1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
     /// <summary>
     /// ArrayProperty: OldMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> OldMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> OldMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
     }
 
     /// <summary>
     /// ByteProperty: InstallChunkRequired
     /// </summary>
-    public unsafe byte InstallChunkRequired
+    public unsafe BmSDK.BmGame.RGameInfo.EInstallChunk InstallChunkRequired
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EInstallChunk>(Ptr + 892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RSeqAct_ChangeWind : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: NewWindState
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT NewWindState
+    public unsafe BmSDK.BmGame.RGameInfo.FRBasicWindConfig NewWindState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

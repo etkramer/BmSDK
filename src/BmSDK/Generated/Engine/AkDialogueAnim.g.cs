@@ -36,18 +36,18 @@ public partial class AkDialogueAnim : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_AkDialogueAnim
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkDialogueAnim
+    public unsafe System.IntPtr VfTable_AkDialogueAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ArrayProperty: AnimData
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AnimData
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueAnim.FAkDialogueAnimData> AnimData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueAnim.FAkDialogueAnimData>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

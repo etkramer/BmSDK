@@ -36,18 +36,18 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: EffectorLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EffectorLocation
+    public unsafe System.Numerics.Vector3 EffectorLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 
     /// <summary>
     /// ByteProperty: EffectorLocationSpace
     /// </summary>
-    public unsafe byte EffectorLocationSpace
+    public unsafe BmSDK.Engine.SkelControlBase.EBoneControlSpace EffectorLocationSpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase.EBoneControlSpace>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
@@ -63,9 +63,9 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: EffectorTranslationFromBone
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EffectorTranslationFromBone
+    public unsafe System.Numerics.Vector3 EffectorTranslationFromBone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
@@ -110,8 +110,8 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// </summary>
     public unsafe bool bStartFromTail
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// </summary>
     public unsafe bool bNoTurnOptimization
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
     }
 
     /// <summary>
@@ -128,16 +128,16 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// </summary>
     public unsafe bool ComponentOffsetEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 300); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 300); }
     }
 
     /// <summary>
     /// ArrayProperty: AngleConstraint
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> AngleConstraint
+    public unsafe BmSDK.TArray<float> AngleConstraint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 
@@ -162,9 +162,9 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: ComponentOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ComponentOffset
+    public unsafe BmSDK.GameObject.FBoneAtom ComponentOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 }

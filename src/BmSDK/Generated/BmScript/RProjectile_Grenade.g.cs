@@ -71,36 +71,36 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// <summary>
     /// ObjectProperty: ExplodeEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplodeEvent
+    public unsafe BmSDK.Engine.AkEvent ExplodeEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
 
     /// <summary>
     /// ObjectProperty: BounceSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BounceSound
+    public unsafe BmSDK.Engine.AkEvent BounceSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 
     /// <summary>
     /// ObjectProperty: BounceSoundParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BounceSoundParam
+    public unsafe BmSDK.Engine.AkParameterName BounceSoundParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
     }
 
     /// <summary>
     /// ObjectProperty: ExplosionParticleSystem
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplosionParticleSystem
+    public unsafe BmSDK.Engine.ParticleSystem ExplosionParticleSystem
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
 
@@ -109,7 +109,7 @@ public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase,
     /// </summary>
     public unsafe bool bSetExplodeTimer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1024) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1024); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1024); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1024) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1024); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1024); }
     }
 }

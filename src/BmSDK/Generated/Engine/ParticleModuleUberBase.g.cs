@@ -36,9 +36,9 @@ public partial class ParticleModuleUberBase : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// ArrayProperty: RequiredModules
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT RequiredModules
+    public unsafe BmSDK.TArray<BmSDK.FName> RequiredModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

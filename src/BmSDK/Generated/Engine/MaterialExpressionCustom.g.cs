@@ -45,9 +45,9 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// <summary>
     /// ByteProperty: OutputType
     /// </summary>
-    public unsafe byte OutputType
+    public unsafe BmSDK.Engine.MaterialExpressionCustom.ECustomMaterialOutputType OutputType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionCustom.ECustomMaterialOutputType>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
@@ -63,9 +63,9 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// <summary>
     /// ArrayProperty: Inputs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Inputs
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionCustom.FCustomInput> Inputs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionCustom.FCustomInput>>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -87,9 +87,9 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
         /// <summary>
         /// StructProperty: Input
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Input
+        public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }

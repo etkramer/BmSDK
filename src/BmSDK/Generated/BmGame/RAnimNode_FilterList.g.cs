@@ -36,9 +36,9 @@ public partial class RAnimNode_FilterList : BmSDK.Engine.AnimNodeBlendBase, BmSD
     /// <summary>
     /// ArrayProperty: ChildFilterInBone
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> ChildFilterInBone
+    public unsafe BmSDK.TArray<BmSDK.FName> ChildFilterInBone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 
@@ -47,16 +47,16 @@ public partial class RAnimNode_FilterList : BmSDK.Engine.AnimNodeBlendBase, BmSD
     /// </summary>
     public unsafe bool bUseBaseAnimWhenNotRendered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
     /// ArrayProperty: ChildFilterInBoneIndices
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> ChildFilterInBoneIndices
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RAnimNode_FilterList.FFilterChildBones> ChildFilterInBoneIndices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAnimNode_FilterList.FFilterChildBones>>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 }

@@ -54,45 +54,45 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// <summary>
     /// ObjectProperty: LoadedLevel
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LoadedLevel
+    public unsafe BmSDK.Engine.Level LoadedLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Level>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ObjectProperty: EditorGridVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EditorGridVolume
+    public unsafe BmSDK.Engine.LevelGridVolume EditorGridVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelGridVolume>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Offset
+    public unsafe System.Numerics.Vector3 Offset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// StructProperty: LevelTransform
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LevelTransform
+    public unsafe BmSDK.GameObject.FMatrix LevelTransform
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// StructProperty: OldOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OldOffset
+    public unsafe System.Numerics.Vector3 OldOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -101,8 +101,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsLevelHidden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bHasLoadRequestPending
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bHasUnloadRequestPending
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bRemoveFromStreamingLevelsWhenUnloaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBeVisibleInEditor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bBoundingBoxVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bLocked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsFullyStatic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBeLoaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBeVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBeLevelHidden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBlockOnLoad
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bShouldBeVisibleInLevelBrowser
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bExpandedInLevelBrowser
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsParent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsChild
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bDrawOnLevelStatusMap
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsRequestingUnloadAndRemoval
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bForceNotToRemoveLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bExcludeFromPathBuilding
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bExcludeFromPathBuilding_Old_bShouldBeVisibleInEditor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bHighPriorityLoadRequest
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -308,8 +308,8 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bIsDelayedLoadLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -317,25 +317,25 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// </summary>
     public unsafe bool bUseAllReflectionGroupsAfterCurrent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
     /// StructProperty: DrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrawColor
+    public unsafe BmSDK.GameObject.FColor DrawColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// ArrayProperty: EditorStreamingVolumes
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> EditorStreamingVolumes
+    public unsafe BmSDK.TArray<BmSDK.Engine.LevelStreamingVolume> EditorStreamingVolumes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LevelStreamingVolume>>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
@@ -360,36 +360,36 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
     /// <summary>
     /// ByteProperty: OverrideDepthPriority
     /// </summary>
-    public unsafe byte OverrideDepthPriority
+    public unsafe BmSDK.Engine.Scene.ESceneDepthPriorityGroup OverrideDepthPriority
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Scene.ESceneDepthPriorityGroup>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ByteProperty: NavMeshGroup
     /// </summary>
-    public unsafe byte NavMeshGroup
+    public unsafe BmSDK.Engine.LevelStreaming.ENavMeshGroup NavMeshGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 253); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelStreaming.ENavMeshGroup>(Ptr + 253); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 253); }
     }
 
     /// <summary>
     /// ByteProperty: ReflectionGroup
     /// </summary>
-    public unsafe byte ReflectionGroup
+    public unsafe BmSDK.Engine.LevelStreaming.EReflectionGroup ReflectionGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 254); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelStreaming.EReflectionGroup>(Ptr + 254); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 254); }
     }
 
     /// <summary>
     /// ArrayProperty: Keywords
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Keywords
+    public unsafe BmSDK.TArray<BmSDK.FString> Keywords
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 

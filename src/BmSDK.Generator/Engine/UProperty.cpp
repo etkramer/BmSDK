@@ -45,13 +45,7 @@ string UProperty::GetInnerTypeNameManaged() const
     {
         auto structProp = (UStructProperty*)this;
         auto _struct = structProp->Struct;
-
-        if (_struct == NULL)
-        {
-            // BM4: Fix property layout
-            return "NEED_UPDATE_STRUCTPROPERTY_LAYOUT";
-        }
-
+        
         // Manually swap out some structs
         if (_struct->GetName() == "Pointer")
         {
@@ -91,23 +85,11 @@ string UProperty::GetInnerTypeNameManaged() const
     {
         auto objectProp = (UObjectProperty*)this;
 
-        if (objectProp->PropertyClass == NULL)
-        {
-            // BM4: Fix property layout
-            return "NEED_UPDATE_OBJECTPROPERTY_LAYOUT";
-        }
-
         return objectProp->PropertyClass->GetPathNameManaged();
     }
     else if (Class->GetPathName() == "Core.ArrayProperty")
     {
         auto arrayProp = (UArrayProperty*)this;
-
-        if (arrayProp->Inner == NULL)
-        {
-            // BM4: Fix property layout
-            return "NEED_UPDATE_ARRAYPROPERTY_LAYOUT";
-        }
 
         auto innerName = arrayProp->Inner->GetInnerTypeNameManaged();
 

@@ -71,36 +71,36 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: Player
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Player
+    public unsafe BmSDK.BmGame.RPawnPlayer Player
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 6664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6664); }
     }
 
     /// <summary>
     /// ObjectProperty: RPC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RPC
+    public unsafe BmSDK.BmGame.RPlayerController RPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 6672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6672); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerBatmobile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerBatmobile
+    public unsafe BmSDK.BmGame.RVehicleBatmobileBase PlayerBatmobile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBatmobileBase>(Ptr + 6680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
     }
 
     /// <summary>
     /// ObjectProperty: RGI
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RGI
+    public unsafe BmSDK.BmGame.RGameInfo RGI
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo>(Ptr + 6688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
     }
 }

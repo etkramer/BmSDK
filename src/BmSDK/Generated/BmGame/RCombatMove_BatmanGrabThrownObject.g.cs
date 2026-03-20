@@ -71,36 +71,36 @@ public partial class RCombatMove_BatmanGrabThrownObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
     /// <summary>
     /// StructProperty: TargetAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 
     /// <summary>
     /// StructProperty: IntoGrabAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT IntoGrabAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IntoGrabAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
     }
 
     /// <summary>
     /// ObjectProperty: ThrownObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThrownObject
+    public unsafe BmSDK.BmGame.RBMCombatThrownObject ThrownObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatThrownObject>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 
@@ -109,7 +109,7 @@ public partial class RCombatMove_BatmanGrabThrownObject : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bAllowWeaponSwitch
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 888); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 888); }
     }
 }

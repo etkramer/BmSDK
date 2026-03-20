@@ -71,9 +71,9 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// <summary>
     /// ObjectProperty: VoiceSynthSpecialMoveConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VoiceSynthSpecialMoveConfig
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig VoiceSynthSpecialMoveConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 6768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6768); }
     }
 
@@ -82,7 +82,7 @@ public partial class RPawnVillainThug_RobotPuzzle : BmSDK.BmScript.RPawnVillainT
     /// </summary>
     public unsafe bool bSetFinishedCombatSpecialMove
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6776); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6776); }
     }
 }

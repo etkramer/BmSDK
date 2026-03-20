@@ -36,9 +36,9 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: Owner
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Owner
+    public unsafe BmSDK.Engine.Actor Owner
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -54,27 +54,27 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Bodies
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Bodies
+    public unsafe BmSDK.TArray<BmSDK.Engine.RB_BodyInstance> Bodies
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RB_BodyInstance>>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ArrayProperty: Constraints
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Constraints
+    public unsafe BmSDK.TArray<BmSDK.Engine.RB_ConstraintInstance> Constraints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RB_ConstraintInstance>>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// StructProperty: CollisionDisableTable
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollisionDisableTable
+    public unsafe BmSDK.GameObject.FMap_Mirror CollisionDisableTable
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
@@ -137,8 +137,8 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInitBodies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 224); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 224); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnableAggregate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 224); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 224); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 224); }
     }
 
     /// <summary>

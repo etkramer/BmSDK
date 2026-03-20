@@ -71,54 +71,54 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// ArrayProperty: UsefulAimingConfigs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> UsefulAimingConfigs
+    public unsafe BmSDK.TArray<BmSDK.Engine.RAimingConfig> UsefulAimingConfigs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RAimingConfig>>(Ptr + 2976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2976); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideNormalStandAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideNormalStandAnimSet
+    public unsafe BmSDK.Engine.AnimSet OverrideNormalStandAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 2992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2992); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideNormalCrouchAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideNormalCrouchAnimset
+    public unsafe BmSDK.Engine.AnimSet OverrideNormalCrouchAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 3000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3000); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_Combat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_Combat
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_Combat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 3008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3008); }
     }
 
     /// <summary>
     /// ObjectProperty: AnimationConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimationConfig
+    public unsafe BmSDK.BmGame.RPawnPlayerConfig AnimationConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerConfig>(Ptr + 3016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3016); }
     }
 
     /// <summary>
     /// StructProperty: BaseAimAtTiming
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseAimAtTiming
+    public unsafe BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming BaseAimAtTiming
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming>(Ptr + 3024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3024); }
     }
 
@@ -134,9 +134,9 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ForceMoveDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForceMoveDirection
+    public unsafe System.Numerics.Vector3 ForceMoveDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3040); }
     }
 }

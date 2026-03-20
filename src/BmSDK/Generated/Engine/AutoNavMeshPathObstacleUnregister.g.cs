@@ -36,9 +36,9 @@ public partial class AutoNavMeshPathObstacleUnregister : BmSDK.GameObject, BmSDK
     /// <summary>
     /// InterfaceProperty: PathObstacleRef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PathObstacleRef
+    public unsafe BmSDK.Engine.Interface_NavMeshPathObstacle PathObstacleRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Interface_NavMeshPathObstacle>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

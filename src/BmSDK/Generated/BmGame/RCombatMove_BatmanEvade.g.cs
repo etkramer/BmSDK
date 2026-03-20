@@ -71,18 +71,18 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: EvadeDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EvadeDir
+    public unsafe System.Numerics.Vector3 EvadeDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
     }
 
     /// <summary>
     /// StructProperty: EvadeAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EvadeAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EvadeAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
     }
 
@@ -98,9 +98,9 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: PredictedEndLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PredictedEndLocation
+    public unsafe System.Numerics.Vector3 PredictedEndLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
     }
 
@@ -109,8 +109,8 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bDiveInAir
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 872); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 872); }
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bUsedLookAt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 872); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 872); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 872); }
     }
 }

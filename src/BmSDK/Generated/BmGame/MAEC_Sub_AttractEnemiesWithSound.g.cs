@@ -71,9 +71,9 @@ public partial class MAEC_Sub_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// ObjectProperty: Trap
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trap
+    public unsafe BmSDK.BmGame.MJackInBoxTrapBase Trap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MJackInBoxTrapBase>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 

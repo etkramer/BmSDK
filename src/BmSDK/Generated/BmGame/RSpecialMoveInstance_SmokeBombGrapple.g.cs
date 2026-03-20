@@ -71,9 +71,9 @@ public partial class RSpecialMoveInstance_SmokeBombGrapple : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: SmokeBombTransition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SmokeBombTransition
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId SmokeBombTransition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
     }
 
@@ -82,8 +82,8 @@ public partial class RSpecialMoveInstance_SmokeBombGrapple : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bGrappleQueued
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1028) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1028); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1028); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1028) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1028); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1028); }
     }
 
     /// <summary>

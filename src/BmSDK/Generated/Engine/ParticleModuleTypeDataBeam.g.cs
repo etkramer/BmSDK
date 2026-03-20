@@ -36,36 +36,36 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// ByteProperty: BeamMethod
     /// </summary>
-    public unsafe byte BeamMethod
+    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EBeamMethod BeamMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.EBeamMethod>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: EndPointMethod
     /// </summary>
-    public unsafe byte EndPointMethod
+    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EBeamEndPointMethod EndPointMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 97); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.EBeamEndPointMethod>(Ptr + 97); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 97); }
     }
 
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EndPoint Distance
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Distance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.EndPoint>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: EndPoint
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EmitterStrength EndPoint
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.EmitterStrength>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
@@ -81,27 +81,27 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: EmitterStrength
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.TargetStrength EmitterStrength
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat EmitterStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.TargetStrength>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// StructProperty: TargetStrength
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataBeam.EndPointDirection TargetStrength
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataBeam.EndPointDirection>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>
     /// StructProperty: EndPointDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndPointDirection
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPointDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
@@ -119,8 +119,8 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool RenderGeometry
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool RenderDirectLine
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool RenderLines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool RenderTessellation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
     }
 
     /// <summary>

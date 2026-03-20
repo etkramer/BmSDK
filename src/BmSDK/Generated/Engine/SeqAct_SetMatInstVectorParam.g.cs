@@ -36,18 +36,18 @@ public partial class SeqAct_SetMatInstVectorParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// ObjectProperty: MatInst
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MatInst
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MatInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectPosition
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectPosition
+    public unsafe BmSDK.GameObject ObjectPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
@@ -63,9 +63,9 @@ public partial class SeqAct_SetMatInstVectorParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// StructProperty: VectorValue
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VectorValue
+    public unsafe BmSDK.GameObject.FLinearColor VectorValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

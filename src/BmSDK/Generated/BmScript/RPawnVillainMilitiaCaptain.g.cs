@@ -71,36 +71,36 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// ArrayProperty: DestroyMineController
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> DestroyMineController
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSpecialMoveConfig> DestroyMineController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSpecialMoveConfig>>(Ptr + 6696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
     }
 
     /// <summary>
     /// ObjectProperty: DestroyMineControllerNoCamera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestroyMineControllerNoCamera
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig DestroyMineControllerNoCamera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 6712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
     }
 
     /// <summary>
     /// ObjectProperty: ProximitySFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProximitySFX
+    public unsafe BmSDK.Engine.AkEvent ProximitySFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
     }
 
     /// <summary>
     /// ComponentProperty: ControllerDevicePFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerDevicePFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ControllerDevicePFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6728); }
     }
 
@@ -127,8 +127,8 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// </summary>
     public unsafe bool bDMVisThroughWalls_Suppressed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
     }
 
     /// <summary>
@@ -136,7 +136,7 @@ public partial class RPawnVillainMilitiaCaptain : BmSDK.BmGame.RPawnVillainThug,
     /// </summary>
     public unsafe bool bDMVisThroughWalls_Old
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
     }
 }

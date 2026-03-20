@@ -71,18 +71,18 @@ public partial class REvadeOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// ObjectProperty: OverrideMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig OverrideMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideLocator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideLocator
+    public unsafe BmSDK.Engine.Actor OverrideLocator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
@@ -91,7 +91,7 @@ public partial class REvadeOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bActivateUsedEvent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
     }
 }

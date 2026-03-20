@@ -71,45 +71,45 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// ObjectProperty: CurrChargedUpVillain
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrChargedUpVillain
+    public unsafe BmSDK.BmGame.RPawnVillain CurrChargedUpVillain
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 6696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
     }
 
     /// <summary>
     /// ObjectProperty: MedicPackDisruptedXrayMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MedicPackDisruptedXrayMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MedicPackDisruptedXrayMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6704); }
     }
 
     /// <summary>
     /// ObjectProperty: MedicPackXrayMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MedicPackXrayMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MedicPackXrayMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
     }
 
     /// <summary>
     /// ObjectProperty: JammedExplosionVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammedExplosionVFX
+    public unsafe BmSDK.Engine.ParticleSystem JammedExplosionVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
     }
 
     /// <summary>
     /// ObjectProperty: JammedExplodeEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammedExplodeEvent
+    public unsafe BmSDK.Engine.AkEvent JammedExplodeEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6728); }
     }
 
@@ -136,8 +136,8 @@ public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// </summary>
     public unsafe bool bLastMedicIsRevive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6744); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6744); }
     }
 
     /// <summary>

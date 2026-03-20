@@ -36,9 +36,9 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// <summary>
     /// ArrayProperty: m_ContentData
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> m_ContentData
+    public unsafe BmSDK.TArray<byte> m_ContentData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
@@ -47,8 +47,8 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// </summary>
     public unsafe bool bDownloadComplete
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// </summary>
     public unsafe bool bDownloadSuccessful
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustom
     /// </summary>
     public unsafe bool bRequestCanceled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 }

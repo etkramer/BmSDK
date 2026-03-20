@@ -36,36 +36,36 @@ public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentP
     /// <summary>
     /// ComponentProperty: RoomState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RoomState
+    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ObjectProperty: TargetPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPoint
+    public unsafe BmSDK.BmGame.RSentryGunPlacementPoint TargetPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunPlacementPoint>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ArrayProperty: SentryKitList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> SentryKitList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RLootSourceBase> SentryKitList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RLootSourceBase>>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ArrayProperty: DestSearch
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> DestSearch
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSentryKitAssignmentPicker.FMultiDestPathFindInfo> DestSearch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSentryKitAssignmentPicker.FMultiDestPathFindInfo>>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 

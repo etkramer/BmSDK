@@ -82,8 +82,8 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bQueueStrike
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bQueueCounter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bIsFinalHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bIsBeatdownAtRange
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// </summary>
     public unsafe bool bCriticalBeatdown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1568); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1568); }
     }
 
     /// <summary>
@@ -152,45 +152,45 @@ public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: TargetStrikeID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetStrikeID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetStrikeID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
     }
 
     /// <summary>
     /// ByteProperty: BeatdownTargetType
     /// </summary>
-    public unsafe byte BeatdownTargetType
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType BeatdownTargetType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType>(Ptr + 1588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1588); }
     }
 
     /// <summary>
     /// ObjectProperty: BeatdownCameraAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BeatdownCameraAnimset
+    public unsafe BmSDK.Engine.AnimSet BeatdownCameraAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 1592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1592); }
     }
 
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimPos
+    public unsafe System.Numerics.Vector3 AnimPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1600); }
     }
 
     /// <summary>
     /// StructProperty: AnimRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimRot
+    public unsafe BmSDK.Rotator AnimRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1612); }
     }
 }

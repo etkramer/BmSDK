@@ -36,27 +36,27 @@ public partial class RSeqAct_SetPhysicsVelocity : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: Velocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Velocity
+    public unsafe System.Numerics.Vector3 Velocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: SlingShotStart
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SlingShotStart
+    public unsafe BmSDK.Engine.Actor SlingShotStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 
     /// <summary>
     /// ObjectProperty: SlingShotEnd
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SlingShotEnd
+    public unsafe BmSDK.Engine.Actor SlingShotEnd
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
     }
 }

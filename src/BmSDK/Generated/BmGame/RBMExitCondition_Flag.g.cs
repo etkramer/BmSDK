@@ -38,7 +38,7 @@ public partial class RBMExitCondition_Flag : BmSDK.BmGame.RBMExitCondition, BmSD
     /// </summary>
     public unsafe bool bExitWhenTrue
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 444) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 444); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 444); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 444) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 444); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 444); }
     }
 }

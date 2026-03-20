@@ -135,27 +135,27 @@ public partial class RSpecialMoveConfig_WhipRappel_Catwoman : BmSDK.BmGame.RSpec
     /// <summary>
     /// ObjectProperty: CatwomanWhipRappelAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatwomanWhipRappelAnimSet
+    public unsafe BmSDK.Engine.AnimSet CatwomanWhipRappelAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>
     /// ObjectProperty: BatmanSpecialMoveConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatmanSpecialMoveConfig
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig_WhipRappel_Batman BatmanSpecialMoveConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_WhipRappel_Batman>(Ptr + 488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
     /// <summary>
     /// ObjectProperty: JumpForwardSpecialMoveConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JumpForwardSpecialMoveConfig
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig_RunningRelativeAnimMove JumpForwardSpecialMoveConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_RunningRelativeAnimMove>(Ptr + 496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 

@@ -71,27 +71,27 @@ public partial class RCombatMove_RiddlerMechToggleRobotColour : BmSDK.BmGame.RCo
     /// <summary>
     /// ArrayProperty: RobotList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> RobotList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> RobotList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// ObjectProperty: Mech
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mech
+    public unsafe BmSDK.BmGame.RPawnVillainRiddlerMechSuitBase Mech
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainRiddlerMechSuitBase>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// StructProperty: TransitionAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TransitionAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
@@ -100,8 +100,8 @@ public partial class RCombatMove_RiddlerMechToggleRobotColour : BmSDK.BmGame.RCo
     /// </summary>
     public unsafe bool bToggleToBlue
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 804); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 804); }
     }
 
     /// <summary>
@@ -109,25 +109,25 @@ public partial class RCombatMove_RiddlerMechToggleRobotColour : BmSDK.BmGame.RCo
     /// </summary>
     public unsafe bool bRobotAnimPlayed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 804); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 804); }
     }
 
     /// <summary>
     /// ArrayProperty: PfxEmitterList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> PfxEmitterList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Emitter> PfxEmitterList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Emitter>>(Ptr + 808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
     }
 
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimLocation
+    public unsafe System.Numerics.Vector3 AimLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
     }
 

@@ -36,27 +36,27 @@ public partial class RBMBehaviour_ThermalCheck : BmSDK.BmGame.RBMBehaviour_Actio
     /// <summary>
     /// ObjectProperty: VantageToCheck
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VantageToCheck
+    public unsafe BmSDK.BmGame.RHidePoint VantageToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// ObjectProperty: ProxyVantageToCheck
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProxyVantageToCheck
+    public unsafe BmSDK.BmGame.RCrossLevelVantageProxy ProxyVantageToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrossLevelVantageProxy>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>
     /// StructProperty: VantageCheckStandPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VantageCheckStandPoint
+    public unsafe System.Numerics.Vector3 VantageCheckStandPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 }

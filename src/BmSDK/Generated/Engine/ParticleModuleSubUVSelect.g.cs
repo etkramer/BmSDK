@@ -36,9 +36,9 @@ public partial class ParticleModuleSubUVSelect : BmSDK.Engine.ParticleModuleSubU
     /// <summary>
     /// StructProperty: SubImageSelect
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SubImageSelect
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubImageSelect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RJobAssignment_SentryGun : BmSDK.BmGame.RJobAssignment, BmS
     /// <summary>
     /// ClassProperty: TemplateOwnerClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TemplateOwnerClass
+    public unsafe BmSDK.Class TemplateOwnerClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

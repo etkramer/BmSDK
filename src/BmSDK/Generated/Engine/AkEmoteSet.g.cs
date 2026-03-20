@@ -36,9 +36,9 @@ public partial class AkEmoteSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Emotes
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Emotes
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEmoteSet.FAkEmoteDefine> Emotes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEmoteSet.FAkEmoteDefine>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
@@ -51,18 +51,18 @@ public partial class AkEmoteSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: EmoteType
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EmoteType
+        public unsafe BmSDK.Engine.AkEmoteType EmoteType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEmoteType>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// ObjectProperty: Speech
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Speech
+        public unsafe BmSDK.Engine.AkDialogueLine Speech
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLine>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }

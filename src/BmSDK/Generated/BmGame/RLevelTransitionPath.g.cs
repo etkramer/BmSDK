@@ -71,36 +71,36 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// ComponentProperty: Bounds
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Bounds
+    public unsafe BmSDK.BmGame.RLevelTransitionPathComponent Bounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLevelTransitionPathComponent>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
     /// ObjectProperty: CameraMustBeInThisVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraMustBeInThisVolume
+    public unsafe BmSDK.Engine.Volume CameraMustBeInThisVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
     /// ObjectProperty: CameraMustNotBeInThisVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraMustNotBeInThisVolume
+    public unsafe BmSDK.Engine.Volume CameraMustNotBeInThisVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// ObjectProperty: VolumeAlsoMakesVisible
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VolumeAlsoMakesVisible
+    public unsafe BmSDK.Engine.Volume VolumeAlsoMakesVisible
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 }

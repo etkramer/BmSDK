@@ -73,8 +73,8 @@ public partial class RPawnVillainNinjaBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// </summary>
     public unsafe bool bForceTauntExit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6664); }
     }
 
     /// <summary>
@@ -82,43 +82,43 @@ public partial class RPawnVillainNinjaBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// </summary>
     public unsafe bool bTeleportInsteadOfDespawn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6664); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6664); }
     }
 
     /// <summary>
     /// ObjectProperty: teleportAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT teleportAnimSet
+    public unsafe BmSDK.Engine.AnimSet teleportAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6668); }
     }
 
     /// <summary>
     /// ObjectProperty: smokeBombVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT smokeBombVFX
+    public unsafe BmSDK.Engine.ParticleSystem smokeBombVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6676); }
     }
 
     /// <summary>
     /// ObjectProperty: CustomWhipTripAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CustomWhipTripAnimSet
+    public unsafe BmSDK.Engine.AnimSet CustomWhipTripAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6684); }
     }
 
     /// <summary>
     /// ObjectProperty: DodgeTrail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DodgeTrail
+    public unsafe BmSDK.Engine.ParticleSystem DodgeTrail
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6692); }
     }
 
@@ -134,9 +134,9 @@ public partial class RPawnVillainNinjaBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// ArrayProperty: EmitterList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> EmitterList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Emitter> EmitterList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Emitter>>(Ptr + 6708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6708); }
     }
 }

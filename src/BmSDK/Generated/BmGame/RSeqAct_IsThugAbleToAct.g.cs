@@ -36,9 +36,9 @@ public partial class RSeqAct_IsThugAbleToAct : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// ObjectProperty: BadGuy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BadGuy
+    public unsafe BmSDK.Engine.Actor BadGuy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

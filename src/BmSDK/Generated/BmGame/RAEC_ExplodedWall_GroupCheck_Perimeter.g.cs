@@ -71,54 +71,54 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAler
     /// <summary>
     /// StructProperty: PerimeterCentre
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PerimeterCentre
+    public unsafe System.Numerics.Vector3 PerimeterCentre
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
     /// StructProperty: BoomPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoomPoint
+    public unsafe System.Numerics.Vector3 BoomPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 
     /// <summary>
     /// ObjectProperty: NavHandle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NavHandle
+    public unsafe BmSDK.BmGame.RNavigationHandle NavHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
     /// ObjectProperty: ExitPoints
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExitPoints
+    public unsafe BmSDK.BmGame.RExitPoints ExitPoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RExitPoints>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
     /// ObjectProperty: PerimeterState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PerimeterState
+    public unsafe BmSDK.BmGame.RPerimeterData PerimeterState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPerimeterData>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
     /// ArrayProperty: ThugSearch
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> ThugSearch
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper> ThugSearch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper>>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 

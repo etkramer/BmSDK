@@ -36,9 +36,9 @@ public partial class ParticleModuleMeshRotationRateMultiplyLife : BmSDK.Engine.P
     /// <summary>
     /// StructProperty: LifeMultiplier
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LifeMultiplier
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector LifeMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

@@ -71,54 +71,54 @@ public partial class RAEC_Attack_Sub_Chase : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// ObjectProperty: TargetChasePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetChasePoint
+    public unsafe BmSDK.BmGame.RChasePoint TargetChasePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChasePoint>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ObjectProperty: ChaseRoot
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChaseRoot
+    public unsafe BmSDK.BmGame.RChasePoint ChaseRoot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChasePoint>(Ptr + 704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 
     /// <summary>
     /// ObjectProperty: LadderLookNavHandle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LadderLookNavHandle
+    public unsafe BmSDK.BmGame.RNavigationHandle LadderLookNavHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
     /// ObjectProperty: ExitPoints
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExitPoints
+    public unsafe BmSDK.BmGame.RExitPoints ExitPoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RExitPoints>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
     /// ObjectProperty: PauseAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PauseAction
+    public unsafe BmSDK.BmGame.RBMAIAction_PauseAtTopOfLadder PauseAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PauseAtTopOfLadder>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
     /// ObjectProperty: PreChaseLocToTargetChaseNav
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreChaseLocToTargetChaseNav
+    public unsafe BmSDK.BmGame.RNavigationHandle PreChaseLocToTargetChaseNav
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
@@ -136,8 +136,8 @@ public partial class RAEC_Attack_Sub_Chase : BmSDK.BmGame.RAlertEventCoordinator
     /// </summary>
     public unsafe bool bIntercepting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 748); }
     }
 
     /// <summary>
@@ -145,16 +145,16 @@ public partial class RAEC_Attack_Sub_Chase : BmSDK.BmGame.RAlertEventCoordinator
     /// </summary>
     public unsafe bool bExitEarlyIfCanSeeGoal
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 748); }
     }
 
     /// <summary>
     /// StructProperty: LadderForward
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LadderForward
+    public unsafe System.Numerics.Vector3 LadderForward
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 }

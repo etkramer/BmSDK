@@ -71,9 +71,9 @@ public partial class RAEC_LockedIn_GroupBase : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// ObjectProperty: PawnNeedingLockedInReply
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnNeedingLockedInReply
+    public unsafe BmSDK.BmGame.RPawnVillain PawnNeedingLockedInReply
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 }

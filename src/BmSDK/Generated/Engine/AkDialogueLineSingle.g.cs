@@ -36,9 +36,9 @@ public partial class AkDialogueLineSingle : BmSDK.Engine.AkDialogueLine, BmSDK.I
     /// <summary>
     /// ObjectProperty: DialogueEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueEvent
+    public unsafe BmSDK.Engine.AkDialogueEvent DialogueEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueEvent>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
@@ -65,7 +65,7 @@ public partial class AkDialogueLineSingle : BmSDK.Engine.AkDialogueLine, BmSDK.I
     /// </summary>
     public unsafe bool bBarkFallback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 212); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 212); }
     }
 }

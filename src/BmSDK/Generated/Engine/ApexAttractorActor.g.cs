@@ -71,9 +71,9 @@ public partial class ApexAttractorActor : BmSDK.Engine.ApexFieldSamplerActor, Bm
     /// <summary>
     /// ComponentProperty: AttractorComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AttractorComponent
+    public unsafe BmSDK.Engine.ApexAttractorComponent AttractorComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexAttractorComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

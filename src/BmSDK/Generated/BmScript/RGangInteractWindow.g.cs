@@ -82,61 +82,61 @@ public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase,
     /// </summary>
     public unsafe bool bCreatedMIC
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
     /// ObjectProperty: WindowMat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WindowMat
+    public unsafe BmSDK.Engine.MaterialInstanceConstant WindowMat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 1324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
     }
 
     /// <summary>
     /// ObjectProperty: WindowSmashEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WindowSmashEffect
+    public unsafe BmSDK.Engine.ParticleSystem WindowSmashEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
     }
 
     /// <summary>
     /// ObjectProperty: MolotovExplodeEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MolotovExplodeEffect
+    public unsafe BmSDK.Engine.ParticleSystem MolotovExplodeEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
     }
 
     /// <summary>
     /// ObjectProperty: CrackSfx
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrackSfx
+    public unsafe BmSDK.Engine.AkEvent CrackSfx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
     }
 
     /// <summary>
     /// ComponentProperty: WindowOnFireEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WindowOnFireEffect
+    public unsafe BmSDK.Engine.ParticleSystemComponent WindowOnFireEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
     }
 
     /// <summary>
     /// ArrayProperty: PointsAttachedToWindow
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> PointsAttachedToWindow
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase> PointsAttachedToWindow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 1364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGangInteractPointBase>>(Ptr + 1364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
     }
 

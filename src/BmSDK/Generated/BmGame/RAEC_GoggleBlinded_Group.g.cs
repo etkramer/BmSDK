@@ -71,9 +71,9 @@ public partial class RAEC_GoggleBlinded_Group : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// ObjectProperty: BlindedPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BlindedPawn
+    public unsafe BmSDK.BmGame.RPawnVillainGunPredBase BlindedPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainGunPredBase>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 }

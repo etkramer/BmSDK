@@ -36,9 +36,9 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// ObjectProperty: StopNearActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StopNearActor
+    public unsafe BmSDK.Engine.Actor StopNearActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
@@ -56,8 +56,8 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DriveAtActor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool SkidToStop
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DisembarkPassengers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DisembarkedPassengersRunAway
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>

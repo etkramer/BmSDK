@@ -36,18 +36,18 @@ public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponen
     /// <summary>
     /// StructProperty: SceneProxy
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneProxy
+    public unsafe System.IntPtr SceneProxy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// StructProperty: Wind1Direction
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Wind1Direction
+    public unsafe BmSDK.Rotator Wind1Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
@@ -72,9 +72,9 @@ public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponen
     /// <summary>
     /// StructProperty: Wind2Direction
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Wind2Direction
+    public unsafe BmSDK.Rotator Wind2Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 

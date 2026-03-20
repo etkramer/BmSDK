@@ -63,9 +63,9 @@ public partial class ApexForceFieldRadialComponent : BmSDK.Engine.ApexForceField
     /// <summary>
     /// ByteProperty: ForceFalloff
     /// </summary>
-    public unsafe byte ForceFalloff
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff ForceFalloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 }

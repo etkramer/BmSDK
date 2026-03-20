@@ -71,18 +71,18 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// ObjectProperty: StartPatrolPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StartPatrolPoint
+    public unsafe BmSDK.BmGame.RPatrolPoint_LitePred StartPatrolPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPatrolPoint_LitePred>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentPatrolPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentPatrolPoint
+    public unsafe BmSDK.BmGame.RPatrolPoint_LitePred CurrentPatrolPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPatrolPoint_LitePred>(Ptr + 704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 
@@ -91,8 +91,8 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordin
     /// </summary>
     public unsafe bool bWalkBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>

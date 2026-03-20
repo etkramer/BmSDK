@@ -71,9 +71,9 @@ public partial class RBMAIAction_NoiseStun : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: StunAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StunAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StunAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 }

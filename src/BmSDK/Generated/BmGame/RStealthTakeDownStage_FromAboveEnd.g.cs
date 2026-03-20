@@ -71,9 +71,9 @@ public partial class RStealthTakeDownStage_FromAboveEnd : BmSDK.BmGame.RStealthT
     /// <summary>
     /// StructProperty: GrappleLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleLocation
+    public unsafe System.Numerics.Vector3 GrappleLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 }

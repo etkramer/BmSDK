@@ -36,9 +36,9 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// StructProperty: SphereChainInitData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SphereChainInitData
+    public unsafe BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData SphereChainInitData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
@@ -72,9 +72,9 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// StructProperty: SimpleRopePhysics
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SimpleRopePhysics
+    public unsafe System.IntPtr SimpleRopePhysics
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
@@ -87,9 +87,9 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
         /// <summary>
         /// ArrayProperty: NodeInitDatas
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT NodeInitDatas
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhyiscsNodeInitData> NodeInitDatas
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhyiscsNodeInitData>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
@@ -103,18 +103,18 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Position
+        public unsafe System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: LinearVelocity
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinearVelocity
+        public unsafe System.Numerics.Vector3 LinearVelocity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 

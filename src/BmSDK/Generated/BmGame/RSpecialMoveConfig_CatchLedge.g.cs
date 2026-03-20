@@ -54,18 +54,18 @@ public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveCo
     /// <summary>
     /// ObjectProperty: InstantClimbUpMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstantClimbUpMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig InstantClimbUpMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
     }
 
     /// <summary>
     /// ObjectProperty: InstantClimbOntoRailingMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstantClimbOntoRailingMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig InstantClimbOntoRailingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 

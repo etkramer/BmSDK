@@ -71,9 +71,9 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// ObjectProperty: GuardVol
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GuardVol
+    public unsafe BmSDK.BmGame.RGuardVolume GuardVol
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGuardVolume>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
@@ -91,7 +91,7 @@ public partial class RAEC_Attack_GuardPerimWatch : BmSDK.BmGame.RAlertEventCoord
     /// </summary>
     public unsafe bool bDoneBeginBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 732); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 732); }
     }
 }

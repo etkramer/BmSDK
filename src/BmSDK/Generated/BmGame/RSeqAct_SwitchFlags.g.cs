@@ -36,27 +36,27 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// ArrayProperty: FlagList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> FlagList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchFlags.FFlagItem> FlagList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchFlags.FFlagItem>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ArrayProperty: Comments
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Comments
+    public unsafe BmSDK.TArray<BmSDK.FString> Comments
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// ByteProperty: Mode
     /// </summary>
-    public unsafe byte Mode
+    public unsafe BmSDK.BmGame.RSeqAct_SwitchFlags.SFModeType Mode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SwitchFlags.SFModeType>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 

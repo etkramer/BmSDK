@@ -71,54 +71,54 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IRSecretInterface
+    public unsafe System.IntPtr VfTable_IRSecretInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ComponentProperty: StaticMeshComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMeshComponent
+    public unsafe BmSDK.Engine.StaticMeshComponent StaticMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ByteProperty: Difficulty
     /// </summary>
-    public unsafe byte Difficulty
+    public unsafe BmSDK.BmGame.RDisruptableObjectBase.DisruptableObjectDifficulty Difficulty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDisruptableObjectBase.DisruptableObjectDifficulty>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
     /// ByteProperty: HackingNetworkType
     /// </summary>
-    public unsafe byte HackingNetworkType
+    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectNetworkType HackingNetworkType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 685); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectNetworkType>(Ptr + 685); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 685); }
     }
 
     /// <summary>
     /// ByteProperty: HackingTargetType
     /// </summary>
-    public unsafe byte HackingTargetType
+    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectTargetType HackingTargetType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 686); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectTargetType>(Ptr + 686); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 686); }
     }
 
     /// <summary>
     /// StructProperty: DisruptableIconOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptableIconOffset
+    public unsafe System.Numerics.Vector3 DisruptableIconOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
@@ -127,8 +127,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDisrupted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bExplodes
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bSecureAreaToContinueMessageDisplayed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bRequiresHighSecurityResonator
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDisableUntilGiveGadget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDisabledForStory
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool RumbleEnabledInMinigame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDisabledWithAreaSecureMessage
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDisallowLongRangeResonator
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>
@@ -242,18 +242,18 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: ResonatorMinigamePackageReference
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ResonatorMinigamePackageReference
+    public unsafe BmSDK.GFxUI.SwfMovie ResonatorMinigamePackageReference
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
     /// <summary>
     /// ObjectProperty: ResonatorWinScreenPackageReference
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ResonatorWinScreenPackageReference
+    public unsafe BmSDK.GFxUI.SwfMovie ResonatorWinScreenPackageReference
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 

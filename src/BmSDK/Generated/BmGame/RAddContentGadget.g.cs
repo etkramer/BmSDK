@@ -36,27 +36,27 @@ public partial class RAddContentGadget : BmSDK.BmGame.RAdditionalContent, BmSDK.
     /// <summary>
     /// ClassProperty: GadgetClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GadgetClass
+    public unsafe BmSDK.Class GadgetClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// ObjectProperty: HudIcon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HudIcon
+    public unsafe BmSDK.Engine.Texture2D HudIcon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ObjectProperty: GadgetSFXs
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GadgetSFXs
+    public unsafe BmSDK.Engine.SoundCue GadgetSFXs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

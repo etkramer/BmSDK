@@ -36,9 +36,9 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: VfTable_FCallbackEventDevice
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FCallbackEventDevice
+    public unsafe System.IntPtr VfTable_FCallbackEventDevice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
@@ -47,7 +47,7 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bFakeMobileTouches
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 }

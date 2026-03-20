@@ -38,8 +38,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bIsPlayingCustomAnim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bEarlyAnimEndNotify
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bSkipBlendWhenNotRendered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bAdditiveAnimationsOverrideSource
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bIsBeingUsedByInterpGroup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// </summary>
     public unsafe bool bDontAddToAlwaysTickArray
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 304); }
     }
 
     /// <summary>
@@ -117,9 +117,9 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: TargetWeight
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> TargetWeight
+    public unsafe BmSDK.TArray<float> TargetWeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 

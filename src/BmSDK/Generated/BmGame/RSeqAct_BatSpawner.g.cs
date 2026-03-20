@@ -54,18 +54,18 @@ public partial class RSeqAct_BatSpawner : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: StartActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StartActor
+    public unsafe BmSDK.Engine.Actor StartActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// ArrayProperty: EndActor
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> EndActor
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> EndActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

@@ -36,27 +36,27 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// ArrayProperty: ShadowMaps
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> ShadowMaps
+    public unsafe BmSDK.TArray<BmSDK.Engine.ShadowMap2D> ShadowMaps
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ShadowMap2D>>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
     /// <summary>
     /// ArrayProperty: IrrelevantLights
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT IrrelevantLights
+    public unsafe BmSDK.TArray<BmSDK.GameObject.FGuid> IrrelevantLights
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FGuid>>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 
     /// <summary>
     /// StructProperty: TerrainObject
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TerrainObject
+    public unsafe System.IntPtr TerrainObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 
@@ -117,27 +117,27 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightMap
+    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 
     /// <summary>
     /// ArrayProperty: PatchBounds
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT PatchBounds
+    public unsafe BmSDK.TArray<BmSDK.Engine.TerrainComponent.FTerrainPatchBounds> PatchBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.TerrainComponent.FTerrainPatchBounds>>(Ptr + 612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
     /// <summary>
     /// ArrayProperty: BatchMaterials
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BatchMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.TerrainComponent.FTerrainMaterialMask> BatchMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.TerrainComponent.FTerrainMaterialMask>>(Ptr + 628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
     }
 
@@ -153,27 +153,27 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BVTree
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BVTree
+    public unsafe BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
 
     /// <summary>
     /// ArrayProperty: CollisionVertices
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT CollisionVertices
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> CollisionVertices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
     /// <summary>
     /// StructProperty: RBHeightfield
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RBHeightfield
+    public unsafe System.IntPtr RBHeightfield
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
@@ -182,7 +182,7 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// </summary>
     public unsafe bool bDisplayCollisionLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 }

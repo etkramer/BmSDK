@@ -36,54 +36,54 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// ObjectProperty: NavHandle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NavHandle
+    public unsafe BmSDK.BmGame.RNavigationHandle NavHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// ObjectProperty: firstDoorOnPath
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT firstDoorOnPath
+    public unsafe BmSDK.BmGame.RBankDoorBase firstDoorOnPath
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorBase>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>
     /// ObjectProperty: doorToOpen
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT doorToOpen
+    public unsafe BmSDK.BmGame.RBankDoorBase doorToOpen
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorBase>(Ptr + 604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 
     /// <summary>
     /// ObjectProperty: doorToWaitFor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT doorToWaitFor
+    public unsafe BmSDK.BmGame.RBankDoorBase doorToWaitFor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorBase>(Ptr + 612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
     /// <summary>
     /// ObjectProperty: LastDiscoveredDoor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastDiscoveredDoor
+    public unsafe BmSDK.BmGame.RBankDoorBase LastDiscoveredDoor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorBase>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
 
     /// <summary>
     /// StructProperty: cachedDestination
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT cachedDestination
+    public unsafe System.Numerics.Vector3 cachedDestination
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
     }
 
@@ -126,9 +126,9 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// <summary>
     /// StructProperty: CheatChaseSavedLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CheatChaseSavedLoc
+    public unsafe System.Numerics.Vector3 CheatChaseSavedLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
     }
 
@@ -146,7 +146,7 @@ public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_Action
     /// </summary>
     public unsafe bool bTryingToPathAroundDoor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 676); }
     }
 }

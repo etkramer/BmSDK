@@ -71,9 +71,9 @@ public partial class SceneCapture2DActor : BmSDK.Engine.SceneCaptureActor, BmSDK
     /// <summary>
     /// ComponentProperty: DrawFrustum
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DrawFrustum
+    public unsafe BmSDK.Engine.DrawFrustumComponent DrawFrustum
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawFrustumComponent>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 }

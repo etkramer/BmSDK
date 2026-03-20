@@ -38,8 +38,8 @@ public partial class InterpTrackSoundMasterSync : BmSDK.AkAudio.InterpTrackAkEve
     /// </summary>
     public unsafe bool AudioShouldStopOnEnd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class InterpTrackSoundMasterSync : BmSDK.AkAudio.InterpTrackAkEve
     /// </summary>
     public unsafe bool SeekOnJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
     }
 }

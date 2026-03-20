@@ -36,18 +36,18 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Input
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: ContractOrExpandInput
     /// </summary>
-    public unsafe byte ContractOrExpandInput
+    public unsafe BmSDK.Engine.MaterialExpressionContractExpand.EContractOrExpandInput ContractOrExpandInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionContractExpand.EContractOrExpandInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

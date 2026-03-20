@@ -71,27 +71,27 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IInterface_NavMeshPathObstacle
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
     }
 
     /// <summary>
     /// ComponentProperty: HitMaskComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HitMaskComp
+    public unsafe BmSDK.Engine.SceneCapture2DHitMaskComponent HitMaskComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SceneCapture2DHitMaskComponent>(Ptr + 832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 
     /// <summary>
     /// StructProperty: InitialLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InitialLoc
+    public unsafe System.Numerics.Vector3 InitialLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
@@ -109,8 +109,8 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// </summary>
     public unsafe bool bObstacleRegistered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// </summary>
     public unsafe bool bCanRegisterObstacle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
     }
 
     /// <summary>
@@ -127,79 +127,79 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// </summary>
     public unsafe bool bCachedMeshBodyToBone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 856); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 856); }
     }
 
     /// <summary>
     /// ObjectProperty: RoofRack
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RoofRack
+    public unsafe BmSDK.Engine.KActorSpawnable RoofRack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KActorSpawnable>(Ptr + 860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
     }
 
     /// <summary>
     /// ObjectProperty: DeformParticlesSmall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeformParticlesSmall
+    public unsafe BmSDK.Engine.ParticleSystem DeformParticlesSmall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
     /// <summary>
     /// ObjectProperty: DeformParticlesMedium
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeformParticlesMedium
+    public unsafe BmSDK.Engine.ParticleSystem DeformParticlesMedium
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
     }
 
     /// <summary>
     /// ObjectProperty: DeformParticlesLarge
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeformParticlesLarge
+    public unsafe BmSDK.Engine.ParticleSystem DeformParticlesLarge
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactParticlesSmall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesSmall
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesSmall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactParticlesMedium
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesMedium
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesMedium
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactParticlesLarge
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactParticlesLarge
+    public unsafe BmSDK.Engine.ParticleSystem ImpactParticlesLarge
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioPhysicalMaterialOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioPhysicalMaterialOverride
+    public unsafe BmSDK.Engine.PhysicalMaterial AudioPhysicalMaterialOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
 
@@ -792,9 +792,9 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: FlipTorque
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FlipTorque
+    public unsafe System.Numerics.Vector3 FlipTorque
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
@@ -810,9 +810,9 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: CachedBodyToBone
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> CachedBodyToBone
+    public unsafe BmSDK.TArray<int> CachedBodyToBone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
     }
 }

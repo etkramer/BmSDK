@@ -36,9 +36,9 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: GoalData
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT GoalData
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RMultiDestGoalData.FPerGoalInfo> GoalData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMultiDestGoalData.FPerGoalInfo>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -51,9 +51,9 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: GoalPos
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GoalPos
+        public unsafe System.Numerics.Vector3 GoalPos
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -62,8 +62,8 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
         /// </summary>
         public unsafe bool bFound
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
         }
 
         /// <summary>

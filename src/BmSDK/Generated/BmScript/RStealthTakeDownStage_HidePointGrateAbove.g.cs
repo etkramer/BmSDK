@@ -71,18 +71,18 @@ public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RS
     /// <summary>
     /// ObjectProperty: CeilingGrate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CeilingGrate
+    public unsafe BmSDK.BmGame.RHidePoint_GrateBase CeilingGrate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint_GrateBase>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// StructProperty: rGrateOpenRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT rGrateOpenRotation
+    public unsafe BmSDK.Rotator rGrateOpenRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
     }
 }

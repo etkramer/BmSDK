@@ -45,9 +45,9 @@ public partial class RSeqAct_BatFlock : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: AttractorList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> AttractorList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> AttractorList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 

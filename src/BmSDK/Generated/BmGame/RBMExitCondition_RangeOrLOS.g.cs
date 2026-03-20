@@ -36,9 +36,9 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
     /// <summary>
     /// ObjectProperty: LOSTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LOSTarget
+    public unsafe BmSDK.Engine.Actor LOSTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
@@ -56,8 +56,8 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
     /// </summary>
     public unsafe bool bCheckFOV
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
     /// </summary>
     public unsafe bool bCheckDist
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
     /// </summary>
     public unsafe bool bCheckLOS
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
     /// </summary>
     public unsafe bool bLastLOSCheckResult
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
     }
 
     /// <summary>

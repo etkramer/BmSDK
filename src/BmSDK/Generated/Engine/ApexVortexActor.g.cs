@@ -71,9 +71,9 @@ public partial class ApexVortexActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK
     /// <summary>
     /// ComponentProperty: VortexComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VortexComponent
+    public unsafe BmSDK.Engine.ApexVortexComponent VortexComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexVortexComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

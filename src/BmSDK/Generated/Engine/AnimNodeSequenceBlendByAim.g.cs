@@ -36,45 +36,45 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
     /// <summary>
     /// StructProperty: Aim
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Aim
+    public unsafe System.Numerics.Vector2 Aim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 
     /// <summary>
     /// StructProperty: PreviousAim
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PreviousAim
+    public unsafe System.Numerics.Vector2 PreviousAim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// StructProperty: HorizontalRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HorizontalRange
+    public unsafe System.Numerics.Vector2 HorizontalRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
     /// <summary>
     /// StructProperty: VerticalRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VerticalRange
+    public unsafe System.Numerics.Vector2 VerticalRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
     /// <summary>
     /// StructProperty: AngleOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AngleOffset
+    public unsafe System.Numerics.Vector2 AngleOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 

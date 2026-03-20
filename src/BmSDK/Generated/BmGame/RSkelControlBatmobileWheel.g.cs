@@ -72,9 +72,9 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
     /// <summary>
     /// StructProperty: SuspensionRotAxis
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SuspensionRotAxis
+    public unsafe System.Numerics.Vector3 SuspensionRotAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
@@ -99,9 +99,9 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
     /// <summary>
     /// StructProperty: SquashAxis
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SquashAxis
+    public unsafe System.Numerics.Vector3 SquashAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 

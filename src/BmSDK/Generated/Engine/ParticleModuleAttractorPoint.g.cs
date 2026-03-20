@@ -36,27 +36,27 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
     /// <summary>
     /// StructProperty: Position
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorPoint.Range Position
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector Position
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorPoint.Range>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorPoint.Strength Range
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Range
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorPoint.Strength>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Strength
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
@@ -65,8 +65,8 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
     /// </summary>
     public unsafe bool StrengthByDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
     /// </summary>
     public unsafe bool bAffectBaseVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
     /// </summary>
     public unsafe bool bOverrideVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
     }
 
     /// <summary>
@@ -92,7 +92,7 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
     /// </summary>
     public unsafe bool bUseWorldSpacePosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
     }
 }

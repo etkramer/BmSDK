@@ -36,36 +36,36 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: SystemUpdateMode
     /// </summary>
-    public unsafe byte SystemUpdateMode
+    public unsafe BmSDK.Engine.ParticleSystem.EParticleSystemUpdateMode SystemUpdateMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem.EParticleSystemUpdateMode>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: LODMethod
     /// </summary>
-    public unsafe byte LODMethod
+    public unsafe BmSDK.Engine.ParticleSystem.ParticleSystemLODMethod LODMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 85); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem.ParticleSystemLODMethod>(Ptr + 85); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
     /// <summary>
     /// ByteProperty: OcclusionBoundsMethod
     /// </summary>
-    public unsafe byte OcclusionBoundsMethod
+    public unsafe BmSDK.Engine.ParticleSystem.EParticleSystemOcclusionBoundsMethod OcclusionBoundsMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 86); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem.EParticleSystemOcclusionBoundsMethod>(Ptr + 86); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 86); }
     }
 
     /// <summary>
     /// ByteProperty: MinimumPhysXLevelOverride
     /// </summary>
-    public unsafe byte MinimumPhysXLevelOverride
+    public unsafe BmSDK.Engine.ParticleSystem.EParticleSystemOveridePhysXLevel MinimumPhysXLevelOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 87); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem.EParticleSystemOveridePhysXLevel>(Ptr + 87); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 87); }
     }
 
@@ -108,27 +108,27 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Emitters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> Emitters
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleEmitter> Emitters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleEmitter>>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// ComponentProperty: PreviewComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewComponent
+    public unsafe BmSDK.Engine.ParticleSystemComponent PreviewComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// StructProperty: ThumbnailAngle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThumbnailAngle
+    public unsafe BmSDK.Rotator ThumbnailAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
@@ -155,8 +155,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOrientZAxisTowardCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRegenerateLODDuplicate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnableParticleDistanceCulling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseFixedRelativeBoundingBox
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShouldResetPeakCounts
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsLooping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasPhysics
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasApex
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseRealtimeThumbnail
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ThumbnailImageOutOfDate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSkipSpawnCountCheck
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHighPriorityPoolEffect
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -272,34 +272,34 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseDelayRange
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
     /// ObjectProperty: CurveEdSetup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurveEdSetup
+    public unsafe BmSDK.Engine.InterpCurveEdSetup CurveEdSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpCurveEdSetup>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
     /// ObjectProperty: ThumbnailImage
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThumbnailImage
+    public unsafe BmSDK.Engine.Texture2D ThumbnailImage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// ObjectProperty: PhysxParticleSystemRef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysxParticleSystemRef
+    public unsafe BmSDK.Engine.ParticleSystem PhysxParticleSystemRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
@@ -315,9 +315,9 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LODDistances
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> LODDistances
+    public unsafe BmSDK.TArray<float> LODDistances
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
@@ -333,9 +333,9 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LODSettings
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> LODSettings
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystem.FParticleSystemLOD> LODSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystem.FParticleSystemLOD>>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
@@ -360,9 +360,9 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FixedRelativeBoundingBox
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FixedRelativeBoundingBox
+    public unsafe BmSDK.GameObject.FBox FixedRelativeBoundingBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
@@ -387,18 +387,18 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloorPosition
+    public unsafe System.Numerics.Vector3 FloorPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
     /// <summary>
     /// StructProperty: FloorRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloorRotation
+    public unsafe BmSDK.Rotator FloorRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
@@ -414,18 +414,18 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorScale3D
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloorScale3D
+    public unsafe System.Numerics.Vector3 FloorScale3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 
     /// <summary>
     /// StructProperty: BackgroundColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BackgroundColor
+    public unsafe BmSDK.GameObject.FColor BackgroundColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
@@ -450,9 +450,9 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MacroUVPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MacroUVPosition
+    public unsafe System.Numerics.Vector3 MacroUVPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
@@ -468,18 +468,18 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomOcclusionBounds
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CustomOcclusionBounds
+    public unsafe BmSDK.GameObject.FBox CustomOcclusionBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>
     /// ArrayProperty: SoloTracking
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SoloTracking
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystem.FLODSoloTrack> SoloTracking
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystem.FLODSoloTrack>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 

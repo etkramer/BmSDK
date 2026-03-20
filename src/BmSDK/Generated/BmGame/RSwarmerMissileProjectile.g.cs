@@ -71,204 +71,204 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetPosition
+    public unsafe System.Numerics.Vector3 TargetPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_0
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_1
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_2
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_3
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_4
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_5
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_6
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
     }
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh_7
+    public unsafe BmSDK.Engine.StaticMeshComponent Mesh_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
     }
 
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_0
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_1
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_2
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_3
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_4
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_5
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_6
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
     }
     /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Trail_7
+    public unsafe BmSDK.Engine.ParticleSystemComponent Trail_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_0
+    public unsafe System.Numerics.Vector3 MissileOffset_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_1
+    public unsafe System.Numerics.Vector3 MissileOffset_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_2
+    public unsafe System.Numerics.Vector3 MissileOffset_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1004); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_3
+    public unsafe System.Numerics.Vector3 MissileOffset_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_4
+    public unsafe System.Numerics.Vector3 MissileOffset_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_5
+    public unsafe System.Numerics.Vector3 MissileOffset_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_6
+    public unsafe System.Numerics.Vector3 MissileOffset_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileOffset_7
+    public unsafe System.Numerics.Vector3 MissileOffset_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1064); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
     }
 
@@ -340,65 +340,65 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_0
+    public unsafe System.Numerics.Vector3 MissileTarget_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_1
+    public unsafe System.Numerics.Vector3 MissileTarget_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_2
+    public unsafe System.Numerics.Vector3 MissileTarget_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_3
+    public unsafe System.Numerics.Vector3 MissileTarget_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_4
+    public unsafe System.Numerics.Vector3 MissileTarget_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_5
+    public unsafe System.Numerics.Vector3 MissileTarget_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_6
+    public unsafe System.Numerics.Vector3 MissileTarget_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
     }
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MissileTarget_7
+    public unsafe System.Numerics.Vector3 MissileTarget_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
     }
 
@@ -470,27 +470,27 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: SpreadHorizontalVsLifespan
     /// </summary>
-    public unsafe BmSDK.BmGame.RSwarmerMissileProjectile.SpreadVerticalVsLifespan SpreadHorizontalVsLifespan
+    public unsafe BmSDK.GameObject.FInterpCurveFloat SpreadHorizontalVsLifespan
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwarmerMissileProjectile.SpreadVerticalVsLifespan>(Ptr + 1212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
     }
 
     /// <summary>
     /// StructProperty: SpreadVerticalVsLifespan
     /// </summary>
-    public unsafe BmSDK.BmGame.RSwarmerMissileProjectile.PositionVerticalVsLifespan SpreadVerticalVsLifespan
+    public unsafe BmSDK.GameObject.FInterpCurveFloat SpreadVerticalVsLifespan
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwarmerMissileProjectile.PositionVerticalVsLifespan>(Ptr + 1232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
     }
 
     /// <summary>
     /// StructProperty: PositionVerticalVsLifespan
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.Components PositionVerticalVsLifespan
+    public unsafe BmSDK.GameObject.FInterpCurveFloat PositionVerticalVsLifespan
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.Components>(Ptr + 1252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
     }
 
@@ -524,54 +524,54 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// ObjectProperty: ImpactExplosion
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactExplosion
+    public unsafe BmSDK.Engine.ParticleSystem ImpactExplosion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactExplosionSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactExplosionSound
+    public unsafe BmSDK.Engine.AkEvent ImpactExplosionSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1292); }
     }
 
     /// <summary>
     /// ObjectProperty: LaunchEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LaunchEvent
+    public unsafe BmSDK.Engine.AkEvent LaunchEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 
     /// <summary>
     /// ObjectProperty: FlightSoundPlay
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlightSoundPlay
+    public unsafe BmSDK.Engine.AkEvent FlightSoundPlay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
     }
 
     /// <summary>
     /// StructProperty: StartPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartPos
+    public unsafe System.Numerics.Vector3 StartPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
     }
 
     /// <summary>
     /// StructProperty: InvActorRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InvActorRot
+    public unsafe BmSDK.Rotator InvActorRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
     }
 }

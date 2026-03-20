@@ -71,9 +71,9 @@ public partial class RRescuePointVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: RescuePoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> RescuePoints
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRescuePoint> RescuePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRescuePoint>>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
@@ -82,7 +82,7 @@ public partial class RRescuePointVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ClearRescuePointOnLeavingVolume
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
     }
 }

@@ -71,27 +71,27 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// ComponentProperty: WindSource
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WindSource
+    public unsafe BmSDK.Engine.WindDirectionalSourceComponent WindSource
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WindDirectionalSourceComponent>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
     /// ComponentProperty: Wind1DirectionArrow
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Wind1DirectionArrow
+    public unsafe BmSDK.Engine.ArrowComponent Wind1DirectionArrow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ArrowComponent>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
     /// ComponentProperty: Wind2DirectionArrow
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Wind2DirectionArrow
+    public unsafe BmSDK.Engine.ArrowComponent Wind2DirectionArrow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ArrowComponent>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
@@ -100,8 +100,8 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// </summary>
     public unsafe bool bAffectCape
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// </summary>
     public unsafe bool bAffectApexCloth
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
     }
 
     /// <summary>
@@ -134,18 +134,18 @@ public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmS
     /// <summary>
     /// ArrayProperty: AffectedCapeOwners
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> AffectedCapeOwners
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> AffectedCapeOwners
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ArrayProperty: AffectedClothComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> AffectedClothComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent> AffectedClothComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent>>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 }

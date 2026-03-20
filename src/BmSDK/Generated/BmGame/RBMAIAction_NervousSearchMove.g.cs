@@ -73,8 +73,8 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// </summary>
     public unsafe bool bDoEndFacing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// </summary>
     public unsafe bool bHasBackwardsFollower
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// </summary>
     public unsafe bool bWalkSlow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// </summary>
     public unsafe bool bSuppressAimingForSpecialWalkCycle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
     }
 
     /// <summary>
@@ -109,16 +109,16 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// </summary>
     public unsafe bool bPassingGestureActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 900); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 900); }
     }
 
     /// <summary>
     /// StructProperty: EndFacing
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndFacing
+    public unsafe System.Numerics.Vector3 EndFacing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 
@@ -134,18 +134,18 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     /// <summary>
     /// ArrayProperty: LeftGestureAnim
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> LeftGestureAnim
+    public unsafe BmSDK.TArray<BmSDK.FName> LeftGestureAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
 
     /// <summary>
     /// ArrayProperty: RightGestureAnim
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> RightGestureAnim
+    public unsafe BmSDK.TArray<BmSDK.FName> RightGestureAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
     }
 

@@ -71,18 +71,18 @@ public partial class RBMAIAction_NervousSearchMove_Raw : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// StructProperty: GoalPosFirst
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GoalPosFirst
+    public unsafe System.Numerics.Vector3 GoalPosFirst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 
     /// <summary>
     /// StructProperty: GoalPosSecond
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GoalPosSecond
+    public unsafe System.Numerics.Vector3 GoalPosSecond
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
     }
 
@@ -91,7 +91,7 @@ public partial class RBMAIAction_NervousSearchMove_Raw : BmSDK.BmGame.RBMAIActio
     /// </summary>
     public unsafe bool bUseAdditionalPoint
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 976) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 976); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 976); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 976) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 976); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 976); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: OwnerObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OwnerObject
+    public unsafe BmSDK.GameObject OwnerObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

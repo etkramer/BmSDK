@@ -36,9 +36,9 @@ public partial class RSeqAct_GetTransInFromGangPoint : BmSDK.Engine.SequenceActi
     /// <summary>
     /// ObjectProperty: RiotPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RiotPoint
+    public unsafe BmSDK.BmGame.RGangInteractPointBase RiotPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGangInteractPointBase>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

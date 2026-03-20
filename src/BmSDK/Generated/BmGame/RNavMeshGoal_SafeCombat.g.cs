@@ -36,9 +36,9 @@ public partial class RNavMeshGoal_SafeCombat : BmSDK.Engine.NavMeshPathGoalEvalu
     /// <summary>
     /// ObjectProperty: NavHandle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NavHandle
+    public unsafe BmSDK.BmGame.RNavigationHandle NavHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

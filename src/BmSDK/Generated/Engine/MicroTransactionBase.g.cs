@@ -36,9 +36,9 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// ArrayProperty: AvailableProducts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> AvailableProducts
+    public unsafe BmSDK.TArray<BmSDK.Engine.MicroTransactionBase.FPurchaseInfo> AvailableProducts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MicroTransactionBase.FPurchaseInfo>>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 

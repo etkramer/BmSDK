@@ -71,36 +71,36 @@ public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_B
     /// <summary>
     /// StructProperty: SnatchInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SnatchInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FWeaponSnatchInfo SnatchInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FWeaponSnatchInfo>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
     /// <summary>
     /// ByteProperty: WeaponTypeSnatch
     /// </summary>
-    public unsafe byte WeaponTypeSnatch
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.EWeaponDestroyType WeaponTypeSnatch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.EWeaponDestroyType>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 
     /// <summary>
     /// StructProperty: BatmanSnatchID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanSnatchID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanSnatchID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
     }
 
     /// <summary>
     /// StructProperty: TargetSnatchID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetSnatchID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetSnatchID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
     }
 }

@@ -54,18 +54,18 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: NumBonesInChains
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>>> NumBonesInChains
+    public unsafe BmSDK.TArray<int> NumBonesInChains
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>>>>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ArrayProperty: CapeChainDrapeStart
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>> CapeChainDrapeStart
+    public unsafe BmSDK.TArray<int> CapeChainDrapeStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>>>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
@@ -81,9 +81,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: StateConfigs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>> StateConfigs
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeStateConfig> StateConfigs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeStateConfig>>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
@@ -108,9 +108,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: DefaultCinematicTemplateStateConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultCinematicTemplateStateConfig
+    public unsafe BmSDK.BmGame.RCapeStateConfig DefaultCinematicTemplateStateConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeStateConfig>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
@@ -126,81 +126,81 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CapeChainWidthOverrides
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>> CapeChainWidthOverrides
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType> CapeChainWidthOverrides
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ArrayProperty: SupportConstraintConnectionIndices
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>> SupportConstraintConnectionIndices
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeIntArrayType> SupportConstraintConnectionIndices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeIntArrayType>>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ArrayProperty: SupportSpringConnectionIndices
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>> SupportSpringConnectionIndices
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeIntArrayType> SupportSpringConnectionIndices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeIntArrayType>>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// ArrayProperty: SupportSpringConnectionLengths
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>> SupportSpringConnectionLengths
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType> SupportSpringConnectionLengths
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType>>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// ArrayProperty: SupportConnectorIndexPairs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>> SupportConnectorIndexPairs
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeSupportConnectorIndexPair> SupportConnectorIndexPairs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>>(Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeSupportConnectorIndexPair>>(Ptr + 236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
     /// ArrayProperty: MinLengthSprings
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>> MinLengthSprings
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FMinLengthSpringConfig> MinLengthSprings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FMinLengthSpringConfig>>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ArrayProperty: BoneCollisionWithWorldStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>> BoneCollisionWithWorldStates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType> BoneCollisionWithWorldStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType>>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
     /// <summary>
     /// ArrayProperty: BoneCollisionWithCollisionShapesAllowedStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>> BoneCollisionWithCollisionShapesAllowedStates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType> BoneCollisionWithCollisionShapesAllowedStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType>>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// ArrayProperty: CapeBoneOverstretchLimits
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> CapeBoneOverstretchLimits
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType> CapeBoneOverstretchLimits
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeFloatArrayType>>(Ptr + 300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 
@@ -216,9 +216,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UnusedCollisionShapeWorldPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UnusedCollisionShapeWorldPosition
+    public unsafe System.Numerics.Vector3 UnusedCollisionShapeWorldPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
@@ -227,8 +227,8 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool IsUseManualDamping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool IsUseHorizontalParentRelativeDamping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool IsUseVerticalParentRelativeDamping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
     }
 
     /// <summary>
@@ -315,18 +315,18 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BoneLocalNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoneLocalNormal
+    public unsafe System.Numerics.Vector3 BoneLocalNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 
     /// <summary>
     /// StructProperty: BoneLocalDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoneLocalDirection
+    public unsafe System.Numerics.Vector3 BoneLocalDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -405,9 +405,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CoreAnimSets
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> CoreAnimSets
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> CoreAnimSets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
@@ -459,9 +459,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BoneUseComponentReferenceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BoneUseComponentReferenceRotation
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType> BoneUseComponentReferenceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeConfig.FCapeBoolArrayType>>(Ptr + 476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 
@@ -659,9 +659,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ArrayProperty: BoolArray
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BoolArray
+        public unsafe BmSDK.TArray<bool> BoolArray
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
@@ -675,9 +675,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ArrayProperty: FloatArray
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT FloatArray
+        public unsafe BmSDK.TArray<float> FloatArray
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
@@ -691,9 +691,9 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ArrayProperty: IntArray
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT IntArray
+        public unsafe BmSDK.TArray<int> IntArray
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }

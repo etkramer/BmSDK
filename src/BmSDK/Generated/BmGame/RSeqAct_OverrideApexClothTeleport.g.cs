@@ -36,18 +36,18 @@ public partial class RSeqAct_OverrideApexClothTeleport : BmSDK.Engine.SequenceAc
     /// <summary>
     /// ArrayProperty: ActorsToBeTeleported
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> ActorsToBeTeleported
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> ActorsToBeTeleported
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: TeleportMode
     /// </summary>
-    public unsafe byte TeleportMode
+    public unsafe BmSDK.Engine.Actor.EApexClothTeleportMode TeleportMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.EApexClothTeleportMode>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

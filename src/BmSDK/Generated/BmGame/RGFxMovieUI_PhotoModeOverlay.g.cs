@@ -36,9 +36,9 @@ public partial class RGFxMovieUI_PhotoModeOverlay : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// ObjectProperty: PhotoCamera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhotoCamera
+    public unsafe BmSDK.BmGame.RPhotoCameraController PhotoCamera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhotoCameraController>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
@@ -119,8 +119,8 @@ public partial class RGFxMovieUI_PhotoModeOverlay : BmSDK.BmGame.RGFxMovieUI, Bm
     /// </summary>
     public unsafe bool bIsPromptsVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RGFxMovieUI_PhotoModeOverlay : BmSDK.BmGame.RGFxMovieUI, Bm
     /// </summary>
     public unsafe bool bPrevUsingGamepad
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -137,7 +137,7 @@ public partial class RGFxMovieUI_PhotoModeOverlay : BmSDK.BmGame.RGFxMovieUI, Bm
     /// </summary>
     public unsafe bool bBackPressed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 }

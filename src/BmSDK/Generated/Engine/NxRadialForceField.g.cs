@@ -71,9 +71,9 @@ public partial class NxRadialForceField : BmSDK.Engine.NxForceField, BmSDK.IGame
     /// <summary>
     /// ComponentProperty: RenderComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderComponent
+    public unsafe BmSDK.Engine.DrawSphereComponent RenderComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
@@ -98,18 +98,18 @@ public partial class NxRadialForceField : BmSDK.Engine.NxForceField, BmSDK.IGame
     /// <summary>
     /// ByteProperty: ForceFalloff
     /// </summary>
-    public unsafe byte ForceFalloff
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff ForceFalloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinearKernel
+    public unsafe System.IntPtr LinearKernel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 }

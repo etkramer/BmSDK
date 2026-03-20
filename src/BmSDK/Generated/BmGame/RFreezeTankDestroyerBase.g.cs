@@ -71,9 +71,9 @@ public partial class RFreezeTankDestroyerBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: Target
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Target
+    public unsafe BmSDK.BmGame.RVehicleNPC Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

@@ -36,27 +36,27 @@ public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleMo
     /// <summary>
     /// ByteProperty: FalloffType
     /// </summary>
-    public unsafe byte FalloffType
+    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.EBoneSocketAttractorFalloffType FalloffType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.EBoneSocketAttractorFalloffType>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: DestinationType
     /// </summary>
-    public unsafe byte DestinationType
+    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.ELocationBoneSocketDestination DestinationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 97); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.ELocationBoneSocketDestination>(Ptr + 97); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 97); }
     }
 
     /// <summary>
     /// ByteProperty: SelectionMethod
     /// </summary>
-    public unsafe byte SelectionMethod
+    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.ELocationBoneSocketDestSelectionMethod SelectionMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 98); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.ELocationBoneSocketDestSelectionMethod>(Ptr + 98); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 98); }
     }
 
@@ -65,8 +65,8 @@ public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleMo
     /// </summary>
     public unsafe bool bParticleLifeRelative
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -74,79 +74,79 @@ public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleMo
     /// </summary>
     public unsafe bool bAttractAlongLengthOfBone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: FalloffExponent
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.Range FalloffExponent
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat FalloffExponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.Range>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.Strength Range
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Range
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.Strength>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.CollisionRadius Strength
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.CollisionRadius>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: CollisionRadius
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.DragCoefficient CollisionRadius
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CollisionRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.DragCoefficient>(Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
     /// <summary>
     /// StructProperty: DragCoefficient
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.DragRadius DragCoefficient
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DragCoefficient
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.DragRadius>(Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 
     /// <summary>
     /// StructProperty: DragRadius
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleAttractorBoneSocket.SourceLocations DragRadius
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DragRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleAttractorBoneSocket.SourceLocations>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// StructProperty: UniversalOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UniversalOffset
+    public unsafe System.Numerics.Vector3 UniversalOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// ArrayProperty: SourceLocations
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SourceLocations
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModuleAttractorBoneSocket.FAttractLocationBoneSocketInfo> SourceLocations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModuleAttractorBoneSocket.FAttractLocationBoneSocketInfo>>(Ptr + 332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 
@@ -162,9 +162,9 @@ public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleMo
     /// <summary>
     /// ObjectProperty: EditorSkelMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EditorSkelMesh
+    public unsafe BmSDK.Engine.SkeletalMesh EditorSkelMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 

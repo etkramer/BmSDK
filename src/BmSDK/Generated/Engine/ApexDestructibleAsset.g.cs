@@ -36,90 +36,90 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: FractureMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.Sockets> FractureMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.FractureMaterial> FractureMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.Sockets>>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.FractureMaterial>>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// ObjectProperty: InitalDamageParticleEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InitalDamageParticleEffect
+    public unsafe BmSDK.Engine.ParticleSystem InitalDamageParticleEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// ObjectProperty: LowSpeedInitalDamageParticleEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LowSpeedInitalDamageParticleEffect
+    public unsafe BmSDK.Engine.ParticleSystem LowSpeedInitalDamageParticleEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
     /// ObjectProperty: CrumbleParticleEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrumbleParticleEffect
+    public unsafe BmSDK.Engine.ParticleSystem CrumbleParticleEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
     /// ObjectProperty: DefaultPhysMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultPhysMaterial
+    public unsafe BmSDK.Engine.PhysicalMaterial DefaultPhysMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// ObjectProperty: InitialBreakSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InitialBreakSound
+    public unsafe BmSDK.Engine.AkEvent InitialBreakSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ObjectProperty: InitialBreakSoundWhenFractureWallDamagedByGel
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InitialBreakSoundWhenFractureWallDamagedByGel
+    public unsafe BmSDK.Engine.AkEvent InitialBreakSoundWhenFractureWallDamagedByGel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
     /// ObjectProperty: AssetDamageSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AssetDamageSound
+    public unsafe BmSDK.Engine.AkEvent AssetDamageSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
     /// <summary>
     /// ObjectProperty: AssetShardSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AssetShardSound
+    public unsafe BmSDK.Engine.AkEvent AssetShardSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// ObjectProperty: StaticMeshReplacement
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMeshReplacement
+    public unsafe BmSDK.Engine.StaticMesh StaticMeshReplacement
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
@@ -200,8 +200,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bEnablePhysicalMaterialSoundFallbacks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bHasUniqueAssetMaterialNames
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bAlsoUsedAsStaticMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bNeedsCollisionGeomUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bApplyApexMaterialsToStaticMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bReplaceDepthZeroCollisionOnPostLoad
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bDeprecatedApexDestructibleAsset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bInvalidGelTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool IsCooked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bDynamic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool BreakLargeChunksOnImpact
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bUseStaticMeshReplacementForNavMeshBounds
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
@@ -308,25 +308,25 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     public unsafe bool bEnableSelfCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 
     /// <summary>
     /// StructProperty: MDestructibleThumbnailComponent
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MDestructibleThumbnailComponent
+    public unsafe System.IntPtr MDestructibleThumbnailComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 
     /// <summary>
     /// StructProperty: BaseCollisionGeom
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDestructibleAsset.Sockets BaseCollisionGeom
+    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom BaseCollisionGeom
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.Sockets>(Ptr + 336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 
@@ -342,27 +342,27 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: Sockets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> Sockets
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshSocket> Sockets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMeshSocket>>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
     }
 
     /// <summary>
     /// ArrayProperty: CookedStaticVertexBuffers
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CookedStaticVertexBuffers
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.FCookedBuffer> CookedStaticVertexBuffers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.FCookedBuffer>>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
     /// <summary>
     /// StructProperty: CookedBounds
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CookedBounds
+    public unsafe System.Numerics.Vector4 CookedBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
@@ -387,9 +387,9 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// StructProperty: DestructibleParameters
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDestructibleAsset.CrumbleParameters DestructibleParameters
+    public unsafe BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters DestructibleParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.CrumbleParameters>(Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters>(Ptr + 528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
     }
 
@@ -405,9 +405,9 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: CrumbleParameters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> CrumbleParameters
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.FDestructibleCrumbleParameters> CrumbleParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexDestructibleAsset.FDestructibleCrumbleParameters>>(Ptr + 772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
@@ -423,18 +423,18 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: JokerHallucinationOverlayNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> JokerHallucinationOverlayNames
+    public unsafe BmSDK.TArray<BmSDK.FName> JokerHallucinationOverlayNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ByteProperty: NavMeshObstacleOverride
     /// </summary>
-    public unsafe byte NavMeshObstacleOverride
+    public unsafe BmSDK.Engine.ApexDestructibleAsset.ENavMeshObstacleOverride NavMeshObstacleOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.ENavMeshObstacleOverride>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 

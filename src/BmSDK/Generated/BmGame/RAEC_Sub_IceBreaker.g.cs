@@ -71,9 +71,9 @@ public partial class RAEC_Sub_IceBreaker : BmSDK.BmGame.RAlertEventCoordinatorSo
     /// <summary>
     /// ObjectProperty: ThugToFree
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThugToFree
+    public unsafe BmSDK.BmGame.RPawnVillain ThugToFree
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

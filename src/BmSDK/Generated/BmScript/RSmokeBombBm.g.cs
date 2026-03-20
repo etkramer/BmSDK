@@ -71,36 +71,36 @@ public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SmokeBombGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2592); }
     }
 
     /// <summary>
     /// ObjectProperty: SmokeBombStandingMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombStandingMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombStandingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2600); }
     }
 
     /// <summary>
     /// ObjectProperty: SmokeBombCoverMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombCoverMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig SmokeBombCoverMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2608); }
     }
 
     /// <summary>
     /// ObjectProperty: SmokeScreenArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeScreenArchetype
+    public unsafe BmSDK.BmGame.RSmokeScreen SmokeScreenArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSmokeScreen>(Ptr + 2616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2616); }
     }
 
@@ -109,8 +109,8 @@ public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanToggleDetectiveMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasTurnedOnDetectiveMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
     }
 }

@@ -45,18 +45,18 @@ public partial class TextureRenderTargetCube : BmSDK.Engine.TextureRenderTarget,
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ClearColor
+    public unsafe BmSDK.GameObject.FLinearColor ClearColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// ByteProperty: Format
     /// </summary>
-    public unsafe byte Format
+    public unsafe BmSDK.Engine.Texture.EPixelFormat Format
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.EPixelFormat>(Ptr + 336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 }

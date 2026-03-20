@@ -71,9 +71,9 @@ public partial class RBMCombatThrownObject_GunDestroyed : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// StructProperty: rThugDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT rThugDirection
+    public unsafe BmSDK.Rotator rThugDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
     }
 }

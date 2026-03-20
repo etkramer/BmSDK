@@ -99,27 +99,27 @@ public partial class RSeqAct_SmilexBombClock : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ObjectProperty: TimerMat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TimerMat
+    public unsafe BmSDK.Engine.MaterialInstanceConstant TimerMat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 
     /// <summary>
     /// ObjectProperty: PC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
+    public unsafe BmSDK.BmGame.RPlayerController PC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// ArrayProperty: TriggerEventsAtTimes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> TriggerEventsAtTimes
+    public unsafe BmSDK.TArray<int> TriggerEventsAtTimes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
@@ -137,8 +137,8 @@ public partial class RSeqAct_SmilexBombClock : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bUseHudTimer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RSeqAct_SmilexBombClock : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bPaused
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
     }
 
     /// <summary>

@@ -71,18 +71,18 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: ScreenShakeModifier
     /// </summary>
-    public unsafe BmSDK.BmGame.RCameraActor.OverlayPlayer ScreenShakeModifier
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier ScreenShakeModifier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraActor.OverlayPlayer>(Ptr + 1224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier>(Ptr + 1224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
     }
 
     /// <summary>
     /// ObjectProperty: OverlayPlayer
     /// </summary>
-    public unsafe BmSDK.Engine.CameraActor.CamOverridePostProcess OverlayPlayer
+    public unsafe BmSDK.BmGame.RCameraOverlayPlayer OverlayPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraActor.CamOverridePostProcess>(Ptr + 1232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraOverlayPlayer>(Ptr + 1232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
     }
 
@@ -91,8 +91,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bRunning
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bCullsPawns
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bEnableMotionBlur
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseAspectRatioCorretion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bDisallowOverlays
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bCullPawnsTillClearOfBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
     }
 
     /// <summary>

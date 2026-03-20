@@ -36,9 +36,9 @@ public partial class RVehicleBehaviour_DriveOffAndDespawn : BmSDK.BmGame.RVehicl
     /// <summary>
     /// ObjectProperty: DriveAwayFromVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DriveAwayFromVehicle
+    public unsafe BmSDK.BmGame.RVehicleNPC DriveAwayFromVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
     }
 
@@ -65,7 +65,7 @@ public partial class RVehicleBehaviour_DriveOffAndDespawn : BmSDK.BmGame.RVehicl
     /// </summary>
     public unsafe bool DriveOffImmediately
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 }

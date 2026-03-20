@@ -36,18 +36,18 @@ public partial class RSeqAct_GenerateConversationCueFile : BmSDK.Engine.Sequence
     /// <summary>
     /// ObjectProperty: Conversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Conversation
+    public unsafe BmSDK.Engine.AkDialogueSpeech Conversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: ConversationAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConversationAnimSet
+    public unsafe BmSDK.Engine.AnimSet ConversationAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 }

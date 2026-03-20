@@ -47,25 +47,25 @@ public partial class AnimationCompressionAlgorithm_BitwiseCompressOnly : BmSDK.E
     /// </summary>
     public unsafe bool bNeedsSkeleton
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
     /// ByteProperty: TranslationCompressionFormat
     /// </summary>
-    public unsafe byte TranslationCompressionFormat
+    public unsafe BmSDK.Engine.AnimSequence.AnimationCompressionFormat TranslationCompressionFormat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.AnimationCompressionFormat>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// ByteProperty: RotationCompressionFormat
     /// </summary>
-    public unsafe byte RotationCompressionFormat
+    public unsafe BmSDK.Engine.AnimSequence.AnimationCompressionFormat RotationCompressionFormat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 105); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.AnimationCompressionFormat>(Ptr + 105); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 105); }
     }
 }

@@ -71,27 +71,27 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// ComponentProperty: SpotLight_Attack
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpotLight_Attack
+    public unsafe BmSDK.Engine.SpotLightComponent SpotLight_Attack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpotLightComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ComponentProperty: LightShaft_Attack
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightShaft_Attack
+    public unsafe BmSDK.Engine.RLightShaftVolumeComponent LightShaft_Attack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RLightShaftVolumeComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// StructProperty: ConeColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConeColor
+    public unsafe BmSDK.GameObject.FColor ConeColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
@@ -134,18 +134,18 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// ComponentProperty: SelfLightComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SelfLightComp
+    public unsafe BmSDK.Engine.PointLightComponent SelfLightComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 
     /// <summary>
     /// ByteProperty: lightMode
     /// </summary>
-    public unsafe byte lightMode
+    public unsafe BmSDK.BmGame.RSentryGunLightsBase.eLightMode lightMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunLightsBase.eLightMode>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
@@ -179,9 +179,9 @@ public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// ObjectProperty: SentryGun
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SentryGun
+    public unsafe BmSDK.BmGame.RSentryGunBase SentryGun
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunBase>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 }

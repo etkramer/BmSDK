@@ -71,9 +71,9 @@ public partial class RSpecialMoveInstance_HarpoonDragTrigger : BmSDK.BmGame.RSpe
     /// <summary>
     /// ObjectProperty: MyTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyTarget
+    public unsafe BmSDK.Engine.Actor MyTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 
@@ -82,8 +82,8 @@ public partial class RSpecialMoveInstance_HarpoonDragTrigger : BmSDK.BmGame.RSpe
     /// </summary>
     public unsafe bool bStartedPulling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 980); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 980); }
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ public partial class RSpecialMoveInstance_HarpoonDragTrigger : BmSDK.BmGame.RSpe
     /// </summary>
     public unsafe bool bApplyingForce
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 980); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 980); }
     }
 }

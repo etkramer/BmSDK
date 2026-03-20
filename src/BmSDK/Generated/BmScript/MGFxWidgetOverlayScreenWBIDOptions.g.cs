@@ -36,9 +36,9 @@ public partial class MGFxWidgetOverlayScreenWBIDOptions : BmSDK.BmScript.MGFxWid
     /// <summary>
     /// ArrayProperty: ButtonGroup
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> ButtonGroup
+    public unsafe BmSDK.TArray<BmSDK.GFxUI.GFxObject> ButtonGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.GFxObject>>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 

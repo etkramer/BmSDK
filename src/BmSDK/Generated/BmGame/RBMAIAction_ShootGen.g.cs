@@ -71,9 +71,9 @@ public partial class RBMAIAction_ShootGen : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: TargetGenerator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetGenerator
+    public unsafe BmSDK.BmGame.RMagneticSurfaceSMBase TargetGenerator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticSurfaceSMBase>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 

@@ -71,9 +71,9 @@ public partial class AkWhooshAnchor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: Sprite
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Sprite
+    public unsafe BmSDK.Engine.SpriteComponent Sprite
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

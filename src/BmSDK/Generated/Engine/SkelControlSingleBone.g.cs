@@ -38,8 +38,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe bool bApplyTranslation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe bool bApplyRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe bool bAddTranslation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe bool bAddRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
     }
 
     /// <summary>
@@ -74,34 +74,34 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe bool bRemoveMeshRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 248); }
     }
 
     /// <summary>
     /// StructProperty: BoneTranslation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoneTranslation
+    public unsafe System.Numerics.Vector3 BoneTranslation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ByteProperty: BoneTranslationSpace
     /// </summary>
-    public unsafe byte BoneTranslationSpace
+    public unsafe BmSDK.Engine.SkelControlBase.EBoneControlSpace BoneTranslationSpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase.EBoneControlSpace>(Ptr + 264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 
     /// <summary>
     /// ByteProperty: BoneRotationSpace
     /// </summary>
-    public unsafe byte BoneRotationSpace
+    public unsafe BmSDK.Engine.SkelControlBase.EBoneControlSpace BoneRotationSpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 265); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase.EBoneControlSpace>(Ptr + 265); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 265); }
     }
 
@@ -117,9 +117,9 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// <summary>
     /// StructProperty: BoneRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoneRotation
+    public unsafe BmSDK.Rotator BoneRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 

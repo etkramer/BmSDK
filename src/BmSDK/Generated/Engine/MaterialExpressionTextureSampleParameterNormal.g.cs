@@ -36,9 +36,9 @@ public partial class MaterialExpressionTextureSampleParameterNormal : BmSDK.Engi
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InstanceOverride
+    public unsafe System.IntPtr InstanceOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 }

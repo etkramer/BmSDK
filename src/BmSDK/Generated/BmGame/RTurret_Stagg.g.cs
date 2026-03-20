@@ -71,18 +71,18 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: staggGunMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT staggGunMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent staggGunMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
     }
 
     /// <summary>
     /// ComponentProperty: LightMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightMesh
+    public unsafe BmSDK.Engine.StaticMeshComponent LightMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
     }
 
@@ -98,36 +98,36 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: BM
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BM
+    public unsafe BmSDK.BmGame.RPawnPlayer BM
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 1364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
     }
 
     /// <summary>
     /// ObjectProperty: firingSFX_Start
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT firingSFX_Start
+    public unsafe BmSDK.Engine.AkEvent firingSFX_Start
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
     }
 
     /// <summary>
     /// ObjectProperty: SkelControl
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkelControl
+    public unsafe BmSDK.Engine.SkelControlSingleBone SkelControl
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSingleBone>(Ptr + 1380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1380); }
     }
 
     /// <summary>
     /// ComponentProperty: damagedGunMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT damagedGunMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent damagedGunMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1388); }
     }
 
@@ -172,8 +172,8 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawCone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFiringSoundPlaying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawAimingDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTestDamaged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDamaged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1412); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1412); }
     }
 
     /// <summary>

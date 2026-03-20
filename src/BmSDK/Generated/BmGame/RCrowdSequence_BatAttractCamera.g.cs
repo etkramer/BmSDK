@@ -71,18 +71,18 @@ public partial class RCrowdSequence_BatAttractCamera : BmSDK.BmGame.RCrowdSequen
     /// <summary>
     /// ObjectProperty: CylAttractor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CylAttractor
+    public unsafe BmSDK.BmGame.RCrowdAttractor_Cylinder CylAttractor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdAttractor_Cylinder>(Ptr + 708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
     /// <summary>
     /// ObjectProperty: CylAttractorSmall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CylAttractorSmall
+    public unsafe BmSDK.BmGame.RCrowdAttractor_Cylinder CylAttractorSmall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdAttractor_Cylinder>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
@@ -118,8 +118,8 @@ public partial class RCrowdSequence_BatAttractCamera : BmSDK.BmGame.RCrowdSequen
     /// </summary>
     public unsafe bool bHadAgentsInFlock
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 736); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 736); }
     }
 
     /// <summary>
@@ -127,16 +127,16 @@ public partial class RCrowdSequence_BatAttractCamera : BmSDK.BmGame.RCrowdSequen
     /// </summary>
     public unsafe bool bInEndSequenceCall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 736); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 736); }
     }
 
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetLocation
+    public unsafe System.Numerics.Vector3 TargetLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

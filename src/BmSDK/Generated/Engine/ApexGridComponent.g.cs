@@ -36,54 +36,54 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// ByteProperty: GridMinResolution
     /// </summary>
-    public unsafe byte GridMinResolution
+    public unsafe BmSDK.Engine.ApexGridComponent.EGridResolution GridMinResolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.EGridResolution>(Ptr + 604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 
     /// <summary>
     /// ByteProperty: GridMaxResolution
     /// </summary>
-    public unsafe byte GridMaxResolution
+    public unsafe BmSDK.Engine.ApexGridComponent.EGridResolution GridMaxResolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 605); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.EGridResolution>(Ptr + 605); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 605); }
     }
 
     /// <summary>
     /// StructProperty: GridXRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GridXRange
+    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridXRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
     /// StructProperty: GridYRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GridYRange
+    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridYRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
     /// <summary>
     /// StructProperty: GridZRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GridZRange
+    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridZRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>
     /// StructProperty: UpdatesPerFrameRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UpdatesPerFrameRange
+    public unsafe BmSDK.Engine.ApexGridComponent.FSGridFloatRange UpdatesPerFrameRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridFloatRange>(Ptr + 632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
@@ -99,9 +99,9 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: GridSize3D
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GridSize3D
+    public unsafe System.Numerics.Vector3 GridSize3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
     }
 
@@ -198,9 +198,9 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: ExternalVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExternalVelocity
+    public unsafe System.Numerics.Vector3 ExternalVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
@@ -227,8 +227,8 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// </summary>
     public unsafe bool UseHeat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// </summary>
     public unsafe bool AutoVelocityEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
     }
 
     /// <summary>
@@ -261,9 +261,9 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: HeatForceDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HeatForceDirection
+    public unsafe System.Numerics.Vector3 HeatForceDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 

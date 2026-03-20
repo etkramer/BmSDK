@@ -36,18 +36,18 @@ public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, B
     /// <summary>
     /// ArrayProperty: AnalyticsProviderClassNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>> AnalyticsProviderClassNames
+    public unsafe BmSDK.TArray<BmSDK.FString> AnalyticsProviderClassNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// ArrayProperty: AnalyticsProviders
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> AnalyticsProviders
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase> AnalyticsProviders
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnalyticEventsBase>>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 }

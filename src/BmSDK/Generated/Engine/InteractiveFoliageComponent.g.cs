@@ -36,9 +36,9 @@ public partial class InteractiveFoliageComponent : BmSDK.Engine.StaticMeshCompon
     /// <summary>
     /// StructProperty: FoliageSceneProxy
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FoliageSceneProxy
+    public unsafe System.IntPtr FoliageSceneProxy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 }

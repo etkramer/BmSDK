@@ -89,9 +89,9 @@ public partial class RLocalLightContainer : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// ComponentProperty: LightComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightComponent
+    public unsafe BmSDK.Engine.LightComponent LightComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

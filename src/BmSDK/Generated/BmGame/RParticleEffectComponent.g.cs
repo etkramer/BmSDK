@@ -36,18 +36,18 @@ public partial class RParticleEffectComponent : BmSDK.BmGame.RPawnEffectComponen
     /// <summary>
     /// ComponentProperty: Particle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Particle
+    public unsafe BmSDK.Engine.ParticleSystemComponent Particle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ObjectProperty: ParticleSystem
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleSystem
+    public unsafe BmSDK.Engine.ParticleSystem ParticleSystem
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

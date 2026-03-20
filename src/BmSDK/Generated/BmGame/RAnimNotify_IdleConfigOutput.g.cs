@@ -36,9 +36,9 @@ public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Scri
     /// <summary>
     /// StructProperty: Gid
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Gid
+    public unsafe BmSDK.GameObject.FGuid Gid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 

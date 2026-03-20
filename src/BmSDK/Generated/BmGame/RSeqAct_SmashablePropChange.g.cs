@@ -36,18 +36,18 @@ public partial class RSeqAct_SmashablePropChange : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// ByteProperty: PropChangeType
     /// </summary>
-    public unsafe byte PropChangeType
+    public unsafe BmSDK.BmGame.RSeqAct_SmashablePropChange.ESmashablePropChangeType PropChangeType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SmashablePropChange.ESmashablePropChangeType>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: NewBreakableType
     /// </summary>
-    public unsafe byte NewBreakableType
+    public unsafe BmSDK.BmGame.RSmashablePropConfig.EBreakableType NewBreakableType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSmashablePropConfig.EBreakableType>(Ptr + 353); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 
@@ -56,8 +56,8 @@ public partial class RSeqAct_SmashablePropChange : BmSDK.Engine.SequenceAction, 
     /// </summary>
     public unsafe bool NewBoolValue
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>

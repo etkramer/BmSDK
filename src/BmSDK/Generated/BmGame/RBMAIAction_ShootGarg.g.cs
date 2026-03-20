@@ -71,9 +71,9 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: TargetGarg
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetGarg
+    public unsafe BmSDK.BmGame.RHidePoint TargetGarg
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 

@@ -71,9 +71,9 @@ public partial class RCombatMove_VillainJumpAttack : BmSDK.BmGame.RCombatMove_Vi
     /// <summary>
     /// StructProperty: JumpAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JumpAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 

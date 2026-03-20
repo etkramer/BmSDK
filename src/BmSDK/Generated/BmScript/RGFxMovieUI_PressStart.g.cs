@@ -36,9 +36,9 @@ public partial class RGFxMovieUI_PressStart : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// ByteProperty: PopupType
     /// </summary>
-    public unsafe byte PopupType
+    public unsafe BmSDK.BmScript.RGFxMovieUI_PressStart.PSPopTypes PopupType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGFxMovieUI_PressStart.PSPopTypes>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 

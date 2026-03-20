@@ -36,9 +36,9 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: FlexAsset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlexAsset
+    public unsafe BmSDK.Engine.FlexAsset FlexAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FlexAsset>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -72,9 +72,9 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: FoliageDefaultSettings
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FoliageDefaultSettings
+    public unsafe BmSDK.Engine.InstancedFoliageSettings FoliageDefaultSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InstancedFoliageSettings>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
@@ -92,25 +92,25 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOneConvexPerUCXObject
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 648) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 648); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 648); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 648) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 648); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 648); }
     }
 
     /// <summary>
     /// ObjectProperty: CollisionOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CollisionOverride
+    public unsafe BmSDK.Engine.StaticMesh CollisionOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
     }
 
     /// <summary>
     /// ObjectProperty: AutoLODOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AutoLODOverride
+    public unsafe BmSDK.Engine.StaticMesh AutoLODOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
@@ -146,8 +146,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool StreamingTextureUseUVXOnMaterialX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 500) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 500); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 500); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 500) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 500); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 500); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool StreamingTextureDisregardLargeUVs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 496); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 496); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUmbraUseAsOccluder
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoLODUseFlatQuad
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 472); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 472); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoLODMasked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 468) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 468); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 468); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 468) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 468); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 468); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoLODFixMoire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 464); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 464); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoLODImprovedQuality
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 460) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 460); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 460); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 460) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 460); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 460); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoLODOverrideBeforeSimplification
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool HideFromLodGeneration
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 424) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 424); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 424); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 424) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 424); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 424); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool IsAutogeneratedLOD1Mesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 420); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool NeverCompressPositions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 416) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 416); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 416); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 416) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 416); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 416); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool AutoCompressPositions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanCompressPositions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 408); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 408); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanDeriveTangents
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanStripNormalsAndTangents
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 400); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 400); }
     }
 
     /// <summary>
@@ -308,8 +308,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanStripVertexColours
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
     }
 
     /// <summary>
@@ -317,8 +317,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool BakeIntoBackgroundForAutoLOD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 452); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 452); }
     }
 
     /// <summary>
@@ -326,8 +326,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAlsoUsedAsDestructibleStreetFurniture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 448); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 448); }
     }
 
     /// <summary>
@@ -335,8 +335,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAlsoUsedAsDestructible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 436) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 436); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 436); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 436) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 436); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 436); }
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseMaximumStreamingTexelRatio
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 432); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 432); }
     }
 
     /// <summary>
@@ -353,8 +353,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UseFullPrecisionUVs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 392); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 392); }
     }
 
     /// <summary>
@@ -362,8 +362,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInvalidGelTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 388); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 388); }
     }
 
     /// <summary>
@@ -371,8 +371,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIgnoreAudioCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 384); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 384); }
     }
 
     /// <summary>
@@ -380,8 +380,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAudioOnlyCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
     }
 
     /// <summary>
@@ -389,8 +389,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseComplexCollisionForGadgets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -398,8 +398,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBatmobileBarrier
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -407,8 +407,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UsedWithSplineMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -416,8 +416,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UsedWithParticleVertexSpawn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
     }
 
     /// <summary>
@@ -425,8 +425,8 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ForceStripComplexCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
     }
 
     /// <summary>
@@ -434,43 +434,43 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UseSimpleCollisionAlways
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>
     /// ObjectProperty: LedgeSetup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LedgeSetup
+    public unsafe BmSDK.Engine.RLedgeSetup LedgeSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RLedgeSetup>(Ptr + 336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 
     /// <summary>
     /// ObjectProperty: BodySetup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BodySetup
+    public unsafe BmSDK.Engine.RB_BodySetup BodySetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_BodySetup>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// ArrayProperty: MaterialOverrides
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MaterialOverrides
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> MaterialOverrides
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
     /// <summary>
     /// ArrayProperty: Sockets
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Sockets
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshSocket> Sockets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMeshSocket>>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
@@ -495,9 +495,9 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LODInfo
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT LODInfo
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMesh.FStaticMeshLODInfo> LODInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMesh.FStaticMeshLODInfo>>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 }

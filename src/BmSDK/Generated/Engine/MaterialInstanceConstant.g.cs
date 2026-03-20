@@ -36,36 +36,36 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// ArrayProperty: FontParameterValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> FontParameterValues
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FFontParameterValue> FontParameterValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FFontParameterValue>>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
     /// <summary>
     /// ArrayProperty: ScalarParameterValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> ScalarParameterValues
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FScalarParameterValue> ScalarParameterValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FScalarParameterValue>>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 
     /// <summary>
     /// ArrayProperty: TextureParameterValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> TextureParameterValues
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FTextureParameterValue> TextureParameterValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FTextureParameterValue>>(Ptr + 344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
     }
 
     /// <summary>
     /// ArrayProperty: VectorParameterValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> VectorParameterValues
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FVectorParameterValue> VectorParameterValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant.FVectorParameterValue>>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
@@ -87,18 +87,18 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         /// <summary>
         /// StructProperty: ParameterValue
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ParameterValue
+        public unsafe BmSDK.GameObject.FLinearColor ParameterValue
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// StructProperty: ExpressionGUID
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+        public unsafe BmSDK.GameObject.FGuid ExpressionGUID
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
     }
@@ -121,18 +121,18 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         /// <summary>
         /// ObjectProperty: ParameterValue
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParameterValue
+        public unsafe BmSDK.Engine.Texture ParameterValue
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// StructProperty: ExpressionGUID
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+        public unsafe BmSDK.GameObject.FGuid ExpressionGUID
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
@@ -164,9 +164,9 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         /// <summary>
         /// StructProperty: ExpressionGUID
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+        public unsafe BmSDK.GameObject.FGuid ExpressionGUID
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
@@ -189,9 +189,9 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         /// <summary>
         /// ObjectProperty: FontValue
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FontValue
+        public unsafe BmSDK.Engine.Font FontValue
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Font>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
@@ -207,9 +207,9 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         /// <summary>
         /// StructProperty: ExpressionGUID
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+        public unsafe BmSDK.GameObject.FGuid ExpressionGUID
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }

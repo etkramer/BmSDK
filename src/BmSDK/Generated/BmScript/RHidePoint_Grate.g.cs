@@ -71,36 +71,36 @@ public partial class RHidePoint_Grate : BmSDK.BmGame.RHidePoint_GrateBase, BmSDK
     /// <summary>
     /// ObjectProperty: GrateGrappleOnTopMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrateGrappleOnTopMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrateGrappleOnTopMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1560); }
     }
 
     /// <summary>
     /// ObjectProperty: GrateGrappleToCrawlSpaceMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrateGrappleToCrawlSpaceMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrateGrappleToCrawlSpaceMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1568); }
     }
 
     /// <summary>
     /// ObjectProperty: SpecialGrappleOnTopMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpecialGrappleOnTopMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig SpecialGrappleOnTopMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
     }
 
     /// <summary>
     /// ComponentProperty: XrayLight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayLight
+    public unsafe BmSDK.Engine.PointLightComponent XrayLight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 1584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
     }
 
@@ -118,7 +118,7 @@ public partial class RHidePoint_Grate : BmSDK.BmGame.RHidePoint_GrateBase, BmSDK
     /// </summary>
     public unsafe bool AlwaysExitForwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1608) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1608); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1608); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1608) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1608); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1608); }
     }
 }

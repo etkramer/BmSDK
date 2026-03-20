@@ -80,25 +80,25 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: crowMeshes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT crowMeshes_0
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
     /// <summary>
     /// ComponentProperty: crowMeshes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT crowMeshes_1
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
     /// <summary>
     /// ComponentProperty: crowMeshes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT crowMeshes_2
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
@@ -107,8 +107,8 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFlying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
     }
 
     /// <summary>
@@ -159,17 +159,17 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: editorLines
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT editorLines_0
+    public unsafe BmSDK.Engine.DrawConeComponent editorLines_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawConeComponent>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
     /// <summary>
     /// ComponentProperty: editorLines
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT editorLines_1
+    public unsafe BmSDK.Engine.DrawConeComponent editorLines_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawConeComponent>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 

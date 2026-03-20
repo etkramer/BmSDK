@@ -36,18 +36,18 @@ public partial class RSeqAct_SetBrainScriptImportance : BmSDK.Engine.SequenceAct
     /// <summary>
     /// ObjectProperty: TargetPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPawn
+    public unsafe BmSDK.BmGame.RBMPawnAI TargetPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: ImportanceLevel
     /// </summary>
-    public unsafe byte ImportanceLevel
+    public unsafe BmSDK.BmGame.RAIBrain.BrainScriptImportance ImportanceLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAIBrain.BrainScriptImportance>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
@@ -56,7 +56,7 @@ public partial class RSeqAct_SetBrainScriptImportance : BmSDK.Engine.SequenceAct
     /// </summary>
     public unsafe bool bAutoResetToNormalOnInterrupt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
     }
 }

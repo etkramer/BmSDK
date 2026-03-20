@@ -71,9 +71,9 @@ public partial class RCrowdAttractor_Test : BmSDK.BmGame.RCrowdAttractor, BmSDK.
     /// <summary>
     /// StructProperty: CenterPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CenterPos
+    public unsafe System.Numerics.Vector3 CenterPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 

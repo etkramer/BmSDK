@@ -36,27 +36,27 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: SoundCue
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundCue
+    public unsafe BmSDK.Engine.SoundCue SoundCue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ObjectProperty: CueFirstNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CueFirstNode
+    public unsafe BmSDK.Engine.SoundNode CueFirstNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundNode>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// ArrayProperty: InstanceParameters
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> InstanceParameters
+    public unsafe BmSDK.TArray<BmSDK.Engine.AudioComponent.FAudioComponentParam> InstanceParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AudioComponent.FAudioComponentParam>>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
@@ -65,8 +65,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bUseOwnerLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAutoPlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAutoDestroy
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bStopWhenOwnerDestroyed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bShouldRemainActiveIfDropped
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bWasOccluded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bSuppressSubtitles
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bWasPlaying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAllowSpatialization
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bFinished
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bApplyRadioFilter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bRadioFilterSelected
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bPreviewComponent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIgnoreForFlushing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bEQFilterApplied
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAlwaysPlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIsUISound
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIsMusic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bReverb
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -254,25 +254,25 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bCenterChannelOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
     /// ArrayProperty: WaveInstances
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT WaveInstances
+    public unsafe BmSDK.TArray<System.IntPtr> WaveInstances
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ArrayProperty: SoundNodeData
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SoundNodeData
+    public unsafe BmSDK.TArray<byte> SoundNodeData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
@@ -288,18 +288,18 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SoundNodeResetWaveMap
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SoundNodeResetWaveMap
+    public unsafe BmSDK.GameObject.FMultiMap_Mirror SoundNodeResetWaveMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// StructProperty: Listener
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Listener
+    public unsafe System.IntPtr Listener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
     }
 
@@ -315,36 +315,36 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: PortalVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PortalVolume
+    public unsafe BmSDK.Engine.PortalVolume PortalVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PortalVolume>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Location
+    public unsafe System.Numerics.Vector3 Location
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// StructProperty: ComponentLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ComponentLocation
+    public unsafe System.Numerics.Vector3 ComponentLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
     /// ObjectProperty: LastOwner
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastOwner
+    public unsafe BmSDK.Engine.Actor LastOwner
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
@@ -360,27 +360,27 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: CurrentNotifyBufferFinishedHook
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentNotifyBufferFinishedHook
+    public unsafe BmSDK.Engine.SoundNode CurrentNotifyBufferFinishedHook
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundNode>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 
     /// <summary>
     /// StructProperty: CurrentLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentLocation
+    public unsafe System.Numerics.Vector3 CurrentLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// StructProperty: CurrentVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentVelocity
+    public unsafe System.Numerics.Vector3 CurrentVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 
@@ -459,9 +459,9 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastUpdateTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastUpdateTime
+    public unsafe double LastUpdateTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
     }
 
@@ -504,9 +504,9 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastLocation
+    public unsafe System.Numerics.Vector3 LastLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
     }
 

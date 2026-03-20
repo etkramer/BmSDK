@@ -71,27 +71,27 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAlertEventCo
     /// <summary>
     /// StructProperty: UltimateDestination
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UltimateDestination
+    public unsafe System.Numerics.Vector3 UltimateDestination
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentTargetGenerator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTargetGenerator
+    public unsafe BmSDK.BmGame.RMagneticSurfaceSMBase CurrentTargetGenerator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticSurfaceSMBase>(Ptr + 708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
     /// <summary>
     /// ArrayProperty: GenSearch
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> GenSearch
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_GeneratorSmash.FGenSearchItem> GenSearch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_GeneratorSmash.FGenSearchItem>>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 

@@ -36,27 +36,27 @@ public partial class ActorFactoryApexClothing : BmSDK.Engine.ActorFactorySkeleta
     /// <summary>
     /// ArrayProperty: ClothingAssets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ClothingAssets
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexClothingAsset> ClothingAssets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexClothingAsset>>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
     /// ByteProperty: ClothingRBChannel
     /// </summary>
-    public unsafe byte ClothingRBChannel
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel ClothingRBChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
     /// <summary>
     /// StructProperty: ClothingRBCollideWithChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ClothingRBCollideWithChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothingRBCollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 }

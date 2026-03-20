@@ -71,36 +71,36 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: ThrowAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
     }
 
     /// <summary>
     /// StructProperty: TargetAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
     /// <summary>
     /// StructProperty: ThrowDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowDir
+    public unsafe System.Numerics.Vector3 ThrowDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
     }
 
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimPos
+    public unsafe System.Numerics.Vector3 AnimPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
     }
 
@@ -109,8 +109,8 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bNewAttackerAllowed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bCanUpdateThrowDir
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bSetCapeState
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bTargetGoneRagdoll
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// </summary>
     public unsafe bool bDirectThrow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 868); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 868); }
     }
 
     /// <summary>
@@ -179,9 +179,9 @@ public partial class RCombatMove_BatmanThrow : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: ThrowInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo ThrowInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
 }

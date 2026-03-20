@@ -47,8 +47,8 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
     /// </summary>
     public unsafe bool bCanBeAttacked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
     /// </summary>
     public unsafe bool bCanTripAndFall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 }

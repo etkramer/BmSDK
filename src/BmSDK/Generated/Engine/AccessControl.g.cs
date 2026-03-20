@@ -71,18 +71,18 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: IPPolicies
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> IPPolicies
+    public unsafe BmSDK.TArray<BmSDK.FString> IPPolicies
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ArrayProperty: BannedIDs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> BannedIDs
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> BannedIDs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
@@ -152,9 +152,9 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: AdminClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AdminClass
+    public unsafe BmSDK.Class AdminClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 
@@ -231,8 +231,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontAddDefaultAdmin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -240,8 +240,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAuthenticateClients
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -249,8 +249,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAuthenticateServer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -258,8 +258,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAuthenticateListenHost
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -267,8 +267,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAuthDelegatesRegistered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -276,8 +276,8 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPendingListenAuth
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -301,36 +301,36 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: OnlineSub
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OnlineSub
+    public unsafe BmSDK.Engine.OnlineSubsystem OnlineSub
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem>(Ptr + 960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
     /// <summary>
     /// InterfaceProperty: CachedAuthInt
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedAuthInt
+    public unsafe BmSDK.Engine.OnlineAuthInterface CachedAuthInt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineAuthInterface>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 
     /// <summary>
     /// ArrayProperty: ClientsPendingAuth
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> ClientsPendingAuth
+    public unsafe BmSDK.TArray<BmSDK.Engine.AccessControl.FPendingClientAuth> ClientsPendingAuth
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AccessControl.FPendingClientAuth>>(Ptr + 984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
     }
 
     /// <summary>
     /// ArrayProperty: ServerAuthRetries
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> ServerAuthRetries
+    public unsafe BmSDK.TArray<BmSDK.Engine.AccessControl.FServerAuthRetry> ServerAuthRetries
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 1000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AccessControl.FServerAuthRetry>>(Ptr + 1000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 

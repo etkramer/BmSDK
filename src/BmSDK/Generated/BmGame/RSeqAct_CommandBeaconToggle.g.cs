@@ -36,9 +36,9 @@ public partial class RSeqAct_CommandBeaconToggle : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// ObjectProperty: beacon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT beacon
+    public unsafe BmSDK.BmGame.RCommandBeaconBase beacon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCommandBeaconBase>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

@@ -71,18 +71,18 @@ public partial class RBMWeaponRocketLauncher : BmSDK.BmGame.RBMWeaponRocketLaunc
     /// <summary>
     /// ComponentProperty: LaserSight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LaserSight
+    public unsafe BmSDK.Engine.ParticleSystemComponent LaserSight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1768); }
     }
 
     /// <summary>
     /// ObjectProperty: LaserAudible
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon.MultiplayerAuraMIC LaserAudible
+    public unsafe BmSDK.Engine.RAkAudible LaserAudible
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMWeapon.MultiplayerAuraMIC>(Ptr + 1776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudible>(Ptr + 1776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1776); }
     }
 
@@ -91,8 +91,8 @@ public partial class RBMWeaponRocketLauncher : BmSDK.BmGame.RBMWeaponRocketLaunc
     /// </summary>
     public unsafe bool bShowVisibleLaserSight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1784) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1784); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1784) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1784); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1784); }
     }
 
     /// <summary>

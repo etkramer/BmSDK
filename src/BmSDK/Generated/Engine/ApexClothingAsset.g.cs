@@ -36,45 +36,45 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// <summary>
     /// ArrayProperty: LodMaterialInfo
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> LodMaterialInfo
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexClothingAsset.FClothingLodInfo> LodMaterialInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexClothingAsset.FClothingLodInfo>>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// ObjectProperty: ApexClothingLibrary
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ApexClothingLibrary
+    public unsafe BmSDK.Engine.ApexGenericAsset ApexClothingLibrary
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGenericAsset>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// ObjectProperty: SoundOnMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundOnMove
+    public unsafe BmSDK.Engine.SoundCue SoundOnMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
     /// ObjectProperty: SoundOnRest
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundOnRest
+    public unsafe BmSDK.Engine.SoundCue SoundOnRest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
     /// ObjectProperty: SoundWhileMoving
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundWhileMoving
+    public unsafe BmSDK.Engine.SoundCue SoundWhileMoving
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
@@ -83,8 +83,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bUseHardwareCloth
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bFallbackSkinning
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bSlowStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRecomputeNormals
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bAllowAdaptiveTargetFrequency
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bResetAfterTeleport
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bUseLocalSpaceSimulation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bHasUniqueAssetMaterialNames
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// </summary>
     public unsafe bool IgnoreInitialTrigger
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 
     /// <summary>
@@ -267,9 +267,9 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
         /// <summary>
         /// ArrayProperty: LODMaterialMap
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT LODMaterialMap
+        public unsafe BmSDK.TArray<int> LODMaterialMap
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }

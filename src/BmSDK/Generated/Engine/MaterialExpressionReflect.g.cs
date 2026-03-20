@@ -36,18 +36,18 @@ public partial class MaterialExpressionReflect : BmSDK.Engine.MaterialExpression
     /// <summary>
     /// StructProperty: Ray
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionReflect.Normal Ray
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Ray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionReflect.Normal>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Normal
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

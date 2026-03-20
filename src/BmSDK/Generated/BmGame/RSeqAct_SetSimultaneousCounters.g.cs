@@ -36,9 +36,9 @@ public partial class RSeqAct_SetSimultaneousCounters : BmSDK.Engine.SequenceActi
     /// <summary>
     /// ByteProperty: Size
     /// </summary>
-    public unsafe byte Size
+    public unsafe BmSDK.BmGame.RSeqAct_SetSimultaneousCounters.SCounterSize Size
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetSimultaneousCounters.SCounterSize>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

@@ -36,54 +36,54 @@ public partial class RGFxMovieUI_ArkhamEpisodes : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// ObjectProperty: RGI
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RGI
+    public unsafe BmSDK.BmGame.RGameInfo RGI
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
     /// ObjectProperty: ActivePopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActivePopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ActivePopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
     }
 
     /// <summary>
     /// ObjectProperty: InstallerGFxMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstallerGFxMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie InstallerGFxMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 1088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
     }
 
     /// <summary>
     /// ObjectProperty: InstallerMovieUI
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstallerMovieUI
+    public unsafe BmSDK.BmScript.RGFxMovieUI_InstallationMessage InstallerMovieUI
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1096); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGFxMovieUI_InstallationMessage>(Ptr + 1096); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
     }
 
     /// <summary>
     /// ArrayProperty: Stories
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> Stories
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.FStoryDLCItem> Stories
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 1104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FStoryDLCItem>>(Ptr + 1104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
     }
 
     /// <summary>
     /// ByteProperty: PopType
     /// </summary>
-    public unsafe byte PopType
+    public unsafe BmSDK.BmScript.RGFxMovieUI_ArkhamEpisodes.AEPopTypes PopType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGFxMovieUI_ArkhamEpisodes.AEPopTypes>(Ptr + 1120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
     }
 

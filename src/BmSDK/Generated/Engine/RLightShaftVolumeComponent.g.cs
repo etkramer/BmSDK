@@ -81,9 +81,9 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightColor
+    public unsafe BmSDK.GameObject.FColor LightColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
@@ -99,9 +99,9 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// StructProperty: ClippingPlane
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ClippingPlane
+    public unsafe BmSDK.GameObject.FPlane ClippingPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
     }
 
@@ -110,25 +110,25 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// </summary>
     public unsafe bool Enabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 592); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 592); }
     }
 
     /// <summary>
     /// ObjectProperty: LightShaftMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightShaftMesh
+    public unsafe BmSDK.Engine.StaticMesh LightShaftMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>
     /// ObjectProperty: NoiseTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NoiseTexture
+    public unsafe BmSDK.Engine.Texture2D NoiseTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 }

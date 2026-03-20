@@ -71,792 +71,792 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IRSpotableInterface
+    public unsafe System.IntPtr VfTable_IRSpotableInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4676); }
     }
 
     /// <summary>
     /// ByteProperty: StuckRagdollSolution
     /// </summary>
-    public unsafe byte StuckRagdollSolution
+    public unsafe BmSDK.BmGame.RPawnVillain.StuckRagdollSolutionType StuckRagdollSolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain.StuckRagdollSolutionType>(Ptr + 4684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4684); }
     }
 
     /// <summary>
     /// ByteProperty: BeatdownTargetType
     /// </summary>
-    public unsafe byte BeatdownTargetType
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType BeatdownTargetType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4685); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.StrikeTargetType>(Ptr + 4685); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4685); }
     }
 
     /// <summary>
     /// ByteProperty: AllowCounterAfterExitLimb
     /// </summary>
-    public unsafe byte AllowCounterAfterExitLimb
+    public unsafe BmSDK.BmGame.RGameInfo.CounterLimb AllowCounterAfterExitLimb
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4686); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.CounterLimb>(Ptr + 4686); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4686); }
     }
 
     /// <summary>
     /// ByteProperty: CombatReadiness
     /// </summary>
-    public unsafe byte CombatReadiness
+    public unsafe BmSDK.BmGame.RPawnVillain.CombatReadinessState CombatReadiness
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4687); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain.CombatReadinessState>(Ptr + 4687); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4687); }
     }
 
     /// <summary>
     /// ByteProperty: CombatReadinessBot
     /// </summary>
-    public unsafe byte CombatReadinessBot
+    public unsafe BmSDK.BmGame.RPawnVillain.CombatReadinessState CombatReadinessBot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain.CombatReadinessState>(Ptr + 4688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4688); }
     }
 
     /// <summary>
     /// ByteProperty: SimultaneousAttackCounterLimb
     /// </summary>
-    public unsafe byte SimultaneousAttackCounterLimb
+    public unsafe BmSDK.BmGame.RGameInfo.CounterLimb SimultaneousAttackCounterLimb
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4689); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.CounterLimb>(Ptr + 4689); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4689); }
     }
 
     /// <summary>
     /// ByteProperty: InteractButton
     /// </summary>
-    public unsafe byte InteractButton
+    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton InteractButton
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4690); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton>(Ptr + 4690); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4690); }
     }
 
     /// <summary>
     /// ByteProperty: PreChargeUpRagVsNav
     /// </summary>
-    public unsafe byte PreChargeUpRagVsNav
+    public unsafe BmSDK.BmGame.RPawnCharacter.ERagdollVsNavMesh PreChargeUpRagVsNav
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4691); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCharacter.ERagdollVsNavMesh>(Ptr + 4691); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4691); }
     }
 
     /// <summary>
     /// ObjectProperty: V2TakenDownCoordinator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT V2TakenDownCoordinator
+    public unsafe BmSDK.BmGame.RAEC_CasualtyBase V2TakenDownCoordinator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_CasualtyBase>(Ptr + 4692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4692); }
     }
 
     /// <summary>
     /// ObjectProperty: IceBreakerCoordinator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT IceBreakerCoordinator
+    public unsafe BmSDK.BmGame.RAEC_IceBreaker IceBreakerCoordinator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_IceBreaker>(Ptr + 4700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4700); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_Ragdoll
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_Ragdoll
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_Ragdoll
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4708); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_Writhe
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_Writhe
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_Writhe
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4716); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_Attacked
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_Attacked
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_Attacked
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4724); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_HitReaction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_HitReaction
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_HitReaction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4732); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_HitReaction_Standing
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_HitReaction_Standing
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_HitReaction_Standing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4740); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_HitReaction_Combat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_HitReaction_Combat
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_HitReaction_Combat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4748); }
     }
 
     /// <summary>
     /// ObjectProperty: TauntAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TauntAnimset
+    public unsafe BmSDK.Engine.AnimSet TauntAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4756); }
     }
 
     /// <summary>
     /// ObjectProperty: TauntMovementAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TauntMovementAnimset
+    public unsafe BmSDK.Engine.AnimSet TauntMovementAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4764); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatMovementAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatMovementAnimset
+    public unsafe BmSDK.Engine.AnimSet CombatMovementAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4772); }
     }
 
     /// <summary>
     /// ObjectProperty: ThugInteractionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThugInteractionAnimset
+    public unsafe BmSDK.Engine.AnimSet ThugInteractionAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4780); }
     }
 
     /// <summary>
     /// ObjectProperty: DisableAIAlertsVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DisableAIAlertsVolume
+    public unsafe BmSDK.Engine.Volume DisableAIAlertsVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 4788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4788); }
     }
 
     /// <summary>
     /// ObjectProperty: SavedKiller
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SavedKiller
+    public unsafe BmSDK.Engine.Controller SavedKiller
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Controller>(Ptr + 4796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4796); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerHitReactionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerHitReactionAnimset
+    public unsafe BmSDK.Engine.AnimSet PlayerHitReactionAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4804); }
     }
 
     /// <summary>
     /// ObjectProperty: RECHitReactionAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RECHitReactionAnimset
+    public unsafe BmSDK.Engine.AnimSet RECHitReactionAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4812); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerRedirectAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerRedirectAnimset
+    public unsafe BmSDK.Engine.AnimSet PlayerRedirectAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4820); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4820); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4820); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideTargetPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideTargetPawn
+    public unsafe BmSDK.BmGame.RPawnCombat OverrideTargetPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat>(Ptr + 4828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4828); }
     }
 
     /// <summary>
     /// ObjectProperty: PawnEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnEffect
+    public unsafe BmSDK.BmGame.RPawnEffectComponent PawnEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnEffectComponent>(Ptr + 4836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4836); }
     }
 
     /// <summary>
     /// ObjectProperty: GlideKickPS
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlideKickPS
+    public unsafe BmSDK.Engine.ParticleSystem GlideKickPS
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 4844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4844); }
     }
 
     /// <summary>
     /// ObjectProperty: GlideKickMat_M
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlideKickMat_M
+    public unsafe BmSDK.Engine.MaterialInstance GlideKickMat_M
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstance>(Ptr + 4852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4852); }
     }
 
     /// <summary>
     /// ObjectProperty: GlideKickMat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlideKickMat
+    public unsafe BmSDK.Engine.MaterialInstanceConstant GlideKickMat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 4860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4860); }
     }
 
     /// <summary>
     /// ObjectProperty: BatDistractPS
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatDistractPS
+    public unsafe BmSDK.Engine.ParticleSystem BatDistractPS
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 4868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4868); }
     }
 
     /// <summary>
     /// ObjectProperty: StoredCounterIconPlayerController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StoredCounterIconPlayerController
+    public unsafe BmSDK.BmGame.RPlayerController StoredCounterIconPlayerController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 4876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4876); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentMedic
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentMedic
+    public unsafe BmSDK.BmGame.RPawnVillain CurrentMedic
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 4884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4884); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentThrower
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentThrower
+    public unsafe BmSDK.BmGame.RPawnVillainMultiStageBase CurrentThrower
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainMultiStageBase>(Ptr + 4892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4892); }
     }
 
     /// <summary>
     /// ObjectProperty: CriticalHitPS
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CriticalHitPS
+    public unsafe BmSDK.Engine.ParticleSystem CriticalHitPS
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 4900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4900); }
     }
 
     /// <summary>
     /// ObjectProperty: TrackTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TrackTarget
+    public unsafe BmSDK.Engine.Actor TrackTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4908); }
     }
 
     /// <summary>
     /// ObjectProperty: DamageTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageTarget
+    public unsafe BmSDK.Engine.Actor DamageTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4916); }
     }
 
     /// <summary>
     /// ObjectProperty: ForceMissTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceMissTarget
+    public unsafe BmSDK.Engine.Actor ForceMissTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4924); }
     }
 
     /// <summary>
     /// ObjectProperty: RelatedHidePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RelatedHidePoint
+    public unsafe BmSDK.BmGame.RHidePoint RelatedHidePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 4932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4932); }
     }
 
     /// <summary>
     /// ObjectProperty: PrimaryBarkCharDef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PrimaryBarkCharDef
+    public unsafe BmSDK.BmGame.RBarkCharacterDef PrimaryBarkCharDef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkCharacterDef>(Ptr + 4940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4940); }
     }
 
     /// <summary>
     /// ObjectProperty: MyLevelVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyLevelVolume
+    public unsafe BmSDK.BmGame.RLevelVolume MyLevelVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLevelVolume>(Ptr + 4948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4948); }
     }
 
     /// <summary>
     /// ObjectProperty: VillainTargetPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VillainTargetPlayer
+    public unsafe BmSDK.BmGame.RPawnPlayer VillainTargetPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 4956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4956); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatTargetActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatTargetActor
+    public unsafe BmSDK.Engine.Actor CombatTargetActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4964); }
     }
 
     /// <summary>
     /// ObjectProperty: ForceTargetPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceTargetPlayer
+    public unsafe BmSDK.Engine.PlayerController ForceTargetPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController>(Ptr + 4972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4972); }
     }
 
     /// <summary>
     /// ObjectProperty: TargetPlayerOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPlayerOverride
+    public unsafe BmSDK.BmGame.RPawnPlayer TargetPlayerOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 4980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4980); }
     }
 
     /// <summary>
     /// ObjectProperty: ProcessKickedNoisePlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProcessKickedNoisePlayer
+    public unsafe BmSDK.BmGame.RPawnPlayer ProcessKickedNoisePlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 4988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4988); }
     }
 
     /// <summary>
     /// ObjectProperty: InterrogationEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterrogationEvent
+    public unsafe BmSDK.BmGame.RSeqEvent_StartInterrogation InterrogationEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqEvent_StartInterrogation>(Ptr + 4996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4996); }
     }
 
     /// <summary>
     /// ObjectProperty: InterrogationAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterrogationAction
+    public unsafe BmSDK.BmGame.RSeqAct_PlayCameraConversation InterrogationAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5004); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlayCameraConversation>(Ptr + 5004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5004); }
     }
 
     /// <summary>
     /// ObjectProperty: InterrogationAura
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterrogationAura
+    public unsafe BmSDK.Engine.MaterialInstance InterrogationAura
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstance>(Ptr + 5012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5012); }
     }
 
     /// <summary>
     /// ObjectProperty: XrayInterrogationAura
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayInterrogationAura
+    public unsafe BmSDK.Engine.MaterialInstance XrayInterrogationAura
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstance>(Ptr + 5020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5020); }
     }
 
     /// <summary>
     /// ObjectProperty: BlockAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BlockAnimset
+    public unsafe BmSDK.Engine.AnimSet BlockAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 5028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5028); }
     }
 
     /// <summary>
     /// ObjectProperty: WalkCycleVariationAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WalkCycleVariationAnimset
+    public unsafe BmSDK.Engine.AnimSet WalkCycleVariationAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 5036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5036); }
     }
 
     /// <summary>
     /// ObjectProperty: PauseCheckAreaAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PauseCheckAreaAnimset
+    public unsafe BmSDK.Engine.AnimSet PauseCheckAreaAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5044); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 5044); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5044); }
     }
 
     /// <summary>
     /// ObjectProperty: StoredCannotBeTargettedByPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StoredCannotBeTargettedByPlayer
+    public unsafe BmSDK.Engine.PlayerController StoredCannotBeTargettedByPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController>(Ptr + 5052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5052); }
     }
 
     /// <summary>
     /// ObjectProperty: SpriteMatIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpriteMatIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant SpriteMatIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 5060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5060); }
     }
 
     /// <summary>
     /// ObjectProperty: OverridenGlideKickMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverridenGlideKickMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig OverridenGlideKickMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 5068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5068); }
     }
 
     /// <summary>
     /// ObjectProperty: CarryingTrophy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CarryingTrophy
+    public unsafe BmSDK.BmGame.RPickup_Riddler CarryingTrophy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPickup_Riddler>(Ptr + 5076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5076); }
     }
 
     /// <summary>
     /// ObjectProperty: ControllingRobin
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllingRobin
+    public unsafe BmSDK.BmGame.RPawnPlayer ControllingRobin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 5084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5084); }
     }
 
     /// <summary>
     /// ObjectProperty: GrateTakenDownFrom
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrateTakenDownFrom
+    public unsafe BmSDK.BmGame.RTunnelGrateBase GrateTakenDownFrom
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelGrateBase>(Ptr + 5092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5092); }
     }
 
     /// <summary>
     /// ObjectProperty: TunnelTakenDownFrom
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TunnelTakenDownFrom
+    public unsafe BmSDK.BmGame.RTunnelFunnel TunnelTakenDownFrom
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelFunnel>(Ptr + 5100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5100); }
     }
 
     /// <summary>
     /// ObjectProperty: ChargedUpBy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChargedUpBy
+    public unsafe BmSDK.BmGame.RPawnVillainThugMedic ChargedUpBy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainThugMedic>(Ptr + 5108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5108); }
     }
 
     /// <summary>
     /// ObjectProperty: ChargedUpShootPS
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChargedUpShootPS
+    public unsafe BmSDK.Engine.ParticleSystem ChargedUpShootPS
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 5116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5116); }
     }
 
     /// <summary>
     /// ObjectProperty: ChargedUpHitPS
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChargedUpHitPS
+    public unsafe BmSDK.Engine.ParticleSystem ChargedUpHitPS
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 5124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5124); }
     }
 
     /// <summary>
     /// ObjectProperty: MiniDroneTargetingMe
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MiniDroneTargetingMe
+    public unsafe BmSDK.BmGame.RHelicopterBase MiniDroneTargetingMe
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase>(Ptr + 5132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5132); }
     }
 
     /// <summary>
     /// ObjectProperty: MyMiniDrone
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyMiniDrone
+    public unsafe BmSDK.BmGame.RHelicopterBase MyMiniDrone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase>(Ptr + 5140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5140); }
     }
 
     /// <summary>
     /// ObjectProperty: SpecialGearDisruptedVFXTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpecialGearDisruptedVFXTemplate
+    public unsafe BmSDK.Engine.ParticleSystem SpecialGearDisruptedVFXTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 5148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5148); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatLOSCheckVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatLOSCheckVolume
+    public unsafe BmSDK.Engine.Volume CombatLOSCheckVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 5156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5156); }
     }
 
     /// <summary>
     /// ObjectProperty: BombThugController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BombThugController
+    public unsafe BmSDK.BmGame.RSeqAct_ActivateBombThugRiots BombThugController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_ActivateBombThugRiots>(Ptr + 5164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5164); }
     }
 
     /// <summary>
     /// ObjectProperty: KnockBackIfShotVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KnockBackIfShotVolume
+    public unsafe BmSDK.Engine.Volume KnockBackIfShotVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 5172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5172); }
     }
 
     /// <summary>
     /// ObjectProperty: KnockBackPlayerConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KnockBackPlayerConfig
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig KnockBackPlayerConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 5180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5180); }
     }
 
     /// <summary>
     /// ObjectProperty: VillainBatclawSlamAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VillainBatclawSlamAnimset
+    public unsafe BmSDK.Engine.AnimSet VillainBatclawSlamAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 5188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5188); }
     }
 
     /// <summary>
     /// ObjectProperty: DMDAECForBark
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DMDAECForBark
+    public unsafe BmSDK.BmGame.RAlertEventCoordinatorBase DMDAECForBark
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAlertEventCoordinatorBase>(Ptr + 5196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5196); }
     }
 
     /// <summary>
     /// ComponentProperty: PlayerInteractInteraction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerInteractInteraction
+    public unsafe BmSDK.Engine.RInteractionComponent PlayerInteractInteraction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 5204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5204); }
     }
 
     /// <summary>
     /// ComponentProperty: DLCXtraMaskHeadMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DLCXtraMaskHeadMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent DLCXtraMaskHeadMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 5212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5212); }
     }
 
     /// <summary>
     /// ComponentProperty: DLCXtraMaskBodyMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DLCXtraMaskBodyMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent DLCXtraMaskBodyMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 5220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5220); }
     }
 
     /// <summary>
     /// ClassProperty: BeatdownCombatMoveClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BeatdownCombatMoveClass
+    public unsafe BmSDK.Class BeatdownCombatMoveClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 5228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5228); }
     }
 
     /// <summary>
     /// ComponentProperty: PlayerInterrogationPredatorInteractions
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerInterrogationPredatorInteractions
+    public unsafe BmSDK.Engine.RInteractionComponent PlayerInterrogationPredatorInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 5236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5236); }
     }
 
     /// <summary>
     /// ComponentProperty: RHDInteractions
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RHDInteractions
+    public unsafe BmSDK.Engine.RInteractionComponent RHDInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 5244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5244); }
     }
 
     /// <summary>
     /// ComponentProperty: CatVisionParticleFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatVisionParticleFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent CatVisionParticleFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 5252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5252); }
     }
 
     /// <summary>
     /// ComponentProperty: DeadParticleFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeadParticleFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent DeadParticleFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 5260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5260); }
     }
 
     /// <summary>
     /// ComponentProperty: RoomState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RoomState
+    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 5268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5268); }
     }
 
     /// <summary>
     /// ComponentProperty: CriticalPfxComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CriticalPfxComp
+    public unsafe BmSDK.Engine.ParticleSystemComponent CriticalPfxComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 5276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5276); }
     }
 
     /// <summary>
     /// ClassProperty: WeaponSwitchCallbackToNoneDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WeaponSwitchCallbackToNoneDamageType
+    public unsafe BmSDK.Class WeaponSwitchCallbackToNoneDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 5284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5284); }
     }
 
     /// <summary>
     /// ClassProperty: LastDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastDamageType
+    public unsafe BmSDK.Class LastDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 5292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5292); }
     }
 
     /// <summary>
     /// ClassProperty: DeathDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeathDamageType
+    public unsafe BmSDK.Class DeathDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 5300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5300); }
     }
 
     /// <summary>
     /// ComponentProperty: HeadPSC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeadPSC
+    public unsafe BmSDK.Engine.ParticleSystemComponent HeadPSC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 5308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5308); }
     }
 
     /// <summary>
     /// ClassProperty: FreezeBlastHitBehaviourClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FreezeBlastHitBehaviourClass
+    public unsafe BmSDK.Class FreezeBlastHitBehaviourClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 5316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 5316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5316); }
     }
 
@@ -865,8 +865,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPlayedFallingSound
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -874,8 +874,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUsesCustomCounterAnims
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -883,8 +883,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDiedAlready
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -892,8 +892,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBeingTakenDown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -901,8 +901,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAwardedRingOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -910,8 +910,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAwardedXP
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -919,8 +919,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanDieByFalling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -928,8 +928,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStopSpeechOnDeath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -937,8 +937,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanCombatBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -946,8 +946,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStopDialogueWhenHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -955,8 +955,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAwardDeathScore
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -964,8 +964,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFlee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -973,8 +973,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNeverFlee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -982,8 +982,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontAlertPawnsInOtherPylons
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -991,8 +991,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceNonCombatSilentTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1000,8 +1000,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPreventPredatorTakedownCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1009,8 +1009,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bArmoured
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1018,8 +1018,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBeatdownCountEqualsHealth
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1027,8 +1027,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanPlayEnterCombatBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1036,8 +1036,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShouldPreventFinalBlowCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1045,8 +1045,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bWearingExplosiveVest
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1054,8 +1054,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanTargetBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1063,8 +1063,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHiddenInXray
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1072,8 +1072,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasRegisteredBatmobileKillBonus
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1081,8 +1081,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bGlideKickPSActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1090,8 +1090,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAttackingPSActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1099,8 +1099,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAttackingPSShouldBeActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1108,8 +1108,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSuspendCombatStasisUntilBeenInView
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1117,8 +1117,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSuspendCombatStasis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1126,8 +1126,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bReduceGelForce
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1135,8 +1135,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceCombatTaunt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1144,8 +1144,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bImmuneToBatclawDisarm
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5324); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5324); }
     }
 
     /// <summary>
@@ -1153,8 +1153,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInfiniteBeatdown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1162,8 +1162,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInfiniteBeatdownAlways
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1171,8 +1171,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNoBeatdownComboInc
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1180,8 +1180,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseSideStepsInCombat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1189,8 +1189,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStartedWithGun
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1198,8 +1198,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bMedic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1207,8 +1207,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPrioritiseReviving
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1216,8 +1216,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeRevived
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1225,8 +1225,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBypassStrikeCollisionChecks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1234,8 +1234,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanHelpUpThugs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1243,8 +1243,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDiveAwayCollisionChecks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1252,8 +1252,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanDiveAwayFromCars
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1261,8 +1261,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeZappedByBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1270,8 +1270,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHitDamageTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1279,8 +1279,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bGoodAsDead
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1288,8 +1288,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAddedTakedownInvestigateInfo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1297,8 +1297,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasContributedToFearLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1306,8 +1306,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStrungUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1315,8 +1315,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStrungUpBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1324,8 +1324,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCutDown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1333,8 +1333,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontUseEmotes
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1342,8 +1342,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPlayedImpactEmote
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1351,8 +1351,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeatdown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1360,8 +1360,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLoadPairedAnims
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1369,8 +1369,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLoadPairedAnimsBot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1378,8 +1378,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLoadedPairedAnimsets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1387,8 +1387,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool RiotSurpressorCanKill
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1396,8 +1396,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool JustClimbedLadder
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1405,8 +1405,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDoPostCutNotify
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1414,8 +1414,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSelfManageTargetSelection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1423,8 +1423,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasThermalGoggles
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1432,8 +1432,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsMobileJammer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5328); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5328); }
     }
 
     /// <summary>
@@ -1441,8 +1441,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bJammerDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1450,8 +1450,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bJammerDestroyed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1459,8 +1459,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDetectiveModeDetector
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1468,8 +1468,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bWearingHeadset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1477,8 +1477,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasMines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1486,8 +1486,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasVantageMines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1495,8 +1495,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsNearThugMine
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1504,8 +1504,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsMinigunner
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1513,8 +1513,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasStealthSuit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1522,8 +1522,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasPredDrone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1531,8 +1531,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsInformant
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1540,8 +1540,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsRiddlerTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1549,8 +1549,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInterrogateable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1558,8 +1558,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBeingInterrogated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1567,8 +1567,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanInterrogateFromFront
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1576,8 +1576,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontTriggerDynamicTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1585,8 +1585,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShownInterrogationTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1594,8 +1594,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCreatedInterrogateSpriteMat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1603,8 +1603,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsPickPocketTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1612,8 +1612,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisableSimultaneousAttacks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1621,8 +1621,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInvulnerableToAnitFirearmGel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1630,8 +1630,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAirStrikeable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1639,8 +1639,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAirPickupable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1648,8 +1648,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanCheckFalling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1657,8 +1657,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceAllowGroundTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1666,8 +1666,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLastRECProjectileWasFromGarg
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1675,8 +1675,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bReceiveSoftPawnCollision_Old
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1684,8 +1684,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAlwaysDodgesWhip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1693,8 +1693,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnteredCombatFromRange
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1702,8 +1702,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanTakeFreezeHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1711,8 +1711,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanTakeFreezeClusterHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1720,8 +1720,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFocusAuraFlashing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5332); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5332); }
     }
 
     /// <summary>
@@ -1729,8 +1729,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStickyBombAttached
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1738,8 +1738,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bGooMineAttached
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1747,8 +1747,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNoStrikeTargettingCollisionChecks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1756,8 +1756,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeTargettedForCombatTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1765,8 +1765,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bImmuneToLineLaunchTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1774,8 +1774,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bReportKOTypeGameAction
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1783,8 +1783,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCantTakeSuperBatclawSlam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1792,8 +1792,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisableBatarangHitReaction
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1801,8 +1801,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDoNotStopDialogueOnActivate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1810,8 +1810,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverrideGlideKick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1819,8 +1819,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverrideDropAttack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1828,8 +1828,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool isBagCarrier
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1837,8 +1837,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBagCarrierDistStartleSpecialCase
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1846,8 +1846,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPredAttackWhitelist
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1855,8 +1855,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeShoved
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1864,8 +1864,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanThrowCounter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1873,8 +1873,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontReactToAntiWeaponGel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1882,8 +1882,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLowDamage
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1891,8 +1891,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIgnoreBatmobileThreat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1900,8 +1900,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnterCombatWhenNextRunAway
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1909,8 +1909,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUpdateChain
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1918,8 +1918,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAllowFearTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1927,8 +1927,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bWasTakendownByAFearTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1936,8 +1936,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCurrentFearTakedownTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1945,8 +1945,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNotScaredOfBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1954,8 +1954,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDLCIsPlantTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1963,8 +1963,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsDLCSniper
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1972,8 +1972,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsOnLadder
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1981,8 +1981,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsPuzzleRobot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1990,8 +1990,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanInteract
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -1999,8 +1999,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanInteractWhenDead
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -2008,8 +2008,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInteractPromptOverridePreviousLines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5336); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5336); }
     }
 
     /// <summary>
@@ -2017,8 +2017,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNoInteractPrompt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2026,8 +2026,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontAnnounceManDown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2035,8 +2035,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceIntoTauntASAP
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2044,8 +2044,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSpecialGearIsDisrupted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2053,8 +2053,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInDMDOutTransition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2062,8 +2062,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanUseEnvironmentPickup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2071,8 +2071,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBombThugAuraActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2080,8 +2080,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanThrowGrenadesIfUnarmed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2089,8 +2089,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasSeenBatman
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2098,8 +2098,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHasSeenBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2107,8 +2107,8 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bKilledByLedgeTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5340); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5340); }
     }
 
     /// <summary>
@@ -2123,9 +2123,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FallingPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FallingPos
+    public unsafe System.Numerics.Vector3 FallingPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5348); }
     }
 
@@ -2177,27 +2177,27 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AvoidanceLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AvoidanceLocation
+    public unsafe System.Numerics.Vector3 AvoidanceLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5380); }
     }
 
     /// <summary>
     /// ArrayProperty: OverlayAnims
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> OverlayAnims
+    public unsafe BmSDK.TArray<BmSDK.FName> OverlayAnims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 5392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 5392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5392); }
     }
 
     /// <summary>
     /// ArrayProperty: ArmouredOverlayAnims
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> ArmouredOverlayAnims
+    public unsafe BmSDK.TArray<BmSDK.FName> ArmouredOverlayAnims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 5408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 5408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5408); }
     }
 
@@ -2222,18 +2222,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: TauntAnims
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> TauntAnims
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameRI.FTauntAnimInfo> TauntAnims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 5436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameRI.FTauntAnimInfo>>(Ptr + 5436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5436); }
     }
 
     /// <summary>
     /// ArrayProperty: TauntMovementAnimsets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> TauntMovementAnimsets
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> TauntMovementAnimsets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 5452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 5452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5452); }
     }
 
@@ -2249,9 +2249,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: StepList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> StepList
+    public unsafe BmSDK.TArray<BmSDK.FName> StepList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 5472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 5472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5472); }
     }
 
@@ -2267,9 +2267,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LongStepList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> LongStepList
+    public unsafe BmSDK.TArray<BmSDK.FName> LongStepList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 5492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 5492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5492); }
     }
 
@@ -2375,9 +2375,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: SavedPositions
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> SavedPositions
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain.FEnemyPosition> SavedPositions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 5556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain.FEnemyPosition>>(Ptr + 5556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5556); }
     }
 
@@ -2411,27 +2411,27 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HangGrabLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangGrabLocation
+    public unsafe System.Numerics.Vector3 HangGrabLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5584); }
     }
 
     /// <summary>
     /// StructProperty: HangRopeEndLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangRopeEndLocation
+    public unsafe System.Numerics.Vector3 HangRopeEndLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5596); }
     }
 
     /// <summary>
     /// StructProperty: HangFloorBelowLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangFloorBelowLocation
+    public unsafe System.Numerics.Vector3 HangFloorBelowLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5608); }
     }
 
@@ -2456,9 +2456,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PreferredBarkSet
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> PreferredBarkSet
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkSet> PreferredBarkSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 5640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkSet>>(Ptr + 5640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5640); }
     }
 
@@ -2483,9 +2483,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PlayerPairedAnimsetPackageDefs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> PlayerPairedAnimsetPackageDefs
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMCombatManager.FPairedAnimsetPackageDef> PlayerPairedAnimsetPackageDefs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 5664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBMCombatManager.FPairedAnimsetPackageDef>>(Ptr + 5664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5664); }
     }
 
@@ -2510,18 +2510,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: RegisteredPairedAnimsets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> RegisteredPairedAnimsets
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain.FRegisteredPairedAnimsetInfo> RegisteredPairedAnimsets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 5688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain.FRegisteredPairedAnimsetInfo>>(Ptr + 5688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5688); }
     }
 
     /// <summary>
     /// ArrayProperty: RegisteredDualStrikeTypes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> RegisteredDualStrikeTypes
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnPlayerCombat.FDualStrikeType> RegisteredDualStrikeTypes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 5704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnPlayerCombat.FDualStrikeType>>(Ptr + 5704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5704); }
     }
 
@@ -2546,9 +2546,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CombatAnimsetRefHolders
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CombatAnimsetRefHolders
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCharacterBioCue> CombatAnimsetRefHolders
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 5752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCharacterBioCue>>(Ptr + 5752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5752); }
     }
 
@@ -2582,9 +2582,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StoredCasPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StoredCasPos
+    public unsafe System.Numerics.Vector3 StoredCasPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5780); }
     }
 
@@ -2627,27 +2627,27 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ServerLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ServerLocation
+    public unsafe System.Numerics.Vector3 ServerLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5812); }
     }
 
     /// <summary>
     /// StructProperty: ServerRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ServerRotation
+    public unsafe BmSDK.Rotator ServerRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 5824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5824); }
     }
 
     /// <summary>
     /// StructProperty: StateAtTimeOfKick
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateAtTimeOfKick
+    public unsafe BmSDK.BmGame.RPawnPlayer.FAIAwarenessState StateAtTimeOfKick
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FAIAwarenessState>(Ptr + 5836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5836); }
     }
 
@@ -2681,18 +2681,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: OverrideStealthTakedown
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> OverrideStealthTakedown
+    public unsafe BmSDK.TArray<BmSDK.Class> OverrideStealthTakedown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 5992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 5992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5992); }
     }
 
     /// <summary>
     /// ArrayProperty: DualTeamTakedowns
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> DualTeamTakedowns
+    public unsafe BmSDK.TArray<BmSDK.Class> DualTeamTakedowns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 6008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6008); }
     }
 
@@ -2708,9 +2708,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BatclawSocketTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BatclawSocketTargets
+    public unsafe BmSDK.TArray<BmSDK.FName> BatclawSocketTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 6028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6028); }
     }
 
@@ -2744,45 +2744,45 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastBeatdownInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastBeatdownInfo
+    public unsafe BmSDK.BmGame.RPawnVillain.FBeatdownInfo LastBeatdownInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6056); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain.FBeatdownInfo>(Ptr + 6056); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6056); }
     }
 
     /// <summary>
     /// StructProperty: MagnetisedWeaponHitTransition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MagnetisedWeaponHitTransition
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId MagnetisedWeaponHitTransition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6072); }
     }
 
     /// <summary>
     /// ArrayProperty: MFAAttractReceivers
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MFAAttractReceivers
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RMagneticBlastReceiver> MFAAttractReceivers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMagneticBlastReceiver>>(Ptr + 6076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6076); }
     }
 
     /// <summary>
     /// ArrayProperty: MFAStuckWeapons
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MFAStuckWeapons
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMCombatThrownObject> MFAStuckWeapons
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBMCombatThrownObject>>(Ptr + 6092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6092); }
     }
 
     /// <summary>
     /// StructProperty: FearGasHitTransition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FearGasHitTransition
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FearGasHitTransition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6108); }
     }
 
@@ -2807,18 +2807,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastRECProjectileSourcePos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastRECProjectileSourcePos
+    public unsafe System.Numerics.Vector3 LastRECProjectileSourcePos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6120); }
     }
 
     /// <summary>
     /// StructProperty: StartCombatLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartCombatLocation
+    public unsafe System.Numerics.Vector3 StartCombatLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6132); }
     }
 
@@ -2843,9 +2843,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: DropPropsArray
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>> DropPropsArray
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshActor> DropPropsArray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshActor>>(Ptr + 6156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6156); }
     }
 
@@ -2924,18 +2924,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: DamageAllowed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>> DamageAllowed
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain.EDamageAllowed> DamageAllowed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain.EDamageAllowed>>(Ptr + 6204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6204); }
     }
 
     /// <summary>
     /// ArrayProperty: TakedownAllowed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>> TakedownAllowed
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages> TakedownAllowed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>>(Ptr + 6220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6220); }
     }
 
@@ -2951,18 +2951,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: GadgetProjHistory
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>> GadgetProjHistory
+    public unsafe BmSDK.TArray<float> GadgetProjHistory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 6240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6240); }
     }
 
     /// <summary>
     /// StructProperty: vJammedVFXPivotParameter
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vJammedVFXPivotParameter
+    public unsafe System.Numerics.Vector3 vJammedVFXPivotParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6256); }
     }
 
@@ -2987,9 +2987,9 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DMDOutAnimId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DMDOutAnimId
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DMDOutAnimId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6276); }
     }
 
@@ -3014,18 +3014,18 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastGrateWatchPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastGrateWatchPos
+    public unsafe System.Numerics.Vector3 LastGrateWatchPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6288); }
     }
 
     /// <summary>
     /// StructProperty: LastValidBatmobileTakedownPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastValidBatmobileTakedownPos
+    public unsafe System.Numerics.Vector3 LastValidBatmobileTakedownPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6300); }
     }
 
@@ -3041,189 +3041,189 @@ public partial class RPawnVillain : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: KnockBackDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT KnockBackDirection
+    public unsafe BmSDK.Rotator KnockBackDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 6316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6316); }
     }
 
     /// <summary>
     /// ArrayProperty: CounterAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>> CounterAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> CounterAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6328); }
     }
 
     /// <summary>
     /// ArrayProperty: BMCounterAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>> BMCounterAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> BMCounterAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6344); }
     }
 
     /// <summary>
     /// ArrayProperty: BeatdownHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>> BeatdownHitReactionAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> BeatdownHitReactionAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6360); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainAerialAttackAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>> VillainAerialAttackAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainAerialAttackAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>(Ptr + 6376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6376); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerAerialAttackAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>> PlayerAerialAttackAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerAerialAttackAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>(Ptr + 6392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6392); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainFloorTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>> VillainFloorTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainFloorTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>(Ptr + 6408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6408); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerFloorTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>> PlayerFloorTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerFloorTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>(Ptr + 6424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6424); }
     }
 
     /// <summary>
     /// ArrayProperty: CameraAnimsets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>> CameraAnimsets
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> CameraAnimsets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>(Ptr + 6440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6440); }
     }
 
     /// <summary>
     /// ArrayProperty: GrabAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>> GrabAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> GrabAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>(Ptr + 6456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6456); }
     }
 
     /// <summary>
     /// ArrayProperty: BMGrabAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>> BMGrabAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> BMGrabAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>(Ptr + 6472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6472); }
     }
 
     /// <summary>
     /// ArrayProperty: ChargeAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>> ChargeAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> ChargeAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>(Ptr + 6488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6488); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerChargeAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>> PlayerChargeAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerChargeAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>(Ptr + 6504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6504); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerDualPlayAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>> PlayerDualPlayAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerDualPlayAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>(Ptr + 6520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6520); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainDualPlayAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>> VillainDualPlayAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainDualPlayAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>(Ptr + 6536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6536); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6536); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainEnvTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>> VillainEnvTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainEnvTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>(Ptr + 6552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6552); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerEnvTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> PlayerEnvTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerEnvTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 6568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6568); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainPredTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> VillainPredTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainPredTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6584); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerPredTakedownAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> PlayerPredTakedownAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerPredTakedownAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 6600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6600); }
     }
 
     /// <summary>
     /// ArrayProperty: VillainFloorPickupAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> VillainFloorPickupAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> VillainFloorPickupAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 6616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6616); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerFloorPickupAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> PlayerFloorPickupAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerFloorPickupAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 6632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6632); }
     }
 

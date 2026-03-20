@@ -71,9 +71,9 @@ public partial class RVehicleEnemySpawnPoint : BmSDK.BmGame.RDummyTarget, BmSDK.
     /// <summary>
     /// ObjectProperty: SpawnedEnemy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnedEnemy
+    public unsafe BmSDK.Engine.Actor SpawnedEnemy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 

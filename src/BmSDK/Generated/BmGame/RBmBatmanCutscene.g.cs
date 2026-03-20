@@ -71,9 +71,9 @@ public partial class RBmBatmanCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGa
     /// <summary>
     /// ByteProperty: CutsceneType
     /// </summary>
-    public unsafe byte CutsceneType
+    public unsafe BmSDK.BmGame.RBmBatmanCutscene.BatmanCutsceneType CutsceneType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBmBatmanCutscene.BatmanCutsceneType>(Ptr + 1308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
     }
 

@@ -118,8 +118,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool Bataranagable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool ElectricBataranagable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool ExplosiveGelTrigger
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool RECTrigger
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool WhipTrigger
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bAIReact_ShootInTerrified
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool TriggerBatarangCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool OnlyInXrayMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowInCineMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableByBatman
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableByRobin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableByCatwoman
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseFromCeiling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bDontShowPrompt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bDisallowWhenUnderChopperAttack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bButtonPromptOverrideInCombat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -262,8 +262,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bDisallowDuringCombat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool ValidVoiceSynthTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bDoesntRequireUsedEvent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bIsActiveOverride
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -298,8 +298,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bStasisWhenNotVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool BatarangRicochets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseButtonPushAnim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
@@ -325,61 +325,61 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// </summary>
     public unsafe bool bRequireCrouchToUse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 752); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 752); }
     }
 
     /// <summary>
     /// StructProperty: BatarangOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatarangOffset
+    public unsafe System.Numerics.Vector3 BatarangOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 
     /// <summary>
     /// ObjectProperty: EvidenceFilterRequired
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EvidenceFilterRequired
+    public unsafe BmSDK.BmGame.REvidence EvidenceFilterRequired
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REvidence>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
     /// ObjectProperty: InteractMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InteractMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig InteractMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// ObjectProperty: InteractMoveReference
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InteractMoveReference
+    public unsafe BmSDK.Engine.Actor InteractMoveReference
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// ObjectProperty: PushButtonAnimMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PushButtonAnimMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig PushButtonAnimMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// ComponentProperty: PlayerInteractions
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerInteractions
+    public unsafe BmSDK.Engine.RInteractionComponent PlayerInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
@@ -395,9 +395,9 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// <summary>
     /// ByteProperty: InteractButton
     /// </summary>
-    public unsafe byte InteractButton
+    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton InteractButton
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 
@@ -440,18 +440,18 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// <summary>
     /// StructProperty: UseAngleOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UseAngleOffset
+    public unsafe BmSDK.Rotator UseAngleOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
     }
 
     /// <summary>
     /// ArrayProperty: OldMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> OldMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> OldMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 
@@ -467,9 +467,9 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: MatineeControlReferences
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> MatineeControlReferences
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroupInst> MatineeControlReferences
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroupInst>>(Ptr + 888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
     }
 }

@@ -36,18 +36,18 @@ public partial class RBarkConvoAction_Cond_SpeakerFlag : BmSDK.BmGame.RBarkConvo
     /// <summary>
     /// ByteProperty: FlagType
     /// </summary>
-    public unsafe byte FlagType
+    public unsafe BmSDK.BmGame.RBarkValDef.FlagTypeEnum FlagType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkValDef.FlagTypeEnum>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// ObjectProperty: PawnRef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnRef
+    public unsafe BmSDK.BmGame.RBarkConvoPawnRef PawnRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkConvoPawnRef>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 }

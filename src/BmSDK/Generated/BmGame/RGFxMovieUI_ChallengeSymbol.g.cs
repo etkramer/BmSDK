@@ -36,27 +36,27 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// ObjectProperty: CMan
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CMan
+    public unsafe BmSDK.BmGame.RChallengeManager CMan
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChallengeManager>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
     /// ObjectProperty: ActivePopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActivePopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ActivePopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
     }
 
     /// <summary>
     /// ObjectProperty: AssociatedActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AssociatedActor
+    public unsafe BmSDK.BmGame.RChallengeModeStartPointBase AssociatedActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChallengeModeStartPointBase>(Ptr + 1088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
     }
 
@@ -128,8 +128,8 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// </summary>
     public unsafe bool NewBest
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// </summary>
     public unsafe bool ChallengeFailed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -146,25 +146,25 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// </summary>
     public unsafe bool bRequestedData
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
     /// ByteProperty: Mode
     /// </summary>
-    public unsafe byte Mode
+    public unsafe BmSDK.BmGame.RGFxMovieUI_ChallengeSymbol.LBMode Mode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI_ChallengeSymbol.LBMode>(Ptr + 1128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
     }
 
     /// <summary>
     /// ByteProperty: ChallengeScreenMode
     /// </summary>
-    public unsafe byte ChallengeScreenMode
+    public unsafe BmSDK.BmGame.RChallengeManager.ChallengeScreenModes ChallengeScreenMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1129); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChallengeManager.ChallengeScreenModes>(Ptr + 1129); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1129); }
     }
 

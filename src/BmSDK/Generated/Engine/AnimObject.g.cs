@@ -90,9 +90,9 @@ public partial class AnimObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: SkelComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkelComponent
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SkelComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

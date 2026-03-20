@@ -54,9 +54,9 @@ public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// ObjectProperty: JBoxer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JBoxer
+    public unsafe BmSDK.BmGame.RPawnVillainJokerBoxerBase JBoxer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainJokerBoxerBase>(Ptr + 1032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
     }
 

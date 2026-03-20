@@ -36,18 +36,18 @@ public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// ByteProperty: TaperMethod
     /// </summary>
-    public unsafe byte TaperMethod
+    public unsafe BmSDK.Engine.ParticleModuleTrailTaper.ETrailTaperMethod TaperMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTrailTaper.ETrailTaperMethod>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: TaperFactor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TaperFactor
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 

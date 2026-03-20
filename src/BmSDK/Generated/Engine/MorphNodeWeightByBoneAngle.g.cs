@@ -63,18 +63,18 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// <summary>
     /// ByteProperty: BaseBoneAxis
     /// </summary>
-    public unsafe byte BaseBoneAxis
+    public unsafe BmSDK.GameObject.EAxis BaseBoneAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: AngleBoneAxis
     /// </summary>
-    public unsafe byte AngleBoneAxis
+    public unsafe BmSDK.GameObject.EAxis AngleBoneAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 173); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 173); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 173); }
     }
 
@@ -83,8 +83,8 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// </summary>
     public unsafe bool bInvertBaseBoneAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// </summary>
     public unsafe bool bInvertAngleBoneAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// </summary>
     public unsafe bool bControlMaterialParameter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 176); }
     }
 
     /// <summary>
@@ -135,18 +135,18 @@ public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBa
     /// <summary>
     /// ObjectProperty: MaterialInstanceConstant
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MaterialInstanceConstant
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialInstanceConstant
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
     /// <summary>
     /// ArrayProperty: WeightArray
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> WeightArray
+    public unsafe BmSDK.TArray<BmSDK.Engine.MorphNodeWeightByBoneAngle.FBoneAngleMorph> WeightArray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MorphNodeWeightByBoneAngle.FBoneAngleMorph>>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 }

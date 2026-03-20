@@ -71,18 +71,18 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// <summary>
     /// ComponentProperty: SnowComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SnowComponent
+    public unsafe BmSDK.Engine.RSnowComponent SnowComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSnowComponent>(Ptr + 888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
     }
 
     /// <summary>
     /// ComponentProperty: SnowMap
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SnowMap
+    public unsafe BmSDK.Engine.SnowMapComponent SnowMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SnowMapComponent>(Ptr + 896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
     }
 
@@ -100,7 +100,7 @@ public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IG
     /// </summary>
     public unsafe bool bWasInSnow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 908); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 908); }
     }
 }

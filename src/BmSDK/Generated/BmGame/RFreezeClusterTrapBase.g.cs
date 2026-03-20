@@ -71,9 +71,9 @@ public partial class RFreezeClusterTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: ComponentsToCheck
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> ComponentsToCheck
+    public unsafe BmSDK.TArray<BmSDK.Engine.PrimitiveComponent> ComponentsToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.PrimitiveComponent>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

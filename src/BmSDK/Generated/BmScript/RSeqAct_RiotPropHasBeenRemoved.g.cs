@@ -36,9 +36,9 @@ public partial class RSeqAct_RiotPropHasBeenRemoved : BmSDK.Engine.SequenceActio
     /// <summary>
     /// ObjectProperty: Prop
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Prop
+    public unsafe BmSDK.BmGame.RDestructibleProp Prop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

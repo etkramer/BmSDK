@@ -38,8 +38,8 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// </summary>
     public unsafe bool bAllowBasingOnVehicles
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Controlled : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// </summary>
     public unsafe bool bStopDialogueOnActivate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 588); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RMorphNodeAutoSequence : BmSDK.Engine.MorphNodeBase, BmSDK.
     /// <summary>
     /// ObjectProperty: Set
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Set
+    public unsafe BmSDK.Engine.MorphTargetSet Set
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MorphTargetSet>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
@@ -47,16 +47,16 @@ public partial class RMorphNodeAutoSequence : BmSDK.Engine.MorphNodeBase, BmSDK.
     /// </summary>
     public unsafe bool SynchronizeToAnim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
     /// ArrayProperty: FrameIndexToTargetIndex
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FrameIndexToTargetIndex
+    public unsafe BmSDK.TArray<int> FrameIndexToTargetIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 

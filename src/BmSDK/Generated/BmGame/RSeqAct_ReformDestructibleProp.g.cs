@@ -36,9 +36,9 @@ public partial class RSeqAct_ReformDestructibleProp : BmSDK.Engine.SequenceActio
     /// <summary>
     /// ArrayProperty: DestructiblePropsToReform
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> DestructiblePropsToReform
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RDestructibleProp> DestructiblePropsToReform
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RDestructibleProp>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

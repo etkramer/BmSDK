@@ -71,18 +71,18 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
     /// <summary>
     /// StructProperty: GestureAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GestureAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GestureAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
     /// <summary>
     /// ObjectProperty: Casualty
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Casualty
+    public unsafe BmSDK.BmGame.RPawnVillain Casualty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
     }
 }

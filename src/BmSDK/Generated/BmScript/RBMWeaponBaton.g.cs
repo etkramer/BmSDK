@@ -71,18 +71,18 @@ public partial class RBMWeaponBaton : BmSDK.BmScript.RBMWeaponBat, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: PoseConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 1748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
     }
 
     /// <summary>
     /// ObjectProperty: PoseConfig_CombatPose
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_CombatPose
+    public unsafe BmSDK.BmGame.RPoseConfig PoseConfig_CombatPose
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 1756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1756); }
     }
 }

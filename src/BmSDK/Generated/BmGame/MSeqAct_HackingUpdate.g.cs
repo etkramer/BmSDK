@@ -36,9 +36,9 @@ public partial class MSeqAct_HackingUpdate : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// ByteProperty: HackSubroutineType
     /// </summary>
-    public unsafe byte HackSubroutineType
+    public unsafe BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackSubroutineType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackableInterface.EHackSubroutineType>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -63,9 +63,9 @@ public partial class MSeqAct_HackingUpdate : BmSDK.Engine.SeqAct_Latent, BmSDK.I
     /// <summary>
     /// ObjectProperty: HackableObjectActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HackableObjectActor
+    public unsafe BmSDK.Engine.Actor HackableObjectActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 }

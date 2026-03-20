@@ -45,9 +45,9 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Frames
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Frames
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemReplay.FParticleSystemReplayFrame> Frames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemReplay.FParticleSystemReplayFrame>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
@@ -60,9 +60,9 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ArrayProperty: Emitters
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Emitters
+        public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemReplay.FParticleEmitterReplayFrame> Emitters
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemReplay.FParticleEmitterReplayFrame>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -103,9 +103,9 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FrameState
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FrameState
+        public unsafe System.IntPtr FrameState
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }

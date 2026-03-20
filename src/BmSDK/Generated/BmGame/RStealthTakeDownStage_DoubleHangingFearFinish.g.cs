@@ -89,18 +89,18 @@ public partial class RStealthTakeDownStage_DoubleHangingFearFinish : BmSDK.BmGam
     /// <summary>
     /// ArrayProperty: RopeExtraAttachConnections
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>> RopeExtraAttachConnections
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection> RopeExtraAttachConnections
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>>(Ptr + 1856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>>(Ptr + 1856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
     }
 
     /// <summary>
     /// ArrayProperty: bVictimsAttached
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>> bVictimsAttached
+    public unsafe BmSDK.TArray<bool> bVictimsAttached
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>(Ptr + 1872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 1872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1872); }
     }
 }

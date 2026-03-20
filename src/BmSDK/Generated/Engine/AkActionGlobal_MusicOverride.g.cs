@@ -36,9 +36,9 @@ public partial class AkActionGlobal_MusicOverride : BmSDK.Engine.AkActionGlobal,
     /// <summary>
     /// ObjectProperty: OverrideState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideState
+    public unsafe BmSDK.Engine.AkStateName OverrideState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

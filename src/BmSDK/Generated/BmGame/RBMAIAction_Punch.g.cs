@@ -71,9 +71,9 @@ public partial class RBMAIAction_Punch : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: CombatMove_Punch
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatMove_Punch
+    public unsafe BmSDK.BmGame.RCombatMove_VillainAttack CombatMove_Punch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCombatMove_VillainAttack>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 }

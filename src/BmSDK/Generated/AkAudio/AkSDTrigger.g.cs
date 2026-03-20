@@ -36,18 +36,18 @@ public partial class AkSDTrigger : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_AkEvaluate
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkEvaluate
+    public unsafe System.IntPtr VfTable_AkEvaluate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// ObjectProperty: Props
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkSDNode.VariableNodes Props
+    public unsafe BmSDK.Engine.AkProperties Props
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkSDNode.VariableNodes>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkProperties>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 

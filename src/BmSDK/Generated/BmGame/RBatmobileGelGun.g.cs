@@ -98,18 +98,18 @@ public partial class RBatmobileGelGun : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: ImpactEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactEffect
+    public unsafe BmSDK.Engine.ParticleSystem ImpactEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
     }
 
     /// <summary>
     /// ObjectProperty: HitEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HitEffect
+    public unsafe BmSDK.Engine.ParticleSystem HitEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2416); }
     }
 }

@@ -89,9 +89,9 @@ public partial class ZoneInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: KillZDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KillZDamageType
+    public unsafe BmSDK.Class KillZDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
@@ -100,7 +100,7 @@ public partial class ZoneInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSoftKillZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 684); }
     }
 }

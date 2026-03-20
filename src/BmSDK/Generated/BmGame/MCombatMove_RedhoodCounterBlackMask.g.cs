@@ -71,9 +71,9 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// <summary>
     /// StructProperty: DodgeID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DodgeID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 
@@ -82,7 +82,7 @@ public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatM
     /// </summary>
     public unsafe bool bCounterSlowMo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1300) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1300); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1300); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1300) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1300); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1300); }
     }
 }

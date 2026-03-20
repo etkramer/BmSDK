@@ -45,9 +45,9 @@ public partial class MaterialExpressionFresnel : BmSDK.Engine.MaterialExpression
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Normal
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 }

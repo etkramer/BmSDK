@@ -71,9 +71,9 @@ public partial class RSecurityLaserDoorBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// ComponentProperty: SkeletalMeshComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletalMeshComponent
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

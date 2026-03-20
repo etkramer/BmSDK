@@ -36,9 +36,9 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: SpawnCount
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleEventReceiverSpawn.InheritVelocityScale SpawnCount
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SpawnCount
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleEventReceiverSpawn.InheritVelocityScale>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
@@ -47,8 +47,8 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// </summary>
     public unsafe bool bUseParticleTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// </summary>
     public unsafe bool bUsePSysLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
@@ -65,16 +65,16 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// </summary>
     public unsafe bool bInheritVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
     /// StructProperty: InheritVelocityScale
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InheritVelocityScale
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector InheritVelocityScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

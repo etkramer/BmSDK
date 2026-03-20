@@ -71,9 +71,9 @@ public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBas
     /// <summary>
     /// ArrayProperty: StaticMeshComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> StaticMeshComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> StaticMeshComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMeshComponent>>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
@@ -89,9 +89,9 @@ public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBas
     /// <summary>
     /// StructProperty: SMCPoolHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SMCPoolHandle
+    public unsafe System.IntPtr SMCPoolHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 }

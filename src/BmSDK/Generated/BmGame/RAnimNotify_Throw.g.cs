@@ -36,9 +36,9 @@ public partial class RAnimNotify_Throw : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ThrowInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo ThrowInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

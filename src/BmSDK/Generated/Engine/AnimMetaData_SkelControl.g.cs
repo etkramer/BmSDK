@@ -36,9 +36,9 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
     /// <summary>
     /// ArrayProperty: SkelControlNameList
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SkelControlNameList
+    public unsafe BmSDK.TArray<BmSDK.FName> SkelControlNameList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -47,8 +47,8 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
     /// </summary>
     public unsafe bool bFullControlOverController
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>

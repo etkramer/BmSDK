@@ -71,9 +71,9 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// <summary>
     /// ObjectProperty: CharacterDefine
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CharacterDefine
+    public unsafe BmSDK.BmGame.RCharacterDefine CharacterDefine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
 
@@ -82,8 +82,8 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// </summary>
     public unsafe bool MaterialsChanged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// </summary>
     public unsafe bool bPrimaryPhysicsAssetChanged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// </summary>
     public unsafe bool bPrimarySkeletalMeshChanged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// </summary>
     public unsafe bool bSecondarySkeletalMeshChanged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// </summary>
     public unsafe bool bTertiarySkeletalMeshChanged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 956); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 956); }
     }
 
     /// <summary>
@@ -134,9 +134,9 @@ public partial class RCinematicCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.I
     /// <summary>
     /// ArrayProperty: MeshComponentChanges
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> MeshComponentChanges
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCinematicCharacter.FCinematicCharacterMeshComponentChange> MeshComponentChanges
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCinematicCharacter.FCinematicCharacterMeshComponentChange>>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
     }
 }

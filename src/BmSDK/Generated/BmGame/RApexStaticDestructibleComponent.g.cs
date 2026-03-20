@@ -56,8 +56,8 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// </summary>
     public unsafe bool bUsingReducedValidBounds
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// </summary>
     public unsafe bool bValidPlayerNavigationGeomtry
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
     }
 
     /// <summary>
@@ -90,9 +90,9 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// <summary>
     /// StructProperty: PlayerNavigationGeometry
     /// </summary>
-    public unsafe BmSDK.Engine.MeshComponent.Materials PlayerNavigationGeometry
+    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom PlayerNavigationGeometry
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MeshComponent.Materials>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
@@ -108,9 +108,9 @@ public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticD
     /// <summary>
     /// ClassProperty: ChainGunDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChainGunDamageType
+    public unsafe BmSDK.Class ChainGunDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 }

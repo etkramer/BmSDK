@@ -36,9 +36,9 @@ public partial class DistributionVectorConstant : BmSDK.DistributionVector, BmSD
     /// <summary>
     /// StructProperty: Constant
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Constant
+    public unsafe System.Numerics.Vector3 Constant
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
@@ -47,16 +47,16 @@ public partial class DistributionVectorConstant : BmSDK.DistributionVector, BmSD
     /// </summary>
     public unsafe bool bLockAxes
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
     }
 
     /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
-    public unsafe byte LockedAxes
+    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 }

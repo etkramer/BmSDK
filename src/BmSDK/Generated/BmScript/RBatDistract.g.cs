@@ -73,25 +73,25 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bDetonatable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2708) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2708); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2708); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2708) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2708); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2708); }
     }
 
     /// <summary>
     /// ObjectProperty: DetonateTargets
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DetonateTargets
+    public unsafe BmSDK.Engine.RInteractionClass DetonateTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 2712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2712); }
     }
 
     /// <summary>
     /// ObjectProperty: SonicBatarangClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SonicBatarangClass
+    public unsafe BmSDK.Engine.RInteractionClass SonicBatarangClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 2720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2720); }
     }
 }

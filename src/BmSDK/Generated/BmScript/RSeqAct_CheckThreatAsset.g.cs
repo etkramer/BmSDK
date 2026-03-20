@@ -36,9 +36,9 @@ public partial class RSeqAct_CheckThreatAsset : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// ObjectProperty: ThreatAsset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThreatAsset
+    public unsafe BmSDK.GameObject ThreatAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

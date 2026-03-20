@@ -71,27 +71,27 @@ public partial class RGrappleGunBm : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: MuzzleFlash
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MuzzleFlash
+    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlash
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 3668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3668); }
     }
 
     /// <summary>
     /// ArrayProperty: UpgradeMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>> UpgradeMeshes
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMesh> UpgradeMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>>>(Ptr + 3676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMesh>>(Ptr + 3676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3676); }
     }
 
     /// <summary>
     /// ArrayProperty: UpgradeMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>> UpgradeMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> UpgradeMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>>(Ptr + 3692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 3692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3692); }
     }
 }

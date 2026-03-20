@@ -73,8 +73,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDelayCameraUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTurnedInTunnel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverrideCameraFOV
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool LockInPlace
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHidePlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInterpPos
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisallowRoll
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAffectsControllerRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTemporarilyDisableCameraDrag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStatePermanentlyDragsCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDragOnlyFollowsDeliberateDirection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStatePermanentlyDisablesCameraDrag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseTightFocusPoints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisableCameraSmoothing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFollowPelvis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOnlyFollowPelvisZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisableCameraCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSwayWithPelvis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisableCamerCollisionDuringBlend
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBlendFollowsOldRotationRules
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCameraDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -262,8 +262,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCameraDebugCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDebugPlayerPath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDebugCameraSmoothing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForce3rdPersonCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -298,8 +298,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontModifySitOffsetWhenLookingUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseAbsoluteHeadOffset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bActuallyUsingAbsoluteHeadRot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -325,8 +325,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bInterpingHeadRot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -334,8 +334,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAlternativeCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -343,8 +343,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontClipPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -352,8 +352,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCameraWandering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1684); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1684); }
     }
 
     /// <summary>
@@ -361,8 +361,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseWorldSpaceCameraWander
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -370,8 +370,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCamOverrideDof
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -379,8 +379,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnableMotionBlur
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -388,8 +388,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceZoom
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -397,8 +397,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CameraLocked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -406,8 +406,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CameraBlendBatmanRelativePosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -415,8 +415,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsCombatCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -424,8 +424,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool EnableCameraAssist
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -433,8 +433,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceCameraDragOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -442,8 +442,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCombatDisableCameraDrag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -451,8 +451,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverrideTransitionIn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -460,8 +460,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool PawnHiddenByCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -469,8 +469,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseAnchorRotForPivotOffset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -478,8 +478,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool LookAtUsesDefaultOffset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -487,8 +487,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UsePitchForLookAt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -496,8 +496,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UseYawForLookAt
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -505,8 +505,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCeilingRetainOffsetDuringZoom
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -514,8 +514,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool DontDrawClosePawns
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -523,8 +523,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPauseAndPanCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -532,8 +532,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bModifyPPForResonatorSreen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -541,8 +541,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bWantsToLookBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -550,8 +550,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool JumpCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -559,8 +559,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLookingBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -568,8 +568,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool VehicleReversing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -577,8 +577,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseFullSway
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -586,8 +586,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseFancySniperZoomFocus
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -595,8 +595,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRetainOffsetDuringZoom
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -604,8 +604,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseHeadOffsetCheck
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -613,8 +613,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverrideCrouchHeadCheck
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -622,8 +622,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBatmanFacesCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -631,8 +631,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCustomCameraZoomAllowed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -640,8 +640,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCustomCameraDisablesDrag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1688); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1688); }
     }
 
     /// <summary>
@@ -649,8 +649,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDontSaveConfig
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -658,8 +658,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool Debug_TurnOffZoomDof
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -667,8 +667,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceFollowFullPelvisZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -676,8 +676,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool BonnetCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -685,8 +685,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrivingLookBackDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -694,8 +694,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool DoAdamsCrazyCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -703,8 +703,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanToggleDrivingCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -712,8 +712,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanDoBonnetCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -721,8 +721,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCameraDragging
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
@@ -730,16 +730,16 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// </summary>
     public unsafe bool JumpCameraLeft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
     }
 
     /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraOffset
+    public unsafe System.Numerics.Vector3 CameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1696); }
     }
 
@@ -845,36 +845,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ExtraCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExtraCameraRot
+    public unsafe BmSDK.Rotator ExtraCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1752); }
     }
 
     /// <summary>
     /// StructProperty: DefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultCameraRot
+    public unsafe BmSDK.Rotator DefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1764); }
     }
 
     /// <summary>
     /// StructProperty: CameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraPivotOffset
+    public unsafe System.Numerics.Vector3 CameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1776); }
     }
 
     /// <summary>
     /// StructProperty: HeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HeadOffset
+    public unsafe System.Numerics.Vector3 HeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1788); }
     }
 
@@ -890,18 +890,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentHeadOffset
+    public unsafe System.Numerics.Vector3 CurrentHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1804); }
     }
 
     /// <summary>
     /// StructProperty: CurrentExtraCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentExtraCameraRot
+    public unsafe BmSDK.Rotator CurrentExtraCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1816); }
     }
 
@@ -917,117 +917,117 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: DOFManager
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.ScreenShakeModifier DOFManager
+    public unsafe BmSDK.BmGame.RDOFManager DOFManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.ScreenShakeModifier>(Ptr + 1832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager>(Ptr + 1832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1832); }
     }
 
     /// <summary>
     /// ObjectProperty: ScreenShakeModifier
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.BatarangViewPP ScreenShakeModifier
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier ScreenShakeModifier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.BatarangViewPP>(Ptr + 1840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier>(Ptr + 1840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1840); }
     }
 
     /// <summary>
     /// ObjectProperty: MotionBlurEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MotionBlurEffect
+    public unsafe BmSDK.Engine.RockOn MotionBlurEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RockOn>(Ptr + 1848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1848); }
     }
 
     /// <summary>
     /// ObjectProperty: UberEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UberEffect
+    public unsafe BmSDK.Engine.RockOn UberEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RockOn>(Ptr + 1856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
     }
 
     /// <summary>
     /// ObjectProperty: DesiredLookActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DesiredLookActor
+    public unsafe BmSDK.Engine.Actor DesiredLookActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1864); }
     }
 
     /// <summary>
     /// ObjectProperty: InterpBase
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterpBase
+    public unsafe BmSDK.Engine.Actor InterpBase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1872); }
     }
 
     /// <summary>
     /// ObjectProperty: BatarangViewPP
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.RemoteBatmobilePP BatarangViewPP
+    public unsafe BmSDK.BmGame.RRCBatarangViewPostProcess BatarangViewPP
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.RemoteBatmobilePP>(Ptr + 1880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRCBatarangViewPostProcess>(Ptr + 1880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1880); }
     }
 
     /// <summary>
     /// ObjectProperty: RemoteBatmobilePP
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.DisruptorZoomPP RemoteBatmobilePP
+    public unsafe BmSDK.BmGame.RViewPostProcess RemoteBatmobilePP
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.DisruptorZoomPP>(Ptr + 1888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RViewPostProcess>(Ptr + 1888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1888); }
     }
 
     /// <summary>
     /// ObjectProperty: DisruptorZoomPP
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.OverlayPlayer DisruptorZoomPP
+    public unsafe BmSDK.BmGame.RViewPostProcess DisruptorZoomPP
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.OverlayPlayer>(Ptr + 1896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RViewPostProcess>(Ptr + 1896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1896); }
     }
 
     /// <summary>
     /// ObjectProperty: OverlayPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.PreCulledActors OverlayPlayer
+    public unsafe BmSDK.BmGame.RCameraOverlayPlayer OverlayPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.PreCulledActors>(Ptr + 1904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraOverlayPlayer>(Ptr + 1904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1904); }
     }
 
     /// <summary>
     /// ObjectProperty: CinematicPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CinematicPawn
+    public unsafe BmSDK.BmGame.RCinematicPlayerCharacter CinematicPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicPlayerCharacter>(Ptr + 1912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1912); }
     }
 
     /// <summary>
     /// ObjectProperty: SpecialActorToHide
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpecialActorToHide
+    public unsafe BmSDK.Engine.Actor SpecialActorToHide
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1920); }
     }
 
     /// <summary>
     /// ArrayProperty: PreCulledActors
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>>> PreCulledActors
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> PreCulledActors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>>>>(Ptr + 1928); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1928); }
     }
 
@@ -1043,27 +1043,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CameraEmitters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>> CameraEmitters
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMCameraEmitter> CameraEmitters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>>>(Ptr + 1948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBMCameraEmitter>>(Ptr + 1948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1948); }
     }
 
     /// <summary>
     /// StructProperty: CurrentCameraPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentCameraPosition
+    public unsafe System.Numerics.Vector3 CurrentCameraPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1964); }
     }
 
     /// <summary>
     /// StructProperty: CurrentCameraRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentCameraRotation
+    public unsafe BmSDK.Rotator CurrentCameraRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1976); }
     }
 
@@ -1088,36 +1088,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentCameraPivotOffset
+    public unsafe System.Numerics.Vector3 CurrentCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1996); }
     }
 
     /// <summary>
     /// StructProperty: ActualCameraPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActualCameraPosition
+    public unsafe System.Numerics.Vector3 ActualCameraPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
     }
 
     /// <summary>
     /// StructProperty: ActualCameraRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActualCameraRotation
+    public unsafe BmSDK.Rotator ActualCameraRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2020); }
     }
 
     /// <summary>
     /// StructProperty: LastVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastVelocity
+    public unsafe System.Numerics.Vector3 LastVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2032); }
     }
 
@@ -1214,9 +1214,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RotationSpeed
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationSpeed
+    public unsafe System.Numerics.Vector3 RotationSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
@@ -1277,9 +1277,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WalkStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkStateCameraOffset
+    public unsafe System.Numerics.Vector3 WalkStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
     }
 
@@ -1295,18 +1295,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WalkStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkStateDefaultCameraRot
+    public unsafe BmSDK.Rotator WalkStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
     }
 
     /// <summary>
     /// StructProperty: WalkCanisterStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkCanisterStateCameraOffset
+    public unsafe System.Numerics.Vector3 WalkCanisterStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2148); }
     }
 
@@ -1322,18 +1322,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WalkCanisterStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkCanisterStateDefaultCameraRot
+    public unsafe BmSDK.Rotator WalkCanisterStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2164); }
     }
 
     /// <summary>
     /// StructProperty: DialogueStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DialogueStateCameraOffset
+    public unsafe System.Numerics.Vector3 DialogueStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
     }
 
@@ -1349,18 +1349,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DialogueStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DialogueStateDefaultCameraRot
+    public unsafe BmSDK.Rotator DialogueStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2192); }
     }
 
     /// <summary>
     /// StructProperty: ForensicsScanStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForensicsScanStateCameraOffset
+    public unsafe System.Numerics.Vector3 ForensicsScanStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
     }
 
@@ -1376,18 +1376,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ForensicsScanStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForensicsScanStateDefaultCameraRot
+    public unsafe BmSDK.Rotator ForensicsScanStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
     }
 
     /// <summary>
     /// StructProperty: UsingSpotlightStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UsingSpotlightStateCameraOffset
+    public unsafe System.Numerics.Vector3 UsingSpotlightStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
     }
 
@@ -1403,18 +1403,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UsingSpotlightStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UsingSpotlightStateDefaultCameraRot
+    public unsafe BmSDK.Rotator UsingSpotlightStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2248); }
     }
 
     /// <summary>
     /// StructProperty: ForensicsFilterStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForensicsFilterStateCameraOffset
+    public unsafe System.Numerics.Vector3 ForensicsFilterStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
     }
 
@@ -1430,18 +1430,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ForensicsFilterStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForensicsFilterStateDefaultCameraRot
+    public unsafe BmSDK.Rotator ForensicsFilterStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2276); }
     }
 
     /// <summary>
     /// StructProperty: RunStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RunStateCameraOffset
+    public unsafe System.Numerics.Vector3 RunStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2288); }
     }
 
@@ -1466,18 +1466,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RunStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RunStateDefaultCameraRot
+    public unsafe BmSDK.Rotator RunStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
     }
 
     /// <summary>
     /// StructProperty: PairedAnimationStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PairedAnimationStateCameraOffset
+    public unsafe System.Numerics.Vector3 PairedAnimationStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
     }
 
@@ -1493,18 +1493,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PairedAnimationStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PairedAnimationStateDefaultCameraRot
+    public unsafe BmSDK.Rotator PairedAnimationStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2336); }
     }
 
     /// <summary>
     /// StructProperty: StealthStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StealthStateCameraOffset
+    public unsafe System.Numerics.Vector3 StealthStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
     }
 
@@ -1529,18 +1529,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StealthStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StealthStateDefaultCameraRot
+    public unsafe BmSDK.Rotator StealthStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2368); }
     }
 
     /// <summary>
     /// StructProperty: TunnelStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TunnelStateCameraOffset
+    public unsafe System.Numerics.Vector3 TunnelStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2380); }
     }
 
@@ -1556,18 +1556,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TunnelStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TunnelStateDefaultCameraRot
+    public unsafe BmSDK.Rotator TunnelStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
     }
 
     /// <summary>
     /// StructProperty: TunnelStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TunnelStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 TunnelStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
     }
 
@@ -1583,27 +1583,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: JokerFpsOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerFpsOffset
+    public unsafe System.Numerics.Vector3 JokerFpsOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
     }
 
     /// <summary>
     /// StructProperty: JokerFpsPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerFpsPivotOffset
+    public unsafe System.Numerics.Vector3 JokerFpsPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
     }
 
     /// <summary>
     /// StructProperty: JokerFpsHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerFpsHeadOffset
+    public unsafe System.Numerics.Vector3 JokerFpsHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
     }
 
@@ -1628,18 +1628,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GrappleDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleDefaultCameraRot
+    public unsafe BmSDK.Rotator GrappleDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2468); }
     }
 
     /// <summary>
     /// StructProperty: FallingStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FallingStateCameraOffset
+    public unsafe System.Numerics.Vector3 FallingStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
     }
 
@@ -1655,9 +1655,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FallingDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FallingDefaultCameraRot
+    public unsafe BmSDK.Rotator FallingDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2496); }
     }
 
@@ -1682,9 +1682,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GrappleAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleAimCameraOffset
+    public unsafe System.Numerics.Vector3 GrappleAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
     }
 
@@ -1700,9 +1700,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GrappleAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleAimDefaultCameraRot
+    public unsafe BmSDK.Rotator GrappleAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2532); }
     }
 
@@ -1727,9 +1727,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HarpoonAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonAimCameraOffset
+    public unsafe System.Numerics.Vector3 HarpoonAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2552); }
     }
 
@@ -1745,9 +1745,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HarpoonAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonAimDefaultCameraRot
+    public unsafe BmSDK.Rotator HarpoonAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2568); }
     }
 
@@ -1772,9 +1772,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MagneticBlastAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MagneticBlastAimCameraOffset
+    public unsafe System.Numerics.Vector3 MagneticBlastAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2588); }
     }
 
@@ -1790,9 +1790,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MagneticBlastAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MagneticBlastAimDefaultCameraRot
+    public unsafe BmSDK.Rotator MagneticBlastAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2604); }
     }
 
@@ -1817,18 +1817,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OmnitronAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronAimCameraOffset
+    public unsafe System.Numerics.Vector3 OmnitronAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2624); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronAimCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronAimCameraPivotOffset
+    public unsafe System.Numerics.Vector3 OmnitronAimCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2636); }
     }
 
@@ -1844,9 +1844,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OmnitronAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronAimDefaultCameraRot
+    public unsafe BmSDK.Rotator OmnitronAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2652); }
     }
 
@@ -1871,18 +1871,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OmnitronCornerLeftStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronCornerLeftStateOffset
+    public unsafe System.Numerics.Vector3 OmnitronCornerLeftStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2672); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronCornerRightStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronCornerRightStateOffset
+    public unsafe System.Numerics.Vector3 OmnitronCornerRightStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2684); }
     }
 
@@ -1898,45 +1898,45 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OmnitronCornerStateDefaultRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronCornerStateDefaultRot
+    public unsafe BmSDK.Rotator OmnitronCornerStateDefaultRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2700); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronCornerLeftStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronCornerLeftStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 OmnitronCornerLeftStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2712); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronCornerRightStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronCornerRightStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 OmnitronCornerRightStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2724); }
     }
 
     /// <summary>
     /// StructProperty: RHDAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDAimCameraOffset
+    public unsafe System.Numerics.Vector3 RHDAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2736); }
     }
 
     /// <summary>
     /// StructProperty: RHDAimCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDAimCameraPivotOffset
+    public unsafe System.Numerics.Vector3 RHDAimCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2748); }
     }
 
@@ -1952,9 +1952,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RHDAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDAimDefaultCameraRot
+    public unsafe BmSDK.Rotator RHDAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2764); }
     }
 
@@ -1979,18 +1979,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RHDCornerLeftStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDCornerLeftStateOffset
+    public unsafe System.Numerics.Vector3 RHDCornerLeftStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2784); }
     }
 
     /// <summary>
     /// StructProperty: RHDCornerRightStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDCornerRightStateOffset
+    public unsafe System.Numerics.Vector3 RHDCornerRightStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2796); }
     }
 
@@ -2006,36 +2006,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RHDCornerStateDefaultRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDCornerStateDefaultRot
+    public unsafe BmSDK.Rotator RHDCornerStateDefaultRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2812); }
     }
 
     /// <summary>
     /// StructProperty: RHDCornerLeftStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDCornerLeftStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 RHDCornerLeftStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2824); }
     }
 
     /// <summary>
     /// StructProperty: RHDCornerRightStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDCornerRightStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 RHDCornerRightStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2836); }
     }
 
     /// <summary>
     /// StructProperty: FreezeJammerAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreezeJammerAimCameraOffset
+    public unsafe System.Numerics.Vector3 FreezeJammerAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2848); }
     }
 
@@ -2051,9 +2051,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FreezeJammerAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreezeJammerAimDefaultCameraRot
+    public unsafe BmSDK.Rotator FreezeJammerAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2864); }
     }
 
@@ -2078,9 +2078,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: JokerGunAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunAimCameraOffset
+    public unsafe System.Numerics.Vector3 JokerGunAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2884); }
     }
 
@@ -2114,9 +2114,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: JokerGunZoomAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunZoomAimCameraOffset
+    public unsafe System.Numerics.Vector3 JokerGunZoomAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2908); }
     }
 
@@ -2150,9 +2150,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: JokerGunZoomRoom3AimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunZoomRoom3AimCameraOffset
+    public unsafe System.Numerics.Vector3 JokerGunZoomRoom3AimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2932); }
     }
 
@@ -2195,9 +2195,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LineLauncherAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LineLauncherAimCameraOffset
+    public unsafe System.Numerics.Vector3 LineLauncherAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2960); }
     }
 
@@ -2213,9 +2213,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LineLauncherAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LineLauncherAimDefaultCameraRot
+    public unsafe BmSDK.Rotator LineLauncherAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2976); }
     }
 
@@ -2240,9 +2240,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatarangAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatarangAimCameraOffset
+    public unsafe System.Numerics.Vector3 BatarangAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2996); }
     }
 
@@ -2258,9 +2258,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatarangAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatarangAimDefaultCameraRot
+    public unsafe BmSDK.Rotator BatarangAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3012); }
     }
 
@@ -2285,9 +2285,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WallClimbStartCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallClimbStartCameraOffset
+    public unsafe System.Numerics.Vector3 WallClimbStartCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3032); }
     }
 
@@ -2303,18 +2303,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WallClimbHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallClimbHeadOffset
+    public unsafe System.Numerics.Vector3 WallClimbHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3048); }
     }
 
     /// <summary>
     /// StructProperty: PounceCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PounceCameraOffset
+    public unsafe System.Numerics.Vector3 PounceCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3060); }
     }
 
@@ -2330,27 +2330,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PounceHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PounceHeadOffset
+    public unsafe System.Numerics.Vector3 PounceHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3076); }
     }
 
     /// <summary>
     /// StructProperty: VantageClimbHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VantageClimbHeadOffset
+    public unsafe System.Numerics.Vector3 VantageClimbHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3088); }
     }
 
     /// <summary>
     /// StructProperty: BatTrackerAimCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatTrackerAimCameraOffset
+    public unsafe System.Numerics.Vector3 BatTrackerAimCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3100); }
     }
 
@@ -2366,18 +2366,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatTrackerAimDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatTrackerAimDefaultCameraRot
+    public unsafe BmSDK.Rotator BatTrackerAimDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3116); }
     }
 
     /// <summary>
     /// StructProperty: BatTrackerAimTargetOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatTrackerAimTargetOffset
+    public unsafe System.Numerics.Vector3 BatTrackerAimTargetOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3128); }
     }
 
@@ -2411,9 +2411,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LookStateCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookStateCameraOffset
+    public unsafe System.Numerics.Vector3 LookStateCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3152); }
     }
 
@@ -2429,9 +2429,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LookStateDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookStateDefaultCameraRot
+    public unsafe BmSDK.Rotator LookStateDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3168); }
     }
 
@@ -2501,9 +2501,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CoverRightCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CoverRightCameraOffset
+    public unsafe System.Numerics.Vector3 CoverRightCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3208); }
     }
 
@@ -2519,18 +2519,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CoverRightCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CoverRightCameraRot
+    public unsafe BmSDK.Rotator CoverRightCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3224); }
     }
 
     /// <summary>
     /// StructProperty: AlcoveCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlcoveCameraOffset
+    public unsafe System.Numerics.Vector3 AlcoveCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3236); }
     }
 
@@ -2546,27 +2546,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AlcoveCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlcoveCameraRot
+    public unsafe BmSDK.Rotator AlcoveCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3252); }
     }
 
     /// <summary>
     /// StructProperty: AlcoveCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlcoveCameraPivotOffset
+    public unsafe System.Numerics.Vector3 AlcoveCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3264); }
     }
 
     /// <summary>
     /// StructProperty: GlidingCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlidingCameraOffset
+    public unsafe System.Numerics.Vector3 GlidingCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3276); }
     }
 
@@ -2591,9 +2591,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GlidingCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlidingCameraRot
+    public unsafe BmSDK.Rotator GlidingCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3296); }
     }
 
@@ -2636,18 +2636,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GlideKickOffWallHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlideKickOffWallHeadOffset
+    public unsafe System.Numerics.Vector3 GlideKickOffWallHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3324); }
     }
 
     /// <summary>
     /// StructProperty: BoostGlidingCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostGlidingCameraOffset
+    public unsafe System.Numerics.Vector3 BoostGlidingCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3336); }
     }
 
@@ -2663,18 +2663,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BoostGlidingCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostGlidingCameraRot
+    public unsafe BmSDK.Rotator BoostGlidingCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3352); }
     }
 
     /// <summary>
     /// StructProperty: PouncingCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PouncingCameraOffset
+    public unsafe System.Numerics.Vector3 PouncingCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3364); }
     }
 
@@ -2708,9 +2708,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PerchLedgeHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PerchLedgeHeadOffset
+    public unsafe System.Numerics.Vector3 PerchLedgeHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3388); }
     }
 
@@ -2726,18 +2726,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PerchLedgeSwingHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PerchLedgeSwingHeadOffset
+    public unsafe System.Numerics.Vector3 PerchLedgeSwingHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3404); }
     }
 
     /// <summary>
     /// StructProperty: HangCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangCameraOffset
+    public unsafe System.Numerics.Vector3 HangCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3416); }
     }
 
@@ -2753,9 +2753,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HangDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangDefaultCameraRot
+    public unsafe BmSDK.Rotator HangDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3432); }
     }
 
@@ -2798,9 +2798,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastLocation
+    public unsafe System.Numerics.Vector3 LastLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3460); }
     }
 
@@ -2825,9 +2825,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraPivotOffsetDef
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraPivotOffsetDef
+    public unsafe System.Numerics.Vector3 CameraPivotOffsetDef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3480); }
     }
 
@@ -2924,45 +2924,45 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BaseCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseCameraOffset
+    public unsafe System.Numerics.Vector3 BaseCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3532); }
     }
 
     /// <summary>
     /// StructProperty: ExtraCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExtraCameraOffset
+    public unsafe System.Numerics.Vector3 ExtraCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3544); }
     }
 
     /// <summary>
     /// StructProperty: FreeCamBobLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCamBobLocation
+    public unsafe System.Numerics.Vector3 FreeCamBobLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3556); }
     }
 
     /// <summary>
     /// StructProperty: LastDesiredCamPositionForDrag
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastDesiredCamPositionForDrag
+    public unsafe System.Numerics.Vector3 LastDesiredCamPositionForDrag
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3568); }
     }
 
     /// <summary>
     /// StructProperty: ZipLineCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZipLineCameraOffset
+    public unsafe System.Numerics.Vector3 ZipLineCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3580); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3580); }
     }
 
@@ -2978,27 +2978,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ZipLineDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZipLineDefaultCameraRot
+    public unsafe BmSDK.Rotator ZipLineDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3596); }
     }
 
     /// <summary>
     /// StructProperty: ZipLineTargetOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZipLineTargetOffset
+    public unsafe System.Numerics.Vector3 ZipLineTargetOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3608); }
     }
 
     /// <summary>
     /// StructProperty: HarpoonPullCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonPullCameraOffset
+    public unsafe System.Numerics.Vector3 HarpoonPullCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3620); }
     }
 
@@ -3014,54 +3014,54 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HarpoonPullDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonPullDefaultCameraRot
+    public unsafe BmSDK.Rotator HarpoonPullDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3636); }
     }
 
     /// <summary>
     /// StructProperty: HarpoonPullTargetOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonPullTargetOffset
+    public unsafe System.Numerics.Vector3 HarpoonPullTargetOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3648); }
     }
 
     /// <summary>
     /// StructProperty: FixedCameraHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FixedCameraHeadOffset
+    public unsafe System.Numerics.Vector3 FixedCameraHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3660); }
     }
 
     /// <summary>
     /// StructProperty: FreeCameraHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCameraHeadOffset
+    public unsafe System.Numerics.Vector3 FreeCameraHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3672); }
     }
 
     /// <summary>
     /// StructProperty: AlcoveCameraHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlcoveCameraHeadOffset
+    public unsafe System.Numerics.Vector3 AlcoveCameraHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3684); }
     }
 
     /// <summary>
     /// StructProperty: SwingingFromAboveCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SwingingFromAboveCameraOffset
+    public unsafe System.Numerics.Vector3 SwingingFromAboveCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3696); }
     }
 
@@ -3077,9 +3077,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SwingingFromAboveCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SwingingFromAboveCameraRot
+    public unsafe BmSDK.Rotator SwingingFromAboveCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3712); }
     }
 
@@ -3095,18 +3095,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CeilingClimbCamHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingClimbCamHeadOffset
+    public unsafe System.Numerics.Vector3 CeilingClimbCamHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3728); }
     }
 
     /// <summary>
     /// StructProperty: CeilingClimbCamRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingClimbCamRot
+    public unsafe BmSDK.Rotator CeilingClimbCamRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3740); }
     }
 
@@ -3158,9 +3158,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DiveToBatmobilePickupRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DiveToBatmobilePickupRot
+    public unsafe BmSDK.Rotator DiveToBatmobilePickupRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3772); }
     }
 
@@ -3194,18 +3194,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TransitionOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TransitionOffset
+    public unsafe System.Numerics.Vector3 TransitionOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3796); }
     }
 
     /// <summary>
     /// StructProperty: TransitionRotatorOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TransitionRotatorOffset
+    public unsafe BmSDK.Rotator TransitionRotatorOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3808); }
     }
 
@@ -3239,45 +3239,45 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GrateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 GrateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3832); }
     }
 
     /// <summary>
     /// StructProperty: FreeCameraSitOffsetMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCameraSitOffsetMin
+    public unsafe System.Numerics.Vector3 FreeCameraSitOffsetMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3844); }
     }
 
     /// <summary>
     /// StructProperty: FreeCameraSitOffsetUp
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCameraSitOffsetUp
+    public unsafe System.Numerics.Vector3 FreeCameraSitOffsetUp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3856); }
     }
 
     /// <summary>
     /// StructProperty: FreeCameraSitOffsetDown
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCameraSitOffsetDown
+    public unsafe System.Numerics.Vector3 FreeCameraSitOffsetDown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3868); }
     }
 
     /// <summary>
     /// StructProperty: FreeCameraPullOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreeCameraPullOffset
+    public unsafe System.Numerics.Vector3 FreeCameraPullOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3880); }
     }
 
@@ -3311,36 +3311,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StateFreeCameraSitOffsetMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetMin
+    public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3904); }
     }
 
     /// <summary>
     /// StructProperty: StateFreeCameraSitOffsetUp
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetUp
+    public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetUp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3916); }
     }
 
     /// <summary>
     /// StructProperty: StateFreeCameraSitOffsetDown
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetDown
+    public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetDown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3928); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3928); }
     }
 
     /// <summary>
     /// StructProperty: StateFreeCameraPullOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraPullOffset
+    public unsafe System.Numerics.Vector3 StateFreeCameraPullOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3940); }
     }
 
@@ -3419,9 +3419,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EdgeSwingCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EdgeSwingCameraOffset
+    public unsafe System.Numerics.Vector3 EdgeSwingCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3984); }
     }
 
@@ -3437,27 +3437,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EdgeSwingCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EdgeSwingCameraRot
+    public unsafe BmSDK.Rotator EdgeSwingCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4000); }
     }
 
     /// <summary>
     /// StructProperty: CurrentAbsoluteHeadRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentAbsoluteHeadRot
+    public unsafe BmSDK.Rotator CurrentAbsoluteHeadRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4012); }
     }
 
     /// <summary>
     /// StructProperty: LastAnchorRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastAnchorRot
+    public unsafe BmSDK.Rotator LastAnchorRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4024); }
     }
 
@@ -3491,9 +3491,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BaseZoomDOFSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseZoomDOFSettings
+    public unsafe BmSDK.BmGame.RGameInfo.FDofStruct BaseZoomDOFSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 4048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4048); }
     }
 
@@ -3509,9 +3509,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ZoomedDOFSetting
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomedDOFSetting
+    public unsafe BmSDK.BmGame.RGameInfo.FDofStruct ZoomedDOFSetting
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 4072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4072); }
     }
 
@@ -3536,756 +3536,756 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WalkCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig WalkCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4100); }
     }
 
     /// <summary>
     /// StructProperty: WalkCanisterCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WalkCanisterCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig WalkCanisterCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4268); }
     }
 
     /// <summary>
     /// StructProperty: AgilityWalkCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AgilityWalkCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig AgilityWalkCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4436); }
     }
 
     /// <summary>
     /// StructProperty: RunCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RunCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RunCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4604); }
     }
 
     /// <summary>
     /// StructProperty: RooftopRunCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RooftopRunCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RooftopRunCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4772); }
     }
 
     /// <summary>
     /// StructProperty: DemonTrialsCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DemonTrialsCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DemonTrialsCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 4940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4940); }
     }
 
     /// <summary>
     /// StructProperty: CombatWalkCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CombatWalkCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CombatWalkCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5108); }
     }
 
     /// <summary>
     /// StructProperty: StandingHoldCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StandingHoldCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig StandingHoldCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5276); }
     }
 
     /// <summary>
     /// StructProperty: FearTakedownCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FearTakedownCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig FearTakedownCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5444); }
     }
 
     /// <summary>
     /// StructProperty: StandingGrabCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StandingGrabCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig StandingGrabCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5612); }
     }
 
     /// <summary>
     /// StructProperty: GrappleCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GrappleCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5780); }
     }
 
     /// <summary>
     /// StructProperty: GrappleRescueCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleRescueCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GrappleRescueCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 5948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5948); }
     }
 
     /// <summary>
     /// StructProperty: HqGrappleStartCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HqGrappleStartCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HqGrappleStartCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6116); }
     }
 
     /// <summary>
     /// StructProperty: CapeChuteConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CapeChuteConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CapeChuteConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6284); }
     }
 
     /// <summary>
     /// StructProperty: LedgeHangCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LedgeHangCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LedgeHangCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6452); }
     }
 
     /// <summary>
     /// StructProperty: LedgeHangKickedByThugCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LedgeHangKickedByThugCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LedgeHangKickedByThugCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6620); }
     }
 
     /// <summary>
     /// StructProperty: LedgeHangTakedownStartCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LedgeHangTakedownStartCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LedgeHangTakedownStartCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6788); }
     }
 
     /// <summary>
     /// StructProperty: LedgeHangTakedownCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LedgeHangTakedownCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LedgeHangTakedownCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 6956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6956); }
     }
 
     /// <summary>
     /// StructProperty: QuickTakedownCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT QuickTakedownCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig QuickTakedownCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7124); }
     }
 
     /// <summary>
     /// StructProperty: GenericFarFreeCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GenericFarFreeCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GenericFarFreeCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7292); }
     }
 
     /// <summary>
     /// StructProperty: AirshipControlCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AirshipControlCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig AirshipControlCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7460); }
     }
 
     /// <summary>
     /// StructProperty: RaftPullCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RaftPullCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RaftPullCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7628); }
     }
 
     /// <summary>
     /// StructProperty: HangPointCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangPointCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HangPointCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7796); }
     }
 
     /// <summary>
     /// StructProperty: StealthCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StealthCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig StealthCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 7964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7964); }
     }
 
     /// <summary>
     /// StructProperty: StealthWallCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StealthWallCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig StealthWallCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8132); }
     }
 
     /// <summary>
     /// StructProperty: CrouchUnderObstacleCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CrouchUnderObstacleCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CrouchUnderObstacleCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8300); }
     }
 
     /// <summary>
     /// StructProperty: RailingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RailingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RailingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8468); }
     }
 
     /// <summary>
     /// StructProperty: FloorAttackCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloorAttackCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig FloorAttackCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8636); }
     }
 
     /// <summary>
     /// StructProperty: IntroCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT IntroCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig IntroCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8804); }
     }
 
     /// <summary>
     /// StructProperty: SwingingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SwingingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig SwingingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 8972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8972); }
     }
 
     /// <summary>
     /// StructProperty: WallClimbCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallClimbCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig WallClimbCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9140); }
     }
 
     /// <summary>
     /// StructProperty: WallClimbStartCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallClimbStartCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig WallClimbStartCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9308); }
     }
 
     /// <summary>
     /// StructProperty: PounceCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PounceCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig PounceCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9476); }
     }
 
     /// <summary>
     /// StructProperty: VantageClimbCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VantageClimbCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig VantageClimbCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9644); }
     }
 
     /// <summary>
     /// StructProperty: SwingingFromAboveCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SwingingFromAboveCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig SwingingFromAboveCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9812); }
     }
 
     /// <summary>
     /// StructProperty: TakedownFromAboveCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TakedownFromAboveCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig TakedownFromAboveCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 9980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 9980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9980); }
     }
 
     /// <summary>
     /// StructProperty: SilentPredatorCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SilentPredatorCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig SilentPredatorCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10148); }
     }
 
     /// <summary>
     /// StructProperty: PerchLedgeCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PerchLedgeCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig PerchLedgeCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10316); }
     }
 
     /// <summary>
     /// StructProperty: PerchLedgeSwingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PerchLedgeSwingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig PerchLedgeSwingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10484); }
     }
 
     /// <summary>
     /// StructProperty: CorridorCombatCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CorridorCombatCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CorridorCombatCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10652); }
     }
 
     /// <summary>
     /// StructProperty: NightwingBossFightCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT NightwingBossFightCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig NightwingBossFightCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10820); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10820); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10820); }
     }
 
     /// <summary>
     /// StructProperty: HighCombatCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HighCombatCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HighCombatCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 10988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10988); }
     }
 
     /// <summary>
     /// StructProperty: LookDownCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookDownCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LookDownCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11156); }
     }
 
     /// <summary>
     /// StructProperty: LineLauncherCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LineLauncherCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LineLauncherCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11324); }
     }
 
     /// <summary>
     /// StructProperty: BatarangCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatarangCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BatarangCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11492); }
     }
 
     /// <summary>
     /// StructProperty: WhipRappelBolaCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WhipRappelBolaCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig WhipRappelBolaCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11660); }
     }
 
     /// <summary>
     /// StructProperty: HarpoonAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HarpoonAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11828); }
     }
 
     /// <summary>
     /// StructProperty: MagneticBlastAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MagneticBlastAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig MagneticBlastAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 11996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 11996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11996); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig OmnitronAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 12164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12164); }
     }
 
     /// <summary>
     /// StructProperty: OmnitronStealthAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OmnitronStealthAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig OmnitronStealthAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 12332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12332); }
     }
 
     /// <summary>
     /// StructProperty: RHDAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RHDAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 12500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12500); }
     }
 
     /// <summary>
     /// StructProperty: RHDStealthAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDStealthAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RHDStealthAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 12668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12668); }
     }
 
     /// <summary>
     /// StructProperty: FreezeJammerAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FreezeJammerAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig FreezeJammerAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12836); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 12836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12836); }
     }
 
     /// <summary>
     /// StructProperty: JokerGunAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig JokerGunAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13004); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13004); }
     }
 
     /// <summary>
     /// StructProperty: JokerGunZoomAimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunZoomAimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig JokerGunZoomAimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13172); }
     }
 
     /// <summary>
     /// StructProperty: JokerGunZoomRoom3AimConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JokerGunZoomRoom3AimConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig JokerGunZoomRoom3AimConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13340); }
     }
 
     /// <summary>
     /// StructProperty: GrateCameraConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrateCameraConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GrateCameraConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13508); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13508); }
     }
 
     /// <summary>
     /// StructProperty: HighGrateCameraConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HighGrateCameraConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HighGrateCameraConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13676); }
     }
 
     /// <summary>
     /// StructProperty: SlideCameraConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SlideCameraConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig SlideCameraConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 13844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 13844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 13844); }
     }
 
     /// <summary>
     /// StructProperty: CeilingClimbCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingClimbCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CeilingClimbCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14012); }
     }
 
     /// <summary>
     /// StructProperty: CeilingToLedgeHangCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingToLedgeHangCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CeilingToLedgeHangCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14180); }
     }
 
     /// <summary>
     /// StructProperty: CeilingToCatwalkCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingToCatwalkCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CeilingToCatwalkCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14348); }
     }
 
     /// <summary>
     /// StructProperty: CeilingBatarangCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingBatarangCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CeilingBatarangCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14516); }
     }
 
     /// <summary>
     /// StructProperty: LedgeSwingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LedgeSwingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig LedgeSwingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14684); }
     }
 
     /// <summary>
     /// StructProperty: DeepFallLandCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DeepFallLandCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DeepFallLandCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 14852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 14852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 14852); }
     }
 
     /// <summary>
     /// StructProperty: HelicopterCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelicopterCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig HelicopterCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15020); }
     }
 
     /// <summary>
     /// StructProperty: DrivingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DrivingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15188); }
     }
 
     /// <summary>
     /// StructProperty: FleeingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FleeingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig FleeingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15356); }
     }
 
     /// <summary>
     /// StructProperty: BoostingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BoostingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15524); }
     }
 
     /// <summary>
     /// StructProperty: BarrelRollCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BarrelRollCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BarrelRollCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15692); }
     }
 
     /// <summary>
     /// StructProperty: BattleModeCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BattleModeCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 15860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 15860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 15860); }
     }
 
     /// <summary>
     /// StructProperty: BattleModeWinchCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeWinchCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BattleModeWinchCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16028); }
     }
 
     /// <summary>
     /// StructProperty: BattleModeAbseilingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeAbseilingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BattleModeAbseilingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16196); }
     }
 
     /// <summary>
     /// StructProperty: ChasingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ChasingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig ChasingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16364); }
     }
 
     /// <summary>
     /// StructProperty: GlideInBatmobileCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlideInBatmobileCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GlideInBatmobileCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16532); }
     }
 
     /// <summary>
     /// StructProperty: ThugCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThugCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig ThugCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16700); }
     }
 
     /// <summary>
     /// StructProperty: DiveToBatmobilePickupCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DiveToBatmobilePickupCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DiveToBatmobilePickupCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 16868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16868); }
     }
 
     /// <summary>
     /// StructProperty: DisruptorSniperStandingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptorSniperStandingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DisruptorSniperStandingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17036); }
     }
 
     /// <summary>
     /// StructProperty: DisruptorSniperVantageCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptorSniperVantageCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DisruptorSniperVantageCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17204); }
     }
 
     /// <summary>
     /// StructProperty: DisruptorSniperRailingCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptorSniperRailingCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DisruptorSniperRailingCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17372); }
     }
 
     /// <summary>
     /// StructProperty: DisruptorSniperCornerCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptorSniperCornerCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DisruptorSniperCornerCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17540); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileConversationCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileConversationCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BatmobileConversationCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17708); }
     }
 
     /// <summary>
     /// StructProperty: RidingCarCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RidingCarCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig RidingCarCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 17876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 17876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 17876); }
     }
 
     /// <summary>
     /// StructProperty: ScarerowBossCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ScarerowBossCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig ScarerowBossCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18044); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 18044); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18044); }
     }
 
@@ -4319,9 +4319,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentCameraConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentCameraConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CurrentCameraConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 18224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18224); }
     }
 
@@ -4337,18 +4337,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LookDownDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookDownDefaultCameraRot
+    public unsafe BmSDK.Rotator LookDownDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 18396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18396); }
     }
 
     /// <summary>
     /// StructProperty: AlternativeWalkCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlternativeWalkCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig AlternativeWalkCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 18408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18408); }
     }
 
@@ -4373,9 +4373,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DiveOverRailingPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DiveOverRailingPivotOffset
+    public unsafe System.Numerics.Vector3 DiveOverRailingPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 18584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18584); }
     }
 
@@ -4400,18 +4400,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScarecrowOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ScarecrowOffset
+    public unsafe System.Numerics.Vector3 ScarecrowOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 18604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18604); }
     }
 
     /// <summary>
     /// StructProperty: ScarecrowPivot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ScarecrowPivot
+    public unsafe System.Numerics.Vector3 ScarecrowPivot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 18616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18616); }
     }
 
@@ -4427,18 +4427,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraWander
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraWander
+    public unsafe System.Numerics.Vector3 CameraWander
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 18632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18632); }
     }
 
     /// <summary>
     /// StructProperty: CameraWanderRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraWanderRotation
+    public unsafe BmSDK.Rotator CameraWanderRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 18644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18644); }
     }
 
@@ -4454,63 +4454,63 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentCameraWanderSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentCameraWanderSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings CurrentCameraWanderSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 18660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18660); }
     }
 
     /// <summary>
     /// StructProperty: WorldSpaceCameraWander
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorldSpaceCameraWander
+    public unsafe BmSDK.GameObject.FMatrix WorldSpaceCameraWander
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 18736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18736); }
     }
 
     /// <summary>
     /// StructProperty: WorldSpaceWanderBase
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorldSpaceWanderBase
+    public unsafe BmSDK.GameObject.FMatrix WorldSpaceWanderBase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 18800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18800); }
     }
 
     /// <summary>
     /// ByteProperty: BlimpRenderingDPG
     /// </summary>
-    public unsafe byte BlimpRenderingDPG
+    public unsafe BmSDK.Engine.Scene.ESceneDepthPriorityGroup BlimpRenderingDPG
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 18864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Scene.ESceneDepthPriorityGroup>(Ptr + 18864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18864); }
     }
 
     /// <summary>
     /// ByteProperty: LookAtSpeed
     /// </summary>
-    public unsafe byte LookAtSpeed
+    public unsafe BmSDK.BmGame.RGameInfo.CameraLookAtSpeed LookAtSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 18865); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.CameraLookAtSpeed>(Ptr + 18865); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18865); }
     }
 
     /// <summary>
     /// ByteProperty: LookAtType
     /// </summary>
-    public unsafe byte LookAtType
+    public unsafe BmSDK.BmGame.RGameInfo.CameraLookAtType LookAtType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 18866); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.CameraLookAtType>(Ptr + 18866); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18866); }
     }
 
     /// <summary>
     /// ByteProperty: LookAtStrength
     /// </summary>
-    public unsafe byte LookAtStrength
+    public unsafe BmSDK.BmGame.RGameInfo.CameraLookAtStrength LookAtStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 18867); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.CameraLookAtStrength>(Ptr + 18867); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18867); }
     }
 
@@ -4526,117 +4526,117 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: DrivingCameraSetup
     /// </summary>
-    public unsafe byte DrivingCameraSetup
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.EBatmobileDriveCamera DrivingCameraSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 18869); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.EBatmobileDriveCamera>(Ptr + 18869); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18869); }
     }
 
     /// <summary>
     /// StructProperty: BlimpUnrotatedViewRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BlimpUnrotatedViewRotation
+    public unsafe BmSDK.Rotator BlimpUnrotatedViewRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 18872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18872); }
     }
 
     /// <summary>
     /// StructProperty: BlimpUnrotatedViewLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BlimpUnrotatedViewLocation
+    public unsafe System.Numerics.Vector3 BlimpUnrotatedViewLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 18884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18884); }
     }
 
     /// <summary>
     /// StructProperty: ResonatorWanderSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResonatorWanderSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings ResonatorWanderSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 18896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18896); }
     }
 
     /// <summary>
     /// StructProperty: RHDWanderSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDWanderSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings RHDWanderSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 18964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 18964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 18964); }
     }
 
     /// <summary>
     /// StructProperty: ScarecrowWanderSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ScarecrowWanderSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings ScarecrowWanderSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 19032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19032); }
     }
 
     /// <summary>
     /// StructProperty: GlideWanderSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlideWanderSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings GlideWanderSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 19100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19100); }
     }
 
     /// <summary>
     /// StructProperty: GlideCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlideCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GlideCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 19168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19168); }
     }
 
     /// <summary>
     /// StructProperty: BoostGlideCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostGlideCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BoostGlideCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 19324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19324); }
     }
 
     /// <summary>
     /// StructProperty: GrappleCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GrappleCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 19480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19480); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileBoostCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileBoostCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileBoostCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 19636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19636); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileWheelSpinCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 19792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19792); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraCamOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraCamOffset
+    public unsafe System.Numerics.Vector3 BatmobileWheelSpinCameraCamOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 19948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19948); }
     }
 
@@ -4661,36 +4661,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraBlendRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraBlendRotation
+    public unsafe BmSDK.Rotator CameraBlendRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 19968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19968); }
     }
 
     /// <summary>
     /// StructProperty: CameraBlendInitialRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraBlendInitialRotation
+    public unsafe BmSDK.Rotator CameraBlendInitialRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 19980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19980); }
     }
 
     /// <summary>
     /// StructProperty: ExtraDeltaRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExtraDeltaRot
+    public unsafe BmSDK.Rotator ExtraDeltaRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 19992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 19992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19992); }
     }
 
     /// <summary>
     /// StructProperty: CornerStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerStateOffset
+    public unsafe System.Numerics.Vector3 CornerStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20004); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20004); }
     }
 
@@ -4706,18 +4706,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CornerStateDefaultRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerStateDefaultRot
+    public unsafe BmSDK.Rotator CornerStateDefaultRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 20020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20020); }
     }
 
     /// <summary>
     /// StructProperty: CornerStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 CornerStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20032); }
     }
 
@@ -4796,9 +4796,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResonatorCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResonatorCameraOffset
+    public unsafe System.Numerics.Vector3 ResonatorCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20076); }
     }
 
@@ -4814,18 +4814,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResonatorCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResonatorCameraPivotOffset
+    public unsafe System.Numerics.Vector3 ResonatorCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20092); }
     }
 
     /// <summary>
     /// StructProperty: RHDPasswordCrackCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDPasswordCrackCameraOffset
+    public unsafe System.Numerics.Vector3 RHDPasswordCrackCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20104); }
     }
 
@@ -4850,18 +4850,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RHDPasswordCrackCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDPasswordCrackCameraPivotOffset
+    public unsafe System.Numerics.Vector3 RHDPasswordCrackCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20124); }
     }
 
     /// <summary>
     /// StructProperty: LastCameraPivotPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastCameraPivotPos
+    public unsafe System.Numerics.Vector3 LastCameraPivotPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20136); }
     }
 
@@ -4913,18 +4913,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentDefaultPelvisDiff
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentDefaultPelvisDiff
+    public unsafe System.Numerics.Vector3 CurrentDefaultPelvisDiff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20168); }
     }
 
     /// <summary>
     /// StructProperty: DefaultPelvisDiff
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultPelvisDiff
+    public unsafe System.Numerics.Vector3 DefaultPelvisDiff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20180); }
     }
 
@@ -4940,18 +4940,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: RetainZoomStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>> RetainZoomStates
+    public unsafe BmSDK.TArray<BmSDK.FName> RetainZoomStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>>(Ptr + 20196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 20196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20196); }
     }
 
     /// <summary>
     /// ArrayProperty: ForceUnZoomStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>> ForceUnZoomStates
+    public unsafe BmSDK.TArray<BmSDK.FName> ForceUnZoomStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>>(Ptr + 20212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 20212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20212); }
     }
 
@@ -4967,63 +4967,63 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LookAtSpeeds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>> LookAtSpeeds
+    public unsafe BmSDK.TArray<BmSDK.BmGame.R3rdPersonCamera.FCameraLookAtSpeedDescriptor> LookAtSpeeds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>>(Ptr + 20232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.R3rdPersonCamera.FCameraLookAtSpeedDescriptor>>(Ptr + 20232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20232); }
     }
 
     /// <summary>
     /// StructProperty: DesiredLookRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DesiredLookRotation
+    public unsafe BmSDK.Rotator DesiredLookRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 20248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20248); }
     }
 
     /// <summary>
     /// StructProperty: DesiredLookLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DesiredLookLocation
+    public unsafe System.Numerics.Vector3 DesiredLookLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20260); }
     }
 
     /// <summary>
     /// StructProperty: ZoomOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomOffset
+    public unsafe System.Numerics.Vector3 ZoomOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20272); }
     }
 
     /// <summary>
     /// StructProperty: ZoomCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomCameraOffset
+    public unsafe System.Numerics.Vector3 ZoomCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20284); }
     }
 
     /// <summary>
     /// StructProperty: CeilingZoomOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingZoomOffset
+    public unsafe System.Numerics.Vector3 CeilingZoomOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20296); }
     }
 
     /// <summary>
     /// StructProperty: CeilingCameraZoomOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingCameraZoomOffset
+    public unsafe System.Numerics.Vector3 CeilingCameraZoomOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20308); }
     }
 
@@ -5048,18 +5048,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CameraHiddenActors
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>> CameraHiddenActors
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CameraHiddenActors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>>(Ptr + 20328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 20328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20328); }
     }
 
     /// <summary>
     /// ArrayProperty: CameraHideClasses
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Camera.ModifierList> CameraHideClasses
+    public unsafe BmSDK.TArray<BmSDK.Class> CameraHideClasses
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Camera.ModifierList>>(Ptr + 20344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 20344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20344); }
     }
 
@@ -5246,18 +5246,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BattleModeHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeHeadOffset
+    public unsafe System.Numerics.Vector3 BattleModeHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20444); }
     }
 
     /// <summary>
     /// StructProperty: DrivingModeHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingModeHeadOffset
+    public unsafe System.Numerics.Vector3 DrivingModeHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20456); }
     }
 
@@ -5273,9 +5273,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BattleModeWinchHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeWinchHeadOffset
+    public unsafe System.Numerics.Vector3 BattleModeWinchHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20472); }
     }
 
@@ -5309,9 +5309,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ChasingCamExtraCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ChasingCamExtraCameraRot
+    public unsafe BmSDK.Rotator ChasingCamExtraCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 20496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20496); }
     }
 
@@ -5372,9 +5372,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BattleModeAbseilingExtraCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BattleModeAbseilingExtraCameraRot
+    public unsafe BmSDK.Rotator BattleModeAbseilingExtraCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 20532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20532); }
     }
 
@@ -5390,9 +5390,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GauntletCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GauntletCameraOffset
+    public unsafe System.Numerics.Vector3 GauntletCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20548); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20548); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20548); }
     }
 
@@ -5408,144 +5408,144 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GauntletDefaultCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GauntletDefaultCameraRot
+    public unsafe BmSDK.Rotator GauntletDefaultCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 20564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20564); }
     }
 
     /// <summary>
     /// StructProperty: GauntletCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GauntletCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GauntletCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 20576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20576); }
     }
 
     /// <summary>
     /// StructProperty: GauntletPerchCamConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GauntletPerchCamConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig GauntletPerchCamConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 20744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20744); }
     }
 
     /// <summary>
     /// StructProperty: CurrentRailingOffsetSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentRailingOffsetSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings CurrentRailingOffsetSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings>(Ptr + 20912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20912); }
     }
 
     /// <summary>
     /// StructProperty: DefaultRailingOffsetSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultRailingOffsetSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings DefaultRailingOffsetSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings>(Ptr + 20936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20936); }
     }
 
     /// <summary>
     /// StructProperty: DisruptorRailingOffsetSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DisruptorRailingOffsetSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings DisruptorRailingOffsetSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings>(Ptr + 20960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20960); }
     }
 
     /// <summary>
     /// StructProperty: RHDRailingOffsetSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RHDRailingOffsetSettings
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings RHDRailingOffsetSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FRailingOffsetSettings>(Ptr + 20984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20984); }
     }
 
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_0
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21008); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_1
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21024); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_2
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21040); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_3
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21056); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21056); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21056); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_4
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21072); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_5
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21088); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_6
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21104); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_7
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21120); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_8
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21136); }
     }
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraSmoothingBuffer_9
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 21152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21152); }
     }
 
@@ -5615,18 +5615,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ChasePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ChasePosition
+    public unsafe System.Numerics.Vector3 ChasePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21196); }
     }
 
     /// <summary>
     /// StructProperty: ChaseVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ChaseVelocity
+    public unsafe System.Numerics.Vector3 ChaseVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21208); }
     }
 
@@ -5742,146 +5742,146 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_0
+    public unsafe System.Numerics.Vector3 ZoomPointDir_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21272); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_1
+    public unsafe System.Numerics.Vector3 ZoomPointDir_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21284); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_2
+    public unsafe System.Numerics.Vector3 ZoomPointDir_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21296); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_3
+    public unsafe System.Numerics.Vector3 ZoomPointDir_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21308); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_4
+    public unsafe System.Numerics.Vector3 ZoomPointDir_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21320); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_5
+    public unsafe System.Numerics.Vector3 ZoomPointDir_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21332); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_6
+    public unsafe System.Numerics.Vector3 ZoomPointDir_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21344); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_7
+    public unsafe System.Numerics.Vector3 ZoomPointDir_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21356); }
     }
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomPointDir_8
+    public unsafe System.Numerics.Vector3 ZoomPointDir_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21368); }
     }
 
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_0
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21380); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_1
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21392); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_2
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21404); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_3
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21416); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_4
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21428); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_5
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21440); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_6
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21452); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_7
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21464); }
     }
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TightZoomPointDir_8
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21476); }
     }
 
@@ -5979,9 +5979,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastCameraTargetPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastCameraTargetPos
+    public unsafe System.Numerics.Vector3 LastCameraTargetPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21532); }
     }
 
@@ -6006,9 +6006,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Smoother
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Smoother
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 21552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21552); }
     }
 
@@ -6087,18 +6087,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomCameraConfig
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CustomCameraConfig
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CustomCameraConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 21620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21620); }
     }
 
     /// <summary>
     /// StructProperty: CustomCameraExtraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CustomCameraExtraRot
+    public unsafe BmSDK.Rotator CustomCameraExtraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 21788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21788); }
     }
 
@@ -6123,9 +6123,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomCameraRotationSpeed
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CustomCameraRotationSpeed
+    public unsafe BmSDK.Rotator CustomCameraRotationSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 21808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21808); }
     }
 
@@ -6141,9 +6141,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultRotationSpeed
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultRotationSpeed
+    public unsafe BmSDK.Rotator DefaultRotationSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 21824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21824); }
     }
 
@@ -6213,45 +6213,45 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vDisruptorCornerCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vDisruptorCornerCameraOffset
+    public unsafe System.Numerics.Vector3 vDisruptorCornerCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21864); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraOffset
+    public unsafe System.Numerics.Vector3 BonnetCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21876); }
     }
 
     /// <summary>
     /// StructProperty: CockpitCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CockpitCameraOffset
+    public unsafe System.Numerics.Vector3 CockpitCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21888); }
     }
 
     /// <summary>
     /// StructProperty: LoopTheLoopCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LoopTheLoopCameraOffset
+    public unsafe System.Numerics.Vector3 LoopTheLoopCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21900); }
     }
 
     /// <summary>
     /// StructProperty: FixedCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FixedCameraOffset
+    public unsafe System.Numerics.Vector3 FixedCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21912); }
     }
 
@@ -6267,63 +6267,63 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BonnetCameraAccelFactor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraAccelFactor
+    public unsafe System.Numerics.Vector3 BonnetCameraAccelFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21928); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21928); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringPower
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringPower
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringPower
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21940); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringConst
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringConst
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringConst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21952); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingFactor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingFactor
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21964); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingPower
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingPower
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingPower
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21976); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCamMax
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCamMax
+    public unsafe System.Numerics.Vector3 BonnetCamMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 21988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 21988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21988); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCamMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCamMin
+    public unsafe System.Numerics.Vector3 BonnetCamMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22000); }
     }
 
@@ -6339,36 +6339,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentBonnetCameraHead
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentBonnetCameraHead
+    public unsafe System.Numerics.Vector3 CurrentBonnetCameraHead
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22016); }
     }
 
     /// <summary>
     /// StructProperty: CurrentBonnetCameraHeadVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentBonnetCameraHeadVelocity
+    public unsafe System.Numerics.Vector3 CurrentBonnetCameraHeadVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22028); }
     }
 
     /// <summary>
     /// StructProperty: OculusPlayerCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OculusPlayerCameraOffset
+    public unsafe System.Numerics.Vector3 OculusPlayerCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22040); }
     }
 
     /// <summary>
     /// StructProperty: OculusBattleModeCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OculusBattleModeCameraOffset
+    public unsafe System.Numerics.Vector3 OculusBattleModeCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22052); }
     }
 
@@ -6384,27 +6384,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CopSittingAtBarHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopSittingAtBarHeadOffset
+    public unsafe System.Numerics.Vector3 CopSittingAtBarHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22068); }
     }
 
     /// <summary>
     /// StructProperty: CopSittingAtBarPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopSittingAtBarPivotOffset
+    public unsafe System.Numerics.Vector3 CopSittingAtBarPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22080); }
     }
 
     /// <summary>
     /// StructProperty: CopSittingAtBarOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopSittingAtBarOffset
+    public unsafe System.Numerics.Vector3 CopSittingAtBarOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22092); }
     }
 
@@ -6429,27 +6429,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FirstPersonCameraCopCameraOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FirstPersonCameraCopCameraOffset
+    public unsafe System.Numerics.Vector3 FirstPersonCameraCopCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22112); }
     }
 
     /// <summary>
     /// StructProperty: FirstPersonCameraCopCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FirstPersonCameraCopCameraPivotOffset
+    public unsafe System.Numerics.Vector3 FirstPersonCameraCopCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22124); }
     }
 
     /// <summary>
     /// StructProperty: FirstPersonCameraCopHeadOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FirstPersonCameraCopHeadOffset
+    public unsafe System.Numerics.Vector3 FirstPersonCameraCopHeadOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22136); }
     }
 
@@ -6474,18 +6474,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrivingCamConfig1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingCamConfig1
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DrivingCamConfig1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 22156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22156); }
     }
 
     /// <summary>
     /// StructProperty: BoostingCamConfig1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostingCamConfig1
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BoostingCamConfig1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 22324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22324); }
     }
 
@@ -6573,63 +6573,63 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BonnetCameraOffset1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraOffset1
+    public unsafe System.Numerics.Vector3 BonnetCameraOffset1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22528); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingPower1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingPower1
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingPower1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22540); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingFactor1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingFactor1
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingFactor1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22552); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringPower1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringPower1
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringPower1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22564); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringConst1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringConst1
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringConst1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22576); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraAccelFactor1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraAccelFactor1
+    public unsafe System.Numerics.Vector3 BonnetCameraAccelFactor1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22588); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCamMax1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCamMax1
+    public unsafe System.Numerics.Vector3 BonnetCamMax1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22600); }
     }
 
@@ -6672,9 +6672,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrivingModeHeadOffset1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingModeHeadOffset1
+    public unsafe System.Numerics.Vector3 DrivingModeHeadOffset1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22628); }
     }
 
@@ -6699,45 +6699,45 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobileBoostCameraShake1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileBoostCameraShake1
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileBoostCameraShake1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 22648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22648); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraShake1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraShake1
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileWheelSpinCameraShake1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 22804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22804); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraCamOffset1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraCamOffset1
+    public unsafe System.Numerics.Vector3 BatmobileWheelSpinCameraCamOffset1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 22960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22960); }
     }
 
     /// <summary>
     /// StructProperty: DrivingCamConfig2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingCamConfig2
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig DrivingCamConfig2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 22972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 22972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22972); }
     }
 
     /// <summary>
     /// StructProperty: BoostingCamConfig2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoostingCamConfig2
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig BoostingCamConfig2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 23140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23140); }
     }
 
@@ -6825,63 +6825,63 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BonnetCameraOffset2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraOffset2
+    public unsafe System.Numerics.Vector3 BonnetCameraOffset2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23344); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingPower2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingPower2
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingPower2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23356); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringDampingFactor2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringDampingFactor2
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringDampingFactor2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23368); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringPower2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringPower2
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringPower2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23380); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraSpringConst2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraSpringConst2
+    public unsafe System.Numerics.Vector3 BonnetCameraSpringConst2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23392); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCameraAccelFactor2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCameraAccelFactor2
+    public unsafe System.Numerics.Vector3 BonnetCameraAccelFactor2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23404); }
     }
 
     /// <summary>
     /// StructProperty: BonnetCamMax2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonnetCamMax2
+    public unsafe System.Numerics.Vector3 BonnetCamMax2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23416); }
     }
 
@@ -6924,9 +6924,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrivingModeHeadOffset2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrivingModeHeadOffset2
+    public unsafe System.Numerics.Vector3 DrivingModeHeadOffset2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23444); }
     }
 
@@ -6942,9 +6942,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobileBoostCameraShake2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileBoostCameraShake2
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileBoostCameraShake2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 23460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23460); }
     }
 
@@ -6960,36 +6960,36 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraShake2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraShake2
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct BatmobileWheelSpinCameraShake2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 23620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23620); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileWheelSpinCameraCamOffset2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileWheelSpinCameraCamOffset2
+    public unsafe System.Numerics.Vector3 BatmobileWheelSpinCameraCamOffset2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23776); }
     }
 
     /// <summary>
     /// StructProperty: LastCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastCameraRot
+    public unsafe BmSDK.Rotator LastCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 23788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23788); }
     }
 
     /// <summary>
     /// StructProperty: VoiceSynthCornerStateOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VoiceSynthCornerStateOffset
+    public unsafe System.Numerics.Vector3 VoiceSynthCornerStateOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23800); }
     }
 
@@ -7005,27 +7005,27 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VoiceSynthCornerStateDefaultRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VoiceSynthCornerStateDefaultRot
+    public unsafe BmSDK.Rotator VoiceSynthCornerStateDefaultRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 23816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23816); }
     }
 
     /// <summary>
     /// StructProperty: VoiceSynthCornerStateCameraPivotOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VoiceSynthCornerStateCameraPivotOffset
+    public unsafe System.Numerics.Vector3 VoiceSynthCornerStateCameraPivotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23828); }
     }
 
     /// <summary>
     /// StructProperty: CurrentBonentCamSpring
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentBonentCamSpring
+    public unsafe System.Numerics.Vector3 CurrentBonentCamSpring
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 23840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23840); }
     }
 
@@ -7050,9 +7050,9 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastRailingRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastRailingRotation
+    public unsafe BmSDK.Rotator LastRailingRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 23860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 23860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 23860); }
     }
 
@@ -7074,18 +7074,18 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: StateFreeCameraSitOffsetMin
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetMin
+        public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetMin
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCameraSitOffsetMax
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetMax
+        public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetMax
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
@@ -7094,43 +7094,43 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         /// </summary>
         public unsafe bool UseStateFreeCameraSitOffsetUp
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCameraSitOffsetUp
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraSitOffsetUp
+        public unsafe System.Numerics.Vector3 StateFreeCameraSitOffsetUp
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCameraPullOffset
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCameraPullOffset
+        public unsafe System.Numerics.Vector3 StateFreeCameraPullOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// StructProperty: CameraPivotOffset
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraPivotOffset
+        public unsafe System.Numerics.Vector3 CameraPivotOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
         /// <summary>
         /// StructProperty: ZoomedOffset
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ZoomedOffset
+        public unsafe System.Numerics.Vector3 ZoomedOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 64); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
 
@@ -7229,34 +7229,34 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         /// </summary>
         public unsafe bool bUseSeparate43Settings
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCamera43SitOffsetMax
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCamera43SitOffsetMax
+        public unsafe System.Numerics.Vector3 StateFreeCamera43SitOffsetMax
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 120); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCamera43SitOffsetMin
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCamera43SitOffsetMin
+        public unsafe System.Numerics.Vector3 StateFreeCamera43SitOffsetMin
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }; }
         }
 
         /// <summary>
         /// StructProperty: StateFreeCamera43SitOffsetLookUp
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFreeCamera43SitOffsetLookUp
+        public unsafe System.Numerics.Vector3 StateFreeCamera43SitOffsetLookUp
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 144); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 144); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
         }
 
@@ -7265,8 +7265,8 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         /// </summary>
         public unsafe bool bDontModifySitOffsetWhenLookingUp
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }; }
         }
 
         /// <summary>

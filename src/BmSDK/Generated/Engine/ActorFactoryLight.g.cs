@@ -36,9 +36,9 @@ public partial class ActorFactoryLight : BmSDK.Engine.ActorFactory, BmSDK.IGameO
     /// <summary>
     /// ComponentProperty: LightComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightComponent
+    public unsafe BmSDK.Engine.PointLightComponent LightComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

@@ -71,27 +71,27 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// <summary>
     /// StructProperty: gunSettings
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshActor.ControlTargets gunSettings
+    public unsafe BmSDK.BmGame.RSentryGunBase.FSentryGunSettings gunSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshActor.ControlTargets>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunBase.FSentryGunSettings>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
     /// <summary>
     /// ObjectProperty: AssignedSentryKit
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AssignedSentryKit
+    public unsafe BmSDK.BmGame.RLootSourceBase AssignedSentryKit
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLootSourceBase>(Ptr + 980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
     }
 
     /// <summary>
     /// ObjectProperty: SentryAEC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SentryAEC
+    public unsafe BmSDK.BmGame.RAEC_PlaceSentryGun SentryAEC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_PlaceSentryGun>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 
@@ -100,8 +100,8 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// </summary>
     public unsafe bool bAssignedToTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 996); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 996); }
     }
 
     /// <summary>
@@ -109,7 +109,7 @@ public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBas
     /// </summary>
     public unsafe bool bTriggeredSpawn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 996); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 996); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 996); }
     }
 }

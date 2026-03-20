@@ -45,9 +45,9 @@ public partial class RBMBehaviour_CombatMultiStage : BmSDK.BmGame.RBMBehaviour_C
     /// <summary>
     /// ObjectProperty: MultiStagePawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MultiStagePawn
+    public unsafe BmSDK.BmGame.RPawnVillainMultiStageBase MultiStagePawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainMultiStageBase>(Ptr + 1024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
     }
 }

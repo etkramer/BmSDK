@@ -38,25 +38,25 @@ public partial class RAnimSet_Skeleton : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool RequiresMaxSolvers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: RefSkeleton
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_STRUCTPROPERTY_LAYOUT> RefSkeleton
+    public unsafe BmSDK.TArray<BmSDK.Engine.RAnimSet_Skeleton.FAnimSetRefSkeletonBone> RefSkeleton
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RAnimSet_Skeleton.FAnimSetRefSkeletonBone>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// StructProperty: NormalizedBoneMasses
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT NormalizedBoneMasses
+    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses NormalizedBoneMasses
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
@@ -87,9 +87,9 @@ public partial class RAnimSet_Skeleton : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ParentspaceReferencePose
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ParentspaceReferencePose
+        public unsafe BmSDK.GameObject.FBoneAtom ParentspaceReferencePose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }

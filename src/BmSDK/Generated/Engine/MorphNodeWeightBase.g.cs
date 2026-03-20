@@ -36,9 +36,9 @@ public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: NodeConns
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> NodeConns
+    public unsafe BmSDK.TArray<BmSDK.Engine.MorphNodeWeightBase.FMorphNodeConn> NodeConns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MorphNodeWeightBase.FMorphNodeConn>>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
@@ -51,9 +51,9 @@ public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGa
         /// <summary>
         /// ArrayProperty: ChildNodes
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ChildNodes
+        public unsafe BmSDK.TArray<BmSDK.Engine.MorphNodeBase> ChildNodes
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MorphNodeBase>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

@@ -71,18 +71,18 @@ public partial class RRiddleBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: Zone
     /// </summary>
-    public unsafe byte Zone
+    public unsafe BmSDK.BmGame.RGameInfo.ERiddlerLocationName Zone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.ERiddlerLocationName>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ObjectProperty: LimitToVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LimitToVolume
+    public unsafe BmSDK.Engine.Volume LimitToVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 }

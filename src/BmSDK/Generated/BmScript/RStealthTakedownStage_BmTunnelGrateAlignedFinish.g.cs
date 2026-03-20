@@ -71,9 +71,9 @@ public partial class RStealthTakedownStage_BmTunnelGrateAlignedFinish : BmSDK.Bm
     /// <summary>
     /// ObjectProperty: Attacker
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Attacker
+    public unsafe BmSDK.BmGame.RPawnPlayer Attacker
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 }

@@ -36,45 +36,45 @@ public partial class RCityBlockThreatAsset : BmSDK.BmGame.RConfig, BmSDK.IGameOb
     /// <summary>
     /// ByteProperty: CityBlock
     /// </summary>
-    public unsafe byte CityBlock
+    public unsafe BmSDK.BmGame.RGameInfo.EDistrict CityBlock
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: CheckpointsInZone
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>> CheckpointsInZone
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCheckpointAsset> CheckpointsInZone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCheckpointAsset>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// ArrayProperty: WatchtowersInZone
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> WatchtowersInZone
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RWatchtowerAsset> WatchtowersInZone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RWatchtowerAsset>>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// ArrayProperty: DronesInZone
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> DronesInZone
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RAerialDroneAsset> DronesInZone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAerialDroneAsset>>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// ArrayProperty: BeaconsInZone
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BeaconsInZone
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBeaconAsset> BeaconsInZone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBeaconAsset>>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RCharacter_Thug : BmSDK.BmGame.RCharacter, BmSDK.IGameObjec
     /// <summary>
     /// ObjectProperty: GunRelaxedSpeechSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GunRelaxedSpeechSet
+    public unsafe BmSDK.Engine.AnimSet GunRelaxedSpeechSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

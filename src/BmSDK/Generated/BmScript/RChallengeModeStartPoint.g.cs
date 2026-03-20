@@ -73,8 +73,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool bCompletionFailed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool bAbortChallenge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool bRestartChallenge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool DoFadeOnSuccess
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool DoFadeOnFail
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool DoFadeOnAbort
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStart
     /// </summary>
     public unsafe bool DoFadeOnRestart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1512); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1512); }
     }
 
     /// <summary>

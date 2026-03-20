@@ -36,9 +36,9 @@ public partial class ParticleModuleColor_Seeded : BmSDK.Engine.ParticleModuleCol
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleColor.StartColor RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleColor.StartColor>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 }

@@ -36,18 +36,18 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Coordinates
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: SceneTextureType
     /// </summary>
-    public unsafe byte SceneTextureType
+    public unsafe BmSDK.Engine.MaterialExpressionSceneTexture.ESceneTextureType SceneTextureType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSceneTexture.ESceneTextureType>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
@@ -56,7 +56,7 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe bool ScreenAlign
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RSeqAct_WaitForDroneCommentaryToFinish : BmSDK.Engine.SeqAc
     /// <summary>
     /// ObjectProperty: DialogueType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueType
+    public unsafe BmSDK.Engine.AkDialogueType DialogueType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueType>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

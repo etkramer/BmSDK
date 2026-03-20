@@ -38,7 +38,7 @@ public partial class LevelStreamingAlwaysLoaded : BmSDK.Engine.LevelStreaming, B
     /// </summary>
     public unsafe bool bIsProceduralBuildingLODLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 284); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 284); }
     }
 }

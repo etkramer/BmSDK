@@ -82,8 +82,8 @@ public partial class RBatmobileTunnelVolume : BmSDK.BmGame.RBatmobileForceVolume
     /// </summary>
     public unsafe bool BatmobileUseIndoorLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RBatmobileTunnelVolume : BmSDK.BmGame.RBatmobileForceVolume
     /// </summary>
     public unsafe bool NpcVehicleUseIndoorLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
     }
 
     /// <summary>
@@ -100,7 +100,7 @@ public partial class RBatmobileTunnelVolume : BmSDK.BmGame.RBatmobileForceVolume
     /// </summary>
     public unsafe bool CameraFollowsCarForLoopTheLoop
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 800); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 800); }
     }
 }

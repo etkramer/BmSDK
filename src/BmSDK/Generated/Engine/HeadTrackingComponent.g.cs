@@ -36,9 +36,9 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// ArrayProperty: TrackControllerName
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>> TrackControllerName
+    public unsafe BmSDK.TArray<BmSDK.FName> TrackControllerName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
@@ -56,8 +56,8 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// </summary>
     public unsafe bool bDisableBeyondLimit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
@@ -90,18 +90,18 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// ArrayProperty: ActorClassesToLookAt
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> ActorClassesToLookAt
+    public unsafe BmSDK.TArray<BmSDK.Class> ActorClassesToLookAt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// ArrayProperty: TargetBoneNames
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> TargetBoneNames
+    public unsafe BmSDK.TArray<BmSDK.FName> TargetBoneNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
@@ -117,36 +117,36 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// ComponentProperty: SkeletalMeshComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletalMeshComp
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 
     /// <summary>
     /// ArrayProperty: TrackControls
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT TrackControls
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkelControlLookAt> TrackControls
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkelControlLookAt>>(Ptr + 272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
     /// <summary>
     /// StructProperty: RootMeshLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RootMeshLocation
+    public unsafe System.Numerics.Vector3 RootMeshLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
     /// <summary>
     /// StructProperty: RootMeshRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RootMeshRotation
+    public unsafe BmSDK.Rotator RootMeshRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 }

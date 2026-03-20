@@ -71,54 +71,54 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// ObjectProperty: Casualty
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Casualty
+    public unsafe BmSDK.BmGame.RPawnVillain Casualty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
     /// <summary>
     /// ObjectProperty: pawnInWay
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT pawnInWay
+    public unsafe BmSDK.BmGame.RBMPawnAI pawnInWay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 
     /// <summary>
     /// ObjectProperty: parentAEC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT parentAEC
+    public unsafe BmSDK.BmGame.RAEC_Casualty_Sub_Medic parentAEC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Casualty_Sub_Medic>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 
     /// <summary>
     /// ObjectProperty: groupParent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT groupParent
+    public unsafe BmSDK.BmGame.RAEC_Casualty_GroupCheckCas groupParent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Casualty_GroupCheckCas>(Ptr + 888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
     }
 
     /// <summary>
     /// ObjectProperty: casParent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT casParent
+    public unsafe BmSDK.BmGame.RAEC_Casualty casParent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Casualty>(Ptr + 896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
     }
 
     /// <summary>
     /// ObjectProperty: thugInTheWayAEC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT thugInTheWayAEC
+    public unsafe BmSDK.BmGame.RAEC_Casualty_Sub_Centre thugInTheWayAEC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Casualty_Sub_Centre>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 
@@ -127,8 +127,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bStartedIntroBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bFollowOnBarkStarted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bFollowOnBarkFinished
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bDoneConsoleFinishedNotify
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bDonePushFinishedNotify
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bStartedRevivingBark
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bRevivingBarkFinished
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bInPreExit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bAssignedCasualty
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bIsExiting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool bTriggeredRecoveryLine
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// </summary>
     public unsafe bool medicOnCasLeft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 912); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 912); }
     }
 
     /// <summary>
@@ -278,90 +278,90 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// ByteProperty: dialogueState
     /// </summary>
-    public unsafe byte dialogueState
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.eReviveCasDialogueState dialogueState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.eReviveCasDialogueState>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 
     /// <summary>
     /// ByteProperty: thugInWayAnimType
     /// </summary>
-    public unsafe byte thugInWayAnimType
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.eThugInWayAnimType thugInWayAnimType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 953); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.eThugInWayAnimType>(Ptr + 953); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 953); }
     }
 
     /// <summary>
     /// StructProperty: InAnimNames
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InAnimNames
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
     }
 
     /// <summary>
     /// StructProperty: InAnimNames_RightTurn
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InAnimNames_RightTurn
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_RightTurn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 
     /// <summary>
     /// StructProperty: InAnimNames_LeftTurn
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InAnimNames_LeftTurn
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_LeftTurn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
     /// <summary>
     /// StructProperty: JabAnimNames
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT JabAnimNames
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames JabAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
 
     /// <summary>
     /// StructProperty: IdleAnimNames
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT IdleAnimNames
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames IdleAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
     }
 
     /// <summary>
     /// StructProperty: OutAnimNames_Medic
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OutAnimNames_Medic
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Medic
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
     }
 
     /// <summary>
     /// StructProperty: OutAnimNames_Cas
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OutAnimNames_Cas
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
     }
 
     /// <summary>
     /// StructProperty: OutAnimNames_Cas_Unarmed
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OutAnimNames_Cas_Unarmed
+    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas_Unarmed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
     }
 
@@ -482,45 +482,45 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: medicTransID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT medicTransID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId medicTransID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
     }
 
     /// <summary>
     /// StructProperty: thugInWayTransID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT thugInWayTransID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId thugInWayTransID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
     }
 
     /// <summary>
     /// StructProperty: transitionStartLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT transitionStartLocation
+    public unsafe System.Numerics.Vector3 transitionStartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
     }
 
     /// <summary>
     /// StructProperty: crouchLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT crouchLocation
+    public unsafe System.Numerics.Vector3 crouchLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
     }
 
     /// <summary>
     /// StructProperty: crouchRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT crouchRotation
+    public unsafe BmSDK.Rotator crouchRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
     }
 

@@ -36,9 +36,9 @@ public partial class RockHeightMapComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneInfo
+    public unsafe System.IntPtr SceneInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 }

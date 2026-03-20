@@ -71,270 +71,270 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// ObjectProperty: TakedownConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TakedownConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation TakedownConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10340); }
     }
 
     /// <summary>
     /// ObjectProperty: BatConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation BatConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10348); }
     }
 
     /// <summary>
     /// ObjectProperty: NightwingDamageConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NightwingDamageConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation NightwingDamageConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10356); }
     }
 
     /// <summary>
     /// ObjectProperty: CounterConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CounterConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation CounterConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10364); }
     }
 
     /// <summary>
     /// ObjectProperty: CounterNightwingConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CounterNightwingConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation CounterNightwingConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10372); }
     }
 
     /// <summary>
     /// ObjectProperty: GrabbedConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrabbedConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation GrabbedConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10380); }
     }
 
     /// <summary>
     /// ObjectProperty: AttackConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AttackConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation AttackConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10388); }
     }
 
     /// <summary>
     /// ObjectProperty: CopApproachJackBoxConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CopApproachJackBoxConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation CopApproachJackBoxConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10396); }
     }
 
     /// <summary>
     /// ObjectProperty: PredIdleConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PredIdleConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PredIdleConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10404); }
     }
 
     /// <summary>
     /// ObjectProperty: IdleConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT IdleConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation IdleConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10412); }
     }
 
     /// <summary>
     /// ObjectProperty: PsychoStartIdleConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PsychoStartIdleConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PsychoStartIdleConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10420); }
     }
 
     /// <summary>
     /// ObjectProperty: PsychoEndIdleConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PsychoEndIdleConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PsychoEndIdleConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10428); }
     }
 
     /// <summary>
     /// ObjectProperty: InvisibleConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InvisibleConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation InvisibleConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10436); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemIntroConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemIntroConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation MayhemIntroConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10444); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemTakedownConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemTakedownConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation MayhemTakedownConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10452); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemOutroConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemOutroConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation MayhemOutroConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10460); }
     }
 
     /// <summary>
     /// ObjectProperty: PlantConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlantConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PlantConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 10468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10468); }
     }
 
     /// <summary>
     /// ObjectProperty: StrikeContactEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StrikeContactEvent
+    public unsafe BmSDK.Engine.AkEvent StrikeContactEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10476); }
     }
 
     /// <summary>
     /// ObjectProperty: StrikeRiotShieldContactEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StrikeRiotShieldContactEvent
+    public unsafe BmSDK.Engine.AkEvent StrikeRiotShieldContactEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10484); }
     }
 
     /// <summary>
     /// ObjectProperty: DamageStunStickEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageStunStickEvent
+    public unsafe BmSDK.Engine.AkEvent DamageStunStickEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10492); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemIntroEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemIntroEvent
+    public unsafe BmSDK.Engine.AkEvent MayhemIntroEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10500); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemOutroEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemOutroEvent
+    public unsafe BmSDK.Engine.AkEvent MayhemOutroEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10508); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10508); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemResetEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemResetEvent
+    public unsafe BmSDK.Engine.AkEvent MayhemResetEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 10516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10516); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemPostProcess
     /// </summary>
-    public unsafe BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.ReminderConversations MayhemPostProcess
+    public unsafe BmSDK.BmGame.RViewPostProcess MayhemPostProcess
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.ReminderConversations>(Ptr + 10524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RViewPostProcess>(Ptr + 10524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10524); }
     }
 
     /// <summary>
     /// ObjectProperty: MayhemMaskMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MayhemMaskMaterial
+    public unsafe BmSDK.Engine.MaterialInterface MayhemMaskMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 10532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10532); }
     }
 
     /// <summary>
     /// ArrayProperty: ReminderConversations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>>> ReminderConversations
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueConversation> ReminderConversations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>>>>(Ptr + 10540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueConversation>>(Ptr + 10540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10540); }
     }
 
     /// <summary>
     /// ArrayProperty: ImportantIdleConversations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>> ImportantIdleConversations
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueConversation> ImportantIdleConversations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>>>(Ptr + 10556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueConversation>>(Ptr + 10556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10556); }
     }
 
     /// <summary>
     /// ArrayProperty: LocationPenguinIdleConversations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>> LocationPenguinIdleConversations
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueConversation> LocationPenguinIdleConversations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>>(Ptr + 10572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueConversation>>(Ptr + 10572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10572); }
     }
 
     /// <summary>
     /// ArrayProperty: LocationPsychoIdleConversations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>> LocationPsychoIdleConversations
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueConversation> LocationPsychoIdleConversations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>>(Ptr + 10588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueConversation>>(Ptr + 10588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10588); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentVisibility
     /// </summary>
-    public unsafe byte CurrentVisibility
+    public unsafe BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.EHarleyVisibilityState CurrentVisibility
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 10604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MPawnPlayerHarleyQuinnBase.EHarleyVisibilityState>(Ptr + 10604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10604); }
     }
 
@@ -370,8 +370,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool bDebugHarleyVisibility
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -379,8 +379,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool bDebugHarleyMayhemMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -388,8 +388,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool bVulnerableToGuns
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -397,8 +397,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool IsInJITBTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -406,8 +406,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool IsJITBTutorialCompleted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -415,8 +415,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool MayhemOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -424,8 +424,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool bUpdateMayhemMeterBounds
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -433,8 +433,8 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// </summary>
     public unsafe bool FirstMayhemModeInstructionShowned
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10620); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10620); }
     }
 
     /// <summary>
@@ -512,9 +512,9 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     /// <summary>
     /// StructProperty: LastTransitionId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastTransitionId
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LastTransitionId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 10656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10656); }
     }
 

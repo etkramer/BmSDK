@@ -71,18 +71,18 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// ObjectProperty: Hostage
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Hostage
+    public unsafe BmSDK.BmGame.RPawnFriendly Hostage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnFriendly>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
     /// <summary>
     /// ObjectProperty: PC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
+    public unsafe BmSDK.BmGame.RPlayerController PC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 
@@ -91,8 +91,8 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// </summary>
     public unsafe bool bTriggeredAnim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// </summary>
     public unsafe bool bWaitingForSlowDown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// </summary>
     public unsafe bool bNotifiedDeath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 880); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 880); }
     }
 
     /// <summary>
@@ -125,9 +125,9 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
     /// <summary>
     /// StructProperty: KillAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT KillAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId KillAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
     }
 }

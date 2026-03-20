@@ -36,45 +36,45 @@ public partial class ParticleModuleSpawn : BmSDK.Engine.ParticleModuleSpawnBase,
     /// <summary>
     /// StructProperty: Rate
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleSpawn.RateScale Rate
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Rate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleSpawn.RateScale>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: RateScale
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleSpawn.BurstList RateScale
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RateScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleSpawn.BurstList>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
     /// ByteProperty: ParticleBurstMethod
     /// </summary>
-    public unsafe byte ParticleBurstMethod
+    public unsafe BmSDK.Engine.ParticleEmitter.EParticleBurstMethod ParticleBurstMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleEmitter.EParticleBurstMethod>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ArrayProperty: BurstList
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BurstList
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleEmitter.FParticleBurst> BurstList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleEmitter.FParticleBurst>>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: ParticleAudio
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ParticleAudio
+    public unsafe BmSDK.Engine.AkWwise.FAkParticleEvents ParticleAudio
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkParticleEvents>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 }

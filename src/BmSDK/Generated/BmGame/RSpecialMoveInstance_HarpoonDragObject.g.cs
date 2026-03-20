@@ -91,8 +91,8 @@ public partial class RSpecialMoveInstance_HarpoonDragObject : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe bool bCanPull
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 924) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 924); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 924); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 924) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 924); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 924); }
     }
 
     /// <summary>
@@ -116,18 +116,18 @@ public partial class RSpecialMoveInstance_HarpoonDragObject : BmSDK.BmGame.RSpec
     /// <summary>
     /// StructProperty: RopeTensionSoundHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeTensionSoundHandle
+    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentRopeTensionSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentRopeTensionSound
+    public unsafe BmSDK.Engine.AkEvent CurrentRopeTensionSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 

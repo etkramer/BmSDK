@@ -36,18 +36,18 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// ObjectProperty: CombatManager
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatManager
+    public unsafe BmSDK.BmGame.RVehicleCombatManager CombatManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleCombatManager>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
     /// ObjectProperty: OldBehaviour
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OldBehaviour
+    public unsafe BmSDK.BmGame.RVehicleBehaviour OldBehaviour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
@@ -128,8 +128,8 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// </summary>
     public unsafe bool ReachedDeadEnd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// </summary>
     public unsafe bool ChosenAttackLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
     }
 
     /// <summary>
@@ -146,16 +146,16 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// </summary>
     public unsafe bool DisableDeathBarks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 656); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 656); }
     }
 
     /// <summary>
     /// StructProperty: AttackLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttackLocation
+    public unsafe System.Numerics.Vector3 AttackLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
     }
 
@@ -171,9 +171,9 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// StructProperty: SectorPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SectorPosition
+    public unsafe System.Numerics.Vector3 SectorPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
@@ -198,9 +198,9 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// ByteProperty: CurrentPhase
     /// </summary>
-    public unsafe byte CurrentPhase
+    public unsafe BmSDK.BmGame.RVehicleBehaviour_FlyingStrafe.EFlyingStrafeBehaviourPhase CurrentPhase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_FlyingStrafe.EFlyingStrafeBehaviourPhase>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

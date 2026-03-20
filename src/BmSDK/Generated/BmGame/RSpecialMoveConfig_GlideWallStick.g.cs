@@ -36,18 +36,18 @@ public partial class RSpecialMoveConfig_GlideWallStick : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// ObjectProperty: GrappleFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
     /// ObjectProperty: KickOffGrappleFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KickOffGrappleFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig KickOffGrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
@@ -56,7 +56,7 @@ public partial class RSpecialMoveConfig_GlideWallStick : BmSDK.BmGame.RSpecialMo
     /// </summary>
     public unsafe bool WallRunMove
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 472); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 472); }
     }
 }

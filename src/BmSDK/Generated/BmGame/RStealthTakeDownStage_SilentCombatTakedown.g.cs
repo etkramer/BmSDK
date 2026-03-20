@@ -73,25 +73,25 @@ public partial class RStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame.R
     /// </summary>
     public unsafe bool bUseEnvironment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
     /// StructProperty: EnvironmentRefLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EnvironmentRefLocation
+    public unsafe System.Numerics.Vector3 EnvironmentRefLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
     }
 
     /// <summary>
     /// StructProperty: EnvironmentRefRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EnvironmentRefRotation
+    public unsafe BmSDK.Rotator EnvironmentRefRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1680); }
     }
 }

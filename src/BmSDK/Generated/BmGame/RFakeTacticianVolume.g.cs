@@ -71,9 +71,9 @@ public partial class RFakeTacticianVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// ComponentProperty: PlayerInteractions
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerInteractions
+    public unsafe BmSDK.Engine.RInteractionComponent PlayerInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

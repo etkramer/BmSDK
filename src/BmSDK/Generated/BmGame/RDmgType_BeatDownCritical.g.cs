@@ -38,8 +38,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bAddScore
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bCanSlowMo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bIncCombo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bAdvanceToFreeFlow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bEnableMotionBlur
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// </summary>
     public unsafe bool bCanBreakDestructables
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
     }
 
     /// <summary>
@@ -108,18 +108,18 @@ public partial class RDmgType_BeatDownCritical : BmSDK.BmGame.RDmgType_BeatDown,
     /// <summary>
     /// ByteProperty: StrikeStrength
     /// </summary>
-    public unsafe byte StrikeStrength
+    public unsafe BmSDK.BmGame.RGameInfo.StrikeStrength StrikeStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.StrikeStrength>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
     /// ByteProperty: StrikeRange
     /// </summary>
-    public unsafe byte StrikeRange
+    public unsafe BmSDK.BmGame.RGameInfo.StrikeRange StrikeRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 229); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.StrikeRange>(Ptr + 229); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 229); }
     }
 

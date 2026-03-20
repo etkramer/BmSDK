@@ -36,9 +36,9 @@ public partial class SeqAct_SetMaterial : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: NewMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NewMaterial
+    public unsafe BmSDK.Engine.MaterialInterface NewMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

@@ -71,18 +71,18 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// ComponentProperty: HandDryIce
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HandDryIce
+    public unsafe BmSDK.Engine.ParticleSystemComponent HandDryIce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2676); }
     }
 
     /// <summary>
     /// StructProperty: HandDryIceOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HandDryIceOffset
+    public unsafe System.Numerics.Vector3 HandDryIceOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2684); }
     }
 }

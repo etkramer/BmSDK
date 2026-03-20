@@ -36,9 +36,9 @@ public partial class AnimMetaData_SkelControlKeyFrame : BmSDK.Engine.AnimMetaDat
     /// <summary>
     /// ArrayProperty: KeyFrames
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> KeyFrames
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSequence.FTimeModifier> KeyFrames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSequence.FTimeModifier>>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

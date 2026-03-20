@@ -45,45 +45,45 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// ArrayProperty: Weight
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionDecodeMask.BlendFrom> Weight
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionDecodeMask.FWeightInput> Weight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionDecodeMask.BlendFrom>>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionDecodeMask.FWeightInput>>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: Mask
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionDecodeMask.BlendFrom Mask
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Mask
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDecodeMask.BlendFrom>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
     /// StructProperty: BlendFrom
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionDecodeMask.BlendTo BlendFrom
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendFrom
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDecodeMask.BlendTo>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// StructProperty: BlendTo
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc BlendTo
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendTo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>
     /// ByteProperty: DecodeBlendType
     /// </summary>
-    public unsafe byte DecodeBlendType
+    public unsafe BmSDK.Engine.MaterialExpressionDecodeMask.EDecodeBlendType DecodeBlendType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDecodeMask.EDecodeBlendType>(Ptr + 348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
     }
 }

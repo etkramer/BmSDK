@@ -45,18 +45,18 @@ public partial class ApexAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ApexComponents
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ApexComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexComponentBase> ApexComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexComponentBase>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ArrayProperty: NamedReferences
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> NamedReferences
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexAsset> NamedReferences
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexAsset>>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
@@ -90,18 +90,18 @@ public partial class ApexAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MApexAsset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MApexAsset
+    public unsafe System.IntPtr MApexAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// ArrayProperty: Materials
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Materials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> Materials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 }

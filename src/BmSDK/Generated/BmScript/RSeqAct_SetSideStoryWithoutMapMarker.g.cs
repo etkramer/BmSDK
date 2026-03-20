@@ -36,18 +36,18 @@ public partial class RSeqAct_SetSideStoryWithoutMapMarker : BmSDK.Engine.Sequenc
     /// <summary>
     /// ByteProperty: TheSideStory
     /// </summary>
-    public unsafe byte TheSideStory
+    public unsafe BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum TheSideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: OnlyIfCurrentSideStory
     /// </summary>
-    public unsafe byte OnlyIfCurrentSideStory
+    public unsafe BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum OnlyIfCurrentSideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSideStoryManager.ActiveSideStoryEnum>(Ptr + 353); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 }

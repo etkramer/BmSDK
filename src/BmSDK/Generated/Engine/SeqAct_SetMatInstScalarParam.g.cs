@@ -36,9 +36,9 @@ public partial class SeqAct_SetMatInstScalarParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// ObjectProperty: MatInst
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MatInst
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MatInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

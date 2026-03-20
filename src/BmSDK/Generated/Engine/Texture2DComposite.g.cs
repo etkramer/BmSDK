@@ -36,9 +36,9 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// ArrayProperty: SourceRegions
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> SourceRegions
+    public unsafe BmSDK.TArray<BmSDK.Engine.Texture2DComposite.FSourceTexture2DRegion> SourceRegions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Texture2DComposite.FSourceTexture2DRegion>>(Ptr + 308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
     }
 
@@ -132,9 +132,9 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
         /// <summary>
         /// ObjectProperty: Texture2D
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture2D
+        public unsafe BmSDK.Engine.Texture2D Texture2D
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
     }

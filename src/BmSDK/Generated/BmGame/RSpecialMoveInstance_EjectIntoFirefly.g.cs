@@ -71,18 +71,18 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// ObjectProperty: MyConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyConfig
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig_EjectIntoFirefly MyConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_EjectIntoFirefly>(Ptr + 876); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
     }
 
     /// <summary>
     /// ObjectProperty: FF
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FF
+    public unsafe BmSDK.BmGame.RPawnBossFireflyBase FF
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossFireflyBase>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
 
@@ -100,8 +100,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bExiting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bPunchQueued
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bTriggeredEscapeDialogue
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bDrawLandingDbg
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bNoMorePunches
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// </summary>
     public unsafe bool bLanded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 896); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 896); }
     }
 
     /// <summary>
@@ -161,18 +161,18 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: ReferenceLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ReferenceLocation
+    public unsafe System.Numerics.Vector3 ReferenceLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 
     /// <summary>
     /// StructProperty: ReferenceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ReferenceRotation
+    public unsafe BmSDK.Rotator ReferenceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
 
@@ -188,18 +188,18 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: beatdownRefLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT beatdownRefLoc
+    public unsafe System.Numerics.Vector3 beatdownRefLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 936); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
     }
 
     /// <summary>
     /// StructProperty: beatdownRefRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT beatdownRefRot
+    public unsafe BmSDK.Rotator beatdownRefRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
 
@@ -224,9 +224,9 @@ public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: bmToFF2d
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT bmToFF2d
+    public unsafe System.Numerics.Vector3 bmToFF2d
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 

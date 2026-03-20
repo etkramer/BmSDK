@@ -71,9 +71,9 @@ public partial class RAEC_ShootGelMine_Solo : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// ObjectProperty: TargetMine
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetMine
+    public unsafe BmSDK.BmGame.RExplosiveGooMine TargetMine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RExplosiveGooMine>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

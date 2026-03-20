@@ -71,9 +71,9 @@ public partial class RIncendiaryGrenadeCharge_Base : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// ByteProperty: currentAudioState
     /// </summary>
-    public unsafe byte currentAudioState
+    public unsafe BmSDK.BmGame.RIncendiaryGrenadeCharge_Base.eIncendiaryGrenadeState currentAudioState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RIncendiaryGrenadeCharge_Base.eIncendiaryGrenadeState>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
@@ -98,18 +98,18 @@ public partial class RIncendiaryGrenadeCharge_Base : BmSDK.Engine.Actor, BmSDK.I
     /// <summary>
     /// ObjectProperty: StartGasSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StartGasSound
+    public unsafe BmSDK.Engine.AkEvent StartGasSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// ObjectProperty: StartFireSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StartFireSound
+    public unsafe BmSDK.Engine.AkEvent StartFireSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
@@ -127,8 +127,8 @@ public partial class RIncendiaryGrenadeCharge_Base : BmSDK.Engine.Actor, BmSDK.I
     /// </summary>
     public unsafe bool bFireActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
     }
 
     /// <summary>

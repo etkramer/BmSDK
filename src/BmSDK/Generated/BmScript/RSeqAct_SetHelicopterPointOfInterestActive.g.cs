@@ -36,9 +36,9 @@ public partial class RSeqAct_SetHelicopterPointOfInterestActive : BmSDK.Engine.S
     /// <summary>
     /// ArrayProperty: PointsOfInterest
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> PointsOfInterest
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHelicopterPointOfInterest> PointsOfInterest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHelicopterPointOfInterest>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

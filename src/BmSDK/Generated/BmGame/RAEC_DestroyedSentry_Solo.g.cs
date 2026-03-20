@@ -80,9 +80,9 @@ public partial class RAEC_DestroyedSentry_Solo : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// ObjectProperty: DestroyedSentry
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestroyedSentry
+    public unsafe BmSDK.BmGame.RSentryGunBase DestroyedSentry
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunBase>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 }

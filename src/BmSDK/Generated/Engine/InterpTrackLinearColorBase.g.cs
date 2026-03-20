@@ -36,9 +36,9 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
     /// <summary>
     /// StructProperty: LinearColorTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrack.SubTracks LinearColorTrack
+    public unsafe BmSDK.GameObject.FInterpCurveLinearColor LinearColorTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveLinearColor>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 

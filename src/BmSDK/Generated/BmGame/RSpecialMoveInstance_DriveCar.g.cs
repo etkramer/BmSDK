@@ -73,8 +73,8 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// </summary>
     public unsafe bool bSwitchedControl
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// </summary>
     public unsafe bool bFiredEvents
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// </summary>
     public unsafe bool CockpitOpen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// </summary>
     public unsafe bool bTurnedOffRagdoll
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// </summary>
     public unsafe bool bInCockpit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -143,9 +143,9 @@ public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// ArrayProperty: SteerNoisePeriods
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> SteerNoisePeriods
+    public unsafe BmSDK.TArray<float> SteerNoisePeriods
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 1008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
     }
 }

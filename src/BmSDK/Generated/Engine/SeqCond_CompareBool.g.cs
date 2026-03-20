@@ -38,7 +38,7 @@ public partial class SeqCond_CompareBool : BmSDK.Engine.SequenceCondition, BmSDK
     /// </summary>
     public unsafe bool bResult
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 }

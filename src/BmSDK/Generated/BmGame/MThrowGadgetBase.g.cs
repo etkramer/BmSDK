@@ -89,159 +89,159 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// ClassProperty: DamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageType
+    public unsafe BmSDK.Class DamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// ClassProperty: ComboCombatClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ComboCombatClass
+    public unsafe BmSDK.Class ComboCombatClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTarget
+    public unsafe BmSDK.Engine.Actor CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
     }
 
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimLocation
+    public unsafe System.Numerics.Vector3 AimLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 
     /// <summary>
     /// StructProperty: AimDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimDirection
+    public unsafe System.Numerics.Vector3 AimDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
     }
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_0
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_1
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2140); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_2
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_3
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2172); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_4
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2188); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_5
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_6
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_7
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_8
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2252); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_9
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_10
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2284); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_11
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2300); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_12
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2316); }
     }
 
     /// <summary>
     /// ByteProperty: LastMirrorChoice
     /// </summary>
-    public unsafe byte LastMirrorChoice
+    public unsafe BmSDK.BmGame.RAnimUtil.EMirrorChoice LastMirrorChoice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.EMirrorChoice>(Ptr + 2332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2332); }
     }
 
@@ -250,8 +250,8 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowMovementExit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2336); }
     }
 
     /// <summary>
@@ -259,7 +259,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bShouldSpawmAirStrike
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2336); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2336); }
     }
 }

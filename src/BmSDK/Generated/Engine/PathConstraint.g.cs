@@ -45,9 +45,9 @@ public partial class PathConstraint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: NextConstraint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextConstraint
+    public unsafe BmSDK.Engine.PathConstraint NextConstraint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PathConstraint>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

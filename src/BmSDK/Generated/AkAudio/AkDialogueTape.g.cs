@@ -36,18 +36,18 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: Conversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Conversation
+    public unsafe BmSDK.Engine.AkDialogueConversation Conversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ObjectProperty: Event
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Event
+    public unsafe BmSDK.Engine.AkEvent Event
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -63,36 +63,36 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EventHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EventHandle
+    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle EventHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// StructProperty: SpeechOpts
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SpeechOpts
+    public unsafe BmSDK.Engine.AkDialogue.FAkSpeechOptions SpeechOpts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
     /// ByteProperty: TapeState
     /// </summary>
-    public unsafe byte TapeState
+    public unsafe BmSDK.AkAudio.AkDialogueTape.EAkDialogueTapeState TapeState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkDialogueTape.EAkDialogueTapeState>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// StructProperty: WwiseSourceId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WwiseSourceId
+    public unsafe ulong WwiseSourceId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 

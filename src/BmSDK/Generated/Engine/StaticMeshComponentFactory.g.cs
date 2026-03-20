@@ -36,9 +36,9 @@ public partial class StaticMeshComponentFactory : BmSDK.Engine.MeshComponentFact
     /// <summary>
     /// ObjectProperty: StaticMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
+    public unsafe BmSDK.Engine.StaticMesh StaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

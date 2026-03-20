@@ -73,8 +73,8 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// </summary>
     public unsafe bool bGrabbedWeaponLeft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// </summary>
     public unsafe bool bGrabbedWeaponRight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// </summary>
     public unsafe bool bHasWeaponIH
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// </summary>
     public unsafe bool bCanGrabWeapon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
     }
 
     /// <summary>
@@ -109,34 +109,34 @@ public partial class RCombatMove_BatmanDropWeapon : BmSDK.BmGame.RCombatMove_Bat
     /// </summary>
     public unsafe bool bDropWeaponOnExit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 836); }
     }
 
     /// <summary>
     /// ObjectProperty: TargetWeapon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetWeapon
+    public unsafe BmSDK.BmGame.RBMWeapon TargetWeapon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMWeapon>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
     /// <summary>
     /// ObjectProperty: DroppedWeapon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DroppedWeapon
+    public unsafe BmSDK.BmGame.RBMCombatThrownObject DroppedWeapon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatThrownObject>(Ptr + 848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
     }
 
     /// <summary>
     /// ObjectProperty: WeaponToPickup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WeaponToPickup
+    public unsafe BmSDK.BmGame.RBMCombatThrownObject WeaponToPickup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatThrownObject>(Ptr + 856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
     }
 

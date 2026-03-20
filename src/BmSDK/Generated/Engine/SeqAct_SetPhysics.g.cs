@@ -36,9 +36,9 @@ public partial class SeqAct_SetPhysics : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// ByteProperty: newPhysics
     /// </summary>
-    public unsafe byte newPhysics
+    public unsafe BmSDK.Engine.Actor.EPhysics newPhysics
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.EPhysics>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -47,8 +47,8 @@ public partial class SeqAct_SetPhysics : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// </summary>
     public unsafe bool bWakePhysics
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class SeqAct_SetPhysics : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// </summary>
     public unsafe bool bSleepPhysics
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 }

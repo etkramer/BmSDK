@@ -73,148 +73,148 @@ public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseBehindBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2068) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2068); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2068); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2068) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2068); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2068); }
     }
 
     /// <summary>
     /// StructProperty: ForcedBackUseRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForcedBackUseRotation
+    public unsafe BmSDK.Rotator ForcedBackUseRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
     }
 
     /// <summary>
     /// StructProperty: AimPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimPosition
+    public unsafe System.Numerics.Vector3 AimPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
     /// <summary>
     /// StructProperty: AimVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimVelocity
+    public unsafe System.Numerics.Vector3 AimVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2096); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2096); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2096); }
     }
 
     /// <summary>
     /// StructProperty: WorldAimPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorldAimPosition
+    public unsafe System.Numerics.Vector3 WorldAimPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2108); }
     }
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_0
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_1
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_2
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2152); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_3
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2168); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_4
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2184); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_5
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_6
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2216); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_7
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_8
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2248); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_9
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2264); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_10
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_11
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2296); }
     }
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.TutorialText ThrowDirectionTypes_12
+    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.TutorialText>(Ptr + 2312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2312); }
     }
 }

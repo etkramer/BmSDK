@@ -36,9 +36,9 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
     /// <summary>
     /// StructProperty: MoveOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveOffset
+    public unsafe System.Numerics.Vector3 MoveOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 

@@ -80,18 +80,18 @@ public partial class RCinematicCameraActor : BmSDK.BmGame.RAnimatedCameraActor, 
     /// <summary>
     /// StructProperty: SavedCameraRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SavedCameraRot
+    public unsafe BmSDK.Rotator SavedCameraRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 
     /// <summary>
     /// StructProperty: SavedCameraLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SavedCameraLoc
+    public unsafe System.Numerics.Vector3 SavedCameraLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 
@@ -172,8 +172,8 @@ public partial class RCinematicCameraActor : BmSDK.BmGame.RAnimatedCameraActor, 
     /// </summary>
     public unsafe bool bDisableStickLook
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1340); }
     }
 
     /// <summary>
@@ -181,7 +181,7 @@ public partial class RCinematicCameraActor : BmSDK.BmGame.RAnimatedCameraActor, 
     /// </summary>
     public unsafe bool bExposureResetTempVal
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1340); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1340); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1340); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RRiotPointHolder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: SavedPoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> SavedPoints
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> SavedPoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 

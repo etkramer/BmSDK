@@ -36,9 +36,9 @@ public partial class RSpecialMoveConfig_SwingToChutePoint : BmSDK.BmGame.RSpecia
     /// <summary>
     /// ObjectProperty: ChuteTransitionMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChuteTransitionMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ChuteTransitionMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
     }
 }

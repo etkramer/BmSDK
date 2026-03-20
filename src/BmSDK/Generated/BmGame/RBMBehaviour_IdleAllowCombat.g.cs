@@ -54,9 +54,9 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
     /// <summary>
     /// ObjectProperty: FaceAtTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FaceAtTarget
+    public unsafe BmSDK.Engine.Actor FaceAtTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
@@ -65,8 +65,8 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
     /// </summary>
     public unsafe bool bLookAtPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
     /// </summary>
     public unsafe bool bIgnoreLookAtPlayerOverride
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
     /// </summary>
     public unsafe bool bStartCombatOnLOS
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
     }
 
     /// <summary>
@@ -92,25 +92,25 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
     /// </summary>
     public unsafe bool bCombatTriggered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 604); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 604); }
     }
 
     /// <summary>
     /// ByteProperty: Pose
     /// </summary>
-    public unsafe byte Pose
+    public unsafe BmSDK.BmGame.RBMBehaviour_Idle.CommonPoses Pose
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Idle.CommonPoses>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
     /// ByteProperty: Pose_Mirroring
     /// </summary>
-    public unsafe byte Pose_Mirroring
+    public unsafe BmSDK.BmGame.RBMBehaviour_Idle.MirrorState Pose_Mirroring
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 609); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Idle.MirrorState>(Ptr + 609); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 609); }
     }
 

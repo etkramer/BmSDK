@@ -73,8 +73,8 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
     /// </summary>
     public unsafe bool bRecycleScaleToZero
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
     /// </summary>
     public unsafe bool bScalingToZero
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 992); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 992); }
     }
 }

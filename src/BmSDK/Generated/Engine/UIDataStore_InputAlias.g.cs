@@ -36,9 +36,9 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
     /// <summary>
     /// ArrayProperty: InputAliases
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> InputAliases
+    public unsafe BmSDK.TArray<BmSDK.Engine.UIDataStore_InputAlias.FUIDataStoreInputAlias> InputAliases
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.UIDataStore_InputAlias.FUIDataStoreInputAlias>>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
@@ -69,25 +69,25 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
         /// <summary>
         /// StructProperty: PlatformInputKeys
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlatformInputKeys_0
+        public unsafe BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData PlatformInputKeys_0
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
         /// <summary>
         /// StructProperty: PlatformInputKeys
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlatformInputKeys_1
+        public unsafe BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData PlatformInputKeys_1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
         /// <summary>
         /// StructProperty: PlatformInputKeys
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlatformInputKeys_2
+        public unsafe BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData PlatformInputKeys_2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 64); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIDataStore_InputAlias.FUIInputKeyData>(Ptr + 64); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
     }
@@ -101,9 +101,9 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
         /// <summary>
         /// StructProperty: InputKeyData
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InputKeyData
+        public unsafe BmSDK.Engine.UIRoot.FRawInputKeyEventData InputKeyData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FRawInputKeyEventData>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

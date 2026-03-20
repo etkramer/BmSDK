@@ -71,108 +71,108 @@ public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: PlaceOnFloorMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlaceOnFloorMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig PlaceOnFloorMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
     }
 
     /// <summary>
     /// ObjectProperty: PlaceOnFloorInCombatMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlaceOnFloorInCombatMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig PlaceOnFloorInCombatMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// ObjectProperty: ReactToExplosionMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReactToExplosionMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ReactToExplosionMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
     /// <summary>
     /// ObjectProperty: ReactToExplosionMoveL
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReactToExplosionMoveL
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ReactToExplosionMoveL
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
     }
 
     /// <summary>
     /// ObjectProperty: ReactToExplosionMoveR
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReactToExplosionMoveR
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ReactToExplosionMoveR
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 
     /// <summary>
     /// ObjectProperty: ReactToExplosionMoveB
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReactToExplosionMoveB
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ReactToExplosionMoveB
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2108); }
     }
 
     /// <summary>
     /// ObjectProperty: PlacedJackInBox
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlacedJackInBox
+    public unsafe BmSDK.BmGame.MJackInBoxTrapBase PlacedJackInBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MJackInBoxTrapBase>(Ptr + 2116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
     }
 
     /// <summary>
     /// ObjectProperty: ThugReactionAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThugReactionAnimSet
+    public unsafe BmSDK.Engine.AnimSet ThugReactionAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 2124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
     }
 
     /// <summary>
     /// ObjectProperty: PlaceJackInBoxConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlaceJackInBoxConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PlaceJackInBoxConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 2132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2132); }
     }
 
     /// <summary>
     /// ObjectProperty: PlaceJackInBoxWallConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlaceJackInBoxWallConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation PlaceJackInBoxWallConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 2140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2140); }
     }
 
     /// <summary>
     /// ObjectProperty: ExplodeJackInBoxConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplodeJackInBoxConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation ExplodeJackInBoxConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 2148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2148); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentDetonateTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentDetonateTarget
+    public unsafe BmSDK.Engine.Actor CurrentDetonateTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
     }
 
@@ -181,8 +181,8 @@ public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// </summary>
     public unsafe bool bIsJITBTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// </summary>
     public unsafe bool bIdleUseJITB
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
     }
 
     /// <summary>
@@ -199,16 +199,16 @@ public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// </summary>
     public unsafe bool bIgnoreUnequip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2164); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2164); }
     }
 
     /// <summary>
     /// StructProperty: DetonatorTransition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DetonatorTransition
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DetonatorTransition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2168); }
     }
 }

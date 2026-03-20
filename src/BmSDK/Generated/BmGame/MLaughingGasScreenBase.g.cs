@@ -71,9 +71,9 @@ public partial class MLaughingGasScreenBase : BmSDK.BmGame.RSmokeScreen, BmSDK.I
     /// <summary>
     /// ObjectProperty: AnimThugReactionAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimThugReactionAnimSet
+    public unsafe BmSDK.Engine.AnimSet AnimThugReactionAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 }

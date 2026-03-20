@@ -45,9 +45,9 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// StructProperty: CurrentVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentVelocity
+    public unsafe System.Numerics.Vector3 CurrentVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
     }
 
@@ -221,18 +221,18 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// ObjectProperty: FF
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FF
+    public unsafe BmSDK.BmGame.RPawnBossFireflyBase FF
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossFireflyBase>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ObjectProperty: TheMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie TheMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
@@ -430,8 +430,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bombs_CanDoSingleBomb
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -439,8 +439,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bombs_CanDoMultiBomb
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -448,8 +448,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawHistory
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -457,8 +457,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawAccelTo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -466,8 +466,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawAccelToPersistent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -475,8 +475,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawColToggle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -484,8 +484,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawRoute
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -493,8 +493,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawSpans
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -502,8 +502,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawRacingLine
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -511,8 +511,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawDistFromPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -520,8 +520,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawBombs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -529,8 +529,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgDrawRefineParams
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -538,8 +538,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgRefineUseCurrentLoc
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -547,8 +547,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgRefineUseFutureLoc
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -556,8 +556,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bDbgNoBombs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -565,8 +565,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool BMHasLOSToFF
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
@@ -574,16 +574,16 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// </summary>
     public unsafe bool bTakedownStarted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 840); }
     }
 
     /// <summary>
     /// ArrayProperty: bombs_MultiBombFutureTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> bombs_MultiBombFutureTargets
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> bombs_MultiBombFutureTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
     }
 

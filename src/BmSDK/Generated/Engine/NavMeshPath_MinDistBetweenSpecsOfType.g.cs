@@ -45,18 +45,18 @@ public partial class NavMeshPath_MinDistBetweenSpecsOfType : BmSDK.Engine.NavMes
     /// <summary>
     /// StructProperty: InitLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InitLocation
+    public unsafe System.Numerics.Vector3 InitLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// ByteProperty: EdgeType
     /// </summary>
-    public unsafe byte EdgeType
+    public unsafe BmSDK.Engine.Pylon.ENavMeshEdgeType EdgeType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pylon.ENavMeshEdgeType>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 

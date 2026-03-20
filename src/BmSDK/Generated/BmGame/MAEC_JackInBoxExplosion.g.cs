@@ -71,9 +71,9 @@ public partial class MAEC_JackInBoxExplosion : BmSDK.BmGame.RAEC_GelMineExplosio
     /// <summary>
     /// ObjectProperty: ChildPauseGroup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChildPauseGroup
+    public unsafe BmSDK.BmGame.RAEC_GroupPauseAndLook ChildPauseGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_GroupPauseAndLook>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 

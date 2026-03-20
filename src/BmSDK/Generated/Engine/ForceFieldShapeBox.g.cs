@@ -36,9 +36,9 @@ public partial class ForceFieldShapeBox : BmSDK.Engine.ForceFieldShape, BmSDK.IG
     /// <summary>
     /// ComponentProperty: Shape
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Shape
+    public unsafe BmSDK.Engine.DrawBoxComponent Shape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawBoxComponent>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

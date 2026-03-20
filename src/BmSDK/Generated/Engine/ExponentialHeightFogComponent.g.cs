@@ -38,8 +38,8 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// </summary>
     public unsafe bool bEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
     }
 
     /// <summary>
@@ -108,9 +108,9 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// <summary>
     /// StructProperty: OppositeLightColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OppositeLightColor
+    public unsafe BmSDK.GameObject.FColor OppositeLightColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
@@ -126,9 +126,9 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// <summary>
     /// StructProperty: LightInscatteringColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightInscatteringColor
+    public unsafe BmSDK.GameObject.FColor LightInscatteringColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 }

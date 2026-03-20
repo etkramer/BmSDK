@@ -36,27 +36,27 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// ObjectProperty: Batman
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Batman
+    public unsafe BmSDK.BmGame.RPlayerController Batman
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// StructProperty: StartleSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartleSettings
+    public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>
     /// ByteProperty: Speed
     /// </summary>
-    public unsafe byte Speed
+    public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.MoveToSpeed Speed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.MoveToSpeed>(Ptr + 644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
     }
 }

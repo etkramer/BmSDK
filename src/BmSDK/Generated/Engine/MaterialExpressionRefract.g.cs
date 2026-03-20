@@ -36,27 +36,27 @@ public partial class MaterialExpressionRefract : BmSDK.Engine.MaterialExpression
     /// <summary>
     /// StructProperty: Ray
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionRefract.Normal Ray
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Ray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRefract.Normal>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionRefract.IOR Normal
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRefract.IOR>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: IOR
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc IOR
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput IOR
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 

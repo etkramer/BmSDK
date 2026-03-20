@@ -71,9 +71,9 @@ public partial class RLevelTransitionUpperBuilding : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// ObjectProperty: CameraMustBeInThisVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraMustBeInThisVolume
+    public unsafe BmSDK.Engine.Volume CameraMustBeInThisVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 }

@@ -36,18 +36,18 @@ public partial class RSeqAct_HasVillainRecently : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ByteProperty: ActionToCheck
     /// </summary>
-    public unsafe byte ActionToCheck
+    public unsafe BmSDK.BmGame.RSeqAct_HasVillainRecently.RecencyCheckableActions ActionToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_HasVillainRecently.RecencyCheckableActions>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ArrayProperty: villains
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> villains
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> villains
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 

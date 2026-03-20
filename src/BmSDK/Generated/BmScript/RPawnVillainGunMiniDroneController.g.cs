@@ -89,72 +89,72 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// <summary>
     /// ObjectProperty: ControllerSkeletalMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerSkeletalMesh
+    public unsafe BmSDK.Engine.SkeletalMesh ControllerSkeletalMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 6824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6824); }
     }
 
     /// <summary>
     /// ObjectProperty: ControllerPhysicsAsset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerPhysicsAsset
+    public unsafe BmSDK.Engine.PhysicsAsset ControllerPhysicsAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicsAsset>(Ptr + 6832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6832); }
     }
 
     /// <summary>
     /// ObjectProperty: ControllerXrayMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerXrayMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ControllerXrayMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6840); }
     }
 
     /// <summary>
     /// ObjectProperty: ControllerDisruptedXrayMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerDisruptedXrayMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ControllerDisruptedXrayMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6848); }
     }
 
     /// <summary>
     /// ObjectProperty: JammedExplosionVFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammedExplosionVFX
+    public unsafe BmSDK.Engine.ParticleSystem JammedExplosionVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6856); }
     }
 
     /// <summary>
     /// ObjectProperty: JammedExplodeEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammedExplodeEvent
+    public unsafe BmSDK.Engine.AkEvent JammedExplodeEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6864); }
     }
 
     /// <summary>
     /// ObjectProperty: LightArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightArchetype
+    public unsafe BmSDK.BmGame.RDeferred_SpotLight_Shadowed_Spawnable LightArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDeferred_SpotLight_Shadowed_Spawnable>(Ptr + 6872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6872); }
     }
 
     /// <summary>
     /// ObjectProperty: lightInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT lightInstance
+    public unsafe BmSDK.BmGame.RDeferred_SpotLight_Shadowed_Spawnable lightInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDeferred_SpotLight_Shadowed_Spawnable>(Ptr + 6880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6880); }
     }
 
@@ -172,7 +172,7 @@ public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVi
     /// </summary>
     public unsafe bool bMyMiniDroneHasExploded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6892) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6892); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6892); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6892) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6892); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6892); }
     }
 }

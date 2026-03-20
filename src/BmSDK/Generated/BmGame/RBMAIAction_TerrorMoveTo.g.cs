@@ -71,9 +71,9 @@ public partial class RBMAIAction_TerrorMoveTo : BmSDK.BmGame.RBMAIAction_BaseMov
     /// <summary>
     /// StructProperty: GoalPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GoalPos
+    public unsafe System.Numerics.Vector3 GoalPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
     }
 }

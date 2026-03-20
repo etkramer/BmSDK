@@ -71,27 +71,27 @@ public partial class RStealthTakeDownStage_GrabOnFloor : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// StructProperty: SetReferencePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SetReferencePosition
+    public unsafe System.Numerics.Vector3 SetReferencePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// StructProperty: SetReferenceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SetReferenceRotation
+    public unsafe BmSDK.Rotator SetReferenceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
     }
 
     /// <summary>
     /// ByteProperty: ChallengeGameAction
     /// </summary>
-    public unsafe byte ChallengeGameAction
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeGameAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 1688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1688); }
     }
 }

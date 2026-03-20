@@ -36,18 +36,18 @@ public partial class RSeqAct_SetResonatorDifficulty : BmSDK.Engine.SequenceActio
     /// <summary>
     /// ByteProperty: NewDifficulty
     /// </summary>
-    public unsafe byte NewDifficulty
+    public unsafe BmSDK.BmGame.RDisruptableObjectBase.DisruptableObjectDifficulty NewDifficulty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDisruptableObjectBase.DisruptableObjectDifficulty>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: DisruptableObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DisruptableObject
+    public unsafe BmSDK.Engine.Actor DisruptableObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 }

@@ -71,9 +71,9 @@ public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: LightComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> LightComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.LightComponent> LightComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LightComponent>>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 

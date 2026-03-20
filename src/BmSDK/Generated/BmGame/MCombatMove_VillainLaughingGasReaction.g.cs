@@ -71,18 +71,18 @@ public partial class MCombatMove_VillainLaughingGasReaction : BmSDK.BmGame.RComb
     /// <summary>
     /// ArrayProperty: IdleAnimNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction.HitTargets>> IdleAnimNames
+    public unsafe BmSDK.TArray<BmSDK.FName> IdleAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction.HitTargets>>>(Ptr + 1132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
 
     /// <summary>
     /// ArrayProperty: OutAnimNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction.HitTargets> OutAnimNames
+    public unsafe BmSDK.TArray<BmSDK.FName> OutAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction.HitTargets>>(Ptr + 1148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
     }
 

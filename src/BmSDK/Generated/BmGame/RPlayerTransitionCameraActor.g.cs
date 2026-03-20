@@ -134,36 +134,36 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// ObjectProperty: CameraNodes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraNodes
+    public unsafe BmSDK.Engine.RInteractionClass CameraNodes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 1276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1276); }
     }
 
     /// <summary>
     /// ObjectProperty: TrackingActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TrackingActor
+    public unsafe BmSDK.Engine.Actor TrackingActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 
     /// <summary>
     /// ObjectProperty: CustomCam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CustomCam
+    public unsafe BmSDK.Engine.Actor CustomCam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1292); }
     }
 
     /// <summary>
     /// ObjectProperty: ActorToFollow
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActorToFollow
+    public unsafe BmSDK.Engine.Pawn ActorToFollow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 1300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 
@@ -199,8 +199,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool StartedMoving
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool DebugRoute
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bOverrideMatineeTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bUseFullCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bResetCameraOnEndIfPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bBlendingBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bForceEndLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -262,8 +262,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bVehicleTransition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool bInterpolateRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// </summary>
     public unsafe bool TransitionFromBonnetCam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1320); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1320); }
     }
 
     /// <summary>
@@ -305,18 +305,18 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// StructProperty: FollowOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FollowOffset
+    public unsafe System.Numerics.Vector3 FollowOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
     }
 
     /// <summary>
     /// StructProperty: FollowOffsetMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FollowOffsetMin
+    public unsafe System.Numerics.Vector3 FollowOffsetMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
     }
 
@@ -332,18 +332,18 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// StructProperty: ForceEndLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForceEndLocation
+    public unsafe System.Numerics.Vector3 ForceEndLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
     }
 
     /// <summary>
     /// StructProperty: ForceEndRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ForceEndRotation
+    public unsafe BmSDK.Rotator ForceEndRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
     }
 
@@ -377,18 +377,18 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// ByteProperty: CurrentRouteType
     /// </summary>
-    public unsafe byte CurrentRouteType
+    public unsafe BmSDK.BmGame.RPlayerTransitionCameraActor.ECameraRouteType CurrentRouteType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerTransitionCameraActor.ECameraRouteType>(Ptr + 1396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1396); }
     }
 
     /// <summary>
     /// ArrayProperty: CameraSplinePoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RCameraActor.OverlayPlayer> CameraSplinePoints
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPlayerTransitionCameraActor.FCamSplineSegment> CameraSplinePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCameraActor.OverlayPlayer>>(Ptr + 1400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPlayerTransitionCameraActor.FCamSplineSegment>>(Ptr + 1400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
     }
 }

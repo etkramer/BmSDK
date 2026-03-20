@@ -54,18 +54,18 @@ public partial class ParticleLightEnvironmentComponent : BmSDK.Engine.DynamicLig
     /// <summary>
     /// ObjectProperty: SharedInstigator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SharedInstigator
+    public unsafe BmSDK.Engine.Actor SharedInstigator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
     }
 
     /// <summary>
     /// ObjectProperty: SharedParticleSystem
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SharedParticleSystem
+    public unsafe BmSDK.Engine.ParticleSystem SharedParticleSystem
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
@@ -74,7 +74,7 @@ public partial class ParticleLightEnvironmentComponent : BmSDK.Engine.DynamicLig
     /// </summary>
     public unsafe bool bAllowDLESharing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 364); }
     }
 }

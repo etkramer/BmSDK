@@ -63,9 +63,9 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// ObjectProperty: Batman
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Batman
+    public unsafe BmSDK.BmGame.RPawn Batman
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawn>(Ptr + 388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 }

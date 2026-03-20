@@ -36,9 +36,9 @@ public partial class MaterialExpressionDeriveNormalZ : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: InXY
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc InXY
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput InXY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

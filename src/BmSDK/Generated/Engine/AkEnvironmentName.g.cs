@@ -36,9 +36,9 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: EffectType
     /// </summary>
-    public unsafe byte EffectType
+    public unsafe BmSDK.Engine.AkEnvironmentName.EAuxEffectType EffectType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEnvironmentName.EAuxEffectType>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -47,8 +47,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe bool EnableRolloff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -56,16 +56,16 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe bool EnableOcclusionSends
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
     /// ObjectProperty: EnvironmentRolloff
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EnvironmentRolloff
+    public unsafe BmSDK.Engine.AkCurve EnvironmentRolloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkCurve>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 

@@ -36,9 +36,9 @@ public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PropagationDesc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PropagationDesc
+    public unsafe BmSDK.Engine.AkWwise.FAkPropagationDesc PropagationDesc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkPropagationDesc>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -72,9 +72,9 @@ public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: RaycastPriority
     /// </summary>
-    public unsafe byte RaycastPriority
+    public unsafe BmSDK.Engine.RAkAudiblePropagation.EAkPropagationRayPriority RaycastPriority
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudiblePropagation.EAkPropagationRayPriority>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 

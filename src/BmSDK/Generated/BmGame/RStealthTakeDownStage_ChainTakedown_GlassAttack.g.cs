@@ -71,18 +71,18 @@ public partial class RStealthTakeDownStage_ChainTakedown_GlassAttack : BmSDK.BmG
     /// <summary>
     /// ObjectProperty: GlassBase
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlassBase
+    public unsafe BmSDK.BmGame.RFractureWallBase GlassBase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RFractureWallBase>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// ObjectProperty: DestructibleBase
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestructibleBase
+    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall DestructibleBase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp_FractureWall>(Ptr + 1672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
     }
 }

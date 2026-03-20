@@ -36,63 +36,63 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// <summary>
     /// ObjectProperty: Predator_Intro
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_Intro
+    public unsafe BmSDK.Engine.AkStateName Predator_Intro
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
     /// ObjectProperty: Predator_FirstTD_Silent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_FirstTD_Silent
+    public unsafe BmSDK.Engine.AkStateName Predator_FirstTD_Silent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
     /// <summary>
     /// ObjectProperty: Predator_FirstTD_Noisy
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_FirstTD_Noisy
+    public unsafe BmSDK.Engine.AkStateName Predator_FirstTD_Noisy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// ObjectProperty: Predator_Loop
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_Loop
+    public unsafe BmSDK.Engine.AkStateName Predator_Loop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// ObjectProperty: Predator_Fail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_Fail
+    public unsafe BmSDK.Engine.AkStateName Predator_Fail
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 
     /// <summary>
     /// ObjectProperty: Predator_Success
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Predator_Success
+    public unsafe BmSDK.Engine.AkStateName Predator_Success
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 
     /// <summary>
     /// ObjectProperty: SpottedSting
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpottedSting
+    public unsafe BmSDK.Engine.AkTriggerName SpottedSting
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkTriggerName>(Ptr + 308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
     }
 
@@ -119,8 +119,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool FailOnDeath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool IgnoreSpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool ReactToOtherPlayerSpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool TriggerSuccessOnOnFinaleCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool GoToNoisyIfSpottedDuringIntro
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool DoesNotLerpDownIfNoTakedowns
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool LerpDownToPreviousAfterSpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool ClearGlobalsOnSuccessOrFail
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_WasNoisy
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_WasFear
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_CurrentlySpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_PlayerSpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_DeactivateDueToSuccess
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool m_CurrentFearTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool MakePredatorGoToMaxOnSpotted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool AllowResetAfterChallenge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// </summary>
     public unsafe bool BatmanArkhamCityStyleController
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 336); }
     }
 
     /// <summary>
@@ -324,18 +324,18 @@ public partial class AkActionGlobal_PredatorMusicControl : BmSDK.Engine.AkAction
     /// <summary>
     /// StructProperty: m_TimeSinceTakedown
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_TimeSinceTakedown
+    public unsafe double m_TimeSinceTakedown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// StructProperty: m_TimeSinceSpotted
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_TimeSinceSpotted
+    public unsafe double m_TimeSinceSpotted
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 

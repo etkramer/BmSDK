@@ -80,9 +80,9 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: CellShape
     /// </summary>
-    public unsafe byte CellShape
+    public unsafe BmSDK.Engine.LevelGridVolume.LevelGridCellShape CellShape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LevelGridVolume.LevelGridCellShape>(Ptr + 756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 
@@ -132,9 +132,9 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CellConvexElem
     /// </summary>
-    public unsafe BmSDK.Engine.Brush.SavedSelections CellConvexElem
+    public unsafe BmSDK.Engine.KMeshProps.FKConvexElem CellConvexElem
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Brush.SavedSelections>(Ptr + 780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKConvexElem>(Ptr + 780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
     }
 

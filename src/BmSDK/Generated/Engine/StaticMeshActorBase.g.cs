@@ -73,8 +73,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bDontAdjustCameraForSlope
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bIsVehicleBigJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bVehicleJumpAutoAlignX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bVehicleJumpAutoAlignY
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bVehicleJumpAutoAlignNegX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bVehicleJumpAutoAlignNegY
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bHideIfFlexEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 
     /// <summary>
@@ -136,7 +136,7 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     /// </summary>
     public unsafe bool bWithinPxSublevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 688); }
     }
 }

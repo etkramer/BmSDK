@@ -36,9 +36,9 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT State
+    public unsafe System.IntPtr State
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
@@ -99,27 +99,27 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: AmbientShadowColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AmbientShadowColor
+    public unsafe BmSDK.GameObject.FLinearColor AmbientShadowColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// StructProperty: AmbientShadowSourceDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AmbientShadowSourceDirection
+    public unsafe System.Numerics.Vector3 AmbientShadowSourceDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// StructProperty: AmbientGlow
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AmbientGlow
+    public unsafe BmSDK.GameObject.FLinearColor AmbientGlow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
     }
 
@@ -146,8 +146,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bCastShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bCompositeShadowsFromDynamicLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bForceCompositeAllLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bAffectedBySmallDynamicLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bUseBooleanEnvironmentShadowing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bShadowFromEnvironment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bDynamic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bSynthesizeDirectionalLight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bSynthesizeSHLight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bRequiresNonLatentUpdates
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bTraceFromClosestBoundsPoint
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bIsCharacterLightEnvironment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bOverrideOwnerLightingChannels
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bAlwaysInfluencedByDominantDirectionalLight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool RestrictInterpolationWhenSlow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool bScaleShadowDistanceWhenAboveCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe bool WaitingForDeferredReset
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 240); }
     }
 
     /// <summary>
@@ -315,9 +315,9 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: MaxModulatedShadowColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MaxModulatedShadowColor
+    public unsafe BmSDK.GameObject.FLinearColor MaxModulatedShadowColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
@@ -360,36 +360,36 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// ByteProperty: BoundsMethod
     /// </summary>
-    public unsafe byte BoundsMethod
+    public unsafe BmSDK.Engine.DynamicLightEnvironmentComponent.EDynamicLightEnvironmentBoundsMethod BoundsMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DynamicLightEnvironmentComponent.EDynamicLightEnvironmentBoundsMethod>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// StructProperty: OverriddenBounds
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OverriddenBounds
+    public unsafe BmSDK.GameObject.FBoxSphereBounds OverriddenBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
     /// <summary>
     /// StructProperty: OverriddenLightingChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OverriddenLightingChannels
+    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer OverriddenLightingChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// ArrayProperty: OverriddenLightComponents
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> OverriddenLightComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.LightComponent> OverriddenLightComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LightComponent>>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 

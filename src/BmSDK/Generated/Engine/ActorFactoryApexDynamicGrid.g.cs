@@ -36,72 +36,72 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// ByteProperty: poolDimX
     /// </summary>
-    public unsafe byte poolDimX
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim poolDimX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// ByteProperty: poolDimY
     /// </summary>
-    public unsafe byte poolDimY
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim poolDimY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 145); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim>(Ptr + 145); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 145); }
     }
 
     /// <summary>
     /// ByteProperty: poolDimZ
     /// </summary>
-    public unsafe byte poolDimZ
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim poolDimZ
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 146); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridPoolDim>(Ptr + 146); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 146); }
     }
 
     /// <summary>
     /// ByteProperty: boundingGridDimX
     /// </summary>
-    public unsafe byte boundingGridDimX
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim boundingGridDimX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 147); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim>(Ptr + 147); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 147); }
     }
 
     /// <summary>
     /// ByteProperty: boundingGridDimY
     /// </summary>
-    public unsafe byte boundingGridDimY
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim boundingGridDimY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
     /// ByteProperty: boundingGridDimZ
     /// </summary>
-    public unsafe byte boundingGridDimZ
+    public unsafe BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim boundingGridDimZ
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 149); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.EDynamicGridBoundingGridDim>(Ptr + 149); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 149); }
     }
 
     /// <summary>
     /// ByteProperty: CollisionChannel
     /// </summary>
-    public unsafe byte CollisionChannel
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel CollisionChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 150); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 150); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 150); }
     }
 
     /// <summary>
     /// StructProperty: blockSizeWorld
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT blockSizeWorld
+    public unsafe System.Numerics.Vector3 blockSizeWorld
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
@@ -110,8 +110,8 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// </summary>
     public unsafe bool trackCameraPosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -153,27 +153,27 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// StructProperty: particleToGridCoupling
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT particleToGridCoupling
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams particleToGridCoupling
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
     /// <summary>
     /// StructProperty: gridToParticleCoupling
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT gridToParticleCoupling
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams gridToParticleCoupling
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
     /// <summary>
     /// StructProperty: particleDensity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT particleDensity
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams particleDensity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -189,54 +189,54 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// StructProperty: pressureMultigrid
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT pressureMultigrid
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams pressureMultigrid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 
     /// <summary>
     /// StructProperty: stochasticParticleAdvection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT stochasticParticleAdvection
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams stochasticParticleAdvection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams>(Ptr + 308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
     }
 
     /// <summary>
     /// StructProperty: MacCormackAdvection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MacCormackAdvection
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams MacCormackAdvection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// StructProperty: selfShadowing
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT selfShadowing
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams selfShadowing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 
     /// <summary>
     /// StructProperty: selfShadowingSpotlight
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT selfShadowingSpotlight
+    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams selfShadowingSpotlight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollideWithChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
     }
 }

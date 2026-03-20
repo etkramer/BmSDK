@@ -71,18 +71,18 @@ public partial class RBatmobileDroneScanner : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// ObjectProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTarget
+    public unsafe BmSDK.Engine.Actor CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
     }
 
     /// <summary>
     /// ObjectProperty: ScanTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ScanTemplate
+    public unsafe BmSDK.Engine.ParticleSystem ScanTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
     }
 

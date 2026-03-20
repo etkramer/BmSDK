@@ -36,18 +36,18 @@ public partial class MaterialExpressionMax : BmSDK.Engine.MaterialExpression, Bm
     /// <summary>
     /// StructProperty: A
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionMax.B A
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionMax.B>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: B
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc B
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput B
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

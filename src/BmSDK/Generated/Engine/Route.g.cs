@@ -71,27 +71,27 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IEditorLinkSelectionInterface
+    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: RouteType
     /// </summary>
-    public unsafe byte RouteType
+    public unsafe BmSDK.Engine.Route.ERouteType RouteType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Route.ERouteType>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ArrayProperty: RouteList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> RouteList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor.FActorReference> RouteList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor.FActorReference>>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 

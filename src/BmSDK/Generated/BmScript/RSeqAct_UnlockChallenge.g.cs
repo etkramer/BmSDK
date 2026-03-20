@@ -36,18 +36,18 @@ public partial class RSeqAct_UnlockChallenge : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// ByteProperty: ChallengeAction
     /// </summary>
-    public unsafe byte ChallengeAction
+    public unsafe BmSDK.BmScript.RSeqAct_UnlockChallenge.UnlockChallengeAction ChallengeAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_UnlockChallenge.UnlockChallengeAction>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ArrayProperty: ChallengeIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ChallengeIds
+    public unsafe BmSDK.TArray<int> ChallengeIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
@@ -56,8 +56,8 @@ public partial class RSeqAct_UnlockChallenge : BmSDK.Engine.SequenceAction, BmSD
     /// </summary>
     public unsafe bool MessageThePlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RSeqAct_UnlockChallenge : BmSDK.Engine.SequenceAction, BmSD
     /// </summary>
     public unsafe bool EnablePrerequisite
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>

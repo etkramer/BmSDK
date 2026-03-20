@@ -36,36 +36,36 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
+    public unsafe BmSDK.Engine.Texture Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBlurTextureSample.SampleRadius Coordinates
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlurTextureSample.SampleRadius>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: SampleRadius
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc SampleRadius
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
     /// <summary>
     /// ByteProperty: SampleBlurType
     /// </summary>
-    public unsafe byte SampleBlurType
+    public unsafe BmSDK.Engine.MaterialExpressionBlurTextureSample.ESampleBlurType SampleBlurType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlurTextureSample.ESampleBlurType>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 

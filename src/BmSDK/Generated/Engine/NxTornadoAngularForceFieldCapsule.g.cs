@@ -71,9 +71,9 @@ public partial class NxTornadoAngularForceFieldCapsule : BmSDK.Engine.NxTornadoA
     /// <summary>
     /// ComponentProperty: RenderComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderComponent
+    public unsafe BmSDK.Engine.DrawCapsuleComponent RenderComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawCapsuleComponent>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 }

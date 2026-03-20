@@ -36,9 +36,9 @@ public partial class RSeqAct_OverrideRFlapsBlendWeight : BmSDK.Engine.SequenceAc
     /// <summary>
     /// ArrayProperty: ActorsWithRFlaps
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> ActorsWithRFlaps
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> ActorsWithRFlaps
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

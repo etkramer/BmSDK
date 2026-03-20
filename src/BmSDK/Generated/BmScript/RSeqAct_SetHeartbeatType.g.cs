@@ -36,9 +36,9 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// ObjectProperty: NPC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NPC
+    public unsafe BmSDK.BmGame.RBMPawnAI NPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -47,16 +47,16 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
     /// </summary>
     public unsafe bool bSetOverrideHeartbeat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
     }
 
     /// <summary>
     /// ByteProperty: HeartBeat
     /// </summary>
-    public unsafe byte HeartBeat
+    public unsafe BmSDK.BmGame.RGFxMovieModularHud.ENpcHeartBeatType HeartBeat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieModularHud.ENpcHeartBeatType>(Ptr + 364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 }

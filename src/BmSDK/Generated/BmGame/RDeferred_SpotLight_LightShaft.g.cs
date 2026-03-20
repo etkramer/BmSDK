@@ -71,9 +71,9 @@ public partial class RDeferred_SpotLight_LightShaft : BmSDK.BmGame.RDeferred_Spo
     /// <summary>
     /// ComponentProperty: LightShaft
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightShaft
+    public unsafe BmSDK.Engine.RLightShaftVolumeComponent LightShaft
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RLightShaftVolumeComponent>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 }

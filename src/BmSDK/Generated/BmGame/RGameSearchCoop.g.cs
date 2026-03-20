@@ -45,9 +45,9 @@ public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGam
     /// <summary>
     /// StructProperty: Query
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Query
+    public unsafe BmSDK.Engine.Settings.FLocalizedStringSetting Query
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
@@ -56,8 +56,8 @@ public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGam
     /// </summary>
     public unsafe bool bIsLanQuery
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGam
     /// </summary>
     public unsafe bool bUsesArbitration
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -74,52 +74,52 @@ public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGam
     /// </summary>
     public unsafe bool bIsSearchInProgress
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
     /// ClassProperty: GameSettingsClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GameSettingsClass
+    public unsafe BmSDK.Class GameSettingsClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
     /// ArrayProperty: Results
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.NamedProperties> Results
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult> Results
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.NamedProperties>>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult>>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: ManualSkillOverride
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.NamedProperties ManualSkillOverride
+    public unsafe BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.NamedProperties>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
     /// ArrayProperty: NamedProperties
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.AdditionalSearchCriteria> NamedProperties
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.FNamedObjectProperty> NamedProperties
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.AdditionalSearchCriteria>>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineGameSearch.FNamedObjectProperty>>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// StructProperty: FilterQuery
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.AdditionalSearchCriteria FilterQuery
+    public unsafe BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.AdditionalSearchCriteria>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 

@@ -36,9 +36,9 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: AnimHistory
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AnimHistory
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRepeatAnimManager.FRAM_AnimTime> AnimHistory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRepeatAnimManager.FRAM_AnimTime>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

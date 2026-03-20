@@ -54,18 +54,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PlayerLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlayerLocation
+    public unsafe System.Numerics.Vector3 PlayerLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// StructProperty: PlayerRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlayerRotation
+    public unsafe BmSDK.Rotator PlayerRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
@@ -126,9 +126,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: InstallChunkRequired
     /// </summary>
-    public unsafe byte InstallChunkRequired
+    public unsafe BmSDK.BmGame.RGameInfo.EInstallChunk InstallChunkRequired
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 122); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EInstallChunk>(Ptr + 122); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 122); }
     }
 
@@ -1684,9 +1684,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: CustomWaypoint_Type
     /// </summary>
-    public unsafe byte CustomWaypoint_Type
+    public unsafe BmSDK.BmGame.RPersistentData.ECustomWayPointType CustomWaypoint_Type
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.ECustomWayPointType>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
@@ -1774,9 +1774,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: JokerSickState
     /// </summary>
-    public unsafe byte JokerSickState
+    public unsafe BmSDK.BmGame.RPersistentData.JokerSickStages JokerSickState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 322); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.JokerSickStages>(Ptr + 322); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 322); }
     }
 
@@ -1976,9 +1976,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastDoorData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastDoorData
+    public unsafe System.Numerics.Vector3 LastDoorData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
     }
 
@@ -2021,36 +2021,36 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PreloadStreamingLevels
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> PreloadStreamingLevels
+    public unsafe BmSDK.TArray<BmSDK.FString> PreloadStreamingLevels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// ArrayProperty: PreloadStreamingLevelsLODs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> PreloadStreamingLevelsLODs
+    public unsafe BmSDK.TArray<BmSDK.FString> PreloadStreamingLevelsLODs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
     /// <summary>
     /// ArrayProperty: FlagNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> FlagNames
+    public unsafe BmSDK.TArray<BmSDK.FString> FlagNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
     /// <summary>
     /// ArrayProperty: FlagValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FlagValues
+    public unsafe BmSDK.TArray<int> FlagValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 
@@ -2093,9 +2093,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: StorySynopsis
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> StorySynopsis
+    public unsafe BmSDK.TArray<int> StorySynopsis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
 
@@ -2138,45 +2138,45 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ObjectivesIncomplete
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> ObjectivesIncomplete
+    public unsafe BmSDK.TArray<BmSDK.FString> ObjectivesIncomplete
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
 
     /// <summary>
     /// ArrayProperty: ObjectivesMapObj
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ObjectivesMapObj
+    public unsafe BmSDK.TArray<BmSDK.FString> ObjectivesMapObj
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
     /// <summary>
     /// ArrayProperty: ObjectivesNewMapObj
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> ObjectivesNewMapObj
+    public unsafe BmSDK.TArray<BmSDK.FString> ObjectivesNewMapObj
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
     /// <summary>
     /// ArrayProperty: MapAutopanList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> MapAutopanList
+    public unsafe BmSDK.TArray<BmSDK.FString> MapAutopanList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
     /// <summary>
     /// ArrayProperty: ObjectivesLowUrgency
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ObjectivesLowUrgency
+    public unsafe BmSDK.TArray<byte> ObjectivesLowUrgency
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
 
@@ -2219,9 +2219,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastScannedLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastScannedLoc
+    public unsafe System.Numerics.Vector3 LastScannedLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
@@ -2543,105 +2543,105 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_0
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_1
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_2
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_3
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_4
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_5
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_6
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_7
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_8
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_9
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_10
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_10
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_11
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_11
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1004); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
     }
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HelpPrompt_BatmobileDriveTutorial_12
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_12
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
 
@@ -2870,9 +2870,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: InterrogationIndexes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> InterrogationIndexes
+    public unsafe BmSDK.TArray<int> InterrogationIndexes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 1300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 
@@ -2906,18 +2906,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: NumInterrogationPerDistrict
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> NumInterrogationPerDistrict
+    public unsafe BmSDK.TArray<int> NumInterrogationPerDistrict
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 1328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
     }
 
     /// <summary>
     /// ArrayProperty: NumInterrogationPerDistrictCh9
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> NumInterrogationPerDistrictCh9
+    public unsafe BmSDK.TArray<int> NumInterrogationPerDistrictCh9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
     }
 
@@ -2926,8 +2926,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceNextRiddlerToBeFightback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1360); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1360); }
     }
 
     /// <summary>
@@ -2935,25 +2935,25 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bChapterChangedSinceLastSave
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1360); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1360); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1360); }
     }
 
     /// <summary>
     /// ArrayProperty: MapTapeCharactersToBioCharacters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> MapTapeCharactersToBioCharacters
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.EBioCharacter> MapTapeCharactersToBioCharacters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 1364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.EBioCharacter>>(Ptr + 1364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
     }
 
     /// <summary>
     /// ArrayProperty: Bio_LocIndexs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> Bio_LocIndexs
+    public unsafe BmSDK.TArray<int> Bio_LocIndexs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1380); }
     }
 
@@ -2969,18 +2969,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vObjectiveLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vObjectiveLocation
+    public unsafe System.Numerics.Vector3 vObjectiveLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
     }
 
     /// <summary>
     /// ArrayProperty: CustomWaypoint
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CustomWaypoint
+    public unsafe BmSDK.TArray<float> CustomWaypoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1412); }
     }
 
@@ -3041,9 +3041,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CustomWaypoint_StatesVisible
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CustomWaypoint_StatesVisible
+    public unsafe BmSDK.TArray<byte> CustomWaypoint_StatesVisible
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1524); }
     }
 
@@ -3068,126 +3068,126 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BullyEncounters_Active
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BullyEncounters_Active
+    public unsafe BmSDK.TArray<byte> BullyEncounters_Active
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1556); }
     }
 
     /// <summary>
     /// ArrayProperty: BullyEncounters_Completed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BullyEncounters_Completed
+    public unsafe BmSDK.TArray<byte> BullyEncounters_Completed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1572); }
     }
 
     /// <summary>
     /// ArrayProperty: BullyEncounters_JackRyder_Active
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>> BullyEncounters_JackRyder_Active
+    public unsafe BmSDK.TArray<byte> BullyEncounters_JackRyder_Active
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1588); }
     }
 
     /// <summary>
     /// ArrayProperty: BullyEncounters_JackRyder_Completed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>> BullyEncounters_JackRyder_Completed
+    public unsafe BmSDK.TArray<byte> BullyEncounters_JackRyder_Completed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1604); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_Name
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>> DynamicIcons_Name
+    public unsafe BmSDK.TArray<BmSDK.FString> DynamicIcons_Name
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1620); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_Type
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>> DynamicIcons_Type
+    public unsafe BmSDK.TArray<BmSDK.FString> DynamicIcons_Type
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_Map
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>> DynamicIcons_Map
+    public unsafe BmSDK.TArray<BmSDK.FString> DynamicIcons_Map
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1652); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_X
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>> DynamicIcons_X
+    public unsafe BmSDK.TArray<int> DynamicIcons_X
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_Y
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>> DynamicIcons_Y
+    public unsafe BmSDK.TArray<int> DynamicIcons_Y
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
     }
 
     /// <summary>
     /// ArrayProperty: DynamicIcons_Z
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>> DynamicIcons_Z
+    public unsafe BmSDK.TArray<int> DynamicIcons_Z
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>>(Ptr + 1700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
     }
 
     /// <summary>
     /// ArrayProperty: Music_Names
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>> Music_Names
+    public unsafe BmSDK.TArray<int> Music_Names
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>>(Ptr + 1716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1716); }
     }
 
     /// <summary>
     /// ArrayProperty: Music_States
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>> Music_States
+    public unsafe BmSDK.TArray<int> Music_States
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>>(Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
     }
 
     /// <summary>
     /// ArrayProperty: Music_ParamNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>> Music_ParamNames
+    public unsafe BmSDK.TArray<int> Music_ParamNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>>(Ptr + 1748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
     }
 
     /// <summary>
     /// ArrayProperty: Music_ParamValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>> Music_ParamValues
+    public unsafe BmSDK.TArray<float> Music_ParamValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>>(Ptr + 1764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1764); }
     }
 
@@ -3230,45 +3230,45 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CraneSavedName
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>> CraneSavedName
+    public unsafe BmSDK.TArray<BmSDK.FString> CraneSavedName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>(Ptr + 1796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1796); }
     }
 
     /// <summary>
     /// ArrayProperty: CraneSavedRotation
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>> CraneSavedRotation
+    public unsafe BmSDK.TArray<int> CraneSavedRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>(Ptr + 1812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1812); }
     }
 
     /// <summary>
     /// ArrayProperty: CraneSavedHeight
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>> CraneSavedHeight
+    public unsafe BmSDK.TArray<float> CraneSavedHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>(Ptr + 1828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
     }
 
     /// <summary>
     /// ArrayProperty: CraneSavedMatineePoint
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>> CraneSavedMatineePoint
+    public unsafe BmSDK.TArray<float> CraneSavedMatineePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>(Ptr + 1844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
     }
 
     /// <summary>
     /// ArrayProperty: JumpLocations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>> JumpLocations
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> JumpLocations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>(Ptr + 1860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 1860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1860); }
     }
 
@@ -3329,45 +3329,45 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PredTakedownsPerformed
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>> PredTakedownsPerformed
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfo.EGameAction> PredTakedownsPerformed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>(Ptr + 1900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.EGameAction>>(Ptr + 1900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1900); }
     }
 
     /// <summary>
     /// ArrayProperty: TutInfoOld
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>> TutInfoOld
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FTutorialInfo> TutInfoOld
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>(Ptr + 1916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FTutorialInfo>>(Ptr + 1916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1916); }
     }
 
     /// <summary>
     /// ArrayProperty: TutInfo
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> TutInfo
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FTutorialInfoNew> TutInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 1932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FTutorialInfoNew>>(Ptr + 1932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1932); }
     }
 
     /// <summary>
     /// ArrayProperty: AutomaticCombatTutorials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> AutomaticCombatTutorials
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.ETutorialType> AutomaticCombatTutorials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 1948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.ETutorialType>>(Ptr + 1948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1948); }
     }
 
     /// <summary>
     /// ArrayProperty: HighPriorityDesignTutorials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> HighPriorityDesignTutorials
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.ETutorialType> HighPriorityDesignTutorials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 1964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.ETutorialType>>(Ptr + 1964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1964); }
     }
 
@@ -3401,54 +3401,54 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: informantPriorities__OW_A
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> informantPriorities__OW_A
+    public unsafe BmSDK.TArray<int> informantPriorities__OW_A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 1992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1992); }
     }
 
     /// <summary>
     /// ArrayProperty: informantPriorities__OW_C
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> informantPriorities__OW_C
+    public unsafe BmSDK.TArray<int> informantPriorities__OW_C
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 2008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
     }
 
     /// <summary>
     /// ArrayProperty: informantPriorities__OW_E
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> informantPriorities__OW_E
+    public unsafe BmSDK.TArray<int> informantPriorities__OW_E
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 2024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2024); }
     }
 
     /// <summary>
     /// ArrayProperty: informantMaintainPriority__OW_A
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> informantMaintainPriority__OW_A
+    public unsafe BmSDK.TArray<int> informantMaintainPriority__OW_A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2040); }
     }
 
     /// <summary>
     /// ArrayProperty: informantMaintainPriority__OW_C
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> informantMaintainPriority__OW_C
+    public unsafe BmSDK.TArray<int> informantMaintainPriority__OW_C
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2056); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2056); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2056); }
     }
 
     /// <summary>
     /// ArrayProperty: informantMaintainPriority__OW_E
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> informantMaintainPriority__OW_E
+    public unsafe BmSDK.TArray<int> informantMaintainPriority__OW_E
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
     }
 
@@ -3482,18 +3482,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobileSafePointLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileSafePointLocation
+    public unsafe System.Numerics.Vector3 BatmobileSafePointLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 
     /// <summary>
     /// StructProperty: BatmobileSafePointRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmobileSafePointRotation
+    public unsafe BmSDK.Rotator BatmobileSafePointRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
     }
 
@@ -3509,18 +3509,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BatmobileSafePointStreamingLevels
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>> BatmobileSafePointStreamingLevels
+    public unsafe BmSDK.TArray<BmSDK.FString> BatmobileSafePointStreamingLevels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>>>(Ptr + 2140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2140); }
     }
 
     /// <summary>
     /// ArrayProperty: BatmobileSafePointStreamingLevelsLODs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew> BatmobileSafePointStreamingLevelsLODs
+    public unsafe BmSDK.TArray<BmSDK.FString> BatmobileSafePointStreamingLevelsLODs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>>(Ptr + 2156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
     }
 
@@ -3536,33 +3536,33 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew BatmobilePassengers_0
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>(Ptr + 2176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
     }
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew BatmobilePassengers_1
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>(Ptr + 2260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
     }
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew BatmobilePassengers_2
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>(Ptr + 2344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2344); }
     }
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew BatmobilePassengers_3
+    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.JokerRooftopSideStoryDialogueIndexNew>(Ptr + 2428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
     }
 
@@ -3587,9 +3587,9 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: JokerRooftopSideStoryDialogueIndexNew
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> JokerRooftopSideStoryDialogueIndexNew
+    public unsafe BmSDK.TArray<int> JokerRooftopSideStoryDialogueIndexNew
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2520); }
     }
 
@@ -3632,36 +3632,36 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: EvidenceTrailsData
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> EvidenceTrailsData
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FEvidenceTrail> EvidenceTrailsData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 2564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FEvidenceTrail>>(Ptr + 2564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2564); }
     }
 
     /// <summary>
     /// ArrayProperty: MostWantedData
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> MostWantedData
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FMostWanted_Data> MostWantedData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FMostWanted_Data>>(Ptr + 2580); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2580); }
     }
 
     /// <summary>
     /// ArrayProperty: MostWanted_PygVictimOrder
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> MostWanted_PygVictimOrder
+    public unsafe BmSDK.TArray<int> MostWanted_PygVictimOrder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2596); }
     }
 
     /// <summary>
     /// ArrayProperty: SideStoryMapIcons
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> SideStoryMapIcons
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FSideStoryMapIconEntry> SideStoryMapIcons
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FSideStoryMapIconEntry>>(Ptr + 2612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2612); }
     }
 
@@ -3731,36 +3731,36 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UsedOnceOnlyLine
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UsedOnceOnlyLine
+    public unsafe BmSDK.GameObject.FSet_Mirror UsedOnceOnlyLine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
     }
 
     /// <summary>
     /// StructProperty: DialogueOnceOnlyEvents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DialogueOnceOnlyEvents
+    public unsafe BmSDK.GameObject.FSet_Mirror DialogueOnceOnlyEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2776); }
     }
 
     /// <summary>
     /// StructProperty: SavedDialoguePlayCounts
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SavedDialoguePlayCounts
+    public unsafe BmSDK.GameObject.FMap_Mirror SavedDialoguePlayCounts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 2848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2848); }
     }
 
     /// <summary>
     /// StructProperty: SavedDialogueOnceEverEvents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SavedDialogueOnceEverEvents
+    public unsafe BmSDK.GameObject.FSet_Mirror SavedDialogueOnceEverEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2920); }
     }
 
@@ -3776,18 +3776,18 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: APCInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.DistrictRandomPopulation APCInfo
+    public unsafe BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo APCInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.DistrictRandomPopulation>(Ptr + 2996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo>(Ptr + 2996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2996); }
     }
 
     /// <summary>
     /// ArrayProperty: DistrictRandomPopulation
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> DistrictRandomPopulation
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPersistentData.FRandomPopulationDefine> DistrictRandomPopulation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 3140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPersistentData.FRandomPopulationDefine>>(Ptr + 3140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3140); }
     }
 
@@ -3830,27 +3830,27 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RasTrailMobileWaypointLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RasTrailMobileWaypointLoc
+    public unsafe System.Numerics.Vector3 RasTrailMobileWaypointLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3164); }
     }
 
     /// <summary>
     /// StructProperty: RasTrailMobileWaypointLastBreadrumbLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RasTrailMobileWaypointLastBreadrumbLoc
+    public unsafe System.Numerics.Vector3 RasTrailMobileWaypointLastBreadrumbLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
     }
 
     /// <summary>
     /// ArrayProperty: PersistentLevelNames
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT PersistentLevelNames
+    public unsafe BmSDK.TArray<BmSDK.FName> PersistentLevelNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 3188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 3188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3188); }
     }
 

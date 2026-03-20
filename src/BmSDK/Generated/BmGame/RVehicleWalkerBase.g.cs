@@ -71,9 +71,9 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: FallingAnimNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FallingAnimNode
+    public unsafe BmSDK.Engine.AnimNodeSequence FallingAnimNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 7620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7620); }
     }
 
@@ -82,16 +82,16 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     /// </summary>
     public unsafe bool bHasLanded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7628) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7628); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7628); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7628) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7628); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7628); }
     }
 
     /// <summary>
     /// StructProperty: BindLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BindLocation
+    public unsafe System.Numerics.Vector3 BindLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7632); }
     }
 }

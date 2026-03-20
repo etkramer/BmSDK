@@ -80,9 +80,9 @@ public partial class RRope2EndPoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.I
     /// <summary>
     /// ObjectProperty: RopeActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RopeActor
+    public unsafe BmSDK.BmGame.RRope2Base RopeActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Base>(Ptr + 672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 }

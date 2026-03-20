@@ -71,9 +71,9 @@ public partial class RAEC_SetBombOnPlant : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// ObjectProperty: TargetPlant
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPlant
+    public unsafe BmSDK.BmGame.RPredBombablePlantBase TargetPlant
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPredBombablePlantBase>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 }

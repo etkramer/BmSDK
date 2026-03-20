@@ -73,8 +73,8 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// </summary>
     public unsafe bool NoDynamicMeshSwap
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// </summary>
     public unsafe bool DebugOnly_AlwaysUseOurCharacterMeshData
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// </summary>
     public unsafe bool PendingLoadMeshData
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>
@@ -107,18 +107,18 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// ObjectProperty: CharacterMeshData
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CharacterMeshData
+    public unsafe BmSDK.BmGame.RAddContentPlayerCharacterMesh CharacterMeshData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAddContentPlayerCharacterMesh>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 
     /// <summary>
     /// ComponentProperty: ToggleableHairMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ToggleableHairMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ToggleableHairMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 
@@ -134,18 +134,18 @@ public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, B
     /// <summary>
     /// StructProperty: MatineePreviewLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MatineePreviewLocation
+    public unsafe System.Numerics.Vector3 MatineePreviewLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 
     /// <summary>
     /// StructProperty: MatineePreviewRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MatineePreviewRotation
+    public unsafe BmSDK.Rotator MatineePreviewRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 

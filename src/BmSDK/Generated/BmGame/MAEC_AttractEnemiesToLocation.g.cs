@@ -71,9 +71,9 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// ArrayProperty: ThugsAttracted
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> ThugsAttracted
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> ThugsAttracted
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
@@ -89,9 +89,9 @@ public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// ObjectProperty: Attractor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Attractor
+    public unsafe BmSDK.Engine.Actor Attractor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

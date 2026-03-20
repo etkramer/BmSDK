@@ -36,9 +36,9 @@ public partial class DrawLightConeComponent : BmSDK.Engine.DrawConeComponent, Bm
     /// <summary>
     /// StructProperty: ConeColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConeColor
+    public unsafe BmSDK.GameObject.FColor ConeColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 

@@ -71,9 +71,9 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// <summary>
     /// ObjectProperty: Drone
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Drone
+    public unsafe BmSDK.BmGame.RHelicopterBase Drone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase>(Ptr + 908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
     }
 
@@ -91,8 +91,8 @@ public partial class RBMAIAction_MiniDroneController : BmSDK.BmGame.RBMAIAction_
     /// </summary>
     public unsafe bool bFaceAtReady
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 920); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 920); }
     }
 
     /// <summary>

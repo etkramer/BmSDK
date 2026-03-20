@@ -36,9 +36,9 @@ public partial class AkActionGlobal_State : BmSDK.Engine.AkActionGlobal, BmSDK.I
     /// <summary>
     /// ObjectProperty: ActivationState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActivationState
+    public unsafe BmSDK.Engine.AkStateName ActivationState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

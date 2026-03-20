@@ -71,18 +71,18 @@ public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthT
     /// <summary>
     /// ByteProperty: TakedownFeatureType
     /// </summary>
-    public unsafe byte TakedownFeatureType
+    public unsafe BmSDK.BmGame.RPawnPlayer.ETakedownFeature_Type TakedownFeatureType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.ETakedownFeature_Type>(Ptr + 1700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerAnimationsByType
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>> PlayerAnimationsByType
+    public unsafe BmSDK.TArray<BmSDK.FName> PlayerAnimationsByType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>(Ptr + 1704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
     }
 

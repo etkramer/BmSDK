@@ -71,9 +71,9 @@ public partial class RTurnAwayGlidingPlayerCylinder : BmSDK.Engine.Actor, BmSDK.
     /// <summary>
     /// ComponentProperty: PlayerBlocker
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerBlocker
+    public unsafe BmSDK.Engine.CylinderComponent PlayerBlocker
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CylinderComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

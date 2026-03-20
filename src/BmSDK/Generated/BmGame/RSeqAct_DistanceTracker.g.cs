@@ -36,9 +36,9 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ArrayProperty: TrackActor
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> TrackActor
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> TrackActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -74,8 +74,8 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool Check2D
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool PlayerShouldBeMoving
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool TrackingActorShouldBeVisibleOnStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool AttemptingToTrack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool Tracking
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 404); }
     }
 
     /// <summary>
@@ -153,9 +153,9 @@ public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: LastPlayerPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastPlayerPosition
+    public unsafe System.Numerics.Vector3 LastPlayerPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 

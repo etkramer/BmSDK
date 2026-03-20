@@ -63,9 +63,9 @@ public partial class MaterialExpressionFunctionOutput : BmSDK.Engine.MaterialExp
     /// <summary>
     /// StructProperty: A
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc A
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -74,16 +74,16 @@ public partial class MaterialExpressionFunctionOutput : BmSDK.Engine.MaterialExp
     /// </summary>
     public unsafe bool bLastPreviewed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
     /// StructProperty: Id
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Id
+    public unsafe BmSDK.GameObject.FGuid Id
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 }

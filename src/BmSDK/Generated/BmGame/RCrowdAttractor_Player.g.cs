@@ -71,9 +71,9 @@ public partial class RCrowdAttractor_Player : BmSDK.BmGame.RCrowdAttractor, BmSD
     /// <summary>
     /// ObjectProperty: PlayerPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerPawn
+    public unsafe BmSDK.BmGame.RPawnPlayer PlayerPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 }

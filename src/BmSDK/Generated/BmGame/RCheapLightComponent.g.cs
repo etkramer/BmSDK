@@ -36,9 +36,9 @@ public partial class RCheapLightComponent : BmSDK.Engine.FogVolumeSphericalDensi
     /// <summary>
     /// ComponentProperty: AutomaticMeshComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AutomaticMeshComponent
+    public unsafe BmSDK.Engine.StaticMeshComponent AutomaticMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 }

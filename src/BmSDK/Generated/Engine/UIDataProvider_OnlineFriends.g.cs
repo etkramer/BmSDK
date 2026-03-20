@@ -36,9 +36,9 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
     /// <summary>
     /// ArrayProperty: FriendsList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FriendsList
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineFriend> FriendsList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineFriend>>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 

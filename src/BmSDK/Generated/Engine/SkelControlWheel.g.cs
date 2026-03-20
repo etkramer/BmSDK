@@ -81,18 +81,18 @@ public partial class SkelControlWheel : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// ByteProperty: WheelRollAxis
     /// </summary>
-    public unsafe byte WheelRollAxis
+    public unsafe BmSDK.GameObject.EAxis WheelRollAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
     /// <summary>
     /// ByteProperty: WheelSteeringAxis
     /// </summary>
-    public unsafe byte WheelSteeringAxis
+    public unsafe BmSDK.GameObject.EAxis WheelSteeringAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 269); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 269); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 269); }
     }
 
@@ -110,8 +110,8 @@ public partial class SkelControlWheel : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// </summary>
     public unsafe bool bInvertWheelRoll
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
     }
 
     /// <summary>
@@ -119,7 +119,7 @@ public partial class SkelControlWheel : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// </summary>
     public unsafe bool bInvertWheelSteering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
     }
 }

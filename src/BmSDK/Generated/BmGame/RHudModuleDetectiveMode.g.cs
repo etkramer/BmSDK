@@ -135,9 +135,9 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// <summary>
     /// ObjectProperty: LastEvidenceSwf
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastEvidenceSwf
+    public unsafe BmSDK.GFxUI.SwfMovie LastEvidenceSwf
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
@@ -155,8 +155,8 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// </summary>
     public unsafe bool NPCDetailActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
     }
 
     /// <summary>
@@ -164,16 +164,16 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// </summary>
     public unsafe bool InfoTextActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 440); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentDetailType
     /// </summary>
-    public unsafe byte CurrentDetailType
+    public unsafe BmSDK.BmGame.RHudModuleDetectiveMode.DetailDisplayType CurrentDetailType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleDetectiveMode.DetailDisplayType>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     /// <summary>
     /// ObjectProperty: ParentCrimeScene
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentCrimeScene
+    public unsafe BmSDK.BmGame.RCrimeSceneBase ParentCrimeScene
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrimeSceneBase>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 
@@ -82,8 +82,8 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     /// </summary>
     public unsafe bool bOnlyVisibleInScanMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     /// </summary>
     public unsafe bool CurrentlyScannable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     /// </summary>
     public unsafe bool DisableScreenFootprintTest
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
     }
 
     /// <summary>
@@ -125,9 +125,9 @@ public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenc
     /// <summary>
     /// ByteProperty: mEvidenceScanType
     /// </summary>
-    public unsafe byte mEvidenceScanType
+    public unsafe BmSDK.BmGame.RPhysicalEvidenceCrimeScene.EvidenceScanType mEvidenceScanType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysicalEvidenceCrimeScene.EvidenceScanType>(Ptr + 832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 }

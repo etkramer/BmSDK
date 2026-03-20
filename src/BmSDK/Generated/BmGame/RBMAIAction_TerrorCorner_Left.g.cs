@@ -71,9 +71,9 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
     /// <summary>
     /// StructProperty: CornerPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerPos
+    public unsafe System.Numerics.Vector3 CornerPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
@@ -89,9 +89,9 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
     /// <summary>
     /// StructProperty: EnterCornerID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EnterCornerID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EnterCornerID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 
@@ -134,9 +134,9 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
     /// <summary>
     /// StructProperty: ExitCornerID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExitCornerID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ExitCornerID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
     }
 
@@ -145,16 +145,16 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
     /// </summary>
     public unsafe bool bPlayingOutEnd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 916) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 916); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 916); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 916) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 916); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 916); }
     }
 
     /// <summary>
     /// StructProperty: StoredRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StoredRot
+    public unsafe BmSDK.Rotator StoredRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 920); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 920); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
 }

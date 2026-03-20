@@ -72,9 +72,9 @@ public partial class RVehicleBehaviour_DroneHackerSuicide : BmSDK.BmGame.RVehicl
     /// <summary>
     /// StructProperty: TurretRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TurretRot
+    public unsafe BmSDK.Rotator TurretRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
@@ -83,7 +83,7 @@ public partial class RVehicleBehaviour_DroneHackerSuicide : BmSDK.BmGame.RVehicl
     /// </summary>
     public unsafe bool DisableDeathBarks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
     }
 }

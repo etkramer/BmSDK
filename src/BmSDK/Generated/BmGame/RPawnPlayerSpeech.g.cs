@@ -71,9 +71,9 @@ public partial class RPawnPlayerSpeech : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.I
     /// <summary>
     /// ComponentProperty: PlayerSpeechDialogueComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerSpeechDialogueComponent
+    public unsafe BmSDK.Engine.AkDialogueComponent PlayerSpeechDialogueComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueComponent>(Ptr + 4388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4388); }
     }
 }

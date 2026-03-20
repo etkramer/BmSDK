@@ -36,9 +36,9 @@ public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: TranslatorTags
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT TranslatorTags
+    public unsafe BmSDK.TArray<BmSDK.Engine.TranslatorTag> TranslatorTags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.TranslatorTag>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

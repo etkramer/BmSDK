@@ -36,27 +36,27 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InstanceOverride
+    public unsafe System.IntPtr InstanceOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Base
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTerrainLayerWeight.Layer Base
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Base
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTerrainLayerWeight.Layer>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: Layer
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Layer
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Layer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
@@ -81,9 +81,9 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 }

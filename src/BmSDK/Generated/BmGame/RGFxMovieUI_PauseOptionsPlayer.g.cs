@@ -36,18 +36,18 @@ public partial class RGFxMovieUI_PauseOptionsPlayer : BmSDK.BmGame.RGFxMovieUI_P
     /// <summary>
     /// StructProperty: WorldPPSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieUI_PauseBase.PauseScreens WorldPPSettings
+    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI_PauseBase.PauseScreens>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
     /// ArrayProperty: PauseScreens
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> PauseScreens
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef> PauseScreens
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef>>(Ptr + 1596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1596); }
     }
 }

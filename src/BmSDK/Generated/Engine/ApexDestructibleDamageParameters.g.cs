@@ -36,9 +36,9 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// ArrayProperty: DamageMap
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DamageMap
+    public unsafe BmSDK.TArray<BmSDK.Engine.ApexDestructibleDamageParameters.FDamagePair> DamageMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexDestructibleDamageParameters.FDamagePair>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -51,18 +51,18 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
         /// <summary>
         /// ClassProperty: DamageType
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageType
+        public unsafe BmSDK.Class DamageType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Params
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Params
+        public unsafe BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters Params
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
@@ -76,9 +76,9 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
         /// <summary>
         /// ByteProperty: OverrideMode
         /// </summary>
-        public unsafe byte OverrideMode
+        public unsafe BmSDK.Engine.ApexDestructibleDamageParameters.EDamageParameterOverrideMode OverrideMode
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleDamageParameters.EDamageParameterOverrideMode>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

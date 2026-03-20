@@ -45,36 +45,36 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// StructProperty: Bounds
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Bounds
+    public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneInfo
+    public unsafe System.IntPtr SceneInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LocalToWorld
+    public unsafe BmSDK.GameObject.FMatrix LocalToWorld
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: CachedParentToWorld
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CachedParentToWorld
+    public unsafe BmSDK.GameObject.FMatrix CachedParentToWorld
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
@@ -108,27 +108,27 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// ComponentProperty: ReplacementPrimitive
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReplacementPrimitive
+    public unsafe BmSDK.Engine.PrimitiveComponent ReplacementPrimitive
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// ObjectProperty: AutoLODOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AutoLODOverride
+    public unsafe BmSDK.Engine.StaticMesh AutoLODOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// ComponentProperty: FogVolumeComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FogVolumeComponent
+    public unsafe BmSDK.Engine.FogVolumeDensityComponent FogVolumeComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FogVolumeDensityComponent>(Ptr + 332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 
@@ -234,36 +234,36 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// ObjectProperty: PhysMaterialOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysMaterialOverride
+    public unsafe BmSDK.Engine.PhysicalMaterial PhysMaterialOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ObjectProperty: BodyInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BodyInstance
+    public unsafe BmSDK.Engine.RB_BodyInstance BodyInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_BodyInstance>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Translation
+    public unsafe System.Numerics.Vector3 Translation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Rotation
+    public unsafe BmSDK.Rotator Rotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
@@ -279,18 +279,18 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// StructProperty: Scale3D
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Scale3D
+    public unsafe System.Numerics.Vector3 Scale3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
     /// <summary>
     /// StructProperty: ReflectionShadowPlane
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ReflectionShadowPlane
+    public unsafe BmSDK.GameObject.FPlane ReflectionShadowPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
     }
 
@@ -315,18 +315,18 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// ByteProperty: CollisionFilter
     /// </summary>
-    public unsafe byte CollisionFilter
+    public unsafe BmSDK.Component.ECollisionFilter CollisionFilter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Component.ECollisionFilter>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
     /// <summary>
     /// ByteProperty: HeightmapOverrideType
     /// </summary>
-    public unsafe byte HeightmapOverrideType
+    public unsafe BmSDK.Engine.PrimitiveComponent.EHeightmapOverrideFilter HeightmapOverrideType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 473); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.EHeightmapOverrideFilter>(Ptr + 473); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 473); }
     }
 
@@ -335,8 +335,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bForceEdCanScale
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bForceEdCanNonUniformScale
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -353,8 +353,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawAsGauntletProjectionMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -362,8 +362,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInFrontOfPostProcessWhenInXrayMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -371,8 +371,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInForegroundAndInFrontOfPostProcessWhenInXrayMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -380,8 +380,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInFrontOfPostProcessWhenInScanMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -389,8 +389,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInForegroundAndInFrontOfPostProcessWhenInScanMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -398,8 +398,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInFrontOfPostProcessWhenInThermalMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -407,8 +407,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInForegroundAndInFrontOfPostProcessWhenInThermalMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -416,8 +416,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInFrontOfPostProcessWhenInBatmobileViewMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -425,8 +425,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInForegroundAndInFrontOfPostProcessWhenInBatmobileViewMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -434,8 +434,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawAsDisruptorSniperHighlightMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -443,8 +443,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInFrontOfPostProcessWhenInDLCViewMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -452,8 +452,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDrawInForegroundAndInFrontOfPostProcessWhenInDLCViewMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -461,8 +461,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowCullDistanceVolume
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -470,8 +470,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool HiddenGame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -479,8 +479,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool HiddenEditor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -488,8 +488,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOwnerNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -497,8 +497,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyOwnerSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -506,8 +506,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bXrayNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -515,8 +515,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyXraySee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -524,8 +524,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bScanModeNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -533,8 +533,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyScanModeSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -542,8 +542,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bThermalNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -551,8 +551,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyThermalSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -560,8 +560,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bBatmobileViewNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -569,8 +569,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyBatmobileViewSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -578,8 +578,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyReflectionSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -587,8 +587,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bReflectionNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -596,8 +596,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOnlyReflectionProbeSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -605,8 +605,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bReflectionProbeNoSee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -614,8 +614,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bExcludeFromRainVolume
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 476); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 476); }
     }
 
     /// <summary>
@@ -623,8 +623,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bOverrideHeightmapObjectOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -632,8 +632,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool DontDrawThisFrame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -641,8 +641,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool NotCountedInParentMassiveLODAttachedPrimitives
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -650,8 +650,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOnBakeIntoBackgroundForAutoLOD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -659,8 +659,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOffBakeIntoBackgroundForAutoLOD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -668,8 +668,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOffAutoLODOverride
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -677,8 +677,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOffAutoLODMasked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -686,8 +686,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOnAutoLODMasked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -695,8 +695,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool ForceOffTwoSided
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -704,8 +704,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool NeverHideDuringAutoLOD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -713,8 +713,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AlwaysHideDuringAutoLOD
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -722,8 +722,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreOwnerHidden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -731,8 +731,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUseAsOccluder
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -740,8 +740,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUseAsOccluderAutomatic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -749,8 +749,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowOcclusionTesting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -758,8 +758,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowApproximateOcclusion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -767,8 +767,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUmbraUseAsOccluder
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -776,8 +776,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUmbraDoNotIdCull
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -785,8 +785,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bFirstFrameOcclusion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -794,8 +794,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreNearPlaneIntersection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -803,8 +803,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bSelectable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -812,8 +812,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bForceMipStreaming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -821,8 +821,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAcceptsStaticDecals
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -830,8 +830,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAcceptsDynamicDecals
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -839,8 +839,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIsRefreshingDecals
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -848,8 +848,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowDecalAutomaticReAttach
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -857,8 +857,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUsePerInstanceHitProxies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -866,8 +866,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool CastShadow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -875,8 +875,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bForceDirectLightMap
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -884,8 +884,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bCastDynamicShadow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -893,8 +893,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bCastStaticShadow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -902,8 +902,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bSelfShadowOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -911,8 +911,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bMeshAddedToScene
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -920,8 +920,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAcceptsDynamicDominantLightShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -929,8 +929,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bCastHiddenShadow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -938,8 +938,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bCastShadowAsTwoSided
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -947,8 +947,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAcceptsLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -956,8 +956,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAcceptsDynamicLights
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -965,8 +965,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUseOnePassLightingOnTranslucency
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -974,8 +974,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUsePrecomputedShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -983,8 +983,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAgeSorted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -992,8 +992,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowAmbientOcclusion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1001,8 +1001,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool CollideActors
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1010,8 +1010,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockActors
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1019,8 +1019,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockZeroExtent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1028,8 +1028,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockNonZeroExtent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1037,8 +1037,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool CanBlockCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1046,8 +1046,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockRigidBody
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1055,8 +1055,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockRigidBodyInitial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1064,8 +1064,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bBlockFootPlacement
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1073,8 +1073,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockRigidBodyPhysX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1082,8 +1082,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool OverrideCollisionFilter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1091,8 +1091,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool BlockTurbulence
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1100,8 +1100,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDisableAllRigidBody
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1109,8 +1109,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bSkipRBGeomCreation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1118,8 +1118,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bNotifyRigidBodyCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1127,8 +1127,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bNotifyRigidBodyCollisionIgnoredWhenFarAway
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1136,8 +1136,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bNotifyRigidBodyCollisionOnSelfCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1145,8 +1145,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bEnableContactModificationCallback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1154,8 +1154,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bEnableSleepWakeNotifies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1163,8 +1163,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bDisableMinCollisionThickness
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1172,8 +1172,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bFluidDrain
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1181,8 +1181,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bFluidTwoWay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1190,8 +1190,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreRadialImpulse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
     /// <summary>
@@ -1199,8 +1199,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreRadialForce
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1208,8 +1208,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreForceField
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1217,8 +1217,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bUseCompartment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1226,8 +1226,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AlwaysLoadOnClient
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1235,8 +1235,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AlwaysLoadOnServer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1244,8 +1244,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bIgnoreHiddenActorsMembership
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1253,8 +1253,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AbsoluteTranslation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1262,8 +1262,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AbsoluteRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1271,8 +1271,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool AbsoluteScale
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1280,8 +1280,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAllowShadowFade
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1289,8 +1289,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bSupportedOnMobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1298,8 +1298,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bWasSNFiltered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1307,8 +1307,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bEnableRBFixedFlag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1316,8 +1316,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// </summary>
     public unsafe bool bAddPxShapesToSceneQueryStructure
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 488); }
     }
 
     /// <summary>
@@ -1368,54 +1368,54 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightingChannels
+    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
 
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RBCollideWithChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
     }
 
     /// <summary>
     /// StructProperty: PhysXShapeFilterFlags
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysXShapeFilterFlags
+    public unsafe BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer PhysXShapeFilterFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer>(Ptr + 520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
     }
 
     /// <summary>
     /// ByteProperty: RBChannel
     /// </summary>
-    public unsafe byte RBChannel
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel RBChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
     }
 
     /// <summary>
     /// ByteProperty: DepthPriorityGroup
     /// </summary>
-    public unsafe byte DepthPriorityGroup
+    public unsafe BmSDK.Engine.Scene.ESceneDepthPriorityGroup DepthPriorityGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 525); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Scene.ESceneDepthPriorityGroup>(Ptr + 525); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 525); }
     }
 
     /// <summary>
     /// ByteProperty: DetailMode
     /// </summary>
-    public unsafe byte DetailMode
+    public unsafe BmSDK.Engine.Scene.EDetailMode DetailMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 526); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Scene.EDetailMode>(Ptr + 526); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 526); }
     }
 
@@ -1440,9 +1440,9 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// StructProperty: OverrideRBPhysScene
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OverrideRBPhysScene
+    public unsafe System.IntPtr OverrideRBPhysScene
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
 
@@ -1457,8 +1457,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bOpaque
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1466,8 +1466,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bMasked
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1475,8 +1475,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bTranslucency
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 4) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1484,8 +1484,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bDistortion
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 8) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1493,8 +1493,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bOneLayerDistortionRelevance
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 16) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1502,8 +1502,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bInheritDominantShadowsRelevance
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 32) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1511,8 +1511,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bLit
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 64) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1520,8 +1520,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bUsesSceneColor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 128) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1529,8 +1529,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bSceneTextureRenderBehindTranslucency
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 256) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1538,8 +1538,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bDynamicLitTranslucencyPrepass
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 512) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1547,8 +1547,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bDynamicLitTranslucencyPostRenderDepthPass
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1024) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1556,8 +1556,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bSoftMasked
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 2048) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1565,8 +1565,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bTranslucencyDoF
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 4096) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1574,8 +1574,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bModulated
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 8192) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1583,8 +1583,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bSSS
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 16384) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1592,8 +1592,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bScatterDensity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 32768) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1601,8 +1601,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bBlurDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 65536) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1610,8 +1610,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bRenderAsPointCloud
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 131072) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1619,8 +1619,8 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         /// </summary>
         public unsafe bool bRenderAsMapPointCloud
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 262144) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
     }
 }

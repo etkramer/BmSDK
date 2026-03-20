@@ -36,18 +36,18 @@ public partial class RInterpTrackCameraAdditiveMove : BmSDK.Engine.InterpTrack, 
     /// <summary>
     /// StructProperty: PosTrack
     /// </summary>
-    public unsafe BmSDK.BmGame.RInterpTrackCameraAdditiveMove.EulerTrack PosTrack
+    public unsafe BmSDK.GameObject.FInterpCurveVector PosTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInterpTrackCameraAdditiveMove.EulerTrack>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: EulerTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrack.SubTracks EulerTrack
+    public unsafe BmSDK.GameObject.FInterpCurveVector EulerTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
@@ -56,8 +56,8 @@ public partial class RInterpTrackCameraAdditiveMove : BmSDK.Engine.InterpTrack, 
     /// </summary>
     public unsafe bool bUseQuatInterpolation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RInterpTrackCameraAdditiveMove : BmSDK.Engine.InterpTrack, 
     /// </summary>
     public unsafe bool bShowTranslationOnCurveEd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RInterpTrackCameraAdditiveMove : BmSDK.Engine.InterpTrack, 
     /// </summary>
     public unsafe bool bShowRotationOnCurveEd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
     }
 
     /// <summary>

@@ -38,8 +38,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bUsingGamepad
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bInvertMouse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bInvertTurn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bWasForward
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bWasBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bWasLeft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bWasRight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEdgeForward
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEdgeBack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEdgeLeft
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEdgeRight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEnableMouseSmoothing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEnableFOVScaling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bLockTurnUntilRelease
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
     }
 
     /// <summary>
@@ -360,118 +360,118 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: aTilt
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTilt
+    public unsafe System.Numerics.Vector3 aTilt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
     }
 
     /// <summary>
     /// StructProperty: aRotationRate
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aRotationRate
+    public unsafe System.Numerics.Vector3 aRotationRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>
     /// StructProperty: aGravity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aGravity
+    public unsafe System.Numerics.Vector3 aGravity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
     }
 
     /// <summary>
     /// StructProperty: aAcceleration
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aAcceleration
+    public unsafe System.Numerics.Vector3 aAcceleration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
 
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTouch_0
+    public unsafe System.Numerics.Vector3 aTouch_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
     }
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTouch_1
+    public unsafe System.Numerics.Vector3 aTouch_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
     }
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTouch_2
+    public unsafe System.Numerics.Vector3 aTouch_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTouch_3
+    public unsafe System.Numerics.Vector3 aTouch_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aTouch_4
+    public unsafe System.Numerics.Vector3 aTouch_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
     }
 
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aBackTouch_0
+    public unsafe System.Numerics.Vector3 aBackTouch_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
     }
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aBackTouch_1
+    public unsafe System.Numerics.Vector3 aBackTouch_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aBackTouch_2
+    public unsafe System.Numerics.Vector3 aBackTouch_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aBackTouch_3
+    public unsafe System.Numerics.Vector3 aBackTouch_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT aBackTouch_4
+    public unsafe System.Numerics.Vector3 aBackTouch_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 

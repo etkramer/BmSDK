@@ -71,9 +71,9 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IEditorLinkSelectionInterface
+    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 }

@@ -71,54 +71,54 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: SwingChuteExit
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingChuteExit
+    public unsafe BmSDK.BmGame.RSwingChuteExitBase SwingChuteExit
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwingChuteExitBase>(Ptr + 1288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
     }
 
     /// <summary>
     /// ObjectProperty: GlideMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlideMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GlideMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 
     /// <summary>
     /// ObjectProperty: CrouchInMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrouchInMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CrouchInMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1304); }
     }
 
     /// <summary>
     /// ObjectProperty: SwingToTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingToTarget
+    public unsafe BmSDK.BmGame.RHidePoint SwingToTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 1312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
     }
 
     /// <summary>
     /// ObjectProperty: RollOutOfChute
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RollOutOfChute
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig RollOutOfChute
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
     }
 
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent Mesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
     }
 
@@ -127,8 +127,8 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// </summary>
     public unsafe bool bChuteHighlighted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1336); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGame
     /// </summary>
     public unsafe bool bInsideVent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1336); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1336); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1336); }
     }
 
     /// <summary>

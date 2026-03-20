@@ -71,18 +71,18 @@ public partial class RSmokeScreenBM : BmSDK.BmGame.RSmokeScreen, BmSDK.IGameObje
     /// <summary>
     /// ObjectProperty: UpgradedAOESmokeFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UpgradedAOESmokeFX
+    public unsafe BmSDK.Engine.ParticleSystem UpgradedAOESmokeFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ObjectProperty: UpgradedDurationSmokeFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UpgradedDurationSmokeFX
+    public unsafe BmSDK.Engine.ParticleSystem UpgradedDurationSmokeFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 }

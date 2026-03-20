@@ -80,36 +80,36 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// ArrayProperty: CurrentTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>>> CurrentTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CurrentTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>>>>(Ptr + 2712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2712); }
     }
 
     /// <summary>
     /// ArrayProperty: CurrentTargetParts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>> CurrentTargetParts
+    public unsafe BmSDK.TArray<int> CurrentTargetParts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>>>(Ptr + 2728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2728); }
     }
 
     /// <summary>
     /// ArrayProperty: BatarangThrowOrder
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>> BatarangThrowOrder
+    public unsafe BmSDK.TArray<int> BatarangThrowOrder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>>(Ptr + 2744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2744); }
     }
 
     /// <summary>
     /// ArrayProperty: RopeTargetPositions
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>> RopeTargetPositions
+    public unsafe BmSDK.TArray<float> RopeTargetPositions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>>(Ptr + 2760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2760); }
     }
 
@@ -134,26 +134,26 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// ComponentProperty: ExtraBatarangMeshes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExtraBatarangMeshes_0
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ExtraBatarangMeshes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 2788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2788); }
     }
     /// <summary>
     /// ComponentProperty: ExtraBatarangMeshes
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExtraBatarangMeshes_1
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ExtraBatarangMeshes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 2796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2796); }
     }
 
     /// <summary>
     /// ArrayProperty: NumHitsWithLastThrow
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>> NumHitsWithLastThrow
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> NumHitsWithLastThrow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>>(Ptr + 2804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2804); }
     }
 
@@ -189,7 +189,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// </summary>
     public unsafe bool bToggleGadget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2832) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2832); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2832); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2832) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2832); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2832); }
     }
 }

@@ -36,18 +36,18 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// <summary>
     /// ByteProperty: TargetMethod
     /// </summary>
-    public unsafe byte TargetMethod
+    public unsafe BmSDK.Engine.ParticleModuleBeamBase.Beam2SourceTargetMethod TargetMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamBase.Beam2SourceTargetMethod>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: TargetTangentMethod
     /// </summary>
-    public unsafe byte TargetTangentMethod
+    public unsafe BmSDK.Engine.ParticleModuleBeamBase.Beam2SourceTargetTangentMethod TargetTangentMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 97); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamBase.Beam2SourceTargetTangentMethod>(Ptr + 97); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 97); }
     }
 
@@ -63,9 +63,9 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// <summary>
     /// StructProperty: Target
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamTarget.TargetTangent Target
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamTarget.TargetTangent>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
@@ -74,8 +74,8 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// </summary>
     public unsafe bool bTargetAbsolute
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// </summary>
     public unsafe bool bLockTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// </summary>
     public unsafe bool bLockTargetTangent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
     }
 
     /// <summary>
@@ -101,25 +101,25 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// </summary>
     public unsafe bool bLockTargetStength
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: TargetTangent
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamTarget.TargetStrength TargetTangent
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector TargetTangent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamTarget.TargetStrength>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: TargetStrength
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetStrength
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 

@@ -36,9 +36,9 @@ public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: FlagLineData
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT FlagLineData
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvoData_FlagNode.FFlagLineEntry> FlagLineData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkConvoData_FlagNode.FFlagLineEntry>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
@@ -51,27 +51,27 @@ public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameO
         /// <summary>
         /// ObjectProperty: AKDynLine
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AKDynLine
+        public unsafe BmSDK.Engine.AkDialogueLineDynamic AKDynLine
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLineDynamic>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// ObjectProperty: AKSingleLine
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AKSingleLine
+        public unsafe BmSDK.Engine.AkDialogueLine AKSingleLine
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLine>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// ObjectProperty: FlagBase
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlagBase
+        public unsafe BmSDK.BmGame.RBarkFlagBase FlagBase
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkFlagBase>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }

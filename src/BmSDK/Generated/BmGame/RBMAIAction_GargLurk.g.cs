@@ -71,9 +71,9 @@ public partial class RBMAIAction_GargLurk : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: DestVPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestVPoint
+    public unsafe BmSDK.BmGame.RHidePoint_Mesh DestVPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint_Mesh>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 }

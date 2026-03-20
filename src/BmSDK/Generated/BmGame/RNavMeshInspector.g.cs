@@ -91,8 +91,8 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// </summary>
     public unsafe bool IsPhysActorHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// </summary>
     public unsafe bool bGotCoords
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// </summary>
     public unsafe bool bDrawnPersistentLines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2076); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2076); }
     }
 
     /// <summary>
@@ -125,72 +125,72 @@ public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// ObjectProperty: PhysTestHitRBBodyInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysTestHitRBBodyInstance
+    public unsafe BmSDK.Engine.RB_BodyInstance PhysTestHitRBBodyInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_BodyInstance>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
     /// <summary>
     /// ObjectProperty: PhysTestHitActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysTestHitActor
+    public unsafe BmSDK.Engine.Actor PhysTestHitActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsCentre
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestShapeBoundsCentre
+    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsCentre
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsExtents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestShapeBoundsExtents
+    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsExtents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestHitLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestHitLocation
+    public unsafe System.Numerics.Vector3 PhysTestHitLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestHitNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestHitNormal
+    public unsafe System.Numerics.Vector3 PhysTestHitNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
     }
 
     /// <summary>
     /// StructProperty: CachedTraceStart
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CachedTraceStart
+    public unsafe System.Numerics.Vector3 CachedTraceStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2148); }
     }
 
     /// <summary>
     /// StructProperty: CachedTraceEnd
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CachedTraceEnd
+    public unsafe System.Numerics.Vector3 CachedTraceEnd
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2160); }
     }
 }

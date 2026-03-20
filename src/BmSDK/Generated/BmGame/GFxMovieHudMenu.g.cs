@@ -36,27 +36,27 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: pMovie
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT pMovie
+    public unsafe System.IntPtr pMovie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// StructProperty: pCaptureKeys
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT pCaptureKeys
+    public unsafe System.IntPtr pCaptureKeys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// StructProperty: pFocusIgnoreKeys
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT pFocusIgnoreKeys
+    public unsafe System.IntPtr pFocusIgnoreKeys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -92,8 +92,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bCurrentlyInAsyncUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bMovieIsOpen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bGamePadUsed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bGamePadUsedFirstSet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAllowUnboundInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bDepthTested
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bForcedUSFSynching
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bWorldRendered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bWorld3DApplied
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bDisplayWithHudOff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bNoAutomaticAdvance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -191,8 +191,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bNoDrawIfGamePaused
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -200,8 +200,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bSpansMultimonitorDisplays
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -209,8 +209,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bForceInputToCenterMonitor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bEnableGammaCorrection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -227,8 +227,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bWidgetsInitializedThisFrame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -236,8 +236,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bLogUnhandedWidgetInitializations
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -245,8 +245,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAllowInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -254,8 +254,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAllowFocus
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -263,8 +263,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAlwaysReceiveMouseInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -272,8 +272,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAutoPlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -281,8 +281,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bPauseGameWhileActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -290,8 +290,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bDisableWorldRendering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -299,8 +299,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bCloseOnLevelChange
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -308,8 +308,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bOnlyOwnerFocusable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -317,8 +317,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bForceFullViewport
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -326,8 +326,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bDiscardNonOwnerInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -335,8 +335,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bCaptureInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bCaptureMouseInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -353,8 +353,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIgnoreMouseInput
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -362,8 +362,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIsSplitscreenLayoutModified
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -371,8 +371,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bShowHardwareMouseCursor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -380,8 +380,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bBlurLesserMovies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
@@ -389,8 +389,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bHideLesserMovies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
@@ -398,8 +398,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIsPriorityBlurred
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
@@ -407,8 +407,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIsPriorityHidden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
@@ -416,8 +416,8 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIgnoreVisibilityEffect
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
@@ -425,43 +425,43 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bIgnoreBlurEffect
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
     }
 
     /// <summary>
     /// ObjectProperty: MovieInfo
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MovieInfo
+    public unsafe BmSDK.GFxUI.SwfMovie MovieInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 
     /// <summary>
     /// ObjectProperty: RenderTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderTexture
+    public unsafe BmSDK.Engine.TextureRenderTarget2D RenderTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTarget2D>(Ptr + 272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
     /// <summary>
     /// ObjectProperty: ExternalInterface
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExternalInterface
+    public unsafe BmSDK.GameObject ExternalInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
     /// <summary>
     /// ObjectProperty: SplitscreenLayoutObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SplitscreenLayoutObject
+    public unsafe BmSDK.GFxUI.GFxObject SplitscreenLayoutObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxObject>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
@@ -477,90 +477,90 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: OwnerAction
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OwnerAction
+    public unsafe System.IntPtr OwnerAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ViewMatrix
+    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// ArrayProperty: CaptureKeys
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>> CaptureKeys
+    public unsafe BmSDK.TArray<BmSDK.FName> CaptureKeys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ArrayProperty: FocusIgnoreKeys
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>> FocusIgnoreKeys
+    public unsafe BmSDK.TArray<BmSDK.FName> FocusIgnoreKeys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>(Ptr + 400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 
     /// <summary>
     /// ByteProperty: SceneDPG
     /// </summary>
-    public unsafe byte SceneDPG
+    public unsafe BmSDK.Engine.Scene.ESceneDepthPriorityGroup SceneDPG
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Scene.ESceneDepthPriorityGroup>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
     /// <summary>
     /// ByteProperty: TimingMode
     /// </summary>
-    public unsafe byte TimingMode
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer.GFxTimingMode TimingMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 417); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer.GFxTimingMode>(Ptr + 417); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 417); }
     }
 
     /// <summary>
     /// ByteProperty: RenderTextureMode
     /// </summary>
-    public unsafe byte RenderTextureMode
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer.GFxRenderTextureMode RenderTextureMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 418); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer.GFxRenderTextureMode>(Ptr + 418); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 418); }
     }
 
     /// <summary>
     /// ByteProperty: Priority
     /// </summary>
-    public unsafe byte Priority
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer.GFxDPGBias Priority
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 419); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer.GFxDPGBias>(Ptr + 419); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 419); }
     }
 
     /// <summary>
     /// ArrayProperty: ExternalTextures
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>> ExternalTextures
+    public unsafe BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FExternalTexture> ExternalTextures
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FExternalTexture>>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
     /// <summary>
     /// ArrayProperty: SoundThemes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> SoundThemes
+    public unsafe BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FSoundThemeBinding> SoundThemes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FSoundThemeBinding>>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 
@@ -576,9 +576,9 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// <summary>
     /// ArrayProperty: WidgetBindings
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> WidgetBindings
+    public unsafe BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FGFxWidgetBinding> WidgetBindings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FGFxWidgetBinding>>(Ptr + 456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 

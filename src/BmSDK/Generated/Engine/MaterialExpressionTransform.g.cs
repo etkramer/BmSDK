@@ -36,27 +36,27 @@ public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Input
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: TransformSourceType
     /// </summary>
-    public unsafe byte TransformSourceType
+    public unsafe BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransformSource TransformSourceType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransformSource>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// ByteProperty: TransformType
     /// </summary>
-    public unsafe byte TransformType
+    public unsafe BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransform TransformType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 225); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransform>(Ptr + 225); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 225); }
     }
 }

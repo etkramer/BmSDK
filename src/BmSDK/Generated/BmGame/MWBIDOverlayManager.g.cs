@@ -36,18 +36,18 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: LegalTextImage
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT LegalTextImage
+    public unsafe BmSDK.TArray<byte> LegalTextImage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: GenericCookieImage
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT GenericCookieImage
+    public unsafe BmSDK.TArray<byte> GenericCookieImage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -56,8 +56,8 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsWBIDLinked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsTOS
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
     }
 
     /// <summary>
@@ -74,61 +74,61 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsOverlayLoaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
     }
 
     /// <summary>
     /// ArrayProperty: m_aSWFTest
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> m_aSWFTest
+    public unsafe BmSDK.TArray<byte> m_aSWFTest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// StructProperty: GenericOverlayData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GenericOverlayData
+    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data GenericOverlayData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
     /// StructProperty: EmailFormPreData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EmailFormPreData
+    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData EmailFormPreData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// StructProperty: NetworkStatusData
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT NetworkStatusData
+    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data NetworkStatusData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
     /// <summary>
     /// ByteProperty: QueuedScreen
     /// </summary>
-    public unsafe byte QueuedScreen
+    public unsafe BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type QueuedScreen
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.E_WBID_Screen_Type>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
     /// ObjectProperty: OverlayController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverlayController
+    public unsafe BmSDK.BmGame.MGFxMovieUI_WBIDMainBase OverlayController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MGFxMovieUI_WBIDMainBase>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 

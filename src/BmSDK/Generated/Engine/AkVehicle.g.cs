@@ -71,36 +71,36 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: NewVehicleSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkVehicle.WhooshBys NewVehicleSound
+    public unsafe BmSDK.Engine.AkVehicleSoundVar NewVehicleSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicle.WhooshBys>(Ptr + 2072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundVar>(Ptr + 2072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
     }
 
     /// <summary>
     /// ObjectProperty: LastDriver
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastDriver
+    public unsafe BmSDK.Engine.Pawn LastDriver
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 2080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
     }
 
     /// <summary>
     /// ComponentProperty: VehicleSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VehicleSound
+    public unsafe BmSDK.Engine.AkVehicleSound VehicleSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSound>(Ptr + 2088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2088); }
     }
 
     /// <summary>
     /// ArrayProperty: WhooshBys
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SVehicle.StayUprightConstraintInstance>>> WhooshBys
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkWwise.FSimpleWhooshBy> WhooshBys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SVehicle.StayUprightConstraintInstance>>>>(Ptr + 2096); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkWwise.FSimpleWhooshBy>>(Ptr + 2096); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2096); }
     }
 
@@ -109,8 +109,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OldOutputBrake
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsOnJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bTwoWheelsOnJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bWasOnJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsOnBigJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsOnAutoAlignJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>

@@ -36,18 +36,18 @@ public partial class RSeqEvent_LineLauncherTakedown : BmSDK.BmGame.RSeqEvent_Tak
     /// <summary>
     /// ObjectProperty: vic0
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT vic0
+    public unsafe BmSDK.BmGame.RPawnVillain vic0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
     /// ObjectProperty: vic1
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT vic1
+    public unsafe BmSDK.BmGame.RPawnVillain vic1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 }

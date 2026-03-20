@@ -71,45 +71,45 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// ObjectProperty: FireBlendNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireBlendNode
+    public unsafe BmSDK.Engine.AnimNodeBlend FireBlendNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeBlend>(Ptr + 2396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
     }
 
     /// <summary>
     /// ObjectProperty: FireAnimNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireAnimNode
+    public unsafe BmSDK.Engine.AnimNodeSequence FireAnimNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 2404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
     }
 
     /// <summary>
     /// ObjectProperty: SwivelController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwivelController
+    public unsafe BmSDK.Engine.SkelControlSingleBone SwivelController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSingleBone>(Ptr + 2412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2412); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTarget
+    public unsafe BmSDK.Engine.Actor CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2420); }
     }
 
     /// <summary>
     /// ObjectProperty: ProjectileArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileArchetype
+    public unsafe BmSDK.BmGame.RProjectile ProjectileArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectile>(Ptr + 2428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
     }
 
@@ -143,9 +143,9 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// <summary>
     /// StructProperty: LaunchRotationOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LaunchRotationOffset
+    public unsafe BmSDK.Rotator LaunchRotationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2452); }
     }
 
@@ -154,7 +154,7 @@ public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, 
     /// </summary>
     public unsafe bool bInstantFire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2464); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2464); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2464); }
     }
 }

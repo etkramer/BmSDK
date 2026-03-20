@@ -101,8 +101,8 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// </summary>
     public unsafe bool bHitBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// </summary>
     public unsafe bool bDoneExplosion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
     }
 
     /// <summary>
@@ -119,25 +119,25 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// </summary>
     public unsafe bool HasLineOfSightToBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 636); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 636); }
     }
 
     /// <summary>
     /// ObjectProperty: Batmobile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Batmobile
+    public unsafe BmSDK.BmGame.RVehicleBatmobileBase Batmobile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBatmobileBase>(Ptr + 640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
     }
 
     /// <summary>
     /// ComponentProperty: Thruster
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Thruster
+    public unsafe BmSDK.Engine.ParticleSystemComponent Thruster
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
 
@@ -162,9 +162,9 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// <summary>
     /// StructProperty: LastBatmobileVisibleLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastBatmobileVisibleLoc
+    public unsafe System.Numerics.Vector3 LastBatmobileVisibleLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
@@ -198,9 +198,9 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// <summary>
     /// ByteProperty: SuicideMode
     /// </summary>
-    public unsafe byte SuicideMode
+    public unsafe BmSDK.BmGame.RVehicleBehaviour_SuicideDroneAttack.ESuicideMode SuicideMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_SuicideDroneAttack.ESuicideMode>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 }

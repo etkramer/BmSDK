@@ -45,9 +45,9 @@ public partial class SeqAct_AkPlayMultipoint : BmSDK.AkAudio.SeqAct_AkBase, BmSD
     /// <summary>
     /// ObjectProperty: Event
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Event
+    public unsafe BmSDK.Engine.AkEvent Event
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// ByteProperty: CurrentType
     /// </summary>
-    public unsafe byte CurrentType
+    public unsafe BmSDK.BmGame.RGFxMovieGenericError.GE_Type CurrentType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieGenericError.GE_Type>(Ptr + 1072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
@@ -56,8 +56,8 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// </summary>
     public unsafe bool bMonitorPS3
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -90,18 +90,18 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: MenuItems
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> MenuItems
+    public unsafe BmSDK.TArray<BmSDK.FString> MenuItems
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
 
     /// <summary>
     /// ArrayProperty: BufferedPrompts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> BufferedPrompts
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGFxMovieFrontMost.FPromptRecord> BufferedPrompts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGFxMovieFrontMost.FPromptRecord>>(Ptr + 1148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
     }
 

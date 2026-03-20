@@ -36,18 +36,18 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Characters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>> Characters
+    public unsafe BmSDK.TArray<BmSDK.Engine.Font.FFontCharacter> Characters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Font.FFontCharacter>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: Textures
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight> Textures
+    public unsafe BmSDK.TArray<BmSDK.Engine.Texture2D> Textures
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Texture2D>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -117,9 +117,9 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImportOptions
     /// </summary>
-    public unsafe BmSDK.Engine.Font.MaxCharHeight ImportOptions
+    public unsafe BmSDK.Engine.FontImportOptions.FFontImportOptionsData ImportOptions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Font.MaxCharHeight>(Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
@@ -135,9 +135,9 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: MaxCharHeight
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MaxCharHeight
+    public unsafe BmSDK.TArray<int> MaxCharHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 

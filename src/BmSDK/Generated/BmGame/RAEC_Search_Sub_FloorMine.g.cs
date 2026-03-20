@@ -71,9 +71,9 @@ public partial class RAEC_Search_Sub_FloorMine : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// ObjectProperty: TargetMinePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetMinePoint
+    public unsafe BmSDK.BmGame.RThugMineablePointBase TargetMinePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RThugMineablePointBase>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

@@ -36,18 +36,18 @@ public partial class RSeqAct_VehicleState : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// ObjectProperty: Vehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Vehicle
+    public unsafe BmSDK.Engine.Actor Vehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// ByteProperty: StateToSet
     /// </summary>
-    public unsafe byte StateToSet
+    public unsafe BmSDK.Engine.AkVehicleSoundInfo.EDrivingModes StateToSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundInfo.EDrivingModes>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 }

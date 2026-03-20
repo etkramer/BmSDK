@@ -36,18 +36,18 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// ObjectProperty: Thrower
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Thrower
+    public unsafe BmSDK.BmGame.RPawn Thrower
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawn>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// StructProperty: DodgeID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DodgeID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
@@ -92,8 +92,8 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// </summary>
     public unsafe bool bPredAttackOnFinish
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// </summary>
     public unsafe bool bCanDodgeAgain
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// </summary>
     public unsafe bool bAllowDodgeAgain
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// </summary>
     public unsafe bool bDodgeLineLauncher
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 
     /// <summary>
@@ -128,7 +128,7 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
     /// </summary>
     public unsafe bool bDodgeAwayFromPosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
     }
 }

@@ -36,18 +36,18 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
     /// <summary>
     /// ByteProperty: MoveAxis
     /// </summary>
-    public unsafe byte MoveAxis
+    public unsafe BmSDK.Engine.InterpTrackMoveAxis.EInterpMoveAxis MoveAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMoveAxis.EInterpMoveAxis>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
     /// <summary>
     /// StructProperty: LookupTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackFloatBase.FloatTrack LookupTrack
+    public unsafe BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackFloatBase.FloatTrack>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 

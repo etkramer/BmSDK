@@ -36,9 +36,9 @@ public partial class MeshComponentFactory : BmSDK.Engine.PrimitiveComponentFacto
     /// <summary>
     /// ArrayProperty: Materials
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Materials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> Materials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

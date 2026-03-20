@@ -36,9 +36,9 @@ public partial class ParticleModuleLocationPrimitiveSphere : BmSDK.Engine.Partic
     /// <summary>
     /// StructProperty: StartRadius
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationPrimitiveBase.VelocityScale StartRadius
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationPrimitiveBase.VelocityScale>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 }

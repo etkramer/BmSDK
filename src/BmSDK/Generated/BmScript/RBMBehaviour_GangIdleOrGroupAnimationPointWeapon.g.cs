@@ -36,9 +36,9 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPointWeapon : BmSDK.Bm
     /// <summary>
     /// ObjectProperty: PickedWeaponAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PickedWeaponAnimset
+    public unsafe BmSDK.Engine.AnimSet PickedWeaponAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 948); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 948); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
 }

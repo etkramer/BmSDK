@@ -71,9 +71,9 @@ public partial class RPredatorGunLockerAPEXBase : BmSDK.BmGame.RPredatorGunLocke
     /// <summary>
     /// ObjectProperty: DestProp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestProp
+    public unsafe BmSDK.BmGame.RDestructibleProp DestProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
     }
 }

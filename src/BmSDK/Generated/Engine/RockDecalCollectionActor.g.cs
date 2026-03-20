@@ -71,9 +71,9 @@ public partial class RockDecalCollectionActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: RockDecalComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> RockDecalComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.RockDecalComponent> RockDecalComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RockDecalComponent>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
@@ -89,9 +89,9 @@ public partial class RockDecalCollectionActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: RDCPoolHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RDCPoolHandle
+    public unsafe System.IntPtr RDCPoolHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 }

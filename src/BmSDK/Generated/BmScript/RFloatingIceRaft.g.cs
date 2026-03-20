@@ -116,63 +116,63 @@ public partial class RFloatingIceRaft : BmSDK.BmGame.RFloatingRaft, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: DmgValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>> DmgValues
+    public unsafe BmSDK.TArray<float> DmgValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>(Ptr + 1452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
     }
 
     /// <summary>
     /// ObjectProperty: IceMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT IceMaterial
+    public unsafe BmSDK.Engine.MaterialInstanceConstant IceMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 1468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1468); }
     }
 
     /// <summary>
     /// ObjectProperty: InternalIceMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InternalIceMaterial
+    public unsafe BmSDK.Engine.MaterialInstanceConstant InternalIceMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 1476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
     }
 
     /// <summary>
     /// ComponentProperty: GrenadeCore
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrenadeCore
+    public unsafe BmSDK.Engine.SkeletalMeshComponent GrenadeCore
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1484); }
     }
 
     /// <summary>
     /// ComponentProperty: IdleFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT IdleFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent IdleFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1492); }
     }
 
     /// <summary>
     /// StructProperty: LastImpactLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastImpactLoc
+    public unsafe System.Numerics.Vector3 LastImpactLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1500); }
     }
 
     /// <summary>
     /// ArrayProperty: IceChunkMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>> IceChunkMeshes
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMesh> IceChunkMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>(Ptr + 1512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMesh>>(Ptr + 1512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1512); }
     }
 

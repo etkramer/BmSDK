@@ -36,9 +36,9 @@ public partial class AnimNotify_CameraEffect : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// <summary>
     /// ClassProperty: CameraLensEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraLensEffect
+    public unsafe BmSDK.Class CameraLensEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

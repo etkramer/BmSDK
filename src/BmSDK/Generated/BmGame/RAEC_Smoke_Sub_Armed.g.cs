@@ -71,9 +71,9 @@ public partial class RAEC_Smoke_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// ObjectProperty: smokeScreen
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT smokeScreen
+    public unsafe BmSDK.BmGame.RSmokeScreen smokeScreen
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSmokeScreen>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

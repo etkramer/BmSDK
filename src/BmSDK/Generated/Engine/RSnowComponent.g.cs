@@ -65,25 +65,25 @@ public partial class RSnowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// </summary>
     public unsafe bool bHasMotionBlurTexture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
     /// StructProperty: SnowSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SnowSettings
+    public unsafe BmSDK.Engine.RSnowComponent.FRockSnowSettings SnowSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSnowComponent.FRockSnowSettings>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 
     /// <summary>
     /// StructProperty: VolumeSettings
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VolumeSettings
+    public unsafe BmSDK.Engine.RSnowComponent.FRockSnowVolumeSettings VolumeSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSnowComponent.FRockSnowVolumeSettings>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 }

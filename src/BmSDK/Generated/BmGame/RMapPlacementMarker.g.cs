@@ -71,45 +71,45 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: MarkerType
     /// </summary>
-    public unsafe byte MarkerType
+    public unsafe BmSDK.BmGame.RMapPlacementMarker.MapMarkerType MarkerType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMapPlacementMarker.MapMarkerType>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: Zone
     /// </summary>
-    public unsafe byte Zone
+    public unsafe BmSDK.BmGame.RGameInfo.ERiddlerLocationName Zone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 669); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.ERiddlerLocationName>(Ptr + 669); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 669); }
     }
 
     /// <summary>
     /// ByteProperty: LabelType
     /// </summary>
-    public unsafe byte LabelType
+    public unsafe BmSDK.BmGame.RMapPlacementMarker.MapLabelType LabelType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 670); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMapPlacementMarker.MapLabelType>(Ptr + 670); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 670); }
     }
 
     /// <summary>
     /// ByteProperty: GroupingArea
     /// </summary>
-    public unsafe byte GroupingArea
+    public unsafe BmSDK.BmGame.RMapPlacementMarker.MapGroupArea GroupingArea
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 671); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMapPlacementMarker.MapGroupArea>(Ptr + 671); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 671); }
     }
 
     /// <summary>
     /// ByteProperty: GroupingRange
     /// </summary>
-    public unsafe byte GroupingRange
+    public unsafe BmSDK.BmGame.RMapPlacementMarker.MapGroupRange GroupingRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMapPlacementMarker.MapGroupRange>(Ptr + 672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
@@ -145,8 +145,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLabelAlwaysVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLabelSupportsFlip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseOxyFromRockHighlightVolume
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPlaceHudTargetExactlyHere
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNoProjectedBatSignal
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShowParkingMarker
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSatnavToRoadAtSameHeight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSatnavAllowArmouredRoads
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSatnavToRoadBelow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>

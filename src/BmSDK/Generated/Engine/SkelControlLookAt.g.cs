@@ -36,45 +36,45 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetLocation
+    public unsafe System.Numerics.Vector3 TargetLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 
     /// <summary>
     /// ByteProperty: TargetLocationSpace
     /// </summary>
-    public unsafe byte TargetLocationSpace
+    public unsafe BmSDK.Engine.SkelControlBase.EBoneControlSpace TargetLocationSpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase.EBoneControlSpace>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
     /// ByteProperty: LookAtAxis
     /// </summary>
-    public unsafe byte LookAtAxis
+    public unsafe BmSDK.GameObject.EAxis LookAtAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 261); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 261); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 261); }
     }
 
     /// <summary>
     /// ByteProperty: UpAxis
     /// </summary>
-    public unsafe byte UpAxis
+    public unsafe BmSDK.GameObject.EAxis UpAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 262); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 262); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 262); }
     }
 
     /// <summary>
     /// ByteProperty: AllowRotationSpace
     /// </summary>
-    public unsafe byte AllowRotationSpace
+    public unsafe BmSDK.Engine.SkelControlBase.EBoneControlSpace AllowRotationSpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 263); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase.EBoneControlSpace>(Ptr + 263); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 263); }
     }
 
@@ -92,8 +92,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bInvertLookAtAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bDefineUpAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bInvertUpAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bEnableLimit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bLimitBasedOnRefPose
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bDisableBeyondLimit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bNotifyBeyondLimit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bShowLimit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowRotationX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -173,8 +173,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowRotationY
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -182,8 +182,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowRotationZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 
     /// <summary>
@@ -198,18 +198,18 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DesiredTargetLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DesiredTargetLocation
+    public unsafe System.Numerics.Vector3 DesiredTargetLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
     /// <summary>
     /// StructProperty: ActorSpaceLookAtTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActorSpaceLookAtTarget
+    public unsafe System.Numerics.Vector3 ActorSpaceLookAtTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 
@@ -243,27 +243,27 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: RotationAngleRangeX
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationAngleRangeX
+    public unsafe System.Numerics.Vector2 RotationAngleRangeX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// StructProperty: RotationAngleRangeY
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationAngleRangeY
+    public unsafe System.Numerics.Vector2 RotationAngleRangeY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// StructProperty: RotationAngleRangeZ
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationAngleRangeZ
+    public unsafe System.Numerics.Vector2 RotationAngleRangeZ
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 
@@ -306,27 +306,27 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: LimitLookDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LimitLookDir
+    public unsafe System.Numerics.Vector3 LimitLookDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// StructProperty: BaseLookDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseLookDir
+    public unsafe System.Numerics.Vector3 BaseLookDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
     }
 
     /// <summary>
     /// StructProperty: BaseBonePos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseBonePos
+    public unsafe System.Numerics.Vector3 BaseBonePos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 

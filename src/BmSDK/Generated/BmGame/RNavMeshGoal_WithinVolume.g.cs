@@ -36,9 +36,9 @@ public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEva
     /// <summary>
     /// ObjectProperty: WithinVol
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WithinVol
+    public unsafe BmSDK.Engine.Volume WithinVol
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 

@@ -36,27 +36,27 @@ public partial class RThickFearGasComponent : BmSDK.Engine.PrimitiveComponent, B
     /// <summary>
     /// ObjectProperty: MeshRenderVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MeshRenderVolume
+    public unsafe BmSDK.Engine.StaticMesh MeshRenderVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
     /// <summary>
     /// ObjectProperty: LightMap
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightMap
+    public unsafe BmSDK.Engine.Texture2D LightMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 548); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 548); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
     /// <summary>
     /// StructProperty: refLevelOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT refLevelOffset
+    public unsafe System.Numerics.Vector3 refLevelOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 
@@ -72,9 +72,9 @@ public partial class RThickFearGasComponent : BmSDK.Engine.PrimitiveComponent, B
     /// <summary>
     /// StructProperty: ThickFearGas
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThickFearGas
+    public unsafe BmSDK.Engine.RThickFearGasComponent.FThickFearGasSettings ThickFearGas
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RThickFearGasComponent.FThickFearGasSettings>(Ptr + 572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 }

@@ -71,18 +71,18 @@ public partial class RDestructibleProp_LampPost : BmSDK.BmGame.RDestructibleProp
     /// <summary>
     /// StructProperty: HidePointOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HidePointOffset
+    public unsafe System.Numerics.Vector3 HidePointOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 
     /// <summary>
     /// ObjectProperty: MyLampPostTop
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyLampPostTop
+    public unsafe BmSDK.BmGame.RHidePoint_LampPostTop MyLampPostTop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint_LampPostTop>(Ptr + 1736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
     }
 }

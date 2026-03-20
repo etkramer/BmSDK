@@ -71,9 +71,9 @@ public partial class RAEC_Sub_IncendiaryStartle : BmSDK.BmGame.RAlertEventCoordi
     /// <summary>
     /// StructProperty: TargetPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetPoint
+    public unsafe System.Numerics.Vector3 TargetPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

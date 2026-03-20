@@ -73,8 +73,8 @@ public partial class RScanSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bScannable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>

@@ -71,9 +71,9 @@ public partial class EmitterSpawnable : BmSDK.Engine.Emitter, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: ParticleTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleTemplate
+    public unsafe BmSDK.Engine.ParticleSystem ParticleTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 }

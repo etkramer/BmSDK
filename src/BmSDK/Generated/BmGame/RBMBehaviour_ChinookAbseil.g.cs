@@ -36,9 +36,9 @@ public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// ObjectProperty: Chinook
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Chinook
+    public unsafe BmSDK.BmGame.RHelicopterBase Chinook
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
@@ -63,9 +63,9 @@ public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// StructProperty: AbseilAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AbseilAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AbseilAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 

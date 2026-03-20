@@ -71,18 +71,18 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// ByteProperty: HelicopterPointOfInterestType
     /// </summary>
-    public unsafe byte HelicopterPointOfInterestType
+    public unsafe BmSDK.BmGame.RGameInfo.HelicopterPointOfInterestTypes HelicopterPointOfInterestType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.HelicopterPointOfInterestTypes>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: island
     /// </summary>
-    public unsafe byte island
+    public unsafe BmSDK.BmGame.RHelicopterPointOfInterest.eHPOIIsland island
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 669); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterPointOfInterest.eHPOIIsland>(Ptr + 669); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 669); }
     }
 
@@ -91,8 +91,8 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// </summary>
     public unsafe bool DefaultToActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
     }
 
     /// <summary>
@@ -100,7 +100,7 @@ public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGam
     /// </summary>
     public unsafe bool bIsActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 672); }
     }
 }

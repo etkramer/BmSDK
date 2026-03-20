@@ -36,9 +36,9 @@ public partial class InterpTrackAkParameter : BmSDK.Engine.InterpTrackFloatBase,
     /// <summary>
     /// ObjectProperty: Parameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Parameter
+    public unsafe BmSDK.Engine.AkParameterName Parameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
@@ -47,7 +47,7 @@ public partial class InterpTrackAkParameter : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool IsGlobalParameter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 264) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 264); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 264); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 264) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 264); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 264); }
     }
 }

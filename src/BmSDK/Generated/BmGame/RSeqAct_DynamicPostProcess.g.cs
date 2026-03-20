@@ -45,9 +45,9 @@ public partial class RSeqAct_DynamicPostProcess : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ObjectProperty: PostProcessMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PostProcessMaterial
+    public unsafe BmSDK.Engine.MaterialInterface PostProcessMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

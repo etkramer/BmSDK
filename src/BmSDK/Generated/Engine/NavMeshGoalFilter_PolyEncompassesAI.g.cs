@@ -36,9 +36,9 @@ public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshG
     /// <summary>
     /// StructProperty: OverrideExtentToCheck
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OverrideExtentToCheck
+    public unsafe System.Numerics.Vector3 OverrideExtentToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

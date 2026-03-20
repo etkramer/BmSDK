@@ -36,9 +36,9 @@ public partial class ApexShapeSphere : BmSDK.Engine.ApexShape, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: Shape
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Shape
+    public unsafe BmSDK.Engine.DrawSphereComponent Shape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

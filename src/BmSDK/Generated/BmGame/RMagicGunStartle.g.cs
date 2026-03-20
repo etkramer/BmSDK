@@ -71,45 +71,45 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// ByteProperty: GadgetState
     /// </summary>
-    public unsafe byte GadgetState
+    public unsafe BmSDK.BmGame.RInventoryGadget.GadgetEquipState GadgetState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.GadgetEquipState>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// ByteProperty: GadgetType
     /// </summary>
-    public unsafe byte GadgetType
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction GadgetType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 785); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 785); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 785); }
     }
 
     /// <summary>
     /// ByteProperty: QuickGadgetType
     /// </summary>
-    public unsafe byte QuickGadgetType
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction QuickGadgetType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 786); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 786); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 786); }
     }
 
     /// <summary>
     /// ByteProperty: ThrowType
     /// </summary>
-    public unsafe byte ThrowType
+    public unsafe BmSDK.BmGame.RInventoryGadget.BatarangThrowType ThrowType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 787); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.BatarangThrowType>(Ptr + 787); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 787); }
     }
 
     /// <summary>
     /// ByteProperty: HudGadgetId
     /// </summary>
-    public unsafe byte HudGadgetId
+    public unsafe BmSDK.BmGame.RInventoryGadget.FGadgetIDs HudGadgetId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.FGadgetIDs>(Ptr + 788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
 
@@ -134,90 +134,90 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent Mesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
     /// ComponentProperty: Mesh2
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh2
+    public unsafe BmSDK.Engine.SkeletalMeshComponent Mesh2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
     /// <summary>
     /// ObjectProperty: XrayMaskMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayMaskMaterial
+    public unsafe BmSDK.Engine.MaterialInterface XrayMaskMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
     }
 
     /// <summary>
     /// ObjectProperty: CachedTargetClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedTargetClass
+    public unsafe BmSDK.Engine.RInteractionClass CachedTargetClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
     /// <summary>
     /// ObjectProperty: GadgetSelectMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GadgetSelectMaterial
+    public unsafe BmSDK.Engine.MaterialInterface GadgetSelectMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
     }
 
     /// <summary>
     /// ObjectProperty: GetOutSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GetOutSound
+    public unsafe BmSDK.Engine.AkEvent GetOutSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideTargets
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideTargets
+    public unsafe BmSDK.Engine.RInteractionClass OverrideTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
     }
 
     /// <summary>
     /// ObjectProperty: LastPlayedGadgetSpeech
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastPlayedGadgetSpeech
+    public unsafe BmSDK.Engine.AkDialogueSpeech LastPlayedGadgetSpeech
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
     }
 
     /// <summary>
     /// ObjectProperty: FailedGadgetSpeechReplacementSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FailedGadgetSpeechReplacementSound
+    public unsafe BmSDK.Engine.AkEvent FailedGadgetSpeechReplacementSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
     }
 
     /// <summary>
     /// ComponentProperty: XrayMaskMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayMaskMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent XrayMaskMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
@@ -481,8 +481,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bSelectable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -490,8 +490,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -499,8 +499,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bAutomaticAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -508,8 +508,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bNoQuickFire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -517,8 +517,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUnequipToSocket
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -526,8 +526,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanUseXRay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -535,8 +535,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanRechargeFromZeroAmmo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -544,8 +544,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableFromVantagePoints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -553,8 +553,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableFromCornerCover
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -562,8 +562,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUsableFromCrawlSpace
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -571,8 +571,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bNotUsableFromWire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -580,8 +580,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bLeaveCoverAfterThrow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -589,8 +589,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanUseFromSilentPredator
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -598,8 +598,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bDontLockCornerAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -607,8 +607,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bForceShowGadget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -616,8 +616,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bRunningThrow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -625,8 +625,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanEquipWhileRecharging
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -634,8 +634,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanEquipWhileFlying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -643,8 +643,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bSelectableLast
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -652,8 +652,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool AutoTargetRequiresLOS
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -661,8 +661,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool MustAutoTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -670,8 +670,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseAbsoluteTurnForGetOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -679,8 +679,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bUseRechargeDisplay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -688,8 +688,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bDoLOSCheckFromPawn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -697,8 +697,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bGadgetCanBeMirrored
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -706,8 +706,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bRecharging
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -715,8 +715,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bHighlighted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -724,8 +724,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bXRayMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -733,8 +733,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bAllowGrappleUse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -742,8 +742,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bReverseButtonControlsOnPS3
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -751,8 +751,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bEmergencyFire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -760,8 +760,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bOverriddenCombatMove
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
@@ -769,8 +769,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bOverrideAllowRun
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -778,8 +778,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bAlwaysUseHorizontalAutoTargetHelp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -787,8 +787,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bQuickGlideGadget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -796,8 +796,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanUseInteractableItemWhileAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -805,8 +805,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bNeverTargetOffscreen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -814,8 +814,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bIgnoreAngleCheck
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -823,8 +823,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bGetOutSoundIsLooping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -832,8 +832,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool ShownNoGadget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -841,8 +841,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bKeepCursorsWhenHolstered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -850,8 +850,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bSharedWithNewGamePlus
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -859,8 +859,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bRequiresPawnForLOS
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -868,8 +868,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bHideHighlightsInDetectiveMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -877,8 +877,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bDontAutoTargetDown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -886,8 +886,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bOverrideWorldPPSettings
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -895,8 +895,8 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     public unsafe bool bOverrideTargetWeightsWhenZoomed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1124); }
     }
 
     /// <summary>
@@ -1001,9 +1001,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: AutoTargetExtCamRotationOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AutoTargetExtCamRotationOffset
+    public unsafe BmSDK.Rotator AutoTargetExtCamRotationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
     }
 
@@ -1037,9 +1037,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: ThrowTransition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowTransition
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowTransition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
     }
 
@@ -1064,9 +1064,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: EmergencyThrowDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EmergencyThrowDirection
+    public unsafe System.Numerics.Vector3 EmergencyThrowDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1220); }
     }
 
@@ -1172,9 +1172,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: GetOutSoundSoundHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GetOutSoundSoundHandle
+    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GetOutSoundSoundHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
     }
 
@@ -1235,27 +1235,27 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: MirrorRelativeRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MirrorRelativeRotation
+    public unsafe BmSDK.Rotator MirrorRelativeRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
     }
 
     /// <summary>
     /// ArrayProperty: CurrentHighlightTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>>> CurrentHighlightTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CurrentHighlightTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>>>>(Ptr + 1396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1396); }
     }
 
     /// <summary>
     /// ArrayProperty: HighlightedMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>> HighlightedMeshes
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh> HighlightedMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>>>(Ptr + 1412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>>(Ptr + 1412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1412); }
     }
 
@@ -1307,18 +1307,18 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: CachedSkelMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>> CachedSkelMeshes
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent> CachedSkelMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>>(Ptr + 1448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent>>(Ptr + 1448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1448); }
     }
 
     /// <summary>
     /// ArrayProperty: CachedStaticMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>> CachedStaticMeshes
+    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> CachedStaticMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>>(Ptr + 1464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMeshComponent>>(Ptr + 1464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
     }
 
@@ -1343,9 +1343,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: RainMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Inventory.ItemName> RainMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant> RainMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Inventory.ItemName>>(Ptr + 1488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant>>(Ptr + 1488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1488); }
     }
 
@@ -1370,18 +1370,18 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: WorldPPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.Inventory.ItemName WorldPPSettings
+    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Inventory.ItemName>(Ptr + 1516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1516); }
     }
 
     /// <summary>
     /// StructProperty: vAdditiveArmAvoidanceTraceExtent
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vAdditiveArmAvoidanceTraceExtent
+    public unsafe System.Numerics.Vector3 vAdditiveArmAvoidanceTraceExtent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2040); }
     }
 
@@ -1439,9 +1439,9 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         /// <summary>
         /// ObjectProperty: TargetActor
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetActor
+        public unsafe BmSDK.Engine.Actor TargetActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 

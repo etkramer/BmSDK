@@ -100,8 +100,8 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ShowHealthBarWhenTracked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OnlyShowHealthBarWhenNoFollowers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// </summary>
     public unsafe bool HealthBarVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bProtectedByEscorts
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// </summary>
     public unsafe bool BumpedByCar
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7632); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7632); }
     }
 
     /// <summary>
@@ -152,27 +152,27 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: BossMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BossMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie BossMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 7640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7640); }
     }
 
     /// <summary>
     /// ObjectProperty: BossModule
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BossModule
+    public unsafe BmSDK.BmGame.RHudModuleBoss BossModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleBoss>(Ptr + 7648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7648); }
     }
 
     /// <summary>
     /// ComponentProperty: EMPMissileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EMPMissileTarget
+    public unsafe BmSDK.Engine.RInteractionComponent EMPMissileTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 7656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7656); }
     }
 
@@ -206,9 +206,9 @@ public partial class RVehicleCar : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: CurrentWeakSpot
     /// </summary>
-    public unsafe byte CurrentWeakSpot
+    public unsafe BmSDK.BmGame.RVehicleCar.EAPCWeakSpot CurrentWeakSpot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 7688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleCar.EAPCWeakSpot>(Ptr + 7688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7688); }
     }
 }

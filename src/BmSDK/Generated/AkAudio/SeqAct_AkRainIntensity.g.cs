@@ -36,18 +36,18 @@ public partial class SeqAct_AkRainIntensity : BmSDK.AkAudio.SeqAct_AkBaseSimple,
     /// <summary>
     /// ByteProperty: RainIntensity
     /// </summary>
-    public unsafe byte RainIntensity
+    public unsafe BmSDK.AkAudio.SeqAct_AkRainIntensity.EAkRainIntensitySetting RainIntensity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkRainIntensity.EAkRainIntensitySetting>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: RainBed
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RainBed
+    public unsafe BmSDK.Engine.AkEvent RainBed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 

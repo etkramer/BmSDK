@@ -71,9 +71,9 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: lightsArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT lightsArchetype
+    public unsafe BmSDK.BmScript.RSentryGunLights lightsArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1548); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSentryGunLights>(Ptr + 1548); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1548); }
     }
 
@@ -82,8 +82,8 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFiringComponentsAttached
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAllowedInChallengeMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bValidVoiceSynthesiserTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDMVisThroughWalls_Suppressed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDMVisThroughWalls_Old
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1556); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1556); }
     }
 
     /// <summary>

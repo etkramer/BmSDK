@@ -71,9 +71,9 @@ public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// ClassProperty: ObjectType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectType
+    public unsafe BmSDK.Class ObjectType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

@@ -36,9 +36,9 @@ public partial class AkSDEntityCountEnemyPawnsInVolume : BmSDK.AkAudio.AkSDEntit
     /// <summary>
     /// ObjectProperty: Volume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Volume
+    public unsafe BmSDK.Engine.Volume Volume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Volume>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 

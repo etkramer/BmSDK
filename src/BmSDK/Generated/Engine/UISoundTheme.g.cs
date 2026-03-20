@@ -36,9 +36,9 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: SoundEventBindings
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SoundEventBindings
+    public unsafe BmSDK.TArray<BmSDK.Engine.UISoundTheme.FSoundEventMapping> SoundEventBindings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.UISoundTheme.FSoundEventMapping>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -60,9 +60,9 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: SoundToPlay
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundToPlay
+        public unsafe BmSDK.Engine.SoundCue SoundToPlay
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }

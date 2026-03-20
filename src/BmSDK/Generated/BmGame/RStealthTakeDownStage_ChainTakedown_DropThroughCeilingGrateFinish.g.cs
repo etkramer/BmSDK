@@ -71,9 +71,9 @@ public partial class RStealthTakeDownStage_ChainTakedown_DropThroughCeilingGrate
     /// <summary>
     /// ObjectProperty: CeilingGrateOpeningSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CeilingGrateOpeningSound
+    public unsafe BmSDK.Engine.AkEvent CeilingGrateOpeningSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
     }
 }

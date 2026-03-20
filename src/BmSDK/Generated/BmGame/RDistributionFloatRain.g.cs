@@ -81,9 +81,9 @@ public partial class RDistributionFloatRain : BmSDK.Engine.DistributionFloatPara
     /// <summary>
     /// ByteProperty: ParamMode
     /// </summary>
-    public unsafe byte ParamMode
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 }

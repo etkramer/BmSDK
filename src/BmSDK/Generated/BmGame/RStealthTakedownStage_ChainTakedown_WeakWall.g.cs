@@ -71,36 +71,36 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// <summary>
     /// ObjectProperty: Player
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Player
+    public unsafe BmSDK.BmGame.RPawnPlayer Player
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 1844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerController
+    public unsafe BmSDK.BmGame.RPlayerController PlayerController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 1852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1852); }
     }
 
     /// <summary>
     /// ObjectProperty: destructibleWall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT destructibleWall
+    public unsafe BmSDK.BmGame.RDestructibleProp_FractureWall destructibleWall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp_FractureWall>(Ptr + 1860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1860); }
     }
 
     /// <summary>
     /// ObjectProperty: WindowSmashSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WindowSmashSound
+    public unsafe BmSDK.Engine.AkEvent WindowSmashSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1868); }
     }
 
@@ -109,8 +109,8 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// </summary>
     public unsafe bool bOldWallSuppressFullAIEvent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// </summary>
     public unsafe bool bGlassSmashed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
     }
 
     /// <summary>
@@ -127,52 +127,52 @@ public partial class RStealthTakedownStage_ChainTakedown_WeakWall : BmSDK.BmGame
     /// </summary>
     public unsafe bool bNormalWallSmashed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1876); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1876); }
     }
 
     /// <summary>
     /// StructProperty: StartPlayerPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartPlayerPosition
+    public unsafe System.Numerics.Vector3 StartPlayerPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1880); }
     }
 
     /// <summary>
     /// StructProperty: StartVictimPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartVictimPosition
+    public unsafe System.Numerics.Vector3 StartVictimPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1892); }
     }
 
     /// <summary>
     /// StructProperty: CameraRootLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraRootLocation
+    public unsafe System.Numerics.Vector3 CameraRootLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1904); }
     }
 
     /// <summary>
     /// ArrayProperty: WallAttackStageInfos
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.StageAnim> WallAttackStageInfos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.FWallAttackStageInfo> WallAttackStageInfos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.StageAnim>>(Ptr + 1916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.FWallAttackStageInfo>>(Ptr + 1916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1916); }
     }
 
     /// <summary>
     /// StructProperty: WallAttackStage
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.StageAnim WallAttackStage
+    public unsafe BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.FWallAttackStageInfo WallAttackStage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.StageAnim>(Ptr + 1932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_WeakWall.FWallAttackStageInfo>(Ptr + 1932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1932); }
     }
 }

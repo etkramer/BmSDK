@@ -71,9 +71,9 @@ public partial class RAEC_Sub_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoord
     /// <summary>
     /// ObjectProperty: TargetPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPoint
+    public unsafe BmSDK.BmGame.RStartlePoint TargetPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStartlePoint>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

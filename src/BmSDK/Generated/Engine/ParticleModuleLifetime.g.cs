@@ -36,9 +36,9 @@ public partial class ParticleModuleLifetime : BmSDK.Engine.ParticleModuleLifetim
     /// <summary>
     /// StructProperty: Lifetime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Lifetime
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Lifetime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

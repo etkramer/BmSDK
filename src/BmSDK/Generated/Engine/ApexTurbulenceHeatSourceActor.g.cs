@@ -71,9 +71,9 @@ public partial class ApexTurbulenceHeatSourceActor : BmSDK.Engine.ApexFieldSampl
     /// <summary>
     /// ComponentProperty: HeatSourceComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeatSourceComponent
+    public unsafe BmSDK.Engine.ApexTurbulenceHeatSourceComponent HeatSourceComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexTurbulenceHeatSourceComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

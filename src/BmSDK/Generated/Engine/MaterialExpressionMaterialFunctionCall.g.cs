@@ -36,27 +36,27 @@ public partial class MaterialExpressionMaterialFunctionCall : BmSDK.Engine.Mater
     /// <summary>
     /// ObjectProperty: MaterialFunction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MaterialFunction
+    public unsafe BmSDK.Engine.MaterialFunction MaterialFunction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialFunction>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ArrayProperty: FunctionInputs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> FunctionInputs
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionMaterialFunctionCall.FFunctionExpressionInput> FunctionInputs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionMaterialFunctionCall.FFunctionExpressionInput>>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// ArrayProperty: FunctionOutputs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FunctionOutputs
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionMaterialFunctionCall.FFunctionExpressionOutput> FunctionOutputs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionMaterialFunctionCall.FFunctionExpressionOutput>>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

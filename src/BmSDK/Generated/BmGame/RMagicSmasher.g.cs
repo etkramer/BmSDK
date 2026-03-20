@@ -71,9 +71,9 @@ public partial class RMagicSmasher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// ComponentProperty: PhysicsGrabber
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysicsGrabber
+    public unsafe BmSDK.Engine.RB_Handle PhysicsGrabber
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_Handle>(Ptr + 2068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
     }
 
@@ -89,9 +89,9 @@ public partial class RMagicSmasher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: HoldOrientation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HoldOrientation
+    public unsafe BmSDK.GameObject.FQuat HoldOrientation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 2080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
     }
 }

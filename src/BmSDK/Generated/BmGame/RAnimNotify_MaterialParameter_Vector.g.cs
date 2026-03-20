@@ -45,9 +45,9 @@ public partial class RAnimNotify_MaterialParameter_Vector : BmSDK.Engine.AnimNot
     /// <summary>
     /// StructProperty: Value
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Value
+    public unsafe System.Numerics.Vector4 Value
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

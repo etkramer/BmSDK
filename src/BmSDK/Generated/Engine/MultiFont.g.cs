@@ -36,9 +36,9 @@ public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ResolutionTestTable
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>> ResolutionTestTable
+    public unsafe BmSDK.TArray<float> ResolutionTestTable
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>>>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 }

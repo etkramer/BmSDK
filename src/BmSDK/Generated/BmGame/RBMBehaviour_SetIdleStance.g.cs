@@ -36,9 +36,9 @@ public partial class RBMBehaviour_SetIdleStance : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// ByteProperty: NewIdleStance
     /// </summary>
-    public unsafe byte NewIdleStance
+    public unsafe BmSDK.BmGame.RBMBehaviour_SetIdleStance.IdleStanceName NewIdleStance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_SetIdleStance.IdleStanceName>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
@@ -47,8 +47,8 @@ public partial class RBMBehaviour_SetIdleStance : BmSDK.BmGame.RBMBehaviour, BmS
     /// </summary>
     public unsafe bool bWaitOneFrame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 592); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 592); }
     }
 
     /// <summary>

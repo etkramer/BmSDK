@@ -98,18 +98,18 @@ public partial class RPawnVillainRiddlerMechSuitBase : BmSDK.BmGame.RPawnVillain
     /// <summary>
     /// ObjectProperty: BossModule
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BossModule
+    public unsafe BmSDK.BmGame.RHudModuleBoss BossModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleBoss>(Ptr + 6708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6708); }
     }
 
     /// <summary>
     /// ObjectProperty: TheMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie TheMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 6716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6716); }
     }
 }

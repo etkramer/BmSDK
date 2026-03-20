@@ -45,9 +45,9 @@ public partial class TitleFileCacheEntry : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Data
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Data
+    public unsafe BmSDK.TArray<byte> Data
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -72,18 +72,18 @@ public partial class TitleFileCacheEntry : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: FileOp
     /// </summary>
-    public unsafe byte FileOp
+    public unsafe BmSDK.IpDrv.TitleFileCacheEntry.ETitleFileFileOp FileOp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.TitleFileCacheEntry.ETitleFileFileOp>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
     /// ByteProperty: AsyncState
     /// </summary>
-    public unsafe byte AsyncState
+    public unsafe BmSDK.Engine.OnlineSubsystem.EOnlineEnumerationReadState AsyncState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 137); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.EOnlineEnumerationReadState>(Ptr + 137); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 137); }
     }
 

@@ -36,9 +36,9 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
     /// <summary>
     /// ArrayProperty: Dialogues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrackVectorBase.VectorTrack> Dialogues
+    public unsafe BmSDK.TArray<BmSDK.Engine.RInterpTrackDialogue.FDialogueTrackKey> Dialogues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrackVectorBase.VectorTrack>>(Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RInterpTrackDialogue.FDialogueTrackKey>>(Ptr + 304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 
@@ -47,8 +47,8 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
     /// </summary>
     public unsafe bool bContinueDialogueOnMatineeEnd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
     /// </summary>
     public unsafe bool bStopDialogueOnSkip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -65,16 +65,16 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
     /// </summary>
     public unsafe bool NeedsWarmupFixup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
     /// StructProperty: SpeechOptions
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackVectorBase.VectorTrack SpeechOptions
+    public unsafe BmSDK.Engine.AkDialogue.FAkSpeechOptions SpeechOptions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackVectorBase.VectorTrack>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
@@ -96,9 +96,9 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
         /// <summary>
         /// ObjectProperty: Line
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Line
+        public unsafe BmSDK.Engine.AkDialogueLineSingle Line
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLineSingle>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }

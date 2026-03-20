@@ -71,18 +71,18 @@ public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RSte
     /// <summary>
     /// StructProperty: RobinFrontTakedowns
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.StageAnim RobinFrontTakedowns
+    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet RobinFrontTakedowns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.StageAnim>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// StructProperty: LastWindowCheckLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastWindowCheckLocation
+    public unsafe System.Numerics.Vector3 LastWindowCheckLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1972); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// <summary>
     /// ObjectProperty: CurrentVillain
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentVillain
+    public unsafe BmSDK.BmGame.RPawnVillain CurrentVillain
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
     }
 
@@ -91,8 +91,8 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// </summary>
     public unsafe bool bWasInCombat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// </summary>
     public unsafe bool bCanBeUsedForJokerHallucination
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     /// </summary>
     public unsafe bool bApplyForceAwayFromObjectInPred
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
     }
 
     /// <summary>

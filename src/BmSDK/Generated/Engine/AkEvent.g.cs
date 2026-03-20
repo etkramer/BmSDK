@@ -54,9 +54,9 @@ public partial class AkEvent : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: DurationType
     /// </summary>
-    public unsafe byte DurationType
+    public unsafe BmSDK.Engine.AkEvent.EAkEventDurationType DurationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent.EAkEventDurationType>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 

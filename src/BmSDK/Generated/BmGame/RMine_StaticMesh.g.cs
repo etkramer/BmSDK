@@ -71,9 +71,9 @@ public partial class RMine_StaticMesh : BmSDK.BmGame.RMineBase, BmSDK.IGameObjec
     /// <summary>
     /// ComponentProperty: StaticMeshComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMeshComponent
+    public unsafe BmSDK.Engine.StaticMeshComponent StaticMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

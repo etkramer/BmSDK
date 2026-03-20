@@ -36,18 +36,18 @@ public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: ColorScaleOverLife
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleColorScaleOverLife.AlphaScaleOverLife ColorScaleOverLife
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorScaleOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleColorScaleOverLife.AlphaScaleOverLife>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: AlphaScaleOverLife
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlphaScaleOverLife
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaScaleOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
@@ -56,7 +56,7 @@ public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleMod
     /// </summary>
     public unsafe bool bEmitterTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 }

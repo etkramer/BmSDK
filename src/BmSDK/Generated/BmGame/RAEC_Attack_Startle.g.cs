@@ -71,9 +71,9 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// StructProperty: StartlePos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartlePos
+    public unsafe System.Numerics.Vector3 StartlePos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 }

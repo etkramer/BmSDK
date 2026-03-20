@@ -36,9 +36,9 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// <summary>
     /// ArrayProperty: VariableNodes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> VariableNodes
+    public unsafe BmSDK.TArray<BmSDK.AkAudio.AkSDNode.FVariables> VariableNodes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.AkSDNode.FVariables>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
@@ -54,9 +54,9 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// <summary>
     /// ArrayProperty: ChildNodes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ChildNodes
+    public unsafe BmSDK.TArray<BmSDK.AkAudio.AkSDNode> ChildNodes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.AkSDNode>>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
@@ -65,8 +65,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool HasOutputPin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool HasInputPin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool HasVariablePin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool HasFixedVariables
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool HideFromMenu
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// </summary>
     public unsafe bool IgnoreThisComment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
@@ -162,9 +162,9 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
     /// <summary>
     /// StructProperty: dbgTimer
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT dbgTimer
+    public unsafe double dbgTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
@@ -204,9 +204,9 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
         /// <summary>
         /// ObjectProperty: Entity
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Entity
+        public unsafe BmSDK.AkAudio.AkSDNode Entity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkSDNode>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -231,9 +231,9 @@ public partial class AkSDRelationshipIsFalse : BmSDK.AkAudio.AkSDRelationship, B
         /// <summary>
         /// ObjectProperty: Ed
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Ed
+        public unsafe BmSDK.AkAudio.AkSDNodeDrawInfo Ed
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkSDNodeDrawInfo>(Ptr + 28); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
     }

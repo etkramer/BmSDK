@@ -36,9 +36,9 @@ public partial class InterpTrackInstToggle : BmSDK.Engine.InterpTrackInst, BmSDK
     /// <summary>
     /// ByteProperty: Action
     /// </summary>
-    public unsafe byte Action
+    public unsafe BmSDK.Engine.InterpTrackToggle.ETrackToggleAction Action
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackToggle.ETrackToggleAction>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -56,7 +56,7 @@ public partial class InterpTrackInstToggle : BmSDK.Engine.InterpTrackInst, BmSDK
     /// </summary>
     public unsafe bool bSavedActiveState
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 }

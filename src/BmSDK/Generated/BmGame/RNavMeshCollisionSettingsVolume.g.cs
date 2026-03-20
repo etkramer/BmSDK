@@ -71,18 +71,18 @@ public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSD
     /// <summary>
     /// ArrayProperty: PolyRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> PolyRefList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Pylon.FPolyReference> PolyRefList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pylon.FPolyReference>>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ByteProperty: CollisionSettings
     /// </summary>
-    public unsafe byte CollisionSettings
+    public unsafe BmSDK.BmGame.RNavMeshCollisionSettingsVolume.ENavMeshCollisionSettings CollisionSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavMeshCollisionSettingsVolume.ENavMeshCollisionSettings>(Ptr + 756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 }

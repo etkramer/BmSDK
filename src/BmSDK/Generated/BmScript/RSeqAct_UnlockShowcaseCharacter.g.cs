@@ -36,9 +36,9 @@ public partial class RSeqAct_UnlockShowcaseCharacter : BmSDK.Engine.SequenceActi
     /// <summary>
     /// ByteProperty: Character
     /// </summary>
-    public unsafe byte Character
+    public unsafe BmSDK.BmGame.RPersistentData.EShowcaseCharacter Character
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.EShowcaseCharacter>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -47,7 +47,7 @@ public partial class RSeqAct_UnlockShowcaseCharacter : BmSDK.Engine.SequenceActi
     /// </summary>
     public unsafe bool bDontDisplayMessage
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 }

@@ -54,9 +54,9 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: Format
     /// </summary>
-    public unsafe byte Format
+    public unsafe BmSDK.Engine.Texture.EPixelFormat Format
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.EPixelFormat>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
@@ -74,7 +74,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsResolveTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 324); }
     }
 }

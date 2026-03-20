@@ -36,9 +36,9 @@ public partial class MaterialExpressionMagicUVs : BmSDK.Engine.MaterialExpressio
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Scale
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Scale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

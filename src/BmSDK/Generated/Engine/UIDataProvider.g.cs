@@ -36,9 +36,9 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BadCapsLocContexts
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BadCapsLocContexts
+    public unsafe BmSDK.TArray<BmSDK.FString> BadCapsLocContexts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 

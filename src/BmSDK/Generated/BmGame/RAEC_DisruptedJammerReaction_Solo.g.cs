@@ -71,9 +71,9 @@ public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEven
     /// <summary>
     /// ObjectProperty: JammerDisruptorSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammerDisruptorSound
+    public unsafe BmSDK.Engine.AkEvent JammerDisruptorSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 

@@ -45,9 +45,9 @@ public partial class MaterialExpressionBlurTextureSampleParameter2D : BmSDK.Engi
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 }

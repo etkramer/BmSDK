@@ -100,8 +100,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bCanEnterLevelScriptingWhileCocky
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bDMDDetecting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool lastDMDSignalSucceeded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bDMDExploded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bHasDroneRemoteEquipped
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bHasNoticedDisruptedDroneRemote
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// </summary>
     public unsafe bool bSpawnedArmband
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6764); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6764); }
     }
 
     /// <summary>
@@ -197,9 +197,9 @@ public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPred
     /// <summary>
     /// ObjectProperty: BankDoorPanel
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BankDoorPanel
+    public unsafe BmSDK.BmGame.RBankDoorControlPanelBase BankDoorPanel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBankDoorControlPanelBase>(Ptr + 6784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6784); }
     }
 }

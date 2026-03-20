@@ -36,9 +36,9 @@ public partial class RSeqAct_WaitForCutscenesToFinish : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// ObjectProperty: CurrController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrController
+    public unsafe BmSDK.BmGame.RPlayerController CurrController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 

@@ -71,9 +71,9 @@ public partial class PathTargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: SpriteComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpriteComp
+    public unsafe BmSDK.Engine.SpriteComponent SpriteComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

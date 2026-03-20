@@ -45,9 +45,9 @@ public partial class RSpecialMoveConfig_LineLauncherRescueFinish : BmSDK.BmGame.
     /// <summary>
     /// ObjectProperty: HostageAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostageAnimSet
+    public unsafe BmSDK.Engine.AnimSet HostageAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 }

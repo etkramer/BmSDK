@@ -71,9 +71,9 @@ public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// <summary>
     /// ObjectProperty: TargetPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPlayer
+    public unsafe BmSDK.BmGame.RPawnPlayer TargetPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
@@ -82,8 +82,8 @@ public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// </summary>
     public unsafe bool bConvergeActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 728); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 728); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// </summary>
     public unsafe bool bDoingFearTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 728); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 728); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 728); }
     }
 
     /// <summary>
@@ -107,9 +107,9 @@ public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// <summary>
     /// ByteProperty: AttProg
     /// </summary>
-    public unsafe byte AttProg
+    public unsafe BmSDK.BmGame.RAEC_Attack_Base.AttackProgressState AttProg
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Attack_Base.AttackProgressState>(Ptr + 736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 

@@ -36,9 +36,9 @@ public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: M
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT M
+    public unsafe BmSDK.GameObject.FMatrix M
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

@@ -38,8 +38,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bResetCameraBehindBatman
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bKeepBatmanOnScreen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bDisableCamerCollisionDuringBlend
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bResetCameraBehindBatmanOnSkip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bSimulateCameraCutsOnClients
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bDetachMic
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bLockedFromEdits
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bCinematicLightingMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// </summary>
     public unsafe bool bDontBlendBackToPlayerOnFinish
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -126,27 +126,27 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: CutTrack
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> CutTrack
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrackDirector.FDirectorTrackCut> CutTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrackDirector.FDirectorTrackCut>>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ByteProperty: PreviewBlendFrom
     /// </summary>
-    public unsafe byte PreviewBlendFrom
+    public unsafe BmSDK.Engine.InterpTrackDirector.ECameraBlendType PreviewBlendFrom
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackDirector.ECameraBlendType>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// ByteProperty: PreviewBlendTo
     /// </summary>
-    public unsafe byte PreviewBlendTo
+    public unsafe BmSDK.Engine.InterpTrackDirector.ECameraBlendType PreviewBlendTo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 205); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackDirector.ECameraBlendType>(Ptr + 205); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 205); }
     }
 
@@ -222,9 +222,9 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
         /// <summary>
         /// ArrayProperty: BoundTracks
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BoundTracks
+        public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrack> BoundTracks
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrack>>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }

@@ -36,9 +36,9 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Tabs
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Tabs
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpCurveEdSetup.FCurveEdTab> Tabs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpCurveEdSetup.FCurveEdTab>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -69,9 +69,9 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ArrayProperty: Curves
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Curves
+        public unsafe BmSDK.TArray<BmSDK.Engine.InterpCurveEdSetup.FCurveEdEntry> Curves
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpCurveEdSetup.FCurveEdEntry>>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
@@ -121,18 +121,18 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: CurveObject
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurveObject
+        public unsafe BmSDK.GameObject CurveObject
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: CurveColor
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurveColor
+        public unsafe BmSDK.GameObject.FColor CurveColor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 

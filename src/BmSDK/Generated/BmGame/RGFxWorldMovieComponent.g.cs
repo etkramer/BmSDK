@@ -36,9 +36,9 @@ public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// ObjectProperty: ScaleformObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ScaleformObject
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer ScaleformObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

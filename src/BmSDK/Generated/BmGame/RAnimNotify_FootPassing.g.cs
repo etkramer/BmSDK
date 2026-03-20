@@ -36,9 +36,9 @@ public partial class RAnimNotify_FootPassing : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// <summary>
     /// ByteProperty: Passing
     /// </summary>
-    public unsafe byte Passing
+    public unsafe BmSDK.BmGame.RAnimNotify_FootPassing.EFootPassing Passing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_FootPassing.EFootPassing>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

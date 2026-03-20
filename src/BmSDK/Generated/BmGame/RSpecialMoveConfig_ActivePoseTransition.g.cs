@@ -63,9 +63,9 @@ public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpe
     /// <summary>
     /// ObjectProperty: CustomAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CustomAnimSet
+    public unsafe BmSDK.Engine.AnimSet CustomAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 
@@ -74,16 +74,16 @@ public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpe
     /// </summary>
     public unsafe bool bFinalPoseMirrored
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 432); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 432); }
     }
 
     /// <summary>
     /// ByteProperty: TransitionMirrored
     /// </summary>
-    public unsafe byte TransitionMirrored
+    public unsafe BmSDK.BmGame.RAnimUtil.EMirrorChoice TransitionMirrored
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.EMirrorChoice>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 }

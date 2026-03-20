@@ -36,9 +36,9 @@ public partial class MaterialExpressionFontSample : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// ObjectProperty: Font
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Font
+    public unsafe BmSDK.Engine.Font Font
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Font>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

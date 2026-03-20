@@ -71,9 +71,9 @@ public partial class RBatclawPipeCoverBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// ComponentProperty: CapMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent CapMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

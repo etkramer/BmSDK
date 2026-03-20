@@ -36,9 +36,9 @@ public partial class RBodyInstancePool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: FreeBodyInstIndices
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> FreeBodyInstIndices
+    public unsafe BmSDK.TArray<int> FreeBodyInstIndices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -54,9 +54,9 @@ public partial class RBodyInstancePool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BodyInstancePool
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BodyInstancePool
+    public unsafe BmSDK.TArray<BmSDK.Engine.RB_BodyInstance> BodyInstancePool
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RB_BodyInstance>>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 

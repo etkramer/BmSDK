@@ -36,9 +36,9 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// ArrayProperty: RegisteredHandlers
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> RegisteredHandlers
+    public unsafe BmSDK.TArray<BmSDK.Engine.GameplayEventsHandler> RegisteredHandlers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameplayEventsHandler>>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 }

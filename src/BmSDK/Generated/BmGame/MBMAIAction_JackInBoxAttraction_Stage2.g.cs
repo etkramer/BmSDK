@@ -89,9 +89,9 @@ public partial class MBMAIAction_JackInBoxAttraction_Stage2 : BmSDK.BmGame.RBMAI
     /// <summary>
     /// ObjectProperty: LookAtActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LookAtActor
+    public unsafe BmSDK.Engine.Actor LookAtActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 }

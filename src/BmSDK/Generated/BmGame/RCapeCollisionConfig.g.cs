@@ -36,9 +36,9 @@ public partial class RCapeCollisionConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CollisionShapeConfigs
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT CollisionShapeConfigs
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeCollisionShapeConfig> CollisionShapeConfigs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeCollisionShapeConfig>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

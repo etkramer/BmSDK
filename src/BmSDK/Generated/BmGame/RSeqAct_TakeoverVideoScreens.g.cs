@@ -36,27 +36,27 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// ObjectProperty: takeoverTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT takeoverTexture
+    public unsafe BmSDK.Engine.TextureRenderTarget2D takeoverTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTarget2D>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// ByteProperty: takeoverOriginator
     /// </summary>
-    public unsafe byte takeoverOriginator
+    public unsafe BmSDK.BmGame.RSeqAct_TakeoverVideoScreens.eVideoTakeoverOriginator takeoverOriginator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_TakeoverVideoScreens.eVideoTakeoverOriginator>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ByteProperty: TransitionType
     /// </summary>
-    public unsafe byte TransitionType
+    public unsafe BmSDK.BmGame.RSeqAct_TakeoverVideoScreens.eVideoTakoverTransitionType TransitionType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 385); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_TakeoverVideoScreens.eVideoTakoverTransitionType>(Ptr + 385); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 385); }
     }
 
@@ -83,7 +83,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// </summary>
     public unsafe bool bNeedsTransOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
     }
 }

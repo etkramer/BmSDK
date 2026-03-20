@@ -54,9 +54,9 @@ public partial class RSpecialMoveConfig_HarpoonDragObject : BmSDK.BmGame.RSpecia
     /// <summary>
     /// ArrayProperty: PullAnim
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> PullAnim
+    public unsafe BmSDK.TArray<BmSDK.FName> PullAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
@@ -99,18 +99,18 @@ public partial class RSpecialMoveConfig_HarpoonDragObject : BmSDK.BmGame.RSpecia
     /// <summary>
     /// ObjectProperty: RopePullTension
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RopePullTension
+    public unsafe BmSDK.Engine.AkEvent RopePullTension
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
     }
 
     /// <summary>
     /// ObjectProperty: PullTensionParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PullTensionParam
+    public unsafe BmSDK.Engine.AkParameterName PullTensionParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 

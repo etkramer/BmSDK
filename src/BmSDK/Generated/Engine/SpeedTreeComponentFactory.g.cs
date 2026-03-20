@@ -36,9 +36,9 @@ public partial class SpeedTreeComponentFactory : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// ComponentProperty: SpeedTreeComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpeedTreeComponent
+    public unsafe BmSDK.Engine.SpeedTreeComponent SpeedTreeComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeedTreeComponent>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

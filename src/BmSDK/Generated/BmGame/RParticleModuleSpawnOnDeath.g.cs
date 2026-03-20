@@ -36,9 +36,9 @@ public partial class RParticleModuleSpawnOnDeath : BmSDK.BmGame.RParticleModuleO
     /// <summary>
     /// ObjectProperty: ParticleEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleEffect
+    public unsafe BmSDK.Engine.ParticleSystem ParticleEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

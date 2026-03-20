@@ -45,9 +45,9 @@ public partial class SkyLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGam
     /// <summary>
     /// StructProperty: LowerColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LowerColor
+    public unsafe BmSDK.GameObject.FColor LowerColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 }

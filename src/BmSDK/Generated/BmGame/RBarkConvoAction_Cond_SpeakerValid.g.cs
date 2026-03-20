@@ -36,9 +36,9 @@ public partial class RBarkConvoAction_Cond_SpeakerValid : BmSDK.BmGame.RBarkConv
     /// <summary>
     /// ObjectProperty: PawnRef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnRef
+    public unsafe BmSDK.BmGame.RBarkConvoPawnRef PawnRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkConvoPawnRef>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 }

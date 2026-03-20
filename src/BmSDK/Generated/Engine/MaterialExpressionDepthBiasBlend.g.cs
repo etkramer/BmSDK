@@ -38,8 +38,8 @@ public partial class MaterialExpressionDepthBiasBlend : BmSDK.Engine.MaterialExp
     /// </summary>
     public unsafe bool bNormalize
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 284); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 284); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 284); }
     }
 
     /// <summary>
@@ -54,9 +54,9 @@ public partial class MaterialExpressionDepthBiasBlend : BmSDK.Engine.MaterialExp
     /// <summary>
     /// StructProperty: Bias
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTextureSample.Coordinates Bias
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Bias
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTextureSample.Coordinates>(Ptr + 292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 }

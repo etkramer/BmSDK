@@ -36,9 +36,9 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_AkDialogueVoice
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkDialogueVoice
+    public unsafe System.IntPtr VfTable_AkDialogueVoice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
@@ -63,9 +63,9 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: EmoteSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EmoteSet
+    public unsafe BmSDK.Engine.AkEmoteSet EmoteSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEmoteSet>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
@@ -81,18 +81,18 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: VoiceGender
     /// </summary>
-    public unsafe byte VoiceGender
+    public unsafe BmSDK.Engine.AkDialogue.AkDialogueVoiceGender VoiceGender
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.AkDialogueVoiceGender>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// ByteProperty: VoiceEthnicity
     /// </summary>
-    public unsafe byte VoiceEthnicity
+    public unsafe BmSDK.Engine.AkDialogue.AkDialogueVoiceEthnicity VoiceEthnicity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 145); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.AkDialogueVoiceEthnicity>(Ptr + 145); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 145); }
     }
 
@@ -110,8 +110,8 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAllowSimultaneousSpeech
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShowDetectiveModeBeacon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ClonedVoice
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 
     /// <summary>
@@ -137,7 +137,7 @@ public partial class AkDialogueVoice : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNeverStripFaceFxOnCook
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 }

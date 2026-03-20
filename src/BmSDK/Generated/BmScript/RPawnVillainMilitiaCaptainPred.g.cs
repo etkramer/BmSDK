@@ -71,36 +71,36 @@ public partial class RPawnVillainMilitiaCaptainPred : BmSDK.BmScript.RPawnVillai
     /// <summary>
     /// ArrayProperty: DestroyMineController
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> DestroyMineController
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSpecialMoveConfig> DestroyMineController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 6808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSpecialMoveConfig>>(Ptr + 6808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6808); }
     }
 
     /// <summary>
     /// ObjectProperty: DestroyMineControllerNoCamera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestroyMineControllerNoCamera
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig DestroyMineControllerNoCamera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 6824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6824); }
     }
 
     /// <summary>
     /// ObjectProperty: ProximitySFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProximitySFX
+    public unsafe BmSDK.Engine.AkEvent ProximitySFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6832); }
     }
 
     /// <summary>
     /// ComponentProperty: ControllerDevicePFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerDevicePFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ControllerDevicePFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6840); }
     }
 
@@ -118,8 +118,8 @@ public partial class RPawnVillainMilitiaCaptainPred : BmSDK.BmScript.RPawnVillai
     /// </summary>
     public unsafe bool bBlockInteract
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6852) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6852); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6852); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6852) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6852); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6852); }
     }
 
     /// <summary>

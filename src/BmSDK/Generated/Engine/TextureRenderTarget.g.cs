@@ -38,8 +38,8 @@ public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bUpdateImmediate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bNeedsTwoCopies
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bRenderOnce
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
     }
 
     /// <summary>

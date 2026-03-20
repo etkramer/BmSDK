@@ -80,9 +80,9 @@ public partial class RJokerGunGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.
     /// <summary>
     /// ArrayProperty: InstantKillBoneNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> InstantKillBoneNames
+    public unsafe BmSDK.TArray<BmSDK.FName> InstantKillBoneNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2072); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
     }
 }

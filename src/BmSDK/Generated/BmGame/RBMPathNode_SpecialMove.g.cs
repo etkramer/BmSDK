@@ -80,9 +80,9 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: PairedNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PairedNode
+    public unsafe BmSDK.BmGame.RBMPathNode_SpecialMove PairedNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_SpecialMove>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 }

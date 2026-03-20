@@ -36,9 +36,9 @@ public partial class SeqAct_AkMusicTrigger : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// ObjectProperty: MusicTriggerName
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MusicTriggerName
+    public unsafe BmSDK.Engine.AkTriggerName MusicTriggerName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkTriggerName>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

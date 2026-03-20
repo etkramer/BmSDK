@@ -91,7 +91,7 @@ public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmS
     /// </summary>
     public unsafe bool bJokerInNervousPose
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1376); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1376); }
     }
 }

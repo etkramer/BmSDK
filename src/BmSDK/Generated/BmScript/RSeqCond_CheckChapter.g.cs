@@ -36,18 +36,18 @@ public partial class RSeqCond_CheckChapter : BmSDK.Engine.SequenceCondition, BmS
     /// <summary>
     /// ByteProperty: SideStory
     /// </summary>
-    public unsafe byte SideStory
+    public unsafe BmSDK.Engine.Actor.ESideStory SideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.ESideStory>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// ByteProperty: SubChapter
     /// </summary>
-    public unsafe byte SubChapter
+    public unsafe BmSDK.BmScript.RSeqAct_MostWantedEndOfGameState.ESubChapter SubChapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 325); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_MostWantedEndOfGameState.ESubChapter>(Ptr + 325); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 325); }
     }
 

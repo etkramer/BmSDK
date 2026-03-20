@@ -73,52 +73,52 @@ public partial class RPawnVillainJokerBoxerBase : BmSDK.BmGame.RPawnVillainThug,
     /// </summary>
     public unsafe bool bIsAttacking
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>
     /// ArrayProperty: JBCombatAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> JBCombatAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> JBCombatAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 6700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6700); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerCombatAnimset
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> PlayerCombatAnimset
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> PlayerCombatAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 6716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6716); }
     }
 
     /// <summary>
     /// ObjectProperty: BossModule
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BossModule
+    public unsafe BmSDK.BmGame.RHudModuleBoss BossModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleBoss>(Ptr + 6732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6732); }
     }
 
     /// <summary>
     /// ObjectProperty: TheMovieInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheMovieInstance
+    public unsafe BmSDK.GFxUI.SwfMovie TheMovieInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 6740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6740); }
     }
 
     /// <summary>
     /// ClassProperty: ReviveMoveClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReviveMoveClass
+    public unsafe BmSDK.Class ReviveMoveClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 6748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6748); }
     }
 

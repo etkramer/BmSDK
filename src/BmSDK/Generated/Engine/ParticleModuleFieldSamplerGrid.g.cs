@@ -36,9 +36,9 @@ public partial class ParticleModuleFieldSamplerGrid : BmSDK.Engine.ParticleModul
     /// <summary>
     /// ComponentProperty: FieldSamplerComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FieldSamplerComponent
+    public unsafe BmSDK.Engine.ApexFieldSamplerComponent FieldSamplerComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

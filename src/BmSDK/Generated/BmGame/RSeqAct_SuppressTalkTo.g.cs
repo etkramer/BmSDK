@@ -36,9 +36,9 @@ public partial class RSeqAct_SuppressTalkTo : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// ObjectProperty: pawnFriendly
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT pawnFriendly
+    public unsafe BmSDK.BmGame.RPawnFriendly pawnFriendly
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnFriendly>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

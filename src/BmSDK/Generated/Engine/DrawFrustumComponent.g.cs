@@ -36,9 +36,9 @@ public partial class DrawFrustumComponent : BmSDK.Engine.PrimitiveComponent, BmS
     /// <summary>
     /// StructProperty: FrustumColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FrustumColor
+    public unsafe BmSDK.GameObject.FColor FrustumColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
@@ -81,9 +81,9 @@ public partial class DrawFrustumComponent : BmSDK.Engine.PrimitiveComponent, BmS
     /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
+    public unsafe BmSDK.Engine.Texture Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 }

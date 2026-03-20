@@ -36,9 +36,9 @@ public partial class OnlineStats : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ViewIdMappings
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ViewIdMappings
+    public unsafe BmSDK.TArray<BmSDK.Engine.Settings.FStringIdToStringMapping> ViewIdMappings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Settings.FStringIdToStringMapping>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

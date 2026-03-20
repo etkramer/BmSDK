@@ -54,9 +54,9 @@ public partial class RSpecialMoveConfig_EjectIntoFirefly : BmSDK.BmGame.RSpecial
     /// <summary>
     /// ArrayProperty: PunchAnimNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> PunchAnimNames
+    public unsafe BmSDK.TArray<BmSDK.FName> PunchAnimNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
@@ -126,27 +126,27 @@ public partial class RSpecialMoveConfig_EjectIntoFirefly : BmSDK.BmGame.RSpecial
     /// <summary>
     /// StructProperty: LightingOffsetRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightingOffsetRot
+    public unsafe BmSDK.Rotator LightingOffsetRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 
     /// <summary>
     /// StructProperty: LightingOffsetLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightingOffsetLoc
+    public unsafe System.Numerics.Vector3 LightingOffsetLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
     /// <summary>
     /// ArrayProperty: FireflyDefines
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FireflyDefines
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCharacterDefine> FireflyDefines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCharacterDefine>>(Ptr + 484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
     }
 }

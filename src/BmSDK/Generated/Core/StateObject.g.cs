@@ -36,9 +36,9 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StateFrame
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFrame
+    public unsafe System.IntPtr StateFrame
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

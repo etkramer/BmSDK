@@ -36,9 +36,9 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// ObjectProperty: Chinook
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Chinook
+    public unsafe BmSDK.BmGame.RHelicopterBase Chinook
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
@@ -54,9 +54,9 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// StructProperty: PassengerInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PassengerInfo
+    public unsafe BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo PassengerInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
@@ -65,8 +65,8 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// </summary>
     public unsafe bool bPlayerClose
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 644); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 644); }
     }
 
     /// <summary>
@@ -74,7 +74,7 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// </summary>
     public unsafe bool bAbseiled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 644); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 644); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 644); }
     }
 }

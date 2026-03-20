@@ -36,18 +36,18 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// ArrayProperty: CoreAnimSets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>> CoreAnimSets
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> CoreAnimSets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>>>(Ptr + 2648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 2648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
     }
 
     /// <summary>
     /// ByteProperty: CapeBoundsCalculationType
     /// </summary>
-    public unsafe byte CapeBoundsCalculationType
+    public unsafe BmSDK.BmGame.RCapeSkeletalMeshComponent.ECapeBoundsCalculationType CapeBoundsCalculationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeSkeletalMeshComponent.ECapeBoundsCalculationType>(Ptr + 2664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2664); }
     }
 
@@ -63,36 +63,36 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// ArrayProperty: BoneUseComponentReferenceRotationFlags
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations> BoneUseComponentReferenceRotationFlags
+    public unsafe BmSDK.TArray<int> BoneUseComponentReferenceRotationFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>>(Ptr + 2672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2672); }
     }
 
     /// <summary>
     /// ObjectProperty: MatInstConst
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent.Animations MatInstConst
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MatInstConst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent.Animations>(Ptr + 2688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 2688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2688); }
     }
 
     /// <summary>
     /// ObjectProperty: DefaultMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultMaterial
+    public unsafe BmSDK.Engine.MaterialInterface DefaultMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 2696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2696); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideMaterial
+    public unsafe BmSDK.Engine.MaterialInterface OverrideMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 2704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
     }
 

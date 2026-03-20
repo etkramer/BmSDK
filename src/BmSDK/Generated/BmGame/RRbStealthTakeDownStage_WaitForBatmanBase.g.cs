@@ -73,25 +73,25 @@ public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RS
     /// </summary>
     public unsafe bool bBatmanStartedGlideKick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
     /// ByteProperty: GlideKickTakedownStage
     /// </summary>
-    public unsafe byte GlideKickTakedownStage
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages GlideKickTakedownStage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
     }
 
     /// <summary>
     /// ByteProperty: Stage
     /// </summary>
-    public unsafe byte Stage
+    public unsafe BmSDK.BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.EWaitForBatmanStages Stage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1669); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRbStealthTakeDownStage_WaitForBatmanBase.EWaitForBatmanStages>(Ptr + 1669); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1669); }
     }
 

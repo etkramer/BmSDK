@@ -73,8 +73,8 @@ public partial class RVehicleHush : BmSDK.BmGame.RVehicleHushBase, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bBlownUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7732); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class RVehicleHush : BmSDK.BmGame.RVehicleHushBase, BmSDK.IGameOb
     /// </summary>
     public unsafe bool BothDoorsOpen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7732); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7732); }
     }
 }

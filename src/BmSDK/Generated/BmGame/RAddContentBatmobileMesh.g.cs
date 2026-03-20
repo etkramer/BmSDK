@@ -36,18 +36,18 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// <summary>
     /// ArrayProperty: MaterialOverrides
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MaterialOverrides
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RAddContentBatmobileMesh.FBatmobileMaterialOverride> MaterialOverrides
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAddContentBatmobileMesh.FBatmobileMaterialOverride>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// StructProperty: DamageChapter
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DamageChapter
+    public unsafe BmSDK.GameObject.FLinearColor DamageChapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
@@ -72,9 +72,9 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// <summary>
     /// StructProperty: DamageColour
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DamageColour
+    public unsafe BmSDK.GameObject.FLinearColor DamageColour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
@@ -132,9 +132,9 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
         /// <summary>
         /// ObjectProperty: Material
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Material
+        public unsafe BmSDK.Engine.MaterialInterface Material
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }

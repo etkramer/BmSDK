@@ -71,9 +71,9 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: MyStaticMeshActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyStaticMeshActor
+    public unsafe BmSDK.Engine.Actor MyStaticMeshActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
 

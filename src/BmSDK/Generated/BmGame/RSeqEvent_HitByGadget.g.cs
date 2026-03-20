@@ -36,18 +36,18 @@ public partial class RSeqEvent_HitByGadget : BmSDK.Engine.SequenceEvent, BmSDK.I
     /// <summary>
     /// ArrayProperty: GadgetClassesToIgnore
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GadgetClassesToIgnore
+    public unsafe BmSDK.TArray<BmSDK.Class> GadgetClassesToIgnore
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
     /// ClassProperty: GadgetClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GadgetClass
+    public unsafe BmSDK.Class GadgetClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 
@@ -63,9 +63,9 @@ public partial class RSeqEvent_HitByGadget : BmSDK.Engine.SequenceEvent, BmSDK.I
     /// <summary>
     /// ArrayProperty: GadgetClassToIgnoreAsString
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> GadgetClassToIgnoreAsString
+    public unsafe BmSDK.TArray<BmSDK.FString> GadgetClassToIgnoreAsString
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 }

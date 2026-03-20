@@ -71,9 +71,9 @@ public partial class RResonatorDisruptor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InterfaceProperty: TargetDevice
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetDevice
+    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface TargetDevice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoteControlHighSecurityInterface>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

@@ -71,27 +71,27 @@ public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// ClassProperty: ProjectileClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileClass
+    public unsafe BmSDK.Class ProjectileClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 2068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTarget
+    public unsafe BmSDK.BmGame.RPawnCombat CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// ObjectProperty: SwordProjectile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwordProjectile
+    public unsafe BmSDK.BmGame.RSwordProjectile SwordProjectile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwordProjectile>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
@@ -107,9 +107,9 @@ public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetPosition
+    public unsafe System.Numerics.Vector3 TargetPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 }

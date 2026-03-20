@@ -36,9 +36,9 @@ public partial class ParticleModuleSourceMovement : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: SourceMovementScale
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SourceMovementScale
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector SourceMovementScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

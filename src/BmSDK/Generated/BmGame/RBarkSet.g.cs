@@ -36,18 +36,18 @@ public partial class RBarkSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: BarkConvos
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> BarkConvos
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvo> BarkConvos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkConvo>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ArrayProperty: StoredEVM
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT StoredEVM
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkSet.FMapProxyForSaving> StoredEVM
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkSet.FMapProxyForSaving>>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 

@@ -71,90 +71,90 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// <summary>
     /// ComponentProperty: FistFxCompLeft
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FistFxCompLeft
+    public unsafe BmSDK.Engine.ParticleSystemComponent FistFxCompLeft
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6664); }
     }
 
     /// <summary>
     /// ComponentProperty: FistFxCompRight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FistFxCompRight
+    public unsafe BmSDK.Engine.ParticleSystemComponent FistFxCompRight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6672); }
     }
 
     /// <summary>
     /// ObjectProperty: FistFx
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FistFx
+    public unsafe BmSDK.Engine.ParticleSystem FistFx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
     }
 
     /// <summary>
     /// ObjectProperty: BladeFx
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BladeFx
+    public unsafe BmSDK.Engine.ParticleSystem BladeFx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
     }
 
     /// <summary>
     /// ObjectProperty: EFAudible
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC EFAudible
+    public unsafe BmSDK.Engine.RAkAudible EFAudible
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>(Ptr + 6696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudible>(Ptr + 6696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
     }
 
     /// <summary>
     /// ObjectProperty: EFistLoopingEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EFistLoopingEvent
+    public unsafe BmSDK.Engine.AkEvent EFistLoopingEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6704); }
     }
 
     /// <summary>
     /// ObjectProperty: LastFoundThugToThrow
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastFoundThugToThrow
+    public unsafe BmSDK.BmGame.RPawnVillain LastFoundThugToThrow
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 6712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
     }
 
     /// <summary>
     /// ObjectProperty: WeaponXrayMIC
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillainMultiStageBase.AllowedStates WeaponXrayMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant WeaponXrayMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainMultiStageBase.AllowedStates>(Ptr + 6720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
     }
 
     /// <summary>
     /// ComponentProperty: BladeFxCompRight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BladeFxCompRight
+    public unsafe BmSDK.Engine.ParticleSystemComponent BladeFxCompRight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6728); }
     }
 
     /// <summary>
     /// ComponentProperty: BladeFxCompLeft
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BladeFxCompLeft
+    public unsafe BmSDK.Engine.ParticleSystemComponent BladeFxCompLeft
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6736); }
     }
 
@@ -172,8 +172,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bFistFxOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bLeftBladeFxOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bRightBladeFxOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bQueueChangeState
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bInvincible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// </summary>
     public unsafe bool bTutorial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6748); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6748); }
     }
 
     /// <summary>
@@ -242,27 +242,27 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     /// <summary>
     /// ByteProperty: ThugState
     /// </summary>
-    public unsafe byte ThugState
+    public unsafe BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState ThugState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 6760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState>(Ptr + 6760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6760); }
     }
 
     /// <summary>
     /// ArrayProperty: AllowedStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> AllowedStates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState> AllowedStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 6764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState>>(Ptr + 6764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6764); }
     }
 
     /// <summary>
     /// ArrayProperty: TempThugStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> TempThugStates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState> TempThugStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.EThugState>>(Ptr + 6780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6780); }
     }
 

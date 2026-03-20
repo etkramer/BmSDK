@@ -71,99 +71,99 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// ObjectProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTarget
+    public unsafe BmSDK.Engine.Actor CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
     }
 
     /// <summary>
     /// ObjectProperty: PreviousTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviousTarget
+    public unsafe BmSDK.Engine.Actor PreviousTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// ObjectProperty: LastPrimaryBeamTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastPrimaryBeamTarget
+    public unsafe BmSDK.Engine.Actor LastPrimaryBeamTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
     }
 
     /// <summary>
     /// ObjectProperty: ThumbPadMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThumbPadMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ThumbPadMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 2092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
     }
 
     /// <summary>
     /// ObjectProperty: HackDeniedSFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HackDeniedSFX
+    public unsafe BmSDK.Engine.AkEvent HackDeniedSFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
     }
 
     /// <summary>
     /// ObjectProperty: HackSuccesfulSFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HackSuccesfulSFX
+    public unsafe BmSDK.Engine.AkEvent HackSuccesfulSFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2108); }
     }
 
     /// <summary>
     /// ObjectProperty: SubroutineSwitchSFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SubroutineSwitchSFX
+    public unsafe BmSDK.Engine.AkEvent SubroutineSwitchSFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
     }
 
     /// <summary>
     /// ObjectProperty: HackingViewVillainMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HackingViewVillainMaterial
+    public unsafe BmSDK.Engine.MaterialInterface HackingViewVillainMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 2124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
     }
 
     /// <summary>
     /// ComponentProperty: CurrentTargetBeam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentTargetBeam
+    public unsafe BmSDK.Engine.ParticleSystemComponent CurrentTargetBeam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2132); }
     }
 
     /// <summary>
     /// ArrayProperty: SecondaryTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> SecondaryTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> SecondaryTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2140); }
     }
 
     /// <summary>
     /// ArrayProperty: TriggerTargetBeams
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> TriggerTargetBeams
+    public unsafe BmSDK.TArray<BmSDK.BmGame.MHackingGadgetBase.FBatgirlSecondaryTargetData> TriggerTargetBeams
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.MHackingGadgetBase.FBatgirlSecondaryTargetData>>(Ptr + 2156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
     }
 
@@ -181,8 +181,8 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// </summary>
     public unsafe bool bAffectedActorsBeamsAreVisible
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2176); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2176); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// </summary>
     public unsafe bool bPasswordCrackingMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2176); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2176); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2176); }
     }
 
     /// <summary>
@@ -224,9 +224,9 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// StructProperty: FireAnimationId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FireAnimationId
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FireAnimationId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2192); }
     }
 
@@ -242,18 +242,18 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// StructProperty: vLastPrimaryBeamColour
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vLastPrimaryBeamColour
+    public unsafe System.Numerics.Vector3 vLastPrimaryBeamColour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2212); }
     }
 
     /// <summary>
     /// StructProperty: vCurrentTargetBeamColour
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vCurrentTargetBeamColour
+    public unsafe System.Numerics.Vector3 vCurrentTargetBeamColour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2224); }
     }
 
@@ -284,9 +284,9 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
         /// <summary>
         /// ObjectProperty: Target
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Target
+        public unsafe BmSDK.Engine.Actor Target
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -295,16 +295,16 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
         /// </summary>
         public unsafe bool bActive
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
         }
 
         /// <summary>
         /// ComponentProperty: ConnectionBeam
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConnectionBeam
+        public unsafe BmSDK.Engine.ParticleSystemComponent ConnectionBeam
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }

@@ -36,9 +36,9 @@ public partial class SeqAct_AkDialogueSetVoiceSubtitle : BmSDK.AkAudio.SeqAct_Ak
     /// <summary>
     /// ObjectProperty: Speaker
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Speaker
+    public unsafe BmSDK.Engine.Actor Speaker
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

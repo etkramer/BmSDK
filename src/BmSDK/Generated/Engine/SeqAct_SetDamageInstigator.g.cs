@@ -36,9 +36,9 @@ public partial class SeqAct_SetDamageInstigator : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ObjectProperty: DamageInstigator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageInstigator
+    public unsafe BmSDK.Engine.Actor DamageInstigator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

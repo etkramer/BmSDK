@@ -36,9 +36,9 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBas
     /// <summary>
     /// ObjectProperty: Game
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Game
+    public unsafe BmSDK.Engine.GameInfo Game
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameInfo>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 

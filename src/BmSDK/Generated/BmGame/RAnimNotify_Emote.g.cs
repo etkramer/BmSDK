@@ -36,9 +36,9 @@ public partial class RAnimNotify_Emote : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: EmoteType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EmoteType
+    public unsafe BmSDK.Engine.AkEmoteType EmoteType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEmoteType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

@@ -36,108 +36,108 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// ObjectProperty: GameState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GameState
+    public unsafe BmSDK.Engine.GameStateObject GameState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStateObject>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ArrayProperty: AggregatesList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>>> AggregatesList
+    public unsafe BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FAggregateEventMapping> AggregatesList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>>>>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FAggregateEventMapping>>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// StructProperty: AggregateEventsMapping
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AggregateEventsMapping
+    public unsafe BmSDK.GameObject.FMap_Mirror AggregateEventsMapping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
     /// ArrayProperty: AggregateEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>> AggregateEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.GameplayEvents.FGameplayEventMetaData> AggregateEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>>>(Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameplayEvents.FGameplayEventMetaData>>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// ArrayProperty: AggregatesFound
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>> AggregatesFound
+    public unsafe BmSDK.TArray<int> AggregatesFound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>>(Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
     /// StructProperty: AllGameEvents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AllGameEvents
+    public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents AllGameEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ArrayProperty: AllTeamEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>> AllTeamEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FTeamEvents> AllTeamEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FTeamEvents>>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// ArrayProperty: AllPlayerEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents> AllPlayerEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FPlayerEvents> AllPlayerEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>>(Ptr + 340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameStatsAggregator.FPlayerEvents>>(Ptr + 340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>
     /// StructProperty: AllWeaponEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.AllProjectileEvents AllWeaponEvents
+    public unsafe BmSDK.Engine.GameStatsAggregator.FWeaponEvents AllWeaponEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.AllProjectileEvents>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
     /// StructProperty: AllProjectileEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.AllPawnEvents AllProjectileEvents
+    public unsafe BmSDK.Engine.GameStatsAggregator.FProjectileEvents AllProjectileEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.AllPawnEvents>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
     /// <summary>
     /// StructProperty: AllPawnEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.AllDamageEvents AllPawnEvents
+    public unsafe BmSDK.Engine.GameStatsAggregator.FPawnEvents AllPawnEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.AllDamageEvents>(Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FPawnEvents>(Ptr + 532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
 
     /// <summary>
     /// StructProperty: AllDamageEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameplayEventsHandler.EventIDFilter AllDamageEvents
+    public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents AllDamageEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEventsHandler.EventIDFilter>(Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
 

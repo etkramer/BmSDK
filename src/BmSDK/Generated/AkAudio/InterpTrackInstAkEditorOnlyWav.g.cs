@@ -45,9 +45,9 @@ public partial class InterpTrackInstAkEditorOnlyWav : BmSDK.Engine.InterpTrackIn
     /// <summary>
     /// ArrayProperty: Playing
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Playing
+    public unsafe BmSDK.TArray<BmSDK.AkAudio.InterpTrackInstAkEditorOnlyWav.FAkWavData> Playing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.InterpTrackInstAkEditorOnlyWav.FAkWavData>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
@@ -114,9 +114,9 @@ public partial class InterpTrackInstAkEditorOnlyWav : BmSDK.Engine.InterpTrackIn
         /// <summary>
         /// StructProperty: SampleBuffer
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SampleBuffer
+        public unsafe System.IntPtr SampleBuffer
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 

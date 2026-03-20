@@ -36,18 +36,18 @@ public partial class MaterialExpressionLightmassReplace : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: Realtime
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionLightmassReplace.Lightmass Realtime
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Realtime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionLightmassReplace.Lightmass>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Lightmass
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Lightmass
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Lightmass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

@@ -45,9 +45,9 @@ public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ChildNodes
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ChildNodes
+    public unsafe BmSDK.TArray<BmSDK.Engine.SoundNode> ChildNodes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SoundNode>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

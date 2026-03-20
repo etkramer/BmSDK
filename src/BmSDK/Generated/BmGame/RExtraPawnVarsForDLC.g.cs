@@ -100,8 +100,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bSnaredAtStartOfTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool lastFearTakedownContributedToVoiceSynthChallenge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bAttackedFromGrate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bKnockoutSmashFromTakedownFromAbove
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bKnockoutSmashFromCorner
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bFrozenThugTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bLastTakedownWasFromLedge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bLastTakedownStartedDuringMayhemMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
     }
 
     /// <summary>

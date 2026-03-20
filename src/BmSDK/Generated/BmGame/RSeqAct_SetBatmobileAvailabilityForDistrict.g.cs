@@ -36,9 +36,9 @@ public partial class RSeqAct_SetBatmobileAvailabilityForDistrict : BmSDK.Engine.
     /// <summary>
     /// ByteProperty: DistrictOverride
     /// </summary>
-    public unsafe byte DistrictOverride
+    public unsafe BmSDK.BmGame.RGameInfo.EDistrict DistrictOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EDistrict>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

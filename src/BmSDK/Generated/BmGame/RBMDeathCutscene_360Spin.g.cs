@@ -45,9 +45,9 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// StructProperty: HangTimeRotator
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HangTimeRotator
+    public unsafe BmSDK.Rotator HangTimeRotator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 

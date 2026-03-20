@@ -45,9 +45,9 @@ public partial class InterpTrackInstSound : BmSDK.Engine.InterpTrackInst, BmSDK.
     /// <summary>
     /// ComponentProperty: PlayAudioComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayAudioComp
+    public unsafe BmSDK.Engine.AudioComponent PlayAudioComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AudioComponent>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

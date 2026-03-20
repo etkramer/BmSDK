@@ -71,9 +71,9 @@ public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSo
     /// <summary>
     /// ObjectProperty: ForceMissActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceMissActor
+    public unsafe BmSDK.Engine.Actor ForceMissActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

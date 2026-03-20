@@ -36,18 +36,18 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// ArrayProperty: EmittersReplay
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT EmittersReplay
+    public unsafe BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplay> EmittersReplay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplay>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: SnapshotFramesTime
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SnapshotFramesTime
+    public unsafe BmSDK.TArray<float> SnapshotFramesTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -96,27 +96,27 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
         /// <summary>
         /// ArrayProperty: Frames
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Frames
+        public unsafe BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplayFrame> Frames
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplayFrame>>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
 
         /// <summary>
         /// ArrayProperty: SnapshotFrames
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SnapshotFrames
+        public unsafe BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplaySnapshotFrame> SnapshotFrames
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RParticleSystemEconomicalReplay.FMParticleEmitterEconomicalReplaySnapshotFrame>>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
         /// ArrayProperty: SpawnedParticleIndex
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawnedParticleIndex
+        public unsafe BmSDK.TArray<int> SpawnedParticleIndex
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 52); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
@@ -148,27 +148,27 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
         /// <summary>
         /// ArrayProperty: ParticleData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ParticleData
+        public unsafe BmSDK.TArray<byte> ParticleData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
         /// ArrayProperty: ParticleLittleEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ParticleLittleEndianData
+        public unsafe BmSDK.TArray<byte> ParticleLittleEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
 
         /// <summary>
         /// ArrayProperty: ParticleBigEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ParticleBigEndianData
+        public unsafe BmSDK.TArray<byte> ParticleBigEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
     }
@@ -209,54 +209,54 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
         /// <summary>
         /// ArrayProperty: SpawnedParticleData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawnedParticleData
+        public unsafe BmSDK.TArray<byte> SpawnedParticleData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// ArrayProperty: SpawnedParticleLittleEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawnedParticleLittleEndianData
+        public unsafe BmSDK.TArray<byte> SpawnedParticleLittleEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 28); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// ArrayProperty: SpawnedParticleBigEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawnedParticleBigEndianData
+        public unsafe BmSDK.TArray<byte> SpawnedParticleBigEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 44); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 44); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
         }
 
         /// <summary>
         /// ArrayProperty: DiedParticleData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DiedParticleData
+        public unsafe BmSDK.TArray<byte> DiedParticleData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 60); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 60); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
         }
 
         /// <summary>
         /// ArrayProperty: DiedParticleLittleEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DiedParticleLittleEndianData
+        public unsafe BmSDK.TArray<byte> DiedParticleLittleEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 76); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 76); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
         }
 
         /// <summary>
         /// ArrayProperty: DiedParticleBigEndianData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DiedParticleBigEndianData
+        public unsafe BmSDK.TArray<byte> DiedParticleBigEndianData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 92); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }; }
         }
     }
@@ -279,9 +279,9 @@ public partial class RParticleSystemEconomicalReplay : BmSDK.GameObject, BmSDK.I
         /// <summary>
         /// ArrayProperty: ParticleData
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ParticleData
+        public unsafe BmSDK.TArray<byte> ParticleData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }

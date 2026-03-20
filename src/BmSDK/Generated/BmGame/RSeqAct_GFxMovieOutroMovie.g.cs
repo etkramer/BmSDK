@@ -36,9 +36,9 @@ public partial class RSeqAct_GFxMovieOutroMovie : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ObjectProperty: Movie
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Movie
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer Movie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

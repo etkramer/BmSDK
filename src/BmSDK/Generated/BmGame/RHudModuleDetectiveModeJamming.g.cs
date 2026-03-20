@@ -54,9 +54,9 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// <summary>
     /// ByteProperty: CachedShowWarning
     /// </summary>
-    public unsafe byte CachedShowWarning
+    public unsafe BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates CachedShowWarning
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieModularHud.EDetectiveModeDetectorStates>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
@@ -74,7 +74,7 @@ public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, B
     /// </summary>
     public unsafe bool CachedIsJammedValue
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 268); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 268); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 268); }
     }
 }

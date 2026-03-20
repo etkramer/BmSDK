@@ -82,8 +82,8 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanHarpoonWalls
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool CanFireWhenFloating
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHarpoonReactionOverriden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHarpoonedWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool HarpooningNothing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
@@ -127,43 +127,43 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// </summary>
     public unsafe bool WasDodged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2072); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2072); }
     }
 
     /// <summary>
     /// ByteProperty: FireDirectionAnim
     /// </summary>
-    public unsafe byte FireDirectionAnim
+    public unsafe BmSDK.BmGame.RHarpoonGun.EBatclawFireDirections FireDirectionAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHarpoonGun.EBatclawFireDirections>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// ByteProperty: HarpoonTargetArea
     /// </summary>
-    public unsafe byte HarpoonTargetArea
+    public unsafe BmSDK.BmGame.RHarpoonGun.HarpoonAttackType HarpoonTargetArea
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2077); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHarpoonGun.HarpoonAttackType>(Ptr + 2077); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2077); }
     }
 
     /// <summary>
     /// ByteProperty: LastThrowType
     /// </summary>
-    public unsafe byte LastThrowType
+    public unsafe BmSDK.BmGame.RInventoryGadget.BatarangThrowType LastThrowType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2078); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.BatarangThrowType>(Ptr + 2078); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2078); }
     }
 
     /// <summary>
     /// ArrayProperty: Projectile
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> Projectile
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHarpoonProjectile> Projectile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 2080); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHarpoonProjectile>>(Ptr + 2080); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
     }
 
@@ -179,9 +179,9 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: HarpoonRope
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> HarpoonRope
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSimpleRopeComponent> HarpoonRope
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 2104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSimpleRopeComponent>>(Ptr + 2104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
     }
 
@@ -197,187 +197,187 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: MuzzleFlashFx
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MuzzleFlashFx
+    public unsafe BmSDK.Engine.ParticleSystem MuzzleFlashFx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonTarget
+    public unsafe BmSDK.Engine.Actor HarpoonTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2132); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonTargetMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonTargetMaterial
+    public unsafe BmSDK.Engine.PhysicalMaterial HarpoonTargetMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PhysicalMaterial>(Ptr + 2140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2140); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonYankMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonYankMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonYankMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2148); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonDragMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonDragMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonDragMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonDragTrackedObjectMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonDragTrackedObjectMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonDragTrackedObjectMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2164); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonDragTriggerMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonDragTriggerMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonDragTriggerMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2172); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2180); }
     }
 
     /// <summary>
     /// ObjectProperty: CornerFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CornerFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CornerFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2188); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonFailMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonFailMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonFailMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2196); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonThugMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonThugMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonThugMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
     }
 
     /// <summary>
     /// ObjectProperty: HarpoonGlideKickMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HarpoonGlideKickMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig HarpoonGlideKickMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2212); }
     }
 
     /// <summary>
     /// ObjectProperty: TargetIcon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetIcon
+    public unsafe BmSDK.Engine.Material TargetIcon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 2220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
     }
 
     /// <summary>
     /// ObjectProperty: FireSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireSound
+    public unsafe BmSDK.Engine.AkEvent FireSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2228); }
     }
 
     /// <summary>
     /// ObjectProperty: CameraFireSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraFireSound
+    public unsafe BmSDK.Engine.AkEvent CameraFireSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
     }
 
     /// <summary>
     /// ObjectProperty: ClawReleaseSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ClawReleaseSound
+    public unsafe BmSDK.Engine.AkEvent ClawReleaseSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2244); }
     }
 
     /// <summary>
     /// ObjectProperty: DummyFireActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DummyFireActor
+    public unsafe BmSDK.Engine.Actor DummyFireActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2252); }
     }
 
     /// <summary>
     /// ObjectProperty: CantHarpoonWinchableObjectThought
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CantHarpoonWinchableObjectThought
+    public unsafe BmSDK.Engine.AkDialogueSpeech CantHarpoonWinchableObjectThought
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 2260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
     }
 
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonTargetPos_0
+    public unsafe System.Numerics.Vector3 HarpoonTargetPos_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
     }
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonTargetPos_1
+    public unsafe System.Numerics.Vector3 HarpoonTargetPos_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
     }
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HarpoonTargetPos_2
+    public unsafe System.Numerics.Vector3 HarpoonTargetPos_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2292); }
     }
 
@@ -402,18 +402,18 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ProjectileAttachSocket
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> ProjectileAttachSocket
+    public unsafe BmSDK.TArray<BmSDK.FName> ProjectileAttachSocket
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 2312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2312); }
     }
 
     /// <summary>
     /// ArrayProperty: ProjectileRetractRope
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ProjectileRetractRope
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RRopeComponentBase> ProjectileRetractRope
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 2328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRopeComponentBase>>(Ptr + 2328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2328); }
     }
 
@@ -438,27 +438,27 @@ public partial class RHarpoonGunBm : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CurrentTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> CurrentTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CurrentTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2352); }
     }
 
     /// <summary>
     /// ArrayProperty: CurrentTargetParts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> CurrentTargetParts
+    public unsafe BmSDK.TArray<int> CurrentTargetParts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2368); }
     }
 
     /// <summary>
     /// ArrayProperty: UltraBatClawGrateSockets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> UltraBatClawGrateSockets
+    public unsafe BmSDK.TArray<BmSDK.FName> UltraBatClawGrateSockets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2384); }
     }
 

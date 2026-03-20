@@ -73,8 +73,8 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bCanAutoClimb
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bCanTriggerManualClimb
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bAutoClimbFromWallStick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bDebugWallClimbOld
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bDebugGrappleChecksOld
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
@@ -118,16 +118,16 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// </summary>
     public unsafe bool bDebugSelectionOld
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 
     /// <summary>
     /// StructProperty: WhipTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WhipTarget
+    public unsafe System.Numerics.Vector3 WhipTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
 }

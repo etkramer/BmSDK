@@ -36,9 +36,9 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// ArrayProperty: Achievements
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Achievements
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FAchievementDetails> Achievements
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FAchievementDetails>>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

@@ -36,51 +36,51 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// ObjectProperty: introConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT introConversation
+    public unsafe BmSDK.Engine.AkDialogueSpeech introConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
     /// <summary>
     /// ObjectProperty: outroConversations
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT outroConversations_0
+    public unsafe BmSDK.Engine.AkDialogueSpeech outroConversations_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
     /// <summary>
     /// ObjectProperty: outroConversations
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT outroConversations_1
+    public unsafe BmSDK.Engine.AkDialogueSpeech outroConversations_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
     }
     /// <summary>
     /// ObjectProperty: outroConversations
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT outroConversations_2
+    public unsafe BmSDK.Engine.AkDialogueSpeech outroConversations_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1044); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1044); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
     }
     /// <summary>
     /// ObjectProperty: outroConversations
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT outroConversations_3
+    public unsafe BmSDK.Engine.AkDialogueSpeech outroConversations_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
 
     /// <summary>
     /// ByteProperty: upgradeConvState
     /// </summary>
-    public unsafe byte upgradeConvState
+    public unsafe BmSDK.BmGame.RSeqAct_BMBLUpgradeConversation.eBMBLUpgradeConvState upgradeConvState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_BMBLUpgradeConversation.eBMBLUpgradeConvState>(Ptr + 1060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
     }
 }

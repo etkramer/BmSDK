@@ -45,9 +45,9 @@ public partial class McpServiceBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: McpConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT McpConfig
+    public unsafe BmSDK.IpDrv.McpServiceConfig McpConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.McpServiceConfig>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

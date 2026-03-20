@@ -36,27 +36,27 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// <summary>
     /// ByteProperty: GridMinResolution
     /// </summary>
-    public unsafe byte GridMinResolution
+    public unsafe BmSDK.Engine.ApexGridComponent.EGridResolution GridMinResolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.EGridResolution>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// ByteProperty: GridMaxResolution
     /// </summary>
-    public unsafe byte GridMaxResolution
+    public unsafe BmSDK.Engine.ApexGridComponent.EGridResolution GridMaxResolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 145); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.EGridResolution>(Ptr + 145); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 145); }
     }
 
     /// <summary>
     /// ByteProperty: CollisionChannel
     /// </summary>
-    public unsafe byte CollisionChannel
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel CollisionChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 146); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 146); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 146); }
     }
 
@@ -72,9 +72,9 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// <summary>
     /// StructProperty: GridSize3D
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GridSize3D
+    public unsafe System.Numerics.Vector3 GridSize3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
@@ -117,9 +117,9 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// <summary>
     /// StructProperty: ExternalVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExternalVelocity
+    public unsafe System.Numerics.Vector3 ExternalVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
@@ -146,8 +146,8 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// </summary>
     public unsafe bool AutoVelocityEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// </summary>
     public unsafe bool bEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
     }
 
     /// <summary>
@@ -252,9 +252,9 @@ public partial class ActorFactoryApexGrid : BmSDK.Engine.ActorFactory, BmSDK.IGa
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollideWithChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 

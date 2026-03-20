@@ -80,9 +80,9 @@ public partial class RAEC_GrateWatch_Solo : BmSDK.BmGame.RAlertEventCoordinatorS
     /// <summary>
     /// ObjectProperty: AimAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AimAction
+    public unsafe BmSDK.BmGame.RBMAIAction_AimGunAt AimAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_AimGunAt>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 }

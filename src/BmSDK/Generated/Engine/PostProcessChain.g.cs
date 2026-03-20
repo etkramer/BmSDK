@@ -36,9 +36,9 @@ public partial class PostProcessChain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Effects
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Effects
+    public unsafe BmSDK.TArray<BmSDK.Engine.PostProcessEffect> Effects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.PostProcessEffect>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RBMBehaviour_LineLauncherGrabbed : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// ObjectProperty: Victim
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Victim
+    public unsafe BmSDK.BmGame.RBMPawnAI Victim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
     }
 }

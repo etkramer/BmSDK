@@ -71,45 +71,45 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// <summary>
     /// ByteProperty: UnlockTape
     /// </summary>
-    public unsafe byte UnlockTape
+    public unsafe BmSDK.BmGame.RGameInfo.ETapeCharacter UnlockTape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.ETapeCharacter>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
     /// <summary>
     /// ByteProperty: UnlockBioCharacter
     /// </summary>
-    public unsafe byte UnlockBioCharacter
+    public unsafe BmSDK.BmGame.RGameInfo.EBioCharacter UnlockBioCharacter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 801); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EBioCharacter>(Ptr + 801); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 801); }
     }
 
     /// <summary>
     /// ByteProperty: UnlockShowcaseCharacter
     /// </summary>
-    public unsafe byte UnlockShowcaseCharacter
+    public unsafe BmSDK.BmGame.RPersistentData.EShowcaseCharacter UnlockShowcaseCharacter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 802); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.EShowcaseCharacter>(Ptr + 802); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 802); }
     }
 
     /// <summary>
     /// ByteProperty: UnlockShowcaseVehicle
     /// </summary>
-    public unsafe byte UnlockShowcaseVehicle
+    public unsafe BmSDK.BmGame.RPersistentData.EShowcaseVehicle UnlockShowcaseVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 803); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.EShowcaseVehicle>(Ptr + 803); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 803); }
     }
 
     /// <summary>
     /// ByteProperty: UnlockConceptArt
     /// </summary>
-    public unsafe byte UnlockConceptArt
+    public unsafe BmSDK.BmGame.RPersistentData.EConceptArt UnlockConceptArt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.EConceptArt>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 
@@ -118,8 +118,8 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bAutoSaveWhenCollected
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bHasBeenPickedUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsVoiceSynthPickup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
     }
 
     /// <summary>
@@ -145,16 +145,16 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bIsRiddlerRobotPickup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
     }
 
     /// <summary>
     /// ComponentProperty: Light
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Light
+    public unsafe BmSDK.Engine.PointLightComponent Light
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 }

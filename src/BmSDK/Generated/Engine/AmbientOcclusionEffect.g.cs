@@ -90,9 +90,9 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// <summary>
     /// StructProperty: OcclusionColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OcclusionColor
+    public unsafe BmSDK.GameObject.FLinearColor OcclusionColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
@@ -137,8 +137,8 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// </summary>
     public unsafe bool SSAO2
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// </summary>
     public unsafe bool bAngleBasedSSAO
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
     }
 
     /// <summary>
@@ -171,9 +171,9 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// <summary>
     /// ByteProperty: OcclusionQuality
     /// </summary>
-    public unsafe byte OcclusionQuality
+    public unsafe BmSDK.Engine.AmbientOcclusionEffect.EAmbientOcclusionQuality OcclusionQuality
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AmbientOcclusionEffect.EAmbientOcclusionQuality>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 

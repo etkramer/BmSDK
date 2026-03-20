@@ -71,18 +71,18 @@ public partial class MStickyConcussionGrenade : BmSDK.BmGame.RProjectileGadgetBa
     /// <summary>
     /// ArrayProperty: CurrentGroupOfVillainsCaughtInBlast
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>> CurrentGroupOfVillainsCaughtInBlast
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> CurrentGroupOfVillainsCaughtInBlast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>>(Ptr + 2592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 2592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2592); }
     }
 
     /// <summary>
     /// ArrayProperty: DeployedGrenade
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText> DeployedGrenade
+    public unsafe BmSDK.TArray<BmSDK.BmGame.MStickyConcussionGrenadeProjectile> DeployedGrenade
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>(Ptr + 2608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.MStickyConcussionGrenadeProjectile>>(Ptr + 2608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2608); }
     }
 

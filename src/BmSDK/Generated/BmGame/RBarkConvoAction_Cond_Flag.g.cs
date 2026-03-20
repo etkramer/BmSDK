@@ -36,9 +36,9 @@ public partial class RBarkConvoAction_Cond_Flag : BmSDK.BmGame.RBarkConvoActionC
     /// <summary>
     /// ByteProperty: FlagType
     /// </summary>
-    public unsafe byte FlagType
+    public unsafe BmSDK.BmGame.RBarkValDef.FlagTypeEnum FlagType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkValDef.FlagTypeEnum>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 }

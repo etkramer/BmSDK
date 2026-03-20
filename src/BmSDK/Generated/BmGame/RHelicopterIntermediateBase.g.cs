@@ -71,81 +71,81 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// <summary>
     /// ObjectProperty: NextPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextPoint
+    public unsafe BmSDK.BmGame.RPatrolPoint NextPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPatrolPoint>(Ptr + 2348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
     }
 
     /// <summary>
     /// ObjectProperty: PursuitTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PursuitTarget
+    public unsafe BmSDK.Engine.Actor PursuitTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2356); }
     }
 
     /// <summary>
     /// ObjectProperty: TracerFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TracerFX
+    public unsafe BmSDK.Engine.ParticleSystem TracerFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2364); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactFX
+    public unsafe BmSDK.Engine.ParticleSystem ImpactFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2372); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2372); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2372); }
     }
 
     /// <summary>
     /// ObjectProperty: TurrentBoneControllerUpDown
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TurrentBoneControllerUpDown
+    public unsafe BmSDK.Engine.SkelControlSingleBone TurrentBoneControllerUpDown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSingleBone>(Ptr + 2380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2380); }
     }
 
     /// <summary>
     /// ObjectProperty: TurrentBoneControllerLeftRight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TurrentBoneControllerLeftRight
+    public unsafe BmSDK.Engine.SkelControlSingleBone TurrentBoneControllerLeftRight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSingleBone>(Ptr + 2388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2388); }
     }
 
     /// <summary>
     /// ComponentProperty: FlashingLightComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlashingLightComponent
+    public unsafe BmSDK.Engine.ParticleSystemComponent FlashingLightComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
     }
 
     /// <summary>
     /// ComponentProperty: DustComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DustComponent
+    public unsafe BmSDK.Engine.ParticleSystemComponent DustComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
     }
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MuzzleFlashComponent
+    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2412); }
     }
 
@@ -154,8 +154,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bWalkBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bPingPong
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool MoveTowardModeIsPath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool MoveTowardSlowdownOnApproach
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bHasMovedThisFrame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bEnableLightFX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bEnableDust
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bEnableFlashingLight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bSpawnBulletFX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bWasVolumetricLightingEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bWasLightEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bWasLightCastingShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
@@ -262,34 +262,34 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// </summary>
     public unsafe bool bWasSearchLightMeshEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2420); }
     }
 
     /// <summary>
     /// StructProperty: MoveTowardLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveTowardLocation
+    public unsafe System.Numerics.Vector3 MoveTowardLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
     }
 
     /// <summary>
     /// StructProperty: MoveTowardPathLocation1
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveTowardPathLocation1
+    public unsafe System.Numerics.Vector3 MoveTowardPathLocation1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
     }
 
     /// <summary>
     /// StructProperty: MoveTowardPathLocation2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveTowardPathLocation2
+    public unsafe System.Numerics.Vector3 MoveTowardPathLocation2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
     }
 
@@ -350,9 +350,9 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// <summary>
     /// StructProperty: SearchLightMeshScale3D
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SearchLightMeshScale3D
+    public unsafe System.Numerics.Vector3 SearchLightMeshScale3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2484); }
     }
 
@@ -365,18 +365,18 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// <summary>
         /// StructProperty: vSearchLightSourcePosition
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vSearchLightSourcePosition
+        public unsafe System.Numerics.Vector3 vSearchLightSourcePosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: rSearchLightSourceRotation
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT rSearchLightSourceRotation
+        public unsafe BmSDK.Rotator rSearchLightSourceRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
@@ -410,9 +410,9 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// <summary>
         /// StructProperty: rSearchLightSourceDirection
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT rSearchLightSourceDirection
+        public unsafe BmSDK.Rotator rSearchLightSourceDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
@@ -453,9 +453,9 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// <summary>
         /// ObjectProperty: hActor
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hActor
+        public unsafe BmSDK.Engine.Actor hActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -473,8 +473,8 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// </summary>
         public unsafe bool bIsPlayer
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
         }
     }
 
@@ -487,27 +487,27 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// <summary>
         /// ObjectProperty: hTarget
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hTarget
+        public unsafe BmSDK.Engine.Actor hTarget
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: vTargetPositionDesired
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vTargetPositionDesired
+        public unsafe System.Numerics.Vector3 vTargetPositionDesired
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// StructProperty: vTargetPositionCurrent
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vTargetPositionCurrent
+        public unsafe System.Numerics.Vector3 vTargetPositionCurrent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
 
@@ -532,63 +532,63 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// <summary>
         /// ComponentProperty: hLightDynamic
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hLightDynamic
+        public unsafe BmSDK.Engine.SpotLightComponent hLightDynamic
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpotLightComponent>(Ptr + 40); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// ComponentProperty: hLightConeMesh
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hLightConeMesh
+        public unsafe BmSDK.Engine.StaticMeshComponent hLightConeMesh
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 48); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 48); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>
         /// StructProperty: vLightConeScale
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vLightConeScale
+        public unsafe System.Numerics.Vector3 vLightConeScale
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 56); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
         }
 
         /// <summary>
         /// ObjectProperty: hLightConeMaterialConstant
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hLightConeMaterialConstant
+        public unsafe BmSDK.Engine.MaterialInstanceConstant hLightConeMaterialConstant
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 68); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
         }
 
         /// <summary>
         /// StructProperty: vLightColorDesired
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vLightColorDesired
+        public unsafe BmSDK.GameObject.FLinearColor vLightColorDesired
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 76); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 76); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
         }
 
         /// <summary>
         /// StructProperty: vLightColorCurrent
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vLightColorCurrent
+        public unsafe BmSDK.GameObject.FLinearColor vLightColorCurrent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 92); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }; }
         }
 
         /// <summary>
         /// ComponentProperty: hWeaponEffect
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT hWeaponEffect
+        public unsafe BmSDK.Engine.ParticleSystemComponent hWeaponEffect
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 108); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }; }
         }
 
@@ -597,16 +597,16 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
         /// </summary>
         public unsafe bool bWeaponOverridePosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }; }
         }
 
         /// <summary>
         /// StructProperty: vWeaponOverridePosition
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vWeaponOverridePosition
+        public unsafe System.Numerics.Vector3 vWeaponOverridePosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 120); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }; }
         }
     }

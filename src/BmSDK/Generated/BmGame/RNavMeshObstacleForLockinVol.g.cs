@@ -71,84 +71,84 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// ObjectProperty: LockInVol
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockInVol
+    public unsafe BmSDK.BmGame.RLockinVolume LockInVol
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLockinVolume>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
     /// ArrayProperty: PolyShape
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> PolyShape
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> PolyShape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeOrigins_0
+    public unsafe System.Numerics.Vector3 planeOrigins_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeOrigins_1
+    public unsafe System.Numerics.Vector3 planeOrigins_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeOrigins_2
+    public unsafe System.Numerics.Vector3 planeOrigins_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeOrigins_3
+    public unsafe System.Numerics.Vector3 planeOrigins_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeNormals_0
+    public unsafe System.Numerics.Vector3 planeNormals_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeNormals_1
+    public unsafe System.Numerics.Vector3 planeNormals_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeNormals_2
+    public unsafe System.Numerics.Vector3 planeNormals_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT planeNormals_3
+    public unsafe System.Numerics.Vector3 planeNormals_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
@@ -164,18 +164,18 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// StructProperty: longSideNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT longSideNormal
+    public unsafe System.Numerics.Vector3 longSideNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
     /// <summary>
     /// StructProperty: ImpulseDir
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ImpulseDir
+    public unsafe System.Numerics.Vector3 ImpulseDir
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
     }
 }

@@ -91,8 +91,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bChangesVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bChangesYaw
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bReversesX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bReversesY
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bReversesZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -145,16 +145,16 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bCanTeleportVehicles
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
     /// StructProperty: TargetVelocity
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetVelocity
+    public unsafe System.Numerics.Vector3 TargetVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 

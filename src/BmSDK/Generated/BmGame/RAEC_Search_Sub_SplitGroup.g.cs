@@ -73,7 +73,7 @@ public partial class RAEC_Search_Sub_SplitGroup : BmSDK.BmGame.RAEC_Search_Sub, 
     /// </summary>
     public unsafe bool bSplitDone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 780) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 780); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 780); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 780) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 780); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 780); }
     }
 }

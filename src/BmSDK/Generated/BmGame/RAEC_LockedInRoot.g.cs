@@ -71,9 +71,9 @@ public partial class RAEC_LockedInRoot : BmSDK.BmGame.RAEC_LockedIn_GroupBase, B
     /// <summary>
     /// ObjectProperty: ReactionPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReactionPoint
+    public unsafe BmSDK.BmGame.RLockedInReactionPoint ReactionPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLockedInReactionPoint>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 }

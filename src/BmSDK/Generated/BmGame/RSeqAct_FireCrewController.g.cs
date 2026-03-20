@@ -36,17 +36,17 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: allTiers
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.flagSuffixes allTiers_0
+    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.flagSuffixes>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
     /// <summary>
     /// StructProperty: allTiers
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.flagSuffixes allTiers_1
+    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.flagSuffixes>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
@@ -105,8 +105,8 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// </summary>
     public unsafe bool bSetupTierStruct
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
     }
 
     /// <summary>
@@ -136,9 +136,9 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
         /// <summary>
         /// ArrayProperty: members
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT members
+        public unsafe BmSDK.TArray<int> members
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }

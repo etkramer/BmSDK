@@ -71,9 +71,9 @@ public partial class NxForceFieldSpawnable : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// ComponentProperty: ForceFieldComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceFieldComponent
+    public unsafe BmSDK.Engine.NxForceFieldComponent ForceFieldComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NxForceFieldComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

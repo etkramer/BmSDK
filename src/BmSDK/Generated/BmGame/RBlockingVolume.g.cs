@@ -71,18 +71,18 @@ public partial class RBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameO
     /// <summary>
     /// StructProperty: BlockedTypes
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BlockedTypes
+    public unsafe BmSDK.Engine.Actor.FBlockingVolumeTypesContainer BlockedTypes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBlockingVolumeTypesContainer>(Ptr + 748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
     /// <summary>
     /// ByteProperty: BlockType
     /// </summary>
-    public unsafe byte BlockType
+    public unsafe BmSDK.BmGame.RBlockingVolume.EBlockingType BlockType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBlockingVolume.EBlockingType>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
@@ -91,7 +91,7 @@ public partial class RBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameO
     /// </summary>
     public unsafe bool BlockPhysics
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 756); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 756); }
     }
 }

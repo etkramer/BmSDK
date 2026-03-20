@@ -38,8 +38,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bReadPending
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bMovedUserMarker
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bCreatedIcons
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bPanEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bPanEnabledLast
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bPanNoFirstEntryDelay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bPanTweenElevationToo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bUpgradeCommitted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool BioAutoSelect
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool BiobAutoPlay
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool RumbleActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bManualOpen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// </summary>
     public unsafe bool bSaveGameWhenClosed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1712); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1712); }
     }
 
     /// <summary>
@@ -198,27 +198,27 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: SubMapDefaults
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> SubMapDefaults
+    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FSubMapDefault> SubMapDefaults
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FSubMapDefault>>(Ptr + 1760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1760); }
     }
 
     /// <summary>
     /// ArrayProperty: Dialogs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> Dialogs
+    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FDialogEntry> Dialogs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 1776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FDialogEntry>>(Ptr + 1776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1776); }
     }
 
     /// <summary>
     /// ArrayProperty: SpeechIdsActive
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> SpeechIdsActive
+    public unsafe BmSDK.TArray<int> SpeechIdsActive
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1792); }
     }
 
@@ -270,27 +270,27 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: ThreatLevels
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ThreatLevels
+    public unsafe BmSDK.TArray<int> ThreatLevels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1852); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1852); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1852); }
     }
 
     /// <summary>
     /// ArrayProperty: ThreatLevelsLast
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> ThreatLevelsLast
+    public unsafe BmSDK.TArray<int> ThreatLevelsLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 1868); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1868); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1868); }
     }
 
     /// <summary>
     /// ArrayProperty: OW_IncludeTheseExceptions
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> OW_IncludeTheseExceptions
+    public unsafe BmSDK.TArray<BmSDK.FString> OW_IncludeTheseExceptions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1884); }
     }
 
@@ -378,9 +378,9 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: StickLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StickLocation
+    public unsafe System.Numerics.Vector3 StickLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1984); }
     }
 
@@ -414,18 +414,18 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: TweenSourceLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TweenSourceLocation
+    public unsafe System.Numerics.Vector3 TweenSourceLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
     }
 
     /// <summary>
     /// StructProperty: TweenSourceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TweenSourceRotation
+    public unsafe BmSDK.Rotator TweenSourceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2020); }
     }
 
@@ -441,18 +441,18 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: TweenTargetLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TweenTargetLocation
+    public unsafe System.Numerics.Vector3 TweenTargetLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2036); }
     }
 
     /// <summary>
     /// StructProperty: TweenTargetRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TweenTargetRotation
+    public unsafe BmSDK.Rotator TweenTargetRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2048); }
     }
 
@@ -468,45 +468,45 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: CityOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CityOffset
+    public unsafe System.Numerics.Vector3 CityOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2064); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2064); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2064); }
     }
 
     /// <summary>
     /// ArrayProperty: PanToIcons
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> PanToIcons
+    public unsafe BmSDK.TArray<BmSDK.FString> PanToIcons
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
     /// <summary>
     /// StructProperty: PanReturnToLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PanReturnToLocation
+    public unsafe System.Numerics.Vector3 PanReturnToLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
     }
 
     /// <summary>
     /// StructProperty: PanDelta
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PanDelta
+    public unsafe System.Numerics.Vector3 PanDelta
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
     }
 
     /// <summary>
     /// StructProperty: PanXYZTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PanXYZTarget
+    public unsafe System.Numerics.Vector3 PanXYZTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
     }
 
@@ -549,9 +549,9 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: VolumeActors
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> VolumeActors
+    public unsafe BmSDK.TArray<BmSDK.Engine.RockMapHighlight> VolumeActors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RockMapHighlight>>(Ptr + 2144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2144); }
     }
 
@@ -567,27 +567,27 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: RiddlerItems_InBuildings
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> RiddlerItems_InBuildings
+    public unsafe BmSDK.TArray<BmSDK.FString> RiddlerItems_InBuildings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
     }
 
     /// <summary>
     /// ArrayProperty: RiddlerItem_OffsetNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> RiddlerItem_OffsetNames
+    public unsafe BmSDK.TArray<BmSDK.FString> RiddlerItem_OffsetNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2192); }
     }
 
     /// <summary>
     /// ArrayProperty: RiddlerItem_OffsetValues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> RiddlerItem_OffsetValues
+    public unsafe BmSDK.TArray<int> RiddlerItem_OffsetValues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
     }
 
@@ -603,9 +603,9 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: UpgradePrompts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> UpgradePrompts
+    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FPromptEntry> UpgradePrompts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieBackScreen_Normal.FPromptEntry>>(Ptr + 2240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
     }
 
@@ -621,9 +621,9 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ArrayProperty: BioIndex
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> BioIndex
+    public unsafe BmSDK.TArray<int> BioIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
     }
 
@@ -675,9 +675,9 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// ObjectProperty: MinigameFFWaveForm
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MinigameFFWaveForm
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform MinigameFFWaveForm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 2308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
     }
 }

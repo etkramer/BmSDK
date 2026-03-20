@@ -36,9 +36,9 @@ public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConst
     /// <summary>
     /// ObjectProperty: ChaseSearch
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChaseSearch
+    public unsafe BmSDK.BmGame.RChaseLocationSearch ChaseSearch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChaseLocationSearch>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

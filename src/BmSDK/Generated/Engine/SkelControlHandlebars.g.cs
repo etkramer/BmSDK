@@ -36,18 +36,18 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// <summary>
     /// ByteProperty: WheelRollAxis
     /// </summary>
-    public unsafe byte WheelRollAxis
+    public unsafe BmSDK.GameObject.EAxis WheelRollAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>
     /// ByteProperty: HandlebarRotateAxis
     /// </summary>
-    public unsafe byte HandlebarRotateAxis
+    public unsafe BmSDK.GameObject.EAxis HandlebarRotateAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 297); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 297); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 297); }
     }
 
@@ -65,8 +65,8 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// </summary>
     public unsafe bool bInvertRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
     }
 
     /// <summary>

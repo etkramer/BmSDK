@@ -71,9 +71,9 @@ public partial class RSnowVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: RainComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RainComponent
+    public unsafe BmSDK.Engine.RRainComponent RainComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

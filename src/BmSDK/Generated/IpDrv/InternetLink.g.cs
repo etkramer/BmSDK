@@ -71,45 +71,45 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: LinkMode
     /// </summary>
-    public unsafe byte LinkMode
+    public unsafe BmSDK.IpDrv.InternetLink.ELinkMode LinkMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.InternetLink.ELinkMode>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: InLineMode
     /// </summary>
-    public unsafe byte InLineMode
+    public unsafe BmSDK.IpDrv.InternetLink.ELineMode InLineMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 669); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.InternetLink.ELineMode>(Ptr + 669); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 669); }
     }
 
     /// <summary>
     /// ByteProperty: OutLineMode
     /// </summary>
-    public unsafe byte OutLineMode
+    public unsafe BmSDK.IpDrv.InternetLink.ELineMode OutLineMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 670); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.InternetLink.ELineMode>(Ptr + 670); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 670); }
     }
 
     /// <summary>
     /// ByteProperty: ReceiveMode
     /// </summary>
-    public unsafe byte ReceiveMode
+    public unsafe BmSDK.IpDrv.InternetLink.EReceiveMode ReceiveMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 671); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.IpDrv.InternetLink.EReceiveMode>(Ptr + 671); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 671); }
     }
 
     /// <summary>
     /// StructProperty: Socket
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Socket
+    public unsafe System.IntPtr Socket
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
@@ -125,18 +125,18 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RemoteSocket
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RemoteSocket
+    public unsafe System.IntPtr RemoteSocket
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
     /// StructProperty: PrivateResolveInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PrivateResolveInfo
+    public unsafe System.IntPtr PrivateResolveInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 

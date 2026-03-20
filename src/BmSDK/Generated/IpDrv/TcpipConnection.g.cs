@@ -36,9 +36,9 @@ public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// <summary>
     /// ArrayProperty: Children
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Children
+    public unsafe BmSDK.TArray<BmSDK.Engine.ChildConnection> Children
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 44740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ChildConnection>>(Ptr + 44740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44740); }
     }
 }

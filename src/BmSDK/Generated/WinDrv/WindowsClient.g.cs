@@ -45,9 +45,9 @@ public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: AudioDeviceClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioDeviceClass
+    public unsafe BmSDK.Class AudioDeviceClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
     }
 }

@@ -36,9 +36,9 @@ public partial class AkActionGlobal_LanguageMusicControl : BmSDK.Engine.AkAction
     /// <summary>
     /// ArrayProperty: LanguageStates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> LanguageStates
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkStateName> LanguageStates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkStateName>>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 }

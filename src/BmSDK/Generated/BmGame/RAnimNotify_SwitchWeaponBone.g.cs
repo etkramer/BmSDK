@@ -36,9 +36,9 @@ public partial class RAnimNotify_SwitchWeaponBone : BmSDK.Engine.AnimNotify, BmS
     /// <summary>
     /// ByteProperty: TypeOfSwitch
     /// </summary>
-    public unsafe byte TypeOfSwitch
+    public unsafe BmSDK.BmGame.RAnimNotify_SwitchWeaponBone.ESwitchType TypeOfSwitch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_SwitchWeaponBone.ESwitchType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

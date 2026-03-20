@@ -71,9 +71,9 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// <summary>
     /// ObjectProperty: GrappleToChopperMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleToChopperMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleToChopperMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 1300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 
@@ -82,7 +82,7 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
     /// </summary>
     public unsafe bool bControlChopper
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1308) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1308); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1308) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1308); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1308); }
     }
 }

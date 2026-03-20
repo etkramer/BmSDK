@@ -71,9 +71,9 @@ public partial class RAEC_DetectiveModeDetector_Solo : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// ObjectProperty: DMDAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DMDAction
+    public unsafe BmSDK.BmGame.RBMAIAction_DetectiveModeDetector DMDAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_DetectiveModeDetector>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

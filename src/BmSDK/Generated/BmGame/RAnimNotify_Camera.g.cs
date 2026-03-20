@@ -36,9 +36,9 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// <summary>
     /// ByteProperty: NotifyType
     /// </summary>
-    public unsafe byte NotifyType
+    public unsafe BmSDK.BmGame.RAnimNotify_Camera.CamNotifyType NotifyType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Camera.CamNotifyType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

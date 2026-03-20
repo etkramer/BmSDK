@@ -36,81 +36,81 @@ public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.Partic
     /// <summary>
     /// StructProperty: Lifetime
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartSize Lifetime
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Lifetime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartSize>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// StructProperty: StartSize
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartVelocity StartSize
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartSize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartVelocity>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
     /// StructProperty: StartVelocity
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartVelocityRadial StartVelocity
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartVelocityRadial>(Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
     /// <summary>
     /// StructProperty: StartVelocityRadial
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.ColorOverLife StartVelocityRadial
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartVelocityRadial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.ColorOverLife>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// StructProperty: ColorOverLife
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.AlphaOverLife ColorOverLife
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.AlphaOverLife>(Ptr + 312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
     /// <summary>
     /// StructProperty: AlphaOverLife
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartLocation AlphaOverLife
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartLocation>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartRotation StartLocation
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartRotation>(Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.SizeLifeMultiplier StartRotation
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.SizeLifeMultiplier>(Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 
     /// <summary>
     /// StructProperty: SizeLifeMultiplier
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartRotationRate SizeLifeMultiplier
+    public unsafe BmSDK.DistributionVector.FRawDistributionVector SizeLifeMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberLTISIVCLILIRSSBLIRR.StartRotationRate>(Ptr + 512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
 
@@ -119,8 +119,8 @@ public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.Partic
     /// </summary>
     public unsafe bool SizeMultiplyX
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.Partic
     /// </summary>
     public unsafe bool SizeMultiplyY
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
     }
 
     /// <summary>
@@ -137,16 +137,16 @@ public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.Partic
     /// </summary>
     public unsafe bool SizeMultiplyZ
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
     }
 
     /// <summary>
     /// StructProperty: StartRotationRate
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleUberBase.RequiredModules StartRotationRate
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRotationRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleUberBase.RequiredModules>(Ptr + 580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 580); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
     }
 }

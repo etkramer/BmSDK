@@ -36,9 +36,9 @@ public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureCom
     /// <summary>
     /// ObjectProperty: TextureTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TextureTarget
+    public unsafe BmSDK.Engine.TextureRenderTarget2D TextureTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTarget2D>(Ptr + 212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
@@ -65,8 +65,8 @@ public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureCom
     /// </summary>
     public unsafe bool bOnlyShowReflectionObjects
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureCom
     /// </summary>
     public unsafe bool bIsViewReflect
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureCom
     /// </summary>
     public unsafe bool bEnableCapeDepthBiasHack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RCombatMove_CatwomanGroupAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
     }
 
@@ -98,9 +98,9 @@ public partial class RCombatMove_CatwomanGroupAttack : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// ArrayProperty: HitTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> HitTargets
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat> HitTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnCombat>>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 }

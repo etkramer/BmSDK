@@ -45,54 +45,54 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// ByteProperty: SourceType
     /// </summary>
-    public unsafe byte SourceType
+    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.ERotationOrTranslation SourceType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.ERotationOrTranslation>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
     /// <summary>
     /// ByteProperty: SourceAxis
     /// </summary>
-    public unsafe byte SourceAxis
+    public unsafe BmSDK.GameObject.ESimpleAxis SourceAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 257); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.ESimpleAxis>(Ptr + 257); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 257); }
     }
 
     /// <summary>
     /// ByteProperty: DestinationType
     /// </summary>
-    public unsafe byte DestinationType
+    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.ERotationOrTranslation DestinationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 258); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.ERotationOrTranslation>(Ptr + 258); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 258); }
     }
 
     /// <summary>
     /// ByteProperty: DestinationAxis
     /// </summary>
-    public unsafe byte DestinationAxis
+    public unsafe BmSDK.GameObject.ESimpleAxis DestinationAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 259); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.ESimpleAxis>(Ptr + 259); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 259); }
     }
 
     /// <summary>
     /// StructProperty: SourceRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SourceRange
+    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange SourceRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
     /// StructProperty: DestinationRange
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DestinationRange
+    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange DestinationRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange>(Ptr + 272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
@@ -108,9 +108,9 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// StructProperty: SourceBoneInverseReferencePose
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SourceBoneInverseReferencePose
+    public unsafe BmSDK.GameObject.FBoneAtom SourceBoneInverseReferencePose
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
@@ -137,8 +137,8 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// </summary>
     public unsafe bool Euler
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
     }
 
     /// <summary>
@@ -195,8 +195,8 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
         /// </summary>
         public unsafe bool ClampToMin
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -204,8 +204,8 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
         /// </summary>
         public unsafe bool ClampToMax
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8) & 2) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 8); }; }
         }
     }
 

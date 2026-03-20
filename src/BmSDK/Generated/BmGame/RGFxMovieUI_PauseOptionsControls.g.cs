@@ -54,9 +54,9 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// StructProperty: KeyboardScreen
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT KeyboardScreen
+    public unsafe BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef KeyboardScreen
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef>(Ptr + 1644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1644); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.REle
     /// <summary>
     /// ByteProperty: robotSpawnerState
     /// </summary>
-    public unsafe byte robotSpawnerState
+    public unsafe BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase.eRobotSpawnerState robotSpawnerState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 988); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RElectrifiedFloorPanel_RobotSpawnerBase.eRobotSpawnerState>(Ptr + 988); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 

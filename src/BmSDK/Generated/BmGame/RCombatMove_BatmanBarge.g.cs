@@ -71,18 +71,18 @@ public partial class RCombatMove_BatmanBarge : BmSDK.BmGame.RCombatMove_BatmanSt
     /// <summary>
     /// StructProperty: BMStartLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BMStartLocation
+    public unsafe System.Numerics.Vector3 BMStartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
     }
 
     /// <summary>
     /// StructProperty: DamageDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DamageDirection
+    public unsafe System.Numerics.Vector3 DamageDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
     }
 }

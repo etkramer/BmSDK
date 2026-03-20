@@ -36,9 +36,9 @@ public partial class RSeqAct_IntThresholdChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// ArrayProperty: Thresholds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Thresholds
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_IntThresholdChecker.FIntThreshold> Thresholds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_IntThresholdChecker.FIntThreshold>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

@@ -36,18 +36,18 @@ public partial class Exporter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: FormatDescription
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> FormatDescription
+    public unsafe BmSDK.TArray<BmSDK.FString> FormatDescription
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ArrayProperty: FormatExtension
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT FormatExtension
+    public unsafe BmSDK.TArray<BmSDK.FString> FormatExtension
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

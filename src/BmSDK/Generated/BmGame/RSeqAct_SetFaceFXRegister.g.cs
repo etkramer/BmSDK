@@ -54,9 +54,9 @@ public partial class RSeqAct_SetFaceFXRegister : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// ArrayProperty: Registers
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Registers
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SetFaceFXRegister.FSeqActFaceFXRegister> Registers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_SetFaceFXRegister.FSeqActFaceFXRegister>>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 }

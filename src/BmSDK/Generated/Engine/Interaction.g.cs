@@ -72,7 +72,7 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReceivedNativeInputKey
     /// </summary>
-    public unsafe bool OnReceivedNativeInputKey(int ControllerId, BmSDK.FName Key, byte EventType, float AmountDepressed = default, bool bGamepad = default)
+    public unsafe bool OnReceivedNativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnReceivedNativeInputKey", true);
         byte* paramsPtr = stackalloc byte[0];

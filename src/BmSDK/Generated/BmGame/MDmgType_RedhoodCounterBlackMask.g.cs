@@ -45,9 +45,9 @@ public partial class MDmgType_RedhoodCounterBlackMask : BmSDK.BmGame.RDmgType_Co
     /// <summary>
     /// ByteProperty: CounterStrength
     /// </summary>
-    public unsafe byte CounterStrength
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.CounterStrength CounterStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.CounterStrength>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 }

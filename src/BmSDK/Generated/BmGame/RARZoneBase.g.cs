@@ -71,9 +71,9 @@ public partial class RARZoneBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: ZoneColor
     /// </summary>
-    public unsafe byte ZoneColor
+    public unsafe BmSDK.BmGame.RARZoneBase.ArZoneColor ZoneColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RARZoneBase.ArZoneColor>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 

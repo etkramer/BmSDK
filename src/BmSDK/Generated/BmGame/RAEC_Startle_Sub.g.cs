@@ -71,18 +71,18 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// <summary>
     /// ByteProperty: ShockType
     /// </summary>
-    public unsafe byte ShockType
+    public unsafe BmSDK.BmGame.RAEC_Startle_Sub.PredStartleType ShockType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Startle_Sub.PredStartleType>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ObjectProperty: ForceMissActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceMissActor
+    public unsafe BmSDK.Engine.Actor ForceMissActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
@@ -91,8 +91,8 @@ public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo,
     /// </summary>
     public unsafe bool bSpawnedAction
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 708); }
     }
 
     /// <summary>

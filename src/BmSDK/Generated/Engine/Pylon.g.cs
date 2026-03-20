@@ -71,135 +71,135 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IEditorLinkSelectionInterface
+    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 944); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavigationHandle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IInterface_NavigationHandle
+    public unsafe System.IntPtr VfTable_IInterface_NavigationHandle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 
     /// <summary>
     /// StructProperty: NavMeshPtr
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT NavMeshPtr
+    public unsafe System.IntPtr NavMeshPtr
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
     /// <summary>
     /// StructProperty: ObstacleMesh
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ObstacleMesh
+    public unsafe System.IntPtr ObstacleMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
     }
 
     /// <summary>
     /// StructProperty: DynamicObstacleMesh
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DynamicObstacleMesh
+    public unsafe System.IntPtr DynamicObstacleMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 
     /// <summary>
     /// StructProperty: WorkingSetPtr
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorkingSetPtr
+    public unsafe System.IntPtr WorkingSetPtr
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
     }
 
     /// <summary>
     /// StructProperty: PathObjectsThatAffectThisPylon
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PathObjectsThatAffectThisPylon
+    public unsafe System.IntPtr PathObjectsThatAffectThisPylon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 992); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 992); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
     }
 
     /// <summary>
     /// ArrayProperty: NextPassSeedList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>>> NextPassSeedList
+    public unsafe BmSDK.TArray<System.Numerics.Vector3> NextPassSeedList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>>>>(Ptr + 1000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.Numerics.Vector3>>(Ptr + 1000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 
     /// <summary>
     /// StructProperty: OctreeId
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OctreeId
+    public unsafe BmSDK.GameObject.FOctreeElementId OctreeId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FOctreeElementId>(Ptr + 1016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
 
     /// <summary>
     /// StructProperty: OctreeIWasAddedTo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OctreeIWasAddedTo
+    public unsafe System.IntPtr OctreeIWasAddedTo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
 
     /// <summary>
     /// ObjectProperty: NextPylon
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextPylon
+    public unsafe BmSDK.Engine.Pylon NextPylon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pylon>(Ptr + 1036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
     }
 
     /// <summary>
     /// ComponentProperty: BrokenSprite
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BrokenSprite
+    public unsafe BmSDK.Engine.SpriteComponent BrokenSprite
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1044); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 1044); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
     }
 
     /// <summary>
     /// ComponentProperty: RenderingComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderingComp
+    public unsafe BmSDK.Engine.NavMeshRenderingComponent RenderingComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshRenderingComponent>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
 
     /// <summary>
     /// ComponentProperty: PylonRadiusPreview
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PylonRadiusPreview
+    public unsafe BmSDK.Engine.DrawPylonRadiusComponent PylonRadiusPreview
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawPylonRadiusComponent>(Ptr + 1060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
     }
 
     /// <summary>
     /// ArrayProperty: ExpansionVolumes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>> ExpansionVolumes
+    public unsafe BmSDK.TArray<BmSDK.Engine.Volume> ExpansionVolumes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>>>(Ptr + 1068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Volume>>(Ptr + 1068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
     }
 
@@ -226,8 +226,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bImportedMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseExpansionSphereOverride
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bNeedsCostCheck
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStreetLevelCityPylon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -262,8 +262,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAllowAutomaticConnectionToAdjacentPylons
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseUnstableSnappingStep
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bMergePolysAfterGeneration
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSkipPylonIntersections
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -298,8 +298,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bExcludeSameSidePolysWhenBuildingObstacleMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bConformMeshToFloor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSplitPolys
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -325,8 +325,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSplitEdges
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -334,8 +334,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPylonInHighLevelPath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -343,8 +343,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUseRecast
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -352,8 +352,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAllowRecastGenerator
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -361,8 +361,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawEdgePolys
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -370,8 +370,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawPolyBounds
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -379,8 +379,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRenderInShowPaths
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -388,8 +388,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawWalkableSurface
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -397,8 +397,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawObstacleSurface
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -406,8 +406,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSolidObstaclesInGame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -415,8 +415,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAboutToBeDeleted
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -424,8 +424,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEmbedVisibilityInfo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -433,8 +433,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_RespectAICanStepUpOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -442,8 +442,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_MergeFlags
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -451,8 +451,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_ApplyHeightSpanFilter
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -460,8 +460,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_FilterLowHangingWalkableObstacles
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -469,8 +469,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_FilterLedgeSpans
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -478,8 +478,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRecast_FilterWalkableLowHeightSpans
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -487,8 +487,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bMoveablePylon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -496,8 +496,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRebuildThisPylon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -505,8 +505,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bAddedToValidationList
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
     }
 
     /// <summary>
@@ -514,8 +514,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBuildThisPylon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -523,8 +523,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceDontBuildThisPylon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -532,8 +532,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -541,8 +541,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bForceObstacleMeshCollision
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -550,8 +550,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSkipSquareMerge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -559,8 +559,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSkipConcaveMerge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -568,8 +568,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDoRawGridOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
@@ -577,43 +577,43 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bMaxVertIDLimitHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1096); }
     }
 
     /// <summary>
     /// StructProperty: ExpansionSphereCenter
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpansionSphereCenter
+    public unsafe System.Numerics.Vector3 ExpansionSphereCenter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
     }
 
     /// <summary>
     /// ArrayProperty: ImposterPylons
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>> ImposterPylons
+    public unsafe BmSDK.TArray<BmSDK.Engine.Pylon> ImposterPylons
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>>(Ptr + 1112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pylon>>(Ptr + 1112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
     }
 
     /// <summary>
     /// ArrayProperty: OnBuild_DisableCollisionForThese
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>> OnBuild_DisableCollisionForThese
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> OnBuild_DisableCollisionForThese
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>>(Ptr + 1128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
     }
 
     /// <summary>
     /// ArrayProperty: OnBuild_EnableCollisionForThese
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>> OnBuild_EnableCollisionForThese
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> OnBuild_EnableCollisionForThese
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>>(Ptr + 1144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
     }
 
@@ -719,18 +719,18 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: VoxelFilterBounds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>> VoxelFilterBounds
+    public unsafe BmSDK.TArray<BmSDK.Engine.KMeshProps.FKAggregateGeom> VoxelFilterBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>>(Ptr + 1204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.KMeshProps.FKAggregateGeom>>(Ptr + 1204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1204); }
     }
 
     /// <summary>
     /// ArrayProperty: VoxelFilterTM
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>> VoxelFilterTM
+    public unsafe BmSDK.TArray<BmSDK.GameObject.FMatrix> VoxelFilterTM
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>>(Ptr + 1220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FMatrix>>(Ptr + 1220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1220); }
     }
 
@@ -746,9 +746,9 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: AdditionalSeedList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>> AdditionalSeedList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> AdditionalSeedList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>>(Ptr + 1240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
     }
 
@@ -773,9 +773,9 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CrossLevelPawns
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>> CrossLevelPawns
+    public unsafe BmSDK.TArray<BmSDK.Engine.Pawn> CrossLevelPawns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>>(Ptr + 1264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pawn>>(Ptr + 1264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
     }
 
@@ -791,18 +791,18 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DebugPathExtent
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugPathExtent
+    public unsafe System.Numerics.Vector3 DebugPathExtent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 
     /// <summary>
     /// StructProperty: DebugPathStartLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugPathStartLocation
+    public unsafe System.Numerics.Vector3 DebugPathStartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 

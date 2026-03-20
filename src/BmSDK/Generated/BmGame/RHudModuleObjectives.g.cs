@@ -36,9 +36,9 @@ public partial class RHudModuleObjectives : BmSDK.BmGame.RHudModule, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: ObjectiveItemAppearanceEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ObjectiveItemAppearanceEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> ObjectiveItemAppearanceEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 }

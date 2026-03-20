@@ -36,9 +36,9 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CountryCodeLookup
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CountryCodeLookup
+    public unsafe BmSDK.TArray<BmSDK.Engine.LocHelper.FCountryCodeMap> CountryCodeLookup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LocHelper.FCountryCodeMap>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -96,9 +96,9 @@ public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ByteProperty: XBoxAgeGroup
         /// </summary>
-        public unsafe byte XBoxAgeGroup
+        public unsafe BmSDK.Engine.LocHelper.XBOX_AGEGROUP XBoxAgeGroup
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocHelper.XBOX_AGEGROUP>(Ptr + 52); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
     }

@@ -63,9 +63,9 @@ public partial class AnimNodeBlendDirectional : BmSDK.Engine.AnimNodeBlendBase, 
     /// <summary>
     /// StructProperty: RotationOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationOffset
+    public unsafe BmSDK.Rotator RotationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
@@ -74,8 +74,8 @@ public partial class AnimNodeBlendDirectional : BmSDK.Engine.AnimNodeBlendBase, 
     /// </summary>
     public unsafe bool bDontUpdateBasedOnVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public partial class AnimNodeBlendDirectional : BmSDK.Engine.AnimNodeBlendBase, 
     /// </summary>
     public unsafe bool bUseAcceleration
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
     }
 }

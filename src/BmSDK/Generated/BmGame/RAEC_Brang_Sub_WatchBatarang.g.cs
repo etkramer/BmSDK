@@ -71,9 +71,9 @@ public partial class RAEC_Brang_Sub_WatchBatarang : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// StructProperty: WatchPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WatchPoint
+    public unsafe System.Numerics.Vector3 WatchPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 

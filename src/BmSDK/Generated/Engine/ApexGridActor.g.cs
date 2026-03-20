@@ -71,9 +71,9 @@ public partial class ApexGridActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.I
     /// <summary>
     /// ComponentProperty: GridComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GridComponent
+    public unsafe BmSDK.Engine.ApexGridComponent GridComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

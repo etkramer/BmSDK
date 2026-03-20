@@ -36,9 +36,9 @@ public partial class AkDialogueVoiceCustom : BmSDK.Engine.AkDialogueVoice, BmSDK
     /// <summary>
     /// ObjectProperty: BaseVoice
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BaseVoice
+    public unsafe BmSDK.Engine.AkDialogueVoice BaseVoice
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueVoice>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 

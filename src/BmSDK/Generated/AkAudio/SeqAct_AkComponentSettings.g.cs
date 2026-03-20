@@ -36,135 +36,135 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ByteProperty: NeverAutoDestroySource
     /// </summary>
-    public unsafe byte NeverAutoDestroySource
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool NeverAutoDestroySource
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: AutoDestroySourceWhenHidden
     /// </summary>
-    public unsafe byte AutoDestroySourceWhenHidden
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool AutoDestroySourceWhenHidden
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 353); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 
     /// <summary>
     /// ByteProperty: AutoDestroySourceWhenDead
     /// </summary>
-    public unsafe byte AutoDestroySourceWhenDead
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool AutoDestroySourceWhenDead
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 354); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 354); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 354); }
     }
 
     /// <summary>
     /// ByteProperty: KillSoundsOnDestroy
     /// </summary>
-    public unsafe byte KillSoundsOnDestroy
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool KillSoundsOnDestroy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 355); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 355); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 355); }
     }
 
     /// <summary>
     /// ByteProperty: ObstructionOcclusion
     /// </summary>
-    public unsafe byte ObstructionOcclusion
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsObsOcc ObstructionOcclusion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsObsOcc>(Ptr + 356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
     /// ByteProperty: EnableEnvironments
     /// </summary>
-    public unsafe byte EnableEnvironments
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool EnableEnvironments
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 357); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 357); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 357); }
     }
 
     /// <summary>
     /// ByteProperty: CameraOffsetParameters
     /// </summary>
-    public unsafe byte CameraOffsetParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool CameraOffsetParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 358); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 358); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 358); }
     }
 
     /// <summary>
     /// ByteProperty: CameraAngleParameters
     /// </summary>
-    public unsafe byte CameraAngleParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool CameraAngleParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 359); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 359); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 359); }
     }
 
     /// <summary>
     /// ByteProperty: PlayerDistanceParameters
     /// </summary>
-    public unsafe byte PlayerDistanceParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool PlayerDistanceParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// ByteProperty: PlayerOffsetParameters
     /// </summary>
-    public unsafe byte PlayerOffsetParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool PlayerOffsetParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 361); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 361); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 361); }
     }
 
     /// <summary>
     /// ByteProperty: PlayerAngleParameters
     /// </summary>
-    public unsafe byte PlayerAngleParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool PlayerAngleParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 362); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 362); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 362); }
     }
 
     /// <summary>
     /// ByteProperty: ObjectVelocityParameters
     /// </summary>
-    public unsafe byte ObjectVelocityParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool ObjectVelocityParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 363); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 363); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 363); }
     }
 
     /// <summary>
     /// ByteProperty: ObjectVisibilityParameters
     /// </summary>
-    public unsafe byte ObjectVisibilityParameters
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool ObjectVisibilityParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 
     /// <summary>
     /// ByteProperty: Occlusion
     /// </summary>
-    public unsafe byte Occlusion
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool Occlusion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 365); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 365); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 365); }
     }
 
     /// <summary>
     /// ByteProperty: ParameterOnlyOcclusion
     /// </summary>
-    public unsafe byte ParameterOnlyOcclusion
+    public unsafe BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool ParameterOnlyOcclusion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 366); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkComponentSettings.EAkComponentSettingsBool>(Ptr + 366); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 366); }
     }
 
@@ -198,135 +198,135 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ObjectProperty: ParameterSetup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParameterSetup
+    public unsafe BmSDK.Engine.RAkAudibleParameters ParameterSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudibleParameters>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ObjectProperty: PropagationSetup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PropagationSetup
+    public unsafe BmSDK.Engine.RAkAudiblePropagation PropagationSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudiblePropagation>(Ptr + 392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerDistanceParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerDistanceParameter
+    public unsafe BmSDK.Engine.AkParameterName PlayerDistanceParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 
     /// <summary>
     /// ObjectProperty: AngleToSourceFromListenerPlayerParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AngleToSourceFromListenerPlayerParameter
+    public unsafe BmSDK.Engine.AkParameterName AngleToSourceFromListenerPlayerParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
     }
 
     /// <summary>
     /// ObjectProperty: AngleFromSourceToListenerPlayerParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AngleFromSourceToListenerPlayerParameter
+    public unsafe BmSDK.Engine.AkParameterName AngleFromSourceToListenerPlayerParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
     /// <summary>
     /// ObjectProperty: VerticalOffsetToPlayerParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VerticalOffsetToPlayerParameter
+    public unsafe BmSDK.Engine.AkParameterName VerticalOffsetToPlayerParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 
     /// <summary>
     /// ObjectProperty: HorizontalOffsetToPlayerParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HorizontalOffsetToPlayerParameter
+    public unsafe BmSDK.Engine.AkParameterName HorizontalOffsetToPlayerParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectVelocityParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectVelocityParameter
+    public unsafe BmSDK.Engine.AkParameterName ObjectVelocityParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectVelocityHorizontalParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectVelocityHorizontalParameter
+    public unsafe BmSDK.Engine.AkParameterName ObjectVelocityHorizontalParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectVelocityVerticalParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectVelocityVerticalParameter
+    public unsafe BmSDK.Engine.AkParameterName ObjectVelocityVerticalParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
     /// ObjectProperty: RelativeVelocityParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RelativeVelocityParameter
+    public unsafe BmSDK.Engine.AkParameterName RelativeVelocityParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
     /// <summary>
     /// ObjectProperty: VerticalOffsetToCameraParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VerticalOffsetToCameraParameter
+    public unsafe BmSDK.Engine.AkParameterName VerticalOffsetToCameraParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
     /// <summary>
     /// ObjectProperty: HorizontalOffsetToCameraParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HorizontalOffsetToCameraParameter
+    public unsafe BmSDK.Engine.AkParameterName HorizontalOffsetToCameraParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>
     /// ObjectProperty: AngleFromSourceToListenerCameraParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AngleFromSourceToListenerCameraParameter
+    public unsafe BmSDK.Engine.AkParameterName AngleFromSourceToListenerCameraParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectVisibilityParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectVisibilityParameter
+    public unsafe BmSDK.Engine.AkParameterName ObjectVisibilityParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 
@@ -335,8 +335,8 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
     /// </summary>
     public unsafe bool bMergeParameterSetup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 504); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 504); }
     }
 
     /// <summary>
@@ -344,8 +344,8 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
     /// </summary>
     public unsafe bool bMergePropagationSetup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 504); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 504); }
     }
 
     /// <summary>

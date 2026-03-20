@@ -100,8 +100,8 @@ public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK
     /// </summary>
     public unsafe bool Stopping
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK
     /// </summary>
     public unsafe bool AlwaysAnimate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
     }
 
     /// <summary>
@@ -125,9 +125,9 @@ public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK
     /// <summary>
     /// ComponentProperty: SkelMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkelMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SkelMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
     }
 }

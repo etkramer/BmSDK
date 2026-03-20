@@ -71,27 +71,27 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: CharacterDefineFallback
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CharacterDefineFallback
+    public unsafe BmSDK.BmGame.RCharacterDefine CharacterDefineFallback
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 7692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7692); }
     }
 
     /// <summary>
     /// ArrayProperty: BadGuys
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> BadGuys
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleHushBase.FBadGuyData> BadGuys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 7700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleHushBase.FBadGuyData>>(Ptr + 7700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7700); }
     }
 
     /// <summary>
     /// ArrayProperty: NewGamePlus_BadGuys
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> NewGamePlus_BadGuys
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleHushBase.FBadGuyData> NewGamePlus_BadGuys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 7716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleHushBase.FBadGuyData>>(Ptr + 7716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7716); }
     }
 
@@ -104,36 +104,36 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
         /// <summary>
         /// ClassProperty: PawnClass
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnClass
+        public unsafe BmSDK.Class PawnClass
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// ObjectProperty: CharacterDefine
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CharacterDefine
+        public unsafe BmSDK.BmGame.RCharacterDefine CharacterDefine
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// ClassProperty: CharacterType
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CharacterType
+        public unsafe BmSDK.Class CharacterType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// ClassProperty: WeaponType
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WeaponType
+        public unsafe BmSDK.Class WeaponType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
@@ -167,9 +167,9 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
         /// <summary>
         /// ObjectProperty: GetOutAnimSet
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GetOutAnimSet
+        public unsafe BmSDK.Engine.AnimSet GetOutAnimSet
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 52); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
@@ -178,8 +178,8 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
         /// </summary>
         public unsafe bool bSpawned
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 0) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 1) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }; }
         }
     }
 }

@@ -71,18 +71,18 @@ public partial class RFractureWall : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: TouchingPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TouchingPlayer
+    public unsafe BmSDK.BmGame.RPawnPlayer TouchingPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 1132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
 
     /// <summary>
     /// StructProperty: TouchingPlayerPrevPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TouchingPlayerPrevPos
+    public unsafe System.Numerics.Vector3 TouchingPlayerPrevPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
     }
 }

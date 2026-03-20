@@ -71,9 +71,9 @@ public partial class RBMAIAction_NervousCorner_In_Right : BmSDK.BmGame.RBMAIActi
     /// <summary>
     /// StructProperty: CornerPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerPos
+    public unsafe System.Numerics.Vector3 CornerPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
@@ -89,9 +89,9 @@ public partial class RBMAIAction_NervousCorner_In_Right : BmSDK.BmGame.RBMAIActi
     /// <summary>
     /// StructProperty: EnterCornerID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EnterCornerID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EnterCornerID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 

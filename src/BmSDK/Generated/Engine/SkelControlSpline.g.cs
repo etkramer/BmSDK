@@ -45,18 +45,18 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// ByteProperty: SplineBoneAxis
     /// </summary>
-    public unsafe byte SplineBoneAxis
+    public unsafe BmSDK.GameObject.EAxis SplineBoneAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ByteProperty: BoneRotMode
     /// </summary>
-    public unsafe byte BoneRotMode
+    public unsafe BmSDK.Engine.SkelControlSpline.ESplineControlRotMode BoneRotMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 253); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSpline.ESplineControlRotMode>(Ptr + 253); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 253); }
     }
 
@@ -65,8 +65,8 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bInvertSplineBoneAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>

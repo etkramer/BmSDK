@@ -45,9 +45,9 @@ public partial class MaterialExpressionTextureSampleParameterMovie : BmSDK.Engin
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 

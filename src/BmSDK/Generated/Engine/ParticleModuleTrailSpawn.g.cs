@@ -36,9 +36,9 @@ public partial class ParticleModuleTrailSpawn : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// ComponentProperty: SpawnDistanceMap
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnDistanceMap
+    public unsafe BmSDK.Engine.DistributionFloatParticleParameter SpawnDistanceMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParticleParameter>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

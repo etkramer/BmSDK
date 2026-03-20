@@ -36,9 +36,9 @@ public partial class RBMBehaviour_StandingTalk : BmSDK.BmGame.RBMBehaviour, BmSD
     /// <summary>
     /// ObjectProperty: Subject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Subject
+    public unsafe BmSDK.Engine.Actor Subject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 

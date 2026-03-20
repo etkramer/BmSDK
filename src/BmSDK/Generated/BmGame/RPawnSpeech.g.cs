@@ -73,34 +73,34 @@ public partial class RPawnSpeech : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBarkAsLeader
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4632) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4632); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4632); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4632) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4632); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4632); }
     }
 
     /// <summary>
     /// ArrayProperty: BarkSet
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> BarkSet
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkSet> BarkSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 4636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkSet>>(Ptr + 4636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4636); }
     }
 
     /// <summary>
     /// ArrayProperty: BarkCharDefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> BarkCharDefList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkCharacterDefInstance> BarkCharDefList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 4652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkCharacterDefInstance>>(Ptr + 4652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4652); }
     }
 
     /// <summary>
     /// ComponentProperty: PawnSpeechDialogueComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnSpeechDialogueComponent
+    public unsafe BmSDK.Engine.AkDialogueComponent PawnSpeechDialogueComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueComponent>(Ptr + 4668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4668); }
     }
 }

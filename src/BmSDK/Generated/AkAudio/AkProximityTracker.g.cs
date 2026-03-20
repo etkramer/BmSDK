@@ -71,54 +71,54 @@ public partial class AkProximityTracker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_AkEvaluate
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkEvaluate
+    public unsafe System.IntPtr VfTable_AkEvaluate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: ProximityFollowListener
     /// </summary>
-    public unsafe byte ProximityFollowListener
+    public unsafe BmSDK.Engine.AkWwise.EListenerID ProximityFollowListener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.EListenerID>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ByteProperty: AngleFollowListener
     /// </summary>
-    public unsafe byte AngleFollowListener
+    public unsafe BmSDK.Engine.AkWwise.EListenerID AngleFollowListener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 677); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.EListenerID>(Ptr + 677); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 677); }
     }
 
     /// <summary>
     /// ObjectProperty: ProximityParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProximityParameter
+    public unsafe BmSDK.Engine.AkParameterName ProximityParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// ObjectProperty: AngleFromListenerParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AngleFromListenerParameter
+    public unsafe BmSDK.Engine.AkParameterName AngleFromListenerParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
     /// <summary>
     /// ComponentProperty: DrawSoundRadius
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DrawSoundRadius
+    public unsafe BmSDK.Engine.AkDrawSoundRadiusComponent DrawSoundRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDrawSoundRadiusComponent>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
@@ -127,8 +127,8 @@ public partial class AkProximityTracker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ProximityTrackerEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 704) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 704); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 704); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 704) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 704); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 704); }
     }
 
     /// <summary>

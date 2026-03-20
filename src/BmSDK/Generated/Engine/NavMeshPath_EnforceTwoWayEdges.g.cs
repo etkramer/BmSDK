@@ -36,9 +36,9 @@ public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathCo
     /// <summary>
     /// ObjectProperty: NextConstraint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextConstraint
+    public unsafe BmSDK.Engine.NavMeshPathConstraint NextConstraint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

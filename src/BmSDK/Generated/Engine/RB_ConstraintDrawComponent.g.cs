@@ -36,9 +36,9 @@ public partial class RB_ConstraintDrawComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// ObjectProperty: LimitMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LimitMaterial
+    public unsafe BmSDK.Engine.MaterialInterface LimitMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

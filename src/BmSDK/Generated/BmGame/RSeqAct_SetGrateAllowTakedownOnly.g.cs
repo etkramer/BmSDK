@@ -36,9 +36,9 @@ public partial class RSeqAct_SetGrateAllowTakedownOnly : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// ObjectProperty: Grate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Grate
+    public unsafe BmSDK.BmGame.RTunnelGrateBase Grate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelGrateBase>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

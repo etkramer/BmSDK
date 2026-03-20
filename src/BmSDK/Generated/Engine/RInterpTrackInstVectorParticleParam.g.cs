@@ -36,9 +36,9 @@ public partial class RInterpTrackInstVectorParticleParam : BmSDK.Engine.InterpTr
     /// <summary>
     /// StructProperty: ResetVector
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResetVector
+    public unsafe System.Numerics.Vector3 ResetVector
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

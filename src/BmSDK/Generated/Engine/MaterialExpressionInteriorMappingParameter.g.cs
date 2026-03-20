@@ -36,36 +36,36 @@ public partial class MaterialExpressionInteriorMappingParameter : BmSDK.Engine.M
     /// <summary>
     /// StructProperty: WSPosition
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionInteriorMappingParameter.WSOffset WSPosition
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput WSPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionInteriorMappingParameter.WSOffset>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// StructProperty: WSOffset
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionInteriorMappingParameter.Depth WSOffset
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput WSOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionInteriorMappingParameter.Depth>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// StructProperty: Depth
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionInteriorMappingParameter.SampleRadius Depth
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Depth
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionInteriorMappingParameter.SampleRadius>(Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
     }
 
     /// <summary>
     /// StructProperty: SampleRadius
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTextureSample.Coordinates SampleRadius
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTextureSample.Coordinates>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
@@ -83,7 +83,7 @@ public partial class MaterialExpressionInteriorMappingParameter : BmSDK.Engine.M
     /// </summary>
     public unsafe bool bWorldSpace
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 528) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 528); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 528); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 528) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 528); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 528); }
     }
 }

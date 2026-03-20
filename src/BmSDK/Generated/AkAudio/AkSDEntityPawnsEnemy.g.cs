@@ -36,9 +36,9 @@ public partial class AkSDEntityPawnsEnemy : BmSDK.AkAudio.AkSDEntityPawns, BmSDK
     /// <summary>
     /// ArrayProperty: PawnList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> PawnList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Pawn> PawnList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pawn>>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 }

@@ -36,18 +36,18 @@ public partial class RManBatAppearanceController : BmSDK.GameObject, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: ChanceOfAppearanceByType
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> ChanceOfAppearanceByType
+    public unsafe BmSDK.TArray<float> ChanceOfAppearanceByType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: AppearanceHistory
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> AppearanceHistory
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RManBatAppearanceController.FManbatAppearanceHistory> AppearanceHistory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RManBatAppearanceController.FManbatAppearanceHistory>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -63,9 +63,9 @@ public partial class RManBatAppearanceController : BmSDK.GameObject, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: ManbatAnims
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ManbatAnims
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> ManbatAnims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
@@ -87,9 +87,9 @@ public partial class RManBatAppearanceController : BmSDK.GameObject, BmSDK.IGame
         /// <summary>
         /// ArrayProperty: AnimNames
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AnimNames
+        public unsafe BmSDK.TArray<BmSDK.FName> AnimNames
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 

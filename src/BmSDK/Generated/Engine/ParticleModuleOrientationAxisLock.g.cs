@@ -36,9 +36,9 @@ public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleMo
     /// <summary>
     /// ByteProperty: LockAxisFlags
     /// </summary>
-    public unsafe byte LockAxisFlags
+    public unsafe BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock LockAxisFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

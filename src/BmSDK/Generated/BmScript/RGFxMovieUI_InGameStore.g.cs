@@ -54,27 +54,27 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// ArrayProperty: m_aStoreContent
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>> m_aStoreContent
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineStoreContent> m_aStoreContent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>(Ptr + 1104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineStoreContent>>(Ptr + 1104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
     }
 
     /// <summary>
     /// ArrayProperty: m_aSWFTest
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>> m_aSWFTest
+    public unsafe BmSDK.TArray<byte> m_aSWFTest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>(Ptr + 1120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
     }
 
     /// <summary>
     /// ArrayProperty: m_aActiveCustomRequestIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> m_aActiveCustomRequestIds
+    public unsafe BmSDK.TArray<BmSDK.FString> m_aActiveCustomRequestIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 1136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
     }
 
@@ -83,8 +83,8 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool m_bStoreContentEnumerated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool m_bStoreContentSuccessful
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool m_bHydraContentEnumerated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool m_bHydraContentSuccessful
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool bXYAvailable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
@@ -128,16 +128,16 @@ public partial class RGFxMovieUI_InGameStore : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// </summary>
     public unsafe bool m_bSteamDLCPriceContentEnumerated
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1152); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1152); }
     }
 
     /// <summary>
     /// ArrayProperty: m_aHydraTrackingInfo
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> m_aHydraTrackingInfo
+    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_InGameStore.FHydraTrackingInfo> m_aHydraTrackingInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 1156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_InGameStore.FHydraTrackingInfo>>(Ptr + 1156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
 

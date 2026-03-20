@@ -91,8 +91,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool SpottedByAnotherThug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bTriggeredSloMo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bLinearDampingOnRagdollDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bDoingLastHitSlomo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bCheckForNextFearTakedownTargetAtStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bNextChainFearTakedownTargetExistedAtStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
@@ -145,16 +145,16 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// </summary>
     public unsafe bool bCountThisMoveTowardsFearTakedownCount
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1672); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1672); }
     }
 
     /// <summary>
     /// ObjectProperty: CachedTunnelGrate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedTunnelGrate
+    public unsafe BmSDK.Engine.Actor CachedTunnelGrate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
     }
 
@@ -170,9 +170,9 @@ public partial class RStealthTakedownStage_ChainTakedown_GrateFinish : BmSDK.BmG
     /// <summary>
     /// StructProperty: FinalHitCameraShake
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FinalHitCameraShake
+    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FinalHitCameraShake
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1688); }
     }
 }

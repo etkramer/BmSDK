@@ -71,36 +71,36 @@ public partial class RPawnManBatBase : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: ManbatDefine
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ManbatDefine
+    public unsafe BmSDK.BmGame.RCharacterDefine ManbatDefine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 4740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4740); }
     }
 
     /// <summary>
     /// ObjectProperty: ScreechLine
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ScreechLine
+    public unsafe BmSDK.Engine.AkDialogueLineSingle ScreechLine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLineSingle>(Ptr + 4748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4748); }
     }
 
     /// <summary>
     /// ObjectProperty: FlyAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlyAnimset
+    public unsafe BmSDK.Engine.AnimSet FlyAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 4756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4756); }
     }
 
     /// <summary>
     /// ClassProperty: ManbatCharacter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ManbatCharacter
+    public unsafe BmSDK.Class ManbatCharacter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 4764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4764); }
     }
 

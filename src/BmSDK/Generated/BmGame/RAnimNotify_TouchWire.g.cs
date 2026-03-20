@@ -36,18 +36,18 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// <summary>
     /// ByteProperty: LimbType
     /// </summary>
-    public unsafe byte LimbType
+    public unsafe BmSDK.BmGame.RPawnPlayer.OverheadRopeControlPointType LimbType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.OverheadRopeControlPointType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: OnOrOff
     /// </summary>
-    public unsafe byte OnOrOff
+    public unsafe BmSDK.BmGame.RAnimNotify_TouchWire.LimbOnOrOff OnOrOff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 85); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_TouchWire.LimbOnOrOff>(Ptr + 85); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
@@ -56,7 +56,7 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// </summary>
     public unsafe bool CanBeLastLimbToComeOff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
     }
 }

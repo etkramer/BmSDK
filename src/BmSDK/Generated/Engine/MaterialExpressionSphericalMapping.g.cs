@@ -36,9 +36,9 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
     /// <summary>
     /// ByteProperty: SphericalMappingType
     /// </summary>
-    public unsafe byte SphericalMappingType
+    public unsafe BmSDK.Engine.MaterialExpressionSphericalMapping.ESphericalMappingType SphericalMappingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSphericalMapping.ESphericalMappingType>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

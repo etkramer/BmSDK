@@ -38,8 +38,8 @@ public partial class RBMBehaviour_GangFleeAnimationPoint : BmSDK.BmScript.RBMBeh
     /// </summary>
     public unsafe bool bFleeCowering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 948); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 948); }
     }
 
     /// <summary>

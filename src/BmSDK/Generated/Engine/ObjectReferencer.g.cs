@@ -36,9 +36,9 @@ public partial class ObjectReferencer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ReferencedObjects
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ReferencedObjects
+    public unsafe BmSDK.TArray<BmSDK.GameObject> ReferencedObjects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

@@ -71,18 +71,18 @@ public partial class RCombatArea_GuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: User
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT User
+    public unsafe BmSDK.BmGame.RBMPawnAI User
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ArrayProperty: CombatAreas
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> CombatAreas
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCombatArea> CombatAreas
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCombatArea>>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

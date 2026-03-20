@@ -36,9 +36,9 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: Colour
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Colour
+    public unsafe BmSDK.GameObject.FLinearColor Colour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

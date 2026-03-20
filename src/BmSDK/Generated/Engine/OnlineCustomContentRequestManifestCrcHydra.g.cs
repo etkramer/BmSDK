@@ -45,9 +45,9 @@ public partial class OnlineCustomContentRequestManifestCrcHydra : BmSDK.Engine.O
     /// <summary>
     /// ObjectProperty: CrcSubRequest
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrcSubRequest
+    public unsafe BmSDK.Engine.OnlineCustomContentRequestHydra CrcSubRequest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineCustomContentRequestHydra>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 

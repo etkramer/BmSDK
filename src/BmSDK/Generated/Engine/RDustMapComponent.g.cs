@@ -36,9 +36,9 @@ public partial class RDustMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGam
     /// <summary>
     /// StructProperty: DustSceneInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DustSceneInfo
+    public unsafe System.IntPtr DustSceneInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 

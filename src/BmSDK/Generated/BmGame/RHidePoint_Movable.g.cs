@@ -71,53 +71,53 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// <summary>
     /// ObjectProperty: AxisMatinee
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AxisMatinee_0
+    public unsafe BmSDK.Engine.SeqAct_Interp AxisMatinee_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqAct_Interp>(Ptr + 1368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1368); }
     }
     /// <summary>
     /// ObjectProperty: AxisMatinee
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AxisMatinee_1
+    public unsafe BmSDK.Engine.SeqAct_Interp AxisMatinee_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqAct_Interp>(Ptr + 1376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1376); }
     }
 
     /// <summary>
     /// ObjectProperty: StartSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StartSound
+    public unsafe BmSDK.Engine.AkEvent StartSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
     }
 
     /// <summary>
     /// ObjectProperty: StopSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StopSound
+    public unsafe BmSDK.Engine.AkEvent StopSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1392); }
     }
 
     /// <summary>
     /// ObjectProperty: LoopingSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LoopingSound
+    public unsafe BmSDK.Engine.AkEvent LoopingSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioSpeedParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioSpeedParameter
+    public unsafe BmSDK.Engine.AkParameterName AudioSpeedParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1408); }
     }
 
@@ -160,8 +160,8 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// </summary>
     public unsafe bool HasXAxisMatinee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
     }
 
     /// <summary>
@@ -169,8 +169,8 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// </summary>
     public unsafe bool HasYAxisMatinee
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
     }
 
     /// <summary>
@@ -178,8 +178,8 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// </summary>
     public unsafe bool bWasMoving
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1432); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1432); }
     }
 
     /// <summary>

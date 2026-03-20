@@ -71,9 +71,9 @@ public partial class RParticleKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
     /// <summary>
     /// ObjectProperty: AffectedPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AffectedPlayer
+    public unsafe BmSDK.BmGame.RPlayerController AffectedPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

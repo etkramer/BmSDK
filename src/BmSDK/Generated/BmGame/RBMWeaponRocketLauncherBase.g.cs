@@ -73,25 +73,25 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     /// </summary>
     public unsafe bool bLaserSightOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1748) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1748); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1748) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1748); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1748); }
     }
 
     /// <summary>
     /// ObjectProperty: HomeEdge
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HomeEdge
+    public unsafe BmSDK.BmGame.RRocketLauncherEdge HomeEdge
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRocketLauncherEdge>(Ptr + 1752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1752); }
     }
 
     /// <summary>
     /// ObjectProperty: RocketLauncherAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RocketLauncherAnimset
+    public unsafe BmSDK.Engine.AnimSet RocketLauncherAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 1760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1760); }
     }
 }

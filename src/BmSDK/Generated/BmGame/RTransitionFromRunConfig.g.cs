@@ -36,9 +36,9 @@ public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// ArrayProperty: Approach
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Approach
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RTransitionFromRunConfig.FApproachOption> Approach
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RTransitionFromRunConfig.FApproachOption>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -63,9 +63,9 @@ public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: AnimationSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimationSet
+    public unsafe BmSDK.Engine.AnimSet AnimationSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
@@ -87,9 +87,9 @@ public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: ApproachRef
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ApproachRef
+        public unsafe System.Numerics.Vector3 ApproachRef
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 

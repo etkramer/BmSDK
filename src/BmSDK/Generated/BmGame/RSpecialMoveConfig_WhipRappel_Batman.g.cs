@@ -63,9 +63,9 @@ public partial class RSpecialMoveConfig_WhipRappel_Batman : BmSDK.BmGame.RSpecia
     /// <summary>
     /// ObjectProperty: BatmanWhipRappelAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatmanWhipRappelAnimSet
+    public unsafe BmSDK.Engine.AnimSet BatmanWhipRappelAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 

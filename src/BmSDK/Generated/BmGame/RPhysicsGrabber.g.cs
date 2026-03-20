@@ -89,9 +89,9 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// ComponentProperty: PhysicsGrabber
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysicsGrabber
+    public unsafe BmSDK.Engine.RB_Handle PhysicsGrabber
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_Handle>(Ptr + 2076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
     }
 
@@ -107,9 +107,9 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// StructProperty: HoldOrientation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HoldOrientation
+    public unsafe BmSDK.GameObject.FQuat HoldOrientation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2096); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 2096); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2096); }
     }
 
@@ -118,8 +118,8 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// </summary>
     public unsafe bool IsPhysActorHit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2112); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2112); }
     }
 
     /// <summary>
@@ -134,54 +134,54 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: PhysTestHitRBBodyInstance
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysTestHitRBBodyInstance
+    public unsafe BmSDK.Engine.RB_BodyInstance PhysTestHitRBBodyInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_BodyInstance>(Ptr + 2120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
     }
 
     /// <summary>
     /// ObjectProperty: PhysTestHitActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PhysTestHitActor
+    public unsafe BmSDK.Engine.Actor PhysTestHitActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2128); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsCentre
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestShapeBoundsCentre
+    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsCentre
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsExtents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestShapeBoundsExtents
+    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsExtents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2148); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestHitLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestHitLocation
+    public unsafe System.Numerics.Vector3 PhysTestHitLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2160); }
     }
 
     /// <summary>
     /// StructProperty: PhysTestHitNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PhysTestHitNormal
+    public unsafe System.Numerics.Vector3 PhysTestHitNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2172); }
     }
 
@@ -197,9 +197,9 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// ByteProperty: CurrentImpactMaterial
     /// </summary>
-    public unsafe byte CurrentImpactMaterial
+    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes CurrentImpactMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.EPhysMaterialImpactTypes>(Ptr + 2200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
     }
 

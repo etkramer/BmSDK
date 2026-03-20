@@ -71,9 +71,9 @@ public partial class RCinematicOriginActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: AdditionalRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AdditionalRotation
+    public unsafe BmSDK.Rotator AdditionalRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

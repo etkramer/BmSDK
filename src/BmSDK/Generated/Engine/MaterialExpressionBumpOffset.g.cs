@@ -36,27 +36,27 @@ public partial class MaterialExpressionBumpOffset : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: Coordinate
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBumpOffset.Height Coordinate
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBumpOffset.Height>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Height
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBumpOffset.HeightRatioInput Height
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Height
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBumpOffset.HeightRatioInput>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: HeightRatioInput
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc HeightRatioInput
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput HeightRatioInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 

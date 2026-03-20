@@ -36,36 +36,36 @@ public partial class MaterialExpressionWireAAMesh : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: VertexMask
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionWireAAMesh.VertexNormal VertexMask
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput VertexMask
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionWireAAMesh.VertexNormal>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: VertexNormal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionWireAAMesh.OverrideStartWidth VertexNormal
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput VertexNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionWireAAMesh.OverrideStartWidth>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: OverrideStartWidth
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionWireAAMesh.OverrideMinPixelWidth OverrideStartWidth
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput OverrideStartWidth
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionWireAAMesh.OverrideMinPixelWidth>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// StructProperty: OverrideMinPixelWidth
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc OverrideMinPixelWidth
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput OverrideMinPixelWidth
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 

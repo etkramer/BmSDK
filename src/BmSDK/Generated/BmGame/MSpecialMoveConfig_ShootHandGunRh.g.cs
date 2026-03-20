@@ -36,9 +36,9 @@ public partial class MSpecialMoveConfig_ShootHandGunRh : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// ObjectProperty: Gadget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Gadget
+    public unsafe BmSDK.BmGame.MThrowGadgetBase Gadget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MThrowGadgetBase>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 }

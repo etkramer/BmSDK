@@ -71,18 +71,18 @@ public partial class RStealthTakedownStage_LedgeHangDropToGrab : BmSDK.BmGame.RS
     /// <summary>
     /// StructProperty: ShortDropBackAnimSet
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakedownStage_DropToGrab.ShortDropFrontAnimSet ShortDropBackAnimSet
+    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet ShortDropBackAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakedownStage_DropToGrab.ShortDropFrontAnimSet>(Ptr + 1700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 1700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
     }
 
     /// <summary>
     /// StructProperty: ShortDropFrontAnimSet
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.StageAnim ShortDropFrontAnimSet
+    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet ShortDropFrontAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.StageAnim>(Ptr + 2008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 2008); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
     }
 }

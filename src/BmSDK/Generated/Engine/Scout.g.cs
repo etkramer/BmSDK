@@ -71,9 +71,9 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PathSizes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> PathSizes
+    public unsafe BmSDK.TArray<BmSDK.Engine.Scout.FPathSizeInfo> PathSizes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Scout.FPathSizeInfo>>(Ptr + 1480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
     }
 
@@ -134,18 +134,18 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: DefaultReachSpecClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultReachSpecClass
+    public unsafe BmSDK.Class DefaultReachSpecClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1520); }
     }
 
     /// <summary>
     /// ArrayProperty: EdgePathColors
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> EdgePathColors
+    public unsafe BmSDK.TArray<BmSDK.GameObject.FColor> EdgePathColors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FColor>>(Ptr + 1528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1528); }
     }
 
@@ -307,8 +307,8 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// </summary>
     public unsafe bool NavMeshGen_ExpansionDoObstacleMeshSimplification
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bHightlightOneWayReachSpecs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
     }
 
     /// <summary>

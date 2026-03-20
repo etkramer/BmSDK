@@ -71,9 +71,9 @@ public partial class RBreakableVentLight : BmSDK.BmGame.RBreakableVentLightBase,
     /// <summary>
     /// ComponentProperty: LightComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightComp
+    public unsafe BmSDK.Engine.PointLightComponent LightComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 }

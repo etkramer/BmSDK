@@ -71,36 +71,36 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// ComponentProperty: InvestigationMesh1
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InvestigationMesh1
+    public unsafe BmSDK.Engine.StaticMeshComponent InvestigationMesh1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 
     /// <summary>
     /// ComponentProperty: InvestigationMesh2
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InvestigationMesh2
+    public unsafe BmSDK.Engine.StaticMeshComponent InvestigationMesh2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
     }
 
     /// <summary>
     /// ComponentProperty: GadgetInteraction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GadgetInteraction
+    public unsafe BmSDK.Engine.RInteractionComponent GadgetInteraction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 1740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1740); }
     }
 
     /// <summary>
     /// ComponentProperty: VoiceSynthesiserHighlightStaticMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VoiceSynthesiserHighlightStaticMesh
+    public unsafe BmSDK.Engine.StaticMeshComponent VoiceSynthesiserHighlightStaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
     }
 
@@ -109,8 +109,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bValidVoiceSynthesiserTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bIsForceFullDestroyOnDamage
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool IsImmuneToExplosiveGoo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool IsGlass
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bBlockTakedownOnGlassWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool IsReinforcedGlass
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool IsTakedownWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool CantPunch
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool IsFragile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool CanInteract
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -199,8 +199,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool CouldInteractAtPostBeginPlayTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -208,8 +208,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool ShowIconInNonXray
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -217,8 +217,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bSuppressFullAIEvent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -226,8 +226,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bDoNotAffectNavMesh
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -235,8 +235,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bLeaveNavMeshBlockedWhenDestroyed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -244,8 +244,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bTriggerCombatEvent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -253,8 +253,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bDisableNearbyTempGuardPointsWhenDestroyed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -262,8 +262,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bFloor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bRestoreFracturedEvents
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bTookOutThugs
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bSpawnGlassVolume
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -298,8 +298,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool NoGlideKick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool DontAllowDetonateWithoutValidTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bCallOnDamagedForTheFirstTimeEventNextTick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -325,8 +325,8 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// </summary>
     public unsafe bool bCallOnDamagedEventNextTick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1756); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1756); }
     }
 
     /// <summary>
@@ -350,108 +350,108 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// ComponentProperty: RoomState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RoomState
+    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 1768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1768); }
     }
 
     /// <summary>
     /// ObjectProperty: EventCoordinator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventCoordinator
+    public unsafe BmSDK.BmGame.RAEC_ExplodedWall EventCoordinator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_ExplodedWall>(Ptr + 1776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1776); }
     }
 
     /// <summary>
     /// ObjectProperty: ExplodeCamera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplodeCamera
+    public unsafe BmSDK.BmGame.RCameraActor ExplodeCamera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraActor>(Ptr + 1784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1784); }
     }
 
     /// <summary>
     /// ObjectProperty: PelletExplosionFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PelletExplosionFX
+    public unsafe BmSDK.Engine.ParticleSystem PelletExplosionFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 1792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1792); }
     }
 
     /// <summary>
     /// ObjectProperty: LastBreakInstigator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastBreakInstigator
+    public unsafe BmSDK.Engine.Actor LastBreakInstigator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 1800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1800); }
     }
 
     /// <summary>
     /// ObjectProperty: GlassVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlassVolume
+    public unsafe BmSDK.BmGame.RAudioGlassVolume GlassVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAudioGlassVolume>(Ptr + 1808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1808); }
     }
 
     /// <summary>
     /// ObjectProperty: TouchingPlayer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TouchingPlayer
+    public unsafe BmSDK.BmGame.RPawnPlayer TouchingPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer>(Ptr + 1816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1816); }
     }
 
     /// <summary>
     /// ObjectProperty: LockInVol
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockInVol
+    public unsafe BmSDK.BmGame.RLockinVolume LockInVol
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLockinVolume>(Ptr + 1824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1824); }
     }
 
     /// <summary>
     /// ObjectProperty: GlideKickSmashSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlideKickSmashSound
+    public unsafe BmSDK.Engine.AkEvent GlideKickSmashSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1832); }
     }
 
     /// <summary>
     /// ObjectProperty: lockingPawn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT lockingPawn
+    public unsafe BmSDK.BmGame.RBMPawnAI lockingPawn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 1840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1840); }
     }
 
     /// <summary>
     /// ComponentProperty: XrayLight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayLight
+    public unsafe BmSDK.Engine.PointLightComponent XrayLight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 1848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1848); }
     }
 
     /// <summary>
     /// StructProperty: LastExplosionCentre
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastExplosionCentre
+    public unsafe System.Numerics.Vector3 LastExplosionCentre
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1856); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1856); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
     }
 
@@ -467,27 +467,27 @@ public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructible
     /// <summary>
     /// StructProperty: TouchingPlayerPrevPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TouchingPlayerPrevPos
+    public unsafe System.Numerics.Vector3 TouchingPlayerPrevPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1872); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1872); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1872); }
     }
 
     /// <summary>
     /// ArrayProperty: LinkedGrapplePoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>> LinkedGrapplePoints
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGrapplePoint> LinkedGrapplePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>(Ptr + 1884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGrapplePoint>>(Ptr + 1884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1884); }
     }
 
     /// <summary>
     /// ArrayProperty: LinkedCornerPoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>> LinkedCornerPoints
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCornerPointBase> LinkedCornerPoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>(Ptr + 1900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCornerPointBase>>(Ptr + 1900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1900); }
     }
 

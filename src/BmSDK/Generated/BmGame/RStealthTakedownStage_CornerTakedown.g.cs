@@ -73,8 +73,8 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// </summary>
     public unsafe bool RopesReleased
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
     }
 
     /// <summary>
@@ -82,52 +82,52 @@ public partial class RStealthTakedownStage_CornerTakedown : BmSDK.BmGame.RStealt
     /// </summary>
     public unsafe bool AttachRope
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
     }
 
     /// <summary>
     /// ComponentProperty: MyRope
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyRope
+    public unsafe BmSDK.BmGame.RSimpleRopeComponent MyRope
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 1704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
     }
 
     /// <summary>
     /// StructProperty: RopeAttachPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeAttachPoint
+    public unsafe System.Numerics.Vector3 RopeAttachPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1712); }
     }
 
     /// <summary>
     /// StructProperty: RopeRenderAttachPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeRenderAttachPoint
+    public unsafe System.Numerics.Vector3 RopeRenderAttachPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 
     /// <summary>
     /// StructProperty: RopeRenderStartOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeRenderStartOffset
+    public unsafe System.Numerics.Vector3 RopeRenderStartOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
     }
 
     /// <summary>
     /// StructProperty: RopePhysStartOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopePhysStartOffset
+    public unsafe System.Numerics.Vector3 RopePhysStartOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
     }
 }

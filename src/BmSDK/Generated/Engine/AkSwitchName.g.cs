@@ -36,9 +36,9 @@ public partial class AkSwitchName : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: ParentSwitchGroup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentSwitchGroup
+    public unsafe BmSDK.Engine.AkSwitchGroupName ParentSwitchGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkSwitchGroupName>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

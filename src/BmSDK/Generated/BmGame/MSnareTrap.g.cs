@@ -71,9 +71,9 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: DeployedTraps
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText> DeployedTraps
+    public unsafe BmSDK.TArray<BmSDK.BmGame.MSnareTrapProjectile> DeployedTraps
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RInventoryGadget.TutorialText>>(Ptr + 2592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.MSnareTrapProjectile>>(Ptr + 2592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2592); }
     }
 
@@ -98,27 +98,27 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: LastBehaviourDeployed
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastBehaviourDeployed
+    public unsafe BmSDK.BmGame.MHQBehaviour_SnareTrapTripped LastBehaviourDeployed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHQBehaviour_SnareTrapTripped>(Ptr + 2616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2616); }
     }
 
     /// <summary>
     /// ObjectProperty: ThugReactionAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThugReactionAnimSet
+    public unsafe BmSDK.Engine.AnimSet ThugReactionAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 2624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2624); }
     }
 
     /// <summary>
     /// ObjectProperty: ThugRifleReactionAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ThugRifleReactionAnimSet
+    public unsafe BmSDK.Engine.AnimSet ThugRifleReactionAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 2632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2632); }
     }
 
@@ -143,18 +143,18 @@ public partial class MSnareTrap : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimLocation
+    public unsafe System.Numerics.Vector3 AimLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
     }
 
     /// <summary>
     /// StructProperty: AimDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AimDirection
+    public unsafe System.Numerics.Vector3 AimDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2660); }
     }
 }

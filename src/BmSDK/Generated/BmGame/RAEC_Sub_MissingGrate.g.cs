@@ -71,9 +71,9 @@ public partial class RAEC_Sub_MissingGrate : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// ObjectProperty: MissingPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MissingPoint
+    public unsafe BmSDK.BmGame.RMissingWallGrateAIMarker MissingPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMissingWallGrateAIMarker>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

@@ -36,18 +36,18 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// ByteProperty: CurrentPhase
     /// </summary>
-    public unsafe byte CurrentPhase
+    public unsafe BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase CurrentPhase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
     /// ByteProperty: OldPhase
     /// </summary>
-    public unsafe byte OldPhase
+    public unsafe BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase OldPhase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 609); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch.ETankSearchPhase>(Ptr + 609); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 609); }
     }
 
@@ -56,8 +56,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool SearchLastKnownPositionByKismet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool b360ScansActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool bConstant360Scan
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool bDrawScanLines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool InstantAttack
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool StayStill
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool CanSeePlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// </summary>
     public unsafe bool DisableDeathBarks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
@@ -243,27 +243,27 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: LastKnownPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastKnownPos
+    public unsafe System.Numerics.Vector3 LastKnownPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// StructProperty: SearchDirectionToAvoid
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SearchDirectionToAvoid
+    public unsafe System.Numerics.Vector3 SearchDirectionToAvoid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// StructProperty: InitialLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InitialLocation
+    public unsafe System.Numerics.Vector3 InitialLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
@@ -378,9 +378,9 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: CurrentScanDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentScanDirection
+    public unsafe System.Numerics.Vector3 CurrentScanDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
@@ -441,36 +441,36 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// ObjectProperty: CachedTargetActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedTargetActor
+    public unsafe BmSDK.Engine.Actor CachedTargetActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatMan
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatMan
+    public unsafe BmSDK.BmGame.RVehicleCombatManager CombatMan
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleCombatManager>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ObjectProperty: HostTank
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostTank
+    public unsafe BmSDK.BmGame.RVehicleHeavyTank HostTank
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank>(Ptr + 804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 
     /// <summary>
     /// StructProperty: ChaseRestrictions
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes ChaseRestrictions
+    public unsafe BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction ChaseRestrictions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 
@@ -486,18 +486,18 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: LastSeenPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastSeenPosition
+    public unsafe System.Numerics.Vector3 LastSeenPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
     }
 
     /// <summary>
     /// StructProperty: LastSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastSafePoint
+    public unsafe System.Numerics.Vector3 LastSafePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
     }
 

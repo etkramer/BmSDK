@@ -36,9 +36,9 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     /// <summary>
     /// ByteProperty: Player
     /// </summary>
-    public unsafe byte Player
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.EPlayerVariableType Player
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.EPlayerVariableType>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 
@@ -47,7 +47,7 @@ public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, Bm
     /// </summary>
     public unsafe bool AutoSpawnBatmobileForCapture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 272); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 272); }
     }
 }

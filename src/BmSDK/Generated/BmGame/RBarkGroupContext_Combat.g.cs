@@ -36,9 +36,9 @@ public partial class RBarkGroupContext_Combat : BmSDK.BmGame.RBarkGroupContext, 
     /// <summary>
     /// ObjectProperty: CombatManager
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatManager
+    public unsafe BmSDK.BmGame.RBMCombatManager CombatManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

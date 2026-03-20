@@ -47,8 +47,8 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// </summary>
     public unsafe bool bCacheLoadComplete
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// </summary>
     public unsafe bool bCacheLoadSuccessful
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// </summary>
     public unsafe bool bCacheLoadIntact
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.Onl
     /// </summary>
     public unsafe bool bMarkForCorruption
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
     }
 
     /// <summary>

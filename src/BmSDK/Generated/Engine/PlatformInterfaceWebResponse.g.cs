@@ -63,9 +63,9 @@ public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// StructProperty: Headers
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Headers
+    public unsafe BmSDK.GameObject.FMap_Mirror Headers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
@@ -81,9 +81,9 @@ public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: BinaryResponse
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BinaryResponse
+    public unsafe BmSDK.TArray<byte> BinaryResponse
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

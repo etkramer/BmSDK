@@ -36,9 +36,9 @@ public partial class MaterialExpressionLightEffector : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// ArrayProperty: Signals
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Signals
+    public unsafe BmSDK.TArray<BmSDK.Engine.LightComponent.FEffectorSignal> Signals
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LightComponent.FEffectorSignal>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
@@ -72,18 +72,18 @@ public partial class MaterialExpressionLightEffector : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: EffectorColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EffectorColor
+    public unsafe BmSDK.GameObject.FColor EffectorColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightColor
+    public unsafe BmSDK.GameObject.FColor LightColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 

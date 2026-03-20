@@ -36,9 +36,9 @@ public partial class SpeedTreeActorFactory : BmSDK.Engine.ActorFactory, BmSDK.IG
     /// <summary>
     /// ObjectProperty: SpeedTree
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpeedTree
+    public unsafe BmSDK.Engine.SpeedTree SpeedTree
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeedTree>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

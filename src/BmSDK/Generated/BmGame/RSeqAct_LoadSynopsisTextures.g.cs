@@ -36,9 +36,9 @@ public partial class RSeqAct_LoadSynopsisTextures : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// ArrayProperty: TextureRefs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> TextureRefs
+    public unsafe BmSDK.TArray<BmSDK.Engine.Texture2D> TextureRefs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Texture2D>>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 

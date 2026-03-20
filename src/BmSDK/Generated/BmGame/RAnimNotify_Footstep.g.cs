@@ -36,27 +36,27 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// ByteProperty: Foot
     /// </summary>
-    public unsafe byte Foot
+    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EFoot>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: Contact
     /// </summary>
-    public unsafe byte Contact
+    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 85); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EContactType>(Ptr + 85); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
     /// <summary>
     /// ByteProperty: SurfaceFinder
     /// </summary>
-    public unsafe byte SurfaceFinder
+    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder SurfaceFinder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 86); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder>(Ptr + 86); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 86); }
     }
 

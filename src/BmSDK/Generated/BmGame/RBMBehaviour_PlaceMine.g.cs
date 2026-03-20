@@ -36,9 +36,9 @@ public partial class RBMBehaviour_PlaceMine : BmSDK.BmGame.RBMBehaviour_ActionQu
     /// <summary>
     /// ObjectProperty: MinePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MinePoint
+    public unsafe BmSDK.BmGame.RThugMineablePointBase MinePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RThugMineablePointBase>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 }

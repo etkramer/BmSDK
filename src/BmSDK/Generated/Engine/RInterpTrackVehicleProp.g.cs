@@ -36,9 +36,9 @@ public partial class RInterpTrackVehicleProp : BmSDK.Engine.InterpTrackFloatBase
     /// <summary>
     /// ByteProperty: ControlProperty
     /// </summary>
-    public unsafe byte ControlProperty
+    public unsafe BmSDK.Engine.RInterpTrackVehicleProp.EVehiclePropertyForControl ControlProperty
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInterpTrackVehicleProp.EVehiclePropertyForControl>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 

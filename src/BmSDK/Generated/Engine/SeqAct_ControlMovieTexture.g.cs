@@ -36,9 +36,9 @@ public partial class SeqAct_ControlMovieTexture : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// ObjectProperty: MovieTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MovieTexture
+    public unsafe BmSDK.Engine.TextureMovie MovieTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureMovie>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

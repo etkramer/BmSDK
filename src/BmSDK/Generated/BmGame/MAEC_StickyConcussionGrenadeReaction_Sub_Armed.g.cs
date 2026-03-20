@@ -71,9 +71,9 @@ public partial class MAEC_StickyConcussionGrenadeReaction_Sub_Armed : BmSDK.BmGa
     /// <summary>
     /// StructProperty: ExplosionCenter
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExplosionCenter
+    public unsafe System.Numerics.Vector3 ExplosionCenter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

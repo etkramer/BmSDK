@@ -71,9 +71,9 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: EngineToUse
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EngineToUse
+    public unsafe BmSDK.Engine.AkVehicleSoundInfo EngineToUse
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundInfo>(Ptr + 2128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2128); }
     }
 
@@ -82,8 +82,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UseBone0ForLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OverrideRPM
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OverrideThrottle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OverrideBrake
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OverrideSpeed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool OverrideTurbo
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     public unsafe bool UseWheelRPM
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2136); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2136); }
     }
 
     /// <summary>

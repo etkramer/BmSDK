@@ -80,9 +80,9 @@ public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IG
     /// <summary>
     /// ArrayProperty: XrayMaskExtraMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayerBmBase.DemonSafeObjects>> XrayMaskExtraMeshes
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent> XrayMaskExtraMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnPlayerBmBase.DemonSafeObjects>>>(Ptr + 10364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent>>(Ptr + 10364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10364); }
     }
 }

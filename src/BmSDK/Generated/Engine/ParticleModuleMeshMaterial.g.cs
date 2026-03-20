@@ -36,9 +36,9 @@ public partial class ParticleModuleMeshMaterial : BmSDK.Engine.ParticleModuleMat
     /// <summary>
     /// ArrayProperty: MeshMaterials
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MeshMaterials
+    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> MeshMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

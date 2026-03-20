@@ -38,8 +38,8 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bUsesFontlib
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bSetSRGBOnImportedTextures
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bPackTextures
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bStoreDecompressedForFasterInit
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 148); }
     }
 
     /// <summary>
@@ -90,18 +90,18 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: PackedTextureResize
     /// </summary>
-    public unsafe byte PackedTextureResize
+    public unsafe BmSDK.GFxUI.SwfMovie.EPackedTextureResize PackedTextureResize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie.EPackedTextureResize>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: TextureRescale
     /// </summary>
-    public unsafe byte TextureRescale
+    public unsafe BmSDK.GFxUI.SwfMovie.FlashTextureRescale TextureRescale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 173); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie.FlashTextureRescale>(Ptr + 173); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 173); }
     }
 
@@ -144,9 +144,9 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImportTimeStamp
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ImportTimeStamp
+    public unsafe ulong ImportTimeStamp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
     }
 

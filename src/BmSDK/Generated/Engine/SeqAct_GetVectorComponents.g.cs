@@ -36,9 +36,9 @@ public partial class SeqAct_GetVectorComponents : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: InVector
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InVector
+    public unsafe System.Numerics.Vector3 InVector
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

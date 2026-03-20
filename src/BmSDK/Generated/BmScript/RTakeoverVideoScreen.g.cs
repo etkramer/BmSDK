@@ -71,9 +71,9 @@ public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBas
     /// <summary>
     /// ObjectProperty: prevMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT prevMaterial
+    public unsafe BmSDK.Engine.MaterialInterface prevMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

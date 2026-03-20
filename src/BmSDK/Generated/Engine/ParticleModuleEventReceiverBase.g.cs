@@ -36,9 +36,9 @@ public partial class ParticleModuleEventReceiverBase : BmSDK.Engine.ParticleModu
     /// <summary>
     /// ByteProperty: EventGeneratorType
     /// </summary>
-    public unsafe byte EventGeneratorType
+    public unsafe BmSDK.Engine.ParticleSystemComponent.EParticleEventType EventGeneratorType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent.EParticleEventType>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

@@ -71,9 +71,9 @@ public partial class RBigRedSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.I
     /// <summary>
     /// ComponentProperty: SwitchBox
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwitchBox
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SwitchBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 904); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 904); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
     }
 }

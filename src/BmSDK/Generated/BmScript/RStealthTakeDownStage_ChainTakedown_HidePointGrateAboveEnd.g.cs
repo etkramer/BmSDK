@@ -71,9 +71,9 @@ public partial class RStealthTakeDownStage_ChainTakedown_HidePointGrateAboveEnd 
     /// <summary>
     /// ObjectProperty: flipGrate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT flipGrate
+    public unsafe BmSDK.BmGame.RHidePoint_GrateBase flipGrate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint_GrateBase>(Ptr + 1844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
     }
 }

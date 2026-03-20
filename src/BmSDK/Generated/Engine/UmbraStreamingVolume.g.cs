@@ -71,27 +71,27 @@ public partial class UmbraStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: UmbraVolumeGuid
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT UmbraVolumeGuid
+    public unsafe BmSDK.GameObject.FGuid UmbraVolumeGuid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ByteProperty: UmbraStorageMode
     /// </summary>
-    public unsafe byte UmbraStorageMode
+    public unsafe BmSDK.Engine.UmbraStreamingVolume.EUmbraStorageMode UmbraStorageMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UmbraStreamingVolume.EUmbraStorageMode>(Ptr + 756); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 
     /// <summary>
     /// ByteProperty: UmbraCurrentStorageMode
     /// </summary>
-    public unsafe byte UmbraCurrentStorageMode
+    public unsafe BmSDK.Engine.UmbraStreamingVolume.EUmbraStorageMode UmbraCurrentStorageMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 757); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UmbraStreamingVolume.EUmbraStorageMode>(Ptr + 757); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 757); }
     }
 

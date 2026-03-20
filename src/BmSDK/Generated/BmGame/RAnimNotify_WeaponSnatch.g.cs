@@ -36,9 +36,9 @@ public partial class RAnimNotify_WeaponSnatch : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: SnatchInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SnatchInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FWeaponSnatchInfo SnatchInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FWeaponSnatchInfo>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

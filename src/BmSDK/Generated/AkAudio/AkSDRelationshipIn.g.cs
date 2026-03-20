@@ -56,7 +56,7 @@ public partial class AkSDRelationshipIn : BmSDK.AkAudio.AkSDRelationship, BmSDK.
     /// </summary>
     public unsafe bool bInitialized
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 252); }
     }
 }

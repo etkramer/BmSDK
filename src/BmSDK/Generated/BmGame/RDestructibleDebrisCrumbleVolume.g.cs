@@ -71,9 +71,9 @@ public partial class RDestructibleDebrisCrumbleVolume : BmSDK.Engine.Volume, BmS
     /// <summary>
     /// ArrayProperty: ShapesInForceField
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ShapesInForceField
+    public unsafe BmSDK.TArray<System.IntPtr> ShapesInForceField
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

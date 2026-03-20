@@ -71,9 +71,9 @@ public partial class MaterialInstanceTimeVaryingActor : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// ObjectProperty: MatInst
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MatInst
+    public unsafe BmSDK.Engine.MaterialInstanceTimeVarying MatInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceTimeVarying>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

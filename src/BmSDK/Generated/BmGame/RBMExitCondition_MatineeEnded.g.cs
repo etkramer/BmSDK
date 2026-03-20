@@ -36,9 +36,9 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     /// <summary>
     /// ByteProperty: TriggerType
     /// </summary>
-    public unsafe byte TriggerType
+    public unsafe BmSDK.BmGame.RBMExitCondition_MatineeEnded.EMatineeEndedType TriggerType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMExitCondition_MatineeEnded.EMatineeEndedType>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 

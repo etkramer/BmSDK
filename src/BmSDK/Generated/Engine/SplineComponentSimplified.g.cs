@@ -36,9 +36,9 @@ public partial class SplineComponentSimplified : BmSDK.Engine.SplineComponent, B
     /// <summary>
     /// StructProperty: SplineInfo
     /// </summary>
-    public unsafe BmSDK.Engine.SplineComponent.SplineReparamTable SplineInfo
+    public unsafe BmSDK.GameObject.FInterpCurveVector SplineInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SplineComponent.SplineReparamTable>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
@@ -54,9 +54,9 @@ public partial class SplineComponentSimplified : BmSDK.Engine.SplineComponent, B
     /// <summary>
     /// StructProperty: SplineColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SplineColor
+    public unsafe BmSDK.GameObject.FColor SplineColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
     }
 
@@ -83,25 +83,25 @@ public partial class SplineComponentSimplified : BmSDK.Engine.SplineComponent, B
     /// </summary>
     public unsafe bool bSplineDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 576); }
     }
 
     /// <summary>
     /// StructProperty: SplineReparamTable
     /// </summary>
-    public unsafe BmSDK.Engine.SplineComponent.ParamToAbsDistTable SplineReparamTable
+    public unsafe BmSDK.GameObject.FInterpCurveFloat SplineReparamTable
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SplineComponent.ParamToAbsDistTable>(Ptr + 580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 580); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
     }
 
     /// <summary>
     /// StructProperty: ParamToAbsDistTable
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ParamToAbsDistTable
+    public unsafe BmSDK.GameObject.FInterpCurveFloat ParamToAbsDistTable
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 }

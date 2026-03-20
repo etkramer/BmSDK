@@ -71,9 +71,9 @@ public partial class RAEC_Search_Sub_JoiningBuddy : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// ObjectProperty: FollowTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FollowTarget
+    public unsafe BmSDK.BmGame.RPawnVillain FollowTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

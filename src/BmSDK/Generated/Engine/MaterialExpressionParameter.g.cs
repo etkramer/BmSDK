@@ -45,9 +45,9 @@ public partial class MaterialExpressionParameter : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 

@@ -36,9 +36,9 @@ public partial class RAnimNotify_WhipTarget : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// ByteProperty: TargetingType
     /// </summary>
-    public unsafe byte TargetingType
+    public unsafe BmSDK.BmGame.RAnimNotify_WhipTarget.WhipTargetingType TargetingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_WhipTarget.WhipTargetingType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

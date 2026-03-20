@@ -71,27 +71,27 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: MyController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyController
+    public unsafe BmSDK.BmGame.RPlayerController MyController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 3052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3052); }
     }
 
     /// <summary>
     /// ObjectProperty: FireDuringMatineeAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireDuringMatineeAction
+    public unsafe BmSDK.BmGame.RSeqAct_FireFPSGunDuringMatinee FireDuringMatineeAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireFPSGunDuringMatinee>(Ptr + 3060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3060); }
     }
 
     /// <summary>
     /// ComponentProperty: GunMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GunMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent GunMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 3068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3068); }
     }
 
@@ -109,8 +109,8 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// </summary>
     public unsafe bool bNoShooting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// </summary>
     public unsafe bool bDisableFinishMatineeCall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// </summary>
     public unsafe bool bUseSwayAnim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// </summary>
     public unsafe bool bCanPlayAdditiveOverlays
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3084); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3084); }
     }
 
     /// <summary>
@@ -188,27 +188,27 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// StructProperty: CopOffsetVal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopOffsetVal
+    public unsafe System.Numerics.Vector3 CopOffsetVal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3112); }
     }
 
     /// <summary>
     /// StructProperty: CopTranslationTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopTranslationTarget
+    public unsafe System.Numerics.Vector3 CopTranslationTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3124); }
     }
 
     /// <summary>
     /// StructProperty: CopRotationTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CopRotationTarget
+    public unsafe BmSDK.Rotator CopRotationTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3136); }
     }
 
@@ -278,27 +278,27 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     /// <summary>
     /// StructProperty: FiringAnim
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FiringAnim
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FiringAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
     }
 
     /// <summary>
     /// StructProperty: ReloadAnim
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ReloadAnim
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ReloadAnim
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3180); }
     }
 
     /// <summary>
     /// ArrayProperty: NoShootItems
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> NoShootItems
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> NoShootItems
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 3184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 3184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3184); }
     }
 }

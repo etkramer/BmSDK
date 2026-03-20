@@ -36,9 +36,9 @@ public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameO
     /// <summary>
     /// ClassProperty: PawnClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnClass
+    public unsafe BmSDK.Class PawnClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RAnimNotify_ValidFrames : BmSDK.BmGame.RAnimNotify_BeginEnd
     /// <summary>
     /// ByteProperty: Type
     /// </summary>
-    public unsafe byte Type
+    public unsafe BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType Type
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

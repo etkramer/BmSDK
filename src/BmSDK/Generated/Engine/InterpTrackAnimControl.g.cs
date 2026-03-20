@@ -36,9 +36,9 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// <summary>
     /// ArrayProperty: AnimSets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks>> AnimSets
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> AnimSets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks>>>(Ptr + 256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
@@ -54,9 +54,9 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// <summary>
     /// ArrayProperty: AnimSeqs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks> AnimSeqs
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrackAnimControl.FAnimControlTrackKey> AnimSeqs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks>>(Ptr + 280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrackAnimControl.FAnimControlTrackKey>>(Ptr + 280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
@@ -65,8 +65,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bEnableRootMotion
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bEnableAutomaticTeleports
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bAllowOverrideFromFORCEMATINEEANIMFromURL
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bSkipAnimNotifiers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bStopDialogueOnStop
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bStopDialogueOnSkip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 
     /// <summary>
@@ -119,7 +119,7 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe bool bStopDialogueOnJump
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 296); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 296); }
     }
 }

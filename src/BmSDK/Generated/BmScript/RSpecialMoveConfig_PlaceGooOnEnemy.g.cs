@@ -54,9 +54,9 @@ public partial class RSpecialMoveConfig_PlaceGooOnEnemy : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// ObjectProperty: VictimAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VictimAnimSet
+    public unsafe BmSDK.Engine.AnimSet VictimAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
@@ -72,9 +72,9 @@ public partial class RSpecialMoveConfig_PlaceGooOnEnemy : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: RotationOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotationOffset
+    public unsafe BmSDK.Rotator RotationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 }

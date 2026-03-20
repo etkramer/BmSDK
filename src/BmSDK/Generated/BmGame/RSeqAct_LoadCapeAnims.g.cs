@@ -36,9 +36,9 @@ public partial class RSeqAct_LoadCapeAnims : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// ObjectProperty: CapeAnimSet
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeAnimSet
+    public unsafe BmSDK.Engine.AnimSet CapeAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

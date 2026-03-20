@@ -36,27 +36,27 @@ public partial class MaterialExpressionBlendMode : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: A
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBlendMode.B A
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlendMode.B>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: B
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBlendMode.Percent B
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput B
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlendMode.Percent>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Percent
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Percent
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Percent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
@@ -72,9 +72,9 @@ public partial class MaterialExpressionBlendMode : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// ByteProperty: BlendModeSelect
     /// </summary>
-    public unsafe byte BlendModeSelect
+    public unsafe BmSDK.Engine.MaterialExpressionBlendMode.EBlendModeFilter BlendModeSelect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlendMode.EBlendModeFilter>(Ptr + 332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 }

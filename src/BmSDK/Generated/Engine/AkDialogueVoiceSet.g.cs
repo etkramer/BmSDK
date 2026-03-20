@@ -36,9 +36,9 @@ public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IG
     /// <summary>
     /// ArrayProperty: Voices
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Voices
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueVoice> Voices
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueVoice>>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
@@ -47,7 +47,7 @@ public partial class AkDialogueVoiceSet : BmSDK.Engine.AkDialogueVoice, BmSDK.IG
     /// </summary>
     public unsafe bool bVisited
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 184); }
     }
 }

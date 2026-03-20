@@ -63,27 +63,27 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// <summary>
     /// ComponentProperty: PreviewInnerCone
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewInnerCone
+    public unsafe BmSDK.Engine.DrawLightConeComponent PreviewInnerCone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawLightConeComponent>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
     /// ComponentProperty: PreviewOuterCone
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewOuterCone
+    public unsafe BmSDK.Engine.DrawLightConeComponent PreviewOuterCone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawLightConeComponent>(Ptr + 752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Rotation
+    public unsafe BmSDK.Rotator Rotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
@@ -92,8 +92,8 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// </summary>
     public unsafe bool bAbsoluteRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// </summary>
     public unsafe bool bNvidiaLightShafts
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
     }
 
     /// <summary>
@@ -110,25 +110,25 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// </summary>
     public unsafe bool bCastOpacityShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
     }
 
     /// <summary>
     /// ByteProperty: QualityLevel
     /// </summary>
-    public unsafe byte QualityLevel
+    public unsafe BmSDK.Engine.SpotLightComponent.E_GFSDK_QualityLevel QualityLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpotLightComponent.E_GFSDK_QualityLevel>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// ByteProperty: PhaseFunction
     /// </summary>
-    public unsafe byte PhaseFunction
+    public unsafe BmSDK.Engine.SpotLightComponent.E_GFSDK_PhaseFunction PhaseFunction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 777); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpotLightComponent.E_GFSDK_PhaseFunction>(Ptr + 777); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 777); }
     }
 

@@ -71,9 +71,9 @@ public partial class RAEC_Search_Sub_GrenadeTunnel : BmSDK.BmGame.RAlertEventCoo
     /// <summary>
     /// ObjectProperty: TargetTunnel
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetTunnel
+    public unsafe BmSDK.BmGame.RTunnelFunnel TargetTunnel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelFunnel>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

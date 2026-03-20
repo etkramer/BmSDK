@@ -143,27 +143,27 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// ObjectProperty: MineArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MineArchetype
+    public unsafe BmSDK.BmGame.RMortarProjectile MineArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMortarProjectile>(Ptr + 2428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
     }
 
     /// <summary>
     /// ObjectProperty: FireFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireFX
+    public unsafe BmSDK.Engine.ParticleSystem FireFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
     }
 
     /// <summary>
     /// ArrayProperty: MineLaunchSockets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> MineLaunchSockets
+    public unsafe BmSDK.TArray<BmSDK.FName> MineLaunchSockets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2444); }
     }
 
@@ -179,18 +179,18 @@ public partial class RBatmobileMineLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK
     /// <summary>
     /// StructProperty: InitialTargetLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InitialTargetLocation
+    public unsafe System.Numerics.Vector3 InitialTargetLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
     }
 
     /// <summary>
     /// ArrayProperty: Mines
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Mines
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RMortarProjectile> Mines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMortarProjectile>>(Ptr + 2476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2476); }
     }
 }

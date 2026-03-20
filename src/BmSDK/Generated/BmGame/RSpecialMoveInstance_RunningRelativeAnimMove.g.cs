@@ -73,7 +73,7 @@ public partial class RSpecialMoveInstance_RunningRelativeAnimMove : BmSDK.BmGame
     /// </summary>
     public unsafe bool bAllowSwing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 988); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 988); }
     }
 }

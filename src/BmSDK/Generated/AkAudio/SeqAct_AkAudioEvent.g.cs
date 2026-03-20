@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioEvent : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// ObjectProperty: AudioEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioEvent
+    public unsafe BmSDK.Engine.AkEvent AudioEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

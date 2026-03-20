@@ -36,9 +36,9 @@ public partial class RSkeletalMeshPhysSceneInterface : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// StructProperty: VfTable_IRAsyncPhysXSceneInterface
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IRAsyncPhysXSceneInterface
+    public unsafe System.IntPtr VfTable_IRAsyncPhysXSceneInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

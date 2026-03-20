@@ -36,9 +36,9 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: SourceBCD
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SourceBCD
+    public unsafe BmSDK.BmGame.RBarkCharacterDef SourceBCD
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkCharacterDef>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -54,9 +54,9 @@ public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// ArrayProperty: DynamicBarkSetList
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DynamicBarkSetList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkCharacterDefInstance.FDynamicSetContainer> DynamicBarkSetList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkCharacterDefInstance.FDynamicSetContainer>>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

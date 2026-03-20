@@ -36,9 +36,9 @@ public partial class ActorFactoryLensFlare : BmSDK.Engine.ActorFactory, BmSDK.IG
     /// <summary>
     /// ObjectProperty: LensFlareObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LensFlareObject
+    public unsafe BmSDK.Engine.LensFlare LensFlareObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlare>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

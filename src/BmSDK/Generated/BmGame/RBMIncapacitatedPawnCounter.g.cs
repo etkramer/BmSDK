@@ -36,9 +36,9 @@ public partial class RBMIncapacitatedPawnCounter : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// ClassProperty: PawnType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnType
+    public unsafe BmSDK.Class PawnType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

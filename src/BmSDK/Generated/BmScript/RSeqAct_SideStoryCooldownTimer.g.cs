@@ -36,9 +36,9 @@ public partial class RSeqAct_SideStoryCooldownTimer : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// ByteProperty: SideStory
     /// </summary>
-    public unsafe byte SideStory
+    public unsafe BmSDK.BmGame.RGameInfo.eSideStoryCooldownTimer SideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.eSideStoryCooldownTimer>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 

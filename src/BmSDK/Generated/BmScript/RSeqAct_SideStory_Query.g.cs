@@ -45,9 +45,9 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// ByteProperty: QueryAction
     /// </summary>
-    public unsafe byte QueryAction
+    public unsafe BmSDK.BmScript.RSeqAct_SideStory_Query.SS_Query_Action QueryAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_SideStory_Query.SS_Query_Action>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 

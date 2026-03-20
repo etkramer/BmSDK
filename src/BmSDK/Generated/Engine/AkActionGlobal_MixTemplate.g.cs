@@ -36,9 +36,9 @@ public partial class AkActionGlobal_MixTemplate : BmSDK.Engine.AkActionGlobal, B
     /// <summary>
     /// ObjectProperty: MixTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MixTemplate
+    public unsafe BmSDK.Engine.AkMixTemplate MixTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkMixTemplate>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

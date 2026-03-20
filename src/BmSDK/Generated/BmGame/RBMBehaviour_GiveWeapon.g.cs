@@ -36,9 +36,9 @@ public partial class RBMBehaviour_GiveWeapon : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// ClassProperty: WeaponType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WeaponType
+    public unsafe BmSDK.Class WeaponType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, 
     /// <summary>
     /// ObjectProperty: Ladder
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Ladder
+    public unsafe BmSDK.BmGame.RLadder Ladder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLadder>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 }

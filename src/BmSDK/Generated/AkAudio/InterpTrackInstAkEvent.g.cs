@@ -45,9 +45,9 @@ public partial class InterpTrackInstAkEvent : BmSDK.Engine.InterpTrackInst, BmSD
     /// <summary>
     /// ArrayProperty: PlayingHandles
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_OBJECTPROPERTY_LAYOUT> PlayingHandles
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSoundHandle> PlayingHandles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSoundHandle>>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
@@ -56,16 +56,16 @@ public partial class InterpTrackInstAkEvent : BmSDK.Engine.InterpTrackInst, BmSD
     /// </summary>
     public unsafe bool BanksLoaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
     /// ObjectProperty: TrackAudible
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TrackAudible
+    public unsafe BmSDK.Engine.RAkAudible TrackAudible
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAkAudible>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

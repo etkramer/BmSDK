@@ -36,9 +36,9 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: FloatProp
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloatProp
+    public unsafe System.IntPtr FloatProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -54,9 +54,9 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: DistributionProp
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DistributionProp
+    public unsafe System.IntPtr DistributionProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

@@ -36,9 +36,9 @@ public partial class MaterialExpressionTextureObject : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
+    public unsafe BmSDK.Engine.Texture Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

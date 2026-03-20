@@ -99,9 +99,9 @@ public partial class RSeqAct_DownloadProgress : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// ObjectProperty: ProgressMovie
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProgressMovie
+    public unsafe BmSDK.BmGame.RHudModuleDownloadProgress ProgressMovie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleDownloadProgress>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 }

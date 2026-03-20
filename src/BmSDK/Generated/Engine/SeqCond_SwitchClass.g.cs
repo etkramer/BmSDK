@@ -36,9 +36,9 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     /// <summary>
     /// ArrayProperty: ClassArray
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> ClassArray
+    public unsafe BmSDK.TArray<BmSDK.Engine.SeqCond_SwitchClass.FSwitchClassInfo> ClassArray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SeqCond_SwitchClass.FSwitchClassInfo>>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 

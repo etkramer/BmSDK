@@ -38,8 +38,8 @@ public partial class RAnimNotify_FootSyncOut : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// </summary>
     public unsafe bool AutomaticSyncPoint
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,34 +47,34 @@ public partial class RAnimNotify_FootSyncOut : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// </summary>
     public unsafe bool AutomaticSpeedAndDirection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: SyncPoint
     /// </summary>
-    public unsafe byte SyncPoint
+    public unsafe BmSDK.Engine.RAutomaticTransitions.EFootSyncPoint SyncPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAutomaticTransitions.EFootSyncPoint>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// ByteProperty: Speed
     /// </summary>
-    public unsafe byte Speed
+    public unsafe BmSDK.Engine.RAutomaticTransitions.EMovementSpeed Speed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 89); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAutomaticTransitions.EMovementSpeed>(Ptr + 89); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 89); }
     }
 
     /// <summary>
     /// ByteProperty: Direction
     /// </summary>
-    public unsafe byte Direction
+    public unsafe BmSDK.Engine.RAutomaticTransitions.EDirectionBlendGroup Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 90); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAutomaticTransitions.EDirectionBlendGroup>(Ptr + 90); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 90); }
     }
 }

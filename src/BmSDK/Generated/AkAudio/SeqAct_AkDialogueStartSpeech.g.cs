@@ -36,36 +36,36 @@ public partial class SeqAct_AkDialogueStartSpeech : BmSDK.AkAudio.SeqAct_AkBaseS
     /// <summary>
     /// StructProperty: VfTable_AkDialogueListener
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkDialogueListener
+    public unsafe System.IntPtr VfTable_AkDialogueListener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: Speech
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Speech
+    public unsafe BmSDK.Engine.AkDialogueSpeech Speech
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
     /// ArrayProperty: Speakers
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.AkAudio.SeqAct_AkDialogueStartSpeech.MultipointNetworkName> Speakers
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> Speakers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.SeqAct_AkDialogueStartSpeech.MultipointNetworkName>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// StructProperty: Options
     /// </summary>
-    public unsafe BmSDK.AkAudio.SeqAct_AkDialogueStartSpeech.MultipointNetworkName Options
+    public unsafe BmSDK.Engine.AkDialogue.FAkSpeechOptions Options
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.SeqAct_AkDialogueStartSpeech.MultipointNetworkName>(Ptr + 384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
@@ -117,9 +117,9 @@ public partial class SeqAct_AkDialogueStartSpeech : BmSDK.AkAudio.SeqAct_AkBaseS
     /// <summary>
     /// StructProperty: DialogueSpeakerMultipoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DialogueSpeakerMultipoint
+    public unsafe System.IntPtr DialogueSpeakerMultipoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
 }

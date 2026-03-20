@@ -36,9 +36,9 @@ public partial class UmbraReference : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: VisibilityData
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VisibilityData
+    public unsafe BmSDK.Engine.UmbraData VisibilityData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UmbraData>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

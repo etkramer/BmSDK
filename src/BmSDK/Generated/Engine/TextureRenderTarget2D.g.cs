@@ -54,36 +54,36 @@ public partial class TextureRenderTarget2D : BmSDK.Engine.TextureRenderTarget, B
     /// <summary>
     /// ByteProperty: Format
     /// </summary>
-    public unsafe byte Format
+    public unsafe BmSDK.Engine.Texture.EPixelFormat Format
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.EPixelFormat>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// ByteProperty: AddressX
     /// </summary>
-    public unsafe byte AddressX
+    public unsafe BmSDK.Engine.Texture.TextureAddress AddressX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 325); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.TextureAddress>(Ptr + 325); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 325); }
     }
 
     /// <summary>
     /// ByteProperty: AddressY
     /// </summary>
-    public unsafe byte AddressY
+    public unsafe BmSDK.Engine.Texture.TextureAddress AddressY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 326); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.TextureAddress>(Ptr + 326); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 326); }
     }
 
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ClearColor
+    public unsafe BmSDK.GameObject.FLinearColor ClearColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 
@@ -92,7 +92,7 @@ public partial class TextureRenderTarget2D : BmSDK.Engine.TextureRenderTarget, B
     /// </summary>
     public unsafe bool bForceLinearGamma
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 344); }
     }
 }

@@ -71,45 +71,45 @@ public partial class RPollenStaticMeshActor : BmSDK.Engine.DynamicSMActor, BmSDK
     /// <summary>
     /// ObjectProperty: PollenEffectTemplate
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PollenEffectTemplate
+    public unsafe BmSDK.Engine.ParticleSystem PollenEffectTemplate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
     /// ComponentProperty: pollenFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT pollenFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent pollenFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// StructProperty: PollenEffectPositionOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PollenEffectPositionOffset
+    public unsafe System.Numerics.Vector3 PollenEffectPositionOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// ByteProperty: PollenVisibility
     /// </summary>
-    public unsafe byte PollenVisibility
+    public unsafe BmSDK.Engine.RPollenStaticMeshActor.EPollenVisibility PollenVisibility
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPollenStaticMeshActor.EPollenVisibility>(Ptr + 796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ByteProperty: ParticleActiveState
     /// </summary>
-    public unsafe byte ParticleActiveState
+    public unsafe BmSDK.Engine.RPollenStaticMeshActor.EParticlesActiveState ParticleActiveState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 797); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPollenStaticMeshActor.EParticlesActiveState>(Ptr + 797); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 797); }
     }
 }

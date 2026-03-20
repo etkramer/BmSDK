@@ -36,9 +36,9 @@ public partial class MaterialExpressionVectorParameter : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: DefaultValue
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DefaultValue
+    public unsafe BmSDK.GameObject.FLinearColor DefaultValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 }

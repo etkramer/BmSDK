@@ -36,9 +36,9 @@ public partial class Path_TowardPoint : BmSDK.Engine.PathConstraint, BmSDK.IGame
     /// <summary>
     /// StructProperty: GoalPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GoalPoint
+    public unsafe System.Numerics.Vector3 GoalPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

@@ -71,27 +71,27 @@ public partial class MPawnPlayerBatgirlBase : BmSDK.BmGame.RPawnPlayerBmBase, Bm
     /// <summary>
     /// ObjectProperty: PlayerCounterAnimset_JokerKnife
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerCounterAnimset_JokerKnife
+    public unsafe BmSDK.Engine.AnimSet PlayerCounterAnimset_JokerKnife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 10252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10252); }
     }
 
     /// <summary>
     /// ObjectProperty: VillainCounterAnimset_JokerKnife
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VillainCounterAnimset_JokerKnife
+    public unsafe BmSDK.Engine.AnimSet VillainCounterAnimset_JokerKnife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 10260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10260); }
     }
 
     /// <summary>
     /// ObjectProperty: BatgirlHackingGadget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatgirlHackingGadget
+    public unsafe BmSDK.BmGame.MHackingGadgetBase BatgirlHackingGadget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackingGadgetBase>(Ptr + 10268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10268); }
     }
 
@@ -100,8 +100,8 @@ public partial class MPawnPlayerBatgirlBase : BmSDK.BmGame.RPawnPlayerBmBase, Bm
     /// </summary>
     public unsafe bool bDebugBatgirlAttractHackVisibility
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class MPawnPlayerBatgirlBase : BmSDK.BmGame.RPawnPlayerBmBase, Bm
     /// </summary>
     public unsafe bool bScareModeOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class MPawnPlayerBatgirlBase : BmSDK.BmGame.RPawnPlayerBmBase, Bm
     /// </summary>
     public unsafe bool bBlindModeOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10276); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10276); }
     }
 
     /// <summary>

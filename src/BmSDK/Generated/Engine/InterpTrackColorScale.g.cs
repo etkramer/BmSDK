@@ -36,9 +36,9 @@ public partial class InterpTrackColorScale : BmSDK.Engine.InterpTrackVectorBase,
     /// <summary>
     /// StructProperty: VectorTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrack.SubTracks VectorTrack
+    public unsafe BmSDK.GameObject.FInterpCurveVector VectorTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
@@ -54,9 +54,9 @@ public partial class InterpTrackColorScale : BmSDK.Engine.InterpTrackVectorBase,
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Randomiser
+    public unsafe BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector Randomiser
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 }

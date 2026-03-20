@@ -36,9 +36,9 @@ public partial class AkActionTargeted : BmSDK.Engine.AkAction, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: CustomTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CustomTarget
+    public unsafe BmSDK.Engine.Actor CustomTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

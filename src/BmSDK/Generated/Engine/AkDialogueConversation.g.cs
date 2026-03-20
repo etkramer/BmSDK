@@ -36,9 +36,9 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     /// <summary>
     /// ArrayProperty: DialogueLines
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DialogueLines
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkDialogueConversation.FAkDialogueConversationItem> DialogueLines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkDialogueConversation.FAkDialogueConversationItem>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
@@ -51,9 +51,9 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
         /// <summary>
         /// ObjectProperty: DialogueLine
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueLine
+        public unsafe BmSDK.Engine.AkDialogueLine DialogueLine
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLine>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

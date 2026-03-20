@@ -71,18 +71,18 @@ public partial class RRiddlerBoxBase : BmSDK.BmGame.RMagneticDynamicObjectBase, 
     /// <summary>
     /// ComponentProperty: QuestionMark
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT QuestionMark
+    public unsafe BmSDK.Engine.StaticMeshComponent QuestionMark
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1292); }
     }
 
     /// <summary>
     /// ComponentProperty: InnerMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InnerMesh
+    public unsafe BmSDK.Engine.StaticMeshComponent InnerMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 1300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 }

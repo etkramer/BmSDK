@@ -36,9 +36,9 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: OwnerPrefab
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OwnerPrefab
+    public unsafe BmSDK.Engine.PrefabInstance OwnerPrefab
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrefabInstance>(Ptr + 528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
     }
 }

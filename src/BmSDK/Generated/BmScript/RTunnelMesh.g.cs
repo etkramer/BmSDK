@@ -80,9 +80,9 @@ public partial class RTunnelMesh : BmSDK.BmGame.RTunnelMeshBase, BmSDK.IGameObje
     /// <summary>
     /// ByteProperty: TunnelType
     /// </summary>
-    public unsafe byte TunnelType
+    public unsafe BmSDK.BmGame.RTunnelMeshBase.ETunnelMeshType TunnelType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelMeshBase.ETunnelMeshType>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
@@ -91,8 +91,8 @@ public partial class RTunnelMesh : BmSDK.BmGame.RTunnelMeshBase, BmSDK.IGameObje
     /// </summary>
     public unsafe bool UseVentCeilingCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 716); }
     }
 
     /// <summary>

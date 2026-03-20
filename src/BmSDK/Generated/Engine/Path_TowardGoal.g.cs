@@ -36,9 +36,9 @@ public partial class Path_TowardGoal : BmSDK.Engine.PathConstraint, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: GoalActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GoalActor
+    public unsafe BmSDK.Engine.Actor GoalActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

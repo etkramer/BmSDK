@@ -36,9 +36,9 @@ public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSour
     /// <summary>
     /// ComponentProperty: PreviewRadiusComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewRadiusComponent
+    public unsafe BmSDK.Engine.DrawSphereComponent PreviewRadiusComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

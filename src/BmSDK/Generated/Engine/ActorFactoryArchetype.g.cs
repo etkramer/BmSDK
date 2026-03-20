@@ -36,9 +36,9 @@ public partial class ActorFactoryArchetype : BmSDK.Engine.ActorFactory, BmSDK.IG
     /// <summary>
     /// ObjectProperty: ArchetypeActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ArchetypeActor
+    public unsafe BmSDK.Engine.Actor ArchetypeActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

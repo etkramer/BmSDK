@@ -71,9 +71,9 @@ public partial class RBMAIAction_MinigunnerInvStartlePoint : BmSDK.BmGame.RBMAIA
     /// <summary>
     /// StructProperty: refLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT refLoc
+    public unsafe System.Numerics.Vector3 refLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
@@ -89,9 +89,9 @@ public partial class RBMAIAction_MinigunnerInvStartlePoint : BmSDK.BmGame.RBMAIA
     /// <summary>
     /// StructProperty: InvestigateAnimID
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InvestigateAnimID
+    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId InvestigateAnimID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
 }

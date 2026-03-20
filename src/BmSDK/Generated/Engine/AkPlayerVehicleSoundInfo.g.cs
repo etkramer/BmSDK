@@ -36,369 +36,369 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// <summary>
     /// ObjectProperty: EngineUse
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EngineUse
+    public unsafe BmSDK.Engine.AkParameterName EngineUse
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
     }
 
     /// <summary>
     /// ObjectProperty: FreeWheelEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FreeWheelEvent
+    public unsafe BmSDK.Engine.AkEvent FreeWheelEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1472); }
     }
 
     /// <summary>
     /// ObjectProperty: ExhaustPops
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExhaustPops
+    public unsafe BmSDK.Engine.AkEvent ExhaustPops
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
     }
 
     /// <summary>
     /// ObjectProperty: SetGloballySpeedParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SetGloballySpeedParam
+    public unsafe BmSDK.Engine.AkParameterName SetGloballySpeedParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1488); }
     }
 
     /// <summary>
     /// ObjectProperty: OneShotWheelSpinRelease
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OneShotWheelSpinRelease
+    public unsafe BmSDK.Engine.AkEvent OneShotWheelSpinRelease
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1496); }
     }
 
     /// <summary>
     /// ObjectProperty: TurboStartingEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TurboStartingEvent
+    public unsafe BmSDK.Engine.AkEvent TurboStartingEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1504); }
     }
 
     /// <summary>
     /// ObjectProperty: DumpEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DumpEvent
+    public unsafe BmSDK.Engine.AkEvent DumpEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1512); }
     }
 
     /// <summary>
     /// ObjectProperty: SpinParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpinParam
+    public unsafe BmSDK.Engine.AkParameterName SpinParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1520); }
     }
 
     /// <summary>
     /// ObjectProperty: BoostStartEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BoostStartEvent
+    public unsafe BmSDK.Engine.AkEvent BoostStartEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1528); }
     }
 
     /// <summary>
     /// ObjectProperty: BoostKillEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BoostKillEvent
+    public unsafe BmSDK.Engine.AkEvent BoostKillEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1536); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1536); }
     }
 
     /// <summary>
     /// ObjectProperty: EventForLookAheadOnRamp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventForLookAheadOnRamp
+    public unsafe BmSDK.Engine.AkEvent EventForLookAheadOnRamp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1544); }
     }
 
     /// <summary>
     /// ObjectProperty: EventForLookAheadJump
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventForLookAheadJump
+    public unsafe BmSDK.Engine.AkEvent EventForLookAheadJump
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1552); }
     }
 
     /// <summary>
     /// ObjectProperty: EventForLookAheadLand
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventForLookAheadLand
+    public unsafe BmSDK.Engine.AkEvent EventForLookAheadLand
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1560); }
     }
 
     /// <summary>
     /// ObjectProperty: EventForLookAheadActualLand
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventForLookAheadActualLand
+    public unsafe BmSDK.Engine.AkEvent EventForLookAheadActualLand
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1568); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1568); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1568); }
     }
 
     /// <summary>
     /// ObjectProperty: LimiterParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LimiterParameter
+    public unsafe BmSDK.Engine.AkParameterName LimiterParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
     }
 
     /// <summary>
     /// ObjectProperty: WheelSpinOnEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WheelSpinOnEvent
+    public unsafe BmSDK.Engine.AkEvent WheelSpinOnEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
     }
 
     /// <summary>
     /// ObjectProperty: WheelSpinOffEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WheelSpinOffEvent
+    public unsafe BmSDK.Engine.AkEvent WheelSpinOffEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1592); }
     }
 
     /// <summary>
     /// ObjectProperty: DriftOnEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DriftOnEvent
+    public unsafe BmSDK.Engine.AkEvent DriftOnEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1600); }
     }
 
     /// <summary>
     /// ObjectProperty: DriftOffEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DriftOffEvent
+    public unsafe BmSDK.Engine.AkEvent DriftOffEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1608); }
     }
 
     /// <summary>
     /// ObjectProperty: GlobalDriftParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GlobalDriftParameter
+    public unsafe BmSDK.Engine.AkParameterName GlobalDriftParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1616); }
     }
 
     /// <summary>
     /// ObjectProperty: DriftOnState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DriftOnState
+    public unsafe BmSDK.Engine.AkStateName DriftOnState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 1624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1624); }
     }
 
     /// <summary>
     /// ObjectProperty: WheelSpeedParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WheelSpeedParameter
+    public unsafe BmSDK.Engine.AkParameterName WheelSpeedParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1632); }
     }
 
     /// <summary>
     /// ObjectProperty: CallInLoop
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CallInLoop
+    public unsafe BmSDK.Engine.AkEvent CallInLoop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1640); }
     }
 
     /// <summary>
     /// ObjectProperty: CallInSetOff
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CallInSetOff
+    public unsafe BmSDK.Engine.AkEvent CallInSetOff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1648); }
     }
 
     /// <summary>
     /// ObjectProperty: PlayerEjectRotateLoop
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerEjectRotateLoop
+    public unsafe BmSDK.Engine.AkEvent PlayerEjectRotateLoop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1656); }
     }
 
     /// <summary>
     /// ObjectProperty: CallInState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CallInState
+    public unsafe BmSDK.Engine.AkStateName CallInState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// ObjectProperty: WarmUpTurboDonuts
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WarmUpTurboDonuts
+    public unsafe BmSDK.Engine.AkEvent WarmUpTurboDonuts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
     }
 
     /// <summary>
     /// ObjectProperty: LoopingForceSquealEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LoopingForceSquealEvent
+    public unsafe BmSDK.Engine.AkEvent LoopingForceSquealEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1680); }
     }
 
     /// <summary>
     /// ObjectProperty: LoopingForceSquealParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LoopingForceSquealParameter
+    public unsafe BmSDK.Engine.AkParameterName LoopingForceSquealParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1688); }
     }
 
     /// <summary>
     /// ObjectProperty: RotationParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RotationParameter
+    public unsafe BmSDK.Engine.AkParameterName RotationParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1696); }
     }
 
     /// <summary>
     /// ObjectProperty: RotationState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RotationState
+    public unsafe BmSDK.Engine.AkStateName RotationState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 1704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
     }
 
     /// <summary>
     /// ObjectProperty: RotationLoopingEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RotationLoopingEvent
+    public unsafe BmSDK.Engine.AkEvent RotationLoopingEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1712); }
     }
 
     /// <summary>
     /// ObjectProperty: WheelSpinState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WheelSpinState
+    public unsafe BmSDK.Engine.AkStateName WheelSpinState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 1720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
     }
 
     /// <summary>
     /// ObjectProperty: PursuitToBattleMode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PursuitToBattleMode
+    public unsafe BmSDK.Engine.AkEvent PursuitToBattleMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1728); }
     }
 
     /// <summary>
     /// ObjectProperty: BattleModeToPursuit
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BattleModeToPursuit
+    public unsafe BmSDK.Engine.AkEvent BattleModeToPursuit
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1736); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
     }
 
     /// <summary>
     /// ObjectProperty: BattleModeForward
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BattleModeForward
+    public unsafe BmSDK.Engine.AkEvent BattleModeForward
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1744); }
     }
 
     /// <summary>
     /// ObjectProperty: BattleModeBackward
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BattleModeBackward
+    public unsafe BmSDK.Engine.AkEvent BattleModeBackward
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1752); }
     }
 
     /// <summary>
     /// ObjectProperty: BattleModeLeft
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BattleModeLeft
+    public unsafe BmSDK.Engine.AkEvent BattleModeLeft
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1760); }
     }
 
     /// <summary>
     /// ObjectProperty: BattleModeRight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BattleModeRight
+    public unsafe BmSDK.Engine.AkEvent BattleModeRight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1768); }
     }
 
     /// <summary>
     /// ObjectProperty: CoolDownEngineTickSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CoolDownEngineTickSound
+    public unsafe BmSDK.Engine.AkEvent CoolDownEngineTickSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1776); }
     }
 
     /// <summary>
     /// ObjectProperty: EMPParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EMPParam
+    public unsafe BmSDK.Engine.AkParameterName EMPParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1784); }
     }
 
@@ -479,8 +479,8 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// </summary>
     public unsafe bool SetGloballyRawSuspensionParam
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
     }
 
     /// <summary>
@@ -488,8 +488,8 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// </summary>
     public unsafe bool JumpEndsOnLand
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
     }
 
     /// <summary>
@@ -497,8 +497,8 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// </summary>
     public unsafe bool DisableRotationRPM
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1824); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1824); }
     }
 
     /// <summary>
@@ -639,27 +639,27 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// <summary>
     /// ArrayProperty: WheelSpinLoopingEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> WheelSpinLoopingEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> WheelSpinLoopingEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 1892); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 1892); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1892); }
     }
 
     /// <summary>
     /// ArrayProperty: DriftLoopingEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> DriftLoopingEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> DriftLoopingEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 1908); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 1908); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1908); }
     }
 
     /// <summary>
     /// ArrayProperty: SteeringArray
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> SteeringArray
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkParameterName> SteeringArray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 1924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkParameterName>>(Ptr + 1924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1924); }
     }
 
@@ -693,9 +693,9 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// <summary>
     /// ArrayProperty: CallInArrayLoop
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> CallInArrayLoop
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> CallInArrayLoop
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 1952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1952); }
     }
 
@@ -738,27 +738,27 @@ public partial class AkPlayerVehicleSoundInfo : BmSDK.Engine.AkVehicleSoundInfo,
     /// <summary>
     /// ArrayProperty: OutOfVehicleLoopingEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> OutOfVehicleLoopingEvents
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> OutOfVehicleLoopingEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 1984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 1984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1984); }
     }
 
     /// <summary>
     /// ArrayProperty: StartLoopingEventsPursuit
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> StartLoopingEventsPursuit
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> StartLoopingEventsPursuit
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2000); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 2000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2000); }
     }
 
     /// <summary>
     /// ArrayProperty: StartLoopingEventsAltOnly
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> StartLoopingEventsAltOnly
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> StartLoopingEventsAltOnly
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2016); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 2016); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2016); }
     }
 

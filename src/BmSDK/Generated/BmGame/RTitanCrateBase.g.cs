@@ -71,9 +71,9 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// ObjectProperty: BrokenMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BrokenMesh
+    public unsafe BmSDK.Engine.StaticMesh BrokenMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
@@ -82,8 +82,8 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bBeenGooed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bDestroyed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 968); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 968); }
     }
 
     /// <summary>
@@ -107,9 +107,9 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     /// <summary>
     /// ArrayProperty: ProximityCrates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> ProximityCrates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RTitanCrateBase> ProximityCrates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RTitanCrateBase>>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 }

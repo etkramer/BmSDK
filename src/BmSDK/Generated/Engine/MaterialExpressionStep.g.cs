@@ -36,18 +36,18 @@ public partial class MaterialExpressionStep : BmSDK.Engine.MaterialExpression, B
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionStep.Threshold Input
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionStep.Threshold>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Threshold
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Threshold
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Threshold
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

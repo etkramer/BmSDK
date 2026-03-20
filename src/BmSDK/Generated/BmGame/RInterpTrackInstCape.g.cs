@@ -54,9 +54,9 @@ public partial class RInterpTrackInstCape : BmSDK.Engine.InterpTrackInst, BmSDK.
     /// <summary>
     /// ComponentProperty: Cape
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Cape
+    public unsafe BmSDK.BmGame.RCapeComponent Cape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeComponent>(Ptr + 92); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

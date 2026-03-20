@@ -36,9 +36,9 @@ public partial class SeqAct_AkDialogueSetDucking : BmSDK.AkAudio.SeqAct_AkBaseSi
     /// <summary>
     /// StructProperty: DuckingInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DuckingInfo
+    public unsafe BmSDK.Engine.AkDialogue.FAkDuckingInfo DuckingInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkDuckingInfo>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

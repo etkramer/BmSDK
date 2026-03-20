@@ -36,18 +36,18 @@ public partial class MaterialExpressionRainBufferNormal : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Coordinates
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: RainBufferType
     /// </summary>
-    public unsafe byte RainBufferType
+    public unsafe BmSDK.Engine.MaterialExpressionRainBufferNormal.ERainBufferType RainBufferType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRainBufferNormal.ERainBufferType>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

@@ -36,9 +36,9 @@ public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: Parent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Parent
+    public unsafe BmSDK.Engine.NetConnection Parent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 44792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NetConnection>(Ptr + 44792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44792); }
     }
 }

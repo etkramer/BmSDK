@@ -36,18 +36,18 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// ArrayProperty: ConvoData
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ConvoData
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvoData_FlagNode> ConvoData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkConvoData_FlagNode>>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
     /// <summary>
     /// ByteProperty: FlagSource
     /// </summary>
-    public unsafe byte FlagSource
+    public unsafe BmSDK.BmGame.RBarkConvoAction_FlaggedDialogue.ConvoFlagSource FlagSource
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkConvoAction_FlaggedDialogue.ConvoFlagSource>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
@@ -63,18 +63,18 @@ public partial class RBarkConvoAction_FlaggedDialogue : BmSDK.BmGame.RBarkConvoA
     /// <summary>
     /// ObjectProperty: PawnRef
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnRef
+    public unsafe BmSDK.BmGame.RBarkConvoPawnRef PawnRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkConvoPawnRef>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
     /// <summary>
     /// ObjectProperty: triggeredSpeech
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT triggeredSpeech
+    public unsafe BmSDK.Engine.AkDialogueSpeech triggeredSpeech
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
     }
 }

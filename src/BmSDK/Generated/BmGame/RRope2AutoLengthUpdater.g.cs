@@ -36,9 +36,9 @@ public partial class RRope2AutoLengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK
     /// <summary>
     /// ByteProperty: LengthChangeEndType
     /// </summary>
-    public unsafe byte LengthChangeEndType
+    public unsafe BmSDK.BmGame.RRope2Component.ERope2LengthChangeEndType LengthChangeEndType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.ERope2LengthChangeEndType>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 

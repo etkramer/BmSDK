@@ -71,72 +71,72 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: CatchBatarangMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatchBatarangMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CatchBatarangMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2640); }
     }
 
     /// <summary>
     /// ObjectProperty: CatchBatarangGargoyleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatchBatarangGargoyleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CatchBatarangGargoyleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
     }
 
     /// <summary>
     /// ObjectProperty: CatchBatarangRailingMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatchBatarangRailingMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CatchBatarangRailingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2656); }
     }
 
     /// <summary>
     /// ObjectProperty: CatchBatarangWireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatchBatarangWireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CatchBatarangWireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2664); }
     }
 
     /// <summary>
     /// ObjectProperty: CatchBatarangCoverMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CatchBatarangCoverMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CatchBatarangCoverMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2672); }
     }
 
     /// <summary>
     /// ObjectProperty: ElectrifiedCatchAudio
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ElectrifiedCatchAudio
+    public unsafe BmSDK.Engine.AkEvent ElectrifiedCatchAudio
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2680); }
     }
 
     /// <summary>
     /// ClassProperty: RCBatarangProjectileClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RCBatarangProjectileClass
+    public unsafe BmSDK.Class RCBatarangProjectileClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 2688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2688); }
     }
 
     /// <summary>
     /// ComponentProperty: ElectrifiedCatchParticles
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ElectrifiedCatchParticles
+    public unsafe BmSDK.Engine.ParticleSystemComponent ElectrifiedCatchParticles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2696); }
     }
 
@@ -145,7 +145,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanUseMultiBatarang
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2704) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2704); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2704); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2704) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2704); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2704); }
     }
 }

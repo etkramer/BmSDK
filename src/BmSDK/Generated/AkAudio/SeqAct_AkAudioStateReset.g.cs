@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioStateReset : BmSDK.AkAudio.SeqAct_AkBaseSimpl
     /// <summary>
     /// ObjectProperty: StateGroup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StateGroup
+    public unsafe BmSDK.Engine.AkStateGroupName StateGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateGroupName>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

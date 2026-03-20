@@ -71,9 +71,9 @@ public partial class RGangInteractPointEngineBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// ArrayProperty: Arrows
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> Arrows
+    public unsafe BmSDK.TArray<BmSDK.Engine.ArrowComponent> Arrows
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ArrowComponent>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

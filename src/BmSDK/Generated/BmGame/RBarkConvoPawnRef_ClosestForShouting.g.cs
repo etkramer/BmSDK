@@ -45,9 +45,9 @@ public partial class RBarkConvoPawnRef_ClosestForShouting : BmSDK.BmGame.RBarkCo
     /// <summary>
     /// ArrayProperty: IndexToColour
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> IndexToColour
+    public unsafe BmSDK.TArray<BmSDK.GameObject.FColor> IndexToColour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FColor>>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

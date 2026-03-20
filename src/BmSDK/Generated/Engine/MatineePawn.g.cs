@@ -71,9 +71,9 @@ public partial class MatineePawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: PreviewMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewMesh
+    public unsafe BmSDK.Engine.SkeletalMesh PreviewMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 1480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
     }
 }

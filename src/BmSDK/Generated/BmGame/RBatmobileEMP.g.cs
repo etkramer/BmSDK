@@ -80,72 +80,72 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// <summary>
     /// ArrayProperty: DisableEnemyDuration
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> DisableEnemyDuration
+    public unsafe BmSDK.TArray<float> DisableEnemyDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 2400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2400); }
     }
 
     /// <summary>
     /// ComponentProperty: ChargeParticle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChargeParticle
+    public unsafe BmSDK.Engine.ParticleSystemComponent ChargeParticle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 2416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2416); }
     }
 
     /// <summary>
     /// ArrayProperty: PowerLevelChargeTime
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> PowerLevelChargeTime
+    public unsafe BmSDK.TArray<float> PowerLevelChargeTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 2424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
     }
 
     /// <summary>
     /// ArrayProperty: FireParticle
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> FireParticle
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystem> FireParticle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 2440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystem>>(Ptr + 2440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
     }
 
     /// <summary>
     /// ArrayProperty: EMPFireSound
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> EMPFireSound
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkEvent> EMPFireSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 2456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkEvent>>(Ptr + 2456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2456); }
     }
 
     /// <summary>
     /// ArrayProperty: EMPFireSwitch
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> EMPFireSwitch
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkSwitchName> EMPFireSwitch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkSwitchName>>(Ptr + 2472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2472); }
     }
 
     /// <summary>
     /// ObjectProperty: EMPFFWaveForm
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EMPFFWaveForm
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform EMPFFWaveForm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 2488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2488); }
     }
 
     /// <summary>
     /// ComponentProperty: ImpulseComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpulseComponent
+    public unsafe BmSDK.Engine.RB_RadialImpulseComponent ImpulseComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_RadialImpulseComponent>(Ptr + 2496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2496); }
     }
 
@@ -163,8 +163,8 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// </summary>
     public unsafe bool ChargingEMP
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2508); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2508); }
     }
 
     /// <summary>
@@ -172,25 +172,25 @@ public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bButtonPressed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2508); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2508); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2508); }
     }
 
     /// <summary>
     /// ArrayProperty: EMPImpulse
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> EMPImpulse
+    public unsafe BmSDK.TArray<float> EMPImpulse
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2512); }
     }
 
     /// <summary>
     /// ArrayProperty: EMPVehicleImpulse
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> EMPVehicleImpulse
+    public unsafe BmSDK.TArray<float> EMPVehicleImpulse
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2528); }
     }
 

@@ -36,9 +36,9 @@ public partial class SeqAct_AkDialogueResetTypePriority : BmSDK.AkAudio.SeqAct_A
     /// <summary>
     /// ObjectProperty: DialogueType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueType
+    public unsafe BmSDK.Engine.AkDialogueType DialogueType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueType>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

@@ -36,9 +36,9 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// <summary>
     /// ArrayProperty: ToggleTrack
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ToggleTrack
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrackToggle.FToggleTrackKey> ToggleTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrackToggle.FToggleTrackKey>>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
@@ -47,8 +47,8 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bActivateSystemEachUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bActivateWithJustAttachedFlag
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bFireEventsWhenForwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bFireEventsWhenBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bFireEventsWhenJumpingForwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
@@ -105,9 +105,9 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
         /// <summary>
         /// ByteProperty: ToggleAction
         /// </summary>
-        public unsafe byte ToggleAction
+        public unsafe BmSDK.Engine.InterpTrackToggle.ETrackToggleAction ToggleAction
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackToggle.ETrackToggleAction>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }

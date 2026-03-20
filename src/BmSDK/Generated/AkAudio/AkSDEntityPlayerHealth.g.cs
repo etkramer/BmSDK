@@ -38,8 +38,8 @@ public partial class AkSDEntityPlayerHealth : BmSDK.AkAudio.AkSDEntityPlayerBase
     /// </summary>
     public unsafe bool ValidName
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 244); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 244); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 244); }
     }
 
     /// <summary>

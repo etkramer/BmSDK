@@ -107,9 +107,9 @@ public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, Bm
     /// <summary>
     /// ArrayProperty: CurrentTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CurrentTargets
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CurrentTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2412); }
     }
 
@@ -143,36 +143,36 @@ public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, Bm
     /// <summary>
     /// ObjectProperty: ImpactEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactEffect
+    public unsafe BmSDK.Engine.ParticleSystem ImpactEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
     }
 
     /// <summary>
     /// ObjectProperty: LockOnSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockOnSound
+    public unsafe BmSDK.Engine.AkEvent LockOnSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
     }
 
     /// <summary>
     /// ObjectProperty: ConfirmLockOn
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConfirmLockOn
+    public unsafe BmSDK.Engine.AkEvent ConfirmLockOn
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2456); }
     }
 
     /// <summary>
     /// ObjectProperty: LockOffSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockOffSound
+    public unsafe BmSDK.Engine.AkEvent LockOffSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
     }
 }

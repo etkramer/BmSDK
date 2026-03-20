@@ -36,9 +36,9 @@ public partial class Interface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    public unsafe System.IntPtr VfTableObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
     }
 
@@ -99,18 +99,18 @@ public partial class Interface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: Linker
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    public unsafe BmSDK.GameObject Linker
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 32); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
     }
 
     /// <summary>
     /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    public unsafe System.IntPtr LinkerIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
     }
 
@@ -126,9 +126,9 @@ public partial class Interface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: Outer
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    public unsafe BmSDK.GameObject Outer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 52); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
     }
 
@@ -144,18 +144,18 @@ public partial class Interface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: Class
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    public unsafe BmSDK.Class Class
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 68); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
     }
 
     /// <summary>
     /// ObjectProperty: ObjectArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    public unsafe BmSDK.GameObject ObjectArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 76); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
     }
 

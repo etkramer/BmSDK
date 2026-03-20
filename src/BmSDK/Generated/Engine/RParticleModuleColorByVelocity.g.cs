@@ -36,9 +36,9 @@ public partial class RParticleModuleColorByVelocity : BmSDK.Engine.ParticleModul
     /// <summary>
     /// StructProperty: ColorMultiplierMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ColorMultiplierMin
+    public unsafe System.Numerics.Vector3 ColorMultiplierMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
@@ -63,9 +63,9 @@ public partial class RParticleModuleColorByVelocity : BmSDK.Engine.ParticleModul
     /// <summary>
     /// StructProperty: ColorMultiplierMax
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ColorMultiplierMax
+    public unsafe System.Numerics.Vector3 ColorMultiplierMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 

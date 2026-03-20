@@ -36,18 +36,18 @@ public partial class MaterialExpressionDepthOfFieldFunction : BmSDK.Engine.Mater
     /// <summary>
     /// ByteProperty: FunctionValue
     /// </summary>
-    public unsafe byte FunctionValue
+    public unsafe BmSDK.Engine.MaterialExpressionDepthOfFieldFunction.EDepthOfFieldFunctionValue FunctionValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDepthOfFieldFunction.EDepthOfFieldFunctionValue>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Depth
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Depth
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Depth
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 

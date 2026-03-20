@@ -90,9 +90,9 @@ public partial class RockAO : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OcclusionColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OcclusionColor
+    public unsafe BmSDK.GameObject.FLinearColor OcclusionColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 

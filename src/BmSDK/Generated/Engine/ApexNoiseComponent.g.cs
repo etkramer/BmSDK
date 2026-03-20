@@ -45,9 +45,9 @@ public partial class ApexNoiseComponent : BmSDK.Engine.ApexFieldSamplerComponent
     /// <summary>
     /// StructProperty: BoundarySize
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoundarySize
+    public unsafe System.Numerics.Vector3 BoundarySize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
@@ -63,18 +63,18 @@ public partial class ApexNoiseComponent : BmSDK.Engine.ApexFieldSamplerComponent
     /// <summary>
     /// ByteProperty: FieldType
     /// </summary>
-    public unsafe byte FieldType
+    public unsafe BmSDK.Engine.ApexNoiseComponent.EFieldType FieldType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexNoiseComponent.EFieldType>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>
     /// ByteProperty: NoiseType
     /// </summary>
-    public unsafe byte NoiseType
+    public unsafe BmSDK.Engine.ApexNoiseComponent.ENoiseType NoiseType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 625); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexNoiseComponent.ENoiseType>(Ptr + 625); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 625); }
     }
 

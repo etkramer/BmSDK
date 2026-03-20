@@ -36,9 +36,9 @@ public partial class SeqAct_AccessObjectList : BmSDK.Engine.SeqAct_SetSequenceVa
     /// <summary>
     /// ObjectProperty: OutputObject
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OutputObject
+    public unsafe BmSDK.GameObject OutputObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

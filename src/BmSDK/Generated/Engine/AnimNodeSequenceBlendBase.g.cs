@@ -36,9 +36,9 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
     /// <summary>
     /// ArrayProperty: Anims
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Anims
+    public unsafe BmSDK.TArray<BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimBlendInfo> Anims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimBlendInfo>>(Ptr + 388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 
@@ -60,9 +60,9 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
         /// <summary>
         /// StructProperty: AnimInfo
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AnimInfo
+        public unsafe BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo AnimInfo
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
@@ -94,9 +94,9 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
         /// <summary>
         /// ObjectProperty: AnimSeq
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimSeq
+        public unsafe BmSDK.Engine.AnimSequence AnimSeq
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 

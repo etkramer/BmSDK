@@ -89,9 +89,9 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
     /// <summary>
     /// ByteProperty: ChallengeRankMode
     /// </summary>
-    public unsafe byte ChallengeRankMode
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeRankMode ChallengeRankMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeRankMode>(Ptr + 884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
     }
 
@@ -100,7 +100,7 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
     /// </summary>
     public unsafe bool bHasUpdatedStats
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 888); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 888); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 888); }
     }
 }

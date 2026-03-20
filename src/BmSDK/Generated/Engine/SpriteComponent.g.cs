@@ -36,9 +36,9 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// ObjectProperty: Sprite
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Sprite
+    public unsafe BmSDK.Engine.Texture2D Sprite
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
@@ -47,8 +47,8 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// </summary>
     public unsafe bool bIsScreenSizeScaled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 548); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 548); }
     }
 
     /// <summary>

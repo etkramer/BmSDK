@@ -45,9 +45,9 @@ public partial class RInteractionManager : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ReferencedClasses
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ReferencedClasses
+    public unsafe BmSDK.TArray<BmSDK.Engine.RInteractionClass> ReferencedClasses
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RInteractionClass>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

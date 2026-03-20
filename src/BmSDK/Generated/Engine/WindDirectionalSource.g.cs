@@ -71,9 +71,9 @@ public partial class WindDirectionalSource : BmSDK.Engine.Info, BmSDK.IGameObjec
     /// <summary>
     /// ComponentProperty: Component
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Component
+    public unsafe BmSDK.Engine.WindDirectionalSourceComponent Component
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WindDirectionalSourceComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

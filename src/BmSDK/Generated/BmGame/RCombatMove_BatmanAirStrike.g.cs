@@ -73,8 +73,8 @@ public partial class RCombatMove_BatmanAirStrike : BmSDK.BmGame.RCombatMove_Batm
     /// </summary>
     public unsafe bool bStopSliding
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1564); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1564); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanAirStrike : BmSDK.BmGame.RCombatMove_Batm
     /// </summary>
     public unsafe bool bHitIntoWall
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1564); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1564); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1564); }
     }
 }

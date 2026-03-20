@@ -36,9 +36,9 @@ public partial class AkSDEntityAkParameter : BmSDK.AkAudio.AkSDEntityValue, BmSD
     /// <summary>
     /// ObjectProperty: UseParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UseParameter
+    public unsafe BmSDK.Engine.AkParameterName UseParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 }

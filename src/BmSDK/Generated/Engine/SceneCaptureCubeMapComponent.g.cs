@@ -36,9 +36,9 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// <summary>
     /// ObjectProperty: TextureTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TextureTarget
+    public unsafe BmSDK.Engine.TextureRenderTargetCube TextureTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTargetCube>(Ptr + 212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
@@ -63,9 +63,9 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// <summary>
     /// StructProperty: WorldLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorldLocation
+    public unsafe System.Numerics.Vector3 WorldLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 }

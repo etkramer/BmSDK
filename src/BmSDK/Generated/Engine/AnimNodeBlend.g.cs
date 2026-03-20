@@ -65,7 +65,7 @@ public partial class AnimNodeBlend : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe bool bSkipBlendWhenNotRendered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 316) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 316); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 316); }
     }
 }

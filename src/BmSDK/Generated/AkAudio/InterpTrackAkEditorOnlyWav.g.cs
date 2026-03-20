@@ -36,9 +36,9 @@ public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSD
     /// <summary>
     /// ArrayProperty: Wavs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> Wavs
+    public unsafe BmSDK.TArray<BmSDK.AkAudio.InterpTrackAkEditorOnlyWav.FAkEditorOnlyWavKey> Wavs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.InterpTrackAkEditorOnlyWav.FAkEditorOnlyWavKey>>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 

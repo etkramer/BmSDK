@@ -36,9 +36,9 @@ public partial class RSeqAct_ToggleIdleAim : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// ObjectProperty: ICA
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ICA
+    public unsafe BmSDK.BmGame.RSeqVar_IdleConfigAim ICA
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqVar_IdleConfigAim>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

@@ -36,9 +36,9 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: SaveGameDescription
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_ModifyStreaming.LevelsLoadedWhileLocked SaveGameDescription
+    public unsafe BmSDK.BmGame.RGameRI.FDebugSaveDescription SaveGameDescription
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_ModifyStreaming.LevelsLoadedWhileLocked>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FDebugSaveDescription>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -47,8 +47,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bForceSaveInBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bForceSaveBatmobileFakeRemoteDrive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bMemoryOnlySave
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bWhenLockingDontUnloadCurrentLevels
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bOnlyReloadConditionalsOnCurrentLevel
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bKeptCurrentLevelLoaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bLockedStreaming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bRefreshingConditional
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bLockingStreaming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bIsFlushingStreaming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bPreparingConditional
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bReloadingConditional
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bMakeLODsVisibleImmediately
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
@@ -164,25 +164,25 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe bool bAllowSaveDuringChase
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 412); }
     }
 
     /// <summary>
     /// ArrayProperty: LevelsLoadedWhileLocked
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> LevelsLoadedWhileLocked
+    public unsafe BmSDK.TArray<BmSDK.FName> LevelsLoadedWhileLocked
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
     /// <summary>
     /// ArrayProperty: LevelLODsLoadedWhileLocked
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> LevelLODsLoadedWhileLocked
+    public unsafe BmSDK.TArray<BmSDK.FName> LevelLODsLoadedWhileLocked
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
     }
 
@@ -198,36 +198,36 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ByteProperty: GlobalDoorLockType
     /// </summary>
-    public unsafe byte GlobalDoorLockType
+    public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType GlobalDoorLockType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.ECombatLockType>(Ptr + 456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
     /// ByteProperty: SideStoryToReload
     /// </summary>
-    public unsafe byte SideStoryToReload
+    public unsafe BmSDK.Engine.Actor.ESideStory SideStoryToReload
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 457); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.ESideStory>(Ptr + 457); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 457); }
     }
 
     /// <summary>
     /// ByteProperty: PrepareSideStory
     /// </summary>
-    public unsafe byte PrepareSideStory
+    public unsafe BmSDK.Engine.Actor.ESideStory PrepareSideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 458); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.ESideStory>(Ptr + 458); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 458); }
     }
 
     /// <summary>
     /// ByteProperty: PrepareSubChapter
     /// </summary>
-    public unsafe byte PrepareSubChapter
+    public unsafe BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter PrepareSubChapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 459); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter>(Ptr + 459); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 459); }
     }
 
@@ -261,9 +261,9 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ObjectProperty: CurrentLevelVolumeWhenLocked
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentLevelVolumeWhenLocked
+    public unsafe BmSDK.BmGame.RLevelVolume CurrentLevelVolumeWhenLocked
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLevelVolume>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 }

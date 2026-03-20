@@ -80,9 +80,9 @@ public partial class RBMWeaponRiflePredBase : BmSDK.BmGame.RBMWeaponRanged, BmSD
     /// <summary>
     /// ClassProperty: GrenadeClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrenadeClass
+    public unsafe BmSDK.Class GrenadeClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1924); }
     }
 }

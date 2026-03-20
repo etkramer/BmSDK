@@ -73,8 +73,8 @@ public partial class RBatmobileBooster : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// </summary>
     public unsafe bool bBoosting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2396); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2396); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class RBatmobileBooster : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// </summary>
     public unsafe bool bWarming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2396); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2396); }
     }
 }

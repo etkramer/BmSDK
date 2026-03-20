@@ -45,9 +45,9 @@ public partial class RSeqAct_OverrideHudPrompt : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// ByteProperty: OverrideIcon
     /// </summary>
-    public unsafe byte OverrideIcon
+    public unsafe BmSDK.BmGame.RHUDPrompt.EControlIcon OverrideIcon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.EControlIcon>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 

@@ -45,18 +45,18 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// <summary>
     /// ArrayProperty: GameActionNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> GameActionNames
+    public unsafe BmSDK.TArray<BmSDK.FName> GameActionNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 
     /// <summary>
     /// ArrayProperty: EnabledGameActions
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> EnabledGameActions
+    public unsafe BmSDK.TArray<bool> EnabledGameActions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<bool>>(Ptr + 476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 

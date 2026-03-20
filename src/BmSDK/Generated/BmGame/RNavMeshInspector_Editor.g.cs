@@ -73,7 +73,7 @@ public partial class RNavMeshInspector_Editor : BmSDK.BmGame.RNavMeshInspector, 
     /// </summary>
     public unsafe bool bDrawLines
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2172) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2172); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2172); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2172) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2172); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2172); }
     }
 }

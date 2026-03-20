@@ -71,9 +71,9 @@ public partial class RPawnVillainCombat : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: CombatPoseConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatPoseConfig
+    public unsafe BmSDK.BmGame.RPoseConfig CombatPoseConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 6664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6664); }
     }
 }

@@ -36,9 +36,9 @@ public partial class SeqVar_Vector : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
     /// <summary>
     /// StructProperty: VectValue
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VectValue
+    public unsafe System.Numerics.Vector3 VectValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 }

@@ -71,9 +71,9 @@ public partial class TargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SpawnSpriteTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnSpriteTexture
+    public unsafe BmSDK.Engine.Texture2D SpawnSpriteTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 

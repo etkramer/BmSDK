@@ -54,9 +54,9 @@ public partial class RGFxMovieUI_PauseOptionsControlsKeyboard : BmSDK.BmGame.RGF
     /// <summary>
     /// StructProperty: ControlsScreen
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ControlsScreen
+    public unsafe BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef ControlsScreen
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI_PauseBase.FScreenDef>(Ptr + 1644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1644); }
     }
 
@@ -72,45 +72,45 @@ public partial class RGFxMovieUI_PauseOptionsControlsKeyboard : BmSDK.BmGame.RGF
     /// <summary>
     /// ObjectProperty: ApplyKeybindingsPopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ApplyKeybindingsPopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ApplyKeybindingsPopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
     }
 
     /// <summary>
     /// ObjectProperty: KeyButtonRemoveDuplicateKeybindPopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KeyButtonRemoveDuplicateKeybindPopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester KeyButtonRemoveDuplicateKeybindPopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
     }
 
     /// <summary>
     /// ObjectProperty: ButtonPCRemoveDuplicateKeybindPopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ButtonPCRemoveDuplicateKeybindPopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ButtonPCRemoveDuplicateKeybindPopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1692); }
     }
 
     /// <summary>
     /// ObjectProperty: SetKeybindPopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SetKeybindPopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester SetKeybindPopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
     }
 
     /// <summary>
     /// ObjectProperty: ResetAllToDefaultPopup
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ResetAllToDefaultPopup
+    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ResetAllToDefaultPopup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 1708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1708); }
     }
 
@@ -146,8 +146,8 @@ public partial class RGFxMovieUI_PauseOptionsControlsKeyboard : BmSDK.BmGame.RGF
     /// </summary>
     public unsafe bool bHasModifier
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1740) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1740); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1740); }
     }
 
     /// <summary>

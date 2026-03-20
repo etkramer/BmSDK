@@ -36,18 +36,18 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// ArrayProperty: RelevantInteractionClasses
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT RelevantInteractionClasses
+    public unsafe BmSDK.TArray<BmSDK.FName> RelevantInteractionClasses
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ArrayProperty: InteractionClassPointer
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT InteractionClassPointer
+    public unsafe BmSDK.TArray<System.IntPtr> InteractionClassPointer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 

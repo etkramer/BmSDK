@@ -36,9 +36,9 @@ public partial class RCapeContactModificationComponent : BmSDK.Engine.PrimitiveC
     /// <summary>
     /// ComponentProperty: CapeComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeComponent
+    public unsafe BmSDK.BmGame.RCapeComponent CapeComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeComponent>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

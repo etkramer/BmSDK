@@ -36,9 +36,9 @@ public partial class LevelStreamingDistance : BmSDK.Engine.LevelStreaming, BmSDK
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Origin
+    public unsafe System.Numerics.Vector3 Origin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 

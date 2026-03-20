@@ -36,9 +36,9 @@ public partial class ParticleModuleRotation : BmSDK.Engine.ParticleModuleRotatio
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartRotation
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

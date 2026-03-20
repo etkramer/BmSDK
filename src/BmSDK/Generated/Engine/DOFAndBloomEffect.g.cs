@@ -63,27 +63,27 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     /// <summary>
     /// ByteProperty: DepthOfFieldType
     /// </summary>
-    public unsafe byte DepthOfFieldType
+    public unsafe BmSDK.Engine.DOFAndBloomEffect.EDOFType DepthOfFieldType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DOFAndBloomEffect.EDOFType>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// ByteProperty: DepthOfFieldQuality
     /// </summary>
-    public unsafe byte DepthOfFieldQuality
+    public unsafe BmSDK.Engine.DOFAndBloomEffect.EDOFQuality DepthOfFieldQuality
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 145); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DOFAndBloomEffect.EDOFQuality>(Ptr + 145); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 145); }
     }
 
     /// <summary>
     /// ObjectProperty: BokehTexture
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BokehTexture
+    public unsafe BmSDK.Engine.Texture2D BokehTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

@@ -99,18 +99,18 @@ public partial class RSpecialMoveConfig_Slide : BmSDK.BmGame.RSpecialMoveConfig,
     /// <summary>
     /// ByteProperty: AnimationLaunchFoot
     /// </summary>
-    public unsafe byte AnimationLaunchFoot
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig_RunningRelativeAnimMove.RelativeAnimLaunchFoot AnimationLaunchFoot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_RunningRelativeAnimMove.RelativeAnimLaunchFoot>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
     /// <summary>
     /// ObjectProperty: SlideMoves
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SlideMoves
+    public unsafe BmSDK.BmGame.RSpecialMoveController SlideMoves
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveController>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
     }
 }

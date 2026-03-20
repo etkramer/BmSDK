@@ -36,9 +36,9 @@ public partial class RSeqAct_MagneticBlastResetPlayer : BmSDK.Engine.SequenceAct
     /// <summary>
     /// ArrayProperty: MagSurface
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> MagSurface
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RMagneticSurfaceSMBase> MagSurface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RMagneticSurfaceSMBase>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

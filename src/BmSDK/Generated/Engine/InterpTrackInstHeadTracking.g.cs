@@ -36,9 +36,9 @@ public partial class InterpTrackInstHeadTracking : BmSDK.Engine.InterpTrackInst,
     /// <summary>
     /// ByteProperty: Action
     /// </summary>
-    public unsafe byte Action
+    public unsafe BmSDK.Engine.InterpTrackHeadTracking.EHeadTrackingAction Action
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackHeadTracking.EHeadTrackingAction>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -54,18 +54,18 @@ public partial class InterpTrackInstHeadTracking : BmSDK.Engine.InterpTrackInst,
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent Mesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// ArrayProperty: TrackControls
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT TrackControls
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkelControlLookAt> TrackControls
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkelControlLookAt>>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 

@@ -73,8 +73,8 @@ public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
     }
 
     /// <summary>
@@ -98,36 +98,36 @@ public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: FalloffType
     /// </summary>
-    public unsafe byte FalloffType
+    public unsafe BmSDK.Engine.WorldAttractor.EWorldAttractorFalloffType FalloffType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldAttractor.EWorldAttractorFalloffType>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// StructProperty: FalloffExponent
     /// </summary>
-    public unsafe BmSDK.Engine.WorldAttractor.Range FalloffExponent
+    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat FalloffExponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldAttractor.Range>(Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.Engine.WorldAttractor.Strength Range
+    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat Range
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldAttractor.Strength>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.Engine.WorldAttractor.DragCoefficient Strength
+    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat Strength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldAttractor.DragCoefficient>(Ptr + 772); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 772); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
@@ -143,18 +143,18 @@ public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DragCoefficient
     /// </summary>
-    public unsafe BmSDK.Engine.WorldAttractor.DragRadius DragCoefficient
+    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat DragCoefficient
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldAttractor.DragRadius>(Ptr + 820); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 820); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
     }
 
     /// <summary>
     /// StructProperty: DragRadius
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.Components DragRadius
+    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat DragRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.Components>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 }

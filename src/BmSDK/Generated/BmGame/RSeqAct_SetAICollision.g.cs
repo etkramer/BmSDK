@@ -36,27 +36,27 @@ public partial class RSeqAct_SetAICollision : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// ArrayProperty: PawnList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> PawnList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBMPawnAI> PawnList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBMPawnAI>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: PhysWalkingType
     /// </summary>
-    public unsafe byte PhysWalkingType
+    public unsafe BmSDK.BmGame.RGameRI.EPhysWalkingType PhysWalkingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.EPhysWalkingType>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// ByteProperty: RagdollVsNavMeshSolution
     /// </summary>
-    public unsafe byte RagdollVsNavMeshSolution
+    public unsafe BmSDK.BmGame.RPawnCharacter.ERagdollVsNavMesh RagdollVsNavMeshSolution
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 369); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCharacter.ERagdollVsNavMesh>(Ptr + 369); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 369); }
     }
 }

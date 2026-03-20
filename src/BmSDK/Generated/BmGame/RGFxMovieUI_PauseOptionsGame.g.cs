@@ -38,8 +38,8 @@ public partial class RGFxMovieUI_PauseOptionsGame : BmSDK.BmGame.RGFxMovieUI_Pau
     /// </summary>
     public unsafe bool bStoryPlus
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1612); }
     }
 
     /// <summary>

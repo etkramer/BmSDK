@@ -36,9 +36,9 @@ public partial class RSeqAct_UnlockAchievement : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// ByteProperty: AchievementId
     /// </summary>
-    public unsafe byte AchievementId
+    public unsafe BmSDK.BmGame.RGameInfo.EAchievementID AchievementId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EAchievementID>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

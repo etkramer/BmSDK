@@ -98,99 +98,99 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// ObjectProperty: BatmobileHackerEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatmobileHackerEffect
+    public unsafe BmSDK.Engine.ParticleSystem BatmobileHackerEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
     }
 
     /// <summary>
     /// ObjectProperty: SuccessfulHackEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SuccessfulHackEffect
+    public unsafe BmSDK.Engine.ParticleSystem SuccessfulHackEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2416); }
     }
 
     /// <summary>
     /// ObjectProperty: BatmobileHackerEffectHvyTank
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatmobileHackerEffectHvyTank
+    public unsafe BmSDK.Engine.ParticleSystem BatmobileHackerEffectHvyTank
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
     }
 
     /// <summary>
     /// ObjectProperty: SuccessfulHackEffectHvyTank
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SuccessfulHackEffectHvyTank
+    public unsafe BmSDK.Engine.ParticleSystem SuccessfulHackEffectHvyTank
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 2432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
     }
 
     /// <summary>
     /// ObjectProperty: DroneHackerMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DroneHackerMaterial
+    public unsafe BmSDK.Engine.MaterialInstance DroneHackerMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstance>(Ptr + 2440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
     }
 
     /// <summary>
     /// ObjectProperty: SucessfullHackSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SucessfullHackSound
+    public unsafe BmSDK.Engine.AkEvent SucessfullHackSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
     }
 
     /// <summary>
     /// ObjectProperty: HackingSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HackingSound
+    public unsafe BmSDK.Engine.AkEvent HackingSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2456); }
     }
 
     /// <summary>
     /// ObjectProperty: BeamPositionalSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BeamPositionalSound
+    public unsafe BmSDK.Engine.AkEvent BeamPositionalSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
     }
 
     /// <summary>
     /// ObjectProperty: NotEnoughEnergyThought
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NotEnoughEnergyThought
+    public unsafe BmSDK.Engine.AkDialogueLine NotEnoughEnergyThought
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueLine>(Ptr + 2472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2472); }
     }
 
     /// <summary>
     /// ArrayProperty: HackerEffect
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> HackerEffect
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent> HackerEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 2480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent>>(Ptr + 2480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
     }
 
     /// <summary>
     /// ArrayProperty: CurrentTarget
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> CurrentTarget
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 2496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 2496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2496); }
     }
 
@@ -215,27 +215,27 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// ArrayProperty: NumTargetsPerLevel
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> NumTargetsPerLevel
+    public unsafe BmSDK.TArray<int> NumTargetsPerLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 2524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2524); }
     }
 
     /// <summary>
     /// ArrayProperty: HackDurationPerLevel
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> HackDurationPerLevel
+    public unsafe BmSDK.TArray<float> HackDurationPerLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 2540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2540); }
     }
 
     /// <summary>
     /// ArrayProperty: HackTimeMultiplierPerLevel
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> HackTimeMultiplierPerLevel
+    public unsafe BmSDK.TArray<float> HackTimeMultiplierPerLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 2556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 2556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2556); }
     }
 
@@ -251,9 +251,9 @@ public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon,
     /// <summary>
     /// ArrayProperty: BeamSoundMultipointIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> BeamSoundMultipointIds
+    public unsafe BmSDK.TArray<int> BeamSoundMultipointIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 2576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2576); }
     }
 }

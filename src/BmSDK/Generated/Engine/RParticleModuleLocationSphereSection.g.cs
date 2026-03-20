@@ -36,54 +36,54 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
     /// <summary>
     /// StructProperty: RadiusMin
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.RadiusMax RadiusMin
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RadiusMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.RadiusMax>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: RadiusMax
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.ThetaMin RadiusMax
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RadiusMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.ThetaMin>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// StructProperty: ThetaMin
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.ThetaMax ThetaMin
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ThetaMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.ThetaMax>(Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
     /// StructProperty: ThetaMax
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.PhiMin ThetaMax
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ThetaMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.PhiMin>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// StructProperty: PhiMin
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.PhiMax PhiMin
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat PhiMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.PhiMax>(Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>
     /// StructProperty: PhiMax
     /// </summary>
-    public unsafe BmSDK.Engine.RParticleModuleLocationSphereSection.VelocityScale PhiMax
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat PhiMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RParticleModuleLocationSphereSection.VelocityScale>(Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
@@ -92,16 +92,16 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
     /// </summary>
     public unsafe bool Velocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 312) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 312); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 312); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 312) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 312); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 312); }
     }
 
     /// <summary>
     /// StructProperty: VelocityScale
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VelocityScale
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat VelocityScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 }

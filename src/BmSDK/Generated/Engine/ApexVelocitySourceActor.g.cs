@@ -71,9 +71,9 @@ public partial class ApexVelocitySourceActor : BmSDK.Engine.ApexFieldSamplerActo
     /// <summary>
     /// ComponentProperty: FieldSamplerComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FieldSamplerComponent
+    public unsafe BmSDK.Engine.ApexFieldSamplerComponent FieldSamplerComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

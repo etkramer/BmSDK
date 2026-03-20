@@ -71,9 +71,9 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// ArrayProperty: SkeletalMeshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> SkeletalMeshes
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RCharacterScaleReferenceBase.FSkeletalMeshSettings> SkeletalMeshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCharacterScaleReferenceBase.FSkeletalMeshSettings>>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
@@ -86,9 +86,9 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
         /// <summary>
         /// ComponentProperty: Component
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Component
+        public unsafe BmSDK.Engine.SkeletalMeshComponent Component
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

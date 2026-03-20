@@ -36,9 +36,9 @@ public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSD
     /// <summary>
     /// StructProperty: ComponentDynamicResources
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ComponentDynamicResources
+    public unsafe System.IntPtr ComponentDynamicResources
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

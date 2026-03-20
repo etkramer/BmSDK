@@ -73,8 +73,8 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bCanBeKnackered
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bForceBatarangTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6672); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6672); }
     }
 
     /// <summary>
@@ -98,18 +98,18 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// ComponentProperty: BatarangOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatarangOverride
+    public unsafe BmSDK.Engine.RInteractionComponent BatarangOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 6680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
     }
 
     /// <summary>
     /// ObjectProperty: SpecialAttackAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpecialAttackAnimset
+    public unsafe BmSDK.Engine.AnimSet SpecialAttackAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
     }
 }

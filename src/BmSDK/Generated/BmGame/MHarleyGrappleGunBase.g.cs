@@ -71,18 +71,18 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: PounceToLedgeMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PounceToLedgeMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig PounceToLedgeMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 3668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3668); }
     }
 
     /// <summary>
     /// ObjectProperty: JumpPounceToLedgeMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JumpPounceToLedgeMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig JumpPounceToLedgeMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 3676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3676); }
     }
 
@@ -98,9 +98,9 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// <summary>
     /// StructProperty: PounceCheckExtent
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PounceCheckExtent
+    public unsafe System.Numerics.Vector3 PounceCheckExtent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3688); }
     }
 
@@ -280,8 +280,8 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// </summary>
     public unsafe bool bPounceCheckDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// </summary>
     public unsafe bool bPounceLOSDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
     }
 
     /// <summary>
@@ -298,25 +298,25 @@ public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGa
     /// </summary>
     public unsafe bool bCanQueueGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3776); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3776); }
     }
 
     /// <summary>
     /// StructProperty: RailingGoingToPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RailingGoingToPoint
+    public unsafe System.Numerics.Vector3 RailingGoingToPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3780); }
     }
 
     /// <summary>
     /// StructProperty: RailingGoingToNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RailingGoingToNormal
+    public unsafe System.Numerics.Vector3 RailingGoingToNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3792); }
     }
 }

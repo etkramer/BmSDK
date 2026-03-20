@@ -36,9 +36,9 @@ public partial class RAnimNotifyToken_SoundInterruptable : BmSDK.GameObject, BmS
     /// <summary>
     /// StructProperty: Handle
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Handle
+    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle Handle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

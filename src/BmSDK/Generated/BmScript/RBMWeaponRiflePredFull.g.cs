@@ -71,9 +71,9 @@ public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThu
     /// <summary>
     /// ComponentProperty: PredLensFlareFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PredLensFlareFX
+    public unsafe BmSDK.Engine.LensFlareComponent PredLensFlareFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1932); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlareComponent>(Ptr + 1932); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1932); }
     }
 }

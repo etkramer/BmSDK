@@ -36,9 +36,9 @@ public partial class InterpFilter_Custom : BmSDK.Engine.InterpFilter, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: GroupsToInclude
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GroupsToInclude
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroup> GroupsToInclude
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroup>>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

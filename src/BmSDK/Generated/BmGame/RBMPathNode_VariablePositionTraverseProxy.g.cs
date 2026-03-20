@@ -71,9 +71,9 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     /// <summary>
     /// ObjectProperty: FenceJumpNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FenceJumpNode
+    public unsafe BmSDK.BmGame.RBMPathNode_VariablePositionTraverse FenceJumpNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_VariablePositionTraverse>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 }

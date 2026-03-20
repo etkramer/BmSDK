@@ -36,18 +36,18 @@ public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleW
     /// <summary>
     /// StructProperty: GlobalInfluence
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GlobalInfluence
+    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat GlobalInfluence
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: LevelInfluenceType
     /// </summary>
-    public unsafe byte LevelInfluenceType
+    public unsafe BmSDK.Engine.ParticleModulePhysicsVolumes.EParticleLevelInfluenceType LevelInfluenceType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModulePhysicsVolumes.EParticleLevelInfluenceType>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 }

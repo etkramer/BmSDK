@@ -36,9 +36,9 @@ public partial class GFxAction_Invoke : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: Movie
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Movie
+    public unsafe BmSDK.GFxUI.GFxMoviePlayer Movie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -54,9 +54,9 @@ public partial class GFxAction_Invoke : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// ArrayProperty: Arguments
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Arguments
+    public unsafe BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FASValue> Arguments
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FASValue>>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 }

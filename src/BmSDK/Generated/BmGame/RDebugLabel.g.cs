@@ -89,9 +89,9 @@ public partial class RDebugLabel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Colour
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Colour
+    public unsafe BmSDK.GameObject.FColor Colour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 

@@ -71,63 +71,63 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// <summary>
     /// ObjectProperty: ArmourMic
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ArmourMic
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ArmourMic
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6800); }
     }
 
     /// <summary>
     /// ObjectProperty: ShieldAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ShieldAnimset
+    public unsafe BmSDK.Engine.AnimSet ShieldAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6808); }
     }
 
     /// <summary>
     /// ObjectProperty: ArmourAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ArmourAnimset
+    public unsafe BmSDK.Engine.AnimSet ArmourAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6816); }
     }
 
     /// <summary>
     /// ObjectProperty: BladeAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BladeAnimset
+    public unsafe BmSDK.Engine.AnimSet BladeAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6824); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6824); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6824); }
     }
 
     /// <summary>
     /// ObjectProperty: BlockSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BlockSound
+    public unsafe BmSDK.Engine.AkEvent BlockSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6832); }
     }
 
     /// <summary>
     /// ComponentProperty: BladeTrail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BladeTrail
+    public unsafe BmSDK.Engine.ParticleSystemComponent BladeTrail
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6840); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6840); }
     }
 
     /// <summary>
     /// ComponentProperty: BatarangOverride
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BatarangOverride
+    public unsafe BmSDK.Engine.RInteractionComponent BatarangOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6848); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 6848); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6848); }
     }
 
@@ -152,9 +152,9 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// <summary>
     /// ArrayProperty: ShieldStepList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>>> ShieldStepList
+    public unsafe BmSDK.TArray<BmSDK.FName> ShieldStepList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>>>>(Ptr + 6864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 6864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6864); }
     }
 
@@ -170,9 +170,9 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// <summary>
     /// ArrayProperty: ArmourStepList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>> ArmourStepList
+    public unsafe BmSDK.TArray<BmSDK.FName> ArmourStepList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>>>(Ptr + 6888); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 6888); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6888); }
     }
 
@@ -188,9 +188,9 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// <summary>
     /// ArrayProperty: BladeStepList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>> BladeStepList
+    public unsafe BmSDK.TArray<BmSDK.FName> BladeStepList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>>(Ptr + 6912); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 6912); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6912); }
     }
 
@@ -226,8 +226,8 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// </summary>
     public unsafe bool bCanBeBataranged
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6948); }
     }
 
     /// <summary>
@@ -235,34 +235,34 @@ public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStag
     /// </summary>
     public unsafe bool bSetHealthMaterial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6948); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6948); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6948); }
     }
 
     /// <summary>
     /// ArrayProperty: ShieldMaterialIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>> ShieldMaterialIds
+    public unsafe BmSDK.TArray<int> ShieldMaterialIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>>(Ptr + 6952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 6952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6952); }
     }
 
     /// <summary>
     /// ArrayProperty: HandMaterialIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>> HandMaterialIds
+    public unsafe BmSDK.TArray<int> HandMaterialIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>>(Ptr + 6968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 6968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6968); }
     }
 
     /// <summary>
     /// ArrayProperty: BladeMaterialIds
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC> BladeMaterialIds
+    public unsafe BmSDK.TArray<int> BladeMaterialIds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillainMultiStageBase.WeaponXrayMIC>>(Ptr + 6984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 6984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6984); }
     }
 }

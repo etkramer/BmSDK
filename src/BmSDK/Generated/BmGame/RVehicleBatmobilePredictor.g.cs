@@ -71,9 +71,9 @@ public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSD
     /// <summary>
     /// ObjectProperty: Batmobile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Batmobile
+    public unsafe BmSDK.BmGame.RVehicleBatmobileBase Batmobile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 7620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBatmobileBase>(Ptr + 7620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7620); }
     }
 
@@ -109,16 +109,16 @@ public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSD
     /// </summary>
     public unsafe bool SelfDrivePaused
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7640) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7640); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7640); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7640) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 7640); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 7640); }
     }
 
     /// <summary>
     /// StructProperty: PausedLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PausedLoc
+    public unsafe System.Numerics.Vector3 PausedLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7644); }
     }
 

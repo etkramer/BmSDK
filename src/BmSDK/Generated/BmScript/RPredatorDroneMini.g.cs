@@ -71,189 +71,189 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// ObjectProperty: m_hSpawner
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hSpawner
+    public unsafe BmSDK.BmScript.RSeqAct_SpawnDrone m_hSpawner
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_SpawnDrone>(Ptr + 3148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3148); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hController
+    public unsafe BmSDK.BmScript.RPawnVillainGunMiniDroneController m_hController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnVillainGunMiniDroneController>(Ptr + 3156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3156); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hArkhamKnightController
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hArkhamKnightController
+    public unsafe BmSDK.BmGame.RPawnVillainGunPredBase m_hArkhamKnightController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainGunPredBase>(Ptr + 3164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3164); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hBehaviorMeanderPatrolPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hBehaviorMeanderPatrolPoint
+    public unsafe BmSDK.BmGame.RPatrolPoint m_hBehaviorMeanderPatrolPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPatrolPoint>(Ptr + 3172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3172); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hBehaviorInvestigateTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hBehaviorInvestigateTarget
+    public unsafe BmSDK.Engine.Actor m_hBehaviorInvestigateTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 3180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3180); }
     }
 
     /// <summary>
     /// ObjectProperty: m_XrayMIC_Normal
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_XrayMIC_Normal
+    public unsafe BmSDK.Engine.MaterialInstanceConstant m_XrayMIC_Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 3188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3188); }
     }
 
     /// <summary>
     /// ObjectProperty: m_XrayMIC_Disrupted
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_XrayMIC_Disrupted
+    public unsafe BmSDK.Engine.MaterialInstanceConstant m_XrayMIC_Disrupted
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 3196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3196); }
     }
 
     /// <summary>
     /// ObjectProperty: m_XrayMIC_Blinded
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_XrayMIC_Blinded
+    public unsafe BmSDK.Engine.MaterialInstanceConstant m_XrayMIC_Blinded
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 3204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3204); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hCodesHaventBeenDownloadedYetThought
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hCodesHaventBeenDownloadedYetThought
+    public unsafe BmSDK.Engine.AkDialogueSpeech m_hCodesHaventBeenDownloadedYetThought
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 3212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3212); }
     }
 
     /// <summary>
     /// ObjectProperty: m_hSearchLightSpecifiedTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hSearchLightSpecifiedTarget
+    public unsafe BmSDK.Engine.Actor m_hSearchLightSpecifiedTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 3220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3220); }
     }
 
     /// <summary>
     /// ObjectProperty: m_ExplosionCachedTargetClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_ExplosionCachedTargetClass
+    public unsafe BmSDK.Engine.RInteractionClass m_ExplosionCachedTargetClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionClass>(Ptr + 3228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3228); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioMovementLoopingEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioMovementLoopingEvent
+    public unsafe BmSDK.Engine.AkEvent AudioMovementLoopingEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 3236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3236); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioDestroyEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioDestroyEvent
+    public unsafe BmSDK.Engine.AkEvent AudioDestroyEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 3244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3244); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioElectrocuteLoopingEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioElectrocuteLoopingEvent
+    public unsafe BmSDK.Engine.AkEvent AudioElectrocuteLoopingEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 3252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3252); }
     }
 
     /// <summary>
     /// ObjectProperty: AudioAlarm
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioAlarm
+    public unsafe BmSDK.Engine.AkEvent AudioAlarm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 3260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3260); }
     }
 
     /// <summary>
     /// ObjectProperty: ZapClosePlayerSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ZapClosePlayerSound
+    public unsafe BmSDK.Engine.AkEvent ZapClosePlayerSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 3268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3268); }
     }
 
     /// <summary>
     /// ComponentProperty: m_MiniDroneToControllerLinePSC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_MiniDroneToControllerLinePSC
+    public unsafe BmSDK.Engine.ParticleSystemComponent m_MiniDroneToControllerLinePSC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 3276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3276); }
     }
 
     /// <summary>
     /// ComponentProperty: RHDInteractions
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RHDInteractions
+    public unsafe BmSDK.Engine.RInteractionComponent RHDInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 3284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3284); }
     }
 
     /// <summary>
     /// ComponentProperty: m_hElectricShield
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hElectricShield
+    public unsafe BmSDK.Engine.ParticleSystemComponent m_hElectricShield
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3292); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 3292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3292); }
     }
 
     /// <summary>
     /// ComponentProperty: m_hWeaponFlareEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hWeaponFlareEffect
+    public unsafe BmSDK.Engine.ParticleSystemComponent m_hWeaponFlareEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 3300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3300); }
     }
 
     /// <summary>
     /// ComponentProperty: m_hWeaponPowerUpEffect
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT m_hWeaponPowerUpEffect
+    public unsafe BmSDK.Engine.ParticleSystemComponent m_hWeaponPowerUpEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 3308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3308); }
     }
 
@@ -262,8 +262,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorMeanderReturnToPath
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorPursueAllowFreeForm
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorPursueTargetsAlertPlayerToRoom
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -289,8 +289,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorPursueTargetsAlertSoundPlayed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -298,8 +298,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorAttackAllTargets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorAttackThenSelfDestruct
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -316,8 +316,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorAttackPoweredUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -325,8 +325,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorAttackRoomNotified
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -334,8 +334,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorMeanderKeepAllTargets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -343,8 +343,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bBehaviorArrivedAtInvestigateLocation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -352,8 +352,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bMovementPursueFreeForm
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -361,8 +361,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bMovementMalfunctionVibrateCycle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -370,8 +370,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bCodesDownloaded
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -379,8 +379,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bCanSelfDestruct
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -388,8 +388,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bNeverTargetPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -397,8 +397,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool bDeliberatelyAbandoned
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -406,8 +406,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bInDetectiveMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -415,8 +415,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bRHDTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -424,8 +424,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bMiniDroneToControllerLineActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -433,8 +433,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bMiniDroneToControllerLineInDetectiveMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
@@ -442,25 +442,25 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// </summary>
     public unsafe bool m_bSpecialTutorialMiniDrone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3316); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3316); }
     }
 
     /// <summary>
     /// ByteProperty: m_eBehaviorStunnedSource
     /// </summary>
-    public unsafe byte m_eBehaviorStunnedSource
+    public unsafe BmSDK.BmScript.RPredatorDroneMini.MalfunctionSource m_eBehaviorStunnedSource
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 3320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPredatorDroneMini.MalfunctionSource>(Ptr + 3320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3320); }
     }
 
     /// <summary>
     /// ByteProperty: m_eSearchLightTargetMode
     /// </summary>
-    public unsafe byte m_eSearchLightTargetMode
+    public unsafe BmSDK.BmScript.RPredatorDroneMini.SearchLightTargetMode m_eSearchLightTargetMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 3321); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPredatorDroneMini.SearchLightTargetMode>(Ptr + 3321); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3321); }
     }
 
@@ -503,27 +503,27 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementMeanderSourcePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementMeanderSourcePosition
+    public unsafe System.Numerics.Vector3 m_vMovementMeanderSourcePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3340); }
     }
 
     /// <summary>
     /// StructProperty: m_vMovementMeanderOffsetPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementMeanderOffsetPosition
+    public unsafe System.Numerics.Vector3 m_vMovementMeanderOffsetPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3352); }
     }
 
     /// <summary>
     /// StructProperty: m_vMovementMeanderFacingDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementMeanderFacingDirection
+    public unsafe System.Numerics.Vector3 m_vMovementMeanderFacingDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3364); }
     }
 
@@ -548,27 +548,27 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementPursueVantagePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementPursueVantagePoint
+    public unsafe System.Numerics.Vector3 m_vMovementPursueVantagePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3384); }
     }
 
     /// <summary>
     /// StructProperty: m_vMovementPursueVantageTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementPursueVantageTarget
+    public unsafe System.Numerics.Vector3 m_vMovementPursueVantageTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3396); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3396); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3396); }
     }
 
     /// <summary>
     /// StructProperty: m_vMovementPursueFacingDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementPursueFacingDirection
+    public unsafe System.Numerics.Vector3 m_vMovementPursueFacingDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3408); }
     }
 
@@ -584,9 +584,9 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementUncontrolledStrayDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementUncontrolledStrayDirection
+    public unsafe System.Numerics.Vector3 m_vMovementUncontrolledStrayDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3424); }
     }
 
@@ -638,18 +638,18 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementMalfunctionOriginPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementMalfunctionOriginPosition
+    public unsafe System.Numerics.Vector3 m_vMovementMalfunctionOriginPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3456); }
     }
 
     /// <summary>
     /// StructProperty: m_vMovementMalfunctionShiftPosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vMovementMalfunctionShiftPosition
+    public unsafe System.Numerics.Vector3 m_vMovementMalfunctionShiftPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3468); }
     }
 
@@ -728,9 +728,9 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// ArrayProperty: m_aSearchLights
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> m_aSearchLights
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHelicopterIntermediateBase.FSearchLightData> m_aSearchLights
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 3512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHelicopterIntermediateBase.FSearchLightData>>(Ptr + 3512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3512); }
     }
 
@@ -746,27 +746,27 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vSearchLightSourcePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vSearchLightSourcePosition
+    public unsafe System.Numerics.Vector3 m_vSearchLightSourcePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3532); }
     }
 
     /// <summary>
     /// StructProperty: m_rSearchLightSourceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_rSearchLightSourceRotation
+    public unsafe BmSDK.Rotator m_rSearchLightSourceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3544); }
     }
 
     /// <summary>
     /// StructProperty: m_rSearchLightSourceDirection
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_rSearchLightSourceDirection
+    public unsafe BmSDK.Rotator m_rSearchLightSourceDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3556); }
     }
 
@@ -863,18 +863,18 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// ArrayProperty: m_aTargetList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> m_aTargetList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHelicopterIntermediateBase.FTargetData> m_aTargetList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 3608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHelicopterIntermediateBase.FTargetData>>(Ptr + 3608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3608); }
     }
 
     /// <summary>
     /// ArrayProperty: m_aTargetIgnoreList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> m_aTargetIgnoreList
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> m_aTargetIgnoreList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 3624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 3624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3624); }
     }
 
@@ -890,18 +890,18 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vTargetSourcePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vTargetSourcePosition
+    public unsafe System.Numerics.Vector3 m_vTargetSourcePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3644); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3644); }
     }
 
     /// <summary>
     /// StructProperty: m_vTargetSourceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT m_vTargetSourceRotation
+    public unsafe BmSDK.Rotator m_vTargetSourceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3656); }
     }
 

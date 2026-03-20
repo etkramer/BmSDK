@@ -36,9 +36,9 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// <summary>
     /// ByteProperty: Type
     /// </summary>
-    public unsafe byte Type
+    public unsafe BmSDK.Engine.AnimNodeBlendByBase.EBaseBlendType Type
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeBlendByBase.EBaseBlendType>(Ptr + 340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
@@ -54,9 +54,9 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// <summary>
     /// ClassProperty: ActorClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActorClass
+    public unsafe BmSDK.Class ActorClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -72,9 +72,9 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// <summary>
     /// ObjectProperty: CachedBase
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedBase
+    public unsafe BmSDK.Engine.Actor CachedBase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 

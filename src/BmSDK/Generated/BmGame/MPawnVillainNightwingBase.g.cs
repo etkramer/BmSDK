@@ -71,9 +71,9 @@ public partial class MPawnVillainNightwingBase : BmSDK.BmGame.RPawnVillainCombat
     /// <summary>
     /// ObjectProperty: AttackConversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AttackConversation
+    public unsafe BmSDK.Engine.AkDialogueConversation AttackConversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversation>(Ptr + 6780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6780); }
     }
 }

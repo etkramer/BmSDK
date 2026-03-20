@@ -71,9 +71,9 @@ public partial class RBMAIAction_RunToWithAvoid : BmSDK.BmGame.RBMAIAction_RunTo
     /// <summary>
     /// ObjectProperty: AvoidActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AvoidActor
+    public unsafe BmSDK.Engine.Actor AvoidActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 964); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
     }
 }

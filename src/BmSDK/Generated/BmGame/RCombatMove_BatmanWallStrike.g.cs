@@ -71,9 +71,9 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
     /// <summary>
     /// StructProperty: WallNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WallNormal
+    public unsafe System.Numerics.Vector3 WallNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
     }
 }

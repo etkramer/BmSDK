@@ -36,9 +36,9 @@ public partial class ActorFactoryFlex : BmSDK.Engine.ActorFactory, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: StaticMesh
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
+    public unsafe BmSDK.Engine.StaticMesh StaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

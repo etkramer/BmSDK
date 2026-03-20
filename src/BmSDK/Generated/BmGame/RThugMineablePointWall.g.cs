@@ -71,9 +71,9 @@ public partial class RThugMineablePointWall : BmSDK.BmGame.RThugMineablePointBas
     /// <summary>
     /// StructProperty: StandPoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StandPoint
+    public unsafe System.Numerics.Vector3 StandPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 }

@@ -71,9 +71,9 @@ public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrow
     /// <summary>
     /// ObjectProperty: ExplodeEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplodeEvent
+    public unsafe BmSDK.Engine.AkEvent ExplodeEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
     }
 
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrow
     /// </summary>
     public unsafe bool bHitSomething
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1192) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1192); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1192); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1192) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1192); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1192); }
     }
 }

@@ -36,9 +36,9 @@ public partial class AkActionGlobal_Parameter_Altitude : BmSDK.Engine.AkActionGl
     /// <summary>
     /// ObjectProperty: AltitudeParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AltitudeParameter
+    public unsafe BmSDK.Engine.AkParameterName AltitudeParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
@@ -99,9 +99,9 @@ public partial class AkActionGlobal_Parameter_Altitude : BmSDK.Engine.AkActionGl
     /// <summary>
     /// StructProperty: ParamUpdateTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ParamUpdateTime
+    public unsafe double ParamUpdateTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 }

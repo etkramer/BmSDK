@@ -71,9 +71,9 @@ public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// ObjectProperty: FrozenChild
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FrozenChild
+    public unsafe BmSDK.BmGame.RAEC_Sub_FrozenThug FrozenChild
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Sub_FrozenThug>(Ptr + 720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 }

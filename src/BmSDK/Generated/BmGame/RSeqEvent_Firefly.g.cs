@@ -36,9 +36,9 @@ public partial class RSeqEvent_Firefly : BmSDK.Engine.SequenceEvent, BmSDK.IGame
     /// <summary>
     /// ObjectProperty: MatineeLocator
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MatineeLocator
+    public unsafe BmSDK.Engine.Actor MatineeLocator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

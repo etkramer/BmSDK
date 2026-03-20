@@ -71,36 +71,36 @@ public partial class RPawnVillainGunPredMiniGunBase : BmSDK.BmGame.RPawnVillainG
     /// <summary>
     /// ObjectProperty: CombatAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatAnimset
+    public unsafe BmSDK.Engine.AnimSet CombatAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6792); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatCameraAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatCameraAnimset
+    public unsafe BmSDK.Engine.AnimSet CombatCameraAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6800); }
     }
 
     /// <summary>
     /// ObjectProperty: BMClashAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BMClashAnimset
+    public unsafe BmSDK.Engine.AnimSet BMClashAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6808); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6808); }
     }
 
     /// <summary>
     /// ObjectProperty: ClashAnimset
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ClashAnimset
+    public unsafe BmSDK.Engine.AnimSet ClashAnimset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6816); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6816); }
     }
 

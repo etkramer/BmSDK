@@ -71,9 +71,9 @@ public partial class RCameraActor_Conversation : BmSDK.BmGame.RCameraActor, BmSD
     /// <summary>
     /// ObjectProperty: ConversationActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConversationActor
+    public unsafe BmSDK.BmGame.RCameraConversationActor ConversationActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraConversationActor>(Ptr + 1248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
     }
 }

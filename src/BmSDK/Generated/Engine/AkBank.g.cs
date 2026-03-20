@@ -36,9 +36,9 @@ public partial class AkBank : BmSDK.Engine.AkBankExternalHook, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: BankLoadType
     /// </summary>
-    public unsafe byte BankLoadType
+    public unsafe BmSDK.Engine.AkBank.EAkBankLoadType BankLoadType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkBank.EAkBankLoadType>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
@@ -47,16 +47,16 @@ public partial class AkBank : BmSDK.Engine.AkBankExternalHook, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bContainsXMA
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 128); }
     }
 
     /// <summary>
     /// ArrayProperty: ReferencedParameters
     /// </summary>
-    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> ReferencedParameters
+    public unsafe BmSDK.TArray<BmSDK.Engine.AkParameterName> ReferencedParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkParameterName>>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 

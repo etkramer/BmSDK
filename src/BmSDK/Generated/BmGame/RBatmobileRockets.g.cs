@@ -106,9 +106,9 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: RocketArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RocketArchetype
+    public unsafe BmSDK.BmGame.RProjectile RocketArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectile>(Ptr + 2420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2420); }
     }
 
@@ -124,9 +124,9 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// StructProperty: AmmoStartPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AmmoStartPos
+    public unsafe System.Numerics.Vector2 AmmoStartPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 2432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
     }
 

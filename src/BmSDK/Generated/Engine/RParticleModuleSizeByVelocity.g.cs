@@ -36,9 +36,9 @@ public partial class RParticleModuleSizeByVelocity : BmSDK.Engine.ParticleModule
     /// <summary>
     /// StructProperty: SizeMultiplierMin
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SizeMultiplierMin
+    public unsafe System.Numerics.Vector3 SizeMultiplierMin
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
@@ -54,9 +54,9 @@ public partial class RParticleModuleSizeByVelocity : BmSDK.Engine.ParticleModule
     /// <summary>
     /// StructProperty: SizeMultiplierMax
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SizeMultiplierMax
+    public unsafe System.Numerics.Vector3 SizeMultiplierMax
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 

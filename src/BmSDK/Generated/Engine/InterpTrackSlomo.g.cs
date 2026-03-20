@@ -36,9 +36,9 @@ public partial class InterpTrackSlomo : BmSDK.Engine.InterpTrackFloatBase, BmSDK
     /// <summary>
     /// StructProperty: FloatTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrack.SubTracks FloatTrack
+    public unsafe BmSDK.GameObject.FInterpCurveFloat FloatTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
@@ -54,9 +54,9 @@ public partial class InterpTrackSlomo : BmSDK.Engine.InterpTrackFloatBase, BmSDK
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Randomiser
+    public unsafe BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator Randomiser
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 }

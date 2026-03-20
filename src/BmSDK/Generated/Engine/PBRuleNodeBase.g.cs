@@ -36,9 +36,9 @@ public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: NextRules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> NextRules
+    public unsafe BmSDK.TArray<BmSDK.Engine.PBRuleNodeBase.FPBRuleLink> NextRules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.PBRuleNodeBase.FPBRuleLink>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -105,9 +105,9 @@ public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: NextRule
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextRule
+        public unsafe BmSDK.Engine.PBRuleNodeBase NextRule
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PBRuleNodeBase>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

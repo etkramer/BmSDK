@@ -36,9 +36,9 @@ public partial class MCPBase : BmSDK.IpDrv.McpServiceBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FTickableObject
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FTickableObject
+    public unsafe System.IntPtr VfTable_FTickableObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

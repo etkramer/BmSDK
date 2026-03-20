@@ -71,36 +71,36 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
     /// <summary>
     /// ObjectProperty: EyeGlowMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EyeGlowMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant EyeGlowMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
     }
 
     /// <summary>
     /// ObjectProperty: PfxReviveEmitter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PfxReviveEmitter
+    public unsafe BmSDK.Engine.Emitter PfxReviveEmitter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 6704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6704); }
     }
 
     /// <summary>
     /// ComponentProperty: HitFx
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HitFx
+    public unsafe BmSDK.Engine.ParticleSystemComponent HitFx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 6712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
     }
 
     /// <summary>
     /// ComponentProperty: StomachLight
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StomachLight
+    public unsafe BmSDK.Engine.PointLightComponent StomachLight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PointLightComponent>(Ptr + 6720); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
     }
 
@@ -118,8 +118,8 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
     /// </summary>
     public unsafe bool bPoweringUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
     /// </summary>
     public unsafe bool bLightsOff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
     /// </summary>
     public unsafe bool bLightsOffPermanently
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
     }
 
     /// <summary>
@@ -197,9 +197,9 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
     /// <summary>
     /// ByteProperty: LightCol
     /// </summary>
-    public unsafe byte LightCol
+    public unsafe BmSDK.BmScript.RPawnVillainThug_Robot.ELightCol LightCol
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 6764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnVillainThug_Robot.ELightCol>(Ptr + 6764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6764); }
     }
 }

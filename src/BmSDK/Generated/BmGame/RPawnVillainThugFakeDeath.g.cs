@@ -73,8 +73,8 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bFakeDead
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bHasGottenUp
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bKillMeSpecial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bJoker
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RPawnVillainThugFakeDeath : BmSDK.BmGame.RPawnVillainThug, 
     /// </summary>
     public unsafe bool bDoubleDead
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6696); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6696); }
     }
 
     /// <summary>

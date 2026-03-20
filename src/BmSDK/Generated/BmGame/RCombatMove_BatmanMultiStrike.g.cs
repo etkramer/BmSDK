@@ -71,9 +71,9 @@ public partial class RCombatMove_BatmanMultiStrike : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// ArrayProperty: TargetList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>> TargetList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> TargetList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>>(Ptr + 1564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 1564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
     }
 

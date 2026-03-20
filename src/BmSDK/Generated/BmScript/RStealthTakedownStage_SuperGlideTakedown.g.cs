@@ -71,18 +71,18 @@ public partial class RStealthTakedownStage_SuperGlideTakedown : BmSDK.BmScript.R
     /// <summary>
     /// ArrayProperty: AttackTargets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>> AttackTargets
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnVillain> AttackTargets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>(Ptr + 1676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnVillain>>(Ptr + 1676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
     }
 
     /// <summary>
     /// ObjectProperty: TrailEmitter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TrailEmitter
+    public unsafe BmSDK.Engine.Emitter TrailEmitter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 1692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1692); }
     }
 

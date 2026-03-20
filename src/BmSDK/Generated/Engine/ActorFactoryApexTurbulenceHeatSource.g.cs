@@ -63,18 +63,18 @@ public partial class ActorFactoryApexTurbulenceHeatSource : BmSDK.Engine.ActorFa
     /// <summary>
     /// ByteProperty: GeometryType
     /// </summary>
-    public unsafe byte GeometryType
+    public unsafe BmSDK.Engine.ApexFieldSamplerComponent.EGeometryType GeometryType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexFieldSamplerComponent.EGeometryType>(Ptr + 156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// StructProperty: Extents
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Extents
+    public unsafe System.Numerics.Vector3 Extents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

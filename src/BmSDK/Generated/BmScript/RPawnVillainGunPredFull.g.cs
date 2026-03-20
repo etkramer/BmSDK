@@ -80,9 +80,9 @@ public partial class RPawnVillainGunPredFull : BmSDK.BmScript.RPawnVillainGunPre
     /// <summary>
     /// ObjectProperty: ArmbandMIC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ArmbandMIC
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ArmbandMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6800); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 6800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6800); }
     }
 }

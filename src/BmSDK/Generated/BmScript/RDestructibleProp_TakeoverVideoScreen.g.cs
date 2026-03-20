@@ -71,18 +71,18 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// <summary>
     /// ObjectProperty: prevMaterial
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT prevMaterial
+    public unsafe BmSDK.Engine.MaterialInterface prevMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 
     /// <summary>
     /// ObjectProperty: TextureToRevertTo
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TextureToRevertTo
+    public unsafe BmSDK.Engine.Texture TextureToRevertTo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 1732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
     }
 
@@ -100,8 +100,8 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// </summary>
     public unsafe bool bTakeoverInProgress
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// </summary>
     public unsafe bool bCanBeTakenOverByRiddler
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestr
     /// </summary>
     public unsafe bool bCanBeTakenOverByScarecrow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1744); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1744); }
     }
 }

@@ -73,8 +73,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bShouldFadeIn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bShouldFadeInSet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bFadeInWhenOffScreen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bFadingOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bFadeOutInstant
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bWaitingToFadeOut
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bFadeWhenNotInTransition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bInSyncWalk
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bAutoFadeIfBatmanTouches
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bDontDeleteOnFade
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bFadeOnCarWarning
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
@@ -172,70 +172,70 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// </summary>
     public unsafe bool bDrawSphere
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4740); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 4740); }
     }
 
     /// <summary>
     /// ObjectProperty: JokerDefine
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JokerDefine
+    public unsafe BmSDK.BmGame.RCharacterDefine JokerDefine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 4744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4744); }
     }
 
     /// <summary>
     /// ObjectProperty: JokerDefineNoApex
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JokerDefineNoApex
+    public unsafe BmSDK.BmGame.RCharacterDefine JokerDefineNoApex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterDefine>(Ptr + 4752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4752); }
     }
 
     /// <summary>
     /// ObjectProperty: SavedWalkNPC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SavedWalkNPC
+    public unsafe BmSDK.BmGame.RBMPawnAI SavedWalkNPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4760); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 4760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4760); }
     }
 
     /// <summary>
     /// ObjectProperty: CombatIncidentalActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CombatIncidentalActor
+    public unsafe BmSDK.Engine.Actor CombatIncidentalActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4768); }
     }
 
     /// <summary>
     /// ObjectProperty: SafeThug
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SafeThug
+    public unsafe BmSDK.Engine.Actor SafeThug
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4776); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 4776); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4776); }
     }
 
     /// <summary>
     /// ObjectProperty: Camera
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Camera
+    public unsafe BmSDK.BmGame.RRiotObjectBase Camera
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4784); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRiotObjectBase>(Ptr + 4784); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4784); }
     }
 
     /// <summary>
     /// ClassProperty: JokerCharacter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JokerCharacter
+    public unsafe BmSDK.Class JokerCharacter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4792); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 4792); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4792); }
     }
 
@@ -269,18 +269,18 @@ public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK
     /// <summary>
     /// ByteProperty: CurrentCombatQuality
     /// </summary>
-    public unsafe byte CurrentCombatQuality
+    public unsafe BmSDK.BmGame.RPawnJokerHallucination.CombatQualityType CurrentCombatQuality
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnJokerHallucination.CombatQualityType>(Ptr + 4828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4828); }
     }
 
     /// <summary>
     /// ByteProperty: InterceptHallucinationType
     /// </summary>
-    public unsafe byte InterceptHallucinationType
+    public unsafe BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination InterceptHallucinationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4829); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnJokerHallucination.TypesOfHallucination>(Ptr + 4829); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4829); }
     }
 

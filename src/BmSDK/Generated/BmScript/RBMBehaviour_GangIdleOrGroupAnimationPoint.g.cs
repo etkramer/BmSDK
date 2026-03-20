@@ -74,8 +74,8 @@ public partial class RBMBehaviour_GangIdleOrGroupAnimationPoint : BmSDK.BmScript
     /// </summary>
     public unsafe bool bStartedPaired
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 940) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 940); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 940); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 940) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 940); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 940); }
     }
 
     /// <summary>

@@ -45,61 +45,61 @@ public partial class RDistributionVectorNotRain : BmSDK.BmGame.RDistributionVect
     /// <summary>
     /// StructProperty: MinInput
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MinInput
+    public unsafe System.Numerics.Vector3 MinInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// StructProperty: MaxInput
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MaxInput
+    public unsafe System.Numerics.Vector3 MaxInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
     /// StructProperty: MinOutput
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MinOutput
+    public unsafe System.Numerics.Vector3 MinOutput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
     /// StructProperty: MaxOutput
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MaxOutput
+    public unsafe System.Numerics.Vector3 MaxOutput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// ByteProperty: ParamModes
     /// </summary>
-    public unsafe byte ParamModes_0
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
     /// <summary>
     /// ByteProperty: ParamModes
     /// </summary>
-    public unsafe byte ParamModes_1
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 189); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 189); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 189); }
     }
     /// <summary>
     /// ByteProperty: ParamModes
     /// </summary>
-    public unsafe byte ParamModes_2
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 190); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 190); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 190); }
     }
 }

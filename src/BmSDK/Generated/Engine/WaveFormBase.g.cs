@@ -36,9 +36,9 @@ public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: TheWaveForm
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheWaveForm
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform TheWaveForm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

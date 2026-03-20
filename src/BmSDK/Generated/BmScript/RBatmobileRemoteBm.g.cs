@@ -71,90 +71,90 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// <summary>
     /// ObjectProperty: RiotSuppressorBatmobile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RiotSuppressorBatmobile
+    public unsafe BmSDK.BmGame.RVehicleBatmobileBase RiotSuppressorBatmobile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBatmobileBase>(Ptr + 2328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2328); }
     }
 
     /// <summary>
     /// ObjectProperty: CallingVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CallingVehicle
+    public unsafe BmSDK.BmGame.RVehicleBatmobileBase CallingVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBatmobileBase>(Ptr + 2336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2336); }
     }
 
     /// <summary>
     /// ObjectProperty: NpcBatmobileTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NpcBatmobileTarget
+    public unsafe BmSDK.BmGame.RVehicleNPCBatmobile NpcBatmobileTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPCBatmobile>(Ptr + 2344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2344); }
     }
 
     /// <summary>
     /// ObjectProperty: FireSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireSound
+    public unsafe BmSDK.Engine.AkEvent FireSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2352); }
     }
 
     /// <summary>
     /// ObjectProperty: CancelSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CancelSound
+    public unsafe BmSDK.Engine.AkEvent CancelSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2360); }
     }
 
     /// <summary>
     /// ObjectProperty: CancelSound2
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CancelSound2
+    public unsafe BmSDK.Engine.AkEvent CancelSound2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2368); }
     }
 
     /// <summary>
     /// ObjectProperty: CallSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CallSound
+    public unsafe BmSDK.Engine.AkEvent CallSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2376); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentRiotSuppressorTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentRiotSuppressorTarget
+    public unsafe BmSDK.Engine.Actor CurrentRiotSuppressorTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 2384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2384); }
     }
 
     /// <summary>
     /// ObjectProperty: RemoteControlBatmobileMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RemoteControlBatmobileMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig RemoteControlBatmobileMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2392); }
     }
 
     /// <summary>
     /// ObjectProperty: ReachedRemoteHardLimitThought
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ReachedRemoteHardLimitThought
+    public unsafe BmSDK.Engine.AkDialogueSpeech ReachedRemoteHardLimitThought
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 2400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2400); }
     }
 
@@ -172,8 +172,8 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// </summary>
     public unsafe bool ScreenOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2412); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.I
     /// </summary>
     public unsafe bool bRelativeAiming
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2412); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2412); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2412); }
     }
 
     /// <summary>

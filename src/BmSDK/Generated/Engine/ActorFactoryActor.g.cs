@@ -36,9 +36,9 @@ public partial class ActorFactoryActor : BmSDK.Engine.ActorFactory, BmSDK.IGameO
     /// <summary>
     /// ClassProperty: ActorClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActorClass
+    public unsafe BmSDK.Class ActorClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

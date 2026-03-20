@@ -71,9 +71,9 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Search_Su
     /// <summary>
     /// ObjectProperty: PredatorPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PredatorPoint
+    public unsafe BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPredatorSpecialMovePointBase>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

@@ -81,9 +81,9 @@ public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, B
     /// <summary>
     /// ArrayProperty: FriendsList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> FriendsList
+    public unsafe BmSDK.TArray<BmSDK.Engine.FacebookIntegration.FFacebookFriend> FriendsList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.FacebookIntegration.FFacebookFriend>>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 

@@ -36,9 +36,9 @@ public partial class DistributionFloatConstantCurve : BmSDK.DistributionFloat, B
     /// <summary>
     /// StructProperty: ConstantCurve
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstantCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat ConstantCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

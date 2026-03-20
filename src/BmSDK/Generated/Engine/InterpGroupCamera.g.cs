@@ -36,18 +36,18 @@ public partial class InterpGroupCamera : BmSDK.Engine.InterpGroup, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: CameraAnimInst
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraAnimInst
+    public unsafe BmSDK.Engine.CameraAnim CameraAnimInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnim>(Ptr + 164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
     /// StructProperty: Target
     /// </summary>
-    public unsafe BmSDK.Engine.InterpGroup.InterpTracks Target
+    public unsafe BmSDK.Engine.InterpGroupCamera.FCameraPreviewInfo Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpGroup.InterpTracks>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpGroupCamera.FCameraPreviewInfo>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

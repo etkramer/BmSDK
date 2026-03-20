@@ -36,9 +36,9 @@ public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: MorphLODModels
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MorphLODModels
+    public unsafe BmSDK.TArray<int> MorphLODModels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

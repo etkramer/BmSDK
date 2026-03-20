@@ -36,9 +36,9 @@ public partial class InterpTrackInstVisibility : BmSDK.Engine.InterpTrackInst, B
     /// <summary>
     /// ByteProperty: Action
     /// </summary>
-    public unsafe byte Action
+    public unsafe BmSDK.Engine.InterpTrackVisibility.EVisibilityTrackAction Action
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackVisibility.EVisibilityTrackAction>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
@@ -56,7 +56,7 @@ public partial class InterpTrackInstVisibility : BmSDK.Engine.InterpTrackInst, B
     /// </summary>
     public unsafe bool SavedActorHidden
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 }

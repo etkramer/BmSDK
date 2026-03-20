@@ -152,477 +152,477 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: GrappleFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFireGlideMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireGlideMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireGlideMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2112); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFireRunningMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireRunningMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireRunningMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFireFallingMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireFallingMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireFallingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2128); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2128); }
     }
 
     /// <summary>
     /// ObjectProperty: FailedGrappleFireMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FailedGrappleFireMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig FailedGrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
     }
 
     /// <summary>
     /// ObjectProperty: VantagePointGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VantagePointGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig VantagePointGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2144); }
     }
 
     /// <summary>
     /// ObjectProperty: RailingFireGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RailingFireGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig RailingFireGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2152); }
     }
 
     /// <summary>
     /// ObjectProperty: ShimmyFireGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ShimmyFireGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ShimmyFireGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2160); }
     }
 
     /// <summary>
     /// ObjectProperty: ChainFireGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChainFireGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ChainFireGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2168); }
     }
 
     /// <summary>
     /// ObjectProperty: ChainFireBeamGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChainFireBeamGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig ChainFireBeamGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFireWithBackFlipMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireWithBackFlipMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireWithBackFlipMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2184); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFireTakedownEscape
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireTakedownEscape
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireTakedownEscape
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2192); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndDangleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndDangleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndDangleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndShimmyMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndShimmyMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndShimmyMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
     }
 
     /// <summary>
     /// ObjectProperty: CustomGrappleEndDangleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CustomGrappleEndDangleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig CustomGrappleEndDangleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2216); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndClimbFlat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndClimbFlat
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndClimbFlat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2224); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndClimbRailing
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndClimbRailing
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndClimbRailing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndClimbOverWall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndClimbOverWall
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndClimbOverWall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndRunFlat
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndRunFlat
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndRunFlat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2248); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndRunFlatNoRoll
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndRunFlatNoRoll
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndRunFlatNoRoll
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2256); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2256); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndRunRailing
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndRunRailing
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndRunRailing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2264); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2264); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndRunOverWall
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndRunOverWall
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndRunOverWall
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2272); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndFly
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndFly
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndFly
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndFlyRail
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndFlyRail
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndFlyRail
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2288); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2288); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleBoostToDive
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleBoostToDive
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleBoostToDive
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2296); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndFly180
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndFly180
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndFly180
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2304); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2304); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleEndOnRailing
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleEndOnRailing
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleEndOnRailing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2312); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2312); }
     }
 
     /// <summary>
     /// ObjectProperty: SwingToShimmyMoves
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingToShimmyMoves
+    public unsafe BmSDK.BmGame.RSpecialMoveController SwingToShimmyMoves
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveController>(Ptr + 2320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
     }
 
     /// <summary>
     /// ObjectProperty: SwingToStandMoves
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingToStandMoves
+    public unsafe BmSDK.BmGame.RSpecialMoveController SwingToStandMoves
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveController>(Ptr + 2328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2328); }
     }
 
     /// <summary>
     /// ObjectProperty: DiveSwingMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DiveSwingMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig DiveSwingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2336); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleFromChuteMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFromChuteMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFromChuteMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2344); }
     }
 
     /// <summary>
     /// ObjectProperty: Projectile
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Projectile
+    public unsafe BmSDK.BmGame.RProjectileWithRope Projectile
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectileWithRope>(Ptr + 2352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2352); }
     }
 
     /// <summary>
     /// ObjectProperty: LastHighlightedChute
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastHighlightedChute
+    public unsafe BmSDK.BmGame.RSwingChutePointBase LastHighlightedChute
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwingChutePointBase>(Ptr + 2360); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2360); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentHidePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentHidePoint
+    public unsafe BmSDK.BmGame.RHidePoint CurrentHidePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 2368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2368); }
     }
 
     /// <summary>
     /// ObjectProperty: ActiveHidePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActiveHidePoint
+    public unsafe BmSDK.BmGame.RHidePoint ActiveHidePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 2376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2376); }
     }
 
     /// <summary>
     /// ObjectProperty: QueuedHidePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT QueuedHidePoint
+    public unsafe BmSDK.BmGame.RHidePoint QueuedHidePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2384); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 2384); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2384); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleBoostSoundParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleBoostSoundParam
+    public unsafe BmSDK.Engine.AkParameterName GrappleBoostSoundParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 2392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2392); }
     }
 
     /// <summary>
     /// ObjectProperty: SucceedBoostSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SucceedBoostSound
+    public unsafe BmSDK.Engine.AkEvent SucceedBoostSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2400); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2400); }
     }
 
     /// <summary>
     /// ObjectProperty: FailedBoostSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FailedBoostSound
+    public unsafe BmSDK.Engine.AkEvent FailedBoostSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
     }
 
     /// <summary>
     /// ObjectProperty: ImpactSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ImpactSound
+    public unsafe BmSDK.Engine.AkEvent ImpactSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2416); }
     }
 
     /// <summary>
     /// ObjectProperty: FireGrappleSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireGrappleSound
+    public unsafe BmSDK.Engine.AkEvent FireGrappleSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
     }
 
     /// <summary>
     /// ObjectProperty: GrappleLoopSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleLoopSound
+    public unsafe BmSDK.Engine.AkEvent GrappleLoopSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
     }
 
     /// <summary>
     /// ObjectProperty: PassiveImpactSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PassiveImpactSound
+    public unsafe BmSDK.Engine.AkEvent PassiveImpactSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
     }
 
     /// <summary>
     /// ObjectProperty: PassiveFireGrappleSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PassiveFireGrappleSound
+    public unsafe BmSDK.Engine.AkEvent PassiveFireGrappleSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
     }
 
     /// <summary>
     /// ObjectProperty: PassiveGrappleLoopSound
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PassiveGrappleLoopSound
+    public unsafe BmSDK.Engine.AkEvent PassiveGrappleLoopSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2456); }
     }
 
     /// <summary>
     /// ObjectProperty: PC
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
+    public unsafe BmSDK.BmGame.RPlayerController PC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 2464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
     }
 
     /// <summary>
     /// ObjectProperty: LastHidePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastHidePoint
+    public unsafe BmSDK.BmGame.RHidePoint LastHidePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 2472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2472); }
     }
 
     /// <summary>
     /// ObjectProperty: LastSwingPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastSwingPoint
+    public unsafe BmSDK.BmGame.RHidePoint LastSwingPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 2480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentDelayedChuteTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentDelayedChuteTarget
+    public unsafe BmSDK.BmGame.RSwingChutePointBase CurrentDelayedChuteTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSwingChutePointBase>(Ptr + 2488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2488); }
     }
 
     /// <summary>
     /// ObjectProperty: UseSpecialOctTree
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UseSpecialOctTree
+    public unsafe BmSDK.Engine.SequenceAction UseSpecialOctTree
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SequenceAction>(Ptr + 2496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2496); }
     }
 
     /// <summary>
     /// ObjectProperty: WaterRescueGrappleMove
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WaterRescueGrappleMove
+    public unsafe BmSDK.BmGame.RSpecialMoveConfig WaterRescueGrappleMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 2504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2504); }
     }
 
     /// <summary>
     /// ClassProperty: GrappleProjectileClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleProjectileClass
+    public unsafe BmSDK.Class GrappleProjectileClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 2512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2512); }
     }
 
     /// <summary>
     /// ComponentProperty: GrappleRope
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleRope
+    public unsafe BmSDK.BmGame.RSimpleRopeComponent GrappleRope
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 2520); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2520); }
     }
 
@@ -721,8 +721,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bCantShimmyOnNextHang
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -730,8 +730,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bCantAutoPopUpOnNextHang
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -739,8 +739,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool CurrentSwingGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -748,8 +748,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bFadingOutChuteHighlight
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -757,8 +757,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bTargettingCeiling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -766,8 +766,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool ActiveSwingGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -775,8 +775,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool QueuedSwingGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -784,8 +784,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bGrappleQueued
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -793,8 +793,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -802,8 +802,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bPreFire
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -811,8 +811,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bShowingGrappleIcon
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -820,8 +820,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bGrapplingFromChute
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 2048) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -829,8 +829,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bRenderGrappleDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 4096) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -838,8 +838,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bUseReverseCameraForSwinging
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 8192) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -847,8 +847,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDoingGrappleSpaceTest
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 16384) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -856,8 +856,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bVantagePointCheckFrame
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 32768) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -865,8 +865,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bRunGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 65536) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -874,8 +874,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bEdgeSwingGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 131072) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -883,8 +883,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bCanSwingToPoints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 262144) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -892,8 +892,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bGrappleSelectionDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 524288) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -901,8 +901,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bAllowAimingWhenFalling
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 1048576) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -910,8 +910,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bCatwomanGrappleGun
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 2097152) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 2097152) : (currentMask & ~2097152); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -919,8 +919,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bUnusableGrappleTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 4194304) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 4194304) : (currentMask & ~4194304); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -928,8 +928,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDoingGlideStick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 8388608) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 8388608) : (currentMask & ~8388608); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -937,8 +937,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bHarleyGrappleGun
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 16777216) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 16777216) : (currentMask & ~16777216); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -946,8 +946,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bUseGrappleOctree
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 33554432) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 33554432) : (currentMask & ~33554432); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -955,8 +955,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool LastSwingGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 67108864) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 67108864) : (currentMask & ~67108864); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -964,8 +964,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDebugTreatAsOverworld
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 134217728) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -973,8 +973,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bOverrideGrappleRendering
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 268435456) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -982,8 +982,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bWallStick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 536870912) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -991,8 +991,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDebugGrappleChecks
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -1000,8 +1000,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bDebugCeilingClimbPoints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572) & -2147483648) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2572); var newMask = value ? (currentMask | -2147483648) : (currentMask & ~-2147483648); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2572); }
     }
 
     /// <summary>
@@ -1009,8 +1009,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool StateOverridesTick
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
     }
 
     /// <summary>
@@ -1018,8 +1018,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bGrappleGunDisabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
     }
 
     /// <summary>
@@ -1027,8 +1027,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bForcedGrapple
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
     }
 
     /// <summary>
@@ -1036,8 +1036,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bGrapplingToWindow
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
     }
 
     /// <summary>
@@ -1045,8 +1045,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     public unsafe bool bCheckFearGas
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2576); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2576); }
     }
 
     /// <summary>
@@ -1070,9 +1070,9 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentTarget
+    public unsafe System.Numerics.Vector3 CurrentTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2588); }
     }
 
@@ -1088,99 +1088,99 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: GrapplePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrapplePoint
+    public unsafe System.IntPtr GrapplePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 2604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2604); }
     }
 
     /// <summary>
     /// StructProperty: CeilingTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingTarget
+    public unsafe System.Numerics.Vector3 CeilingTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2612); }
     }
 
     /// <summary>
     /// StructProperty: ActiveGrappleTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActiveGrappleTarget
+    public unsafe System.Numerics.Vector3 ActiveGrappleTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2624); }
     }
 
     /// <summary>
     /// StructProperty: ActiveOutwardNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActiveOutwardNormal
+    public unsafe System.Numerics.Vector3 ActiveOutwardNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2636); }
     }
 
     /// <summary>
     /// StructProperty: ActiveGrapplePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ActiveGrapplePoint
+    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo ActiveGrapplePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
     }
 
     /// <summary>
     /// StructProperty: QueuedGrappleTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT QueuedGrappleTarget
+    public unsafe System.Numerics.Vector3 QueuedGrappleTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2728); }
     }
 
     /// <summary>
     /// StructProperty: QueuedOutwardNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT QueuedOutwardNormal
+    public unsafe System.Numerics.Vector3 QueuedOutwardNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2740); }
     }
 
     /// <summary>
     /// StructProperty: QueuedGrapplePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT QueuedGrapplePoint
+    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo QueuedGrapplePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2752); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2752); }
     }
 
     /// <summary>
     /// StructProperty: CurrentTarget2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentTarget2
+    public unsafe System.Numerics.Vector3 CurrentTarget2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2832); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2832); }
     }
 
     /// <summary>
     /// StructProperty: GrapplePoint2
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrapplePoint2
+    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo GrapplePoint2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2844); }
     }
 
     /// <summary>
     /// StructProperty: HideLinkSwingTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HideLinkSwingTarget
+    public unsafe System.Numerics.Vector3 HideLinkSwingTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2924); }
     }
 
@@ -1223,27 +1223,27 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// ArrayProperty: GrappleTrailBones
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>> GrappleTrailBones
+    public unsafe BmSDK.TArray<BmSDK.FName> GrappleTrailBones
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>(Ptr + 2952); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2952); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2952); }
     }
 
     /// <summary>
     /// ArrayProperty: GrappleTrailMirrorBones
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>> GrappleTrailMirrorBones
+    public unsafe BmSDK.TArray<BmSDK.FName> GrappleTrailMirrorBones
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>(Ptr + 2968); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2968); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2968); }
     }
 
     /// <summary>
     /// ArrayProperty: GrappleTrail
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints> GrappleTrail
+    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent> GrappleTrail
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>(Ptr + 2984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleSystemComponent>>(Ptr + 2984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2984); }
     }
 
@@ -1304,18 +1304,18 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: AimedHidePoints
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrappleGun.EscapeHidePoints AimedHidePoints
+    public unsafe BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints AimedHidePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>(Ptr + 3028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3028); }
     }
 
     /// <summary>
     /// StructProperty: EscapeHidePoints
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrappleGun.CheckedGrapplePoints EscapeHidePoints
+    public unsafe BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints EscapeHidePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.CheckedGrapplePoints>(Ptr + 3048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3048); }
     }
 
@@ -1502,150 +1502,150 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: OffScreenArrowRot
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OffScreenArrowRot
+    public unsafe BmSDK.Rotator OffScreenArrowRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3148); }
     }
 
     /// <summary>
     /// ByteProperty: GrapplePlayerId
     /// </summary>
-    public unsafe byte GrapplePlayerId
+    public unsafe BmSDK.BmGame.RGrapplePoint.ELocalGrapplePlayer GrapplePlayerId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 3160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.ELocalGrapplePlayer>(Ptr + 3160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3160); }
     }
 
     /// <summary>
     /// ByteProperty: LocalPlayerId
     /// </summary>
-    public unsafe byte LocalPlayerId
+    public unsafe BmSDK.BmGame.RGrapplePoint.ELocalGrapplePlayer LocalPlayerId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 3161); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.ELocalGrapplePlayer>(Ptr + 3161); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3161); }
     }
 
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_0
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3164); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_1
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3168); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_2
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3172); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_3
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_4
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3180); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3180); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_5
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3184); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_6
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3188); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_7
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3192); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_8
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3196); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_9
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3200); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_10
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_10
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3204); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_11
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_11
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3208); }
     }
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DebugDrawColor_12
+    public unsafe BmSDK.GameObject.FColor DebugDrawColor_12
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3212); }
     }
 
     /// <summary>
     /// StructProperty: DesiredGrappleIconPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DesiredGrappleIconPos
+    public unsafe System.Numerics.Vector3 DesiredGrappleIconPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3216); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3216); }
     }
 
     /// <summary>
     /// StructProperty: GrappleIconOriginalPos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleIconOriginalPos
+    public unsafe System.Numerics.Vector3 GrappleIconOriginalPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3228); }
     }
 
@@ -1697,130 +1697,130 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_0
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3260); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_1
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3272); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3272); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_2
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3284); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_3
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3296); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_4
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3308); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_5
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3320); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_6
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3332); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3332); }
     }
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWayPoints_7
+    public unsafe System.Numerics.Vector3 GrappleWayPoints_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3344); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3344); }
     }
 
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_0
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3356); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_1
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3368); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_2
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3380); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_3
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3392); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3392); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3392); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_4
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3404); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_5
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3416); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3416); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_6
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3428); }
     }
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleSafePoint_7
+    public unsafe System.Numerics.Vector3 GrappleSafePoint_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3440); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3440); }
     }
 
@@ -1901,18 +1901,18 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: LastClearGrapplePos
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastClearGrapplePos
+    public unsafe System.Numerics.Vector3 LastClearGrapplePos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3488); }
     }
 
     /// <summary>
     /// StructProperty: GrappleWaypointFallBack
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GrappleWaypointFallBack
+    public unsafe System.Numerics.Vector3 GrappleWaypointFallBack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3500); }
     }
 
@@ -1928,18 +1928,18 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: LastGrapplePoint
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastGrapplePoint
+    public unsafe System.IntPtr LastGrapplePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 3516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3516); }
     }
 
     /// <summary>
     /// StructProperty: LastGrapplePointTarget
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastGrapplePointTarget
+    public unsafe System.Numerics.Vector3 LastGrapplePointTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3524); }
     }
 
@@ -2063,18 +2063,18 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// ArrayProperty: CheckedGrapplePoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> CheckedGrapplePoints
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrapplePointContainer> CheckedGrapplePoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 3588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrapplePointContainer>>(Ptr + 3588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3588); }
     }
 
     /// <summary>
     /// StructProperty: CurrentOutwardNormal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentOutwardNormal
+    public unsafe System.Numerics.Vector3 CurrentOutwardNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3604); }
     }
 
@@ -2117,9 +2117,9 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: PlayerPositionCheckOffset
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlayerPositionCheckOffset
+    public unsafe System.Numerics.Vector3 PlayerPositionCheckOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3632); }
     }
 
@@ -2144,9 +2144,9 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// ArrayProperty: GrappleDodgeAnims
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GrappleDodgeAnims
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleDodgeAnim> GrappleDodgeAnims
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 3652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleDodgeAnim>>(Ptr + 3652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3652); }
     }
 }

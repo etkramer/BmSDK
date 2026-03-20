@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioParameterReset : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// ObjectProperty: AudioParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioParameter
+    public unsafe BmSDK.Engine.AkParameterName AudioParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

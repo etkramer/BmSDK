@@ -71,9 +71,9 @@ public partial class RDummyTarget_Dialogue : BmSDK.BmGame.RDummyTarget, BmSDK.IG
     /// <summary>
     /// ComponentProperty: DialogueComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueComponent
+    public unsafe BmSDK.Engine.AkDialogueComponent DialogueComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueComponent>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

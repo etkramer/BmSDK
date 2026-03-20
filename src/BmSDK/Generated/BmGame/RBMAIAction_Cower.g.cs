@@ -71,9 +71,9 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: FleePoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FleePoint
+    public unsafe BmSDK.BmGame.RPredHostageFleePoint FleePoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPredHostageFleePoint>(Ptr + 864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 }

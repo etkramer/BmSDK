@@ -36,9 +36,9 @@ public partial class RClimbLocatorContainer : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// ArrayProperty: Locators
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Locators
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RClimbLocator> Locators
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RClimbLocator>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

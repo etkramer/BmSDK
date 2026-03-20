@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// ObjectProperty: AudioParameter
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioParameter
+    public unsafe BmSDK.Engine.AkParameterName AudioParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -63,9 +63,9 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// ArrayProperty: InterpolationInfo
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> InterpolationInfo
+    public unsafe BmSDK.TArray<BmSDK.AkAudio.SeqAct_AkAudioParameter.FSeqAct_AkAudioParameterInterpolationInfo> InterpolationInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.SeqAct_AkAudioParameter.FSeqAct_AkAudioParameterInterpolationInfo>>(Ptr + 368); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
@@ -81,9 +81,9 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// StructProperty: InterpolationStartTime
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InterpolationStartTime
+    public unsafe double InterpolationStartTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 388); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 388); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 
@@ -96,9 +96,9 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
         /// <summary>
         /// ObjectProperty: InterpolationParameterTarget
         /// </summary>
-        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InterpolationParameterTarget
+        public unsafe BmSDK.Engine.Actor InterpolationParameterTarget
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 

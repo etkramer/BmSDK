@@ -45,9 +45,9 @@ public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.Mat
     /// <summary>
     /// ByteProperty: Channel
     /// </summary>
-    public unsafe byte Channel
+    public unsafe BmSDK.Engine.MaterialExpressionAntialiasedTextureMask.ETextureColorChannel Channel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 320); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionAntialiasedTextureMask.ETextureColorChannel>(Ptr + 320); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 }

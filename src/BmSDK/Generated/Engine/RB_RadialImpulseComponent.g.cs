@@ -36,9 +36,9 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// ByteProperty: ImpulseFalloff
     /// </summary>
-    public unsafe byte ImpulseFalloff
+    public unsafe BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff ImpulseFalloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
@@ -65,8 +65,8 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// </summary>
     public unsafe bool bVelChange
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// </summary>
     public unsafe bool bUseSurfaceAreaApproximation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// </summary>
     public unsafe bool bCauseFracture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// </summary>
     public unsafe bool bCauseApexFracture
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
@@ -101,16 +101,16 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// </summary>
     public unsafe bool bFireThenDettachSelf
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 552); }
     }
 
     /// <summary>
     /// StructProperty: AffectedChannels
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AffectedChannels
+    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer AffectedChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 
@@ -126,18 +126,18 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// ClassProperty: DestructiblesDamageType
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestructiblesDamageType
+    public unsafe BmSDK.Class DestructiblesDamageType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
     }
 
     /// <summary>
     /// ComponentProperty: PreviewSphere
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewSphere
+    public unsafe BmSDK.Engine.DrawSphereComponent PreviewSphere
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 }

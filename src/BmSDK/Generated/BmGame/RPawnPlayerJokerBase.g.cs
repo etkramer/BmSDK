@@ -71,9 +71,9 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: CustomConstraintConfigs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC> CustomConstraintConfigs
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnPlayerJokerBase.FJokerCustomConstraintConfig> CustomConstraintConfigs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>(Ptr + 10032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnPlayerJokerBase.FJokerCustomConstraintConfig>>(Ptr + 10032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10032); }
     }
 
@@ -82,16 +82,16 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
     /// </summary>
     public unsafe bool bFiringNuke
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10048) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10048); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10048); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10048) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10048); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10048); }
     }
 
     /// <summary>
     /// ObjectProperty: UpdateAction
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UpdateAction
+    public unsafe BmSDK.BmGame.RSeqAct_UpdateJokerNukeBase UpdateAction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_UpdateJokerNukeBase>(Ptr + 10052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10052); }
     }
 
@@ -113,9 +113,9 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
         /// <summary>
         /// StructProperty: BonePos1
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonePos1
+        public unsafe System.Numerics.Vector3 BonePos1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
@@ -131,9 +131,9 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
         /// <summary>
         /// StructProperty: BonePos2
         /// </summary>
-        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BonePos2
+        public unsafe System.Numerics.Vector3 BonePos2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 

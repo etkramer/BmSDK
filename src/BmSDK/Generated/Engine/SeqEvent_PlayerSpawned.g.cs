@@ -36,9 +36,9 @@ public partial class SeqEvent_PlayerSpawned : BmSDK.Engine.SequenceEvent, BmSDK.
     /// <summary>
     /// ObjectProperty: SpawnPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnPoint
+    public unsafe BmSDK.GameObject SpawnPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

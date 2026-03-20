@@ -71,36 +71,36 @@ public partial class RStealthTakedownStage_ChainTakedown_FearFromAbove : BmSDK.B
     /// <summary>
     /// ByteProperty: TakedownFeatureType
     /// </summary>
-    public unsafe byte TakedownFeatureType
+    public unsafe BmSDK.BmGame.RPawnPlayer.ETakedownFeature_Type TakedownFeatureType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1664); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.ETakedownFeature_Type>(Ptr + 1664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
     }
 
     /// <summary>
     /// ByteProperty: OnSpotNextStage
     /// </summary>
-    public unsafe byte OnSpotNextStage
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages OnSpotNextStage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1665); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1665); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1665); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerAnimationsByType
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>> PlayerAnimationsByType
+    public unsafe BmSDK.TArray<BmSDK.FName> PlayerAnimationsByType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>>(Ptr + 1668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
     }
 
     /// <summary>
     /// ArrayProperty: PlayerOnSpotAnimationsByType
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>> PlayerOnSpotAnimationsByType
+    public unsafe BmSDK.TArray<BmSDK.FName> PlayerOnSpotAnimationsByType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RStealthTakeDownStage.VictimTransitions>>>(Ptr + 1684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 1684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
     }
 

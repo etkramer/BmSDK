@@ -36,9 +36,9 @@ public partial class RPollenMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: PollenSceneInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PollenSceneInfo
+    public unsafe System.IntPtr PollenSceneInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
@@ -81,9 +81,9 @@ public partial class RPollenMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: PollenGroundColor
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PollenGroundColor
+    public unsafe BmSDK.GameObject.FLinearColor PollenGroundColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

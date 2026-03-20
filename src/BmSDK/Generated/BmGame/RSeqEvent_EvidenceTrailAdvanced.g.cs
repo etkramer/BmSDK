@@ -36,9 +36,9 @@ public partial class RSeqEvent_EvidenceTrailAdvanced : BmSDK.Engine.SequenceEven
     /// <summary>
     /// ObjectProperty: EvidenceInfo
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EvidenceInfo
+    public unsafe BmSDK.BmGame.REvidence EvidenceInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REvidence>(Ptr + 380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

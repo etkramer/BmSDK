@@ -71,81 +71,81 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// ObjectProperty: LockOnTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LockOnTarget
+    public unsafe BmSDK.BmGame.RVehicleNPC LockOnTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 2468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2468); }
     }
 
     /// <summary>
     /// ObjectProperty: LastLockTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastLockTarget
+    public unsafe BmSDK.BmGame.RVehicleNPC LastLockTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 2476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2476); }
     }
 
     /// <summary>
     /// ObjectProperty: TagTarget
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TagTarget
+    public unsafe BmSDK.BmGame.RVehicle TagTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle>(Ptr + 2484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2484); }
     }
 
     /// <summary>
     /// ObjectProperty: ProjectileForCarsArchetype
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileForCarsArchetype
+    public unsafe BmSDK.BmGame.RProjectile ProjectileForCarsArchetype
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectile>(Ptr + 2492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2492); }
     }
 
     /// <summary>
     /// ObjectProperty: ExplosionEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExplosionEvent
+    public unsafe BmSDK.Engine.AkEvent ExplosionEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2500); }
     }
 
     /// <summary>
     /// ObjectProperty: UntagWarningEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UntagWarningEvent
+    public unsafe BmSDK.Engine.AkEvent UntagWarningEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 2508); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2508); }
     }
 
     /// <summary>
     /// ObjectProperty: MissileAnimNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MissileAnimNode
+    public unsafe BmSDK.Engine.AnimNodeSequence MissileAnimNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 2516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
     }
 
     /// <summary>
     /// ObjectProperty: PursuitMissileBlendNode
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PursuitMissileBlendNode
+    public unsafe BmSDK.Engine.AnimNodeBlend PursuitMissileBlendNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeBlend>(Ptr + 2524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2524); }
     }
 
     /// <summary>
     /// ObjectProperty: CantFireOnPenguinVanDialogue
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CantFireOnPenguinVanDialogue
+    public unsafe BmSDK.Engine.AkDialogueSpeech CantFireOnPenguinVanDialogue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 2532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2532); }
     }
 
@@ -224,9 +224,9 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// ArrayProperty: MissileLaunchSockets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> MissileLaunchSockets
+    public unsafe BmSDK.TArray<BmSDK.FName> MissileLaunchSockets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 2572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 2572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2572); }
     }
 
@@ -260,9 +260,9 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// ByteProperty: MissileAnimState
     /// </summary>
-    public unsafe byte MissileAnimState
+    public unsafe BmSDK.BmGame.RBatmobileEMPMissile.EMissileAnimState MissileAnimState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2605); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatmobileEMPMissile.EMissileAnimState>(Ptr + 2605); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2605); }
     }
 
@@ -271,8 +271,8 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// </summary>
     public unsafe bool bTryingToAcquireNewTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2608) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2608); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2608); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2608) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2608); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2608); }
     }
 
     /// <summary>
@@ -377,9 +377,9 @@ public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLaun
     /// <summary>
     /// StructProperty: TargetScreenLoc
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TargetScreenLoc
+    public unsafe System.Numerics.Vector3 TargetScreenLoc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2656); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2656); }
     }
 

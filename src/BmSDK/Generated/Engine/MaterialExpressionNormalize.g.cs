@@ -36,9 +36,9 @@ public partial class MaterialExpressionNormalize : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: VectorInput
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc VectorInput
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput VectorInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

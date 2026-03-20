@@ -36,9 +36,9 @@ public partial class RBarkConvoAction_AKConversation : BmSDK.BmGame.RBarkConvoAc
     /// <summary>
     /// ObjectProperty: Conversation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Conversation
+    public unsafe BmSDK.Engine.AkDialogueConversationDynamic Conversation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueConversationDynamic>(Ptr + 184); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
@@ -54,9 +54,9 @@ public partial class RBarkConvoAction_AKConversation : BmSDK.BmGame.RBarkConvoAc
     /// <summary>
     /// ArrayProperty: PawnRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> PawnRefList
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkConvoPawnRef> PawnRefList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 196); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkConvoPawnRef>>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

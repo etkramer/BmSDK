@@ -36,9 +36,9 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PathBlockers
     /// </summary>
-    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT PathBlockers
+    public unsafe BmSDK.TArray<BmSDK.GameObject> PathBlockers
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

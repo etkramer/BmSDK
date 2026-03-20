@@ -36,9 +36,9 @@ public partial class ParticleModuleCollisionActor : BmSDK.Engine.ParticleModuleC
     /// <summary>
     /// ArrayProperty: ActorsToCollideWith
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModuleCollision.DampingFactorRotation> ActorsToCollideWith
+    public unsafe BmSDK.TArray<BmSDK.FName> ActorsToCollideWith
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModuleCollision.DampingFactorRotation>>(Ptr + 376); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
@@ -47,7 +47,7 @@ public partial class ParticleModuleCollisionActor : BmSDK.Engine.ParticleModuleC
     /// </summary>
     public unsafe bool bCheckPawnCollisions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 392); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 392); }
     }
 }

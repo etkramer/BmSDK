@@ -36,9 +36,9 @@ public partial class AkActionGlobal_DeathMusicControl : BmSDK.Engine.AkActionGlo
     /// <summary>
     /// ObjectProperty: DeathState
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeathState
+    public unsafe BmSDK.Engine.AkStateName DeathState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 

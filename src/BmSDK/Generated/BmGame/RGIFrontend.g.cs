@@ -71,9 +71,9 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: WBIDOverlayManager
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WBIDOverlayManager
+    public unsafe BmSDK.BmGame.MWBIDOverlayManager WBIDOverlayManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager>(Ptr + 4544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4544); }
     }
 

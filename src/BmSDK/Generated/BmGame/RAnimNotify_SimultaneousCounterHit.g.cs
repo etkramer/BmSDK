@@ -36,9 +36,9 @@ public partial class RAnimNotify_SimultaneousCounterHit : BmSDK.Engine.AnimNotif
     /// <summary>
     /// StructProperty: SimultaneousCounterInfo
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SimultaneousCounterInfo
+    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FSimultaneousCounterInfo SimultaneousCounterInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FSimultaneousCounterInfo>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

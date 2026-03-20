@@ -71,9 +71,9 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CinematicOverlay
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> CinematicOverlay
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RHUDInterface> CinematicOverlay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHUDInterface>>(Ptr + 1476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
     }
 

@@ -89,9 +89,9 @@ public partial class RStealthTakeDownStage_CornerGrab : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// ByteProperty: NextStageUnaware
     /// </summary>
-    public unsafe byte NextStageUnaware
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages NextStageUnaware
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
     }
 }

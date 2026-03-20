@@ -36,9 +36,9 @@ public partial class RSeqAct_SwitchDate : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: Dates
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Dates
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchDate.FDateGroupDef> Dates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchDate.FDateGroupDef>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
@@ -78,9 +78,9 @@ public partial class RSeqAct_SwitchDate : BmSDK.Engine.SequenceAction, BmSDK.IGa
         /// <summary>
         /// ArrayProperty: ValidDates
         /// </summary>
-        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ValidDates
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchDate.FDateDef> ValidDates
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchDate.FDateDef>>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
@@ -103,9 +103,9 @@ public partial class RSeqAct_SwitchDate : BmSDK.Engine.SequenceAction, BmSDK.IGa
         /// <summary>
         /// ByteProperty: Month
         /// </summary>
-        public unsafe byte Month
+        public unsafe BmSDK.BmGame.RSeqAct_SwitchDate.EMonth Month
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SwitchDate.EMonth>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 

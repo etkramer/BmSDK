@@ -36,27 +36,27 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneShadows
+    public unsafe BmSDK.GameObject.FLinearColor SceneShadows
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: SceneHighLights
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneHighLights
+    public unsafe BmSDK.GameObject.FLinearColor SceneHighLights
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
     /// StructProperty: SceneMidTones
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneMidTones
+    public unsafe BmSDK.GameObject.FLinearColor SceneMidTones
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
@@ -72,9 +72,9 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// StructProperty: SceneColorize
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneColorize
+    public unsafe System.Numerics.Vector3 SceneColorize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
@@ -99,9 +99,9 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// ByteProperty: PostProcessAAType
     /// </summary>
-    public unsafe byte PostProcessAAType
+    public unsafe BmSDK.Engine.RockOn.EPostProcessAAType PostProcessAAType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RockOn.EPostProcessAAType>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 }

@@ -36,18 +36,18 @@ public partial class MaterialExpressionQualitySwitch : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: High
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionQualitySwitch.Low High
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput High
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionQualitySwitch.Low>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Low
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Low
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Low
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

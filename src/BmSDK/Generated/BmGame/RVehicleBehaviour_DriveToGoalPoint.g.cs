@@ -36,9 +36,9 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// ObjectProperty: GoalActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GoalActor
+    public unsafe BmSDK.Engine.Actor GoalActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
@@ -65,8 +65,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DriveErratically
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool TankTurnOnSpot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DriveOnCorrectSide
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool TreatAsRunawayBehaviour
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool PushBumpedCars
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool PushBumpedBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool DisallowUturnAtStart
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool ReversingForBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// </summary>
     public unsafe bool AllowNoGoalActor
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 624); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 624); }
     }
 
     /// <summary>
@@ -189,9 +189,9 @@ public partial class RVehicleBehaviour_DriveToGoalPoint : BmSDK.BmGame.RVehicleB
     /// <summary>
     /// StructProperty: DestLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DestLocation
+    public unsafe System.Numerics.Vector3 DestLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
 }

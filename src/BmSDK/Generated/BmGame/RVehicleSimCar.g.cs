@@ -36,18 +36,18 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: TorqueVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleSimCar.EngineRPMCurve TorqueVSpeedCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat TorqueVSpeedCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleSimCar.EngineRPMCurve>(Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
     /// StructProperty: EngineRPMCurve
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleSimCar.SteerSpeedVsSpeedCurve EngineRPMCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat EngineRPMCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleSimCar.SteerSpeedVsSpeedCurve>(Ptr + 280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
@@ -101,8 +101,8 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bForceThrottle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bHasForcedThrottle
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bDriverlessBraking
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bAutoHandbrake
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     public unsafe bool UprightCarWhenOn2Wheels
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
@@ -324,18 +324,18 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SteerSpeedVsSpeedCurve
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleSimCar.DriftSteerSpeedVsSpeedCurve SteerSpeedVsSpeedCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat SteerSpeedVsSpeedCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleSimCar.DriftSteerSpeedVsSpeedCurve>(Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 
     /// <summary>
     /// StructProperty: DriftSteerSpeedVsSpeedCurve
     /// </summary>
-    public unsafe BmSDK.Engine.SVehicleSimCar.MaxSteerAngleCurve DriftSteerSpeedVsSpeedCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat DriftSteerSpeedVsSpeedCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SVehicleSimCar.MaxSteerAngleCurve>(Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 

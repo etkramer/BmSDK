@@ -36,18 +36,18 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ByteProperty: SideStory
     /// </summary>
-    public unsafe byte SideStory
+    public unsafe BmSDK.Engine.Actor.ESideStory SideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.ESideStory>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: SubChapter
     /// </summary>
-    public unsafe byte SubChapter
+    public unsafe BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter SubChapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter>(Ptr + 353); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 

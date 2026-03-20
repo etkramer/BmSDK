@@ -36,9 +36,9 @@ public partial class MaterialExpressionTerrainLayerCoords : BmSDK.Engine.Materia
     /// <summary>
     /// ByteProperty: MappingType
     /// </summary>
-    public unsafe byte MappingType
+    public unsafe BmSDK.Engine.MaterialExpressionTerrainLayerCoords.ETerrainCoordMappingType MappingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTerrainLayerCoords.ETerrainCoordMappingType>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 

@@ -38,8 +38,8 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// </summary>
     public unsafe bool bCloudburstVulnerable
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// </summary>
     public unsafe bool bFindNewSearchTarget
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// </summary>
     public unsafe bool FinalStage
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// </summary>
     public unsafe bool bStartOverchargeChase
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
     }
 
     /// <summary>
@@ -74,25 +74,25 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// </summary>
     public unsafe bool bAddedTunnelVolumesToRestrictions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1008); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1008); }
     }
 
     /// <summary>
     /// ArrayProperty: SearchPoints
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>>> SearchPoints
+    public unsafe BmSDK.TArray<BmSDK.Engine.Actor> SearchPoints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>>>>(Ptr + 1012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(Ptr + 1012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1012); }
     }
 
     /// <summary>
     /// StructProperty: SearchLocation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SearchLocation
+    public unsafe System.Numerics.Vector3 SearchLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1028); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
 
@@ -126,36 +126,36 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// ArrayProperty: StageScan360Period
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>> StageScan360Period
+    public unsafe BmSDK.TArray<float> StageScan360Period
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>>>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
 
     /// <summary>
     /// ArrayProperty: ChaseTimes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>> ChaseTimes
+    public unsafe BmSDK.TArray<float> ChaseTimes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>>(Ptr + 1068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 1068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
     }
 
     /// <summary>
     /// ArrayProperty: WeakPointOutputLinks
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes> WeakPointOutputLinks
+    public unsafe BmSDK.TArray<int> WeakPointOutputLinks
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>>(Ptr + 1084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1084); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
     }
 
     /// <summary>
     /// StructProperty: ThrottleVsDistCurve
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes ThrottleVsDistCurve
+    public unsafe BmSDK.GameObject.FInterpCurveFloat ThrottleVsDistCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_CommandTankSearch.TunnelVolumes>(Ptr + 1100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
     }
 
@@ -171,9 +171,9 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// ObjectProperty: BossModule
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BossModule
+    public unsafe BmSDK.BmGame.RHudModuleBoss BossModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHudModuleBoss>(Ptr + 1124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
     }
 
@@ -198,9 +198,9 @@ public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicle
     /// <summary>
     /// ArrayProperty: TunnelVolumes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes> TunnelVolumes
+    public unsafe BmSDK.TArray<BmSDK.Engine.Volume> TunnelVolumes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes>>(Ptr + 1140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Volume>>(Ptr + 1140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
     }
 }

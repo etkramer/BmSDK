@@ -71,9 +71,9 @@ public partial class RPhysicalEvidenceTrail : BmSDK.BmGame.RPhysicalEvidenceBase
     /// <summary>
     /// ByteProperty: visible_state
     /// </summary>
-    public unsafe byte visible_state
+    public unsafe BmSDK.BmGame.RForensicsDevice.EvidenceVisibleState visible_state
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RForensicsDevice.EvidenceVisibleState>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 }

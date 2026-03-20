@@ -36,9 +36,9 @@ public partial class RSeqAct_EndPredIdleConfigSpeech : BmSDK.Engine.SequenceActi
     /// <summary>
     /// ObjectProperty: PredVolume
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PredVolume
+    public unsafe BmSDK.BmGame.RPredatorVolume PredVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPredatorVolume>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

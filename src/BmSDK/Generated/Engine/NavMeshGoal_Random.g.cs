@@ -54,9 +54,9 @@ public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator,
     /// <summary>
     /// StructProperty: PartialGoal
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PartialGoal
+    public unsafe System.IntPtr PartialGoal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 120); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

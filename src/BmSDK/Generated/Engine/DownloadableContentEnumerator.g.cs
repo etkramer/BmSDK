@@ -36,9 +36,9 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// ArrayProperty: DLCBundles
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> DLCBundles
+    public unsafe BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineContent> DLCBundles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineContent>>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 

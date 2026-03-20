@@ -36,9 +36,9 @@ public partial class RSeqAct_SetMedicToPrioritiseReviving : BmSDK.Engine.Sequenc
     /// <summary>
     /// ObjectProperty: Medic
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Medic
+    public unsafe BmSDK.BmGame.RPawnVillain Medic
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

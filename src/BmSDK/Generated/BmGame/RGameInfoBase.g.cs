@@ -89,63 +89,63 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SloMoAudioParam
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SloMoAudioParam
+    public unsafe BmSDK.Engine.AkParameterName SloMoAudioParam
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 1540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1540); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrentLoopingAudioEvent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentLoopingAudioEvent
+    public unsafe BmSDK.Engine.AkEvent CurrentLoopingAudioEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1548); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1548); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1548); }
     }
 
     /// <summary>
     /// ObjectProperty: PersistentData
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PersistentData
+    public unsafe BmSDK.BmGame.RPersistentData PersistentData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData>(Ptr + 1556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1556); }
     }
 
     /// <summary>
     /// ObjectProperty: PersistentShared
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PersistentShared
+    public unsafe BmSDK.BmGame.RPersistentShared PersistentShared
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentShared>(Ptr + 1564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
     }
 
     /// <summary>
     /// ObjectProperty: ChallengeManager
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChallengeManager
+    public unsafe BmSDK.BmGame.RChallengeManager ChallengeManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RChallengeManager>(Ptr + 1572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1572); }
     }
 
     /// <summary>
     /// ObjectProperty: SideStoryManager
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SideStoryManager
+    public unsafe BmSDK.BmGame.RSideStoryManager SideStoryManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSideStoryManager>(Ptr + 1580); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1580); }
     }
 
     /// <summary>
     /// ObjectProperty: SlowMoSFX
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SlowMoSFX
+    public unsafe BmSDK.Engine.AkEvent SlowMoSFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 1588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1588); }
     }
 
@@ -154,8 +154,8 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe bool SloMoAudioParamMaxSet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
     }
 
     /// <summary>
@@ -163,8 +163,8 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe bool SloMoAudioParamMinSet
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
     }
 
     /// <summary>
@@ -172,8 +172,8 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bLockGameSpeed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe bool SlowMoSFXPlaying
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
     }
 
     /// <summary>
@@ -190,8 +190,8 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe bool EnableErrorThoughtDetails
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1596); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1596); }
     }
 
     /// <summary>
@@ -206,18 +206,18 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: PersistentMapNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> PersistentMapNames
+    public unsafe BmSDK.TArray<BmSDK.FString> PersistentMapNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 1604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1604); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1604); }
     }
 
     /// <summary>
     /// ArrayProperty: LOD2Levels
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> LOD2Levels
+    public unsafe BmSDK.TArray<BmSDK.FString> LOD2Levels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 1620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1620); }
     }
 
@@ -242,36 +242,36 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CatwomanLevelTagsToNotLoad
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> CatwomanLevelTagsToNotLoad
+    public unsafe BmSDK.TArray<BmSDK.FString> CatwomanLevelTagsToNotLoad
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 1780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1780); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1780); }
     }
 
     /// <summary>
     /// ArrayProperty: PMapsWithLOD2s
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> PMapsWithLOD2s
+    public unsafe BmSDK.TArray<BmSDK.FString> PMapsWithLOD2s
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 1796); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1796); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1796); }
     }
 
     /// <summary>
     /// ArrayProperty: DisablableSideStories
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> DisablableSideStories
+    public unsafe BmSDK.TArray<BmSDK.FString> DisablableSideStories
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1812); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1812); }
     }
 
     /// <summary>
     /// ArrayProperty: DisablableSideStoriesAsChar
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> DisablableSideStoriesAsChar
+    public unsafe BmSDK.TArray<byte> DisablableSideStoriesAsChar
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 1828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
     }
 
@@ -296,27 +296,27 @@ public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: RegisteredThoughtActors
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand>>> RegisteredThoughtActors
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FRegisteredThoughtActor> RegisteredThoughtActors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand>>>>(Ptr + 1864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FRegisteredThoughtActor>>(Ptr + 1864); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1864); }
     }
 
     /// <summary>
     /// ArrayProperty: PendingPersistentThoughts
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand>> PendingPersistentThoughts
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FPendingPersistentThought> PendingPersistentThoughts
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand>>>(Ptr + 1880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FPendingPersistentThought>>(Ptr + 1880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1880); }
     }
 
     /// <summary>
     /// ArrayProperty: DestructiblePropsToStartTicking
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand> DestructiblePropsToStartTicking
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FDeferredSetTickIsDisabled> DestructiblePropsToStartTicking
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameInfo.CauseEventCommand>>(Ptr + 1896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfoBase.FDeferredSetTickIsDisabled>>(Ptr + 1896); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1896); }
     }
 }

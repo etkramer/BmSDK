@@ -36,18 +36,18 @@ public partial class MaterialExpressionDecodeVertexMorph : BmSDK.Engine.Material
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.Desc Distance
+    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Distance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: VertexMorphFormat
     /// </summary>
-    public unsafe byte VertexMorphFormat
+    public unsafe BmSDK.Engine.MaterialExpressionDecodeVertexMorph.EVertMorphFormat VertexMorphFormat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionDecodeVertexMorph.EVertMorphFormat>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

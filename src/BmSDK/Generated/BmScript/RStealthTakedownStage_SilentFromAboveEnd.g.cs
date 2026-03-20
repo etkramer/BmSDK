@@ -82,8 +82,8 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// </summary>
     public unsafe bool bFoundRagdollFreeZone
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1708); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1708); }
     }
 
     /// <summary>
@@ -91,25 +91,25 @@ public partial class RStealthTakedownStage_SilentFromAboveEnd : BmSDK.BmGame.RSt
     /// </summary>
     public unsafe bool bAlreadyGotReferencePosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1708); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1708); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1708); }
     }
 
     /// <summary>
     /// StructProperty: vPreviousReferencePosition
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vPreviousReferencePosition
+    public unsafe System.Numerics.Vector3 vPreviousReferencePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1712); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1712); }
     }
 
     /// <summary>
     /// StructProperty: rPreviousReferenceRotation
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT rPreviousReferenceRotation
+    public unsafe BmSDK.Rotator rPreviousReferenceRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 }

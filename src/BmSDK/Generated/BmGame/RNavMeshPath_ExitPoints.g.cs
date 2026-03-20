@@ -36,9 +36,9 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
     /// <summary>
     /// ObjectProperty: ExitPoint
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExitPoint
+    public unsafe BmSDK.BmGame.RExitPoints ExitPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RExitPoints>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

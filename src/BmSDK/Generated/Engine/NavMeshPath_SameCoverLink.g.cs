@@ -36,9 +36,9 @@ public partial class NavMeshPath_SameCoverLink : BmSDK.Engine.NavMeshPathConstra
     /// <summary>
     /// ObjectProperty: TestLink
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TestLink
+    public unsafe BmSDK.Engine.CoverLink TestLink
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CoverLink>(Ptr + 108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

@@ -90,18 +90,18 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     /// <summary>
     /// StructProperty: CheatVsDistCurveChase
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour_CarChase.CheatVsDistCurveJoinFormation CheatVsDistCurveChase
+    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveChase
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_CarChase.CheatVsDistCurveJoinFormation>(Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 632); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
     /// <summary>
     /// StructProperty: CheatVsDistCurveJoinFormation
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes CheatVsDistCurveJoinFormation
+    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveJoinFormation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes>(Ptr + 652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
     }
 
@@ -126,27 +126,27 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     /// <summary>
     /// ObjectProperty: ProtectVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProtectVehicle
+    public unsafe BmSDK.BmGame.RVehicleNPC ProtectVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// ObjectProperty: ChaseActor
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChaseActor
+    public unsafe BmSDK.Engine.Actor ChaseActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 688); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 688); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
     /// <summary>
     /// ByteProperty: CurChaseState
     /// </summary>
-    public unsafe byte CurChaseState
+    public unsafe BmSDK.BmGame.RVehicleBehaviour_CarChase.CarChaseState CurChaseState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour_CarChase.CarChaseState>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

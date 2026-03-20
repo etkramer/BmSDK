@@ -73,8 +73,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bStartedStraining
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bChanceToSucceed
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -91,8 +91,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bCanCancelTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -100,8 +100,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool TryingToDoQuickTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bAutoTriggerQuickTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bCanTriggerQuickFinish
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 32) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -127,8 +127,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bUseQuickFinishAnimationNotify
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 64) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -136,8 +136,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bFinalVictim
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 128) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -145,8 +145,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool BombDefuse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 256) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -154,8 +154,8 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bPressingStrikeButtonWillPerformFearTakedown
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 512) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
@@ -163,70 +163,70 @@ public partial class RStealthTakedownStage_GrabFromGlide : BmSDK.BmGame.RStealth
     /// </summary>
     public unsafe bool bPerformFearTakedownCheckFromBatmansPosition
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664) & 1024) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1664); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1664); }
     }
 
     /// <summary>
     /// ByteProperty: SuccessTakedownClass
     /// </summary>
-    public unsafe byte SuccessTakedownClass
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages SuccessTakedownClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1668); }
     }
 
     /// <summary>
     /// ByteProperty: SpecialGrateFinish
     /// </summary>
-    public unsafe byte SpecialGrateFinish
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages SpecialGrateFinish
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1669); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1669); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1669); }
     }
 
     /// <summary>
     /// ByteProperty: SpecialLedgeFinish
     /// </summary>
-    public unsafe byte SpecialLedgeFinish
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages SpecialLedgeFinish
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1670); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1670); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1670); }
     }
 
     /// <summary>
     /// ByteProperty: SpecialGrappleFinish
     /// </summary>
-    public unsafe byte SpecialGrappleFinish
+    public unsafe BmSDK.BmGame.RGameInfo.EStealthTakeDownStages SpecialGrappleFinish
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1671); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EStealthTakeDownStages>(Ptr + 1671); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1671); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentButton
     /// </summary>
-    public unsafe byte CurrentButton
+    public unsafe BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton CurrentButton
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInteractInterface.EInteractableItemFaceButton>(Ptr + 1672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
     }
 
     /// <summary>
     /// ClassProperty: AbortTakedownClass
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AbortTakedownClass
+    public unsafe BmSDK.Class AbortTakedownClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1676); }
     }
 
     /// <summary>
     /// ObjectProperty: QuickTakedownHintRumble
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT QuickTakedownHintRumble
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform QuickTakedownHintRumble
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 1684); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
     }
 

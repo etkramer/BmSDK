@@ -36,9 +36,9 @@ public partial class SeqAct_AkCreateMultipoint : BmSDK.AkAudio.SeqAct_AkBase, Bm
     /// <summary>
     /// ArrayProperty: NodeIDs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> NodeIDs
+    public unsafe BmSDK.TArray<int> NodeIDs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 352); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 

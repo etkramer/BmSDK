@@ -71,9 +71,9 @@ public partial class RInstancedStaticMeshActor : BmSDK.Engine.StaticMeshActorBas
     /// <summary>
     /// ArrayProperty: InstancedComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> InstancedComponents
+    public unsafe BmSDK.TArray<BmSDK.Engine.InstancedStaticMeshComponent> InstancedComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InstancedStaticMeshComponent>>(Ptr + 692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 }

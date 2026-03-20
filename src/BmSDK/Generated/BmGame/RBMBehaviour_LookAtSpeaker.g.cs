@@ -36,9 +36,9 @@ public partial class RBMBehaviour_LookAtSpeaker : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// ObjectProperty: Speaker
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Speaker
+    public unsafe BmSDK.BmGame.RPawnVillain Speaker
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 }

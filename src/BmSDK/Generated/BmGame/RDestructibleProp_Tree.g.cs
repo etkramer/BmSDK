@@ -71,18 +71,18 @@ public partial class RDestructibleProp_Tree : BmSDK.BmGame.RDestructibleProp, Bm
     /// <summary>
     /// ComponentProperty: TreeTopCollisionComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TreeTopCollisionComponent
+    public unsafe BmSDK.Engine.RAggGeomCollisionComponent TreeTopCollisionComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAggGeomCollisionComponent>(Ptr + 1724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
     }
 
     /// <summary>
     /// ComponentProperty: TreeTrunkCollisionComponent
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TreeTrunkCollisionComponent
+    public unsafe BmSDK.Engine.RAggGeomCollisionComponent TreeTrunkCollisionComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAggGeomCollisionComponent>(Ptr + 1732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
     }
 }

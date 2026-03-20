@@ -36,27 +36,27 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// <summary>
     /// ObjectProperty: FollowVehicle
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FollowVehicle
+    public unsafe BmSDK.BmGame.RVehicleNPC FollowVehicle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC>(Ptr + 608); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
     /// ObjectProperty: JoinLocation
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JoinLocation
+    public unsafe BmSDK.Engine.Actor JoinLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
     /// <summary>
     /// ObjectProperty: GiveUpBehaviour
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes GiveUpBehaviour
+    public unsafe BmSDK.BmGame.RVehicleBehaviour GiveUpBehaviour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour.BehaviourVolumes>(Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleBehaviour>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
@@ -128,8 +128,8 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// </summary>
     public unsafe bool ConstrainFollowVehicleRouteForFollowers
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// </summary>
     public unsafe bool ReversingForBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -146,8 +146,8 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// </summary>
     public unsafe bool DoingInitialCatchup
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 4) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -155,8 +155,8 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// </summary>
     public unsafe bool GiveUpIfBumpedByBatmobile
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 8) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>
@@ -164,8 +164,8 @@ public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBeha
     /// </summary>
     public unsafe bool GiveUpIfLeaderUturn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660) & 16) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 660); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 660); }
     }
 
     /// <summary>

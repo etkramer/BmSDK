@@ -71,9 +71,9 @@ public partial class RPawnCrowdRagdoll : BmSDK.BmGame.RPawnCrowd, BmSDK.IGameObj
     /// <summary>
     /// ObjectProperty: RagdollPoseConfig
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RagdollPoseConfig
+    public unsafe BmSDK.BmGame.RPoseConfig RagdollPoseConfig
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig>(Ptr + 4640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4640); }
     }
 }

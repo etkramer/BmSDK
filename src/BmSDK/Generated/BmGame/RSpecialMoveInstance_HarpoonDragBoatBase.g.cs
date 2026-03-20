@@ -73,25 +73,25 @@ public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSp
     /// </summary>
     public unsafe bool bSpoolingOutBoat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 972); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 972); }
     }
 
     /// <summary>
     /// ObjectProperty: ConstraintInstance
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveInstance_HarpoonDragBoatBase.ConstraintSetup ConstraintInstance
+    public unsafe BmSDK.Engine.RB_ConstraintInstance ConstraintInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveInstance_HarpoonDragBoatBase.ConstraintSetup>(Ptr + 976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintInstance>(Ptr + 976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 
     /// <summary>
     /// ObjectProperty: ConstraintSetup
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveInstance_HarpoonBase.MyRope ConstraintSetup
+    public unsafe BmSDK.BmGame.RB_ActualDistanceConstraintSetup ConstraintSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveInstance_HarpoonBase.MyRope>(Ptr + 984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RB_ActualDistanceConstraintSetup>(Ptr + 984); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
     }
 }

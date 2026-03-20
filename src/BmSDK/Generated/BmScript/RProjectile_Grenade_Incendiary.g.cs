@@ -80,9 +80,9 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// ArrayProperty: shortestDistToSpawnedCharges
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> shortestDistToSpawnedCharges
+    public unsafe BmSDK.TArray<int> shortestDistToSpawnedCharges
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 1032); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1032); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
     }
 
@@ -91,8 +91,8 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// </summary>
     public unsafe bool bDrawDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1048); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1048); }
     }
 
     /// <summary>
@@ -100,529 +100,529 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// </summary>
     public unsafe bool bTriggeredExplodedCallback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048) & 0) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1048); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1048); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1048); }
     }
 
     /// <summary>
     /// ComponentProperty: SkelMeshComp
     /// </summary>
-    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkelMeshComp
+    public unsafe BmSDK.Engine.SkeletalMeshComponent SkelMeshComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
 
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_0
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1060); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1060); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_1
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_2
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_3
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1348); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_4
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1444); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_5
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1540); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_6
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_7
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1732); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_8
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_8
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1828); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_9
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_9
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1924); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1924); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_10
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_10
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2020); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2020); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_11
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_11
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2116); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_12
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_12
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2212); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2212); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_13
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_13
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2308); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_14
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_14
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2404); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_15
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_15
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2500); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_16
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_16
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2596); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2596); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_17
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_17
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2692); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2692); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_18
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_18
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2788); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2788); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2788); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_19
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_19
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2884); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2884); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2884); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_20
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_20
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2980); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_21
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_21
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3076); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3076); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_22
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_22
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3172); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_23
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_23
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3268); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_24
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_24
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3364); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_25
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_25
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3460); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3460); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_26
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_26
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3556); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_27
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_27
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3652); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_28
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_28
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3748); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_29
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_29
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3844); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3844); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_30
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_30
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 3940); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3940); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3940); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_31
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_31
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4036); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4036); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4036); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_32
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_32
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4132); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_33
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_33
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4228); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_34
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_34
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4324); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4324); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_35
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_35
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4420); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4420); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_36
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_36
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4516); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4516); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_37
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_37
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4612); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4612); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_38
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_38
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4708); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4708); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_39
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_39
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4804); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4804); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4804); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_40
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_40
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4900); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4900); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_41
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_41
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 4996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4996); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4996); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_42
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_42
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5092); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_43
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_43
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5188); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5188); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_44
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_44
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5284); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5284); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_45
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_45
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5380); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5380); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5380); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_46
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_46
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5476); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_47
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_47
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5572); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5572); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_48
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_48
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5668); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5668); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_49
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_49
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5764); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5764); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5764); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_50
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_50
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5860); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5860); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_51
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_51
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 5956); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5956); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_52
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_52
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6052); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_53
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_53
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6148); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_54
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_54
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6244); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6244); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_55
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_55
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6340); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6340); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_56
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_56
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6436); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_57
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_57
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6532); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_58
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_58
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6628); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6628); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_59
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_59
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6724); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_60
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_60
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6820); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6820); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6820); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_61
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_61
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 6916); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6916); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6916); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_62
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_62
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7012); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7012); }
     }
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT chargeInfoList_63
+    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_63
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 7108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7108); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7108); }
     }
 
