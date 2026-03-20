@@ -1,6 +1,7 @@
 using BmSDK;
 using BmSDK.BmScript;
 using BmSDK.Engine;
+using System.Numerics;
 
 [Script]
 public class MinimalScript : Script
@@ -28,11 +29,26 @@ public class MinimalScript : Script
         var playerPawn = (RPawnPlayerBm)Game.GetPlayerPawn(0);
 
         Debug.Log($"Player is at {playerPawn.Location}");
+    }
 
-        playerPawn.SetInXrayMode(true, false);
-        playerPawn.Set1stPerson(true);
+    public override void OnKeyDown(Keys key)
+    {
+        if (key == Keys.Enter)
+        {
+            var console = Game.GetConsole();
+            console.ConsoleCommand("start batentry?Area=Orphan_A1?Players=Playable_Batman");
+        }
+        else if (key == Keys.O)
+        {
+            var playerPawn = (RPawnPlayerBm)Game.GetPlayerPawn(0);
+            var newLocation = playerPawn.Location + new Vector3(0, 0, 200);
+            playerPawn.Location = newLocation;
 
-        // playerPawn.CapeComponent.SetHidden(true);
-        // playerPawn.CapeSkeletalMesh.SetHidden(true);
+            // playerPawn.SetLocation(newLocation);
+            // playerPawn.Move(new Vector3(0, 0, 200));
+
+            // playerPawn.CapeComponent.SetHidden(true);
+            // playerPawn.CapeSkeletalMesh.SetHidden(true);
+        }
     }
 }
