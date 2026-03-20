@@ -7,19 +7,14 @@ public partial class GameObject
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
-    private static readonly TArray<IntPtr> GObjects = new(
-        MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
-    );
+    private static unsafe ref TObjArray GObjects =>
+        ref *(TObjArray*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects).ToPointer();
 
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjectsSlow<T>()
-        where T : GameObject =>
-        GObjects
-            .Where(ptr => ptr != 0)
-            .Select(ptr => MarshalUtil.ToManaged<GameObject>(&ptr))
-            .OfType<T>();
+        where T : GameObject => GObjects.OfType<T>();
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
