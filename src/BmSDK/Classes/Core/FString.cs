@@ -24,7 +24,7 @@ public unsafe struct FString
         }
     }
 
-    public static implicit operator FString(string str) => new(str);
+    public static implicit operator FString(string? str) => str is null ? default : new FString(str);
 
     public override readonly string? ToString()
     {

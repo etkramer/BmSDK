@@ -18,7 +18,7 @@ internal static class GameInfo
 
         // UObject (static)
         public const IntPtr StaticFindObject = 0xF3B7F0;
-        public const IntPtr StaticConstructObject = 0x98BE0;
+        public const IntPtr StaticConstructObject = 0xF470B0;
         public const IntPtr LoadPackage = 0x9FCA0;
 
         // UObject (local)
@@ -40,7 +40,7 @@ internal static class GameInfo
         public const IntPtr NameInit = 0xF37BF0;
 
         // FString (local)
-        public const IntPtr StringCtor = 0x4650;
+        public const IntPtr StringCtor = 0x41D0;
     }
 
     public static class MemberOffsets

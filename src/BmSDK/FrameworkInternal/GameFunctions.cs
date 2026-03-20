@@ -92,7 +92,6 @@ internal static class GameFunctions
     );
 
     // FString::FString()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr StringCtorDelegate(IntPtr self, IntPtr In);
 
     // appRealloc()
