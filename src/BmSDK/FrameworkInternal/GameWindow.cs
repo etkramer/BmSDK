@@ -6,6 +6,9 @@ namespace BmSDK.Framework;
 
 internal static class GameWindow
 {
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, EntryPoint = "FindWindowW")]
+    private static extern HWND FindWindow(string? lpClassName, string? lpWindowName);
+
     private static HWND s_gameHwnd = default;
     private static WNDPROC? s_wndProc;
     private static WNDPROC? s_wndProcBase;
@@ -48,40 +51,7 @@ internal static class GameWindow
 
     private static bool TryFindGameWindow(out HWND result)
     {
-        var foundHwnd = default(HWND);
-        var processId = Environment.ProcessId;
-
-        // Enumerate all windows in existence until one belongs to us.
-        PInvoke.EnumWindows(
-            (hwnd, lParam) =>
-            {
-                uint winProcId = 0;
-                unsafe
-                {
-                    _ = PInvoke.GetWindowThreadProcessId(hwnd, &winProcId);
-                }
-
-                if (winProcId == processId && PInvoke.IsWindowVisible(hwnd))
-                {
-                    foundHwnd = hwnd;
-                    return false;
-                }
-
-                return true;
-            },
-            0
-        );
-
-        // Just found it!
-        if (foundHwnd != default)
-        {
-            result = foundHwnd;
-            return true;
-        }
-        else
-        {
-            result = default;
-            return false;
-        }
+        result = FindWindow("LaunchUnrealUWindowsClient", null);
+        return result != default;
     }
 }
