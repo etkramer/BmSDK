@@ -134,7 +134,7 @@ internal static class ScriptManager
                 if (s_isInitialized)
                 {
                     RedirectManager.ConfigureAllRedirectedFunctions();
-                    ScriptComponentManager.AutoAttachTypesToExistingActors();
+                    ScriptComponentManager.AutoAttachTypesToExistingObjects();
                     s_scripts.ForEach(script => script.OnLoad());
                 }
             },

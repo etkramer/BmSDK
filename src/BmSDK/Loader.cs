@@ -114,15 +114,6 @@ internal static class Loader
                 );
             }
 
-            // Auto-attach script components to newly spawned actors
-            if (ScriptComponentManager.HasAutoAttachTypes())
-            {
-                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
-                {
-                    ScriptComponentManager.TryAutoAttachComponents(actor);
-                }
-            }
-
             // Notify scripts of game tick
             if (funcName == TickFuncName)
             {
@@ -136,9 +127,9 @@ internal static class Loader
                 );
 
                 // Call OnTick() for script components
-                if (Actor.AllScriptComponents.Count > 0)
+                if (GameObject.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in GameObject.AllScriptComponents.ToArray())
                     {
                         Debug.RunWithSender(scriptComponent.GetType().Name, scriptComponent.OnTick);
                     }
@@ -166,12 +157,17 @@ internal static class Loader
         RunGuarded(() =>
         {
             var obj = MarshalUtil.GetOrCreateWrapper(self);
-            if (obj is not Function func)
+            if (obj is Function func)
             {
+                RedirectManager.TryConfigureFunction(func);
                 return;
             }
 
-            RedirectManager.TryConfigureFunction(func);
+            // Auto-attach script components to newly spawned actors
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj);
+            }
         });
     }
 

@@ -9,12 +9,12 @@ namespace BmSDK.Framework;
 /// <summary>
 /// Manages the registration of auto-attach types and the mass unloading of ScriptComponents.
 /// </summary>
-/// <seealso cref="Actor"/>
+/// <seealso cref="GameObject"/>
 internal static class ScriptComponentManager
 {
     /// <summary>
     /// Stores data about a ScriptComponent type that should be attached when an
-    /// actor of a target type runs it's <see cref="Actor.PostBeginPlay"/>.
+    /// object of a target type is instantiated in <see cref="Loader.ConditionalPostLoadDetour(nint)"/>.
     /// </summary>
     /// <param name="Component">The component type to auto-atach</param>
     /// <param name="AllowSubtypes">Whether the component should be attached to children
@@ -22,9 +22,9 @@ internal static class ScriptComponentManager
     private readonly record struct CachedAutoAttachComponent(Type Component, bool AllowSubtypes);
 
     /// <summary>
-    /// Maps Actor types to Lists of ScriptComponents that will auto-attach.
+    /// Maps Object types to Lists of ScriptComponents that will auto-attach.
     /// Populated by <see cref="RegisterAutoAttachType(Type, Type, bool)"/> and used by
-    /// <see cref="TryAutoAttachComponents(Actor)"/> and <see cref="AutoAttachTypesToExistingActors"/>
+    /// <see cref="TryAutoAttachComponents(GameObject)"/> and <see cref="AutoAttachTypesToExistingObjects"/>
     /// </summary>
     private static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes =
     [];
@@ -38,38 +38,38 @@ internal static class ScriptComponentManager
     {
         foreach (var type in asm.GetTypes())
         {
-            if (!IsTypeAScriptComponent(type, out var attribute, out var actorType))
+            if (!IsTypeAScriptComponent(type, out var attribute, out var objType))
             {
                 continue;
             }
 
-            RedirectManager.Local.CacheRedirectors(type, actorType);
+            RedirectManager.Local.CacheRedirectors(type, objType);
 
             if (attribute.AutoAttach)
             {
-                RegisterAutoAttachType(type, actorType, attribute.AllowSubtypes);
+                RegisterAutoAttachType(type, objType, attribute.AllowSubtypes);
             }
         }
     }
 
     /// <summary>
     /// Determines whether the specified type represents a valid script component
-    /// and retrieves its associated attribute and actor type.
+    /// and retrieves its associated attribute and Object type.
     /// </summary>
     /// <param name="type">The type to evaluate for script component eligibility</param>
     /// <param name="attribute">Attribute associated with the ScriptComponent.
     /// <see langword="null"/> if the type is not a ScriptComponent.</param>
-    /// <param name="actorType">Actor type the ScriptComponent applies to.
+    /// <param name="objType">Object type the ScriptComponent applies to.
     /// <see langword="null"/> if the type is not a ScriptComponent.</param>
     /// <returns>Whether <paramref name="type"/> is a valid ScriptComponent</returns>
     private static bool IsTypeAScriptComponent(
         Type type,
         [MaybeNullWhen(false)] out ScriptComponentAttribute attribute,
-        [MaybeNullWhen(false)] out Type actorType
+        [MaybeNullWhen(false)] out Type objType
     )
     {
         attribute = null;
-        actorType = null;
+        objType = null;
 
         if (!type.IsClass || type.IsAbstract)
         {
@@ -82,8 +82,8 @@ internal static class ScriptComponentManager
             return false;
         }
 
-        actorType = TryGetComponentActorType(type);
-        if (actorType == null)
+        objType = TryGetComponentObjType(type);
+        if (objType == null)
         {
             return false;
         }
@@ -92,11 +92,11 @@ internal static class ScriptComponentManager
     }
 
     /// <summary>
-    /// Retrieves the type argument used for the <see cref="ScriptComponent{TActor}"/> base class of the given type.
+    /// Retrieves the type argument used for the <see cref="ScriptComponent{TClass}"/> base class of the given type.
     /// </summary>
     /// <param name="type">The type whose inheritance hierarchy is searched for a ScriptComponent base class.</param>
     /// <returns>The type argument of the nearest ScriptComponent base class if found; otherwise, null.</returns>
-    private static Type? TryGetComponentActorType(Type type)
+    private static Type? TryGetComponentObjType(Type type)
     {
         for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
         {
@@ -118,12 +118,12 @@ internal static class ScriptComponentManager
 
     /// <summary>
     /// Registers a <see cref="ScriptComponent"/> type to be automatically attached to
-    /// instances of a specified actor class, when they are created.
+    /// instances of a specified Object class, when they are created.
     /// </summary>
     /// <param name="componentType">The type of the script component to register for automatic attachment.
     /// Must derive from ScriptComponent.</param>
-    /// <param name="targetClass">The actor class type which the component will be automatically attached to.
-    /// Must derive from Actor.</param>
+    /// <param name="targetClass">The object class type which the component will be automatically attached to.
+    /// Must derive from <see cref="GameObject"/>.</param>
     /// <param name="allowSubtypes">Flag whether the component should auto-attach to
     /// child classes of <paramref name="targetClass"/>.</param>
     private static void RegisterAutoAttachType(
@@ -182,19 +182,19 @@ internal static class ScriptComponentManager
 
     /// <summary>
     /// Retrieves all <see cref="ScriptComponent"/> types that are automatically
-    /// attached to the specified actor class and its base classes.
+    /// attached to the specified object class and its base classes.
     /// </summary>
-    /// <param name="actorClass">The type for which to retrieve auto-attached component types.
-    /// Should derive from <see cref="Actor"/>.</param>
-    private static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
+    /// <param name="objClass">The type for which to retrieve auto-attached component types.
+    /// Should derive from <see cref="GameObject"/>.</param>
+    private static IEnumerable<Type> GetAutoAttachTypesByObject(Type objClass)
     {
-        foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
+        foreach (var super in StaticInit.EnumerateSelfAndSupers(objClass))
         {
             if (s_autoAttachTypes.TryGetValue(super, out var cachedTypes))
             {
                 foreach (var type in cachedTypes)
                 {
-                    if (!type.AllowSubtypes && super != actorClass)
+                    if (!type.AllowSubtypes && super != objClass)
                     {
                         continue;
                     }
@@ -203,38 +203,38 @@ internal static class ScriptComponentManager
                 }
             }
 
-            if (super == typeof(Actor))
+            if (super == typeof(GameObject))
             {
                 break;
             }
         }
     }
 
-    /// <inheritdoc cref="GetAutoAttachTypesByActor(Type)"/>
-    /// <param name="actor">The object of whose class to scan for auto-attach components.</param>
-    private static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor) =>
-        GetAutoAttachTypesByActor(actor.GetType());
+    /// <inheritdoc cref="GetAutoAttachTypesByObject(Type)"/>
+    /// <param name="obj">The object of whose class to scan for auto-attach components.</param>
+    private static IEnumerable<Type> GetAutoAttachTypesByObject(GameObject obj) =>
+        GetAutoAttachTypesByObject(obj.GetType());
 
     /// <summary>
-    /// Attempts to auto-attach eligible script components to the specified actor
+    /// Attempts to auto-attach eligible script components to the specified object
     /// if they are not already present.
     /// </summary>
-    public static void TryAutoAttachComponents(Actor actor)
+    public static void TryAutoAttachComponents(GameObject obj)
     {
-        var componentTypes = GetAutoAttachTypesByActor(actor);
+        var componentTypes = GetAutoAttachTypesByObject(obj);
 
         foreach (var componentType in componentTypes)
         {
-            if (!actor.HasScriptComponent(componentType))
+            if (!obj.HasScriptComponent(componentType))
             {
                 try
                 {
-                    actor.AttachScriptComponent(componentType);
+                    obj.AttachScriptComponent(componentType);
                 }
                 catch (Exception e)
                 {
                     Debug.LogError(
-                        $"Failed to auto-attach {componentType.Name} to '{actor.GetFullName()}': \n{e.Message}",
+                        $"Failed to auto-attach {componentType.Name} to '{obj.GetFullName()}': \n{e.Message}",
                         skipSender: true
                     );
                 }
@@ -243,30 +243,30 @@ internal static class ScriptComponentManager
     }
 
     /// <summary>
-    /// Automatically attaches eligible component types to all existing actors in the world.
+    /// Automatically attaches eligible component types to all existing objects in the world.
     /// </summary>
-    public static void AutoAttachTypesToExistingActors()
+    public static void AutoAttachTypesToExistingObjects()
     {
         if (!HasAutoAttachTypes())
         {
             return;
         }
 
-        foreach (var actor in GameObject.FindObjectsSlow<Actor>())
+        foreach (var obj in GameObject.FindObjectsSlow<GameObject>())
         {
-            // Skip GC'd actors
-            if (!actor.IsValid)
+            // Skip GC'd objects
+            if (!obj.IsValid)
             {
                 continue;
             }
 
             // Skip the Class Default Object (CDO)
-            if (actor == actor.Class.DefaultObject)
+            if (obj == obj.Class.DefaultObject)
             {
                 continue;
             }
 
-            TryAutoAttachComponents(actor);
+            TryAutoAttachComponents(obj);
         }
     }
 
@@ -279,6 +279,6 @@ internal static class ScriptComponentManager
         s_autoAttachTypes.Clear();
 
         // Detach all existing script components and local redirectors
-        Actor.AllScriptComponents.ToArray().ForEach(component => component.Detach());
+        GameObject.AllScriptComponents.ToArray().ForEach(component => component.Detach());
     }
 }
