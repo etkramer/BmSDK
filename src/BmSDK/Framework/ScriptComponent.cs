@@ -13,28 +13,28 @@ namespace BmSDK.Framework;
 /// This is especially useful if you want to use <see cref="ScriptComponentAttribute.AutoAttach"/>
 /// to apply the ScriptComponent to one specific child class of Actor only.
 /// </remarks>
-/// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
+/// <typeparam name="TClass">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
 /// <seealso cref="ScriptComponentAttribute"/>
-public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
-    where TActor : Actor
+public abstract class ScriptComponent<TClass> : IScriptComponent<TClass>
+    where TClass : GameObject
 {
     /// <inheritdoc cref="IScriptComponent.Owner"/>
-    public TActor Owner { get; private set; } = null!;
+    public TClass Owner { get; private set; } = null!;
 
     /// <inheritdoc/>
-    Actor IScriptComponent.Owner
+    GameObject IScriptComponent.Owner
     {
         get => Owner;
         set
         {
-            if (value is not null and not TActor)
+            if (value is not null and not TClass)
             {
                 throw new InvalidCastException(
                     $"{value.GetType().Name} is incompatible with {GetType().Name}"
                 );
             }
 
-            Owner = (TActor?)value!;
+            Owner = (TClass?)value!;
         }
     }
 
@@ -50,7 +50,7 @@ public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
 
 /// <summary>
 /// Base class for script components that can be attached to actors.
-/// Use this non-generic type if the script component should apply to any Actor.
+/// Only exists for compatibility reasons.
 /// </summary>
-/// <seealso cref="ScriptComponent{TActor}"/>
+/// <seealso cref="ScriptComponent{TClass}"/>
 public abstract class ScriptComponent : ScriptComponent<Actor>;

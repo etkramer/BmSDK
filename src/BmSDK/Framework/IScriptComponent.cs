@@ -11,7 +11,7 @@ public interface IScriptComponent
     /// <summary>
     /// Returns the actor that this component is attached to.
     /// </summary>
-    Actor Owner { get; internal set; }
+    GameObject Owner { get; internal set; }
 
     /// <summary>
     /// Determines whether the component is attached to any actor.
@@ -24,7 +24,7 @@ public interface IScriptComponent
     /// </summary>
     /// <param name="actor">The actor to check for ownership.</param>
     /// <returns>true if the specified actor is the owner; otherwise, false.</returns>
-    bool IsOwner(Actor actor) => actor == Owner;
+    bool IsOwner(GameObject actor) => actor == Owner;
 
     /// <summary>
     /// Sets the backing Owner field to null.
@@ -63,6 +63,6 @@ public interface IScriptComponent
 }
 
 /// <inheritdoc/>
-/// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
-public interface IScriptComponent<in TActor> : IScriptComponent
-    where TActor : Actor;
+/// <typeparam name="TClass">The type of actor this script component attaches to. Must inherit from <see cref="GameObject"/>.</typeparam>
+public interface IScriptComponent<in TClass> : IScriptComponent
+    where TClass : GameObject;
