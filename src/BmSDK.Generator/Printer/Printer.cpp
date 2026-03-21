@@ -673,14 +673,14 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
     out << endl;
 
     // Print class declaration
-    Printer::Indent(out) << "static partial class StaticInit" << endl;
+    Printer::Indent(out) << "internal static partial class StaticInit" << endl;
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
         // Print props
-        Printer::Indent(out) << "static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
+        Printer::Indent(out) << "private static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
             << endl;
-        Printer::Indent(out) << "static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
+        Printer::Indent(out) << "private static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
             << endl;
         out << endl;
 
