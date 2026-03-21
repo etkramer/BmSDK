@@ -148,7 +148,7 @@ void Runtime::GenerateSDK()
             fs::create_directories(classFilePath.parent_path());
         }
 
-        ofstream classFileStream(classFilePath, ios::trunc);
+        ofstream classFileStream(classFilePath, ios::trunc | ios::binary);
         if (!classFileStream.is_open())
         {
             TRACE("Couldn't open file {}", classFilePath.string());
@@ -159,7 +159,7 @@ void Runtime::GenerateSDK()
     }
 
     // Print StaticInit file
-    ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc);
+    ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc | ios::binary);
     Printer::PrintStaticInit(classObjects, staticInitFileStream);
 
     TRACE("Done writing {} classes to disk", classObjects.size());
