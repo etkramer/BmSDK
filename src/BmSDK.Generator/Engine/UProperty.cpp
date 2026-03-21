@@ -85,6 +85,12 @@ string UProperty::GetInnerTypeNameManaged() const
     {
         auto objectProp = (UObjectProperty*)this;
 
+        // BM4: Investigate why this happens
+        if (!objectProp->PropertyClass)
+        {
+            return "BmSDK.GameObject";
+        }
+
         return objectProp->PropertyClass->GetPathNameManaged();
     }
     else if (Class->GetPathName() == "Core.ArrayProperty")
