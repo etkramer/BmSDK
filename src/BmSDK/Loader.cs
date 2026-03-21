@@ -93,6 +93,10 @@ internal static class Loader
             // Notify scripts of game init
             if (!s_hasGameInited && funcName == InitFuncName)
             {
+                // Kick off DLC scanning early
+                var dlcManager = Game.GetEngine().DLCManager;
+                dlcManager.RefreshDLC();
+                
                 ScriptManager.Scripts.ForEach(script =>
                     Debug.RunWithSender(script.Name, script.Main)
                 );
