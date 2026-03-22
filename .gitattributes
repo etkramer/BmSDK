@@ -1,2 +1,5 @@
 # Mark generated files
 *.g.cs linguist-generated=true
+
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf

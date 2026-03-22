@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace BmSDK.Framework;
 
-static partial class StaticInit
+internal static partial class StaticInit
 {
-    static Dictionary<string, Type> _classPathToManagedTypeMap = [];
-    static Dictionary<Type, string> _managedTypeToClassPathMap = [];
+    private static Dictionary<string, Type> _classPathToManagedTypeMap = [];
+    private static Dictionary<Type, string> _managedTypeToClassPathMap = [];
 
     public static void StaticInitClasses()
     {
