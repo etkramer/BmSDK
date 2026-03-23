@@ -1,11 +1,10 @@
 using System.Reflection;
-using BmSDK.Engine;
 
 namespace BmSDK.Framework.Redirection;
 
 /// <summary>
 /// A class managing the creation, retrieval, execution and deletion of detours to in-game functions
-/// which only apply to Actors with specific <see cref="ScriptComponent{TActor}"/>s attached.
+/// which only apply to UObjects with specific <see cref="ScriptComponent{TClass}"/>s attached.
 /// DO NOT INSTANTIATE! USE <see cref="RedirectManager.Local"/> INSTEAD.
 /// </summary>
 internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
@@ -24,8 +23,8 @@ internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     > _cachedLocalRedirDefinitionDict = [];
 
     /// <summary>
-    /// Maps pointers to target Actors and declaring function paths of redirected functions
-    /// to LocalRedirectorInfo instances. This allows for per Actor/ScriptComponent function redirects.
+    /// Maps pointers to target UObjects and declaring function paths of redirected functions
+    /// to LocalRedirectorInfo instances. This allows for per UObject/ScriptComponent function redirects.
     /// </summary>
     private readonly Dictionary<
         (IntPtr ObjPtr, string FuncPath),
@@ -34,7 +33,7 @@ internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
     /// <summary>
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
-    /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>
+    /// This is used for cleanup inside of <see cref="GameObject.DetachScriptComponent(IScriptComponent)"/>
     /// </summary>
     private readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> _componentRedirsDict = [];
 
@@ -83,9 +82,9 @@ internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     }
 
     /// <summary>
-    /// Registers one function detour for a specific Actor.
+    /// Registers one function detour for a specific UObject.
     /// </summary>
-    /// <param name="component">ScriptComponent that adds the redirectors to the Actor.
+    /// <param name="component">ScriptComponent that adds the redirectors to the UObject.
     /// The script component must already be attached!</param>
     /// <param name="cachedRedir">The redirect to register</param>
     private void RegisterRedirector(IScriptComponent component, CachedLocalRedirector cachedRedir)

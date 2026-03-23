@@ -126,9 +126,9 @@ internal static class Loader
                 );
 
                 // Call OnTick() for script components
-                if (Actor.AllScriptComponents.Count > 0)
+                if (GameObject.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in GameObject.AllScriptComponents.ToArray())
                     {
                         Debug.RunWithSender(scriptComponent.GetType().Name, scriptComponent.OnTick);
                     }
