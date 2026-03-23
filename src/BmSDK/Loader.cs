@@ -14,7 +14,6 @@ internal static class Loader
     private const string InitFuncName = "Engine.GameInfo:InitGame";
     private const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
     private const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
-    private const string PostBeginPlayFuncName = ":PostBeginPlay";
     private const string TickFuncName = "BmGame.RGameInfo:Tick";
 
     private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
@@ -114,15 +113,6 @@ internal static class Loader
                 );
             }
 
-            // Auto-attach script components to newly spawned actors
-            if (ScriptComponentManager.HasAutoAttachTypes())
-            {
-                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
-                {
-                    ScriptComponentManager.TryAutoAttachComponents(actor);
-                }
-            }
-
             // Notify scripts of game tick
             if (funcName == TickFuncName)
             {
@@ -166,12 +156,16 @@ internal static class Loader
         RunGuarded(() =>
         {
             var obj = MarshalUtil.GetOrCreateWrapper(self);
-            if (obj is not Function func)
+            if (obj is Function func)
             {
-                return;
+                RedirectManager.TryConfigureFunction(func);
             }
 
-            RedirectManager.TryConfigureFunction(func);
+            // Auto-attach script components to newly created objs
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj);
+            }
         });
     }
 
