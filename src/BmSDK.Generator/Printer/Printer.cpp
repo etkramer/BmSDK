@@ -191,7 +191,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
         for (UStruct* super = _class; super; super = super->SuperStruct)
         {
-            if (super->GetPathName() == "Engine.Actor")
+            if (super->GetPathName() == "Core.Object")
             {
                 Printer::PrintScHelpers(_class, out);
                 break;
@@ -267,23 +267,23 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
 {
     if (generic)
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Type)\"/>" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject." << helper << "(Type)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
         Printer::PushIndent();
         Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">"
             << (ctor ? ", new()" : "") << endl;
         Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "")
-            << "((Engine.Actor)this)." << helper << "(typeof(TComponent));" << endl;
+            << "((GameObject)this)." << helper << "(typeof(TComponent));" << endl;
         Printer::PopIndent();
         out << endl;
     }
     else
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Framework.IScriptComponent)\"/>" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject." << helper << "(Framework.IScriptComponent)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
         Printer::PushIndent();
         Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
-        Printer::Indent(out) << "=> ((Engine.Actor)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
+        Printer::Indent(out) << "=> ((GameObject)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
         Printer::PopIndent();
         out << endl;
     }
