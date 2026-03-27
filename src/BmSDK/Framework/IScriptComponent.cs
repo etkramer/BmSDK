@@ -12,37 +12,27 @@ public interface IScriptComponent
     GameObject Owner { get; internal set; }
 
     /// <summary>
+    /// Sets the backing Owner field to null.
+    /// </summary>
+    internal void RemoveOwnership() => Owner = null!;
+
+    /// <summary>
     /// Determines whether the component is attached to any UObject.
     /// </summary>
     /// <returns>True, if Owner not null; false otherwise</returns>
-    bool HasOwner() => Owner != null;
+    bool HasOwner();
 
     /// <summary>
     /// Determines whether the specified UObject stores the component.
     /// </summary>
     /// <param name="obj">The UObject to check for ownership.</param>
     /// <returns>true if the specified UObject is the owner; otherwise, false.</returns>
-    bool IsOwner(GameObject obj) => obj == Owner;
-
-    /// <summary>
-    /// Sets the backing Owner field to null.
-    /// </summary>
-    internal void RemoveOwnership() => Owner = null!;
+    bool IsOwner(GameObject obj);
 
     /// <summary>
     /// Detaches the component from the Owner
     /// </summary>
-    void Detach()
-    {
-        if (!HasOwner())
-        {
-            throw new InvalidOperationException(
-                "Cannot detach ScriptComponent that is not attached to any UObject"
-            );
-        }
-
-        Owner.DetachScriptComponent(this);
-    }
+    void Detach();
 
     /// <summary>
     /// Called when this component is attached to a UObject.

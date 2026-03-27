@@ -39,6 +39,25 @@ public abstract class ScriptComponent<TClass> : IScriptComponent<TClass>
     }
 
     /// <inheritdoc/>
+    public bool HasOwner() => Owner != null;
+
+    /// <inheritdoc/>
+    public bool IsOwner(GameObject obj) => obj == Owner;
+
+    /// <inheritdoc/>
+    public void Detach()
+    {
+        if (!HasOwner())
+        {
+            throw new InvalidOperationException(
+                "Cannot detach ScriptComponent that is not attached to any UObject"
+            );
+        }
+
+        Owner.DetachScriptComponent(this);
+    }
+
+    /// <inheritdoc/>
     public virtual void OnAttach() { }
 
     /// <inheritdoc/>
