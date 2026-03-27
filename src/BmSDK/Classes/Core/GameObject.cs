@@ -15,6 +15,7 @@ public partial class GameObject
     public enum EObjectFlags : ulong
     {
         RF_RootSet = 0x400,
+        RF_NeedPostLoad = 0x100000000000000,
     }
 
     /// <summary>

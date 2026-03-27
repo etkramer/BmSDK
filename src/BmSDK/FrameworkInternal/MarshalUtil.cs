@@ -229,9 +229,9 @@ internal static unsafe class MarshalUtil
         if (s_managedObjects.TryGetValue(objPtr, out var obj))
         {
             // Detach all script components
-            if (obj is Actor actor && actor.ScriptComponents.Count > 0)
+            if (obj.ScriptComponents.Count > 0)
             {
-                actor.DetachAllScriptComponents();
+                obj.DetachAllScriptComponents();
             }
 
             // Mark managed wrapper as invalid

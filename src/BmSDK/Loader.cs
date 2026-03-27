@@ -14,11 +14,11 @@ internal static class Loader
     private const string InitFuncName = "Engine.GameInfo:InitGame";
     private const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
     private const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
-    private const string PostBeginPlayFuncName = ":PostBeginPlay";
     private const string TickFuncName = "BmGame.RGameInfo:Tick";
 
     private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     private static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    private static GameFunctions.AddObjectDelegate? _AddObjectDelegateDetourBase = null;
     private static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
     private static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -44,14 +44,19 @@ internal static class Loader
         ScriptManager.Init();
 
         // Create function detours
+        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+            GameInfo.FuncOffsets.EngineTick,
+            EngineTickDetour
+        );
+
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
             GameInfo.FuncOffsets.ProcessInternal,
             ProcessInternalDetour
         );
 
-        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-            GameInfo.FuncOffsets.EngineTick,
-            EngineTickDetour
+        _AddObjectDelegateDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
+            GameInfo.FuncOffsets.AddObject,
+            AddObjectDetour
         );
 
         _ConditionalPostLoadDetourBase =
@@ -114,15 +119,6 @@ internal static class Loader
                 );
             }
 
-            // Auto-attach script components to newly spawned actors
-            if (ScriptComponentManager.HasAutoAttachTypes())
-            {
-                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
-                {
-                    ScriptComponentManager.TryAutoAttachComponents(actor);
-                }
-            }
-
             // Notify scripts of game tick
             if (funcName == TickFuncName)
             {
@@ -136,9 +132,9 @@ internal static class Loader
                 );
 
                 // Call OnTick() for script components
-                if (Actor.AllScriptComponents.Count > 0)
+                if (GameObject.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in GameObject.AllScriptComponents.ToArray())
                     {
                         Debug.RunWithSender(scriptComponent.GetType().Name, scriptComponent.OnTick);
                     }
@@ -156,6 +152,24 @@ internal static class Loader
         });
     }
 
+    // Detour for UObject::AddObject()
+    private static void AddObjectDetour(IntPtr self, int InIndex)
+    {
+        // Call base impl to instantiate UObject
+        _AddObjectDelegateDetourBase!.Invoke(self, InIndex);
+
+        RunGuarded(() =>
+        {
+            var obj = MarshalUtil.GetOrCreateWrapper(self);
+
+            // Auto-attach script components to non-serialized objs
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
+            }
+        });
+    }
+
     // Detour for UObject::ConditionalPostLoad()
     private static void ConditionalPostLoadDetour(IntPtr self)
     {
@@ -166,12 +180,16 @@ internal static class Loader
         RunGuarded(() =>
         {
             var obj = MarshalUtil.GetOrCreateWrapper(self);
-            if (obj is not Function func)
+            if (obj is Function func)
             {
-                return;
+                RedirectManager.TryConfigureFunction(func);
             }
 
-            RedirectManager.TryConfigureFunction(func);
+            // Auto-attach script components to serialized objs
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
+            }
         });
     }
 

@@ -1,30 +1,15 @@
-using BmSDK.Engine;
-
 namespace BmSDK.Framework;
 
 /// <summary>
-/// Defines the contract for a scriptable component that can be attached to an actor.
-/// MODS SHOULDN'T IMPLEMENT THIS DIRECTLY! Use <see cref="ScriptComponent{TActor}"/> instead.
+/// Defines the contract for a scriptable component that can be attached to a UObject.
+/// MODS SHOULDN'T IMPLEMENT THIS DIRECTLY! Use <see cref="ScriptComponent{TClass}"/> instead.
 /// </summary>
 public interface IScriptComponent
 {
     /// <summary>
-    /// Returns the actor that this component is attached to.
+    /// The UObject that this component is attached to.
     /// </summary>
-    Actor Owner { get; internal set; }
-
-    /// <summary>
-    /// Determines whether the component is attached to any actor.
-    /// </summary>
-    /// <returns>True, if Owner not null; false otherwise</returns>
-    bool HasOwner() => Owner != null;
-
-    /// <summary>
-    /// Determines whether the specified actor stores the component.
-    /// </summary>
-    /// <param name="actor">The actor to check for ownership.</param>
-    /// <returns>true if the specified actor is the owner; otherwise, false.</returns>
-    bool IsOwner(Actor actor) => actor == Owner;
+    GameObject Owner { get; internal set; }
 
     /// <summary>
     /// Sets the backing Owner field to null.
@@ -32,37 +17,41 @@ public interface IScriptComponent
     internal void RemoveOwnership() => Owner = null!;
 
     /// <summary>
-    /// Detaches the component from the Owner
+    /// Determines whether the component is attached to any UObject.
     /// </summary>
-    void Detach()
-    {
-        if (Owner == null)
-        {
-            throw new InvalidOperationException(
-                "Cannot detach ScriptComponent that is not attached to any Actor"
-            );
-        }
-
-        Owner.DetachScriptComponent(this);
-    }
+    /// <returns>True, if Owner not null; false otherwise</returns>
+    bool HasOwner();
 
     /// <summary>
-    /// Called when this component is attached to an actor.
+    /// Determines whether the specified UObject stores the component.
+    /// </summary>
+    /// <param name="obj">The UObject to check for ownership.</param>
+    /// <returns>true if the specified UObject is the owner; otherwise, false.</returns>
+    bool IsOwner(GameObject obj);
+
+    /// <summary>
+    /// Detaches the component from the Owner
+    /// </summary>
+    void Detach();
+
+    /// <summary>
+    /// Called when this component is attached to a UObject.
     /// </summary>
     void OnAttach();
 
     /// <summary>
-    /// Called when this component is detached from an actor (or when that actor is destroyed).
+    /// Called when this component is detached from a UObject (or when that UObject is destroyed).
     /// </summary>
     void OnDetach();
 
     /// <summary>
-    /// Called once every world tick.
+    /// Called once every world tick (each frame when unpaused).
     /// </summary>
     void OnTick();
 }
 
 /// <inheritdoc/>
-/// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
-public interface IScriptComponent<in TActor> : IScriptComponent
-    where TActor : Actor;
+/// <typeparam name="TClass">The type of UObject this script component attaches to.
+/// Must inherit from <see cref="GameObject"/>.</typeparam>
+public interface IScriptComponent<in TClass> : IScriptComponent
+    where TClass : GameObject;
