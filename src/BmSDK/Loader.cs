@@ -163,7 +163,7 @@ internal static class Loader
             var obj = MarshalUtil.GetOrCreateWrapper(self);
 
             // Auto-attach script components to non-serialized objs
-            if (ScriptComponentManager.HasAutoAttachTypes())
+            if (!obj.IsCdo && ScriptComponentManager.HasAutoAttachTypes())
             {
                 ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
             }
@@ -186,7 +186,7 @@ internal static class Loader
             }
 
             // Auto-attach script components to serialized objs
-            if (ScriptComponentManager.HasAutoAttachTypes())
+            if (!obj.IsCdo && ScriptComponentManager.HasAutoAttachTypes())
             {
                 ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
             }
