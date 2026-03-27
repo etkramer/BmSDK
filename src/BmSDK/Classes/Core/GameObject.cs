@@ -12,7 +12,7 @@ public partial class GameObject
     [Flags]
     public enum EObjectFlags : ulong
     {
-        RF_ClassDefaultObject = 0x200,
+        RF_ClassDefaultObject = 0x80,
         RF_RootSet = 0x400,
         RF_NeedPostLoad = 0x100000000000000,
     }
