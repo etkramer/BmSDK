@@ -189,14 +189,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         }
         out << endl;
 
-        for (UStruct* super = _class; super; super = super->SuperStruct)
-        {
-            if (super->GetPathName() == "Core.Object")
-            {
-                Printer::PrintScHelpers(_class, out);
-                break;
-            }
-        }
+        // Print strongly-typed ScriptComponent helpers
+        Printer::PrintScHelpers(_class, out);
 
         // Print fields
         UField* fieldLink = _class->Children;
