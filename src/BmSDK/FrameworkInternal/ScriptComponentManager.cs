@@ -222,7 +222,7 @@ internal static class ScriptComponentManager
     {
         if (objNotLoaded)
         {
-            if (obj.ObjectFlags.HasFlag(GameObject.EObjectFlags.RF_NeedLoad))
+            if (obj.ObjectFlags.HasFlag(GameObject.EObjectFlags.RF_NeedPostLoad))
             {
                 return;
             }
