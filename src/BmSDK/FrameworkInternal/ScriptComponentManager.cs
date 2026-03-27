@@ -23,7 +23,7 @@ internal static class ScriptComponentManager
     /// <summary>
     /// Maps UObject types to Lists of ScriptComponents that will auto-attach.
     /// Populated by <see cref="RegisterAutoAttachType(Type, Type, bool)"/> and used by
-    /// <see cref="TryAutoAttachComponents(GameObject)"/> and <see cref="AutoAttachTypesToExistingObjs"/>
+    /// <see cref="TryAutoAttachComponents(GameObject, bool)"/> and <see cref="AutoAttachTypesToExistingObjs"/>
     /// </summary>
     private static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes =
     [];
@@ -218,8 +218,16 @@ internal static class ScriptComponentManager
     /// Attempts to auto-attach eligible script components to the specified UObject
     /// if they are not already present.
     /// </summary>
-    public static void TryAutoAttachComponents(GameObject obj)
+    public static void TryAutoAttachComponents(GameObject obj, bool objNotLoaded)
     {
+        if (objNotLoaded)
+        {
+            if (obj.ObjectFlags.HasFlag(GameObject.EObjectFlags.RF_NeedLoad))
+            {
+                return;
+            }
+        }
+
         var componentTypes = GetAutoAttachTypesByObj(obj);
 
         foreach (var componentType in componentTypes)
@@ -265,7 +273,7 @@ internal static class ScriptComponentManager
                 continue;
             }
 
-            TryAutoAttachComponents(obj);
+            TryAutoAttachComponents(obj, objNotLoaded: false);
         }
     }
 

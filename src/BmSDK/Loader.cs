@@ -18,6 +18,7 @@ internal static class Loader
 
     private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     private static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    private static GameFunctions.AddObjectDelegate? _AddObjectDelegateDetourBase = null;
     private static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
     private static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -43,14 +44,19 @@ internal static class Loader
         ScriptManager.Init();
 
         // Create function detours
+        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+            GameInfo.FuncOffsets.EngineTick,
+            EngineTickDetour
+        );
+
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
             GameInfo.FuncOffsets.ProcessInternal,
             ProcessInternalDetour
         );
 
-        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-            GameInfo.FuncOffsets.EngineTick,
-            EngineTickDetour
+        _AddObjectDelegateDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
+            GameInfo.FuncOffsets.AddObject,
+            AddObjectDetour
         );
 
         _ConditionalPostLoadDetourBase =
@@ -146,6 +152,24 @@ internal static class Loader
         });
     }
 
+    // Detour for UObject::AddObject()
+    private static void AddObjectDetour(IntPtr self, int InIndex)
+    {
+        // Call base impl to instantiate UObject
+        _AddObjectDelegateDetourBase!.Invoke(self, InIndex);
+
+        RunGuarded(() =>
+        {
+            var obj = MarshalUtil.GetOrCreateWrapper(self);
+
+            // Auto-attach script components to non-serialized objs
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
+            }
+        });
+    }
+
     // Detour for UObject::ConditionalPostLoad()
     private static void ConditionalPostLoadDetour(IntPtr self)
     {
@@ -161,10 +185,10 @@ internal static class Loader
                 RedirectManager.TryConfigureFunction(func);
             }
 
-            // Auto-attach script components to newly created objs
+            // Auto-attach script components to serialized objs
             if (ScriptComponentManager.HasAutoAttachTypes())
             {
-                ScriptComponentManager.TryAutoAttachComponents(obj);
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
             }
         });
     }
