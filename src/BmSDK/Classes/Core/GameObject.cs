@@ -14,7 +14,7 @@ public partial class GameObject
     {
         RF_ClassDefaultObject = 0x80,
         RF_RootSet = 0x400,
-        RF_NeedPostLoad = 0x100000000000000,
+        RF_NeedPostLoad = 0x4000000,
     }
 
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
