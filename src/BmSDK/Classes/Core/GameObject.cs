@@ -9,20 +9,28 @@ public interface IGameObject
 
 public partial class GameObject
 {
-    public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
-
     [Flags]
     public enum EObjectFlags : ulong
     {
+        RF_ClassDefaultObject = 0x80,
         RF_RootSet = 0x400,
         RF_NeedPostLoad = 0x100000000000000,
     }
+
+    public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
     /// <summary>
     /// Returns true if this object is "alive", false if it has been destroyed or garbage collected on the UE3 side.
     /// If false, this object is unsafe to access or call any methods on.
     /// </summary>
     public bool IsValid => Ptr != IntPtr.Zero;
+
+    /// <summary>
+    /// Returns true if this object is the "Class Default Object", false if it is a usual instance.
+    /// A CDO is the template instance of a class that holds the default attributes of new objects.
+    /// Can be retrieved through GameObject.Class.DefaultObject.
+    /// </summary>
+    public bool IsClassDefaultObject => ObjectFlags.HasFlag(EObjectFlags.RF_ClassDefaultObject);
 
     /// <summary>
     /// Enumerates all objects in this object's outer chain.

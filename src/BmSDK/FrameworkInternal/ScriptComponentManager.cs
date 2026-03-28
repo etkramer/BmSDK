@@ -267,8 +267,8 @@ internal static class ScriptComponentManager
                 continue;
             }
 
-            // Skip the Class Default Object (CDO)
-            if (obj == obj.Class.DefaultObject)
+            // Skip the Default__ object
+            if (obj.IsClassDefaultObject)
             {
                 continue;
             }
