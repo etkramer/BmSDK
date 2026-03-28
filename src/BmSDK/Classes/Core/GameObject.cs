@@ -30,7 +30,7 @@ public partial class GameObject
     /// A CDO is the template instance of a class that holds the default attributes of new objects.
     /// Can be retrieved through GameObject.Class.DefaultObject.
     /// </summary>
-    public bool IsCdo => ObjectFlags.HasFlag(EObjectFlags.RF_ClassDefaultObject);
+    public bool IsClassDefaultObject => ObjectFlags.HasFlag(EObjectFlags.RF_ClassDefaultObject);
 
     /// <summary>
     /// Enumerates all objects in this object's outer chain.
