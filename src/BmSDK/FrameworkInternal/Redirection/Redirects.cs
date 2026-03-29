@@ -105,6 +105,8 @@ internal sealed record RedirectCall(
     IGenericRedirect[] Redirs
 )
 {
+    public bool MustCallOriginal = true;
+
     private int _currIndex = 0;
 
     public IGenericRedirect? NextRedirect() =>

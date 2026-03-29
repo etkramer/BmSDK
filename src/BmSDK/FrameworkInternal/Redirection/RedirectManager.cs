@@ -86,18 +86,35 @@ internal static class RedirectManager
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
         if (s_redirectCalls.TryPeek(out var lastCall))
         {
-            if (lastCall.TargetObj == selfObj && lastCall.TargetFunc == funcObj)
+            // Atp we know this func is called by a redirect
+            // Therefore, it's okay and necessary to check for function overrides
+            if (lastCall.TargetObj == selfObj && funcObj.EnumerateSupersAndSelf().Contains(lastCall.TargetFunc))
             {
+                // Call redirect if exists
                 var redir = lastCall.NextRedirect();
                 if (redir != null)
                 {
                     redir.Run(selfObj, funcObj, stackPtr, Result);
                     return true;
                 }
-                else
+                // Call base implementation only once after redirects
+                else if (lastCall.MustCallOriginal)
                 {
-                    return false;
+                    lastCall.MustCallOriginal = false;
+
+                    // Call the actual target function and not an override
+                    stackPtr->Node = funcObj.Ptr;
+                    GameFunctions.ProcessInternal
+                    (
+                        selfObj.Ptr,
+                        (IntPtr)stackPtr,
+                        Result
+                    );
+
+                    return true;
                 }
+
+                return false;
             }
         }
 
