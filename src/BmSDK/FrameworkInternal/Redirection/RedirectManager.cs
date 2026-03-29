@@ -98,22 +98,13 @@ internal static class RedirectManager
                     return true;
                 }
                 // Call base implementation only once after redirects
-                else if (lastCall.MustCallOriginal)
+                else if (lastCall.TargetFunc != funcObj && lastCall.MustCallOriginal)
                 {
-                    lastCall.MustCallOriginal = false;
-
-                    // Call the actual target function and not an override
-                    stackPtr->Node = funcObj.Ptr;
-                    GameFunctions.ProcessInternal
-                    (
-                        selfObj.Ptr,
-                        (IntPtr)stackPtr,
-                        Result
-                    );
-
+                    lastCall.RunOriginal(stackPtr);
                     return true;
                 }
 
+                // Let base implementation run from RunOriginal call
                 return false;
             }
         }
