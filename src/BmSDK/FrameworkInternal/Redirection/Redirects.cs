@@ -105,8 +105,6 @@ internal sealed record RedirectCall(
     IGenericRedirect[] Redirs
 )
 {
-    public bool MustCallOriginal { get; private set; } = true;
-
     private int _currIndex = 0;
 
     public IGenericRedirect? NextRedirect() =>
@@ -114,8 +112,6 @@ internal sealed record RedirectCall(
 
     public unsafe void RunOriginal(FFrame* stackPtr)
     {
-        MustCallOriginal = false;
-
         // Call the actual target function and not an override
         GameFunctions.ProcessEvent
         (

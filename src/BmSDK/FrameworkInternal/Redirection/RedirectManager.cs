@@ -98,7 +98,7 @@ internal static class RedirectManager
                     return true;
                 }
                 // Call base implementation only once after redirects
-                else if (lastCall.TargetFunc != funcObj && lastCall.MustCallOriginal)
+                else if (lastCall.TargetFunc != funcObj)
                 {
                     lastCall.RunOriginal(stackPtr);
                     return true;
