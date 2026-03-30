@@ -113,12 +113,12 @@ internal sealed record RedirectCall(
     public unsafe void RunOriginal(FFrame* stackPtr, IntPtr result)
     {
         // Call the actual target function and not an override
-        GameFunctions.ProcessEvent
+        stackPtr->Node = TargetFunc.Ptr;
+        GameFunctions.ProcessInternal
         (
             TargetObj.Ptr,
-            TargetFunc.Ptr,
-            stackPtr->Locals,
-            IntPtr.Zero
+            (IntPtr)stackPtr,
+            result
         );
     }
 }
