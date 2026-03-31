@@ -107,6 +107,16 @@ public static partial class Game
         where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
+    /// Returns an enumerable containing all objects of the given type.
+    /// </summary>
+    /// <remarks>
+    /// Can be slow, in cases where many objects of the given type exist.
+    /// Be careful when using this with common types like <see cref="GameObject"/>  or <see cref="Actor"/>.
+    /// </remarks>
+    public static IEnumerable<T> FindObjects<T>()
+        where T : GameObject => FindObjectsCache.FindObjects<T>();
+
+    /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
     public static unsafe Actor SpawnActor(

@@ -259,7 +259,7 @@ internal static class ScriptComponentManager
             return;
         }
 
-        foreach (var obj in GameObject.FindObjectsSlow<GameObject>())
+        foreach (var obj in Game.FindObjects<GameObject>())
         {
             // Skip GC'd objects
             if (!obj.IsValid)

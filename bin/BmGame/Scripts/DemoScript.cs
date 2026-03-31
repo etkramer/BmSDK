@@ -21,7 +21,7 @@ public class DemoScript : Script
         defaultRainComponent?.ParticleCount *= 5;
 
         // Set max players (default and current/frontend)
-        foreach (var gameInfo in GameObject.FindObjectsSlow<RGameInfo>())
+        foreach (var gameInfo in Game.FindObjects<RGameInfo>())
         {
             gameInfo.MaxPlayers = 4;
         }
@@ -43,7 +43,7 @@ public class DemoScript : Script
     public override void OnEnterGame()
     {
         // Enable 1-hit counters
-        foreach (var counterMove in GameObject.FindObjectsSlow<RCombatMove_BatmanCounter>())
+        foreach (var counterMove in Game.FindObjects<RCombatMove_BatmanCounter>())
         {
             counterMove.bShouldKill = true;
         }
