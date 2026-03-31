@@ -162,7 +162,7 @@ internal static class Loader
             var obj = MarshalUtil.GetOrCreateWrapper(self);
 
             // Register in FindObjects cache
-            FindObjectsCache.Register(existingObj);
+            FindObjectsCache.Register(obj);
 
             // Auto-attach script components to non-serialized objs
             if (!obj.IsClassDefaultObject && ScriptComponentManager.HasAutoAttachTypes())
