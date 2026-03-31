@@ -7,37 +7,38 @@ namespace BmSDK;
 public partial class GameObject
 {
     /// <summary>
-    /// Collection of all ScriptComponent instances attached to every UObject.
+    /// Collection of all ScriptComponent instances.
     /// </summary>
     public static IReadOnlyCollection<IScriptComponent> AllScriptComponents => s_scriptComponents;
 
     private static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
-    /// Collection of all ScriptComponent instances attached to this UObject.
-    /// There's one instance per unique ScriptComponent type.
+    /// Collection of all ScriptComponent instances attached to this object.
     /// </summary>
-    public IReadOnlyCollection<IScriptComponent> ScriptComponents => _scriptComponents.Values;
+    public IReadOnlyCollection<IScriptComponent> ScriptComponents =>
+        _scriptComponents.Values.SelectMany(x => x).ToList();
 
-    private readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
+    private readonly Dictionary<Type, List<IScriptComponent>> _scriptComponents = [];
 
     /// <summary>
-    /// Attaches an existing script component instance to this UObject.
+    /// Attaches an existing script component instance to this object.
     /// </summary>
     /// <param name="component">ScriptComponent to attach;
     /// cannot have an Owner when trying to attach it.</param>
     internal void AttachScriptComponent(IScriptComponent component)
     {
-        Guard.Require(!component.HasOwner(), "Component is already attached to a UObject");
+        Guard.Require(!component.HasOwner(), "Component is already attached to an object");
 
         // Store new component
-        if (!_scriptComponents.TryAdd(component.GetType(), component))
+        var componentType = component.GetType();
+        if (!_scriptComponents.TryGetValue(componentType, out var list))
         {
-            throw new ArgumentException(
-                "This UObject already contains a ScriptComponent of this type"
-            );
+            list = [];
+            _scriptComponents[componentType] = list;
         }
 
+        list.Add(component);
         s_scriptComponents.Add(component);
 
         component.Owner = this;
@@ -50,7 +51,7 @@ public partial class GameObject
     }
 
     /// <summary>
-    /// Attaches a new script component of the given type to this UObject.
+    /// Attaches a new script component of the given type to this object.
     /// </summary>
     /// <param name="type">The ScriptComponent type to instantiate</param>
     /// <returns>The newly created and attached ScriptComponent</returns>
@@ -62,7 +63,7 @@ public partial class GameObject
         if (!type.IsClass || type.IsAbstract || type.ContainsGenericParameters)
         {
             throw new ArgumentException(
-                $"{type.FullName}: ScriptComponents that are attached "
+                $"{type.FullName}: Script components that are attached "
                     + $"by their types must be non-genric, non-abstract classes."
             );
         }
@@ -70,7 +71,7 @@ public partial class GameObject
         if (type.GetConstructor(Type.EmptyTypes) == null)
         {
             throw new ArgumentException(
-                $"{type.FullName}: ScriptComponents that are attached by"
+                $"{type.FullName}: Script components that are attached by"
                     + $"their types must contain a public, parameterless constructor"
             );
         }
@@ -78,8 +79,7 @@ public partial class GameObject
         if (!type.IsAssignableTo(typeof(IScriptComponent)))
         {
             throw new ArgumentException(
-                $"{type.FullName}: A class you want to attach as a "
-                    + $"ScriptComponent must inherit from ScriptComponent<TClass>."
+                $"{type.FullName}: Script components must inherit from ScriptComponent<TClass>."
             );
         }
 
@@ -89,37 +89,50 @@ public partial class GameObject
     }
 
     /// <summary>
-    /// Checks if the UObject has the specified ScriptComponent instance attached to itself.
+    /// Checks if the given script component is attached to this object.
     /// </summary>
     internal bool HasScriptComponent(IScriptComponent component) => component.Owner == this;
 
     /// <summary>
-    /// Checks if the UObject has a ScriptComponent of a specific type attached.
+    /// Checks if the object has a script component of the given type.
     /// </summary>
     internal bool HasScriptComponent(Type type) => _scriptComponents.ContainsKey(type);
 
     /// <summary>
-    /// Gets an attached ScriptComponent instance by its type.
+    /// Gets the first attached script component of the given type.
     /// </summary>
     /// <exception cref="KeyNotFoundException">Thrown if the component type
     /// has not been attached</exception>
     internal IScriptComponent GetScriptComponent(Type type)
     {
-        if (_scriptComponents.TryGetValue(type, out var result))
+        if (_scriptComponents.TryGetValue(type, out var list) && list.Count > 0)
         {
-            return result;
+            return list[0];
         }
 
-        throw new KeyNotFoundException($"No script component of {type} is attached to this UObject");
+        throw new KeyNotFoundException($"No script component of {type} is attached to this object");
     }
 
     /// <summary>
-    /// Detaches the given script component from this UObject.
+    /// Gets all attached script components of the given type.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown if the component isn't attached to the UObject</exception>
+    internal IReadOnlyList<IScriptComponent> GetScriptComponents(Type type)
+    {
+        if (_scriptComponents.TryGetValue(type, out var list))
+        {
+            return list;
+        }
+
+        return [];
+    }
+
+    /// <summary>
+    /// Detaches the given script component from this object.
+    /// </summary>
+    /// <exception cref="ArgumentException">Thrown if the component isn't attached to this object</exception>
     internal void DetachScriptComponent(IScriptComponent component)
     {
-        Guard.Require(component.IsOwner(this), "Component is not attached to this UObject");
+        Guard.Require(component.IsOwner(this), "Component is not attached to this object");
 
         // Invoke detach callback
         component.OnDetach();
@@ -128,27 +141,39 @@ public partial class GameObject
         RedirectManager.Local.UnregisterComponentRedirectors(component);
 
         // Remove from storage
-        _scriptComponents.Remove(component.GetType());
+        var componentType = component.GetType();
+        if (_scriptComponents.TryGetValue(componentType, out var list))
+        {
+            list.Remove(component);
+            if (list.Count == 0)
+            {
+                _scriptComponents.Remove(componentType);
+            }
+        }
+
         s_scriptComponents.Remove(component);
         component.RemoveOwnership();
     }
 
     /// <summary>
-    /// Detaches a ScriptComponent by its type from this UObject.
+    /// Detaches all script components of the given type from this object.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown if the component isn't attached to the UObject</exception>
-    internal void DetachScriptComponent(Type type)
+    /// <exception cref="ArgumentException">Thrown if no component of the type is attached</exception>
+    internal void DetachScriptComponents(Type type)
     {
-        if (!_scriptComponents.TryGetValue(type, out var component))
+        if (!_scriptComponents.TryGetValue(type, out var list) || list.Count == 0)
         {
-            throw new ArgumentException($"No instance of {type} is attached to this UObject");
+            throw new ArgumentException($"No instance of {type} is attached to this object");
         }
 
-        DetachScriptComponent(component);
+        foreach (var component in list.ToArray())
+        {
+            DetachScriptComponent(component);
+        }
     }
 
     /// <summary>
-    /// Unregisters all script components attached to the UObject.
+    /// Unregisters all script components attached to this object.
     /// </summary>
     internal void DetachAllScriptComponents() =>
         ScriptComponents.ToArray().ForEach(DetachScriptComponent);

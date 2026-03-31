@@ -150,14 +150,15 @@ function Invoke-Publish {
 
     # Define required files
     $RequiredFiles = @{
-        "README.md"                               = "README.md"
-        "bin/Binaries/Win32/dinput8.dll"          = "Binaries/Win32/dinput8.dll"
-        "publish/Binaries/Win32/plugins"          = "Binaries/Win32/plugins"
-        "publish/Binaries/Win32/sdk"              = "Binaries/Win32/sdk"
-        "bin/BmGame/Scripts/MinimalScript.cs"     = "BmGame/Scripts/MinimalScript.cs"
-        "bin/BmGame/ScriptsDev/ScriptsDev.csproj" = "BmGame/ScriptsDev/ScriptsDev.csproj"
-        "bin/BmGame/ScriptsDev/ScriptsDev.slnx"   = "BmGame/ScriptsDev/ScriptsDev.slnx"
-        "bin/BmGame/ScriptsDev/Properties"        = "BmGame/ScriptsDev/Properties"
+        "README.md"                                         = "README.md"
+        "bin/Binaries/Win32/dinput8.dll"                    = "Binaries/Win32/dinput8.dll"
+        "publish/Binaries/Win32/plugins"                    = "Binaries/Win32/plugins"
+        "publish/Binaries/Win32/sdk"                        = "Binaries/Win32/sdk"
+        "bin/BmGame/Scripts/MinimalScript.cs"               = "BmGame/Scripts/MinimalScript.cs"
+        "bin/BmGame/ScriptsDev/ScriptsDev.csproj"           = "BmGame/ScriptsDev/ScriptsDev.csproj"
+        "bin/BmGame/ScriptsDev/ScriptsDev.slnx"             = "BmGame/ScriptsDev/ScriptsDev.slnx"
+        "bin/BmGame/ScriptsDev/ScriptsDev.code-workspace"   = "BmGame/ScriptsDev/ScriptsDev.code-workspace"
+        "bin/BmGame/ScriptsDev/Properties"                  = "BmGame/ScriptsDev/Properties"
     }
 
     # Define Steam-specific files (includes BatmanAC.exe)
