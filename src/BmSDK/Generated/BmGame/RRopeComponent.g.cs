@@ -410,9 +410,10 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
         /// <summary>
         /// StructProperty: RopeExtraAttachBonePos
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RopeExtraAttachBonePos
+        public unsafe System.Numerics.Vector3 RopeExtraAttachBonePos
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
@@ -427,9 +428,10 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
         /// <summary>
         /// StructProperty: RopeExtraAttachRopeEndOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RopeExtraAttachRopeEndOffset
+        public unsafe System.Numerics.Vector3 RopeExtraAttachRopeEndOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>

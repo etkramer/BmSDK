@@ -123,25 +123,28 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Element
         /// </summary>
-        public unsafe ref System.IntPtr Element
+        public unsafe System.IntPtr Element
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Next
         /// </summary>
-        public unsafe ref System.IntPtr Next
+        public unsafe System.IntPtr Next
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
         /// StructProperty: PrevLink
         /// </summary>
-        public unsafe ref System.IntPtr PrevLink
+        public unsafe System.IntPtr PrevLink
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
 
@@ -400,9 +403,10 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror Data
+        public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror Data
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

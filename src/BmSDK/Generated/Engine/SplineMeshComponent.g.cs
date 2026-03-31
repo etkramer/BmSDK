@@ -103,25 +103,28 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
         /// <summary>
         /// StructProperty: StartPos
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 StartPos
+        public unsafe System.Numerics.Vector3 StartPos
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: StartTangent
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 StartTangent
+        public unsafe System.Numerics.Vector3 StartTangent
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: StartScale
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 StartScale
+        public unsafe System.Numerics.Vector2 StartScale
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>
@@ -136,33 +139,37 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
         /// <summary>
         /// StructProperty: StartOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 StartOffset
+        public unsafe System.Numerics.Vector2 StartOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
         /// StructProperty: EndPos
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 EndPos
+        public unsafe System.Numerics.Vector3 EndPos
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 44); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
         }
 
         /// <summary>
         /// StructProperty: EndTangent
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 EndTangent
+        public unsafe System.Numerics.Vector3 EndTangent
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 56); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
         }
 
         /// <summary>
         /// StructProperty: EndScale
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 EndScale
+        public unsafe System.Numerics.Vector2 EndScale
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 68); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 68); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
         }
 
         /// <summary>
@@ -177,9 +184,10 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
         /// <summary>
         /// StructProperty: EndOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 EndOffset
+        public unsafe System.Numerics.Vector2 EndOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 80); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
     }
 }

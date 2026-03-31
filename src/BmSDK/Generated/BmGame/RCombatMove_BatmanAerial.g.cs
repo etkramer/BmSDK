@@ -922,9 +922,10 @@ public partial class RCombatMove_BatmanAerial : BmSDK.BmGame.RCombatMove_BatmanA
         /// <summary>
         /// StructProperty: AnimId
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>

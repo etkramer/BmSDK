@@ -100,9 +100,10 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
         /// <summary>
         /// StructProperty: Params
         /// </summary>
-        public unsafe ref BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters Params
+        public unsafe BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters Params
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
 

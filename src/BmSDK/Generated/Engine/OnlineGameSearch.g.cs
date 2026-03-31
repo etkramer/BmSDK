@@ -339,9 +339,10 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PlatformData
         /// </summary>
-        public unsafe ref System.IntPtr PlatformData
+        public unsafe System.IntPtr PlatformData
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 

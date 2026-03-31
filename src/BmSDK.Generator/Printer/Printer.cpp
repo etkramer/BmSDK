@@ -396,29 +396,17 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 
         bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
         bool isStructProperty = prop->IsA(UStructProperty::StaticClass());
+        bool shouldReturnStructByRef = isStructProperty && !isInStruct;
 
-        if (isStructProperty)
+        if (shouldReturnStructByRef)
         {
             Printer::Indent(out) << "public unsafe ref " << prop->GetInnerTypeNameManaged() << " "
                 << propNameManaged << endl;
 
-            if (isInStruct)
-            {
-                Printer::Indent(out) << "{" << endl;
-                Printer::PushIndent();
-                Printer::Indent(out) << "get { fixed (void* thisPtr = &this) { return ref "
-                    << "BmSDK.Framework.MarshalUtil.AsRef<" << prop->GetInnerTypeNameManaged()
-                    << ">((IntPtr)thisPtr + " << propOffset << "); } }" << endl;
-                Printer::PopIndent();
-                Printer::Indent(out) << "}" << endl;
-            }
-            else
-            {
-                Printer::PushIndent();
-                Printer::Indent(out) << "=> ref BmSDK.Framework.MarshalUtil.AsRef<"
-                    << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");" << endl;
-                Printer::PopIndent();
-            }
+            Printer::PushIndent();
+            Printer::Indent(out) << "=> ref BmSDK.Framework.MarshalUtil.AsRef<"
+                << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");" << endl;
+            Printer::PopIndent();
         }
         else
         {

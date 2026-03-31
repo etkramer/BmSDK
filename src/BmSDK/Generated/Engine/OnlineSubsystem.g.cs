@@ -383,9 +383,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -472,9 +473,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: SessionId
         /// </summary>
-        public unsafe ref ulong SessionId
+        public unsafe ulong SessionId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 32); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
 
         /// <summary>
@@ -632,9 +634,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: SessionInfo
         /// </summary>
-        public unsafe ref System.IntPtr SessionInfo
+        public unsafe System.IntPtr SessionInfo
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -735,9 +738,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Owner
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId Owner
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId Owner
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -879,9 +883,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: SendingPlayerId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId SendingPlayerId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId SendingPlayerId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -948,9 +953,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TalkerId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId TalkerId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId TalkerId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1075,9 +1081,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PlayerID
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1153,9 +1160,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: MachineId
         /// </summary>
-        public unsafe ref ulong MachineId
+        public unsafe ulong MachineId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -1177,9 +1185,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PlayerNetId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerNetId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerNetId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 
@@ -1337,17 +1346,19 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: SessionId
         /// </summary>
-        public unsafe ref ulong SessionId
+        public unsafe ulong SessionId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -1505,9 +1516,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1551,9 +1563,10 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Uid
         /// </summary>
-        public unsafe ref ulong Uid
+        public unsafe ulong Uid
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 

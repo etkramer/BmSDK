@@ -226,9 +226,10 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         /// <summary>
         /// StructProperty: ValidBounds
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FBox ValidBounds
+        public unsafe BmSDK.GameObject.FBox ValidBounds
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>((IntPtr)thisPtr + 64); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
 
         /// <summary>
@@ -252,9 +253,10 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         /// <summary>
         /// StructProperty: Flags
         /// </summary>
-        public unsafe ref BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParametersFlag Flags
+        public unsafe BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParametersFlag Flags
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParametersFlag>((IntPtr)thisPtr + 100); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParametersFlag>(Ptr + 100); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }; }
         }
 
         /// <summary>

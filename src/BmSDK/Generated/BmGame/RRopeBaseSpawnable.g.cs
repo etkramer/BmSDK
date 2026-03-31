@@ -139,16 +139,18 @@ public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: RopeExtraAttachConnections
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_0
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
         /// <summary>
         /// StructProperty: RopeExtraAttachConnections
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_1
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>((IntPtr)thisPtr + 76); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 76); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
         }
 
         /// <summary>

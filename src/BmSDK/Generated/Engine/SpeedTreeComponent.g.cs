@@ -121,9 +121,10 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         /// <summary>
         /// StructProperty: Guid
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FGuid Guid
+        public unsafe BmSDK.GameObject.FGuid Guid
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

@@ -136,9 +136,10 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Bary
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Bary
+        public unsafe System.Numerics.Vector3 Bary
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 
@@ -425,9 +426,10 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Box
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FSimpleBox Box
+        public unsafe BmSDK.GameObject.FSimpleBox Box
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSimpleBox>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSimpleBox>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 

@@ -1174,9 +1174,10 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Constant
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Constant
+        public unsafe System.Numerics.Vector3 Constant
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 32); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
     }
 
@@ -1223,9 +1224,10 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Constant
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor Constant
+        public unsafe BmSDK.GameObject.FColor Constant
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 32); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
     }
 

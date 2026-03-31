@@ -633,9 +633,10 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: POV
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FTPOV POV
+        public unsafe BmSDK.GameObject.FTPOV POV
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FTPOV>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FTPOV>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -675,9 +676,10 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: POV
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FTPOV POV
+        public unsafe BmSDK.GameObject.FTPOV POV
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FTPOV>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FTPOV>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 

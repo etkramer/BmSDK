@@ -98,9 +98,10 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
         /// <summary>
         /// StructProperty: BitMask
         /// </summary>
-        public unsafe ref ulong BitMask
+        public unsafe ulong BitMask
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

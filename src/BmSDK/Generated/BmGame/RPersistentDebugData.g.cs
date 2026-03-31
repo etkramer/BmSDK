@@ -685,9 +685,10 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
         /// <summary>
         /// StructProperty: FloorCorrection_OverrideConfig_Config
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig FloorCorrection_OverrideConfig_Config
+        public unsafe BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig FloorCorrection_OverrideConfig_Config
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>

@@ -95,9 +95,10 @@ public partial class AnimNodeSequenceBlendBase : BmSDK.Engine.AnimNodeSequence, 
         /// <summary>
         /// StructProperty: AnimInfo
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo AnimInfo
+        public unsafe BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo AnimInfo
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequenceBlendBase.FAnimInfo>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>

@@ -77,9 +77,10 @@ public partial class RAnimUtil_Layers : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FallTime
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan FallTime
+        public unsafe BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan FallTime
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 }

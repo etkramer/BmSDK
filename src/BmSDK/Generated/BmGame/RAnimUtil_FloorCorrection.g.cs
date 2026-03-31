@@ -166,9 +166,10 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: Movement
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig Movement
+        public unsafe BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig Movement
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -199,9 +200,10 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: Normal
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Normal
+        public unsafe System.Numerics.Vector3 Normal
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
@@ -286,17 +288,19 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: RawNormal
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RawNormal
+        public unsafe System.Numerics.Vector3 RawNormal
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: BlendedNormal
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 BlendedNormal
+        public unsafe System.Numerics.Vector3 BlendedNormal
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>

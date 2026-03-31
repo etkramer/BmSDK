@@ -317,17 +317,19 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: PlayerID
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Rank
         /// </summary>
-        public unsafe ref BmSDK.Engine.Settings.FSettingsData Rank
+        public unsafe BmSDK.Engine.Settings.FSettingsData Rank
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FSettingsData>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FSettingsData>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -367,9 +369,10 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: StatValue
         /// </summary>
-        public unsafe ref BmSDK.Engine.Settings.FSettingsData StatValue
+        public unsafe BmSDK.Engine.Settings.FSettingsData StatValue
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FSettingsData>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FSettingsData>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 }

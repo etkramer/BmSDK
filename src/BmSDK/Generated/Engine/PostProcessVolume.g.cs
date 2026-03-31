@@ -622,9 +622,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosD1_Colour
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor AtmosD1_Colour
+        public unsafe BmSDK.GameObject.FColor AtmosD1_Colour
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -711,9 +712,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosD2_Colour
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor AtmosD2_Colour
+        public unsafe BmSDK.GameObject.FColor AtmosD2_Colour
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 48); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>
@@ -800,9 +802,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosH1_Colour
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor AtmosH1_Colour
+        public unsafe BmSDK.GameObject.FColor AtmosH1_Colour
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 80); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
 
         /// <summary>
@@ -889,9 +892,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosH2_Colour
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor AtmosH2_Colour
+        public unsafe BmSDK.GameObject.FColor AtmosH2_Colour
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 112); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }; }
         }
 
         /// <summary>
@@ -978,9 +982,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosNoiseWind
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 AtmosNoiseWind
+        public unsafe System.Numerics.Vector3 AtmosNoiseWind
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 144); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 144); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
         }
 
         /// <summary>
@@ -995,9 +1000,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosNoiseOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 AtmosNoiseOffset
+        public unsafe System.Numerics.Vector3 AtmosNoiseOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 160); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 160); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }; }
         }
 
         /// <summary>
@@ -1030,9 +1036,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosGlobal_Gradient_Colour
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor AtmosGlobal_Gradient_Colour
+        public unsafe BmSDK.GameObject.FColor AtmosGlobal_Gradient_Colour
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 184); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 184); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }; }
         }
 
         /// <summary>
@@ -1047,9 +1054,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: AtmosGlobal_Gradient_Direction
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 AtmosGlobal_Gradient_Direction
+        public unsafe System.Numerics.Vector3 AtmosGlobal_Gradient_Direction
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 192); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }; }
         }
 
         /// <summary>
@@ -1091,9 +1099,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Bloom_Tint
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor Bloom_Tint
+        public unsafe BmSDK.GameObject.FColor Bloom_Tint
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 220); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 220); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }; }
         }
 
         /// <summary>
@@ -1171,9 +1180,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: DOF_ModulateBlurColor
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor DOF_ModulateBlurColor
+        public unsafe BmSDK.GameObject.FColor DOF_ModulateBlurColor
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 256); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 256); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }; }
         }
 
         /// <summary>
@@ -1206,9 +1216,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: DOF_FocusPosition
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 DOF_FocusPosition
+        public unsafe System.Numerics.Vector3 DOF_FocusPosition
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 272); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }; }
         }
 
         /// <summary>
@@ -1286,9 +1297,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Scene_Colorize
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Scene_Colorize
+        public unsafe System.Numerics.Vector3 Scene_Colorize
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 316); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 316); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }; }
         }
 
         /// <summary>
@@ -1303,25 +1315,28 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Scene_HighLights
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Scene_HighLights
+        public unsafe System.Numerics.Vector3 Scene_HighLights
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 332); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }; }
         }
 
         /// <summary>
         /// StructProperty: Scene_MidTones
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Scene_MidTones
+        public unsafe System.Numerics.Vector3 Scene_MidTones
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 344); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 344); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }; }
         }
 
         /// <summary>
         /// StructProperty: Scene_Shadows
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Scene_Shadows
+        public unsafe System.Numerics.Vector3 Scene_Shadows
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 356); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 356); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }; }
         }
 
         /// <summary>
@@ -1345,9 +1360,10 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ColorGradingLUT
         /// </summary>
-        public unsafe ref BmSDK.Engine.PostProcessVolume.FLUTBlender ColorGradingLUT
+        public unsafe BmSDK.Engine.PostProcessVolume.FLUTBlender ColorGradingLUT
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FLUTBlender>((IntPtr)thisPtr + 376); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FLUTBlender>(Ptr + 376); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }; }
         }
     }
 

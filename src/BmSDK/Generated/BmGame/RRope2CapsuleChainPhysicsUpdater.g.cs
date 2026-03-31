@@ -218,33 +218,37 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
         /// <summary>
         /// StructProperty: CapsuleEnd1Position
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CapsuleEnd1Position
+        public unsafe System.Numerics.Vector3 CapsuleEnd1Position
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: CapsuleRotation
         /// </summary>
-        public unsafe ref BmSDK.Rotator CapsuleRotation
+        public unsafe BmSDK.Rotator CapsuleRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: CapsuleEnd1LinearVelocity
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CapsuleEnd1LinearVelocity
+        public unsafe System.Numerics.Vector3 CapsuleEnd1LinearVelocity
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>
         /// StructProperty: CapsuleEnd1AngularVelocity
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CapsuleEnd1AngularVelocity
+        public unsafe System.Numerics.Vector3 CapsuleEnd1AngularVelocity
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>

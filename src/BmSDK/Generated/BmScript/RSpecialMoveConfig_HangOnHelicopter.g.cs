@@ -91,9 +91,10 @@ public partial class RSpecialMoveConfig_HangOnHelicopter : BmSDK.BmGame.RSpecial
         /// <summary>
         /// StructProperty: CapeState
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeState
+        public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeState
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>

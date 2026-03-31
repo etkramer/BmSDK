@@ -214,9 +214,10 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ForegroundColor
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor ForegroundColor
+        public unsafe BmSDK.GameObject.FLinearColor ForegroundColor
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 76); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 76); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
         }
 
         /// <summary>

@@ -385,9 +385,10 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Size
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Size
+        public unsafe System.Numerics.Vector3 Size
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -402,33 +403,37 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: LFMaterialIndex
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat LFMaterialIndex
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat LFMaterialIndex
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// StructProperty: Scaling
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Scaling
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Scaling
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 68); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 68); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
         }
 
         /// <summary>
         /// StructProperty: AxisScaling
         /// </summary>
-        public unsafe ref BmSDK.DistributionVector.FRawDistributionVector AxisScaling
+        public unsafe BmSDK.DistributionVector.FRawDistributionVector AxisScaling
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>((IntPtr)thisPtr + 96); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }; }
         }
 
         /// <summary>
         /// StructProperty: Rotation
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Rotation
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Rotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 124); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 124); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }; }
         }
 
         /// <summary>
@@ -443,49 +448,55 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Color
         /// </summary>
-        public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Color
+        public unsafe BmSDK.DistributionVector.FRawDistributionVector Color
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>((IntPtr)thisPtr + 156); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 156); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }; }
         }
 
         /// <summary>
         /// StructProperty: Alpha
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Alpha
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Alpha
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 184); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 184); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }; }
         }
 
         /// <summary>
         /// StructProperty: Offset
         /// </summary>
-        public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Offset
+        public unsafe BmSDK.DistributionVector.FRawDistributionVector Offset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>((IntPtr)thisPtr + 212); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 212); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }; }
         }
 
         /// <summary>
         /// StructProperty: DistMap_Scale
         /// </summary>
-        public unsafe ref BmSDK.DistributionVector.FRawDistributionVector DistMap_Scale
+        public unsafe BmSDK.DistributionVector.FRawDistributionVector DistMap_Scale
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>((IntPtr)thisPtr + 240); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 240); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }; }
         }
 
         /// <summary>
         /// StructProperty: DistMap_Color
         /// </summary>
-        public unsafe ref BmSDK.DistributionVector.FRawDistributionVector DistMap_Color
+        public unsafe BmSDK.DistributionVector.FRawDistributionVector DistMap_Color
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>((IntPtr)thisPtr + 268); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 268); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }; }
         }
 
         /// <summary>
         /// StructProperty: DistMap_Alpha
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat DistMap_Alpha
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DistMap_Alpha
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 296); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 296); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }; }
         }
     }
 

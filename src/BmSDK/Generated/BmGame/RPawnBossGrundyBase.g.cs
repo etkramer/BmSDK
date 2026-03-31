@@ -1253,17 +1253,19 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: Origin
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Origin
+        public unsafe System.Numerics.Vector3 Origin
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: Direction
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Direction
+        public unsafe System.Numerics.Vector3 Direction
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
@@ -1301,9 +1303,10 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: CurrentWeightTarget
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData CurrentWeightTarget
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData CurrentWeightTarget
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1336,17 +1339,19 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: CurrentWeightTargetPosition
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CurrentWeightTargetPosition
+        public unsafe System.Numerics.Vector3 CurrentWeightTargetPosition
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// StructProperty: CurrentWeightTargetRotation
         /// </summary>
-        public unsafe ref BmSDK.Rotator CurrentWeightTargetRotation
+        public unsafe BmSDK.Rotator CurrentWeightTargetRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
         /// <summary>
@@ -1647,23 +1652,26 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: NumMaggots
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_0
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
         /// <summary>
         /// StructProperty: NumMaggots
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_1
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>((IntPtr)thisPtr + 20); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
         /// <summary>
         /// StructProperty: NumMaggots
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_2
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers NumMaggots_2
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMaggotNumbers>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
@@ -2191,23 +2199,26 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: SpeedIncPerSwing
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_0
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
         /// <summary>
         /// StructProperty: SpeedIncPerSwing
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_1
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
         /// <summary>
         /// StructProperty: SpeedIncPerSwing
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_2
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed SpeedIncPerSwing_2
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingSpeed>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
@@ -2247,23 +2258,26 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         /// <summary>
         /// StructProperty: NumSwings
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_0
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>((IntPtr)thisPtr + 64); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
         /// <summary>
         /// StructProperty: NumSwings
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_1
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>((IntPtr)thisPtr + 84); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
         }
         /// <summary>
         /// StructProperty: NumSwings
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_2
+        public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers NumSwings_2
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>((IntPtr)thisPtr + 104); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingNumbers>(Ptr + 104); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }; }
         }
 
         /// <summary>

@@ -284,9 +284,10 @@ public partial class RCameraOverlayPlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ZeroAtom
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix ZeroAtom
+        public unsafe BmSDK.GameObject.FMatrix ZeroAtom
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 48); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>

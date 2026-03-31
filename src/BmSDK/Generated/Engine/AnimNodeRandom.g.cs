@@ -154,9 +154,10 @@ public partial class AnimNodeRandom : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGam
         /// <summary>
         /// StructProperty: PlayRateRange
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 PlayRateRange
+        public unsafe System.Numerics.Vector2 PlayRateRange
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>

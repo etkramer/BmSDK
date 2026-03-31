@@ -116,17 +116,19 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
         /// <summary>
         /// StructProperty: CurrentRotation
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FQuat CurrentRotation
+        public unsafe BmSDK.GameObject.FQuat CurrentRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: ReferenceRotation
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FQuat ReferenceRotation
+        public unsafe BmSDK.GameObject.FQuat ReferenceRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>((IntPtr)thisPtr + 32); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
 
         /// <summary>

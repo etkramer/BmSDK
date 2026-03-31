@@ -172,17 +172,19 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: LightDirection
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 LightDirection
+        public unsafe System.Numerics.Vector3 LightDirection
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// StructProperty: LightCol
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor LightCol
+        public unsafe BmSDK.GameObject.FLinearColor LightCol
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
         /// <summary>
@@ -233,25 +235,28 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: WaterColAbsorption
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor WaterColAbsorption
+        public unsafe BmSDK.GameObject.FLinearColor WaterColAbsorption
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 88); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 88); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }; }
         }
 
         /// <summary>
         /// StructProperty: WaterColTransmission
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor WaterColTransmission
+        public unsafe BmSDK.GameObject.FLinearColor WaterColTransmission
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 104); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 104); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }; }
         }
 
         /// <summary>
         /// StructProperty: WaterColScatter
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor WaterColScatter
+        public unsafe BmSDK.GameObject.FLinearColor WaterColScatter
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 120); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 120); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }; }
         }
     }
 

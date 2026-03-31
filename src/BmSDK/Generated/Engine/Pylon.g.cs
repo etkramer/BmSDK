@@ -261,9 +261,10 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
         /// <summary>
         /// StructProperty: OwningPylon
         /// </summary>
-        public unsafe ref BmSDK.Engine.Actor.FActorReference OwningPylon
+        public unsafe BmSDK.Engine.Actor.FActorReference OwningPylon
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FActorReference>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FActorReference>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -278,9 +279,10 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
         /// <summary>
         /// StructProperty: CachedPoly
         /// </summary>
-        public unsafe ref System.IntPtr CachedPoly
+        public unsafe System.IntPtr CachedPoly
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 

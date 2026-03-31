@@ -305,17 +305,19 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         /// <summary>
         /// StructProperty: WhipHipBone
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipBoneData WhipHipBone
+        public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipBoneData WhipHipBone
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: WhipPhysicsApplicationBone
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipBoneData WhipPhysicsApplicationBone
+        public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipBoneData WhipPhysicsApplicationBone
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
@@ -366,41 +368,46 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         /// <summary>
         /// StructProperty: HandleForwardsVector
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 HandleForwardsVector
+        public unsafe System.Numerics.Vector3 HandleForwardsVector
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 44); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
         }
 
         /// <summary>
         /// StructProperty: HandleDownVector
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 HandleDownVector
+        public unsafe System.Numerics.Vector3 HandleDownVector
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 56); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
         }
 
         /// <summary>
         /// StructProperty: HandleOutVector
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 HandleOutVector
+        public unsafe System.Numerics.Vector3 HandleOutVector
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 68); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
         }
 
         /// <summary>
         /// StructProperty: CurrPos
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CurrPos
+        public unsafe System.Numerics.Vector3 CurrPos
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 80); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
 
         /// <summary>
         /// StructProperty: CurrVel
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 CurrVel
+        public unsafe System.Numerics.Vector3 CurrVel
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 92); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }; }
         }
 
         /// <summary>
@@ -458,17 +465,19 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         /// <summary>
         /// StructProperty: RetargetPose
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix RetargetPose
+        public unsafe BmSDK.GameObject.FMatrix RetargetPose
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: RetargetCurrentPose
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix RetargetCurrentPose
+        public unsafe BmSDK.GameObject.FMatrix RetargetCurrentPose
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 80); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
 
         /// <summary>
@@ -508,25 +517,28 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         /// <summary>
         /// StructProperty: ReparentBone
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipBoneData ReparentBone
+        public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipBoneData ReparentBone
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: NewParentBone
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipBoneData NewParentBone
+        public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipBoneData NewParentBone
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: OrigReparentBoneOverride
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipBoneData OrigReparentBoneOverride
+        public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipBoneData OrigReparentBoneOverride
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipBoneData>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>

@@ -129,17 +129,19 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
         /// <summary>
         /// StructProperty: HorizontalRange
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 HorizontalRange
+        public unsafe System.Numerics.Vector2 HorizontalRange
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// StructProperty: VerticalRange
         /// </summary>
-        public unsafe ref System.Numerics.Vector2 VerticalRange
+        public unsafe System.Numerics.Vector2 VerticalRange
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -404,73 +406,82 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
         /// <summary>
         /// StructProperty: LU
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform LU
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform LU
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: LC
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform LC
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform LC
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 48); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>
         /// StructProperty: LD
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform LD
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform LD
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 80); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
         }
 
         /// <summary>
         /// StructProperty: CU
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform CU
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform CU
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 112); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }; }
         }
 
         /// <summary>
         /// StructProperty: CC
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform CC
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform CC
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 144); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 144); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
         }
 
         /// <summary>
         /// StructProperty: CD
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform CD
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform CD
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 176); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 176); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }; }
         }
 
         /// <summary>
         /// StructProperty: RU
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform RU
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform RU
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 208); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 208); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }; }
         }
 
         /// <summary>
         /// StructProperty: RC
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform RC
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform RC
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 240); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 240); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }; }
         }
 
         /// <summary>
         /// StructProperty: RD
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNodeAimOffset.FAimTransform RD
+        public unsafe BmSDK.Engine.AnimNodeAimOffset.FAimTransform RD
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>((IntPtr)thisPtr + 272); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeAimOffset.FAimTransform>(Ptr + 272); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }; }
         }
     }
 
@@ -483,17 +494,19 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
         /// <summary>
         /// StructProperty: Quaternion
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FQuat Quaternion
+        public unsafe BmSDK.GameObject.FQuat Quaternion
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Translation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Translation
+        public unsafe System.Numerics.Vector3 Translation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
 }

@@ -250,9 +250,10 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BonePos1
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 BonePos1
+        public unsafe System.Numerics.Vector3 BonePos1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -267,9 +268,10 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BonePos2
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 BonePos2
+        public unsafe System.Numerics.Vector3 BonePos2
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>

@@ -1489,9 +1489,10 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Position
+        public unsafe System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>

@@ -170,9 +170,10 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: CurveColor
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor CurveColor
+        public unsafe BmSDK.GameObject.FColor CurveColor
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>

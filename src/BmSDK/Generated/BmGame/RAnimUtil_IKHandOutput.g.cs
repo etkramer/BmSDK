@@ -88,16 +88,18 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_0
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_1
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>((IntPtr)thisPtr + 84); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
         }
     }
 
@@ -119,49 +121,55 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: LockedReferencePointTranslation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 LockedReferencePointTranslation
+        public unsafe System.Numerics.Vector3 LockedReferencePointTranslation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
         /// StructProperty: LockedReferencePointRotation
         /// </summary>
-        public unsafe ref BmSDK.Rotator LockedReferencePointRotation
+        public unsafe BmSDK.Rotator LockedReferencePointRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: PredictedTranslation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 PredictedTranslation
+        public unsafe System.Numerics.Vector3 PredictedTranslation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: AdjustedTranslation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 AdjustedTranslation
+        public unsafe System.Numerics.Vector3 AdjustedTranslation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
         /// StructProperty: TargetOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 TargetOffset
+        public unsafe System.Numerics.Vector3 TargetOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
         /// <summary>
         /// StructProperty: BlendTime
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan BlendTime
+        public unsafe BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan BlendTime
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>((IntPtr)thisPtr + 64); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
 
         /// <summary>
@@ -209,16 +217,18 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_0
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_1
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>((IntPtr)thisPtr + 48); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
     }
 

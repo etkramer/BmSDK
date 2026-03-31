@@ -371,17 +371,19 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
         /// <summary>
         /// StructProperty: ParameterValue
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FLinearColor ParameterValue
+        public unsafe BmSDK.GameObject.FLinearColor ParameterValue
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
         /// StructProperty: ParameterValueCurve
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FInterpCurveVector ParameterValueCurve
+        public unsafe BmSDK.GameObject.FInterpCurveVector ParameterValueCurve
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
     }
 
@@ -419,9 +421,10 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
         /// <summary>
         /// StructProperty: ParameterValueCurve
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FInterpCurveFloat ParameterValueCurve
+        public unsafe BmSDK.GameObject.FInterpCurveFloat ParameterValueCurve
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
     }
 
@@ -459,9 +462,10 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
         /// <summary>
         /// StructProperty: ExpressionGUID
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FGuid ExpressionGUID
+        public unsafe BmSDK.GameObject.FGuid ExpressionGUID
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

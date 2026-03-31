@@ -784,9 +784,10 @@ public partial class OnlinePlayerStorage : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ProfileSetting
         /// </summary>
-        public unsafe ref BmSDK.Engine.Settings.FSettingsProperty ProfileSetting
+        public unsafe BmSDK.Engine.Settings.FSettingsProperty ProfileSetting
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FSettingsProperty>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FSettingsProperty>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 

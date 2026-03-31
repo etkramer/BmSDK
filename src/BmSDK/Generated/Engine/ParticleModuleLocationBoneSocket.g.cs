@@ -102,9 +102,10 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
         /// <summary>
         /// StructProperty: Offset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Offset
+        public unsafe System.Numerics.Vector3 Offset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
 

@@ -617,9 +617,10 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
         /// <summary>
         /// StructProperty: ExplodePosition
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 ExplodePosition
+        public unsafe System.Numerics.Vector3 ExplodePosition
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -652,9 +653,10 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
         /// <summary>
         /// StructProperty: BlastOriginOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 BlastOriginOffset
+        public unsafe System.Numerics.Vector3 BlastOriginOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 32); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
 
         /// <summary>
@@ -678,17 +680,19 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
         /// <summary>
         /// StructProperty: ExplodeVelocity
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 ExplodeVelocity
+        public unsafe System.Numerics.Vector3 ExplodeVelocity
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
 
         /// <summary>
         /// StructProperty: ExplodeAngularVelocity
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 ExplodeAngularVelocity
+        public unsafe System.Numerics.Vector3 ExplodeAngularVelocity
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 64); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
 
         /// <summary>
@@ -768,17 +772,19 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
         /// <summary>
         /// StructProperty: InitialVel
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 InitialVel
+        public unsafe System.Numerics.Vector3 InitialVel
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: InitialAngVel
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 InitialAngVel
+        public unsafe System.Numerics.Vector3 InitialAngVel
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>

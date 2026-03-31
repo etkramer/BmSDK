@@ -137,25 +137,28 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
         /// <summary>
         /// StructProperty: RopeAttachPoint
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RopeAttachPoint
+        public unsafe System.Numerics.Vector3 RopeAttachPoint
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: RopeAttachRotation
         /// </summary>
-        public unsafe ref BmSDK.Rotator RopeAttachRotation
+        public unsafe BmSDK.Rotator RopeAttachRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>
         /// StructProperty: RopeRenderAttachPoint
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RopeRenderAttachPoint
+        public unsafe System.Numerics.Vector3 RopeRenderAttachPoint
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
@@ -179,16 +182,18 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
         /// <summary>
         /// StructProperty: RopeExtraAttachConnections
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_0
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_0
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>((IntPtr)thisPtr + 56); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
         }
         /// <summary>
         /// StructProperty: RopeExtraAttachConnections
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_1
+        public unsafe BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection RopeExtraAttachConnections_1
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>((IntPtr)thisPtr + 108); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponent.FRopeExtraAttachConnection>(Ptr + 108); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }; }
         }
 
         /// <summary>
@@ -212,9 +217,10 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
         /// <summary>
         /// StructProperty: RopePelvisAttachPoint
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 RopePelvisAttachPoint
+        public unsafe System.Numerics.Vector3 RopePelvisAttachPoint
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 168); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 168); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }; }
         }
 
         /// <summary>

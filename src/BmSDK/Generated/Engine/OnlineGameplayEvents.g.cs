@@ -91,9 +91,10 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: EventLocation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 EventLocation
+        public unsafe System.Numerics.Vector3 EventLocation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
@@ -236,9 +237,10 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>

@@ -113,9 +113,10 @@ public partial class RAnimUtil_AimingOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: References
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimUtil.FAimingReferences References
+        public unsafe BmSDK.BmGame.RAnimUtil.FAimingReferences References
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FAimingReferences>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FAimingReferences>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
     }
 
@@ -171,9 +172,10 @@ public partial class RAnimUtil_AimingOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Proportion
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Proportion
+        public unsafe System.Numerics.Vector3 Proportion
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
 
@@ -211,33 +213,37 @@ public partial class RAnimUtil_AimingOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: RefPose
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FQuat RefPose
+        public unsafe BmSDK.GameObject.FQuat RefPose
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: OneOverPositiveLimit
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 OneOverPositiveLimit
+        public unsafe System.Numerics.Vector3 OneOverPositiveLimit
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: OneOverNegativeLimit
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 OneOverNegativeLimit
+        public unsafe System.Numerics.Vector3 OneOverNegativeLimit
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: Proportion
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Proportion
+        public unsafe System.Numerics.Vector3 Proportion
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
 
         /// <summary>
@@ -277,9 +283,10 @@ public partial class RAnimUtil_AimingOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Weight
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RAnimConfig.FWeight Weight
+        public unsafe BmSDK.BmGame.RAnimConfig.FWeight Weight
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimConfig.FWeight>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.FWeight>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>

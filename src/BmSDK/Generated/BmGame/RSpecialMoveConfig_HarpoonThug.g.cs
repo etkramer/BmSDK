@@ -157,9 +157,10 @@ public partial class RSpecialMoveConfig_HarpoonThug : BmSDK.BmGame.RSpecialMoveC
         /// <summary>
         /// StructProperty: ReleaseClawImpulse
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 ReleaseClawImpulse
+        public unsafe System.Numerics.Vector3 ReleaseClawImpulse
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>

@@ -129,33 +129,37 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: MinHeight
         /// </summary>
-        public unsafe ref BmSDK.Engine.TerrainLayerSetup.FFilterLimit MinHeight
+        public unsafe BmSDK.Engine.TerrainLayerSetup.FFilterLimit MinHeight
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
 
         /// <summary>
         /// StructProperty: MaxHeight
         /// </summary>
-        public unsafe ref BmSDK.Engine.TerrainLayerSetup.FFilterLimit MaxHeight
+        public unsafe BmSDK.Engine.TerrainLayerSetup.FFilterLimit MaxHeight
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: MinSlope
         /// </summary>
-        public unsafe ref BmSDK.Engine.TerrainLayerSetup.FFilterLimit MinSlope
+        public unsafe BmSDK.Engine.TerrainLayerSetup.FFilterLimit MinSlope
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>((IntPtr)thisPtr + 44); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>(Ptr + 44); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
         }
 
         /// <summary>
         /// StructProperty: MaxSlope
         /// </summary>
-        public unsafe ref BmSDK.Engine.TerrainLayerSetup.FFilterLimit MaxSlope
+        public unsafe BmSDK.Engine.TerrainLayerSetup.FFilterLimit MaxSlope
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>((IntPtr)thisPtr + 60); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainLayerSetup.FFilterLimit>(Ptr + 60); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
         }
 
         /// <summary>

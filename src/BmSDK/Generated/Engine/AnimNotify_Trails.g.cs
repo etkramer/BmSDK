@@ -110,25 +110,28 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: FirstEdgeSample
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 FirstEdgeSample
+        public unsafe System.Numerics.Vector3 FirstEdgeSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
         /// StructProperty: ControlPointSample
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 ControlPointSample
+        public unsafe System.Numerics.Vector3 ControlPointSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// StructProperty: SecondEdgeSample
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 SecondEdgeSample
+        public unsafe System.Numerics.Vector3 SecondEdgeSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
     }
 
@@ -150,25 +153,28 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: FirstEdgeSample
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint FirstEdgeSample
+        public unsafe BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint FirstEdgeSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
         /// StructProperty: ControlPointSample
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint ControlPointSample
+        public unsafe BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint ControlPointSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: SecondEdgeSample
         /// </summary>
-        public unsafe ref BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint SecondEdgeSample
+        public unsafe BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint SecondEdgeSample
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>((IntPtr)thisPtr + 52); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Trails.FTrailSocketSamplePoint>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
         }
     }
 
@@ -181,17 +187,19 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Position
+        public unsafe System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Velocity
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Velocity
+        public unsafe System.Numerics.Vector3 Velocity
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 

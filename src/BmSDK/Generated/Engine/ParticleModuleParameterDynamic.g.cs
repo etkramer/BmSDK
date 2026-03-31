@@ -136,9 +136,10 @@ public partial class ParticleModuleParameterDynamic : BmSDK.Engine.ParticleModul
         /// <summary>
         /// StructProperty: ParamValue
         /// </summary>
-        public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ParamValue
+        public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ParamValue
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>((IntPtr)thisPtr + 20); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }
 

@@ -1538,9 +1538,10 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: DataSource
         /// </summary>
-        public unsafe ref BmSDK.Engine.UIRoot.FUIDataStoreBinding DataSource
+        public unsafe BmSDK.Engine.UIRoot.FUIDataStoreBinding DataSource
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIRoot.FUIDataStoreBinding>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FUIDataStoreBinding>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1627,17 +1628,19 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ModelRef
         /// </summary>
-        public unsafe ref System.IntPtr ModelRef
+        public unsafe System.IntPtr ModelRef
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 144); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 144); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
         }
 
         /// <summary>
         /// StructProperty: ControlRef
         /// </summary>
-        public unsafe ref System.IntPtr ControlRef
+        public unsafe System.IntPtr ControlRef
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 148); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 148); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }; }
         }
     }
 

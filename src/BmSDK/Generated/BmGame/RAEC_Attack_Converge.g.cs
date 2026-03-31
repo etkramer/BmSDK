@@ -286,9 +286,10 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
         /// <summary>
         /// StructProperty: Loc
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Loc
+        public unsafe System.Numerics.Vector3 Loc
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

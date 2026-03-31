@@ -109,9 +109,10 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: InterrogationOffset
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 InterrogationOffset
+        public unsafe System.Numerics.Vector3 InterrogationOffset
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -168,17 +169,19 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: IdleTriplet
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet IdleTriplet
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet IdleTriplet
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Randoms
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData Randoms
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData Randoms
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData>((IntPtr)thisPtr + 24); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
     }
 
@@ -191,9 +194,10 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: IdleTriplet
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet IdleTriplet
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet IdleTriplet
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -208,17 +212,19 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Randoms
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData Randoms
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData Randoms
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData>((IntPtr)thisPtr + 36); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimationData>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
         }
 
         /// <summary>
         /// StructProperty: StartledAnimations
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FStartledAnimationData StartledAnimations
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FStartledAnimationData StartledAnimations
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FStartledAnimationData>((IntPtr)thisPtr + 56); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FStartledAnimationData>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
         }
     }
 
@@ -231,17 +237,19 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FrontStartle
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation FrontStartle
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation FrontStartle
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: BackStartle
         /// </summary>
-        public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation BackStartle
+        public unsafe BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation BackStartle
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FRandomAnimation>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 

@@ -391,9 +391,10 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Settings
         /// </summary>
-        public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings Settings
+        public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings Settings
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
 
@@ -406,9 +407,10 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ErrorBounds
         /// </summary>
-        public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds ErrorBounds
+        public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds ErrorBounds
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

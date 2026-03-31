@@ -173,49 +173,55 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: WeaponEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FWeaponEvents WeaponEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FWeaponEvents WeaponEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>((IntPtr)thisPtr + 60); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>(Ptr + 60); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
         }
 
         /// <summary>
         /// StructProperty: DamageAsPlayerEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsPlayerEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsPlayerEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>((IntPtr)thisPtr + 132); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 132); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }; }
         }
 
         /// <summary>
         /// StructProperty: DamageAsTargetEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsTargetEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsTargetEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>((IntPtr)thisPtr + 204); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 204); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }; }
         }
 
         /// <summary>
         /// StructProperty: ProjectileEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FProjectileEvents ProjectileEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FProjectileEvents ProjectileEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>((IntPtr)thisPtr + 276); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>(Ptr + 276); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }; }
         }
 
         /// <summary>
         /// StructProperty: PawnEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FPawnEvents PawnEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FPawnEvents PawnEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FPawnEvents>((IntPtr)thisPtr + 348); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FPawnEvents>(Ptr + 348); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }; }
         }
     }
 
@@ -228,49 +234,55 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: WeaponEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FWeaponEvents WeaponEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FWeaponEvents WeaponEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>((IntPtr)thisPtr + 60); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>(Ptr + 60); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
         }
 
         /// <summary>
         /// StructProperty: DamageAsPlayerEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsPlayerEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsPlayerEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>((IntPtr)thisPtr + 132); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 132); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }; }
         }
 
         /// <summary>
         /// StructProperty: DamageAsTargetEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsTargetEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents DamageAsTargetEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>((IntPtr)thisPtr + 204); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 204); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }; }
         }
 
         /// <summary>
         /// StructProperty: ProjectileEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FProjectileEvents ProjectileEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FProjectileEvents ProjectileEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>((IntPtr)thisPtr + 276); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>(Ptr + 276); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }; }
         }
 
         /// <summary>
         /// StructProperty: PawnEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FPawnEvents PawnEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FPawnEvents PawnEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FPawnEvents>((IntPtr)thisPtr + 348); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FPawnEvents>(Ptr + 348); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }; }
         }
     }
 
@@ -283,9 +295,10 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -307,9 +320,10 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -331,9 +345,10 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -355,9 +370,10 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: TotalEvents
         /// </summary>
-        public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
+        public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents TotalEvents
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -379,9 +395,10 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         /// <summary>
         /// StructProperty: Events
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMap_Mirror Events
+        public unsafe BmSDK.GameObject.FMap_Mirror Events
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 

@@ -136,9 +136,10 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Curve
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FInterpCurveVector Curve
+        public unsafe BmSDK.GameObject.FInterpCurveVector Curve
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -517,25 +518,28 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: WorldToLight
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix WorldToLight
+        public unsafe BmSDK.GameObject.FMatrix WorldToLight
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: LightToWorld
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix LightToWorld
+        public unsafe BmSDK.GameObject.FMatrix LightToWorld
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 64); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
         }
 
         /// <summary>
         /// StructProperty: LightSpaceImportanceBounds
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FBox LightSpaceImportanceBounds
+        public unsafe BmSDK.GameObject.FBox LightSpaceImportanceBounds
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>((IntPtr)thisPtr + 128); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 128); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }; }
         }
 
         /// <summary>
@@ -579,9 +583,10 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Reference
         /// </summary>
-        public unsafe ref System.IntPtr Reference
+        public unsafe System.IntPtr Reference
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 

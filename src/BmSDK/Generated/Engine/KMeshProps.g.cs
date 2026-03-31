@@ -130,9 +130,10 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: RenderInfo
         /// </summary>
-        public unsafe ref System.IntPtr RenderInfo
+        public unsafe System.IntPtr RenderInfo
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 48); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
 
         /// <summary>
@@ -208,9 +209,10 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ElemBox
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FBox ElemBox
+        public unsafe BmSDK.GameObject.FBox ElemBox
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>((IntPtr)thisPtr + 72); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 72); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }; }
         }
 
         /// <summary>
@@ -232,9 +234,10 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TM
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix TM
+        public unsafe BmSDK.GameObject.FMatrix TM
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -283,9 +286,10 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TM
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix TM
+        public unsafe BmSDK.GameObject.FMatrix TM
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -361,9 +365,10 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TM
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FMatrix TM
+        public unsafe BmSDK.GameObject.FMatrix TM
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

@@ -391,9 +391,10 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Color
         /// </summary>
-        public unsafe ref BmSDK.GameObject.FColor Color
+        public unsafe BmSDK.GameObject.FColor Color
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>

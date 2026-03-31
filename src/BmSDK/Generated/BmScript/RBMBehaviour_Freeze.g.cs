@@ -1727,9 +1727,10 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         /// <summary>
         /// StructProperty: Location
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 Location
+        public unsafe System.Numerics.Vector3 Location
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1780,17 +1781,19 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         /// <summary>
         /// StructProperty: PrintSpawnLocation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 PrintSpawnLocation
+        public unsafe System.Numerics.Vector3 PrintSpawnLocation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
 
         /// <summary>
         /// StructProperty: PrintSpawnRotation
         /// </summary>
-        public unsafe ref BmSDK.Rotator PrintSpawnRotation
+        public unsafe BmSDK.Rotator PrintSpawnRotation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 40); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
         }
     }
 

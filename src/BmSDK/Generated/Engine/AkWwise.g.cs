@@ -1076,17 +1076,19 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TransformedPosition
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 TransformedPosition
+        public unsafe System.Numerics.Vector3 TransformedPosition
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: TransformedOrientation
         /// </summary>
-        public unsafe ref System.Numerics.Vector3 TransformedOrientation
+        public unsafe System.Numerics.Vector3 TransformedOrientation
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 
@@ -1099,9 +1101,10 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: EnvSettings
         /// </summary>
-        public unsafe ref BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvSettings
+        public unsafe BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvSettings
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>((IntPtr)thisPtr + 0); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
@@ -1211,9 +1214,10 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: SoundHandle
         /// </summary>
-        public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle
+        public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>((IntPtr)thisPtr + 4); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 

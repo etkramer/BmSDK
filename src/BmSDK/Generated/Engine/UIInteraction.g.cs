@@ -255,9 +255,10 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: NextRepeatTime
         /// </summary>
-        public unsafe ref double NextRepeatTime
+        public unsafe double NextRepeatTime
         {
-            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<double>((IntPtr)thisPtr + 8); } }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
 
