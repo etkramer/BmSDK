@@ -1,9 +1,10 @@
 namespace BmSDK.Framework;
 
-internal static class GameObjectTypeCache
+internal static class FindObjectsCache
 {
     private static readonly Dictionary<Type, LinkedList<GameObject>> s_objectsByType = [];
-    private static readonly Dictionary<GameObject, LinkedListNode<GameObject>[]> s_removalCache = [];
+    private static readonly Dictionary<GameObject, LinkedListNode<GameObject>[]> s_removalCache =
+    [];
 
     public static IEnumerable<T> FindObjects<T>()
         where T : GameObject

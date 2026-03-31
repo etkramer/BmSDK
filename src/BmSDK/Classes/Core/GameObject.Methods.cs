@@ -14,7 +14,7 @@ public partial class GameObject
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
-    [Obsolete("Please use Game.FindObjects instead")]
+    [Obsolete("Use Game.FindObjects instead")]
     public static unsafe IEnumerable<T> FindObjectsSlow<T>()
         where T : GameObject =>
         GObjects

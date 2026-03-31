@@ -119,7 +119,7 @@ internal static unsafe class MarshalUtil
         )
         {
             var dataSize = sizeof(TArray<TManaged>.NativeData);
-            
+
             if (value is null || data == null)
             {
                 // Clear native struct memory
@@ -192,7 +192,7 @@ internal static unsafe class MarshalUtil
         // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
         {
-            GameObjectTypeCache.Register(existingObj);
+            FindObjectsCache.Register(existingObj);
             return existingObj;
         }
 
@@ -228,7 +228,7 @@ internal static unsafe class MarshalUtil
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
-        GameObjectTypeCache.Register(newObj);
+        FindObjectsCache.Register(newObj);
         return newObj;
     }
 
@@ -236,7 +236,7 @@ internal static unsafe class MarshalUtil
     {
         if (s_managedObjects.TryGetValue(objPtr, out var obj))
         {
-            GameObjectTypeCache.Unregister(obj);
+            FindObjectsCache.Unregister(obj);
 
             // Detach all script components
             if (obj.ScriptComponents.Count > 0)
