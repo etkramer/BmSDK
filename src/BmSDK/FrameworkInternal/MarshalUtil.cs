@@ -192,6 +192,7 @@ internal static unsafe class MarshalUtil
         // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
         {
+            GameObjectTypeCache.Register(existingObj);
             return existingObj;
         }
 
@@ -227,6 +228,7 @@ internal static unsafe class MarshalUtil
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
+        GameObjectTypeCache.Register(newObj);
         return newObj;
     }
 
@@ -234,6 +236,8 @@ internal static unsafe class MarshalUtil
     {
         if (s_managedObjects.TryGetValue(objPtr, out var obj))
         {
+            GameObjectTypeCache.Unregister(obj);
+
             // Detach all script components
             if (obj.ScriptComponents.Count > 0)
             {

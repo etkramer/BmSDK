@@ -107,6 +107,12 @@ public static partial class Game
         where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
+    /// Returns an enumerable containing all objects of the given type.
+    /// </summary>
+    public static IEnumerable<T> FindObjects<T>()
+        where T : GameObject => GameObjectTypeCache.FindObjects<T>();
+
+    /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
     public static unsafe Actor SpawnActor(
