@@ -58,15 +58,20 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
         where TComponent : class, Framework.IScriptComponent<MaterialExpressionContractExpand>
         => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionContractExpand>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
     /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<MaterialExpressionContractExpand>
         => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="GameObject.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<MaterialExpressionContractExpand>
-        => ((GameObject)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Enum: EContractOrExpandInput

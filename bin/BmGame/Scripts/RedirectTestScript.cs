@@ -43,7 +43,7 @@ public class RedirectTestScript : Script
         }
         else
         {
-            rpp.DetachScriptComponent<RegenReductionComponent>();
+            rpp.DetachScriptComponents<RegenReductionComponent>();
         }
     }
 }

@@ -253,8 +253,19 @@ void Printer::PrintScHelpers(class UClass* _class, ostream& out)
     Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
     Printer::PrintScHelper("bool", "HasScriptComponent", true, false, false, type, out);
     Printer::PrintScHelper("TComponent", "GetScriptComponent", true, false, true, type, out);
+
+    // Print GetScriptComponents (list)
+    Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject.GetScriptComponents(Type)\"/>" << endl;
+    Printer::Indent(out) << "public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()" << endl;
+    Printer::PushIndent();
+    Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
+    Printer::Indent(out) << "=> ((GameObject)this).GetScriptComponents(typeof(TComponent))"
+        << ".Cast<TComponent>().ToList();" << endl;
+    Printer::PopIndent();
+    out << endl;
+
     Printer::PrintScHelper("void", "DetachScriptComponent", false, false, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponents", true, false, false, type, out);
 }
 
 void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out)

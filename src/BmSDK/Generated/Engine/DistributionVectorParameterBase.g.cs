@@ -53,15 +53,20 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
         where TComponent : class, Framework.IScriptComponent<DistributionVectorParameterBase>
         => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorParameterBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
     /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<DistributionVectorParameterBase>
         => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="GameObject.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<DistributionVectorParameterBase>
-        => ((GameObject)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// NameProperty: ParameterName
