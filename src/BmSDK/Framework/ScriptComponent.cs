@@ -3,17 +3,17 @@ using BmSDK.Engine;
 namespace BmSDK.Framework;
 
 /// <summary>
-/// Provides a base class for script components that are associated with a strongly-typed UObject instance.
+/// Base class for script components that can be attached to an object.
 /// These are similar to the game's built-in <see cref="ActorComponent"/>s,
 /// but allow for scripts to add their own custom behavior.
 /// </summary>
-/// <remarks>Extend this class to create script components that require access to a specific UObject type. The <see
-/// cref="Owner"/> property exposes the UObject instance as the specified type, enabling type-safe interactions
+/// <remarks>Extend this class to create script components that require access to a specific object type. The <see
+/// cref="Owner"/> property exposes the object instance as the specified type, enabling type-safe interactions
 /// within the component.
-/// This is especially useful if you want to use <see cref="ScriptComponentAttribute.AutoAttach"/>
-/// to apply the ScriptComponent to one specific child class of UObject only.
+/// This is especially useful if you want to use <see cref="ScriptComponentAttribute.AutoAttach"/> to automatically
+/// apply script components to a certain class.
 /// </remarks>
-/// <typeparam name="TClass">The type of UObject this script component attaches to.
+/// <typeparam name="TClass">The object type that this script component can be attached to.
 /// Must inherit from <see cref="GameObject"/>.</typeparam>
 /// <seealso cref="ScriptComponentAttribute"/>
 public abstract class ScriptComponent<TClass> : IScriptComponent<TClass>
@@ -50,7 +50,7 @@ public abstract class ScriptComponent<TClass> : IScriptComponent<TClass>
         if (!HasOwner())
         {
             throw new InvalidOperationException(
-                "Cannot detach ScriptComponent that is not attached to any UObject"
+                "Script component is not attached to an object"
             );
         }
 
