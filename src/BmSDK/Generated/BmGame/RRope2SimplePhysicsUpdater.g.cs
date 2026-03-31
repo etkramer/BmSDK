@@ -309,8 +309,11 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// StructProperty: SimpleRopePhysics
     /// </summary>
-    public unsafe ref System.IntPtr SimpleRopePhysics
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 212);
+    public unsafe System.IntPtr SimpleRopePhysics
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+    }
 
     /// <summary>
     /// ArrayProperty: ControlPoints

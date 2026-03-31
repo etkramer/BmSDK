@@ -76,8 +76,11 @@ public partial class FracturedSkinnedMeshComponent : BmSDK.Engine.FracturedBaseC
     /// <summary>
     /// StructProperty: ComponentSkinResources
     /// </summary>
-    public unsafe ref System.IntPtr ComponentSkinResources
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 512);
+    public unsafe System.IntPtr ComponentSkinResources
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 512); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+    }
 
     /// <summary>
     /// ArrayProperty: FragmentTransforms

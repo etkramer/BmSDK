@@ -1008,29 +1008,44 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
-    public unsafe ref System.IntPtr MaterialResources_0
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1256);
+    public unsafe System.IntPtr MaterialResources_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
+    }
     /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
-    public unsafe ref System.IntPtr MaterialResources_1
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1260);
+    public unsafe System.IntPtr MaterialResources_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
+    }
 
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe ref System.IntPtr DefaultMaterialInstances_0
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1264);
+    public unsafe System.IntPtr DefaultMaterialInstances_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
+    }
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe ref System.IntPtr DefaultMaterialInstances_1
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1268);
+    public unsafe System.IntPtr DefaultMaterialInstances_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
+    }
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe ref System.IntPtr DefaultMaterialInstances_2
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1272);
+    public unsafe System.IntPtr DefaultMaterialInstances_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
+    }
 
     /// <summary>
     /// IntProperty: EditorX

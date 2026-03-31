@@ -85,8 +85,11 @@ public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: InternalFaceFXAnimSet
     /// </summary>
-    public unsafe ref System.IntPtr InternalFaceFXAnimSet
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr InternalFaceFXAnimSet
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// ArrayProperty: RawFaceFXAnimSetBytes

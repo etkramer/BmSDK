@@ -164,8 +164,11 @@ public partial class RBreakableDemonSealBase : BmSDK.BmGame.RHarpoonTriggerBase,
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSecretInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 468);
+    public unsafe System.IntPtr VfTable_IRSecretInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
 
     /// <summary>
     /// IntProperty: SecretIndex

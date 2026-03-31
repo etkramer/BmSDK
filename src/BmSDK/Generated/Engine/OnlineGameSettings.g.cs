@@ -112,8 +112,11 @@ public partial class OnlineGameSettings : BmSDK.Engine.Settings, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ServerNonce
     /// </summary>
-    public unsafe ref ulong ServerNonce
-        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 108);
+    public unsafe ulong ServerNonce
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
 
     /// <summary>
     /// BoolProperty: bShouldAdvertise

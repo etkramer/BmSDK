@@ -340,14 +340,20 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CascadeScene
     /// </summary>
-    public unsafe ref System.IntPtr CascadeScene
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 140);
+    public unsafe System.IntPtr CascadeScene
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
 
     /// <summary>
     /// StructProperty: PSys
     /// </summary>
-    public unsafe ref System.IntPtr PSys
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 144);
+    public unsafe System.IntPtr PSys
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
 
     /// <summary>
     /// Enum: EPacketSizeMultiplier

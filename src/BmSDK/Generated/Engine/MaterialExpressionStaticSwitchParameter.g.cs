@@ -106,6 +106,9 @@ public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.Mate
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe ref System.IntPtr InstanceOverride
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 164);
+    public unsafe System.IntPtr InstanceOverride
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
 }

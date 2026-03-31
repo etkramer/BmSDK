@@ -310,6 +310,9 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReleaseCodecFence
     /// </summary>
-    public unsafe ref System.IntPtr ReleaseCodecFence
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 280);
+    public unsafe System.IntPtr ReleaseCodecFence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
 }

@@ -1735,20 +1735,29 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: pMovie
     /// </summary>
-    public unsafe ref System.IntPtr pMovie
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
+    public unsafe System.IntPtr pMovie
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
 
     /// <summary>
     /// StructProperty: pCaptureKeys
     /// </summary>
-    public unsafe ref System.IntPtr pCaptureKeys
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr pCaptureKeys
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// StructProperty: pFocusIgnoreKeys
     /// </summary>
-    public unsafe ref System.IntPtr pFocusIgnoreKeys
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
+    public unsafe System.IntPtr pFocusIgnoreKeys
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
     /// MapProperty: ASUClasses
@@ -1960,8 +1969,11 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OwnerAction
     /// </summary>
-    public unsafe ref System.IntPtr OwnerAction
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 196);
+    public unsafe System.IntPtr OwnerAction
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
+    }
 
     /// <summary>
     /// StructProperty: ViewMatrix

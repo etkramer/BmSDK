@@ -76,8 +76,11 @@ public partial class NavMeshGoalFilter_OutOfViewFrom : BmSDK.Engine.NavMeshGoal_
     /// <summary>
     /// StructProperty: GoalPoly
     /// </summary>
-    public unsafe ref System.IntPtr GoalPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 56);
+    public unsafe System.IntPtr GoalPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
 
     /// <summary>
     /// StructProperty: OutOfViewLocation

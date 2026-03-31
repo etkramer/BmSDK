@@ -169,8 +169,11 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FnxVoiceData
     /// </summary>
-    public unsafe ref System.IntPtr FnxVoiceData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 176);
+    public unsafe System.IntPtr FnxVoiceData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
 
     /// <summary>
     /// Struct: FRecogUserData

@@ -121,6 +121,9 @@ public partial class AkAudioActionAltitude : BmSDK.Engine.AkAudioAction, BmSDK.I
     /// <summary>
     /// StructProperty: AltitudeParameterLastUpdate
     /// </summary>
-    public unsafe ref double AltitudeParameterLastUpdate
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 72);
+    public unsafe double AltitudeParameterLastUpdate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
 }

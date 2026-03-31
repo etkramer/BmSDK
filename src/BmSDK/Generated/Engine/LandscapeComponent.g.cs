@@ -331,8 +331,11 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: EditToolRenderData
     /// </summary>
-    public unsafe ref System.IntPtr EditToolRenderData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 608);
+    public unsafe System.IntPtr EditToolRenderData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+    }
 
     /// <summary>
     /// IntProperty: CollisionMipLevel

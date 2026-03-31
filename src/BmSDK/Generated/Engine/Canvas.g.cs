@@ -864,14 +864,20 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Canvas
     /// </summary>
-    public unsafe ref System.IntPtr _Canvas
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
+    public unsafe System.IntPtr _Canvas
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 
     /// <summary>
     /// StructProperty: SceneView
     /// </summary>
-    public unsafe ref System.IntPtr SceneView
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
+    public unsafe System.IntPtr SceneView
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
 
     /// <summary>
     /// StructProperty: ColorModulate

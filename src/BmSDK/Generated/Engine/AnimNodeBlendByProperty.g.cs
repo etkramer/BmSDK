@@ -130,20 +130,29 @@ public partial class AnimNodeBlendByProperty : BmSDK.Engine.AnimNodeBlendList, B
     /// <summary>
     /// StructProperty: CachedFloatProperty
     /// </summary>
-    public unsafe ref System.IntPtr CachedFloatProperty
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 280);
+    public unsafe System.IntPtr CachedFloatProperty
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
 
     /// <summary>
     /// StructProperty: CachedBoolProperty
     /// </summary>
-    public unsafe ref System.IntPtr CachedBoolProperty
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 284);
+    public unsafe System.IntPtr CachedBoolProperty
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
 
     /// <summary>
     /// StructProperty: CachedByteProperty
     /// </summary>
-    public unsafe ref System.IntPtr CachedByteProperty
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 288);
+    public unsafe System.IntPtr CachedByteProperty
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
+    }
 
     /// <summary>
     /// ObjectProperty: CachedOwner

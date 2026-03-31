@@ -211,8 +211,11 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// StructProperty: ComponentBaseResources
     /// </summary>
-    public unsafe ref System.IntPtr ComponentBaseResources
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 476);
+    public unsafe System.IntPtr ComponentBaseResources
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence

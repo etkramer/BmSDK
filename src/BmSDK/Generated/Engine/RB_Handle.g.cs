@@ -265,14 +265,20 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HandleData
     /// </summary>
-    public unsafe ref System.IntPtr HandleData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
+    public unsafe System.IntPtr HandleData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
 
     /// <summary>
     /// StructProperty: KinActorData
     /// </summary>
-    public unsafe ref System.IntPtr KinActorData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
+    public unsafe System.IntPtr KinActorData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 
     /// <summary>
     /// FloatProperty: LinearDamping

@@ -314,6 +314,9 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StateFrame
     /// </summary>
-    public unsafe ref System.IntPtr StateFrame
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
+    public unsafe System.IntPtr StateFrame
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
 }

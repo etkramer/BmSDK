@@ -107,8 +107,11 @@ public partial class BrushComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: BrushPhysDesc
     /// </summary>
-    public unsafe ref System.IntPtr BrushPhysDesc
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 464);
+    public unsafe System.IntPtr BrushPhysDesc
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+    }
 
     /// <summary>
     /// StructProperty: CachedPhysBrushData

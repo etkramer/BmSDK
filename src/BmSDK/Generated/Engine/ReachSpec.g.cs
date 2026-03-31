@@ -131,8 +131,11 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: NavOctreeObject
     /// </summary>
-    public unsafe ref System.IntPtr NavOctreeObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
+    public unsafe System.IntPtr NavOctreeObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
 
     /// <summary>
     /// IntProperty: Distance

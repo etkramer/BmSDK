@@ -123,8 +123,11 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe ref System.IntPtr State
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
+    public unsafe System.IntPtr State
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 
     /// <summary>
     /// FloatProperty: InvisibleUpdateTime

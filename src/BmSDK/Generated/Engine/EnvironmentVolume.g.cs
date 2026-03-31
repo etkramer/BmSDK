@@ -117,14 +117,20 @@ public partial class EnvironmentVolume : BmSDK.Engine.Volume, BmSDK.Engine.Inter
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 472);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 476);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
 
     /// <summary>
     /// BoolProperty: bSplitNavMesh

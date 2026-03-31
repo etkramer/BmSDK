@@ -3167,8 +3167,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothing
     /// </summary>
-    public unsafe ref System.IntPtr ApexClothing
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 528);
+    public unsafe System.IntPtr ApexClothing
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 528); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+    }
 
     /// <summary>
     /// ArrayProperty: ForceFieldComponents
@@ -3233,8 +3236,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: MeshObject
     /// </summary>
-    public unsafe ref System.IntPtr MeshObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 592);
+    public unsafe System.IntPtr MeshObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
 
     /// <summary>
     /// StructProperty: WireframeColor
@@ -4364,8 +4370,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ClothSim
     /// </summary>
-    public unsafe ref System.IntPtr ClothSim
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1152);
+    public unsafe System.IntPtr ClothSim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
+    }
 
     /// <summary>
     /// IntProperty: SceneIndex
@@ -4697,8 +4706,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FaceFXActorInstance
     /// </summary>
-    public unsafe ref System.IntPtr FaceFXActorInstance
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1428);
+    public unsafe System.IntPtr FaceFXActorInstance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1428); }
+    }
 
     /// <summary>
     /// FloatProperty: FaceFxAnimStartTime
@@ -4895,8 +4907,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: StuckStartTime
     /// </summary>
-    public unsafe ref double StuckStartTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 1608);
+    public unsafe double StuckStartTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 1608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1608); }
+    }
 
     /// <summary>
     /// FloatProperty: CurrRagdollTime

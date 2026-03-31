@@ -546,6 +546,9 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.BmGame.RBatarangable
     /// <summary>
     /// StructProperty: CallbackEventDevice
     /// </summary>
-    public unsafe ref System.IntPtr CallbackEventDevice
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 484);
+    public unsafe System.IntPtr CallbackEventDevice
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 484); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+    }
 }

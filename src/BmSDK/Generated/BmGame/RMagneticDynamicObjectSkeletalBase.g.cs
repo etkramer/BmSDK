@@ -335,8 +335,11 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 496);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 496); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+    }
 
     /// <summary>
     /// FloatProperty: LastMagStr

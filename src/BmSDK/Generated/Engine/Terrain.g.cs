@@ -529,8 +529,11 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe ref System.IntPtr ReleaseResourcesFence
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 644);
+    public unsafe System.IntPtr ReleaseResourcesFence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 644); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
+    }
 
     /// <summary>
     /// IntProperty: EditorTessellationLevel

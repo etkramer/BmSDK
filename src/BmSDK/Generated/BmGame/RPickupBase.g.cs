@@ -561,8 +561,11 @@ public partial class RPickupBase : BmSDK.Engine.Actor, BmSDK.BmGame.RSecretInter
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSecretInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr VfTable_IRSecretInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// StructProperty: InvestigateOffset

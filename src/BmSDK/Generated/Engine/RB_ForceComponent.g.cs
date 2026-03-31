@@ -199,14 +199,20 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe ref System.IntPtr LinearKernel
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr LinearKernel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// StructProperty: TheNxForceField
     /// </summary>
-    public unsafe ref System.IntPtr TheNxForceField
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 432);
+    public unsafe System.IntPtr TheNxForceField
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
 
     /// <summary>
     /// Enum: EForceModeType

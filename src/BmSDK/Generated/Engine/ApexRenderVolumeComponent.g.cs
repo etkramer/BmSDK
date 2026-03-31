@@ -76,12 +76,18 @@ public partial class ApexRenderVolumeComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// StructProperty: ApexRenderVolume
     /// </summary>
-    public unsafe ref System.IntPtr ApexRenderVolume
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 404);
+    public unsafe System.IntPtr ApexRenderVolume
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 404); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+    }
 
     /// <summary>
     /// StructProperty: ViewRelevance
     /// </summary>
-    public unsafe ref System.IntPtr ViewRelevance
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 408);
+    public unsafe System.IntPtr ViewRelevance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+    }
 }

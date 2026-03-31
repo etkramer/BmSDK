@@ -71,8 +71,11 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Archive
     /// </summary>
-    public unsafe ref System.IntPtr Archive
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
+    public unsafe System.IntPtr Archive
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
 
     /// <summary>
     /// StrProperty: StatsFileName

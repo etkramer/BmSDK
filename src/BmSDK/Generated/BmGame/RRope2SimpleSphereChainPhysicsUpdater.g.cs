@@ -109,8 +109,11 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// StructProperty: SimpleRopePhysics
     /// </summary>
-    public unsafe ref System.IntPtr SimpleRopePhysics
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 208);
+    public unsafe System.IntPtr SimpleRopePhysics
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
 
     /// <summary>
     /// Struct: FRRope2SimpleSphereChainPhysicsUpdaterInitData

@@ -254,8 +254,11 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: StatEvent
     /// </summary>
-    public unsafe ref System.IntPtr StatEvent
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
+    public unsafe System.IntPtr StatEvent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
 
     /// <summary>
     /// ObjectProperty: Writer

@@ -184,6 +184,9 @@ public partial class AkAudioActionParameter : BmSDK.Engine.AkAudioAction, BmSDK.
     /// <summary>
     /// StructProperty: LastUpdateTime
     /// </summary>
-    public unsafe ref double LastUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 96);
+    public unsafe double LastUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 }

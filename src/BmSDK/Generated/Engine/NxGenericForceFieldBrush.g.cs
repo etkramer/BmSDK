@@ -213,8 +213,11 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// StructProperty: ForceField
     /// </summary>
-    public unsafe ref System.IntPtr ForceField
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 632);
+    public unsafe System.IntPtr ForceField
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+    }
 
     /// <summary>
     /// ArrayProperty: ConvexMeshes
@@ -246,8 +249,11 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe ref System.IntPtr LinearKernel
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 672);
+    public unsafe System.IntPtr LinearKernel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
 
     /// <summary>
     /// Enum: FFB_ForceFieldCoordinates

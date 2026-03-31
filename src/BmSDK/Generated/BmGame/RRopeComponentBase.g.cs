@@ -903,8 +903,11 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: RopePhysicsBase
     /// </summary>
-    public unsafe ref System.IntPtr RopePhysicsBase
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 536);
+    public unsafe System.IntPtr RopePhysicsBase
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
 
     /// <summary>
     /// ObjectProperty: ConstraintSetup

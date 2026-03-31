@@ -120,6 +120,9 @@ public partial class NavMeshGoal_ClosestActorInList : BmSDK.Engine.NavMeshPathGo
     /// <summary>
     /// StructProperty: CachedAnchorPoly
     /// </summary>
-    public unsafe ref System.IntPtr CachedAnchorPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 136);
+    public unsafe System.IntPtr CachedAnchorPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+    }
 }

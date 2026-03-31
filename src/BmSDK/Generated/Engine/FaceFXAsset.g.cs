@@ -123,8 +123,11 @@ public partial class FaceFXAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FaceFXActor
     /// </summary>
-    public unsafe ref System.IntPtr FaceFXActor
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr FaceFXActor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// ArrayProperty: RawFaceFXActorBytes

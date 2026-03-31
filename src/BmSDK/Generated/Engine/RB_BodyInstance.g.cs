@@ -621,20 +621,29 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BodyData
     /// </summary>
-    public unsafe ref System.IntPtr BodyData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 84);
+    public unsafe System.IntPtr BodyData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
 
     /// <summary>
     /// StructProperty: BoneSpring
     /// </summary>
-    public unsafe ref System.IntPtr BoneSpring
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 88);
+    public unsafe System.IntPtr BoneSpring
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+    }
 
     /// <summary>
     /// StructProperty: BoneSpringKinActor
     /// </summary>
-    public unsafe ref System.IntPtr BoneSpringKinActor
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
+    public unsafe System.IntPtr BoneSpringKinActor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
 
     /// <summary>
     /// BoolProperty: bEnableBoneSpringLinear

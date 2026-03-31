@@ -85,8 +85,11 @@ public partial class SpeedTree : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SRH
     /// </summary>
-    public unsafe ref System.IntPtr SRH
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr SRH
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// FloatProperty: LeafStaticShadowOpacity

@@ -413,8 +413,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Resource
     /// </summary>
-    public unsafe ref System.IntPtr Resource
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 176);
+    public unsafe System.IntPtr Resource
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
 
     /// <summary>
     /// StructProperty: LightingGuid

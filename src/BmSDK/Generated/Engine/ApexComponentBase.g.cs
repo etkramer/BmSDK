@@ -76,8 +76,11 @@ public partial class ApexComponentBase : BmSDK.Engine.MeshComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: ComponentBaseResources
     /// </summary>
-    public unsafe ref System.IntPtr ComponentBaseResources
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 416);
+    public unsafe System.IntPtr ComponentBaseResources
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+    }
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence

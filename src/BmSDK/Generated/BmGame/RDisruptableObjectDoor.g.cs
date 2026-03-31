@@ -184,8 +184,11 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// ComponentProperty: LightComponent

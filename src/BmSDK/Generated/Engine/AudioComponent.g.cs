@@ -687,8 +687,11 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Listener
     /// </summary>
-    public unsafe ref System.IntPtr Listener
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 316);
+    public unsafe System.IntPtr Listener
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+    }
 
     /// <summary>
     /// FloatProperty: PlaybackTime
@@ -819,8 +822,11 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastUpdateTime
     /// </summary>
-    public unsafe ref double LastUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 404);
+    public unsafe double LastUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 404); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+    }
 
     /// <summary>
     /// FloatProperty: SourceInteriorVolume

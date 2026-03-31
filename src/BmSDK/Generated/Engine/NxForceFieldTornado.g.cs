@@ -211,6 +211,9 @@ public partial class NxForceFieldTornado : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// StructProperty: Kernel
     /// </summary>
-    public unsafe ref System.IntPtr Kernel
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 544);
+    public unsafe System.IntPtr Kernel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
 }

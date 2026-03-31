@@ -1082,8 +1082,11 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AnchorPoly
     /// </summary>
-    public unsafe ref System.IntPtr AnchorPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr AnchorPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// StructProperty: PathCache
@@ -1094,20 +1097,29 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BestUnfinishedPathPoint
     /// </summary>
-    public unsafe ref System.IntPtr BestUnfinishedPathPoint
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 64);
+    public unsafe System.IntPtr BestUnfinishedPathPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
 
     /// <summary>
     /// StructProperty: CurrentEdge
     /// </summary>
-    public unsafe ref System.IntPtr CurrentEdge
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 68);
+    public unsafe System.IntPtr CurrentEdge
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
 
     /// <summary>
     /// StructProperty: SubGoal_DestPoly
     /// </summary>
-    public unsafe ref System.IntPtr SubGoal_DestPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
+    public unsafe System.IntPtr SubGoal_DestPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
 
     /// <summary>
     /// StructProperty: FinalDestination

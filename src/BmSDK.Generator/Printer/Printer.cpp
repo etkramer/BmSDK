@@ -395,10 +395,9 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
         }
 
         bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
-        bool isStructProperty = prop->IsA(UStructProperty::StaticClass());
-        bool shouldReturnStructByRef = isStructProperty && !isInStruct;
+        bool shouldReturnByRef = prop->ShouldReturnByRef() && !isInStruct;
 
-        if (shouldReturnStructByRef)
+        if (shouldReturnByRef)
         {
             Printer::Indent(out) << "public unsafe ref " << prop->GetInnerTypeNameManaged() << " "
                 << propNameManaged << endl;

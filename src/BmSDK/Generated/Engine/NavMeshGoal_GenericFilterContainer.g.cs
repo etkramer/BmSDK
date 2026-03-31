@@ -114,8 +114,11 @@ public partial class NavMeshGoal_GenericFilterContainer : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// StructProperty: SuccessfulGoal
     /// </summary>
-    public unsafe ref System.IntPtr SuccessfulGoal
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 76);
+    public unsafe System.IntPtr SuccessfulGoal
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
 
     /// <summary>
     /// ObjectProperty: MyNavigationHandle

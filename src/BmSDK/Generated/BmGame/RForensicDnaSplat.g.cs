@@ -177,8 +177,11 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: VfTable_IREvidenceInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IREvidenceInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 432);
+    public unsafe System.IntPtr VfTable_IREvidenceInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
 
     /// <summary>
     /// ObjectProperty: Material

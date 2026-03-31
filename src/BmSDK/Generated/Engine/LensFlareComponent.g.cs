@@ -308,8 +308,11 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe ref System.IntPtr ReleaseResourcesFence
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 468);
+    public unsafe System.IntPtr ReleaseResourcesFence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
 
     /// <summary>
     /// FloatProperty: NextTraceTime

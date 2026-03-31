@@ -373,8 +373,11 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResourceMem
     /// </summary>
-    public unsafe ref System.IntPtr ResourceMem
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 316);
+    public unsafe System.IntPtr ResourceMem
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+    }
 
     /// <summary>
     /// IntProperty: FirstResourceMemMip

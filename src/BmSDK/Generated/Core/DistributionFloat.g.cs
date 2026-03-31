@@ -106,8 +106,11 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FCurveEdInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FCurveEdInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 56);
+    public unsafe System.IntPtr VfTable_FCurveEdInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
 
     /// <summary>
     /// BoolProperty: bCanBeBaked

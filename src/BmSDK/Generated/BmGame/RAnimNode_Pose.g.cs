@@ -3037,8 +3037,11 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FTickableObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FTickableObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 208);
+    public unsafe System.IntPtr VfTable_FTickableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
 
     /// <summary>
     /// BoolProperty: EnableIKHandSupport

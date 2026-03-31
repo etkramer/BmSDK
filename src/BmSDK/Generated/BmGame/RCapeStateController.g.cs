@@ -435,8 +435,11 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CapePhysicsRef
     /// </summary>
-    public unsafe ref System.IntPtr CapePhysicsRef
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 60);
+    public unsafe System.IntPtr CapePhysicsRef
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
 
     /// <summary>
     /// NameProperty: CapeStateName

@@ -1225,14 +1225,20 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TranslationCodec
     /// </summary>
-    public unsafe ref System.IntPtr TranslationCodec
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 344);
+    public unsafe System.IntPtr TranslationCodec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+    }
 
     /// <summary>
     /// StructProperty: RotationCodec
     /// </summary>
-    public unsafe ref System.IntPtr RotationCodec
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 348);
+    public unsafe System.IntPtr RotationCodec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
+    }
 
     /// <summary>
     /// IntProperty: EncodingPkgVersion

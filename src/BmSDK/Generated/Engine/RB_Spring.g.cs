@@ -181,8 +181,11 @@ public partial class RB_Spring : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SpringData
     /// </summary>
-    public unsafe ref System.IntPtr SpringData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 104);
+    public unsafe System.IntPtr SpringData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
 
     /// <summary>
     /// FloatProperty: TimeSinceActivation

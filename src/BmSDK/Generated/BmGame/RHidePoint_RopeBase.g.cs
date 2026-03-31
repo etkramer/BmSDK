@@ -358,6 +358,9 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// StructProperty: SpecialEdgeCollection
     /// </summary>
-    public unsafe ref System.IntPtr SpecialEdgeCollection
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 992);
+    public unsafe System.IntPtr SpecialEdgeCollection
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 992); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
+    }
 }

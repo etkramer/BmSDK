@@ -134,8 +134,11 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// StructProperty: VoiceEngine
     /// </summary>
-    public unsafe ref System.IntPtr VoiceEngine
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 208);
+    public unsafe System.IntPtr VoiceEngine
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
 
     /// <summary>
     /// IntProperty: MaxLocalTalkers

@@ -170,12 +170,18 @@ public partial class NavMeshGoal_At : BmSDK.Engine.NavMeshPathGoalEvaluator, BmS
     /// <summary>
     /// StructProperty: GoalPoly
     /// </summary>
-    public unsafe ref System.IntPtr GoalPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 84);
+    public unsafe System.IntPtr GoalPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
 
     /// <summary>
     /// StructProperty: PartialGoal
     /// </summary>
-    public unsafe ref System.IntPtr PartialGoal
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 88);
+    public unsafe System.IntPtr PartialGoal
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+    }
 }

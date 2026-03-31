@@ -117,8 +117,11 @@ public partial class ParticleModuleTypeDataMeshPhysX : BmSDK.Engine.ParticleModu
     /// <summary>
     /// StructProperty: RenderInstance
     /// </summary>
-    public unsafe ref System.IntPtr RenderInstance
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
+    public unsafe System.IntPtr RenderInstance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
 
     /// <summary>
     /// StructProperty: VerticalLod

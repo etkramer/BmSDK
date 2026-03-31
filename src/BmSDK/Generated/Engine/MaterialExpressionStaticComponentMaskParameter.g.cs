@@ -118,6 +118,9 @@ public partial class MaterialExpressionStaticComponentMaskParameter : BmSDK.Engi
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe ref System.IntPtr InstanceOverride
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 136);
+    public unsafe System.IntPtr InstanceOverride
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+    }
 }

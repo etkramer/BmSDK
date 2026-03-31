@@ -286,8 +286,11 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 800);
+    public unsafe System.IntPtr VfTable_IRSpotableInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 800); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
+    }
 
     /// <summary>
     /// ArrayProperty: DetonateTargetCheckBones

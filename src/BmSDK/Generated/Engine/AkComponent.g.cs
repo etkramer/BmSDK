@@ -1507,14 +1507,20 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: FalloffEnhancementTimestamp
     /// </summary>
-    public unsafe ref double FalloffEnhancementTimestamp
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 152);
+    public unsafe double FalloffEnhancementTimestamp
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
 
     /// <summary>
     /// StructProperty: LastOcclusionUpdateTime
     /// </summary>
-    public unsafe ref double LastOcclusionUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 160);
+    public unsafe double LastOcclusionUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+    }
 
     /// <summary>
     /// FloatProperty: CurrentOcclusion
@@ -1603,8 +1609,11 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: LastSourceVelocityUpdateTime
     /// </summary>
-    public unsafe ref double LastSourceVelocityUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 280);
+    public unsafe double LastSourceVelocityUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
 
     /// <summary>
     /// ByteProperty: SpatialUpdateType
@@ -1672,8 +1681,11 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugLastFailedSourceCreateTime
     /// </summary>
-    public unsafe ref double DebugLastFailedSourceCreateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 320);
+    public unsafe double DebugLastFailedSourceCreateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
+    }
 
     /// <summary>
     /// Enum: EAkComponentSourceCreateFailReason

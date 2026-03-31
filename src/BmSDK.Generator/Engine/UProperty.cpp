@@ -104,3 +104,18 @@ string UProperty::GetInnerTypeNameManaged() const
 
     return "UNKNOWN";
 }
+
+bool UProperty::ShouldReturnByRef() const
+{
+    if (!IsA(UStructProperty::StaticClass()))
+    {
+        return false;
+    }
+
+    auto managedTypeName = GetInnerTypeNameManaged();
+
+    // Omit UE3 structs that are actually generated
+    // as non-struct C# types (see GetInnerTypeNameManaged above).
+    return managedTypeName != "System.IntPtr" && managedTypeName != "double"
+        && managedTypeName != "ulong";
+}

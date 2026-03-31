@@ -1648,8 +1648,11 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SkelMeshRUID
     /// </summary>
-    public unsafe ref ulong SkelMeshRUID
-        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 1000);
+    public unsafe ulong SkelMeshRUID
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 1000); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
+    }
 
     /// <summary>
     /// ArrayProperty: Stretches

@@ -76,8 +76,11 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe ref System.IntPtr InstanceOverride
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
+    public unsafe System.IntPtr InstanceOverride
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
 
     /// <summary>
     /// StructProperty: Base

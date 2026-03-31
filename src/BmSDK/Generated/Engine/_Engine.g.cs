@@ -2399,14 +2399,20 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RemoteControlExec
     /// </summary>
-    public unsafe ref System.IntPtr RemoteControlExec
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1228);
+    public unsafe System.IntPtr RemoteControlExec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1228); }
+    }
 
     /// <summary>
     /// StructProperty: MobileMaterialEmulator
     /// </summary>
-    public unsafe ref System.IntPtr MobileMaterialEmulator
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1232);
+    public unsafe System.IntPtr MobileMaterialEmulator
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
+    }
 
     /// <summary>
     /// StructProperty: C_WorldBox
@@ -2819,8 +2825,11 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScreenSaverInhibitor
     /// </summary>
-    public unsafe ref System.IntPtr ScreenSaverInhibitor
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1544);
+    public unsafe System.IntPtr ScreenSaverInhibitor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1544); }
+    }
 
     /// <summary>
     /// ObjectProperty: GlobalTranslationContext

@@ -164,8 +164,11 @@ public partial class RAudioHarleyHeadPointBase : BmSDK.BmGame.RAudioPoint, BmSDK
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSecretInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 516);
+    public unsafe System.IntPtr VfTable_IRSecretInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+    }
 
     /// <summary>
     /// IntProperty: Index

@@ -2192,8 +2192,11 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastTimeUnbuiltLightingWasEncountered
     /// </summary>
-    public unsafe ref double LastTimeUnbuiltLightingWasEncountered
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 916);
+    public unsafe double LastTimeUnbuiltLightingWasEncountered
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 916); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
+    }
 
     /// <summary>
     /// ObjectProperty: BookMarks

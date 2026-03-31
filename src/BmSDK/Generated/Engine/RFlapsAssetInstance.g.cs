@@ -139,14 +139,20 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FlapsParticleSystem
     /// </summary>
-    public unsafe ref System.IntPtr FlapsParticleSystem
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
+    public unsafe System.IntPtr FlapsParticleSystem
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 
     /// <summary>
     /// StructProperty: OwnerScene
     /// </summary>
-    public unsafe ref System.IntPtr OwnerScene
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
+    public unsafe System.IntPtr OwnerScene
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
 
     /// <summary>
     /// FloatProperty: BlendWeight

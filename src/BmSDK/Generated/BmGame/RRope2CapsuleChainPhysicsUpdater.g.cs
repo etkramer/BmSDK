@@ -190,8 +190,11 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// <summary>
     /// StructProperty: RopeCapsuleChainPhysics
     /// </summary>
-    public unsafe ref System.IntPtr RopeCapsuleChainPhysics
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 240);
+    public unsafe System.IntPtr RopeCapsuleChainPhysics
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
 
     /// <summary>
     /// Struct: FRope2CapsuleChainPhysicsUpdaterInitData

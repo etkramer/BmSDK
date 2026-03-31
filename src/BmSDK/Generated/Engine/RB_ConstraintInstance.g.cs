@@ -668,8 +668,11 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ConstraintData
     /// </summary>
-    public unsafe ref System.IntPtr ConstraintData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 64);
+    public unsafe System.IntPtr ConstraintData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
 
     /// <summary>
     /// StructProperty: LinearPositionTarget
@@ -752,6 +755,9 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DummyKinActor
     /// </summary>
-    public unsafe ref System.IntPtr DummyKinActor
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 152);
+    public unsafe System.IntPtr DummyKinActor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
 }

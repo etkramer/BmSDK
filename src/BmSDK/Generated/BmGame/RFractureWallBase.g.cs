@@ -909,14 +909,20 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 580);
+    public unsafe System.IntPtr VfTable_IRSpotableInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 580); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 584);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
 
     /// <summary>
     /// IntProperty: SavedNumFragments

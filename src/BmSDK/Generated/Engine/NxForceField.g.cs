@@ -134,8 +134,11 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ForceField
     /// </summary>
-    public unsafe ref System.IntPtr ForceField
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 444);
+    public unsafe System.IntPtr ForceField
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+    }
 
     /// <summary>
     /// ArrayProperty: ConvexMeshes
@@ -167,8 +170,11 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: U2NRotation
     /// </summary>
-    public unsafe ref System.IntPtr U2NRotation
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 484);
+    public unsafe System.IntPtr U2NRotation
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 484); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+    }
 
     /// <summary>
     /// IntProperty: SceneIndex

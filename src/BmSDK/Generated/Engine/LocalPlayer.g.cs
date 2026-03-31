@@ -619,8 +619,11 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ViewState
     /// </summary>
-    public unsafe ref System.IntPtr ViewState
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 124);
+    public unsafe System.IntPtr ViewState
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+    }
 
     /// <summary>
     /// StructProperty: ActorVisibilityHistory

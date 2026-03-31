@@ -1702,8 +1702,11 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe ref System.IntPtr SceneInfo
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 104);
+    public unsafe System.IntPtr SceneInfo
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
 
     /// <summary>
     /// StructProperty: LocalToWorld

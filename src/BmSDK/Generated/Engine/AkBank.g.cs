@@ -260,8 +260,11 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LockedMemory
     /// </summary>
-    public unsafe ref System.IntPtr LockedMemory
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
+    public unsafe System.IntPtr LockedMemory
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
 
     /// <summary>
     /// StructProperty: LoadedBankData

@@ -244,8 +244,11 @@ public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LogFile
     /// </summary>
-    public unsafe ref System.IntPtr LogFile
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 180);
+    public unsafe System.IntPtr LogFile
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
 
     /// <summary>
     /// ArrayProperty: SequenceObjects

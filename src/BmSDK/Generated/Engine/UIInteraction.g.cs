@@ -265,20 +265,29 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FExec
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
+    public unsafe System.IntPtr VfTable_FExec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_FGlobalDataStoreClientManager
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FGlobalDataStoreClientManager
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
+    public unsafe System.IntPtr VfTable_FGlobalDataStoreClientManager
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_FCallbackEventDevice
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FCallbackEventDevice
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 104);
+    public unsafe System.IntPtr VfTable_FCallbackEventDevice
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
 
     /// <summary>
     /// ObjectProperty: UIManager

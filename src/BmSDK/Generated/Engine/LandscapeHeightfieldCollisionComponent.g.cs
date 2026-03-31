@@ -136,8 +136,11 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// <summary>
     /// StructProperty: RBHeightfield
     /// </summary>
-    public unsafe ref System.IntPtr RBHeightfield
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 488);
+    public unsafe System.IntPtr RBHeightfield
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+    }
 
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds

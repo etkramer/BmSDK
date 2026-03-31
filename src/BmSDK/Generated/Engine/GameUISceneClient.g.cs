@@ -204,8 +204,11 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     /// <summary>
     /// StructProperty: DoubleClickStartTime
     /// </summary>
-    public unsafe ref double DoubleClickStartTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 220);
+    public unsafe double DoubleClickStartTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+    }
 
     /// <summary>
     /// StructProperty: DoubleClickStartPosition

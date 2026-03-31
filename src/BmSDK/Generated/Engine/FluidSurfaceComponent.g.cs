@@ -589,6 +589,9 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: FluidSimulation
     /// </summary>
-    public unsafe ref System.IntPtr FluidSimulation
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 636);
+    public unsafe System.IntPtr FluidSimulation
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+    }
 }

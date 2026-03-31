@@ -308,40 +308,61 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     /// <summary>
     /// StructProperty: StaticParameters
     /// </summary>
-    public unsafe ref System.IntPtr StaticParameters_0
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 120);
+    public unsafe System.IntPtr StaticParameters_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+    }
     /// <summary>
     /// StructProperty: StaticParameters
     /// </summary>
-    public unsafe ref System.IntPtr StaticParameters_1
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 124);
+    public unsafe System.IntPtr StaticParameters_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+    }
 
     /// <summary>
     /// StructProperty: StaticPermutationResources
     /// </summary>
-    public unsafe ref System.IntPtr StaticPermutationResources_0
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 128);
+    public unsafe System.IntPtr StaticPermutationResources_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+    }
     /// <summary>
     /// StructProperty: StaticPermutationResources
     /// </summary>
-    public unsafe ref System.IntPtr StaticPermutationResources_1
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 132);
+    public unsafe System.IntPtr StaticPermutationResources_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
 
     /// <summary>
     /// StructProperty: Resources
     /// </summary>
-    public unsafe ref System.IntPtr Resources_0
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 136);
+    public unsafe System.IntPtr Resources_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+    }
     /// <summary>
     /// StructProperty: Resources
     /// </summary>
-    public unsafe ref System.IntPtr Resources_1
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 140);
+    public unsafe System.IntPtr Resources_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
     /// <summary>
     /// StructProperty: Resources
     /// </summary>
-    public unsafe ref System.IntPtr Resources_2
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 144);
+    public unsafe System.IntPtr Resources_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
 
     /// <summary>
     /// ArrayProperty: ReferencedTextures

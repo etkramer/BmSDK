@@ -6451,8 +6451,11 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HiddenEditorViews
     /// </summary>
-    public unsafe ref ulong HiddenEditorViews
-        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 224);
+    public unsafe ulong HiddenEditorViews
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
 
     /// <summary>
     /// ArrayProperty: Touching

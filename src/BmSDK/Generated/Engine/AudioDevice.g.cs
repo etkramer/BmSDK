@@ -250,8 +250,11 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CommonAudioPool
     /// </summary>
-    public unsafe ref System.IntPtr CommonAudioPool
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
+    public unsafe System.IntPtr CommonAudioPool
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
 
     /// <summary>
     /// IntProperty: CommonAudioPoolFreeBytes
@@ -373,8 +376,11 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentTick
     /// </summary>
-    public unsafe ref ulong CurrentTick
-        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 220);
+    public unsafe ulong CurrentTick
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+    }
 
     /// <summary>
     /// IntProperty: MIDIDeviceChannelIn
@@ -460,8 +466,11 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Effects
     /// </summary>
-    public unsafe ref System.IntPtr Effects
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 296);
+    public unsafe System.IntPtr Effects
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
 
     /// <summary>
     /// ComponentProperty: TestAudioComponent
@@ -475,8 +484,11 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TextToSpeech
     /// </summary>
-    public unsafe ref System.IntPtr TextToSpeech
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 304);
+    public unsafe System.IntPtr TextToSpeech
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
 
     /// <summary>
     /// ByteProperty: DebugState

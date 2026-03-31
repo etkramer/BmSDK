@@ -169,8 +169,11 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: TerrainObject
     /// </summary>
-    public unsafe ref System.IntPtr TerrainObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr TerrainObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// IntProperty: SectionBaseX
@@ -277,8 +280,11 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: RBHeightfield
     /// </summary>
-    public unsafe ref System.IntPtr RBHeightfield
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 512);
+    public unsafe System.IntPtr RBHeightfield
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 512); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+    }
 
     /// <summary>
     /// BoolProperty: bDisplayCollisionLevel

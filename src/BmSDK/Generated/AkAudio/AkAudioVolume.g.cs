@@ -271,8 +271,11 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastTouchingUpdateTime
     /// </summary>
-    public unsafe ref double LastTouchingUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 568);
+    public unsafe double LastTouchingUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
 
     /// <summary>
     /// Struct: FTouchingActorInfo

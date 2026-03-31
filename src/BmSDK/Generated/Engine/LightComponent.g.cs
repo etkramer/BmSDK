@@ -287,8 +287,11 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe ref System.IntPtr SceneInfo
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
+    public unsafe System.IntPtr SceneInfo
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
 
     /// <summary>
     /// StructProperty: WorldToLight

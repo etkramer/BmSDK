@@ -1860,14 +1860,20 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DebugFileWriter
     /// </summary>
-    public unsafe ref System.IntPtr DebugFileWriter
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 564);
+    public unsafe System.IntPtr DebugFileWriter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 564); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
+    }
 
     /// <summary>
     /// StructProperty: DebugInfoFileWriter
     /// </summary>
-    public unsafe ref System.IntPtr DebugInfoFileWriter
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 568);
+    public unsafe System.IntPtr DebugInfoFileWriter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
 
     /// <summary>
     /// BoolProperty: ActivatedThroughWarning
@@ -2127,8 +2133,11 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RandomPackageLoading
     /// </summary>
-    public unsafe ref System.IntPtr RandomPackageLoading
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 672);
+    public unsafe System.IntPtr RandomPackageLoading
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
 
     /// <summary>
     /// ArrayProperty: BanksLoaded
@@ -2178,8 +2187,11 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HighestDialogue
     /// </summary>
-    public unsafe ref System.IntPtr HighestDialogue
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 776);
+    public unsafe System.IntPtr HighestDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
+    }
 
     /// <summary>
     /// ArrayProperty: StreamingPackageDialogue

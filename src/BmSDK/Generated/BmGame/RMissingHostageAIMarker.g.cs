@@ -121,8 +121,11 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr VfTable_IRSpotableInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// ComponentProperty: RoomState

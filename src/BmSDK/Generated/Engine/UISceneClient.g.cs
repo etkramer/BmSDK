@@ -137,14 +137,20 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FExec
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
+    public unsafe System.IntPtr VfTable_FExec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
     /// StructProperty: RenderViewport
     /// </summary>
-    public unsafe ref System.IntPtr RenderViewport
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
+    public unsafe System.IntPtr RenderViewport
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
     /// StructProperty: MousePosition

@@ -167,8 +167,11 @@ public partial class TextureFlipBook : BmSDK.Engine.Texture2D, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FTickableObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_FTickableObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 328);
+    public unsafe System.IntPtr VfTable_FTickableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
 
     /// <summary>
     /// FloatProperty: TimeIntoMovie
@@ -326,6 +329,9 @@ public partial class TextureFlipBook : BmSDK.Engine.Texture2D, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe ref System.IntPtr ReleaseResourcesFence
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 388);
+    public unsafe System.IntPtr ReleaseResourcesFence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 388); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
+    }
 }

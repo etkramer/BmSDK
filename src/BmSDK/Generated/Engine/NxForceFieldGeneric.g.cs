@@ -241,6 +241,9 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe ref System.IntPtr LinearKernel
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 664);
+    public unsafe System.IntPtr LinearKernel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
+    }
 }

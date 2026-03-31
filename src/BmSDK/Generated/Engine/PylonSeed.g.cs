@@ -76,6 +76,9 @@ public partial class PylonSeed : BmSDK.Engine.Actor, BmSDK.Engine.Interface_NavM
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 }

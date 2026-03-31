@@ -484,8 +484,11 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe ref System.IntPtr ReleaseResourcesFence
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 584);
+    public unsafe System.IntPtr ReleaseResourcesFence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
 
     /// <summary>
     /// ArrayProperty: Planes

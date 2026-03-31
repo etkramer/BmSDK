@@ -273,8 +273,11 @@ public partial class Landscape : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DataInterface
     /// </summary>
-    public unsafe ref System.IntPtr DataInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 760);
+    public unsafe System.IntPtr DataInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
+    }
 
     /// <summary>
     /// IntProperty: ComponentSizeQuads

@@ -339,38 +339,56 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IEditorLinkSelectionInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 628);
+    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 628); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+    }
 
     /// <summary>
     /// StructProperty: NavMeshPtr
     /// </summary>
-    public unsafe ref System.IntPtr NavMeshPtr
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 632);
+    public unsafe System.IntPtr NavMeshPtr
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+    }
 
     /// <summary>
     /// StructProperty: ObstacleMesh
     /// </summary>
-    public unsafe ref System.IntPtr ObstacleMesh
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 636);
+    public unsafe System.IntPtr ObstacleMesh
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+    }
 
     /// <summary>
     /// StructProperty: DynamicObstacleMesh
     /// </summary>
-    public unsafe ref System.IntPtr DynamicObstacleMesh
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 640);
+    public unsafe System.IntPtr DynamicObstacleMesh
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 640); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
+    }
 
     /// <summary>
     /// StructProperty: WorkingSetPtr
     /// </summary>
-    public unsafe ref System.IntPtr WorkingSetPtr
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 644);
+    public unsafe System.IntPtr WorkingSetPtr
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 644); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
+    }
 
     /// <summary>
     /// StructProperty: PathObjectsThatAffectThisPylon
     /// </summary>
-    public unsafe ref System.IntPtr PathObjectsThatAffectThisPylon
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 648);
+    public unsafe System.IntPtr PathObjectsThatAffectThisPylon
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 648); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
+    }
 
     /// <summary>
     /// ArrayProperty: NextPassSeedList
@@ -390,8 +408,11 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: OctreeIWasAddedTo
     /// </summary>
-    public unsafe ref System.IntPtr OctreeIWasAddedTo
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 672);
+    public unsafe System.IntPtr OctreeIWasAddedTo
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
 
     /// <summary>
     /// ObjectProperty: NextPylon

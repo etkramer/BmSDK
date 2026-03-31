@@ -5485,14 +5485,20 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTableObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 0);
+    public unsafe System.IntPtr VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
     /// StructProperty: ObjectInternalInteger
     /// </summary>
-    public unsafe ref System.IntPtr ObjectInternalInteger
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 4);
+    public unsafe System.IntPtr ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }
+    }
 
     /// <summary>
     /// IntProperty: ObjectFlags
@@ -5515,14 +5521,20 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HashNext
     /// </summary>
-    public unsafe ref System.IntPtr HashNext
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 16);
+    public unsafe System.IntPtr HashNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
     /// StructProperty: HashOuterNext
     /// </summary>
-    public unsafe ref System.IntPtr HashOuterNext
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 20);
+    public unsafe System.IntPtr HashOuterNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
     /// ObjectProperty: Outer

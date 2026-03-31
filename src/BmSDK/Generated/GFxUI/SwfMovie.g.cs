@@ -166,8 +166,11 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImportTimeStamp
     /// </summary>
-    public unsafe ref ulong ImportTimeStamp
-        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 148);
+    public unsafe ulong ImportTimeStamp
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+    }
 
     /// <summary>
     /// Enum: FlashTextureRescale

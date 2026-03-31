@@ -238,6 +238,9 @@ public partial class AnimationCompressionAlgorithm_PerTrackCompression : BmSDK.E
     /// <summary>
     /// StructProperty: PerReductionCachedData
     /// </summary>
-    public unsafe ref System.IntPtr PerReductionCachedData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 168);
+    public unsafe System.IntPtr PerReductionCachedData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+    }
 }

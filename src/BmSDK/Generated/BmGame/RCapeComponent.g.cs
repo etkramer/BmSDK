@@ -1170,8 +1170,11 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CapePhysics
     /// </summary>
-    public unsafe ref System.IntPtr CapePhysics
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 224);
+    public unsafe System.IntPtr CapePhysics
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
 
     /// <summary>
     /// ByteProperty: RBChannel

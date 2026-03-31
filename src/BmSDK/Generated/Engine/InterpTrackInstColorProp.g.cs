@@ -76,8 +76,11 @@ public partial class InterpTrackInstColorProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: ColorProp
     /// </summary>
-    public unsafe ref System.IntPtr ColorProp
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
+    public unsafe System.IntPtr ColorProp
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
     /// StructProperty: ResetColor

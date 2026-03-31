@@ -200,8 +200,11 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 460);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
 
     /// <summary>
     /// ClassProperty: WeaponType

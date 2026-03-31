@@ -157,6 +157,9 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: EmitterInstance
     /// </summary>
-    public unsafe ref System.IntPtr EmitterInstance
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 108);
+    public unsafe System.IntPtr EmitterInstance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
 }

@@ -1950,8 +1950,11 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StoredAnchorPoly
     /// </summary>
-    public unsafe ref System.IntPtr StoredAnchorPoly
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 620);
+    public unsafe System.IntPtr StoredAnchorPoly
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 620); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
+    }
 
     /// <summary>
     /// ArrayProperty: AvoidPathObjects

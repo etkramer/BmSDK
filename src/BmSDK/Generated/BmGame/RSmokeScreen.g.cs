@@ -234,20 +234,29 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
+    public unsafe System.IntPtr VfTable_IRSpotableInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 432);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObject
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 436);
+    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+    }
 
     /// <summary>
     /// FloatProperty: StunRadius

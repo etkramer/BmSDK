@@ -307,14 +307,20 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VorbisDecompressor
     /// </summary>
-    public unsafe ref System.IntPtr VorbisDecompressor
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 192);
+    public unsafe System.IntPtr VorbisDecompressor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+    }
 
     /// <summary>
     /// StructProperty: RawPCMData
     /// </summary>
-    public unsafe ref System.IntPtr RawPCMData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 196);
+    public unsafe System.IntPtr RawPCMData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
+    }
 
     /// <summary>
     /// IntProperty: RawPCMDataSize
@@ -364,8 +370,11 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResourceData
     /// </summary>
-    public unsafe ref System.IntPtr ResourceData
-        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 344);
+    public unsafe System.IntPtr ResourceData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+    }
 
     /// <summary>
     /// ArrayProperty: Subtitles

@@ -163,8 +163,11 @@ public partial class AkAudioSpline : BmSDK.Engine.SplineActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AudioSplineLastUpdateTime
     /// </summary>
-    public unsafe ref double AudioSplineLastUpdateTime
-        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 556);
+    public unsafe double AudioSplineLastUpdateTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
 
     /// <summary>
     /// FloatProperty: AudioSplineNodeValueBuffer
