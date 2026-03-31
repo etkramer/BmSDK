@@ -21,6 +21,11 @@ public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxWorldMovieActor.
+    /// </summary>
+    public static RGFxWorldMovieActor DefaultObject => (RGFxWorldMovieActor)StaticClass().DefaultObject;
+
     internal RGFxWorldMovieActor() { }
 
     /// <summary>

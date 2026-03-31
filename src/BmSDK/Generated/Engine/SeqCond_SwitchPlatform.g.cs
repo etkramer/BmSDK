@@ -21,6 +21,11 @@ public partial class SeqCond_SwitchPlatform : BmSDK.Engine.SequenceCondition, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_SwitchPlatform.
+    /// </summary>
+    public static SeqCond_SwitchPlatform DefaultObject => (SeqCond_SwitchPlatform)StaticClass().DefaultObject;
+
     internal SeqCond_SwitchPlatform() { }
 
     /// <summary>

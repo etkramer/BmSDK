@@ -21,6 +21,11 @@ public partial class MorphNodeMultiPose : BmSDK.Engine.MorphNodeBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MorphNodeMultiPose.
+    /// </summary>
+    public static MorphNodeMultiPose DefaultObject => (MorphNodeMultiPose)StaticClass().DefaultObject;
+
     internal MorphNodeMultiPose() { }
 
     /// <summary>

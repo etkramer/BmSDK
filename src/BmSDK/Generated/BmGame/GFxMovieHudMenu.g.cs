@@ -21,6 +21,11 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxMovieHudMenu.
+    /// </summary>
+    public static GFxMovieHudMenu DefaultObject => (GFxMovieHudMenu)StaticClass().DefaultObject;
+
     internal GFxMovieHudMenu() { }
 
     /// <summary>

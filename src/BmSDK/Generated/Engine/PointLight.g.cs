@@ -21,6 +21,11 @@ public partial class PointLight : BmSDK.Engine.Light, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PointLight.
+    /// </summary>
+    public static PointLight DefaultObject => (PointLight)StaticClass().DefaultObject;
+
     internal PointLight() { }
 
     /// <summary>

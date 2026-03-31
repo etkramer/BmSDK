@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Ragdoll : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Ragdoll.
+    /// </summary>
+    public static RBMBehaviour_Ragdoll DefaultObject => (RBMBehaviour_Ragdoll)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Ragdoll() { }
 
     /// <summary>

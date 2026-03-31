@@ -21,6 +21,11 @@ public partial class UIConfigFileProvider : BmSDK.Engine.UIConfigProvider, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIConfigFileProvider.
+    /// </summary>
+    public static UIConfigFileProvider DefaultObject => (UIConfigFileProvider)StaticClass().DefaultObject;
+
     internal UIConfigFileProvider() { }
 
     /// <summary>

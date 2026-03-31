@@ -21,6 +21,11 @@ public partial class RSeqAct_SetRoomUnlocked : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetRoomUnlocked.
+    /// </summary>
+    public static RSeqAct_SetRoomUnlocked DefaultObject => (RSeqAct_SetRoomUnlocked)StaticClass().DefaultObject;
+
     internal RSeqAct_SetRoomUnlocked() { }
 
     /// <summary>

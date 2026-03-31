@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RobinPlaceStickyBombPDLC : BmSDK.BmScrip
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RobinPlaceStickyBombPDLC.
+    /// </summary>
+    public static RSpecialMoveConfig_RobinPlaceStickyBombPDLC DefaultObject => (RSpecialMoveConfig_RobinPlaceStickyBombPDLC)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RobinPlaceStickyBombPDLC() { }
 
     /// <summary>

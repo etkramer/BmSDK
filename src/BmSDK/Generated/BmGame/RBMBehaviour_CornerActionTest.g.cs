@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CornerActionTest : BmSDK.BmGame.RBMBehaviour_A
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CornerActionTest.
+    /// </summary>
+    public static RBMBehaviour_CornerActionTest DefaultObject => (RBMBehaviour_CornerActionTest)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CornerActionTest() { }
 
     /// <summary>

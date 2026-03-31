@@ -21,6 +21,11 @@ public partial class RGFxMovieFrontMost : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieFrontMost.
+    /// </summary>
+    public static RGFxMovieFrontMost DefaultObject => (RGFxMovieFrontMost)StaticClass().DefaultObject;
+
     internal RGFxMovieFrontMost() { }
 
     /// <summary>

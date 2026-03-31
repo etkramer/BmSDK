@@ -21,6 +21,11 @@ public partial class RSeqAct_DeadshotUpdate : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DeadshotUpdate.
+    /// </summary>
+    public static RSeqAct_DeadshotUpdate DefaultObject => (RSeqAct_DeadshotUpdate)StaticClass().DefaultObject;
+
     internal RSeqAct_DeadshotUpdate() { }
 
     /// <summary>

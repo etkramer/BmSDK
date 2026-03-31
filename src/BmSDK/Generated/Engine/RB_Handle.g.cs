@@ -21,6 +21,11 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_Handle.
+    /// </summary>
+    public static RB_Handle DefaultObject => (RB_Handle)StaticClass().DefaultObject;
+
     internal RB_Handle() { }
 
     /// <summary>

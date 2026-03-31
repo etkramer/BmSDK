@@ -21,6 +21,11 @@ public partial class RBMSpecialMove_ReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSpecialMove_ReachSpec.
+    /// </summary>
+    public static RBMSpecialMove_ReachSpec DefaultObject => (RBMSpecialMove_ReachSpec)StaticClass().DefaultObject;
+
     internal RBMSpecialMove_ReachSpec() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_BatclawSlamTutorial : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatclawSlamTutorial.
+    /// </summary>
+    public static RSeqAct_BatclawSlamTutorial DefaultObject => (RSeqAct_BatclawSlamTutorial)StaticClass().DefaultObject;
+
     internal RSeqAct_BatclawSlamTutorial() { }
 
     /// <summary>

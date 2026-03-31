@@ -21,6 +21,11 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackLinearColorBase.
+    /// </summary>
+    public static InterpTrackLinearColorBase DefaultObject => (InterpTrackLinearColorBase)StaticClass().DefaultObject;
+
     internal InterpTrackLinearColorBase() { }
 
     /// <summary>

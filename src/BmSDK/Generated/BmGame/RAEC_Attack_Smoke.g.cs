@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Smoke.
+    /// </summary>
+    public static RAEC_Attack_Smoke DefaultObject => (RAEC_Attack_Smoke)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Smoke() { }
 
     /// <summary>

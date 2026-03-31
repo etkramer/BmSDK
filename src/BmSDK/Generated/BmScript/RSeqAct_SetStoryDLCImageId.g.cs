@@ -21,6 +21,11 @@ public partial class RSeqAct_SetStoryDLCImageId : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetStoryDLCImageId.
+    /// </summary>
+    public static RSeqAct_SetStoryDLCImageId DefaultObject => (RSeqAct_SetStoryDLCImageId)StaticClass().DefaultObject;
+
     internal RSeqAct_SetStoryDLCImageId() { }
 
     /// <summary>

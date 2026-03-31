@@ -21,6 +21,11 @@ public partial class SkeletalMeshActorMATWalkable : BmSDK.Engine.SkeletalMeshAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMeshActorMATWalkable.
+    /// </summary>
+    public static SkeletalMeshActorMATWalkable DefaultObject => (SkeletalMeshActorMATWalkable)StaticClass().DefaultObject;
+
     internal SkeletalMeshActorMATWalkable() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieChallengeModifiers.
+    /// </summary>
+    public static RGFxMovieChallengeModifiers DefaultObject => (RGFxMovieChallengeModifiers)StaticClass().DefaultObject;
+
     internal RGFxMovieChallengeModifiers() { }
 
     /// <summary>

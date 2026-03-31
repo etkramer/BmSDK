@@ -21,6 +21,11 @@ public partial class RSeqAct_IncreaseCombatPower : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IncreaseCombatPower.
+    /// </summary>
+    public static RSeqAct_IncreaseCombatPower DefaultObject => (RSeqAct_IncreaseCombatPower)StaticClass().DefaultObject;
+
     internal RSeqAct_IncreaseCombatPower() { }
 
     /// <summary>

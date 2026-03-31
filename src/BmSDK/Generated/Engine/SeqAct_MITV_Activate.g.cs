@@ -21,6 +21,11 @@ public partial class SeqAct_MITV_Activate : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_MITV_Activate.
+    /// </summary>
+    public static SeqAct_MITV_Activate DefaultObject => (SeqAct_MITV_Activate)StaticClass().DefaultObject;
+
     internal SeqAct_MITV_Activate() { }
 
     /// <summary>

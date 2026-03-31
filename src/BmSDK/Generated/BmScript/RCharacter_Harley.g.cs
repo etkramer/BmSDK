@@ -21,6 +21,11 @@ public partial class RCharacter_Harley : BmSDK.BmGame.RCharacter, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Harley.
+    /// </summary>
+    public static RCharacter_Harley DefaultObject => (RCharacter_Harley)StaticClass().DefaultObject;
+
     internal RCharacter_Harley() { }
 
     /// <summary>

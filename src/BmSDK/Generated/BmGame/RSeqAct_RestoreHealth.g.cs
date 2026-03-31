@@ -21,6 +21,11 @@ public partial class RSeqAct_RestoreHealth : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RestoreHealth.
+    /// </summary>
+    public static RSeqAct_RestoreHealth DefaultObject => (RSeqAct_RestoreHealth)StaticClass().DefaultObject;
+
     internal RSeqAct_RestoreHealth() { }
 
     /// <summary>

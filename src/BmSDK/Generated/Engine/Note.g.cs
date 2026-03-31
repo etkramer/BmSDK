@@ -21,6 +21,11 @@ public partial class Note : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Note.
+    /// </summary>
+    public static Note DefaultObject => (Note)StaticClass().DefaultObject;
+
     internal Note() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_StrikeNoRepel : BmSDK.BmGame.RDmgType_Strike, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_StrikeNoRepel.
+    /// </summary>
+    public static RDmgType_StrikeNoRepel DefaultObject => (RDmgType_StrikeNoRepel)StaticClass().DefaultObject;
+
     internal RDmgType_StrikeNoRepel() { }
 
     /// <summary>

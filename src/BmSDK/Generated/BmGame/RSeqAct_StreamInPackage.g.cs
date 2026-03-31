@@ -21,6 +21,11 @@ public partial class RSeqAct_StreamInPackage : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StreamInPackage.
+    /// </summary>
+    public static RSeqAct_StreamInPackage DefaultObject => (RSeqAct_StreamInPackage)StaticClass().DefaultObject;
+
     internal RSeqAct_StreamInPackage() { }
 
     /// <summary>

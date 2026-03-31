@@ -21,6 +21,11 @@ public partial class RBMSeqAct_SpeechManagement : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqAct_SpeechManagement.
+    /// </summary>
+    public static RBMSeqAct_SpeechManagement DefaultObject => (RBMSeqAct_SpeechManagement)StaticClass().DefaultObject;
+
     internal RBMSeqAct_SpeechManagement() { }
 
     /// <summary>

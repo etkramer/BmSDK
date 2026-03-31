@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC1_MarkItNewAgain : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC1_MarkItNewAgain.
+    /// </summary>
+    public static RSeqAct_PDLC1_MarkItNewAgain DefaultObject => (RSeqAct_PDLC1_MarkItNewAgain)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC1_MarkItNewAgain() { }
 
     /// <summary>

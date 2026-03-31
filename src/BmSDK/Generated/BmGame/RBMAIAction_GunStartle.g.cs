@@ -21,6 +21,11 @@ public partial class RBMAIAction_GunStartle : BmSDK.BmGame.RBMAIAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_GunStartle.
+    /// </summary>
+    public static RBMAIAction_GunStartle DefaultObject => (RBMAIAction_GunStartle)StaticClass().DefaultObject;
+
     internal RBMAIAction_GunStartle() { }
 
     /// <summary>

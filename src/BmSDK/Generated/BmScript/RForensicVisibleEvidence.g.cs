@@ -21,6 +21,11 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicVisibleEvidence.
+    /// </summary>
+    public static RForensicVisibleEvidence DefaultObject => (RForensicVisibleEvidence)StaticClass().DefaultObject;
+
     internal RForensicVisibleEvidence() { }
 
     /// <summary>

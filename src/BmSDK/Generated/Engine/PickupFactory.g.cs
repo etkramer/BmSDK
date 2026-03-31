@@ -21,6 +21,11 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PickupFactory.
+    /// </summary>
+    public static PickupFactory DefaultObject => (PickupFactory)StaticClass().DefaultObject;
+
     internal PickupFactory() { }
 
     /// <summary>

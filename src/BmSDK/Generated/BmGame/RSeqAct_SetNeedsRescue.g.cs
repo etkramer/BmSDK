@@ -21,6 +21,11 @@ public partial class RSeqAct_SetNeedsRescue : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetNeedsRescue.
+    /// </summary>
+    public static RSeqAct_SetNeedsRescue DefaultObject => (RSeqAct_SetNeedsRescue)StaticClass().DefaultObject;
+
     internal RSeqAct_SetNeedsRescue() { }
 
     /// <summary>

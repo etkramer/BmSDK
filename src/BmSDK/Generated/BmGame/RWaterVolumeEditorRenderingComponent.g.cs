@@ -21,6 +21,11 @@ public partial class RWaterVolumeEditorRenderingComponent : BmSDK.Engine.Primiti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWaterVolumeEditorRenderingComponent.
+    /// </summary>
+    public static RWaterVolumeEditorRenderingComponent DefaultObject => (RWaterVolumeEditorRenderingComponent)StaticClass().DefaultObject;
+
     internal RWaterVolumeEditorRenderingComponent() { }
 
     /// <summary>

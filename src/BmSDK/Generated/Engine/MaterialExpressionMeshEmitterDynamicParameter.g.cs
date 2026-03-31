@@ -21,6 +21,11 @@ public partial class MaterialExpressionMeshEmitterDynamicParameter : BmSDK.Engin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMeshEmitterDynamicParameter.
+    /// </summary>
+    public static MaterialExpressionMeshEmitterDynamicParameter DefaultObject => (MaterialExpressionMeshEmitterDynamicParameter)StaticClass().DefaultObject;
+
     internal MaterialExpressionMeshEmitterDynamicParameter() { }
 
     /// <summary>

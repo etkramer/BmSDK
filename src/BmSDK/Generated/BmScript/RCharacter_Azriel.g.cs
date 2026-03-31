@@ -21,6 +21,11 @@ public partial class RCharacter_Azriel : BmSDK.BmGame.RCharacter, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Azriel.
+    /// </summary>
+    public static RCharacter_Azriel DefaultObject => (RCharacter_Azriel)StaticClass().DefaultObject;
+
     internal RCharacter_Azriel() { }
 
     /// <summary>

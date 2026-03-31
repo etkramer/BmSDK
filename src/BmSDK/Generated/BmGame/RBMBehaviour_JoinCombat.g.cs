@@ -21,6 +21,11 @@ public partial class RBMBehaviour_JoinCombat : BmSDK.BmGame.RBMBehaviour_Control
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_JoinCombat.
+    /// </summary>
+    public static RBMBehaviour_JoinCombat DefaultObject => (RBMBehaviour_JoinCombat)StaticClass().DefaultObject;
+
     internal RBMBehaviour_JoinCombat() { }
 
     /// <summary>

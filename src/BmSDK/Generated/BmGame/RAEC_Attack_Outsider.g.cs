@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Outsider.
+    /// </summary>
+    public static RAEC_Attack_Outsider DefaultObject => (RAEC_Attack_Outsider)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Outsider() { }
 
     /// <summary>

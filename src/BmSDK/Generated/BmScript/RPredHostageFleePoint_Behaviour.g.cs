@@ -21,6 +21,11 @@ public partial class RPredHostageFleePoint_Behaviour : BmSDK.BmGame.RPredHostage
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredHostageFleePoint_Behaviour.
+    /// </summary>
+    public static RPredHostageFleePoint_Behaviour DefaultObject => (RPredHostageFleePoint_Behaviour)StaticClass().DefaultObject;
+
     internal RPredHostageFleePoint_Behaviour() { }
 
     /// <summary>

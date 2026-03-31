@@ -21,6 +21,11 @@ public partial class RWaterFlowTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWaterFlowTarget.
+    /// </summary>
+    public static RWaterFlowTarget DefaultObject => (RWaterFlowTarget)StaticClass().DefaultObject;
+
     internal RWaterFlowTarget() { }
 
     /// <summary>

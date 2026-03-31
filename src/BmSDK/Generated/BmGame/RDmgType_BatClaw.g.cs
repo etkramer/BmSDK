@@ -21,6 +21,11 @@ public partial class RDmgType_BatClaw : BmSDK.BmGame.RDamageType, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BatClaw.
+    /// </summary>
+    public static RDmgType_BatClaw DefaultObject => (RDmgType_BatClaw)StaticClass().DefaultObject;
+
     internal RDmgType_BatClaw() { }
 
     /// <summary>

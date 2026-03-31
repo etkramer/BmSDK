@@ -21,6 +21,11 @@ public partial class ArrowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ArrowComponent.
+    /// </summary>
+    public static ArrowComponent DefaultObject => (ArrowComponent)StaticClass().DefaultObject;
+
     internal ArrowComponent() { }
 
     /// <summary>

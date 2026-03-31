@@ -21,6 +21,11 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableDemonSeal.
+    /// </summary>
+    public static RBreakableDemonSeal DefaultObject => (RBreakableDemonSeal)StaticClass().DefaultObject;
+
     internal RBreakableDemonSeal() { }
 
     /// <summary>

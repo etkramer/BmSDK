@@ -21,6 +21,11 @@ public partial class RLevelTransitionRenderingComponent : BmSDK.Engine.Primitive
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionRenderingComponent.
+    /// </summary>
+    public static RLevelTransitionRenderingComponent DefaultObject => (RLevelTransitionRenderingComponent)StaticClass().DefaultObject;
+
     internal RLevelTransitionRenderingComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RActorFactoryRigidBody : BmSDK.Engine.ActorFactoryRigidBody
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RActorFactoryRigidBody.
+    /// </summary>
+    public static RActorFactoryRigidBody DefaultObject => (RActorFactoryRigidBody)StaticClass().DefaultObject;
+
     internal RActorFactoryRigidBody() { }
 
     /// <summary>

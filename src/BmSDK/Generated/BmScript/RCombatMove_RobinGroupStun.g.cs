@@ -21,6 +21,11 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RobinGroupStun.
+    /// </summary>
+    public static RCombatMove_RobinGroupStun DefaultObject => (RCombatMove_RobinGroupStun)StaticClass().DefaultObject;
+
     internal RCombatMove_RobinGroupStun() { }
 
     /// <summary>

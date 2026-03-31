@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_CornerTerrified : BmSDK.BmGame.RAlertEventC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_CornerTerrified.
+    /// </summary>
+    public static RAEC_Search_Sub_CornerTerrified DefaultObject => (RAEC_Search_Sub_CornerTerrified)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_CornerTerrified() { }
 
     /// <summary>

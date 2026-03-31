@@ -21,6 +21,11 @@ public partial class SequenceFrameWrapped : BmSDK.Engine.SequenceFrame, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SequenceFrameWrapped.
+    /// </summary>
+    public static SequenceFrameWrapped DefaultObject => (SequenceFrameWrapped)StaticClass().DefaultObject;
+
     internal SequenceFrameWrapped() { }
 
     /// <summary>

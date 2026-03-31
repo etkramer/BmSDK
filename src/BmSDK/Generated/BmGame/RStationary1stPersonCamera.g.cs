@@ -21,6 +21,11 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStationary1stPersonCamera.
+    /// </summary>
+    public static RStationary1stPersonCamera DefaultObject => (RStationary1stPersonCamera)StaticClass().DefaultObject;
+
     internal RStationary1stPersonCamera() { }
 
     /// <summary>

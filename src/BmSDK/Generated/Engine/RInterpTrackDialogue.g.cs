@@ -21,6 +21,11 @@ public partial class RInterpTrackDialogue : BmSDK.Engine.InterpTrackVectorBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInterpTrackDialogue.
+    /// </summary>
+    public static RInterpTrackDialogue DefaultObject => (RInterpTrackDialogue)StaticClass().DefaultObject;
+
     internal RInterpTrackDialogue() { }
 
     /// <summary>

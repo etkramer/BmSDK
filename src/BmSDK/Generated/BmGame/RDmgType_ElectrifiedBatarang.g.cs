@@ -21,6 +21,11 @@ public partial class RDmgType_ElectrifiedBatarang : BmSDK.BmGame.RDmgType_Electr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ElectrifiedBatarang.
+    /// </summary>
+    public static RDmgType_ElectrifiedBatarang DefaultObject => (RDmgType_ElectrifiedBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_ElectrifiedBatarang() { }
 
     /// <summary>

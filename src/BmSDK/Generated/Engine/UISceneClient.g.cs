@@ -21,6 +21,11 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UISceneClient.
+    /// </summary>
+    public static UISceneClient DefaultObject => (UISceneClient)StaticClass().DefaultObject;
+
     internal UISceneClient() { }
 
     /// <summary>

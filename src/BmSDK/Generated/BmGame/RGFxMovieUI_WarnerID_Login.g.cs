@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_WarnerID_Login.
+    /// </summary>
+    public static RGFxMovieUI_WarnerID_Login DefaultObject => (RGFxMovieUI_WarnerID_Login)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_WarnerID_Login() { }
 
     /// <summary>

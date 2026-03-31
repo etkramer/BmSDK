@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Flee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Flee.
+    /// </summary>
+    public static RBMBehaviour_Flee DefaultObject => (RBMBehaviour_Flee)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Flee() { }
 
     /// <summary>

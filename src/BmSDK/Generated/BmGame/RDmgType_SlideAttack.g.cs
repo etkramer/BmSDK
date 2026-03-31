@@ -21,6 +21,11 @@ public partial class RDmgType_SlideAttack : BmSDK.BmGame.RDmgType_HeavyStrike, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SlideAttack.
+    /// </summary>
+    public static RDmgType_SlideAttack DefaultObject => (RDmgType_SlideAttack)StaticClass().DefaultObject;
+
     internal RDmgType_SlideAttack() { }
 
     /// <summary>

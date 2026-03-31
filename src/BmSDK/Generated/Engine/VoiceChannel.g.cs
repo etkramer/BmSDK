@@ -21,6 +21,11 @@ public partial class VoiceChannel : BmSDK.Engine.Channel, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as VoiceChannel.
+    /// </summary>
+    public static VoiceChannel DefaultObject => (VoiceChannel)StaticClass().DefaultObject;
+
     internal VoiceChannel() { }
 
     /// <summary>

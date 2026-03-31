@@ -21,6 +21,11 @@ public partial class RRobinStickyBomb : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinStickyBomb.
+    /// </summary>
+    public static RRobinStickyBomb DefaultObject => (RRobinStickyBomb)StaticClass().DefaultObject;
+
     internal RRobinStickyBomb() { }
 
     /// <summary>

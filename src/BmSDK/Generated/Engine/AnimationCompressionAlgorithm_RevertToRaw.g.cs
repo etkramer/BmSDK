@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_RevertToRaw : BmSDK.Engine.An
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_RevertToRaw.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_RevertToRaw DefaultObject => (AnimationCompressionAlgorithm_RevertToRaw)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_RevertToRaw() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class NavMeshGoalFilter_OutOfViewFrom : BmSDK.Engine.NavMeshGoal_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoalFilter_OutOfViewFrom.
+    /// </summary>
+    public static NavMeshGoalFilter_OutOfViewFrom DefaultObject => (NavMeshGoalFilter_OutOfViewFrom)StaticClass().DefaultObject;
+
     internal NavMeshGoalFilter_OutOfViewFrom() { }
 
     /// <summary>

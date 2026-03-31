@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanFinishVenom : BmSDK.BmGame.RCombatMove_Ba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanFinishVenom.
+    /// </summary>
+    public static RCombatMove_BatmanFinishVenom DefaultObject => (RCombatMove_BatmanFinishVenom)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanFinishVenom() { }
 
     /// <summary>

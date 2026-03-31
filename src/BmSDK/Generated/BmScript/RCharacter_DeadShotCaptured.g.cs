@@ -21,6 +21,11 @@ public partial class RCharacter_DeadShotCaptured : BmSDK.BmGame.RCharacter, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_DeadShotCaptured.
+    /// </summary>
+    public static RCharacter_DeadShotCaptured DefaultObject => (RCharacter_DeadShotCaptured)StaticClass().DefaultObject;
+
     internal RCharacter_DeadShotCaptured() { }
 
     /// <summary>

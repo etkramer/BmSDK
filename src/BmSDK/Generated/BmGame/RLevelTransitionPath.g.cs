@@ -21,6 +21,11 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionPath.
+    /// </summary>
+    public static RLevelTransitionPath DefaultObject => (RLevelTransitionPath)StaticClass().DefaultObject;
+
     internal RLevelTransitionPath() { }
 
     /// <summary>

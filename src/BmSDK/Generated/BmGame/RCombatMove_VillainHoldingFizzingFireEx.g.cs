@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainHoldingFizzingFireEx : BmSDK.BmGame.RCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainHoldingFizzingFireEx.
+    /// </summary>
+    public static RCombatMove_VillainHoldingFizzingFireEx DefaultObject => (RCombatMove_VillainHoldingFizzingFireEx)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainHoldingFizzingFireEx() { }
 
     /// <summary>

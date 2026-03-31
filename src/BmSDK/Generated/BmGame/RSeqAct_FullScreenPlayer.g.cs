@@ -21,6 +21,11 @@ public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FullScreenPlayer.
+    /// </summary>
+    public static RSeqAct_FullScreenPlayer DefaultObject => (RSeqAct_FullScreenPlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_FullScreenPlayer() { }
 
     /// <summary>

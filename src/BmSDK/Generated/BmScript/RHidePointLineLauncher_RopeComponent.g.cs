@@ -21,6 +21,11 @@ public partial class RHidePointLineLauncher_RopeComponent : BmSDK.BmGame.RHidePo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePointLineLauncher_RopeComponent.
+    /// </summary>
+    public static RHidePointLineLauncher_RopeComponent DefaultObject => (RHidePointLineLauncher_RopeComponent)StaticClass().DefaultObject;
+
     internal RHidePointLineLauncher_RopeComponent() { }
 
     /// <summary>

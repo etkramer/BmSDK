@@ -21,6 +21,11 @@ public partial class UIDataProvider_OnlinePlayerDataBase : BmSDK.Engine.UIDataPr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_OnlinePlayerDataBase.
+    /// </summary>
+    public static UIDataProvider_OnlinePlayerDataBase DefaultObject => (UIDataProvider_OnlinePlayerDataBase)StaticClass().DefaultObject;
+
     internal UIDataProvider_OnlinePlayerDataBase() { }
 
     /// <summary>

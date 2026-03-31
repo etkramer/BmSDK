@@ -21,6 +21,11 @@ public partial class RRobinZipKickTarget : BmSDK.BmScript.RHarpoonTrigger, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinZipKickTarget.
+    /// </summary>
+    public static RRobinZipKickTarget DefaultObject => (RRobinZipKickTarget)StaticClass().DefaultObject;
+
     internal RRobinZipKickTarget() { }
 
     /// <summary>

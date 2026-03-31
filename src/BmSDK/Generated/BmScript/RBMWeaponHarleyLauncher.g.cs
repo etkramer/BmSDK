@@ -21,6 +21,11 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHarleyLauncher.
+    /// </summary>
+    public static RBMWeaponHarleyLauncher DefaultObject => (RBMWeaponHarleyLauncher)StaticClass().DefaultObject;
+
     internal RBMWeaponHarleyLauncher() { }
 
     /// <summary>

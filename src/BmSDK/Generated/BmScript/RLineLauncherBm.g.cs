@@ -21,6 +21,11 @@ public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherBm.
+    /// </summary>
+    public static RLineLauncherBm DefaultObject => (RLineLauncherBm)StaticClass().DefaultObject;
+
     internal RLineLauncherBm() { }
 
     /// <summary>

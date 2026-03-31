@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceLockLaserGate : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceLockLaserGate.
+    /// </summary>
+    public static RSeqAct_ForceLockLaserGate DefaultObject => (RSeqAct_ForceLockLaserGate)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceLockLaserGate() { }
 
     /// <summary>

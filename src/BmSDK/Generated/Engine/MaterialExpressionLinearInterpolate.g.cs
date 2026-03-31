@@ -21,6 +21,11 @@ public partial class MaterialExpressionLinearInterpolate : BmSDK.Engine.Material
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLinearInterpolate.
+    /// </summary>
+    public static MaterialExpressionLinearInterpolate DefaultObject => (MaterialExpressionLinearInterpolate)StaticClass().DefaultObject;
+
     internal MaterialExpressionLinearInterpolate() { }
 
     /// <summary>

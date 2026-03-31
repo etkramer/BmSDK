@@ -21,6 +21,11 @@ public partial class RFreezeEnvironmentElectricalDevice : BmSDK.Engine.Actor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeEnvironmentElectricalDevice.
+    /// </summary>
+    public static RFreezeEnvironmentElectricalDevice DefaultObject => (RFreezeEnvironmentElectricalDevice)StaticClass().DefaultObject;
+
     internal RFreezeEnvironmentElectricalDevice() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDisruptableControlBox_HS_Harley : BmSDK.BmScript.RDisrupta
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableControlBox_HS_Harley.
+    /// </summary>
+    public static RDisruptableControlBox_HS_Harley DefaultObject => (RDisruptableControlBox_HS_Harley)StaticClass().DefaultObject;
+
     internal RDisruptableControlBox_HS_Harley() { }
 
     /// <summary>

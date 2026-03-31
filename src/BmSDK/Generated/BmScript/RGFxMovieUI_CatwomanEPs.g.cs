@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_CatwomanEPs.
+    /// </summary>
+    public static RGFxMovieUI_CatwomanEPs DefaultObject => (RGFxMovieUI_CatwomanEPs)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_CatwomanEPs() { }
 
     /// <summary>

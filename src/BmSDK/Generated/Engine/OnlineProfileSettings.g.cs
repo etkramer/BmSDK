@@ -21,6 +21,11 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineProfileSettings.
+    /// </summary>
+    public static OnlineProfileSettings DefaultObject => (OnlineProfileSettings)StaticClass().DefaultObject;
+
     internal OnlineProfileSettings() { }
 
     /// <summary>

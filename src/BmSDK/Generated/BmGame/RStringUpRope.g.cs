@@ -21,6 +21,11 @@ public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStringUpRope.
+    /// </summary>
+    public static RStringUpRope DefaultObject => (RStringUpRope)StaticClass().DefaultObject;
+
     internal RStringUpRope() { }
 
     /// <summary>

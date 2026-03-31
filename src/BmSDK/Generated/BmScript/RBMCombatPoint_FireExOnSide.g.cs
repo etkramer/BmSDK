@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_FireExOnSide.
+    /// </summary>
+    public static RBMCombatPoint_FireExOnSide DefaultObject => (RBMCombatPoint_FireExOnSide)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_FireExOnSide() { }
 
     /// <summary>

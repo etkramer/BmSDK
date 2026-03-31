@@ -21,6 +21,11 @@ public partial class RRopeBase : BmSDK.Engine.Actor, BmSDK.BmGame.RBatarangableI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeBase.
+    /// </summary>
+    public static RRopeBase DefaultObject => (RRopeBase)StaticClass().DefaultObject;
+
     internal RRopeBase() { }
 
     /// <summary>

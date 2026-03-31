@@ -21,6 +21,11 @@ public partial class RBMAIAction_ArmourThugCasBrag : BmSDK.BmGame.RBMAIAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ArmourThugCasBrag.
+    /// </summary>
+    public static RBMAIAction_ArmourThugCasBrag DefaultObject => (RBMAIAction_ArmourThugCasBrag)StaticClass().DefaultObject;
+
     internal RBMAIAction_ArmourThugCasBrag() { }
 
     /// <summary>

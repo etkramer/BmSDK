@@ -21,6 +21,11 @@ public partial class RAEC_Smoke_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Smoke_Sub_Disarmed.
+    /// </summary>
+    public static RAEC_Smoke_Sub_Disarmed DefaultObject => (RAEC_Smoke_Sub_Disarmed)StaticClass().DefaultObject;
+
     internal RAEC_Smoke_Sub_Disarmed() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Venom.
+    /// </summary>
+    public static RBMBehaviour_Venom DefaultObject => (RBMBehaviour_Venom)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Venom() { }
 
     /// <summary>

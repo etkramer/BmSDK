@@ -21,6 +21,11 @@ public partial class RConveyorDoor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RConveyorDoor.
+    /// </summary>
+    public static RConveyorDoor DefaultObject => (RConveyorDoor)StaticClass().DefaultObject;
+
     internal RConveyorDoor() { }
 
     /// <summary>

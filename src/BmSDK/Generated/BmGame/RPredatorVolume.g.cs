@@ -21,6 +21,11 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorVolume.
+    /// </summary>
+    public static RPredatorVolume DefaultObject => (RPredatorVolume)StaticClass().DefaultObject;
+
     internal RPredatorVolume() { }
 
     /// <summary>

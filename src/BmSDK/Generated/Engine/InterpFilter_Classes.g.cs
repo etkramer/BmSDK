@@ -21,6 +21,11 @@ public partial class InterpFilter_Classes : BmSDK.Engine.InterpFilter, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpFilter_Classes.
+    /// </summary>
+    public static InterpFilter_Classes DefaultObject => (InterpFilter_Classes)StaticClass().DefaultObject;
+
     internal InterpFilter_Classes() { }
 
     /// <summary>

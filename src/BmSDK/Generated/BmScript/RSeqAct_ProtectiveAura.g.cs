@@ -21,6 +21,11 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ProtectiveAura.
+    /// </summary>
+    public static RSeqAct_ProtectiveAura DefaultObject => (RSeqAct_ProtectiveAura)StaticClass().DefaultObject;
+
     internal RSeqAct_ProtectiveAura() { }
 
     /// <summary>

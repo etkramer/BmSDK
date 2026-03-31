@@ -21,6 +21,11 @@ public partial class RSeqAct_MuseumBoothActivated : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MuseumBoothActivated.
+    /// </summary>
+    public static RSeqAct_MuseumBoothActivated DefaultObject => (RSeqAct_MuseumBoothActivated)StaticClass().DefaultObject;
+
     internal RSeqAct_MuseumBoothActivated() { }
 
     /// <summary>

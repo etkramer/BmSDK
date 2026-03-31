@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceHideGadget : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceHideGadget.
+    /// </summary>
+    public static RSeqAct_ForceHideGadget DefaultObject => (RSeqAct_ForceHideGadget)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceHideGadget() { }
 
     /// <summary>

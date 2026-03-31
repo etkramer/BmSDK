@@ -21,6 +21,11 @@ public partial class RSeqAct_DeadShotJackRyder : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DeadShotJackRyder.
+    /// </summary>
+    public static RSeqAct_DeadShotJackRyder DefaultObject => (RSeqAct_DeadShotJackRyder)StaticClass().DefaultObject;
+
     internal RSeqAct_DeadShotJackRyder() { }
 
     /// <summary>

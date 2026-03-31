@@ -21,6 +21,11 @@ public partial class RVaporVolumeBase : BmSDK.Engine.Actor, BmSDK.BmGame.REviden
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVaporVolumeBase.
+    /// </summary>
+    public static RVaporVolumeBase DefaultObject => (RVaporVolumeBase)StaticClass().DefaultObject;
+
     internal RVaporVolumeBase() { }
 
     /// <summary>

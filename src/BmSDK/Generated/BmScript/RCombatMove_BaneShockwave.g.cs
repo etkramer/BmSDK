@@ -21,6 +21,11 @@ public partial class RCombatMove_BaneShockwave : BmSDK.BmScript.RCombatMove_Bane
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BaneShockwave.
+    /// </summary>
+    public static RCombatMove_BaneShockwave DefaultObject => (RCombatMove_BaneShockwave)StaticClass().DefaultObject;
+
     internal RCombatMove_BaneShockwave() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocationEmitter.
+    /// </summary>
+    public static ParticleModuleLocationEmitter DefaultObject => (ParticleModuleLocationEmitter)StaticClass().DefaultObject;
+
     internal ParticleModuleLocationEmitter() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_ShockwaveLand : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_ShockwaveLand.
+    /// </summary>
+    public static RSpecialMoveInstance_ShockwaveLand DefaultObject => (RSpecialMoveInstance_ShockwaveLand)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_ShockwaveLand() { }
 
     /// <summary>

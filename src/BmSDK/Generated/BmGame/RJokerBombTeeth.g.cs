@@ -21,6 +21,11 @@ public partial class RJokerBombTeeth : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerBombTeeth.
+    /// </summary>
+    public static RJokerBombTeeth DefaultObject => (RJokerBombTeeth)StaticClass().DefaultObject;
+
     internal RJokerBombTeeth() { }
 
     /// <summary>

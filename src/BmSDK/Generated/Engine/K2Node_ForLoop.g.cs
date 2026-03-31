@@ -21,6 +21,11 @@ public partial class K2Node_ForLoop : BmSDK.Engine.K2Node_Code, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Node_ForLoop.
+    /// </summary>
+    public static K2Node_ForLoop DefaultObject => (K2Node_ForLoop)StaticClass().DefaultObject;
+
     internal K2Node_ForLoop() { }
 
     /// <summary>

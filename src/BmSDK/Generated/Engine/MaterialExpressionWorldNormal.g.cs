@@ -21,6 +21,11 @@ public partial class MaterialExpressionWorldNormal : BmSDK.Engine.MaterialExpres
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionWorldNormal.
+    /// </summary>
+    public static MaterialExpressionWorldNormal DefaultObject => (MaterialExpressionWorldNormal)StaticClass().DefaultObject;
+
     internal MaterialExpressionWorldNormal() { }
 
     /// <summary>

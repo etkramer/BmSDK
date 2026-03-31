@@ -21,6 +21,11 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_RasTakeTaliaHostage.
+    /// </summary>
+    public static RBMBehaviour_RasTakeTaliaHostage DefaultObject => (RBMBehaviour_RasTakeTaliaHostage)StaticClass().DefaultObject;
+
     internal RBMBehaviour_RasTakeTaliaHostage() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_TigerPenguin : BmSDK.BmScript.RCharacte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_TigerPenguin.
+    /// </summary>
+    public static RCharacter_GuardBM2_TigerPenguin DefaultObject => (RCharacter_GuardBM2_TigerPenguin)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_TigerPenguin() { }
 
     /// <summary>

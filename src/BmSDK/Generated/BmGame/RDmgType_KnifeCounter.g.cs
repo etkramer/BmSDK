@@ -21,6 +21,11 @@ public partial class RDmgType_KnifeCounter : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_KnifeCounter.
+    /// </summary>
+    public static RDmgType_KnifeCounter DefaultObject => (RDmgType_KnifeCounter)StaticClass().DefaultObject;
+
     internal RDmgType_KnifeCounter() { }
 
     /// <summary>

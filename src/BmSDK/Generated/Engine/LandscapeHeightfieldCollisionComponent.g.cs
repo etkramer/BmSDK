@@ -21,6 +21,11 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LandscapeHeightfieldCollisionComponent.
+    /// </summary>
+    public static LandscapeHeightfieldCollisionComponent DefaultObject => (LandscapeHeightfieldCollisionComponent)StaticClass().DefaultObject;
+
     internal LandscapeHeightfieldCollisionComponent() { }
 
     /// <summary>

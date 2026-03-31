@@ -21,6 +21,11 @@ public partial class RDmgType_NinjaSword : BmSDK.BmGame.RDamageType, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_NinjaSword.
+    /// </summary>
+    public static RDmgType_NinjaSword DefaultObject => (RDmgType_NinjaSword)StaticClass().DefaultObject;
+
     internal RDmgType_NinjaSword() { }
 
     /// <summary>

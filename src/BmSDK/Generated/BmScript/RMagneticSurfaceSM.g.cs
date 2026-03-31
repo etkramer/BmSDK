@@ -21,6 +21,11 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticSurfaceSM.
+    /// </summary>
+    public static RMagneticSurfaceSM DefaultObject => (RMagneticSurfaceSM)StaticClass().DefaultObject;
+
     internal RMagneticSurfaceSM() { }
 
     /// <summary>

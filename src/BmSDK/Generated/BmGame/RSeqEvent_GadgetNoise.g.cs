@@ -21,6 +21,11 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GadgetNoise.
+    /// </summary>
+    public static RSeqEvent_GadgetNoise DefaultObject => (RSeqEvent_GadgetNoise)StaticClass().DefaultObject;
+
     internal RSeqEvent_GadgetNoise() { }
 
     /// <summary>

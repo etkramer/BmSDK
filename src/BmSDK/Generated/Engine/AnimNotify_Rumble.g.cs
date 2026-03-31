@@ -21,6 +21,11 @@ public partial class AnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_Rumble.
+    /// </summary>
+    public static AnimNotify_Rumble DefaultObject => (AnimNotify_Rumble)StaticClass().DefaultObject;
+
     internal AnimNotify_Rumble() { }
 
     /// <summary>

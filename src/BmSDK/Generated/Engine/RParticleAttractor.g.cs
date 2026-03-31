@@ -21,6 +21,11 @@ public partial class RParticleAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleAttractor.
+    /// </summary>
+    public static RParticleAttractor DefaultObject => (RParticleAttractor)StaticClass().DefaultObject;
+
     internal RParticleAttractor() { }
 
     /// <summary>

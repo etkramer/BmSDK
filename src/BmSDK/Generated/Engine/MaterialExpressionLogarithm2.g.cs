@@ -21,6 +21,11 @@ public partial class MaterialExpressionLogarithm2 : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLogarithm2.
+    /// </summary>
+    public static MaterialExpressionLogarithm2 DefaultObject => (MaterialExpressionLogarithm2)StaticClass().DefaultObject;
+
     internal MaterialExpressionLogarithm2() { }
 
     /// <summary>

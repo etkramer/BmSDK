@@ -21,6 +21,11 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatDangerZone.
+    /// </summary>
+    public static RBMCombatDangerZone DefaultObject => (RBMCombatDangerZone)StaticClass().DefaultObject;
+
     internal RBMCombatDangerZone() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_LoadPackages : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LoadPackages.
+    /// </summary>
+    public static RSeqAct_LoadPackages DefaultObject => (RSeqAct_LoadPackages)StaticClass().DefaultObject;
+
     internal RSeqAct_LoadPackages() { }
 
     /// <summary>

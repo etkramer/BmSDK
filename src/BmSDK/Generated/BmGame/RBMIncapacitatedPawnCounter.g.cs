@@ -21,6 +21,11 @@ public partial class RBMIncapacitatedPawnCounter : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMIncapacitatedPawnCounter.
+    /// </summary>
+    public static RBMIncapacitatedPawnCounter DefaultObject => (RBMIncapacitatedPawnCounter)StaticClass().DefaultObject;
+
     internal RBMIncapacitatedPawnCounter() { }
 
     /// <summary>

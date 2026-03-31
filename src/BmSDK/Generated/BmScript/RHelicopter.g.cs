@@ -21,6 +21,11 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopter.
+    /// </summary>
+    public static RHelicopter DefaultObject => (RHelicopter)StaticClass().DefaultObject;
+
     internal RHelicopter() { }
 
     /// <summary>

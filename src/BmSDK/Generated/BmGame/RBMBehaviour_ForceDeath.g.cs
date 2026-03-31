@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ForceDeath : BmSDK.BmGame.RBMBehaviour, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ForceDeath.
+    /// </summary>
+    public static RBMBehaviour_ForceDeath DefaultObject => (RBMBehaviour_ForceDeath)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ForceDeath() { }
 
     /// <summary>

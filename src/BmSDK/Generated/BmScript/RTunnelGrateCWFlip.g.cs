@@ -21,6 +21,11 @@ public partial class RTunnelGrateCWFlip : BmSDK.BmScript.RTunnelGrateShared, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelGrateCWFlip.
+    /// </summary>
+    public static RTunnelGrateCWFlip DefaultObject => (RTunnelGrateCWFlip)StaticClass().DefaultObject;
+
     internal RTunnelGrateCWFlip() { }
 
     /// <summary>

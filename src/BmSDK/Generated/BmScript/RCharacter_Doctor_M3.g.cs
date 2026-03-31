@@ -21,6 +21,11 @@ public partial class RCharacter_Doctor_M3 : BmSDK.BmGame.RCharacter_CopBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Doctor_M3.
+    /// </summary>
+    public static RCharacter_Doctor_M3 DefaultObject => (RCharacter_Doctor_M3)StaticClass().DefaultObject;
+
     internal RCharacter_Doctor_M3() { }
 
     /// <summary>

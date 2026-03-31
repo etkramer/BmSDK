@@ -21,6 +21,11 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Scout.
+    /// </summary>
+    public static Scout DefaultObject => (Scout)StaticClass().DefaultObject;
+
     internal Scout() { }
 
     /// <summary>

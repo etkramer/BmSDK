@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_GenericBackToBehaviours : BmSDK.BmGame.RBMSeqEv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_GenericBackToBehaviours.
+    /// </summary>
+    public static RBMSeqEvent_GenericBackToBehaviours DefaultObject => (RBMSeqEvent_GenericBackToBehaviours)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_GenericBackToBehaviours() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RThugMineablePointWall : BmSDK.BmGame.RThugMineablePointBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThugMineablePointWall.
+    /// </summary>
+    public static RThugMineablePointWall DefaultObject => (RThugMineablePointWall)StaticClass().DefaultObject;
+
     internal RThugMineablePointWall() { }
 
     /// <summary>

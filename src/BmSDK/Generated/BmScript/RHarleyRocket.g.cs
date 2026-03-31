@@ -21,6 +21,11 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarleyRocket.
+    /// </summary>
+    public static RHarleyRocket DefaultObject => (RHarleyRocket)StaticClass().DefaultObject;
+
     internal RHarleyRocket() { }
 
     /// <summary>

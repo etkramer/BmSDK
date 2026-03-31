@@ -21,6 +21,11 @@ public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAutoRescueCamera.
+    /// </summary>
+    public static RAutoRescueCamera DefaultObject => (RAutoRescueCamera)StaticClass().DefaultObject;
+
     internal RAutoRescueCamera() { }
 
     /// <summary>

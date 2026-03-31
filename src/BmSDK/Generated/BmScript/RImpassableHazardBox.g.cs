@@ -21,6 +21,11 @@ public partial class RImpassableHazardBox : BmSDK.BmGame.RImpassableHazardBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RImpassableHazardBox.
+    /// </summary>
+    public static RImpassableHazardBox DefaultObject => (RImpassableHazardBox)StaticClass().DefaultObject;
+
     internal RImpassableHazardBox() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPatrolPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPatrolPointRenderingComponent.
+    /// </summary>
+    public static RPatrolPointRenderingComponent DefaultObject => (RPatrolPointRenderingComponent)StaticClass().DefaultObject;
+
     internal RPatrolPointRenderingComponent() { }
 
     /// <summary>

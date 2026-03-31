@@ -21,6 +21,11 @@ public partial class NavMeshPath_AlongLine : BmSDK.Engine.NavMeshPathConstraint,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_AlongLine.
+    /// </summary>
+    public static NavMeshPath_AlongLine DefaultObject => (NavMeshPath_AlongLine)StaticClass().DefaultObject;
+
     internal NavMeshPath_AlongLine() { }
 
     /// <summary>

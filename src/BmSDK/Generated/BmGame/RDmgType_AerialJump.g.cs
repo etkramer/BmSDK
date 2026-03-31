@@ -21,6 +21,11 @@ public partial class RDmgType_AerialJump : BmSDK.BmGame.RDmgType_Strike, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_AerialJump.
+    /// </summary>
+    public static RDmgType_AerialJump DefaultObject => (RDmgType_AerialJump)StaticClass().DefaultObject;
+
     internal RDmgType_AerialJump() { }
 
     /// <summary>

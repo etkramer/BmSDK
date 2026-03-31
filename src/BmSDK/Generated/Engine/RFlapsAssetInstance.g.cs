@@ -21,6 +21,11 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlapsAssetInstance.
+    /// </summary>
+    public static RFlapsAssetInstance DefaultObject => (RFlapsAssetInstance)StaticClass().DefaultObject;
+
     internal RFlapsAssetInstance() { }
 
     /// <summary>

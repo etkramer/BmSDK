@@ -21,6 +21,11 @@ public partial class RCharacter_Catwoman : BmSDK.BmGame.RCharacter, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Catwoman.
+    /// </summary>
+    public static RCharacter_Catwoman DefaultObject => (RCharacter_Catwoman)StaticClass().DefaultObject;
+
     internal RCharacter_Catwoman() { }
 
     /// <summary>

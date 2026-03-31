@@ -21,6 +21,11 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DOFAndBloomEffect.
+    /// </summary>
+    public static DOFAndBloomEffect DefaultObject => (DOFAndBloomEffect)StaticClass().DefaultObject;
+
     internal DOFAndBloomEffect() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_FallingTakedown : BmSDK.BmScript.RFree
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_FallingTakedown.
+    /// </summary>
+    public static RFreezeTakeDownStage_FallingTakedown DefaultObject => (RFreezeTakeDownStage_FallingTakedown)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_FallingTakedown() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_MainMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_MainMenu.
+    /// </summary>
+    public static RGFxMovieUI_MainMenu DefaultObject => (RGFxMovieUI_MainMenu)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_MainMenu() { }
 
     /// <summary>

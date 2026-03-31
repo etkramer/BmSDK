@@ -21,6 +21,11 @@ public partial class LightVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightVolume.
+    /// </summary>
+    public static LightVolume DefaultObject => (LightVolume)StaticClass().DefaultObject;
+
     internal LightVolume() { }
 
     /// <summary>

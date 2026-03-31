@@ -21,6 +21,11 @@ public partial class RPawnVillainThugNoMirror : BmSDK.BmGame.RPawnVillainThug, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThugNoMirror.
+    /// </summary>
+    public static RPawnVillainThugNoMirror DefaultObject => (RPawnVillainThugNoMirror)StaticClass().DefaultObject;
+
     internal RPawnVillainThugNoMirror() { }
 
     /// <summary>

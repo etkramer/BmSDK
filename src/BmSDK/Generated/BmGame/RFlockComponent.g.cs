@@ -21,6 +21,11 @@ public partial class RFlockComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlockComponent.
+    /// </summary>
+    public static RFlockComponent DefaultObject => (RFlockComponent)StaticClass().DefaultObject;
+
     internal RFlockComponent() { }
 
     /// <summary>

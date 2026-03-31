@@ -21,6 +21,11 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_OverlayPlayer.
+    /// </summary>
+    public static RAnimUtil_OverlayPlayer DefaultObject => (RAnimUtil_OverlayPlayer)StaticClass().DefaultObject;
+
     internal RAnimUtil_OverlayPlayer() { }
 
     /// <summary>

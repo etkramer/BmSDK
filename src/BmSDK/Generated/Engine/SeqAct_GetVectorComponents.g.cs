@@ -21,6 +21,11 @@ public partial class SeqAct_GetVectorComponents : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_GetVectorComponents.
+    /// </summary>
+    public static SeqAct_GetVectorComponents DefaultObject => (SeqAct_GetVectorComponents)StaticClass().DefaultObject;
+
     internal SeqAct_GetVectorComponents() { }
 
     /// <summary>

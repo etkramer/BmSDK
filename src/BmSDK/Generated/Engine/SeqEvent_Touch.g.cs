@@ -21,6 +21,11 @@ public partial class SeqEvent_Touch : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Touch.
+    /// </summary>
+    public static SeqEvent_Touch DefaultObject => (SeqEvent_Touch)StaticClass().DefaultObject;
+
     internal SeqEvent_Touch() { }
 
     /// <summary>

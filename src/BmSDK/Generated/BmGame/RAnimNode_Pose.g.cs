@@ -21,6 +21,11 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_Pose.
+    /// </summary>
+    public static RAnimNode_Pose DefaultObject => (RAnimNode_Pose)StaticClass().DefaultObject;
+
     internal RAnimNode_Pose() { }
 
     /// <summary>

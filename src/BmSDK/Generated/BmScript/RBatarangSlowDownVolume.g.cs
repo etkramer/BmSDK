@@ -21,6 +21,11 @@ public partial class RBatarangSlowDownVolume : BmSDK.Engine.Volume, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangSlowDownVolume.
+    /// </summary>
+    public static RBatarangSlowDownVolume DefaultObject => (RBatarangSlowDownVolume)StaticClass().DefaultObject;
+
     internal RBatarangSlowDownVolume() { }
 
     /// <summary>

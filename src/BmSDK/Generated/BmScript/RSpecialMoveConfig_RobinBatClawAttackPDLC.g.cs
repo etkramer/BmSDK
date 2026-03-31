@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RobinBatClawAttackPDLC : BmSDK.BmScript.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RobinBatClawAttackPDLC.
+    /// </summary>
+    public static RSpecialMoveConfig_RobinBatClawAttackPDLC DefaultObject => (RSpecialMoveConfig_RobinBatClawAttackPDLC)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RobinBatClawAttackPDLC() { }
 
     /// <summary>

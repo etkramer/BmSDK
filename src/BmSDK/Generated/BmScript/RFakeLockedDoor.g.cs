@@ -21,6 +21,11 @@ public partial class RFakeLockedDoor : BmSDK.Engine.Actor, BmSDK.BmGame.RInterac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFakeLockedDoor.
+    /// </summary>
+    public static RFakeLockedDoor DefaultObject => (RFakeLockedDoor)StaticClass().DefaultObject;
+
     internal RFakeLockedDoor() { }
 
     /// <summary>

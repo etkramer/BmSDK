@@ -21,6 +21,11 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NinjaTracking.
+    /// </summary>
+    public static RSeqAct_NinjaTracking DefaultObject => (RSeqAct_NinjaTracking)StaticClass().DefaultObject;
+
     internal RSeqAct_NinjaTracking() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieKismetBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieKismetBase.
+    /// </summary>
+    public static RGFxMovieKismetBase DefaultObject => (RGFxMovieKismetBase)StaticClass().DefaultObject;
+
     internal RGFxMovieKismetBase() { }
 
     /// <summary>

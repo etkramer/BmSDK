@@ -21,6 +21,11 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFractureWallBase.
+    /// </summary>
+    public static RFractureWallBase DefaultObject => (RFractureWallBase)StaticClass().DefaultObject;
+
     internal RFractureWallBase() { }
 
     /// <summary>

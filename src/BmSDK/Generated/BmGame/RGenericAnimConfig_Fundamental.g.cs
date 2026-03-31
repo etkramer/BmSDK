@@ -21,6 +21,11 @@ public partial class RGenericAnimConfig_Fundamental : BmSDK.BmGame.RPoseConfig, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGenericAnimConfig_Fundamental.
+    /// </summary>
+    public static RGenericAnimConfig_Fundamental DefaultObject => (RGenericAnimConfig_Fundamental)StaticClass().DefaultObject;
+
     internal RGenericAnimConfig_Fundamental() { }
 
     /// <summary>

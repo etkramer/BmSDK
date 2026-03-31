@@ -21,6 +21,11 @@ public partial class RSeqAct_LockDown : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LockDown.
+    /// </summary>
+    public static RSeqAct_LockDown DefaultObject => (RSeqAct_LockDown)StaticClass().DefaultObject;
+
     internal RSeqAct_LockDown() { }
 
     /// <summary>

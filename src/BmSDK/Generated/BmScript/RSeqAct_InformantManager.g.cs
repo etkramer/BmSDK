@@ -21,6 +21,11 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InformantManager.
+    /// </summary>
+    public static RSeqAct_InformantManager DefaultObject => (RSeqAct_InformantManager)StaticClass().DefaultObject;
+
     internal RSeqAct_InformantManager() { }
 
     /// <summary>

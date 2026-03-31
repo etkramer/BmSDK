@@ -21,6 +21,11 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FaceFXOutput.
+    /// </summary>
+    public static RAnimUtil_FaceFXOutput DefaultObject => (RAnimUtil_FaceFXOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_FaceFXOutput() { }
 
     /// <summary>

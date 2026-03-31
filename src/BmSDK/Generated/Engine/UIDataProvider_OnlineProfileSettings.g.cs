@@ -21,6 +21,11 @@ public partial class UIDataProvider_OnlineProfileSettings : BmSDK.Engine.UIDataP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_OnlineProfileSettings.
+    /// </summary>
+    public static UIDataProvider_OnlineProfileSettings DefaultObject => (UIDataProvider_OnlineProfileSettings)StaticClass().DefaultObject;
+
     internal UIDataProvider_OnlineProfileSettings() { }
 
     /// <summary>

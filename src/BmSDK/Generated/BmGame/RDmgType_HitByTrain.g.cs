@@ -21,6 +21,11 @@ public partial class RDmgType_HitByTrain : BmSDK.BmGame.RDmgType_PodExplosion, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HitByTrain.
+    /// </summary>
+    public static RDmgType_HitByTrain DefaultObject => (RDmgType_HitByTrain)StaticClass().DefaultObject;
+
     internal RDmgType_HitByTrain() { }
 
     /// <summary>

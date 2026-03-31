@@ -21,6 +21,11 @@ public partial class RZsaszPhoneVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RZsaszPhoneVolume.
+    /// </summary>
+    public static RZsaszPhoneVolume DefaultObject => (RZsaszPhoneVolume)StaticClass().DefaultObject;
+
     internal RZsaszPhoneVolume() { }
 
     /// <summary>

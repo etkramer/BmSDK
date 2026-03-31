@@ -21,6 +21,11 @@ public partial class ROverheadWireEndBase : BmSDK.BmGame.RSnapToPositionActor, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROverheadWireEndBase.
+    /// </summary>
+    public static ROverheadWireEndBase DefaultObject => (ROverheadWireEndBase)StaticClass().DefaultObject;
+
     internal ROverheadWireEndBase() { }
 
     /// <summary>

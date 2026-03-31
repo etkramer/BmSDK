@@ -21,6 +21,11 @@ public partial class AkEvent : BmSDK.Engine.AkAssetPrep, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkEvent.
+    /// </summary>
+    public static AkEvent DefaultObject => (AkEvent)StaticClass().DefaultObject;
+
     internal AkEvent() { }
 
     /// <summary>

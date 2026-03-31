@@ -21,6 +21,11 @@ public partial class RMagicSmasher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagicSmasher.
+    /// </summary>
+    public static RMagicSmasher DefaultObject => (RMagicSmasher)StaticClass().DefaultObject;
+
     internal RMagicSmasher() { }
 
     /// <summary>

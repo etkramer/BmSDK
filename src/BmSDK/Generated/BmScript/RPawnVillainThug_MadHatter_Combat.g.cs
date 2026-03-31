@@ -21,6 +21,11 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThug_MadHatter_Combat.
+    /// </summary>
+    public static RPawnVillainThug_MadHatter_Combat DefaultObject => (RPawnVillainThug_MadHatter_Combat)StaticClass().DefaultObject;
+
     internal RPawnVillainThug_MadHatter_Combat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeClusterTrap.
+    /// </summary>
+    public static RFreezeClusterTrap DefaultObject => (RFreezeClusterTrap)StaticClass().DefaultObject;
+
     internal RFreezeClusterTrap() { }
 
     /// <summary>

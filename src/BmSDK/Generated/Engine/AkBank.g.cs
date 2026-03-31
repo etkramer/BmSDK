@@ -21,6 +21,11 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkBank.
+    /// </summary>
+    public static AkBank DefaultObject => (AkBank)StaticClass().DefaultObject;
+
     internal AkBank() { }
 
     /// <summary>

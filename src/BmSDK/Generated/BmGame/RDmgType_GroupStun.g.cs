@@ -21,6 +21,11 @@ public partial class RDmgType_GroupStun : BmSDK.BmGame.RDmgType_Strike, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GroupStun.
+    /// </summary>
+    public static RDmgType_GroupStun DefaultObject => (RDmgType_GroupStun)StaticClass().DefaultObject;
+
     internal RDmgType_GroupStun() { }
 
     /// <summary>

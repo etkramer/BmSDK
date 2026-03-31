@@ -21,6 +21,11 @@ public partial class CullDistanceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CullDistanceVolume.
+    /// </summary>
+    public static CullDistanceVolume DefaultObject => (CullDistanceVolume)StaticClass().DefaultObject;
+
     internal CullDistanceVolume() { }
 
     /// <summary>

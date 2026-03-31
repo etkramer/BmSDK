@@ -21,6 +21,11 @@ public partial class BlurEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BlurEffect.
+    /// </summary>
+    public static BlurEffect DefaultObject => (BlurEffect)StaticClass().DefaultObject;
+
     internal BlurEffect() { }
 
     /// <summary>

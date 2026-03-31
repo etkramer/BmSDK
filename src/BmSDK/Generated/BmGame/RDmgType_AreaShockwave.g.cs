@@ -21,6 +21,11 @@ public partial class RDmgType_AreaShockwave : BmSDK.BmGame.RDmgType_Strike, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_AreaShockwave.
+    /// </summary>
+    public static RDmgType_AreaShockwave DefaultObject => (RDmgType_AreaShockwave)StaticClass().DefaultObject;
+
     internal RDmgType_AreaShockwave() { }
 
     /// <summary>

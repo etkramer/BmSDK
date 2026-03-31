@@ -21,6 +21,11 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkComponent.
+    /// </summary>
+    public static AkComponent DefaultObject => (AkComponent)StaticClass().DefaultObject;
+
     internal AkComponent() { }
 
     /// <summary>

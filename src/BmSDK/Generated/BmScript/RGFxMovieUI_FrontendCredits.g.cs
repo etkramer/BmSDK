@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_FrontendCredits : BmSDK.BmGame.RGFxMovieUI, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_FrontendCredits.
+    /// </summary>
+    public static RGFxMovieUI_FrontendCredits DefaultObject => (RGFxMovieUI_FrontendCredits)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_FrontendCredits() { }
 
     /// <summary>

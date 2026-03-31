@@ -21,6 +21,11 @@ public partial class RSeqAct_ApplyForceToUnfixedBones : BmSDK.Engine.SeqAct_Late
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ApplyForceToUnfixedBones.
+    /// </summary>
+    public static RSeqAct_ApplyForceToUnfixedBones DefaultObject => (RSeqAct_ApplyForceToUnfixedBones)StaticClass().DefaultObject;
+
     internal RSeqAct_ApplyForceToUnfixedBones() { }
 
     /// <summary>

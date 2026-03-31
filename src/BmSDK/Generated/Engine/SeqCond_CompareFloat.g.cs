@@ -21,6 +21,11 @@ public partial class SeqCond_CompareFloat : BmSDK.Engine.SequenceCondition, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_CompareFloat.
+    /// </summary>
+    public static SeqCond_CompareFloat DefaultObject => (SeqCond_CompareFloat)StaticClass().DefaultObject;
+
     internal SeqCond_CompareFloat() { }
 
     /// <summary>

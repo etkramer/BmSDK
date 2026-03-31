@@ -21,6 +21,11 @@ public partial class RCrossLevelVantageProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrossLevelVantageProxy.
+    /// </summary>
+    public static RCrossLevelVantageProxy DefaultObject => (RCrossLevelVantageProxy)StaticClass().DefaultObject;
+
     internal RCrossLevelVantageProxy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDistributionVectorParticleArrayParameter : BmSDK.Engine.Di
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDistributionVectorParticleArrayParameter.
+    /// </summary>
+    public static RDistributionVectorParticleArrayParameter DefaultObject => (RDistributionVectorParticleArrayParameter)StaticClass().DefaultObject;
+
     internal RDistributionVectorParticleArrayParameter() { }
 
     /// <summary>

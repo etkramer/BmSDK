@@ -21,6 +21,11 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioGlassVolume.
+    /// </summary>
+    public static RAudioGlassVolume DefaultObject => (RAudioGlassVolume)StaticClass().DefaultObject;
+
     internal RAudioGlassVolume() { }
 
     /// <summary>

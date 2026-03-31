@@ -21,6 +21,11 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_ExplodedWall.
+    /// </summary>
+    public static RAEC_ExplodedWall DefaultObject => (RAEC_ExplodedWall)StaticClass().DefaultObject;
+
     internal RAEC_ExplodedWall() { }
 
     /// <summary>

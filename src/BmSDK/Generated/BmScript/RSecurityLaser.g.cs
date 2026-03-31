@@ -21,6 +21,11 @@ public partial class RSecurityLaser : BmSDK.BmGame.RSecurityLaserBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSecurityLaser.
+    /// </summary>
+    public static RSecurityLaser DefaultObject => (RSecurityLaser)StaticClass().DefaultObject;
+
     internal RSecurityLaser() { }
 
     /// <summary>

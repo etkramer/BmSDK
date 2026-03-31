@@ -21,6 +21,11 @@ public partial class RAEC_Startle : BmSDK.BmGame.RAlertEventCoordinatorBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Startle.
+    /// </summary>
+    public static RAEC_Startle DefaultObject => (RAEC_Startle)StaticClass().DefaultObject;
+
     internal RAEC_Startle() { }
 
     /// <summary>

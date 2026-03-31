@@ -21,6 +21,11 @@ public partial class RDmgType_LaserGrid : BmSDK.BmGame.RDmgType_Electricity, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_LaserGrid.
+    /// </summary>
+    public static RDmgType_LaserGrid DefaultObject => (RDmgType_LaserGrid)StaticClass().DefaultObject;
+
     internal RDmgType_LaserGrid() { }
 
     /// <summary>

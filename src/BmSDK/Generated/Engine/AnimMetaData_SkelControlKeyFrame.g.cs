@@ -21,6 +21,11 @@ public partial class AnimMetaData_SkelControlKeyFrame : BmSDK.Engine.AnimMetaDat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimMetaData_SkelControlKeyFrame.
+    /// </summary>
+    public static AnimMetaData_SkelControlKeyFrame DefaultObject => (AnimMetaData_SkelControlKeyFrame)StaticClass().DefaultObject;
+
     internal AnimMetaData_SkelControlKeyFrame() { }
 
     /// <summary>

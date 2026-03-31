@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatLunatic.
+    /// </summary>
+    public static RBMBehaviour_CombatLunatic DefaultObject => (RBMBehaviour_CombatLunatic)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatLunatic() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_CounterWeak : BmSDK.BmGame.RDmgType_Counter, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CounterWeak.
+    /// </summary>
+    public static RDmgType_CounterWeak DefaultObject => (RDmgType_CounterWeak)StaticClass().DefaultObject;
+
     internal RDmgType_CounterWeak() { }
 
     /// <summary>

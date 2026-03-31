@@ -21,6 +21,11 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterRocket.
+    /// </summary>
+    public static RHelicopterRocket DefaultObject => (RHelicopterRocket)StaticClass().DefaultObject;
+
     internal RHelicopterRocket() { }
 
     /// <summary>

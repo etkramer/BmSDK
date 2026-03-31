@@ -21,6 +21,11 @@ public partial class RCharacter_FreezeNoSuit : BmSDK.BmGame.RCharacter, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_FreezeNoSuit.
+    /// </summary>
+    public static RCharacter_FreezeNoSuit DefaultObject => (RCharacter_FreezeNoSuit)StaticClass().DefaultObject;
+
     internal RCharacter_FreezeNoSuit() { }
 
     /// <summary>

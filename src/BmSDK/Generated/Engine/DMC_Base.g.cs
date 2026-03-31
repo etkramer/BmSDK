@@ -21,6 +21,11 @@ public partial class DMC_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DMC_Base.
+    /// </summary>
+    public static DMC_Base DefaultObject => (DMC_Base)StaticClass().DefaultObject;
+
     internal DMC_Base() { }
 
     /// <summary>

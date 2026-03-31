@@ -21,6 +21,11 @@ public partial class RSeqAct_StopTapeOrRiddle : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StopTapeOrRiddle.
+    /// </summary>
+    public static RSeqAct_StopTapeOrRiddle DefaultObject => (RSeqAct_StopTapeOrRiddle)StaticClass().DefaultObject;
+
     internal RSeqAct_StopTapeOrRiddle() { }
 
     /// <summary>

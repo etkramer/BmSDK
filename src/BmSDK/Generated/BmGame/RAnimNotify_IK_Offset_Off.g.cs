@@ -21,6 +21,11 @@ public partial class RAnimNotify_IK_Offset_Off : BmSDK.BmGame.RAnimNotify_IK, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_IK_Offset_Off.
+    /// </summary>
+    public static RAnimNotify_IK_Offset_Off DefaultObject => (RAnimNotify_IK_Offset_Off)StaticClass().DefaultObject;
+
     internal RAnimNotify_IK_Offset_Off() { }
 
     /// <summary>

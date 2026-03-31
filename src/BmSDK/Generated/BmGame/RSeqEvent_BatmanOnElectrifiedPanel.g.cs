@@ -21,6 +21,11 @@ public partial class RSeqEvent_BatmanOnElectrifiedPanel : BmSDK.Engine.SequenceE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BatmanOnElectrifiedPanel.
+    /// </summary>
+    public static RSeqEvent_BatmanOnElectrifiedPanel DefaultObject => (RSeqEvent_BatmanOnElectrifiedPanel)StaticClass().DefaultObject;
+
     internal RSeqEvent_BatmanOnElectrifiedPanel() { }
 
     /// <summary>

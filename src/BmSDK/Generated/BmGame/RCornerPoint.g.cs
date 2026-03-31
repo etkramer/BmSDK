@@ -21,6 +21,11 @@ public partial class RCornerPoint : BmSDK.BmGame.RCornerPointBase, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCornerPoint.
+    /// </summary>
+    public static RCornerPoint DefaultObject => (RCornerPoint)StaticClass().DefaultObject;
+
     internal RCornerPoint() { }
 
     /// <summary>

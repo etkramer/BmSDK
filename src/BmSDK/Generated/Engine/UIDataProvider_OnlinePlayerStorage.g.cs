@@ -21,6 +21,11 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_OnlinePlayerStorage.
+    /// </summary>
+    public static UIDataProvider_OnlinePlayerStorage DefaultObject => (UIDataProvider_OnlinePlayerStorage)StaticClass().DefaultObject;
+
     internal UIDataProvider_OnlinePlayerStorage() { }
 
     /// <summary>

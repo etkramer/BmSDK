@@ -21,6 +21,11 @@ public partial class MaterialExpressionLensFlareIntensity : BmSDK.Engine.Materia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLensFlareIntensity.
+    /// </summary>
+    public static MaterialExpressionLensFlareIntensity DefaultObject => (MaterialExpressionLensFlareIntensity)StaticClass().DefaultObject;
+
     internal MaterialExpressionLensFlareIntensity() { }
 
     /// <summary>

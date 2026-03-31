@@ -21,6 +21,11 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SoundMode.
+    /// </summary>
+    public static SoundMode DefaultObject => (SoundMode)StaticClass().DefaultObject;
+
     internal SoundMode() { }
 
     /// <summary>

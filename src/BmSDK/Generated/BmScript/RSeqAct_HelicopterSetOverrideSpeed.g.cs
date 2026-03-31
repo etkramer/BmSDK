@@ -21,6 +21,11 @@ public partial class RSeqAct_HelicopterSetOverrideSpeed : BmSDK.Engine.SequenceA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelicopterSetOverrideSpeed.
+    /// </summary>
+    public static RSeqAct_HelicopterSetOverrideSpeed DefaultObject => (RSeqAct_HelicopterSetOverrideSpeed)StaticClass().DefaultObject;
+
     internal RSeqAct_HelicopterSetOverrideSpeed() { }
 
     /// <summary>

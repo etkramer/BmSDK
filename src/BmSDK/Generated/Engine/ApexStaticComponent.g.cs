@@ -21,6 +21,11 @@ public partial class ApexStaticComponent : BmSDK.Engine.ApexComponentBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexStaticComponent.
+    /// </summary>
+    public static ApexStaticComponent DefaultObject => (ApexStaticComponent)StaticClass().DefaultObject;
+
     internal ApexStaticComponent() { }
 
     /// <summary>

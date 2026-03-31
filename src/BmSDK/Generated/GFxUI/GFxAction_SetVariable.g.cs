@@ -21,6 +21,11 @@ public partial class GFxAction_SetVariable : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxAction_SetVariable.
+    /// </summary>
+    public static GFxAction_SetVariable DefaultObject => (GFxAction_SetVariable)StaticClass().DefaultObject;
+
     internal GFxAction_SetVariable() { }
 
     /// <summary>

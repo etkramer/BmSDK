@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_Tiger1_Ivy : BmSDK.BmScript.RCharacter_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_Tiger1_Ivy.
+    /// </summary>
+    public static RCharacter_GuardBM2_Tiger1_Ivy DefaultObject => (RCharacter_GuardBM2_Tiger1_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_Tiger1_Ivy() { }
 
     /// <summary>

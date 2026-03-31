@@ -21,6 +21,11 @@ public partial class RSubtitle : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSubtitle.
+    /// </summary>
+    public static RSubtitle DefaultObject => (RSubtitle)StaticClass().DefaultObject;
+
     internal RSubtitle() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqEvent_ConstraintBroken : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_ConstraintBroken.
+    /// </summary>
+    public static SeqEvent_ConstraintBroken DefaultObject => (SeqEvent_ConstraintBroken)StaticClass().DefaultObject;
+
     internal SeqEvent_ConstraintBroken() { }
 
     /// <summary>

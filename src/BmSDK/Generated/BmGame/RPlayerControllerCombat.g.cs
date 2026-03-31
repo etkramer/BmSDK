@@ -21,6 +21,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerControllerCombat.
+    /// </summary>
+    public static RPlayerControllerCombat DefaultObject => (RPlayerControllerCombat)StaticClass().DefaultObject;
+
     internal RPlayerControllerCombat() { }
 
     /// <summary>

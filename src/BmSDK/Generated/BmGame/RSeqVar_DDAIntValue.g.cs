@@ -21,6 +21,11 @@ public partial class RSeqVar_DDAIntValue : BmSDK.Engine.SeqVar_Int, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_DDAIntValue.
+    /// </summary>
+    public static RSeqVar_DDAIntValue DefaultObject => (RSeqVar_DDAIntValue)StaticClass().DefaultObject;
+
     internal RSeqVar_DDAIntValue() { }
 
     /// <summary>

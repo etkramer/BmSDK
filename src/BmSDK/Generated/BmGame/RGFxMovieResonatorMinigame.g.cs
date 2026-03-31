@@ -21,6 +21,11 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieResonatorMinigame.
+    /// </summary>
+    public static RGFxMovieResonatorMinigame DefaultObject => (RGFxMovieResonatorMinigame)StaticClass().DefaultObject;
+
     internal RGFxMovieResonatorMinigame() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_Characters.
+    /// </summary>
+    public static RGFxMovieUI_Characters DefaultObject => (RGFxMovieUI_Characters)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_Characters() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableCombatLock : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableCombatLock.
+    /// </summary>
+    public static RSeqAct_DisableCombatLock DefaultObject => (RSeqAct_DisableCombatLock)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableCombatLock() { }
 
     /// <summary>

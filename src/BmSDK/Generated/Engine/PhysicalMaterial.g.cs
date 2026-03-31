@@ -21,6 +21,11 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PhysicalMaterial.
+    /// </summary>
+    public static PhysicalMaterial DefaultObject => (PhysicalMaterial)StaticClass().DefaultObject;
+
     internal PhysicalMaterial() { }
 
     /// <summary>

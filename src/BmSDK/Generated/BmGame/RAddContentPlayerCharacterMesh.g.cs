@@ -21,6 +21,11 @@ public partial class RAddContentPlayerCharacterMesh : BmSDK.BmGame.RAdditionalCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentPlayerCharacterMesh.
+    /// </summary>
+    public static RAddContentPlayerCharacterMesh DefaultObject => (RAddContentPlayerCharacterMesh)StaticClass().DefaultObject;
+
     internal RAddContentPlayerCharacterMesh() { }
 
     /// <summary>

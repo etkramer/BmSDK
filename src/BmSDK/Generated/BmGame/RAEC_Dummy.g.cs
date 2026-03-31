@@ -21,6 +21,11 @@ public partial class RAEC_Dummy : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Dummy.
+    /// </summary>
+    public static RAEC_Dummy DefaultObject => (RAEC_Dummy)StaticClass().DefaultObject;
+
     internal RAEC_Dummy() { }
 
     /// <summary>

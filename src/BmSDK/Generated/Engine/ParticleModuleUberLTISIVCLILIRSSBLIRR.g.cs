@@ -21,6 +21,11 @@ public partial class ParticleModuleUberLTISIVCLILIRSSBLIRR : BmSDK.Engine.Partic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleUberLTISIVCLILIRSSBLIRR.
+    /// </summary>
+    public static ParticleModuleUberLTISIVCLILIRSSBLIRR DefaultObject => (ParticleModuleUberLTISIVCLILIRSSBLIRR)StaticClass().DefaultObject;
+
     internal ParticleModuleUberLTISIVCLILIRSSBLIRR() { }
 
     /// <summary>

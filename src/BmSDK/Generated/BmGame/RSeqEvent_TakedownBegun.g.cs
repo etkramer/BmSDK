@@ -21,6 +21,11 @@ public partial class RSeqEvent_TakedownBegun : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TakedownBegun.
+    /// </summary>
+    public static RSeqEvent_TakedownBegun DefaultObject => (RSeqEvent_TakedownBegun)StaticClass().DefaultObject;
+
     internal RSeqEvent_TakedownBegun() { }
 
     /// <summary>

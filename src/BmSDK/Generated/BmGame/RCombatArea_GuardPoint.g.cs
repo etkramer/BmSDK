@@ -21,6 +21,11 @@ public partial class RCombatArea_GuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatArea_GuardPoint.
+    /// </summary>
+    public static RCombatArea_GuardPoint DefaultObject => (RCombatArea_GuardPoint)StaticClass().DefaultObject;
+
     internal RCombatArea_GuardPoint() { }
 
     /// <summary>

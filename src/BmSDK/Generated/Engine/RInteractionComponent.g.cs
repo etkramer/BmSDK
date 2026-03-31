@@ -21,6 +21,11 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInteractionComponent.
+    /// </summary>
+    public static RInteractionComponent DefaultObject => (RInteractionComponent)StaticClass().DefaultObject;
+
     internal RInteractionComponent() { }
 
     /// <summary>

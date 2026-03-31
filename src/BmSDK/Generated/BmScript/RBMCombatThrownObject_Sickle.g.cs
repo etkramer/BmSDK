@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Sickle : BmSDK.BmGame.RBMCombatThrown
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Sickle.
+    /// </summary>
+    public static RBMCombatThrownObject_Sickle DefaultObject => (RBMCombatThrownObject_Sickle)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Sickle() { }
 
     /// <summary>

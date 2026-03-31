@@ -21,6 +21,11 @@ public partial class RDmgType_RiddlerMineExplosion_Player : BmSDK.BmGame.RDmgTyp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RiddlerMineExplosion_Player.
+    /// </summary>
+    public static RDmgType_RiddlerMineExplosion_Player DefaultObject => (RDmgType_RiddlerMineExplosion_Player)StaticClass().DefaultObject;
+
     internal RDmgType_RiddlerMineExplosion_Player() { }
 
     /// <summary>

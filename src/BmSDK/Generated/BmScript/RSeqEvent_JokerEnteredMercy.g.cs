@@ -21,6 +21,11 @@ public partial class RSeqEvent_JokerEnteredMercy : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_JokerEnteredMercy.
+    /// </summary>
+    public static RSeqEvent_JokerEnteredMercy DefaultObject => (RSeqEvent_JokerEnteredMercy)StaticClass().DefaultObject;
+
     internal RSeqEvent_JokerEnteredMercy() { }
 
     /// <summary>

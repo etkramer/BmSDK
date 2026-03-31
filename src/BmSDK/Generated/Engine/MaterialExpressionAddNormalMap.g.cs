@@ -21,6 +21,11 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionAddNormalMap.
+    /// </summary>
+    public static MaterialExpressionAddNormalMap DefaultObject => (MaterialExpressionAddNormalMap)StaticClass().DefaultObject;
+
     internal MaterialExpressionAddNormalMap() { }
 
     /// <summary>

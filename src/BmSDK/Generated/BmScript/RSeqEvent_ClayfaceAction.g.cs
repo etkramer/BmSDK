@@ -21,6 +21,11 @@ public partial class RSeqEvent_ClayfaceAction : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_ClayfaceAction.
+    /// </summary>
+    public static RSeqEvent_ClayfaceAction DefaultObject => (RSeqEvent_ClayfaceAction)StaticClass().DefaultObject;
+
     internal RSeqEvent_ClayfaceAction() { }
 
     /// <summary>

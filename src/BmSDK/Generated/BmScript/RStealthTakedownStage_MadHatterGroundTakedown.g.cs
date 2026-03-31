@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_MadHatterGroundTakedown.
+    /// </summary>
+    public static RStealthTakedownStage_MadHatterGroundTakedown DefaultObject => (RStealthTakedownStage_MadHatterGroundTakedown)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_MadHatterGroundTakedown() { }
 
     /// <summary>

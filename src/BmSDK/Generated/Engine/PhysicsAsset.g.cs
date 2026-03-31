@@ -21,6 +21,11 @@ public partial class PhysicsAsset : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PhysicsAsset.
+    /// </summary>
+    public static PhysicsAsset DefaultObject => (PhysicsAsset)StaticClass().DefaultObject;
+
     internal PhysicsAsset() { }
 
     /// <summary>

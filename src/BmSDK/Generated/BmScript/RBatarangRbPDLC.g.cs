@@ -21,6 +21,11 @@ public partial class RBatarangRbPDLC : BmSDK.BmScript.RBatarangRb, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangRbPDLC.
+    /// </summary>
+    public static RBatarangRbPDLC DefaultObject => (RBatarangRbPDLC)StaticClass().DefaultObject;
+
     internal RBatarangRbPDLC() { }
 
     /// <summary>

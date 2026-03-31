@@ -21,6 +21,11 @@ public partial class RExplosionLight : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExplosionLight.
+    /// </summary>
+    public static RExplosionLight DefaultObject => (RExplosionLight)StaticClass().DefaultObject;
+
     internal RExplosionLight() { }
 
     /// <summary>

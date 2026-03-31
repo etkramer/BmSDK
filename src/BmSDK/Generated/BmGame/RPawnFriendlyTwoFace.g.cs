@@ -21,6 +21,11 @@ public partial class RPawnFriendlyTwoFace : BmSDK.BmGame.RPawnFriendly, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyTwoFace.
+    /// </summary>
+    public static RPawnFriendlyTwoFace DefaultObject => (RPawnFriendlyTwoFace)StaticClass().DefaultObject;
+
     internal RPawnFriendlyTwoFace() { }
 
     /// <summary>

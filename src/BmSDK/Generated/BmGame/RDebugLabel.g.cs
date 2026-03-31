@@ -21,6 +21,11 @@ public partial class RDebugLabel : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDebugLabel.
+    /// </summary>
+    public static RDebugLabel DefaultObject => (RDebugLabel)StaticClass().DefaultObject;
+
     internal RDebugLabel() { }
 
     /// <summary>

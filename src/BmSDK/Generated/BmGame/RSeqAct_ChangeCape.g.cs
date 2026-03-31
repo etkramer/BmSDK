@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangeCape : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangeCape.
+    /// </summary>
+    public static RSeqAct_ChangeCape DefaultObject => (RSeqAct_ChangeCape)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangeCape() { }
 
     /// <summary>

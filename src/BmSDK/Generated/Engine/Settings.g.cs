@@ -21,6 +21,11 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Settings.
+    /// </summary>
+    public static Settings DefaultObject => (Settings)StaticClass().DefaultObject;
+
     internal Settings() { }
 
     /// <summary>

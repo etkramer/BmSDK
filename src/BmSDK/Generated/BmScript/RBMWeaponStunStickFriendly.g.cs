@@ -21,6 +21,11 @@ public partial class RBMWeaponStunStickFriendly : BmSDK.BmGame.RBMWeaponStunStic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponStunStickFriendly.
+    /// </summary>
+    public static RBMWeaponStunStickFriendly DefaultObject => (RBMWeaponStunStickFriendly)StaticClass().DefaultObject;
+
     internal RBMWeaponStunStickFriendly() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_EndGameSession : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EndGameSession.
+    /// </summary>
+    public static RSeqAct_EndGameSession DefaultObject => (RSeqAct_EndGameSession)StaticClass().DefaultObject;
+
     internal RSeqAct_EndGameSession() { }
 
     /// <summary>

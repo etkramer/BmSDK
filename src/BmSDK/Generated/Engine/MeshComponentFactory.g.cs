@@ -21,6 +21,11 @@ public partial class MeshComponentFactory : BmSDK.Engine.PrimitiveComponentFacto
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MeshComponentFactory.
+    /// </summary>
+    public static MeshComponentFactory DefaultObject => (MeshComponentFactory)StaticClass().DefaultObject;
+
     internal MeshComponentFactory() { }
 
     /// <summary>

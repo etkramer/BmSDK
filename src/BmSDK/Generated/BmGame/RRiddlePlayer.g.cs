@@ -21,6 +21,11 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlePlayer.
+    /// </summary>
+    public static RRiddlePlayer DefaultObject => (RRiddlePlayer)StaticClass().DefaultObject;
+
     internal RRiddlePlayer() { }
 
     /// <summary>

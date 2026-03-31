@@ -21,6 +21,11 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpData.
+    /// </summary>
+    public static InterpData DefaultObject => (InterpData)StaticClass().DefaultObject;
+
     internal InterpData() { }
 
     /// <summary>

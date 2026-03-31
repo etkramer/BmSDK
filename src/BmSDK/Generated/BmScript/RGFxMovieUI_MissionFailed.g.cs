@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_MissionFailed : BmSDK.BmGame.RGFxMovieUI, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_MissionFailed.
+    /// </summary>
+    public static RGFxMovieUI_MissionFailed DefaultObject => (RGFxMovieUI_MissionFailed)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_MissionFailed() { }
 
     /// <summary>

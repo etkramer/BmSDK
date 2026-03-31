@@ -21,6 +21,11 @@ public partial class MaterialExpressionMagicUVs : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMagicUVs.
+    /// </summary>
+    public static MaterialExpressionMagicUVs DefaultObject => (MaterialExpressionMagicUVs)StaticClass().DefaultObject;
+
     internal MaterialExpressionMagicUVs() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Controller.
+    /// </summary>
+    public static Controller DefaultObject => (Controller)StaticClass().DefaultObject;
+
     internal Controller() { }
 
     /// <summary>

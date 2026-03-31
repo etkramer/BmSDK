@@ -21,6 +21,11 @@ public partial class RSeqAct_SetCharacterProgress : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetCharacterProgress.
+    /// </summary>
+    public static RSeqAct_SetCharacterProgress DefaultObject => (RSeqAct_SetCharacterProgress)StaticClass().DefaultObject;
+
     internal RSeqAct_SetCharacterProgress() { }
 
     /// <summary>

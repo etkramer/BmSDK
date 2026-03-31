@@ -21,6 +21,11 @@ public partial class RCharacter_CalenderMan : BmSDK.BmGame.RCharacter, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_CalenderMan.
+    /// </summary>
+    public static RCharacter_CalenderMan DefaultObject => (RCharacter_CalenderMan)StaticClass().DefaultObject;
+
     internal RCharacter_CalenderMan() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainLunaticBase.
+    /// </summary>
+    public static RPawnVillainLunaticBase DefaultObject => (RPawnVillainLunaticBase)StaticClass().DefaultObject;
+
     internal RPawnVillainLunaticBase() { }
 
     /// <summary>

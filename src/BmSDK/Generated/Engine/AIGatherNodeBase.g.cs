@@ -21,6 +21,11 @@ public partial class AIGatherNodeBase : BmSDK.Engine.K2NodeBase, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AIGatherNodeBase.
+    /// </summary>
+    public static AIGatherNodeBase DefaultObject => (AIGatherNodeBase)StaticClass().DefaultObject;
+
     internal AIGatherNodeBase() { }
 
     /// <summary>

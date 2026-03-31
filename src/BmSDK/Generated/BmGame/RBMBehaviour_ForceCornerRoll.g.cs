@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ForceCornerRoll : BmSDK.BmGame.RBMBehaviour, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ForceCornerRoll.
+    /// </summary>
+    public static RBMBehaviour_ForceCornerRoll DefaultObject => (RBMBehaviour_ForceCornerRoll)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ForceCornerRoll() { }
 
     /// <summary>

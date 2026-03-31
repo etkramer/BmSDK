@@ -21,6 +21,11 @@ public partial class RBMWeaponBatmanIceWalker : BmSDK.BmGame.RBMWeapon, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBatmanIceWalker.
+    /// </summary>
+    public static RBMWeaponBatmanIceWalker DefaultObject => (RBMWeaponBatmanIceWalker)StaticClass().DefaultObject;
+
     internal RBMWeaponBatmanIceWalker() { }
 
     /// <summary>

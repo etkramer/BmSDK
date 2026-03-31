@@ -21,6 +21,11 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransition.
+    /// </summary>
+    public static RLevelTransition DefaultObject => (RLevelTransition)StaticClass().DefaultObject;
+
     internal RLevelTransition() { }
 
     /// <summary>

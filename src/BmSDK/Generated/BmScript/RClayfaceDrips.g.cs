@@ -21,6 +21,11 @@ public partial class RClayfaceDrips : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceDrips.
+    /// </summary>
+    public static RClayfaceDrips DefaultObject => (RClayfaceDrips)StaticClass().DefaultObject;
+
     internal RClayfaceDrips() { }
 
     /// <summary>

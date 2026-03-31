@@ -21,6 +21,11 @@ public partial class RCwStealthTakedownStage_RailingAttack : BmSDK.BmGame.RSteal
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwStealthTakedownStage_RailingAttack.
+    /// </summary>
+    public static RCwStealthTakedownStage_RailingAttack DefaultObject => (RCwStealthTakedownStage_RailingAttack)StaticClass().DefaultObject;
+
     internal RCwStealthTakedownStage_RailingAttack() { }
 
     /// <summary>

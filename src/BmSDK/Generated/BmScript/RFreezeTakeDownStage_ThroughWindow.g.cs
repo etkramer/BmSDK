@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_ThroughWindow.
+    /// </summary>
+    public static RFreezeTakeDownStage_ThroughWindow DefaultObject => (RFreezeTakeDownStage_ThroughWindow)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_ThroughWindow() { }
 
     /// <summary>

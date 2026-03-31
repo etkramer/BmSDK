@@ -21,6 +21,11 @@ public partial class SeqEvent_Destroyed : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Destroyed.
+    /// </summary>
+    public static SeqEvent_Destroyed DefaultObject => (SeqEvent_Destroyed)StaticClass().DefaultObject;
+
     internal SeqEvent_Destroyed() { }
 
     /// <summary>

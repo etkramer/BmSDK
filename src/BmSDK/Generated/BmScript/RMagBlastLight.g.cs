@@ -21,6 +21,11 @@ public partial class RMagBlastLight : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagBlastLight.
+    /// </summary>
+    public static RMagBlastLight DefaultObject => (RMagBlastLight)StaticClass().DefaultObject;
+
     internal RMagBlastLight() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorParameterBase.
+    /// </summary>
+    public static DistributionVectorParameterBase DefaultObject => (DistributionVectorParameterBase)StaticClass().DefaultObject;
+
     internal DistributionVectorParameterBase() { }
 
     /// <summary>

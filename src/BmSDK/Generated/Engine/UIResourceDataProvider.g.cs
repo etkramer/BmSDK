@@ -21,6 +21,11 @@ public partial class UIResourceDataProvider : BmSDK.Engine.UIPropertyDataProvide
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIResourceDataProvider.
+    /// </summary>
+    public static UIResourceDataProvider DefaultObject => (UIResourceDataProvider)StaticClass().DefaultObject;
+
     internal UIResourceDataProvider() { }
 
     /// <summary>

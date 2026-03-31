@@ -21,6 +21,11 @@ public partial class ParticleModuleVelocityOverLifetime : BmSDK.Engine.ParticleM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleVelocityOverLifetime.
+    /// </summary>
+    public static ParticleModuleVelocityOverLifetime DefaultObject => (ParticleModuleVelocityOverLifetime)StaticClass().DefaultObject;
+
     internal ParticleModuleVelocityOverLifetime() { }
 
     /// <summary>

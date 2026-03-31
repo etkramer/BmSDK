@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_CarryPerson : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_CarryPerson.
+    /// </summary>
+    public static RSpecialMoveConfig_CarryPerson DefaultObject => (RSpecialMoveConfig_CarryPerson)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_CarryPerson() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RB_PulleyJointActor : BmSDK.Engine.RB_ConstraintActor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_PulleyJointActor.
+    /// </summary>
+    public static RB_PulleyJointActor DefaultObject => (RB_PulleyJointActor)StaticClass().DefaultObject;
+
     internal RB_PulleyJointActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_GunCrate : BmSDK.BmScript.RBMCombatPoint_Gun
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_GunCrate.
+    /// </summary>
+    public static RBMCombatPoint_GunCrate DefaultObject => (RBMCombatPoint_GunCrate)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_GunCrate() { }
 
     /// <summary>

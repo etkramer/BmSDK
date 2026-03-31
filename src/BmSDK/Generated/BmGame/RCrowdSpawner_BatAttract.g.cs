@@ -21,6 +21,11 @@ public partial class RCrowdSpawner_BatAttract : BmSDK.BmGame.RCrowdSpawner_XPBat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSpawner_BatAttract.
+    /// </summary>
+    public static RCrowdSpawner_BatAttract DefaultObject => (RCrowdSpawner_BatAttract)StaticClass().DefaultObject;
+
     internal RCrowdSpawner_BatAttract() { }
 
     /// <summary>

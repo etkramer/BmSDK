@@ -21,6 +21,11 @@ public partial class K2Node_IfElse : BmSDK.Engine.K2Node_Code, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Node_IfElse.
+    /// </summary>
+    public static K2Node_IfElse DefaultObject => (K2Node_IfElse)StaticClass().DefaultObject;
+
     internal K2Node_IfElse() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexStaticDestructibleComponent.
+    /// </summary>
+    public static ApexStaticDestructibleComponent DefaultObject => (ApexStaticDestructibleComponent)StaticClass().DefaultObject;
+
     internal ApexStaticDestructibleComponent() { }
 
     /// <summary>

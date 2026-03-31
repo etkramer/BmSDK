@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_DiveOverRailing : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_DiveOverRailing.
+    /// </summary>
+    public static RSpecialMoveConfig_DiveOverRailing DefaultObject => (RSpecialMoveConfig_DiveOverRailing)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_DiveOverRailing() { }
 
     /// <summary>

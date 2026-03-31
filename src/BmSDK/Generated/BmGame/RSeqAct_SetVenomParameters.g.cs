@@ -21,6 +21,11 @@ public partial class RSeqAct_SetVenomParameters : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetVenomParameters.
+    /// </summary>
+    public static RSeqAct_SetVenomParameters DefaultObject => (RSeqAct_SetVenomParameters)StaticClass().DefaultObject;
+
     internal RSeqAct_SetVenomParameters() { }
 
     /// <summary>

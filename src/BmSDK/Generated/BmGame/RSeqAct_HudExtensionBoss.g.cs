@@ -21,6 +21,11 @@ public partial class RSeqAct_HudExtensionBoss : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HudExtensionBoss.
+    /// </summary>
+    public static RSeqAct_HudExtensionBoss DefaultObject => (RSeqAct_HudExtensionBoss)StaticClass().DefaultObject;
+
     internal RSeqAct_HudExtensionBoss() { }
 
     /// <summary>

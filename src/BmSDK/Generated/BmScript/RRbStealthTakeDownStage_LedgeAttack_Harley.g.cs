@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_LedgeAttack_Harley : BmSDK.BmScript
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_LedgeAttack_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_LedgeAttack_Harley DefaultObject => (RRbStealthTakeDownStage_LedgeAttack_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_LedgeAttack_Harley() { }
 
     /// <summary>

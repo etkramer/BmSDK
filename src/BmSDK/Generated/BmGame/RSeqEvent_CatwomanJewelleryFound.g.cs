@@ -21,6 +21,11 @@ public partial class RSeqEvent_CatwomanJewelleryFound : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CatwomanJewelleryFound.
+    /// </summary>
+    public static RSeqEvent_CatwomanJewelleryFound DefaultObject => (RSeqEvent_CatwomanJewelleryFound)StaticClass().DefaultObject;
+
     internal RSeqEvent_CatwomanJewelleryFound() { }
 
     /// <summary>

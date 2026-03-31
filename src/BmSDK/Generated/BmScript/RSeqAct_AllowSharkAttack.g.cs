@@ -21,6 +21,11 @@ public partial class RSeqAct_AllowSharkAttack : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AllowSharkAttack.
+    /// </summary>
+    public static RSeqAct_AllowSharkAttack DefaultObject => (RSeqAct_AllowSharkAttack)StaticClass().DefaultObject;
+
     internal RSeqAct_AllowSharkAttack() { }
 
     /// <summary>

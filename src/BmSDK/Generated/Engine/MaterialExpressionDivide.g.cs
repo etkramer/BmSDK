@@ -21,6 +21,11 @@ public partial class MaterialExpressionDivide : BmSDK.Engine.MaterialExpression,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDivide.
+    /// </summary>
+    public static MaterialExpressionDivide DefaultObject => (MaterialExpressionDivide)StaticClass().DefaultObject;
+
     internal MaterialExpressionDivide() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrows.
+    /// </summary>
+    public static RCrows DefaultObject => (RCrows)StaticClass().DefaultObject;
+
     internal RCrows() { }
 
     /// <summary>

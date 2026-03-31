@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_ReverseChoke : BmSDK.BmScript.RFreezeT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_ReverseChoke.
+    /// </summary>
+    public static RFreezeTakeDownStage_ReverseChoke DefaultObject => (RFreezeTakeDownStage_ReverseChoke)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_ReverseChoke() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantJumpAttack : BmSDK.BmGame.RCombatMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantJumpAttack.
+    /// </summary>
+    public static RCombatMove_LieutenantJumpAttack DefaultObject => (RCombatMove_LieutenantJumpAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantJumpAttack() { }
 
     /// <summary>

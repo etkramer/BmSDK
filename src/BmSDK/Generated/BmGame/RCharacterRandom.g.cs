@@ -21,6 +21,11 @@ public partial class RCharacterRandom : BmSDK.BmGame.RCharacter, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterRandom.
+    /// </summary>
+    public static RCharacterRandom DefaultObject => (RCharacterRandom)StaticClass().DefaultObject;
+
     internal RCharacterRandom() { }
 
     /// <summary>

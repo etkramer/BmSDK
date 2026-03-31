@@ -21,6 +21,11 @@ public partial class LadderVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LadderVolume.
+    /// </summary>
+    public static LadderVolume DefaultObject => (LadderVolume)StaticClass().DefaultObject;
+
     internal LadderVolume() { }
 
     /// <summary>

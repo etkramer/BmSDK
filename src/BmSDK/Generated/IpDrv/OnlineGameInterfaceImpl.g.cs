@@ -21,6 +21,11 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineGameInterfaceImpl.
+    /// </summary>
+    public static OnlineGameInterfaceImpl DefaultObject => (OnlineGameInterfaceImpl)StaticClass().DefaultObject;
+
     internal OnlineGameInterfaceImpl() { }
 
     /// <summary>

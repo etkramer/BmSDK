@@ -21,6 +21,11 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_MoveToNavMesh.
+    /// </summary>
+    public static RBMBehaviour_MoveToNavMesh DefaultObject => (RBMBehaviour_MoveToNavMesh)StaticClass().DefaultObject;
+
     internal RBMBehaviour_MoveToNavMesh() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimTree.
+    /// </summary>
+    public static AnimTree DefaultObject => (AnimTree)StaticClass().DefaultObject;
+
     internal AnimTree() { }
 
     /// <summary>

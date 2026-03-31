@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableEnemyAttacks : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableEnemyAttacks.
+    /// </summary>
+    public static RSeqAct_DisableEnemyAttacks DefaultObject => (RSeqAct_DisableEnemyAttacks)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableEnemyAttacks() { }
 
     /// <summary>

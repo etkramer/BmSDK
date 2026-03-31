@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangeWind : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangeWind.
+    /// </summary>
+    public static RSeqAct_ChangeWind DefaultObject => (RSeqAct_ChangeWind)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangeWind() { }
 
     /// <summary>

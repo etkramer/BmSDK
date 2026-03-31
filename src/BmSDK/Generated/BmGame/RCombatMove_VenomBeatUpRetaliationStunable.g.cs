@@ -21,6 +21,11 @@ public partial class RCombatMove_VenomBeatUpRetaliationStunable : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VenomBeatUpRetaliationStunable.
+    /// </summary>
+    public static RCombatMove_VenomBeatUpRetaliationStunable DefaultObject => (RCombatMove_VenomBeatUpRetaliationStunable)StaticClass().DefaultObject;
+
     internal RCombatMove_VenomBeatUpRetaliationStunable() { }
 
     /// <summary>

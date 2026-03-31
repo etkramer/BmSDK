@@ -21,6 +21,11 @@ public partial class Landscape : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Landscape.
+    /// </summary>
+    public static Landscape DefaultObject => (Landscape)StaticClass().DefaultObject;
+
     internal Landscape() { }
 
     /// <summary>

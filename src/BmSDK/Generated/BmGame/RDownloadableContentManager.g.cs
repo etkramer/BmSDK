@@ -21,6 +21,11 @@ public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableCont
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDownloadableContentManager.
+    /// </summary>
+    public static RDownloadableContentManager DefaultObject => (RDownloadableContentManager)StaticClass().DefaultObject;
+
     internal RDownloadableContentManager() { }
 
     /// <summary>

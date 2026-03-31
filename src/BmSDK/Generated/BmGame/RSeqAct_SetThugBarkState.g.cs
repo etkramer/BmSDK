@@ -21,6 +21,11 @@ public partial class RSeqAct_SetThugBarkState : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetThugBarkState.
+    /// </summary>
+    public static RSeqAct_SetThugBarkState DefaultObject => (RSeqAct_SetThugBarkState)StaticClass().DefaultObject;
+
     internal RSeqAct_SetThugBarkState() { }
 
     /// <summary>

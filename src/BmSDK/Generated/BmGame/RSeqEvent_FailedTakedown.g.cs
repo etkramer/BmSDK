@@ -21,6 +21,11 @@ public partial class RSeqEvent_FailedTakedown : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FailedTakedown.
+    /// </summary>
+    public static RSeqEvent_FailedTakedown DefaultObject => (RSeqEvent_FailedTakedown)StaticClass().DefaultObject;
+
     internal RSeqEvent_FailedTakedown() { }
 
     /// <summary>

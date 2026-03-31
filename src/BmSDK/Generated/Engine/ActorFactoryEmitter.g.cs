@@ -21,6 +21,11 @@ public partial class ActorFactoryEmitter : BmSDK.Engine.ActorFactory, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryEmitter.
+    /// </summary>
+    public static ActorFactoryEmitter DefaultObject => (ActorFactoryEmitter)StaticClass().DefaultObject;
+
     internal ActorFactoryEmitter() { }
 
     /// <summary>

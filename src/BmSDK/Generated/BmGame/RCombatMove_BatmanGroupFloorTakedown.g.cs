@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanGroupFloorTakedown : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanGroupFloorTakedown.
+    /// </summary>
+    public static RCombatMove_BatmanGroupFloorTakedown DefaultObject => (RCombatMove_BatmanGroupFloorTakedown)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanGroupFloorTakedown() { }
 
     /// <summary>

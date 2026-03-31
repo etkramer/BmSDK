@@ -21,6 +21,11 @@ public partial class RSeqAct_ResonatorLookAt : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ResonatorLookAt.
+    /// </summary>
+    public static RSeqAct_ResonatorLookAt DefaultObject => (RSeqAct_ResonatorLookAt)StaticClass().DefaultObject;
+
     internal RSeqAct_ResonatorLookAt() { }
 
     /// <summary>

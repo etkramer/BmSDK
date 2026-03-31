@@ -21,6 +21,11 @@ public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInfinitePredatorSpawner.
+    /// </summary>
+    public static RInfinitePredatorSpawner DefaultObject => (RInfinitePredatorSpawner)StaticClass().DefaultObject;
+
     internal RInfinitePredatorSpawner() { }
 
     /// <summary>

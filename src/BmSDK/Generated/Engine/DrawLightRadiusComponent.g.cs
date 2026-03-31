@@ -21,6 +21,11 @@ public partial class DrawLightRadiusComponent : BmSDK.Engine.DrawSphereComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawLightRadiusComponent.
+    /// </summary>
+    public static DrawLightRadiusComponent DefaultObject => (DrawLightRadiusComponent)StaticClass().DefaultObject;
+
     internal DrawLightRadiusComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_SaveJackRyderFromDeadShot : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_SaveJackRyderFromDeadShot.
+    /// </summary>
+    public static RSpecialMoveConfig_SaveJackRyderFromDeadShot DefaultObject => (RSpecialMoveConfig_SaveJackRyderFromDeadShot)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_SaveJackRyderFromDeadShot() { }
 
     /// <summary>

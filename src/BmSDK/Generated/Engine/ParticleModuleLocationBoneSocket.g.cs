@@ -21,6 +21,11 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocationBoneSocket.
+    /// </summary>
+    public static ParticleModuleLocationBoneSocket DefaultObject => (ParticleModuleLocationBoneSocket)StaticClass().DefaultObject;
+
     internal ParticleModuleLocationBoneSocket() { }
 
     /// <summary>

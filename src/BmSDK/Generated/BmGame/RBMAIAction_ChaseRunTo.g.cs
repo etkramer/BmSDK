@@ -21,6 +21,11 @@ public partial class RBMAIAction_ChaseRunTo : BmSDK.BmGame.RBMAIAction_BaseMove,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ChaseRunTo.
+    /// </summary>
+    public static RBMAIAction_ChaseRunTo DefaultObject => (RBMAIAction_ChaseRunTo)StaticClass().DefaultObject;
+
     internal RBMAIAction_ChaseRunTo() { }
 
     /// <summary>

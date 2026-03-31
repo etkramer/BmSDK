@@ -21,6 +21,11 @@ public partial class RCreeperVine : BmSDK.BmGame.RCreeperVineBase, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCreeperVine.
+    /// </summary>
+    public static RCreeperVine DefaultObject => (RCreeperVine)StaticClass().DefaultObject;
+
     internal RCreeperVine() { }
 
     /// <summary>

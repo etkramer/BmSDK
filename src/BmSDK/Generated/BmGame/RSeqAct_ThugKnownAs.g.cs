@@ -21,6 +21,11 @@ public partial class RSeqAct_ThugKnownAs : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ThugKnownAs.
+    /// </summary>
+    public static RSeqAct_ThugKnownAs DefaultObject => (RSeqAct_ThugKnownAs)StaticClass().DefaultObject;
+
     internal RSeqAct_ThugKnownAs() { }
 
     /// <summary>

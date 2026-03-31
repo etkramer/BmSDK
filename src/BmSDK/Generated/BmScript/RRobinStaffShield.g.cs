@@ -21,6 +21,11 @@ public partial class RRobinStaffShield : BmSDK.BmScript.RRobinStaff, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinStaffShield.
+    /// </summary>
+    public static RRobinStaffShield DefaultObject => (RRobinStaffShield)StaticClass().DefaultObject;
+
     internal RRobinStaffShield() { }
 
     /// <summary>

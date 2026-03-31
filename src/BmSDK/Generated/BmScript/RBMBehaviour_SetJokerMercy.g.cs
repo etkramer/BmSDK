@@ -21,6 +21,11 @@ public partial class RBMBehaviour_SetJokerMercy : BmSDK.BmGame.RBMBehaviour, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_SetJokerMercy.
+    /// </summary>
+    public static RBMBehaviour_SetJokerMercy DefaultObject => (RBMBehaviour_SetJokerMercy)StaticClass().DefaultObject;
+
     internal RBMBehaviour_SetJokerMercy() { }
 
     /// <summary>

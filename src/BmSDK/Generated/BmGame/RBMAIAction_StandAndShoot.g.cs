@@ -21,6 +21,11 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_StandAndShoot.
+    /// </summary>
+    public static RBMAIAction_StandAndShoot DefaultObject => (RBMAIAction_StandAndShoot)StaticClass().DefaultObject;
+
     internal RBMAIAction_StandAndShoot() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_Bane : BmSDK.BmGame.RCharacter, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Bane.
+    /// </summary>
+    public static RCharacter_Bane DefaultObject => (RCharacter_Bane)StaticClass().DefaultObject;
+
     internal RCharacter_Bane() { }
 
     /// <summary>

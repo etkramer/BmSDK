@@ -21,6 +21,11 @@ public partial class SeqAct_UpdatePhysBonesFromAnim : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_UpdatePhysBonesFromAnim.
+    /// </summary>
+    public static SeqAct_UpdatePhysBonesFromAnim DefaultObject => (SeqAct_UpdatePhysBonesFromAnim)StaticClass().DefaultObject;
+
     internal SeqAct_UpdatePhysBonesFromAnim() { }
 
     /// <summary>

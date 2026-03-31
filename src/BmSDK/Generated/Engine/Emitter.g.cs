@@ -21,6 +21,11 @@ public partial class Emitter : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Emitter.
+    /// </summary>
+    public static Emitter DefaultObject => (Emitter)StaticClass().DefaultObject;
+
     internal Emitter() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatManager.
+    /// </summary>
+    public static RBMCombatManager DefaultObject => (RBMCombatManager)StaticClass().DefaultObject;
+
     internal RBMCombatManager() { }
 
     /// <summary>

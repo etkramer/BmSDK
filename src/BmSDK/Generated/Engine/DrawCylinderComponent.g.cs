@@ -21,6 +21,11 @@ public partial class DrawCylinderComponent : BmSDK.Engine.PrimitiveComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawCylinderComponent.
+    /// </summary>
+    public static DrawCylinderComponent DefaultObject => (DrawCylinderComponent)StaticClass().DefaultObject;
+
     internal DrawCylinderComponent() { }
 
     /// <summary>

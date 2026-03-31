@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeMultiplyLife : BmSDK.Engine.ParticleModul
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeMultiplyLife.
+    /// </summary>
+    public static ParticleModuleSizeMultiplyLife DefaultObject => (ParticleModuleSizeMultiplyLife)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeMultiplyLife() { }
 
     /// <summary>

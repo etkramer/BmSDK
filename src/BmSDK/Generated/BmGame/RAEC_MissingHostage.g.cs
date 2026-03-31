@@ -21,6 +21,11 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_MissingHostage.
+    /// </summary>
+    public static RAEC_MissingHostage DefaultObject => (RAEC_MissingHostage)StaticClass().DefaultObject;
+
     internal RAEC_MissingHostage() { }
 
     /// <summary>

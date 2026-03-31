@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetFreezeCluster : BmSDK.BmGame.RCombatMove_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetFreezeCluster.
+    /// </summary>
+    public static RCombatMove_GadgetFreezeCluster DefaultObject => (RCombatMove_GadgetFreezeCluster)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetFreezeCluster() { }
 
     /// <summary>

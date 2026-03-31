@@ -21,6 +21,11 @@ public partial class RGrundyDrumPadBase : BmSDK.Engine.SkeletalMeshActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrundyDrumPadBase.
+    /// </summary>
+    public static RGrundyDrumPadBase DefaultObject => (RGrundyDrumPadBase)StaticClass().DefaultObject;
+
     internal RGrundyDrumPadBase() { }
 
     /// <summary>

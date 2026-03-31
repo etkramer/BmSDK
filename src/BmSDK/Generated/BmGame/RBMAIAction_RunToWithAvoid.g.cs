@@ -21,6 +21,11 @@ public partial class RBMAIAction_RunToWithAvoid : BmSDK.BmGame.RBMAIAction_RunTo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RunToWithAvoid.
+    /// </summary>
+    public static RBMAIAction_RunToWithAvoid DefaultObject => (RBMAIAction_RunToWithAvoid)StaticClass().DefaultObject;
+
     internal RBMAIAction_RunToWithAvoid() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_MultiWeaponRack_PipeAndKnife : BmSDK.BmScrip
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_MultiWeaponRack_PipeAndKnife.
+    /// </summary>
+    public static RBMCombatPoint_MultiWeaponRack_PipeAndKnife DefaultObject => (RBMCombatPoint_MultiWeaponRack_PipeAndKnife)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_MultiWeaponRack_PipeAndKnife() { }
 
     /// <summary>

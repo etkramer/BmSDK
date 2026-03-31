@@ -21,6 +21,11 @@ public partial class DrawSphereComponent : BmSDK.Engine.PrimitiveComponent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawSphereComponent.
+    /// </summary>
+    public static DrawSphereComponent DefaultObject => (DrawSphereComponent)StaticClass().DefaultObject;
+
     internal DrawSphereComponent() { }
 
     /// <summary>

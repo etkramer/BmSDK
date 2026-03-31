@@ -21,6 +21,11 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FloorCorrectionGrid.
+    /// </summary>
+    public static RAnimUtil_FloorCorrectionGrid DefaultObject => (RAnimUtil_FloorCorrectionGrid)StaticClass().DefaultObject;
+
     internal RAnimUtil_FloorCorrectionGrid() { }
 
     /// <summary>

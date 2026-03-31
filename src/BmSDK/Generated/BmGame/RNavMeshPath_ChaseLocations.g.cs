@@ -21,6 +21,11 @@ public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConst
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_ChaseLocations.
+    /// </summary>
+    public static RNavMeshPath_ChaseLocations DefaultObject => (RNavMeshPath_ChaseLocations)StaticClass().DefaultObject;
+
     internal RNavMeshPath_ChaseLocations() { }
 
     /// <summary>

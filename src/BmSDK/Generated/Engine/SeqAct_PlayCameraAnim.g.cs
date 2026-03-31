@@ -21,6 +21,11 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_PlayCameraAnim.
+    /// </summary>
+    public static SeqAct_PlayCameraAnim DefaultObject => (SeqAct_PlayCameraAnim)StaticClass().DefaultObject;
+
     internal SeqAct_PlayCameraAnim() { }
 
     /// <summary>

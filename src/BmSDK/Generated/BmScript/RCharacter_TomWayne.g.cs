@@ -21,6 +21,11 @@ public partial class RCharacter_TomWayne : BmSDK.BmGame.RCharacter, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_TomWayne.
+    /// </summary>
+    public static RCharacter_TomWayne DefaultObject => (RCharacter_TomWayne)StaticClass().DefaultObject;
+
     internal RCharacter_TomWayne() { }
 
     /// <summary>

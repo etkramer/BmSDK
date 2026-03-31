@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanWallStrike : BmSDK.BmGame.RCombatMove_Bat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanWallStrike.
+    /// </summary>
+    public static RCombatMove_BatmanWallStrike DefaultObject => (RCombatMove_BatmanWallStrike)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanWallStrike() { }
 
     /// <summary>

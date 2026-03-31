@@ -21,6 +21,11 @@ public partial class ActorFactoryPhysicsAsset : BmSDK.Engine.ActorFactory, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryPhysicsAsset.
+    /// </summary>
+    public static ActorFactoryPhysicsAsset DefaultObject => (ActorFactoryPhysicsAsset)StaticClass().DefaultObject;
+
     internal ActorFactoryPhysicsAsset() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineGameSearch.
+    /// </summary>
+    public static OnlineGameSearch DefaultObject => (OnlineGameSearch)StaticClass().DefaultObject;
+
     internal OnlineGameSearch() { }
 
     /// <summary>

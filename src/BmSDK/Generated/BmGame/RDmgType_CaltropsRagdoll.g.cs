@@ -21,6 +21,11 @@ public partial class RDmgType_CaltropsRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CaltropsRagdoll.
+    /// </summary>
+    public static RDmgType_CaltropsRagdoll DefaultObject => (RDmgType_CaltropsRagdoll)StaticClass().DefaultObject;
+
     internal RDmgType_CaltropsRagdoll() { }
 
     /// <summary>

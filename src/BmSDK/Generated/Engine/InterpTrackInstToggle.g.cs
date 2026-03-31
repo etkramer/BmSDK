@@ -21,6 +21,11 @@ public partial class InterpTrackInstToggle : BmSDK.Engine.InterpTrackInst, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstToggle.
+    /// </summary>
+    public static InterpTrackInstToggle DefaultObject => (InterpTrackInstToggle)StaticClass().DefaultObject;
+
     internal InterpTrackInstToggle() { }
 
     /// <summary>

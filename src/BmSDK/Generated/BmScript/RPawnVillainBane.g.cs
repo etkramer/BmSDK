@@ -21,6 +21,11 @@ public partial class RPawnVillainBane : BmSDK.BmGame.RPawnVillain, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainBane.
+    /// </summary>
+    public static RPawnVillainBane DefaultObject => (RPawnVillainBane)StaticClass().DefaultObject;
+
     internal RPawnVillainBane() { }
 
     /// <summary>

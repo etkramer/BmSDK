@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataApexSprite : BmSDK.Engine.ParticleMod
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataApexSprite.
+    /// </summary>
+    public static ParticleModuleTypeDataApexSprite DefaultObject => (ParticleModuleTypeDataApexSprite)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataApexSprite() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Struct : BmSDK.Field, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Struct.
+    /// </summary>
+    public static Struct DefaultObject => (Struct)StaticClass().DefaultObject;
+
     internal Struct() { }
 
     /// <summary>

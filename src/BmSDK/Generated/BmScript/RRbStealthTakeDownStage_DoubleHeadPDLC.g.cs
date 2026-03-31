@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_DoubleHeadPDLC : BmSDK.BmScript.RRb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_DoubleHeadPDLC.
+    /// </summary>
+    public static RRbStealthTakeDownStage_DoubleHeadPDLC DefaultObject => (RRbStealthTakeDownStage_DoubleHeadPDLC)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_DoubleHeadPDLC() { }
 
     /// <summary>

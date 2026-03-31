@@ -21,6 +21,11 @@ public partial class RSeqEvent_LastThug_BreakoutOfPred : BmSDK.BmGame.RBMSeqEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_LastThug_BreakoutOfPred.
+    /// </summary>
+    public static RSeqEvent_LastThug_BreakoutOfPred DefaultObject => (RSeqEvent_LastThug_BreakoutOfPred)StaticClass().DefaultObject;
+
     internal RSeqEvent_LastThug_BreakoutOfPred() { }
 
     /// <summary>

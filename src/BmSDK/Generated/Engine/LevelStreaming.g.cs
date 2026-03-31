@@ -21,6 +21,11 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreaming.
+    /// </summary>
+    public static LevelStreaming DefaultObject => (LevelStreaming)StaticClass().DefaultObject;
+
     internal LevelStreaming() { }
 
     /// <summary>

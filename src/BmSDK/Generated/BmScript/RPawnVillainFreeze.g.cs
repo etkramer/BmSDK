@@ -21,6 +21,11 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainFreeze.
+    /// </summary>
+    public static RPawnVillainFreeze DefaultObject => (RPawnVillainFreeze)StaticClass().DefaultObject;
+
     internal RPawnVillainFreeze() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleLocationDirect : BmSDK.Engine.ParticleModuleL
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocationDirect.
+    /// </summary>
+    public static ParticleModuleLocationDirect DefaultObject => (ParticleModuleLocationDirect)StaticClass().DefaultObject;
+
     internal ParticleModuleLocationDirect() { }
 
     /// <summary>

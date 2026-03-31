@@ -21,6 +21,11 @@ public partial class RSeqAct_StunPlayer : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StunPlayer.
+    /// </summary>
+    public static RSeqAct_StunPlayer DefaultObject => (RSeqAct_StunPlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_StunPlayer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_KnockBack : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_KnockBack.
+    /// </summary>
+    public static RDmgType_KnockBack DefaultObject => (RDmgType_KnockBack)StaticClass().DefaultObject;
+
     internal RDmgType_KnockBack() { }
 
     /// <summary>

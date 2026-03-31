@@ -21,6 +21,11 @@ public partial class RAudioHarleyHeadPoint_NonCollectable : BmSDK.BmGame.RAudioP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioHarleyHeadPoint_NonCollectable.
+    /// </summary>
+    public static RAudioHarleyHeadPoint_NonCollectable DefaultObject => (RAudioHarleyHeadPoint_NonCollectable)StaticClass().DefaultObject;
+
     internal RAudioHarleyHeadPoint_NonCollectable() { }
 
     /// <summary>

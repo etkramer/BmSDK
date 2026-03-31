@@ -21,6 +21,11 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGIFrontend.
+    /// </summary>
+    public static RGIFrontend DefaultObject => (RGIFrontend)StaticClass().DefaultObject;
+
     internal RGIFrontend() { }
 
     /// <summary>

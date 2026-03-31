@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectFireExtinguisher : BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectFireExtinguisher.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectFireExtinguisher DefaultObject => (RBMCombatThrownObject_HeavyObjectFireExtinguisher)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectFireExtinguisher() { }
 
     /// <summary>

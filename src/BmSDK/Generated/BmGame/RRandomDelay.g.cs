@@ -21,6 +21,11 @@ public partial class RRandomDelay : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRandomDelay.
+    /// </summary>
+    public static RRandomDelay DefaultObject => (RRandomDelay)StaticClass().DefaultObject;
+
     internal RRandomDelay() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionScreenPosition : BmSDK.Engine.MaterialExp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionScreenPosition.
+    /// </summary>
+    public static MaterialExpressionScreenPosition DefaultObject => (MaterialExpressionScreenPosition)StaticClass().DefaultObject;
+
     internal MaterialExpressionScreenPosition() { }
 
     /// <summary>

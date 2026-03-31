@@ -21,6 +21,11 @@ public partial class RAnimNotify_AnimSpeech : BmSDK.BmGame.RAnimNotify_Script, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_AnimSpeech.
+    /// </summary>
+    public static RAnimNotify_AnimSpeech DefaultObject => (RAnimNotify_AnimSpeech)StaticClass().DefaultObject;
+
     internal RAnimNotify_AnimSpeech() { }
 
     /// <summary>

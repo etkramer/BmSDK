@@ -21,6 +21,11 @@ public partial class ActorFactoryAI : BmSDK.Engine.ActorFactory, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryAI.
+    /// </summary>
+    public static ActorFactoryAI DefaultObject => (ActorFactoryAI)StaticClass().DefaultObject;
+
     internal ActorFactoryAI() { }
 
     /// <summary>

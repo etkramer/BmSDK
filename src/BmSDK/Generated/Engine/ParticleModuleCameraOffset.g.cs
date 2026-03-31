@@ -21,6 +21,11 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleCameraOffset.
+    /// </summary>
+    public static ParticleModuleCameraOffset DefaultObject => (ParticleModuleCameraOffset)StaticClass().DefaultObject;
+
     internal ParticleModuleCameraOffset() { }
 
     /// <summary>

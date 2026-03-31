@@ -21,6 +21,11 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_StartConversation.
+    /// </summary>
+    public static RBMBehaviour_StartConversation DefaultObject => (RBMBehaviour_StartConversation)StaticClass().DefaultObject;
+
     internal RBMBehaviour_StartConversation() { }
 
     /// <summary>

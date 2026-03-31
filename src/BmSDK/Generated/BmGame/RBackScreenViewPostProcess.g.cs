@@ -21,6 +21,11 @@ public partial class RBackScreenViewPostProcess : BmSDK.BmGame.RViewPostProcess,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBackScreenViewPostProcess.
+    /// </summary>
+    public static RBackScreenViewPostProcess DefaultObject => (RBackScreenViewPostProcess)StaticClass().DefaultObject;
+
     internal RBackScreenViewPostProcess() { }
 
     /// <summary>

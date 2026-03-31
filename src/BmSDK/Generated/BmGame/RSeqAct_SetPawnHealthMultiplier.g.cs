@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPawnHealthMultiplier : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPawnHealthMultiplier.
+    /// </summary>
+    public static RSeqAct_SetPawnHealthMultiplier DefaultObject => (RSeqAct_SetPawnHealthMultiplier)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPawnHealthMultiplier() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetupDistance : BmSDK.Engine.RFlaps_Constr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetupDistance.
+    /// </summary>
+    public static RFlaps_ConstraintSetupDistance DefaultObject => (RFlaps_ConstraintSetupDistance)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetupDistance() { }
 
     /// <summary>

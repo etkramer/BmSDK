@@ -21,6 +21,11 @@ public partial class RBreakableTV_Plasma : BmSDK.BmGame.RBreakableTV, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableTV_Plasma.
+    /// </summary>
+    public static RBreakableTV_Plasma DefaultObject => (RBreakableTV_Plasma)StaticClass().DefaultObject;
+
     internal RBreakableTV_Plasma() { }
 
     /// <summary>

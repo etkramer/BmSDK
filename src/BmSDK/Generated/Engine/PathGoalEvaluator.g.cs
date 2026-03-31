@@ -21,6 +21,11 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathGoalEvaluator.
+    /// </summary>
+    public static PathGoalEvaluator DefaultObject => (PathGoalEvaluator)StaticClass().DefaultObject;
+
     internal PathGoalEvaluator() { }
 
     /// <summary>

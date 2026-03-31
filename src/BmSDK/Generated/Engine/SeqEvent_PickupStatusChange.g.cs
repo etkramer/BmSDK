@@ -21,6 +21,11 @@ public partial class SeqEvent_PickupStatusChange : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_PickupStatusChange.
+    /// </summary>
+    public static SeqEvent_PickupStatusChange DefaultObject => (SeqEvent_PickupStatusChange)StaticClass().DefaultObject;
+
     internal SeqEvent_PickupStatusChange() { }
 
     /// <summary>

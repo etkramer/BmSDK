@@ -21,6 +21,11 @@ public partial class RNinjaWaypointLocation : BmSDK.BmGame.RDummyTarget, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNinjaWaypointLocation.
+    /// </summary>
+    public static RNinjaWaypointLocation DefaultObject => (RNinjaWaypointLocation)StaticClass().DefaultObject;
+
     internal RNinjaWaypointLocation() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SequenceFrame : BmSDK.Engine.SequenceObject, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SequenceFrame.
+    /// </summary>
+    public static SequenceFrame DefaultObject => (SequenceFrame)StaticClass().DefaultObject;
+
     internal SequenceFrame() { }
 
     /// <summary>

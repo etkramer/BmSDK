@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataRibbon : BmSDK.Engine.ParticleModuleT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataRibbon.
+    /// </summary>
+    public static ParticleModuleTypeDataRibbon DefaultObject => (ParticleModuleTypeDataRibbon)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataRibbon() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleCanJumpOffVantagePoint : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleCanJumpOffVantagePoint.
+    /// </summary>
+    public static RSeqAct_ToggleCanJumpOffVantagePoint DefaultObject => (RSeqAct_ToggleCanJumpOffVantagePoint)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleCanJumpOffVantagePoint() { }
 
     /// <summary>

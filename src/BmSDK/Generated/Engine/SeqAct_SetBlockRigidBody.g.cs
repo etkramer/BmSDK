@@ -21,6 +21,11 @@ public partial class SeqAct_SetBlockRigidBody : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetBlockRigidBody.
+    /// </summary>
+    public static SeqAct_SetBlockRigidBody DefaultObject => (SeqAct_SetBlockRigidBody)StaticClass().DefaultObject;
+
     internal SeqAct_SetBlockRigidBody() { }
 
     /// <summary>

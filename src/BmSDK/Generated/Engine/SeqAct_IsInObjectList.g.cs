@@ -21,6 +21,11 @@ public partial class SeqAct_IsInObjectList : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_IsInObjectList.
+    /// </summary>
+    public static SeqAct_IsInObjectList DefaultObject => (SeqAct_IsInObjectList)StaticClass().DefaultObject;
+
     internal SeqAct_IsInObjectList() { }
 
     /// <summary>

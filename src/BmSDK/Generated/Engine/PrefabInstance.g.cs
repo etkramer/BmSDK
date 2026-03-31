@@ -21,6 +21,11 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrefabInstance.
+    /// </summary>
+    public static PrefabInstance DefaultObject => (PrefabInstance)StaticClass().DefaultObject;
+
     internal PrefabInstance() { }
 
     /// <summary>

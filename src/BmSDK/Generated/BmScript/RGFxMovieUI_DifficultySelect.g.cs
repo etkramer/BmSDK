@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_DifficultySelect.
+    /// </summary>
+    public static RGFxMovieUI_DifficultySelect DefaultObject => (RGFxMovieUI_DifficultySelect)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_DifficultySelect() { }
 
     /// <summary>

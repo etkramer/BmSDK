@@ -21,6 +21,11 @@ public partial class RAudioPoint_Tannoy : BmSDK.BmGame.RAudioPointController, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioPoint_Tannoy.
+    /// </summary>
+    public static RAudioPoint_Tannoy DefaultObject => (RAudioPoint_Tannoy)StaticClass().DefaultObject;
+
     internal RAudioPoint_Tannoy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ClipPadEntry : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ClipPadEntry.
+    /// </summary>
+    public static ClipPadEntry DefaultObject => (ClipPadEntry)StaticClass().DefaultObject;
+
     internal ClipPadEntry() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Path_AlongLine : BmSDK.Engine.PathConstraint, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_AlongLine.
+    /// </summary>
+    public static Path_AlongLine DefaultObject => (Path_AlongLine)StaticClass().DefaultObject;
+
     internal Path_AlongLine() { }
 
     /// <summary>

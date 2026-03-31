@@ -21,6 +21,11 @@ public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorSpecialMovePointBase.
+    /// </summary>
+    public static RPredatorSpecialMovePointBase DefaultObject => (RPredatorSpecialMovePointBase)StaticClass().DefaultObject;
+
     internal RPredatorSpecialMovePointBase() { }
 
     /// <summary>

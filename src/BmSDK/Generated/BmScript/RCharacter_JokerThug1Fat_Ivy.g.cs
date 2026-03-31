@@ -21,6 +21,11 @@ public partial class RCharacter_JokerThug1Fat_Ivy : BmSDK.BmScript.RCharacter_Jo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerThug1Fat_Ivy.
+    /// </summary>
+    public static RCharacter_JokerThug1Fat_Ivy DefaultObject => (RCharacter_JokerThug1Fat_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_JokerThug1Fat_Ivy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGadgetSelect.
+    /// </summary>
+    public static RGadgetSelect DefaultObject => (RGadgetSelect)StaticClass().DefaultObject;
+
     internal RGadgetSelect() { }
 
     /// <summary>

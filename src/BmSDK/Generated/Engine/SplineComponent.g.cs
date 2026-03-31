@@ -21,6 +21,11 @@ public partial class SplineComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SplineComponent.
+    /// </summary>
+    public static SplineComponent DefaultObject => (SplineComponent)StaticClass().DefaultObject;
+
     internal SplineComponent() { }
 
     /// <summary>

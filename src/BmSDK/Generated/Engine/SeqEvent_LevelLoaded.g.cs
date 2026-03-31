@@ -21,6 +21,11 @@ public partial class SeqEvent_LevelLoaded : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_LevelLoaded.
+    /// </summary>
+    public static SeqEvent_LevelLoaded DefaultObject => (SeqEvent_LevelLoaded)StaticClass().DefaultObject;
+
     internal SeqEvent_LevelLoaded() { }
 
     /// <summary>

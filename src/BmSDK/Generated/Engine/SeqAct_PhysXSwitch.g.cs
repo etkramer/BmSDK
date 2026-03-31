@@ -21,6 +21,11 @@ public partial class SeqAct_PhysXSwitch : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_PhysXSwitch.
+    /// </summary>
+    public static SeqAct_PhysXSwitch DefaultObject => (SeqAct_PhysXSwitch)StaticClass().DefaultObject;
+
     internal SeqAct_PhysXSwitch() { }
 
     /// <summary>

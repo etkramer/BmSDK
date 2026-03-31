@@ -21,6 +21,11 @@ public partial class RBMWeaponSniperBase : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponSniperBase.
+    /// </summary>
+    public static RBMWeaponSniperBase DefaultObject => (RBMWeaponSniperBase)StaticClass().DefaultObject;
+
     internal RBMWeaponSniperBase() { }
 
     /// <summary>

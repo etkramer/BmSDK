@@ -21,6 +21,11 @@ public partial class RSprite : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSprite.
+    /// </summary>
+    public static RSprite DefaultObject => (RSprite)StaticClass().DefaultObject;
+
     internal RSprite() { }
 
     /// <summary>

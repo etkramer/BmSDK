@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_TygerShieldOnFloor : BmSDK.BmGame.RBMCombatP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_TygerShieldOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_TygerShieldOnFloor DefaultObject => (RBMCombatPoint_TygerShieldOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_TygerShieldOnFloor() { }
 
     /// <summary>

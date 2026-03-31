@@ -21,6 +21,11 @@ public partial class RBmBatmanCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBmBatmanCutscene.
+    /// </summary>
+    public static RBmBatmanCutscene DefaultObject => (RBmBatmanCutscene)StaticClass().DefaultObject;
+
     internal RBmBatmanCutscene() { }
 
     /// <summary>

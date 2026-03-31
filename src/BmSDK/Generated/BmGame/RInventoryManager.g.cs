@@ -21,6 +21,11 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInventoryManager.
+    /// </summary>
+    public static RInventoryManager DefaultObject => (RInventoryManager)StaticClass().DefaultObject;
+
     internal RInventoryManager() { }
 
     /// <summary>

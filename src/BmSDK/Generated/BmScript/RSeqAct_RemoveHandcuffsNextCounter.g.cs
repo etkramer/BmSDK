@@ -21,6 +21,11 @@ public partial class RSeqAct_RemoveHandcuffsNextCounter : BmSDK.Engine.SequenceA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RemoveHandcuffsNextCounter.
+    /// </summary>
+    public static RSeqAct_RemoveHandcuffsNextCounter DefaultObject => (RSeqAct_RemoveHandcuffsNextCounter)StaticClass().DefaultObject;
+
     internal RSeqAct_RemoveHandcuffsNextCounter() { }
 
     /// <summary>

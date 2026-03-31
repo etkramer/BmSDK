@@ -21,6 +21,11 @@ public partial class RAnimNotify_IK : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_IK.
+    /// </summary>
+    public static RAnimNotify_IK DefaultObject => (RAnimNotify_IK)StaticClass().DefaultObject;
+
     internal RAnimNotify_IK() { }
 
     /// <summary>

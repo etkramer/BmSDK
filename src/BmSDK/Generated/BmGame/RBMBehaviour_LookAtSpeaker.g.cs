@@ -21,6 +21,11 @@ public partial class RBMBehaviour_LookAtSpeaker : BmSDK.BmGame.RBMBehaviour, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_LookAtSpeaker.
+    /// </summary>
+    public static RBMBehaviour_LookAtSpeaker DefaultObject => (RBMBehaviour_LookAtSpeaker)StaticClass().DefaultObject;
+
     internal RBMBehaviour_LookAtSpeaker() { }
 
     /// <summary>

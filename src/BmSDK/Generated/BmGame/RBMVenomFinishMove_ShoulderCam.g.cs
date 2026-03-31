@@ -21,6 +21,11 @@ public partial class RBMVenomFinishMove_ShoulderCam : BmSDK.BmGame.RBMDeathCutsc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMVenomFinishMove_ShoulderCam.
+    /// </summary>
+    public static RBMVenomFinishMove_ShoulderCam DefaultObject => (RBMVenomFinishMove_ShoulderCam)StaticClass().DefaultObject;
+
     internal RBMVenomFinishMove_ShoulderCam() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_Riddler : BmSDK.BmGame.RCharacter, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Riddler.
+    /// </summary>
+    public static RCharacter_Riddler DefaultObject => (RCharacter_Riddler)StaticClass().DefaultObject;
+
     internal RCharacter_Riddler() { }
 
     /// <summary>

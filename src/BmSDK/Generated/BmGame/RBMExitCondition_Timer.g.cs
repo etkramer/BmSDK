@@ -21,6 +21,11 @@ public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition_Timer.
+    /// </summary>
+    public static RBMExitCondition_Timer DefaultObject => (RBMExitCondition_Timer)StaticClass().DefaultObject;
+
     internal RBMExitCondition_Timer() { }
 
     /// <summary>

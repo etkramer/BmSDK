@@ -21,6 +21,11 @@ public partial class RDmgType_Bane : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Bane.
+    /// </summary>
+    public static RDmgType_Bane DefaultObject => (RDmgType_Bane)StaticClass().DefaultObject;
+
     internal RDmgType_Bane() { }
 
     /// <summary>

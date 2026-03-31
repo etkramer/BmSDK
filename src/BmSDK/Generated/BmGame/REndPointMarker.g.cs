@@ -21,6 +21,11 @@ public partial class REndPointMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REndPointMarker.
+    /// </summary>
+    public static REndPointMarker DefaultObject => (REndPointMarker)StaticClass().DefaultObject;
+
     internal REndPointMarker() { }
 
     /// <summary>

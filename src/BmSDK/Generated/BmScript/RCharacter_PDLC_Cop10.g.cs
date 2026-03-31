@@ -21,6 +21,11 @@ public partial class RCharacter_PDLC_Cop10 : BmSDK.BmScript.RCharacter_Cop, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PDLC_Cop10.
+    /// </summary>
+    public static RCharacter_PDLC_Cop10 DefaultObject => (RCharacter_PDLC_Cop10)StaticClass().DefaultObject;
+
     internal RCharacter_PDLC_Cop10() { }
 
     /// <summary>

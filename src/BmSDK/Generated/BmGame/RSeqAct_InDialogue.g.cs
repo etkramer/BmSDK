@@ -21,6 +21,11 @@ public partial class RSeqAct_InDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InDialogue.
+    /// </summary>
+    public static RSeqAct_InDialogue DefaultObject => (RSeqAct_InDialogue)StaticClass().DefaultObject;
+
     internal RSeqAct_InDialogue() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTrailSource.
+    /// </summary>
+    public static ParticleModuleTrailSource DefaultObject => (ParticleModuleTrailSource)StaticClass().DefaultObject;
+
     internal ParticleModuleTrailSource() { }
 
     /// <summary>

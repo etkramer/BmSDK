@@ -21,6 +21,11 @@ public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RObjectiveMarker.
+    /// </summary>
+    public static RObjectiveMarker DefaultObject => (RObjectiveMarker)StaticClass().DefaultObject;
+
     internal RObjectiveMarker() { }
 
     /// <summary>

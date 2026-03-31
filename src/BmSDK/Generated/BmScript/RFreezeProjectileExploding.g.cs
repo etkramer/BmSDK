@@ -21,6 +21,11 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeProjectileExploding.
+    /// </summary>
+    public static RFreezeProjectileExploding DefaultObject => (RFreezeProjectileExploding)StaticClass().DefaultObject;
+
     internal RFreezeProjectileExploding() { }
 
     /// <summary>

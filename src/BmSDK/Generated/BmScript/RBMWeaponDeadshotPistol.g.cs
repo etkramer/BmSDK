@@ -21,6 +21,11 @@ public partial class RBMWeaponDeadshotPistol : BmSDK.BmScript.RBMWeaponCombatRif
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponDeadshotPistol.
+    /// </summary>
+    public static RBMWeaponDeadshotPistol DefaultObject => (RBMWeaponDeadshotPistol)StaticClass().DefaultObject;
+
     internal RBMWeaponDeadshotPistol() { }
 
     /// <summary>

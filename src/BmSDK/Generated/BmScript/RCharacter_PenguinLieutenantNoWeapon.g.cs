@@ -21,6 +21,11 @@ public partial class RCharacter_PenguinLieutenantNoWeapon : BmSDK.BmScript.RChar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PenguinLieutenantNoWeapon.
+    /// </summary>
+    public static RCharacter_PenguinLieutenantNoWeapon DefaultObject => (RCharacter_PenguinLieutenantNoWeapon)StaticClass().DefaultObject;
+
     internal RCharacter_PenguinLieutenantNoWeapon() { }
 
     /// <summary>

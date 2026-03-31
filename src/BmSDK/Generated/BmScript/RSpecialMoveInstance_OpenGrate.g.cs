@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_OpenGrate.
+    /// </summary>
+    public static RSpecialMoveInstance_OpenGrate DefaultObject => (RSpecialMoveInstance_OpenGrate)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_OpenGrate() { }
 
     /// <summary>

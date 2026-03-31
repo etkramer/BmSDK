@@ -21,6 +21,11 @@ public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Scri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_IdleConfigOutput.
+    /// </summary>
+    public static RAnimNotify_IdleConfigOutput DefaultObject => (RAnimNotify_IdleConfigOutput)StaticClass().DefaultObject;
+
     internal RAnimNotify_IdleConfigOutput() { }
 
     /// <summary>

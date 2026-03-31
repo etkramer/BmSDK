@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_FallingTakeDown_Harley : BmSDK.BmGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_FallingTakeDown_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_FallingTakeDown_Harley DefaultObject => (RRbStealthTakeDownStage_FallingTakeDown_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_FallingTakeDown_Harley() { }
 
     /// <summary>

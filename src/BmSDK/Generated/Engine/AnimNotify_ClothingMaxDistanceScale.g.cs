@@ -21,6 +21,11 @@ public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNoti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_ClothingMaxDistanceScale.
+    /// </summary>
+    public static AnimNotify_ClothingMaxDistanceScale DefaultObject => (AnimNotify_ClothingMaxDistanceScale)StaticClass().DefaultObject;
+
     internal AnimNotify_ClothingMaxDistanceScale() { }
 
     /// <summary>

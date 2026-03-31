@@ -21,6 +21,11 @@ public partial class RBMWeaponMachete : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponMachete.
+    /// </summary>
+    public static RBMWeaponMachete DefaultObject => (RBMWeaponMachete)StaticClass().DefaultObject;
+
     internal RBMWeaponMachete() { }
 
     /// <summary>

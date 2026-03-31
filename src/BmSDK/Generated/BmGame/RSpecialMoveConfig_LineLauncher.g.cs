@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_LineLauncher : BmSDK.BmGame.RSpecialMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_LineLauncher.
+    /// </summary>
+    public static RSpecialMoveConfig_LineLauncher DefaultObject => (RSpecialMoveConfig_LineLauncher)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_LineLauncher() { }
 
     /// <summary>

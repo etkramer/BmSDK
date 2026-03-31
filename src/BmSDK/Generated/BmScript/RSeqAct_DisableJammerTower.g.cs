@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableJammerTower : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableJammerTower.
+    /// </summary>
+    public static RSeqAct_DisableJammerTower DefaultObject => (RSeqAct_DisableJammerTower)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableJammerTower() { }
 
     /// <summary>

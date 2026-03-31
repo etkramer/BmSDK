@@ -21,6 +21,11 @@ public partial class RBMWeaponZsaszKnife : BmSDK.BmScript.RBMWeaponKnifeBase, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponZsaszKnife.
+    /// </summary>
+    public static RBMWeaponZsaszKnife DefaultObject => (RBMWeaponZsaszKnife)StaticClass().DefaultObject;
+
     internal RBMWeaponZsaszKnife() { }
 
     /// <summary>

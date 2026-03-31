@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectVikingHead : BmSDK.BmScrip
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectVikingHead.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectVikingHead DefaultObject => (RBMCombatThrownObject_HeavyObjectVikingHead)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectVikingHead() { }
 
     /// <summary>

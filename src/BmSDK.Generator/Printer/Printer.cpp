@@ -153,6 +153,20 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
         out << endl;
 
+        // Print strongly-typed CDO getter.
+        if (_class->GetNameManaged() != "Class")
+        {
+            Printer::Indent(out) << "/// <summary>" << endl;
+            Printer::Indent(out) << "/// Gets the class default object as "
+                                 << _class->GetNameManaged() << "." << endl;
+            Printer::Indent(out) << "/// </summary>" << endl;
+            Printer::Indent(out) << "public static " << _class->GetNameManaged()
+                                 << " DefaultObject => (" << _class->GetNameManaged()
+                                 << ")StaticClass().DefaultObject;" << endl;
+
+            out << endl;
+        }
+
         // Print internal ctor
         Printer::Indent(out) << "internal " << _class->GetNameManaged() << "() { }" << endl << endl;
 

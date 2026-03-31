@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2 : BmSDK.BmGame.RCharacter_CopBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2.
+    /// </summary>
+    public static RCharacter_GuardBM2 DefaultObject => (RCharacter_GuardBM2)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2() { }
 
     /// <summary>

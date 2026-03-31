@@ -21,6 +21,11 @@ public partial class RSeqAct_Ocean : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Ocean.
+    /// </summary>
+    public static RSeqAct_Ocean DefaultObject => (RSeqAct_Ocean)StaticClass().DefaultObject;
+
     internal RSeqAct_Ocean() { }
 
     /// <summary>

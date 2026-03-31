@@ -21,6 +21,11 @@ public partial class RDmgType_GrundyCrush : BmSDK.BmGame.RDmgType_NoXP, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GrundyCrush.
+    /// </summary>
+    public static RDmgType_GrundyCrush DefaultObject => (RDmgType_GrundyCrush)StaticClass().DefaultObject;
+
     internal RDmgType_GrundyCrush() { }
 
     /// <summary>

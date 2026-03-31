@@ -21,6 +21,11 @@ public partial class ParticleModuleRotationOverLifetime : BmSDK.Engine.ParticleM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleRotationOverLifetime.
+    /// </summary>
+    public static ParticleModuleRotationOverLifetime DefaultObject => (ParticleModuleRotationOverLifetime)StaticClass().DefaultObject;
+
     internal ParticleModuleRotationOverLifetime() { }
 
     /// <summary>

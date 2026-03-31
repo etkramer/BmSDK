@@ -21,6 +21,11 @@ public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIManager.
+    /// </summary>
+    public static RBMAIManager DefaultObject => (RBMAIManager)StaticClass().DefaultObject;
+
     internal RBMAIManager() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureSampleParameterCube : BmSDK.Engine
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureSampleParameterCube.
+    /// </summary>
+    public static MaterialExpressionTextureSampleParameterCube DefaultObject => (MaterialExpressionTextureSampleParameterCube)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureSampleParameterCube() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DebugCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DebugCameraHUD.
+    /// </summary>
+    public static DebugCameraHUD DefaultObject => (DebugCameraHUD)StaticClass().DefaultObject;
+
     internal DebugCameraHUD() { }
 
     /// <summary>

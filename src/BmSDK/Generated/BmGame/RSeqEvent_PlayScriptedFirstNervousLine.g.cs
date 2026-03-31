@@ -21,6 +21,11 @@ public partial class RSeqEvent_PlayScriptedFirstNervousLine : BmSDK.Engine.Seque
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PlayScriptedFirstNervousLine.
+    /// </summary>
+    public static RSeqEvent_PlayScriptedFirstNervousLine DefaultObject => (RSeqEvent_PlayScriptedFirstNervousLine)StaticClass().DefaultObject;
+
     internal RSeqEvent_PlayScriptedFirstNervousLine() { }
 
     /// <summary>

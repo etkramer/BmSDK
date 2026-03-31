@@ -21,6 +21,11 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.Engine.Interf
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPawnAI.
+    /// </summary>
+    public static RBMPawnAI DefaultObject => (RBMPawnAI)StaticClass().DefaultObject;
+
     internal RBMPawnAI() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_FollowSearch : BmSDK.BmGame.RBMAIAction_BaseMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_FollowSearch.
+    /// </summary>
+    public static RBMAIAction_FollowSearch DefaultObject => (RBMAIAction_FollowSearch)StaticClass().DefaultObject;
+
     internal RBMAIAction_FollowSearch() { }
 
     /// <summary>

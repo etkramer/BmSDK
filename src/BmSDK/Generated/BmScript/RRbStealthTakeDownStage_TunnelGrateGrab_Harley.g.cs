@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_TunnelGrateGrab_Harley : BmSDK.BmGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_TunnelGrateGrab_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_TunnelGrateGrab_Harley DefaultObject => (RRbStealthTakeDownStage_TunnelGrateGrab_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_TunnelGrateGrab_Harley() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatterThug_Combat4 : BmSDK.BmScript.RCharacte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatterThug_Combat4.
+    /// </summary>
+    public static RCharacter_MadHatterThug_Combat4 DefaultObject => (RCharacter_MadHatterThug_Combat4)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatterThug_Combat4() { }
 
     /// <summary>

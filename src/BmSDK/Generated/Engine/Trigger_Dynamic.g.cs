@@ -21,6 +21,11 @@ public partial class Trigger_Dynamic : BmSDK.Engine.Trigger, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Trigger_Dynamic.
+    /// </summary>
+    public static Trigger_Dynamic DefaultObject => (Trigger_Dynamic)StaticClass().DefaultObject;
+
     internal Trigger_Dynamic() { }
 
     /// <summary>

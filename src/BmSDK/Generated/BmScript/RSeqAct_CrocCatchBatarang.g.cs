@@ -21,6 +21,11 @@ public partial class RSeqAct_CrocCatchBatarang : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CrocCatchBatarang.
+    /// </summary>
+    public static RSeqAct_CrocCatchBatarang DefaultObject => (RSeqAct_CrocCatchBatarang)StaticClass().DefaultObject;
+
     internal RSeqAct_CrocCatchBatarang() { }
 
     /// <summary>

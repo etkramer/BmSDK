@@ -21,6 +21,11 @@ public partial class CodecMovieFallback : BmSDK.Engine.CodecMovie, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CodecMovieFallback.
+    /// </summary>
+    public static CodecMovieFallback DefaultObject => (CodecMovieFallback)StaticClass().DefaultObject;
+
     internal CodecMovieFallback() { }
 
     /// <summary>

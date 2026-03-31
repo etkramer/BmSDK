@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DefaultIdle.
+    /// </summary>
+    public static RBMBehaviour_DefaultIdle DefaultObject => (RBMBehaviour_DefaultIdle)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DefaultIdle() { }
 
     /// <summary>

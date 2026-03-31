@@ -21,6 +21,11 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxMovieBenchmarking.
+    /// </summary>
+    public static GFxMovieBenchmarking DefaultObject => (GFxMovieBenchmarking)StaticClass().DefaultObject;
+
     internal GFxMovieBenchmarking() { }
 
     /// <summary>

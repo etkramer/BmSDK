@@ -21,6 +21,11 @@ public partial class K2Node_Func : BmSDK.Engine.K2Node_FuncBase, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Node_Func.
+    /// </summary>
+    public static K2Node_Func DefaultObject => (K2Node_Func)StaticClass().DefaultObject;
+
     internal K2Node_Func() { }
 
     /// <summary>

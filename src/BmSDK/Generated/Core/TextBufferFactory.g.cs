@@ -21,6 +21,11 @@ public partial class TextBufferFactory : BmSDK.Factory, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextBufferFactory.
+    /// </summary>
+    public static TextBufferFactory DefaultObject => (TextBufferFactory)StaticClass().DefaultObject;
+
     internal TextBufferFactory() { }
 
     /// <summary>

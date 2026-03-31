@@ -21,6 +21,11 @@ public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightCompone
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SphericalHarmonicLightComponent.
+    /// </summary>
+    public static SphericalHarmonicLightComponent DefaultObject => (SphericalHarmonicLightComponent)StaticClass().DefaultObject;
+
     internal SphericalHarmonicLightComponent() { }
 
     /// <summary>

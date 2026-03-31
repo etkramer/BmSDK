@@ -21,6 +21,11 @@ public partial class K2Node_Func_NewComp : BmSDK.Engine.K2Node_Func, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Node_Func_NewComp.
+    /// </summary>
+    public static K2Node_Func_NewComp DefaultObject => (K2Node_Func_NewComp)StaticClass().DefaultObject;
+
     internal K2Node_Func_NewComp() { }
 
     /// <summary>

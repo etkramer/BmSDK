@@ -21,6 +21,11 @@ public partial class RSeqAct_GetCameraStatus : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GetCameraStatus.
+    /// </summary>
+    public static RSeqAct_GetCameraStatus DefaultObject => (RSeqAct_GetCameraStatus)StaticClass().DefaultObject;
+
     internal RSeqAct_GetCameraStatus() { }
 
     /// <summary>

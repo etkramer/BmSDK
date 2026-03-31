@@ -21,6 +21,11 @@ public partial class RFreezableSteamVent : BmSDK.BmGame.RFreezableVentBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezableSteamVent.
+    /// </summary>
+    public static RFreezableSteamVent DefaultObject => (RFreezableSteamVent)StaticClass().DefaultObject;
+
     internal RFreezableSteamVent() { }
 
     /// <summary>

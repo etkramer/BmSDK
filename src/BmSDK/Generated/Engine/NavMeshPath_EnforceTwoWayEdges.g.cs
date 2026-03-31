@@ -21,6 +21,11 @@ public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_EnforceTwoWayEdges.
+    /// </summary>
+    public static NavMeshPath_EnforceTwoWayEdges DefaultObject => (NavMeshPath_EnforceTwoWayEdges)StaticClass().DefaultObject;
+
     internal NavMeshPath_EnforceTwoWayEdges() { }
 
     /// <summary>

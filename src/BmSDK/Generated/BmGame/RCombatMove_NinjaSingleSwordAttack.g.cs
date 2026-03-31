@@ -21,6 +21,11 @@ public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NinjaSingleSwordAttack.
+    /// </summary>
+    public static RCombatMove_NinjaSingleSwordAttack DefaultObject => (RCombatMove_NinjaSingleSwordAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_NinjaSingleSwordAttack() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanTitanCounter : BmSDK.BmGame.RCombatMove_B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanTitanCounter.
+    /// </summary>
+    public static RCombatMove_BatmanTitanCounter DefaultObject => (RCombatMove_BatmanTitanCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanTitanCounter() { }
 
     /// <summary>

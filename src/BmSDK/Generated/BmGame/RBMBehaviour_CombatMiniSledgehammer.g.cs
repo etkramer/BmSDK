@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatMiniSledgehammer : BmSDK.BmGame.RBMBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatMiniSledgehammer.
+    /// </summary>
+    public static RBMBehaviour_CombatMiniSledgehammer DefaultObject => (RBMBehaviour_CombatMiniSledgehammer)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatMiniSledgehammer() { }
 
     /// <summary>

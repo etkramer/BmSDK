@@ -21,6 +21,11 @@ public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoalFilter_PolyEncompassesAI.
+    /// </summary>
+    public static NavMeshGoalFilter_PolyEncompassesAI DefaultObject => (NavMeshGoalFilter_PolyEncompassesAI)StaticClass().DefaultObject;
+
     internal NavMeshGoalFilter_PolyEncompassesAI() { }
 
     /// <summary>

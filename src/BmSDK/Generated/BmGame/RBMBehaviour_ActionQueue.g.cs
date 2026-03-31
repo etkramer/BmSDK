@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ActionQueue : BmSDK.BmGame.RBMBehaviour, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ActionQueue.
+    /// </summary>
+    public static RBMBehaviour_ActionQueue DefaultObject => (RBMBehaviour_ActionQueue)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ActionQueue() { }
 
     /// <summary>

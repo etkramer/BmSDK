@@ -21,6 +21,11 @@ public partial class LinkerLoad : BmSDK.Linker, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LinkerLoad.
+    /// </summary>
+    public static LinkerLoad DefaultObject => (LinkerLoad)StaticClass().DefaultObject;
+
     internal LinkerLoad() { }
 
     /// <summary>

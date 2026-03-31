@@ -21,6 +21,11 @@ public partial class RSeqEvent_SnapFlashDetonated : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SnapFlashDetonated.
+    /// </summary>
+    public static RSeqEvent_SnapFlashDetonated DefaultObject => (RSeqEvent_SnapFlashDetonated)StaticClass().DefaultObject;
+
     internal RSeqEvent_SnapFlashDetonated() { }
 
     /// <summary>

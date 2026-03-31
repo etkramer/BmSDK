@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleInput : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleInput.
+    /// </summary>
+    public static SeqAct_ToggleInput DefaultObject => (SeqAct_ToggleInput)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleInput() { }
 
     /// <summary>

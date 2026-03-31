@@ -21,6 +21,11 @@ public partial class ParticleModuleMeshRotationRateOverLife : BmSDK.Engine.Parti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleMeshRotationRateOverLife.
+    /// </summary>
+    public static ParticleModuleMeshRotationRateOverLife DefaultObject => (ParticleModuleMeshRotationRateOverLife)StaticClass().DefaultObject;
+
     internal ParticleModuleMeshRotationRateOverLife() { }
 
     /// <summary>

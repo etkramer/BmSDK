@@ -21,6 +21,11 @@ public partial class RSeqEvent_RadioStationFound : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RadioStationFound.
+    /// </summary>
+    public static RSeqEvent_RadioStationFound DefaultObject => (RSeqEvent_RadioStationFound)StaticClass().DefaultObject;
+
     internal RSeqEvent_RadioStationFound() { }
 
     /// <summary>

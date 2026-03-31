@@ -21,6 +21,11 @@ public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_RandomInt.
+    /// </summary>
+    public static SeqVar_RandomInt DefaultObject => (SeqVar_RandomInt)StaticClass().DefaultObject;
+
     internal SeqVar_RandomInt() { }
 
     /// <summary>

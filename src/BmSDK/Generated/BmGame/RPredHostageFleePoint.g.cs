@@ -21,6 +21,11 @@ public partial class RPredHostageFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredHostageFleePoint.
+    /// </summary>
+    public static RPredHostageFleePoint DefaultObject => (RPredHostageFleePoint)StaticClass().DefaultObject;
+
     internal RPredHostageFleePoint() { }
 
     /// <summary>

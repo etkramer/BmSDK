@@ -21,6 +21,11 @@ public partial class SeqAct_SetMatInstScalarParam : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetMatInstScalarParam.
+    /// </summary>
+    public static SeqAct_SetMatInstScalarParam DefaultObject => (SeqAct_SetMatInstScalarParam)StaticClass().DefaultObject;
+
     internal SeqAct_SetMatInstScalarParam() { }
 
     /// <summary>

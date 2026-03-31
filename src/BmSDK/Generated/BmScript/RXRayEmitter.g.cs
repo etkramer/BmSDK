@@ -21,6 +21,11 @@ public partial class RXRayEmitter : BmSDK.Engine.Emitter, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXRayEmitter.
+    /// </summary>
+    public static RXRayEmitter DefaultObject => (RXRayEmitter)StaticClass().DefaultObject;
+
     internal RXRayEmitter() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RB_HingeActor : BmSDK.Engine.RB_ConstraintActor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_HingeActor.
+    /// </summary>
+    public static RB_HingeActor DefaultObject => (RB_HingeActor)StaticClass().DefaultObject;
+
     internal RB_HingeActor() { }
 
     /// <summary>

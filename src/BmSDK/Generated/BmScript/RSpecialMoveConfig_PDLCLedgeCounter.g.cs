@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_PDLCLedgeCounter : BmSDK.BmGame.RSpecial
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_PDLCLedgeCounter.
+    /// </summary>
+    public static RSpecialMoveConfig_PDLCLedgeCounter DefaultObject => (RSpecialMoveConfig_PDLCLedgeCounter)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_PDLCLedgeCounter() { }
 
     /// <summary>

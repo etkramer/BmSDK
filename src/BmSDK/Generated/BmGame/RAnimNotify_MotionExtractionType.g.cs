@@ -21,6 +21,11 @@ public partial class RAnimNotify_MotionExtractionType : BmSDK.Engine.AnimNotify,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_MotionExtractionType.
+    /// </summary>
+    public static RAnimNotify_MotionExtractionType DefaultObject => (RAnimNotify_MotionExtractionType)StaticClass().DefaultObject;
+
     internal RAnimNotify_MotionExtractionType() { }
 
     /// <summary>

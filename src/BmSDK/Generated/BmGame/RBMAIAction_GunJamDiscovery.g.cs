@@ -21,6 +21,11 @@ public partial class RBMAIAction_GunJamDiscovery : BmSDK.BmGame.RBMAIAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_GunJamDiscovery.
+    /// </summary>
+    public static RBMAIAction_GunJamDiscovery DefaultObject => (RBMAIAction_GunJamDiscovery)StaticClass().DefaultObject;
+
     internal RBMAIAction_GunJamDiscovery() { }
 
     /// <summary>

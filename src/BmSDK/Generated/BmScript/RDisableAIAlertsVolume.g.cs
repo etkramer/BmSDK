@@ -21,6 +21,11 @@ public partial class RDisableAIAlertsVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisableAIAlertsVolume.
+    /// </summary>
+    public static RDisableAIAlertsVolume DefaultObject => (RDisableAIAlertsVolume)StaticClass().DefaultObject;
+
     internal RDisableAIAlertsVolume() { }
 
     /// <summary>

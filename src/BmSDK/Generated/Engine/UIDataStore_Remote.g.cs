@@ -21,6 +21,11 @@ public partial class UIDataStore_Remote : BmSDK.Engine.UIDataStore, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_Remote.
+    /// </summary>
+    public static UIDataStore_Remote DefaultObject => (UIDataStore_Remote)StaticClass().DefaultObject;
+
     internal UIDataStore_Remote() { }
 
     /// <summary>

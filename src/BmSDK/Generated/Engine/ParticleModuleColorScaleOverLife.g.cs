@@ -21,6 +21,11 @@ public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleMod
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleColorScaleOverLife.
+    /// </summary>
+    public static ParticleModuleColorScaleOverLife DefaultObject => (ParticleModuleColorScaleOverLife)StaticClass().DefaultObject;
+
     internal ParticleModuleColorScaleOverLife() { }
 
     /// <summary>

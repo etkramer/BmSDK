@@ -21,6 +21,11 @@ public partial class DMC_Prototype : BmSDK.Engine.K2GraphBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DMC_Prototype.
+    /// </summary>
+    public static DMC_Prototype DefaultObject => (DMC_Prototype)StaticClass().DefaultObject;
+
     internal DMC_Prototype() { }
 
     /// <summary>

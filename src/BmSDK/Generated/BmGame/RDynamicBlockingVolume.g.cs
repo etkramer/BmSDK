@@ -21,6 +21,11 @@ public partial class RDynamicBlockingVolume : BmSDK.BmGame.RBlockingVolume, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDynamicBlockingVolume.
+    /// </summary>
+    public static RDynamicBlockingVolume DefaultObject => (RDynamicBlockingVolume)StaticClass().DefaultObject;
+
     internal RDynamicBlockingVolume() { }
 
     /// <summary>

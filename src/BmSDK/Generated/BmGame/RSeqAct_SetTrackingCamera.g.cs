@@ -21,6 +21,11 @@ public partial class RSeqAct_SetTrackingCamera : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetTrackingCamera.
+    /// </summary>
+    public static RSeqAct_SetTrackingCamera DefaultObject => (RSeqAct_SetTrackingCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_SetTrackingCamera() { }
 
     /// <summary>

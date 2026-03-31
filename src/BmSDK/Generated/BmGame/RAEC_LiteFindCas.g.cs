@@ -21,6 +21,11 @@ public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_LiteFindCas.
+    /// </summary>
+    public static RAEC_LiteFindCas DefaultObject => (RAEC_LiteFindCas)StaticClass().DefaultObject;
+
     internal RAEC_LiteFindCas() { }
 
     /// <summary>

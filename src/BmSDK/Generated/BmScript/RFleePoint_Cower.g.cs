@@ -21,6 +21,11 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint_Cower.
+    /// </summary>
+    public static RFleePoint_Cower DefaultObject => (RFleePoint_Cower)StaticClass().DefaultObject;
+
     internal RFleePoint_Cower() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatRifle : BmSDK.BmGame.RBMBehaviour_Combat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatRifle.
+    /// </summary>
+    public static RBMBehaviour_CombatRifle DefaultObject => (RBMBehaviour_CombatRifle)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatRifle() { }
 
     /// <summary>

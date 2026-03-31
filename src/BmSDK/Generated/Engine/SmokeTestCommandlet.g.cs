@@ -21,6 +21,11 @@ public partial class SmokeTestCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SmokeTestCommandlet.
+    /// </summary>
+    public static SmokeTestCommandlet DefaultObject => (SmokeTestCommandlet)StaticClass().DefaultObject;
+
     internal SmokeTestCommandlet() { }
 
     /// <summary>

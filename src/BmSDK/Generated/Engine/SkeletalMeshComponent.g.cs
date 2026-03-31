@@ -21,6 +21,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMeshComponent.
+    /// </summary>
+    public static SkeletalMeshComponent DefaultObject => (SkeletalMeshComponent)StaticClass().DefaultObject;
+
     internal SkeletalMeshComponent() { }
 
     /// <summary>

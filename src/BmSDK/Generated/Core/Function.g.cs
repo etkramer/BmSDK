@@ -21,6 +21,11 @@ public partial class Function : BmSDK.Struct, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Function.
+    /// </summary>
+    public static Function DefaultObject => (Function)StaticClass().DefaultObject;
+
     internal Function() { }
 
     /// <summary>

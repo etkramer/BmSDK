@@ -21,6 +21,11 @@ public partial class RDmgType_SwingKick : BmSDK.BmGame.RDmgType_HeavyStrike, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SwingKick.
+    /// </summary>
+    public static RDmgType_SwingKick DefaultObject => (RDmgType_SwingKick)StaticClass().DefaultObject;
+
     internal RDmgType_SwingKick() { }
 
     /// <summary>

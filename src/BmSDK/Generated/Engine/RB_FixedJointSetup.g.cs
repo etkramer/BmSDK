@@ -21,6 +21,11 @@ public partial class RB_FixedJointSetup : BmSDK.Engine.RB_BSJointSetup, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_FixedJointSetup.
+    /// </summary>
+    public static RB_FixedJointSetup DefaultObject => (RB_FixedJointSetup)StaticClass().DefaultObject;
+
     internal RB_FixedJointSetup() { }
 
     /// <summary>

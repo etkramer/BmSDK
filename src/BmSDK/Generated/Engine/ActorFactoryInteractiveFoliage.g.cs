@@ -21,6 +21,11 @@ public partial class ActorFactoryInteractiveFoliage : BmSDK.Engine.ActorFactoryS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryInteractiveFoliage.
+    /// </summary>
+    public static ActorFactoryInteractiveFoliage DefaultObject => (ActorFactoryInteractiveFoliage)StaticClass().DefaultObject;
+
     internal ActorFactoryInteractiveFoliage() { }
 
     /// <summary>

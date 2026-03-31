@@ -21,6 +21,11 @@ public partial class MaterialExpressionFresnel : BmSDK.Engine.MaterialExpression
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFresnel.
+    /// </summary>
+    public static MaterialExpressionFresnel DefaultObject => (MaterialExpressionFresnel)StaticClass().DefaultObject;
+
     internal MaterialExpressionFresnel() { }
 
     /// <summary>

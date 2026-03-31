@@ -21,6 +21,11 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeatherAttachedToCamera.
+    /// </summary>
+    public static RWeatherAttachedToCamera DefaultObject => (RWeatherAttachedToCamera)StaticClass().DefaultObject;
+
     internal RWeatherAttachedToCamera() { }
 
     /// <summary>

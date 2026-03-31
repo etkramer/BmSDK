@@ -21,6 +21,11 @@ public partial class GFxFSCmdHandler_Kismet : BmSDK.GFxUI.GFxFSCmdHandler, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxFSCmdHandler_Kismet.
+    /// </summary>
+    public static GFxFSCmdHandler_Kismet DefaultObject => (GFxFSCmdHandler_Kismet)StaticClass().DefaultObject;
+
     internal GFxFSCmdHandler_Kismet() { }
 
     /// <summary>

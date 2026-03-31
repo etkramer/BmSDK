@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_A
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Flee_PredHostage.
+    /// </summary>
+    public static RBMBehaviour_Flee_PredHostage DefaultObject => (RBMBehaviour_Flee_PredHostage)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Flee_PredHostage() { }
 
     /// <summary>

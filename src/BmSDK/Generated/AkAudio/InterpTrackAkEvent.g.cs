@@ -21,6 +21,11 @@ public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackAkEvent.
+    /// </summary>
+    public static InterpTrackAkEvent DefaultObject => (InterpTrackAkEvent)StaticClass().DefaultObject;
+
     internal InterpTrackAkEvent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RScanSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RScanSolution.
+    /// </summary>
+    public static RScanSolution DefaultObject => (RScanSolution)StaticClass().DefaultObject;
+
     internal RScanSolution() { }
 
     /// <summary>

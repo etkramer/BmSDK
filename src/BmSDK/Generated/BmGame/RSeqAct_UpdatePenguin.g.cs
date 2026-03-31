@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdatePenguin : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdatePenguin.
+    /// </summary>
+    public static RSeqAct_UpdatePenguin DefaultObject => (RSeqAct_UpdatePenguin)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdatePenguin() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AICommandNodeBase : BmSDK.Engine.K2NodeBase, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AICommandNodeBase.
+    /// </summary>
+    public static AICommandNodeBase DefaultObject => (AICommandNodeBase)StaticClass().DefaultObject;
+
     internal AICommandNodeBase() { }
 
     /// <summary>

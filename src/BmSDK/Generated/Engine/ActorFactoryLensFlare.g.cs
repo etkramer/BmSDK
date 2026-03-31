@@ -21,6 +21,11 @@ public partial class ActorFactoryLensFlare : BmSDK.Engine.ActorFactory, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryLensFlare.
+    /// </summary>
+    public static ActorFactoryLensFlare DefaultObject => (ActorFactoryLensFlare)StaticClass().DefaultObject;
+
     internal ActorFactoryLensFlare() { }
 
     /// <summary>

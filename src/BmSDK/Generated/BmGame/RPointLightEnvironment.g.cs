@@ -21,6 +21,11 @@ public partial class RPointLightEnvironment : BmSDK.Engine.PointLight, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPointLightEnvironment.
+    /// </summary>
+    public static RPointLightEnvironment DefaultObject => (RPointLightEnvironment)StaticClass().DefaultObject;
+
     internal RPointLightEnvironment() { }
 
     /// <summary>

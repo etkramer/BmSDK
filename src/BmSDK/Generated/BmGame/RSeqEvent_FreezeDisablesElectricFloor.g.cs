@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeDisablesElectricFloor : BmSDK.Engine.Sequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeDisablesElectricFloor.
+    /// </summary>
+    public static RSeqEvent_FreezeDisablesElectricFloor DefaultObject => (RSeqEvent_FreezeDisablesElectricFloor)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeDisablesElectricFloor() { }
 
     /// <summary>

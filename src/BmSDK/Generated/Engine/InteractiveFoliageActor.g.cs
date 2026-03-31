@@ -21,6 +21,11 @@ public partial class InteractiveFoliageActor : BmSDK.Engine.StaticMeshActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InteractiveFoliageActor.
+    /// </summary>
+    public static InteractiveFoliageActor DefaultObject => (InteractiveFoliageActor)StaticClass().DefaultObject;
+
     internal InteractiveFoliageActor() { }
 
     /// <summary>

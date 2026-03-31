@@ -21,6 +21,11 @@ public partial class RGooSprayRbPDLC : BmSDK.BmScript.RGooSprayRb, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGooSprayRbPDLC.
+    /// </summary>
+    public static RGooSprayRbPDLC DefaultObject => (RGooSprayRbPDLC)StaticClass().DefaultObject;
+
     internal RGooSprayRbPDLC() { }
 
     /// <summary>

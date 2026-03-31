@@ -21,6 +21,11 @@ public partial class RPawnVillainStrange : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainStrange.
+    /// </summary>
+    public static RPawnVillainStrange DefaultObject => (RPawnVillainStrange)StaticClass().DefaultObject;
+
     internal RPawnVillainStrange() { }
 
     /// <summary>

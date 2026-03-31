@@ -21,6 +21,11 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerCatwomanBase.
+    /// </summary>
+    public static RPawnPlayerCatwomanBase DefaultObject => (RPawnPlayerCatwomanBase)StaticClass().DefaultObject;
+
     internal RPawnPlayerCatwomanBase() { }
 
     /// <summary>

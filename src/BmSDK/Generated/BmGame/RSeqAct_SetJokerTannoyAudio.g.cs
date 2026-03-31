@@ -21,6 +21,11 @@ public partial class RSeqAct_SetJokerTannoyAudio : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetJokerTannoyAudio.
+    /// </summary>
+    public static RSeqAct_SetJokerTannoyAudio DefaultObject => (RSeqAct_SetJokerTannoyAudio)StaticClass().DefaultObject;
+
     internal RSeqAct_SetJokerTannoyAudio() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TeamInfo.
+    /// </summary>
+    public static TeamInfo DefaultObject => (TeamInfo)StaticClass().DefaultObject;
+
     internal TeamInfo() { }
 
     /// <summary>

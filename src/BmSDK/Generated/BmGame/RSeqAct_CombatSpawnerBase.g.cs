@@ -21,6 +21,11 @@ public partial class RSeqAct_CombatSpawnerBase : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CombatSpawnerBase.
+    /// </summary>
+    public static RSeqAct_CombatSpawnerBase DefaultObject => (RSeqAct_CombatSpawnerBase)StaticClass().DefaultObject;
+
     internal RSeqAct_CombatSpawnerBase() { }
 
     /// <summary>

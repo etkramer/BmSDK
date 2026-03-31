@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Bat_Harleyfied : BmSDK.BmScript.RBMCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Bat_Harleyfied.
+    /// </summary>
+    public static RBMCombatThrownObject_Bat_Harleyfied DefaultObject => (RBMCombatThrownObject_Bat_Harleyfied)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Bat_Harleyfied() { }
 
     /// <summary>

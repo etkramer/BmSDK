@@ -21,6 +21,11 @@ public partial class InterpTrackInstStereoConvergence : BmSDK.Engine.InterpTrack
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstStereoConvergence.
+    /// </summary>
+    public static InterpTrackInstStereoConvergence DefaultObject => (InterpTrackInstStereoConvergence)StaticClass().DefaultObject;
+
     internal InterpTrackInstStereoConvergence() { }
 
     /// <summary>

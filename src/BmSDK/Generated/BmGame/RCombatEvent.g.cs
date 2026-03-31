@@ -21,6 +21,11 @@ public partial class RCombatEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatEvent.
+    /// </summary>
+    public static RCombatEvent DefaultObject => (RCombatEvent)StaticClass().DefaultObject;
+
     internal RCombatEvent() { }
 
     /// <summary>

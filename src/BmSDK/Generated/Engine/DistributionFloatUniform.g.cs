@@ -21,6 +21,11 @@ public partial class DistributionFloatUniform : BmSDK.DistributionFloat, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionFloatUniform.
+    /// </summary>
+    public static DistributionFloatUniform DefaultObject => (DistributionFloatUniform)StaticClass().DefaultObject;
+
     internal DistributionFloatUniform() { }
 
     /// <summary>

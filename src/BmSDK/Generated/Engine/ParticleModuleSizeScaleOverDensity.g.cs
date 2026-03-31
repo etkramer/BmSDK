@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeScaleOverDensity : BmSDK.Engine.ParticleM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeScaleOverDensity.
+    /// </summary>
+    public static ParticleModuleSizeScaleOverDensity DefaultObject => (ParticleModuleSizeScaleOverDensity)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeScaleOverDensity() { }
 
     /// <summary>

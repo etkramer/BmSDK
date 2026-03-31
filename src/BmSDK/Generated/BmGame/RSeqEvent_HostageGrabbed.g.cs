@@ -21,6 +21,11 @@ public partial class RSeqEvent_HostageGrabbed : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HostageGrabbed.
+    /// </summary>
+    public static RSeqEvent_HostageGrabbed DefaultObject => (RSeqEvent_HostageGrabbed)StaticClass().DefaultObject;
+
     internal RSeqEvent_HostageGrabbed() { }
 
     /// <summary>

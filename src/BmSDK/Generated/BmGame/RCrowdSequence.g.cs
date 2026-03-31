@@ -21,6 +21,11 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSequence.
+    /// </summary>
+    public static RCrowdSequence DefaultObject => (RCrowdSequence)StaticClass().DefaultObject;
+
     internal RCrowdSequence() { }
 
     /// <summary>

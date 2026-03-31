@@ -21,6 +21,11 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineRecentPlayersList.
+    /// </summary>
+    public static OnlineRecentPlayersList DefaultObject => (OnlineRecentPlayersList)StaticClass().DefaultObject;
+
     internal OnlineRecentPlayersList() { }
 
     /// <summary>

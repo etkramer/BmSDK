@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_CharacterSkinSelect : BmSDK.BmGame.RGFxMovieUI,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_CharacterSkinSelect.
+    /// </summary>
+    public static RGFxMovieUI_CharacterSkinSelect DefaultObject => (RGFxMovieUI_CharacterSkinSelect)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_CharacterSkinSelect() { }
 
     /// <summary>

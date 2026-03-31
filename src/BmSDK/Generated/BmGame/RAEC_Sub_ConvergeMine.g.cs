@@ -21,6 +21,11 @@ public partial class RAEC_Sub_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinator
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Sub_ConvergeMine.
+    /// </summary>
+    public static RAEC_Sub_ConvergeMine DefaultObject => (RAEC_Sub_ConvergeMine)StaticClass().DefaultObject;
+
     internal RAEC_Sub_ConvergeMine() { }
 
     /// <summary>

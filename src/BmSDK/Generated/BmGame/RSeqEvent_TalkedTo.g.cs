@@ -21,6 +21,11 @@ public partial class RSeqEvent_TalkedTo : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TalkedTo.
+    /// </summary>
+    public static RSeqEvent_TalkedTo DefaultObject => (RSeqEvent_TalkedTo)StaticClass().DefaultObject;
+
     internal RSeqEvent_TalkedTo() { }
 
     /// <summary>

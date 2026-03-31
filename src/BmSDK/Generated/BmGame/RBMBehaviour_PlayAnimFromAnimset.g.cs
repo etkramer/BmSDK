@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PlayAnimFromAnimset : BmSDK.BmGame.RBMBehaviou
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PlayAnimFromAnimset.
+    /// </summary>
+    public static RBMBehaviour_PlayAnimFromAnimset DefaultObject => (RBMBehaviour_PlayAnimFromAnimset)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PlayAnimFromAnimset() { }
 
     /// <summary>

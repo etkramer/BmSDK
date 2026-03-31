@@ -21,6 +21,11 @@ public partial class ObjectSerializer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ObjectSerializer.
+    /// </summary>
+    public static ObjectSerializer DefaultObject => (ObjectSerializer)StaticClass().DefaultObject;
+
     internal ObjectSerializer() { }
 
     /// <summary>

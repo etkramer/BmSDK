@@ -21,6 +21,11 @@ public partial class DrawCapsuleComponent : BmSDK.Engine.PrimitiveComponent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawCapsuleComponent.
+    /// </summary>
+    public static DrawCapsuleComponent DefaultObject => (DrawCapsuleComponent)StaticClass().DefaultObject;
+
     internal DrawCapsuleComponent() { }
 
     /// <summary>

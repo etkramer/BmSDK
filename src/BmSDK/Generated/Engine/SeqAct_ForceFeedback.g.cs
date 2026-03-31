@@ -21,6 +21,11 @@ public partial class SeqAct_ForceFeedback : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ForceFeedback.
+    /// </summary>
+    public static SeqAct_ForceFeedback DefaultObject => (SeqAct_ForceFeedback)StaticClass().DefaultObject;
+
     internal SeqAct_ForceFeedback() { }
 
     /// <summary>

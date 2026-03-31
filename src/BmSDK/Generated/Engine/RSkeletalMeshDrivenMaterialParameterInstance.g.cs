@@ -21,6 +21,11 @@ public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkeletalMeshDrivenMaterialParameterInstance.
+    /// </summary>
+    public static RSkeletalMeshDrivenMaterialParameterInstance DefaultObject => (RSkeletalMeshDrivenMaterialParameterInstance)StaticClass().DefaultObject;
+
     internal RSkeletalMeshDrivenMaterialParameterInstance() { }
 
     /// <summary>

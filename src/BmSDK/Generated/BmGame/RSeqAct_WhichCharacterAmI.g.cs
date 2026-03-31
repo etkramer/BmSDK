@@ -21,6 +21,11 @@ public partial class RSeqAct_WhichCharacterAmI : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_WhichCharacterAmI.
+    /// </summary>
+    public static RSeqAct_WhichCharacterAmI DefaultObject => (RSeqAct_WhichCharacterAmI)StaticClass().DefaultObject;
+
     internal RSeqAct_WhichCharacterAmI() { }
 
     /// <summary>

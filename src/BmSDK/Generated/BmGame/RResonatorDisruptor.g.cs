@@ -21,6 +21,11 @@ public partial class RResonatorDisruptor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RResonatorDisruptor.
+    /// </summary>
+    public static RResonatorDisruptor DefaultObject => (RResonatorDisruptor)StaticClass().DefaultObject;
+
     internal RResonatorDisruptor() { }
 
     /// <summary>

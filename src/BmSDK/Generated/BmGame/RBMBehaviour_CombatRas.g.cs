@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatRas : BmSDK.BmGame.RBMBehaviour_CombatAI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatRas.
+    /// </summary>
+    public static RBMBehaviour_CombatRas DefaultObject => (RBMBehaviour_CombatRas)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatRas() { }
 
     /// <summary>

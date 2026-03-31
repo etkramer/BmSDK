@@ -21,6 +21,11 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _Engine.
+    /// </summary>
+    public static _Engine DefaultObject => (_Engine)StaticClass().DefaultObject;
+
     internal _Engine() { }
 
     /// <summary>

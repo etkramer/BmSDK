@@ -21,6 +21,11 @@ public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGlideKickCamera.
+    /// </summary>
+    public static RGlideKickCamera DefaultObject => (RGlideKickCamera)StaticClass().DefaultObject;
+
     internal RGlideKickCamera() { }
 
     /// <summary>

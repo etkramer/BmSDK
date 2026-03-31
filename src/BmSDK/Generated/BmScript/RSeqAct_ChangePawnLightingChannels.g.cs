@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangePawnLightingChannels : BmSDK.Engine.SequenceA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangePawnLightingChannels.
+    /// </summary>
+    public static RSeqAct_ChangePawnLightingChannels DefaultObject => (RSeqAct_ChangePawnLightingChannels)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangePawnLightingChannels() { }
 
     /// <summary>

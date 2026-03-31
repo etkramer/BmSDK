@@ -21,6 +21,11 @@ public partial class RDmgType_BeatDown : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BeatDown.
+    /// </summary>
+    public static RDmgType_BeatDown DefaultObject => (RDmgType_BeatDown)StaticClass().DefaultObject;
+
     internal RDmgType_BeatDown() { }
 
     /// <summary>

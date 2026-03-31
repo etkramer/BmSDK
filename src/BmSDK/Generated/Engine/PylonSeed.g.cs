@@ -21,6 +21,11 @@ public partial class PylonSeed : BmSDK.Engine.Actor, BmSDK.Engine.Interface_NavM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PylonSeed.
+    /// </summary>
+    public static PylonSeed DefaultObject => (PylonSeed)StaticClass().DefaultObject;
+
     internal PylonSeed() { }
 
     /// <summary>

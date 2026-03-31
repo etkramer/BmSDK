@@ -21,6 +21,11 @@ public partial class RNavMeshPath_AvoidBlockedEdges : BmSDK.Engine.NavMeshPathCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_AvoidBlockedEdges.
+    /// </summary>
+    public static RNavMeshPath_AvoidBlockedEdges DefaultObject => (RNavMeshPath_AvoidBlockedEdges)StaticClass().DefaultObject;
+
     internal RNavMeshPath_AvoidBlockedEdges() { }
 
     /// <summary>

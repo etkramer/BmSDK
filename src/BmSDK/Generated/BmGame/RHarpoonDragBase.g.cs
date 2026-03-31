@@ -21,6 +21,11 @@ public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonDragBase.
+    /// </summary>
+    public static RHarpoonDragBase DefaultObject => (RHarpoonDragBase)StaticClass().DefaultObject;
+
     internal RHarpoonDragBase() { }
 
     /// <summary>

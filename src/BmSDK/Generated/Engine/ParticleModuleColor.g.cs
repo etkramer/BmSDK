@@ -21,6 +21,11 @@ public partial class ParticleModuleColor : BmSDK.Engine.ParticleModuleColorBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleColor.
+    /// </summary>
+    public static ParticleModuleColor DefaultObject => (ParticleModuleColor)StaticClass().DefaultObject;
+
     internal ParticleModuleColor() { }
 
     /// <summary>

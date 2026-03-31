@@ -21,6 +21,11 @@ public partial class RCombatMove_RasMultiAttackAndCounter : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasMultiAttackAndCounter.
+    /// </summary>
+    public static RCombatMove_RasMultiAttackAndCounter DefaultObject => (RCombatMove_RasMultiAttackAndCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_RasMultiAttackAndCounter() { }
 
     /// <summary>

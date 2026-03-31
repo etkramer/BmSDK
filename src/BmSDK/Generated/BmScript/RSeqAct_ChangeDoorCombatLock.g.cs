@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangeDoorCombatLock : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangeDoorCombatLock.
+    /// </summary>
+    public static RSeqAct_ChangeDoorCombatLock DefaultObject => (RSeqAct_ChangeDoorCombatLock)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangeDoorCombatLock() { }
 
     /// <summary>

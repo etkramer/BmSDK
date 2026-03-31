@@ -21,6 +21,11 @@ public partial class RSeqAct_LanguageCheck : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LanguageCheck.
+    /// </summary>
+    public static RSeqAct_LanguageCheck DefaultObject => (RSeqAct_LanguageCheck)StaticClass().DefaultObject;
+
     internal RSeqAct_LanguageCheck() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TutorialLookAt.
+    /// </summary>
+    public static RSeqAct_TutorialLookAt DefaultObject => (RSeqAct_TutorialLookAt)StaticClass().DefaultObject;
+
     internal RSeqAct_TutorialLookAt() { }
 
     /// <summary>

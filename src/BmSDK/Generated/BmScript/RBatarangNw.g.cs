@@ -21,6 +21,11 @@ public partial class RBatarangNw : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangNw.
+    /// </summary>
+    public static RBatarangNw DefaultObject => (RBatarangNw)StaticClass().DefaultObject;
+
     internal RBatarangNw() { }
 
     /// <summary>

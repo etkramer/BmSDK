@@ -21,6 +21,11 @@ public partial class RHazardousObject : BmSDK.Engine.InterpActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHazardousObject.
+    /// </summary>
+    public static RHazardousObject DefaultObject => (RHazardousObject)StaticClass().DefaultObject;
+
     internal RHazardousObject() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RKillVolumeLava : BmSDK.BmGame.RKillVolume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RKillVolumeLava.
+    /// </summary>
+    public static RKillVolumeLava DefaultObject => (RKillVolumeLava)StaticClass().DefaultObject;
+
     internal RKillVolumeLava() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class GFxAction_OpenMovie : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxAction_OpenMovie.
+    /// </summary>
+    public static GFxAction_OpenMovie DefaultObject => (GFxAction_OpenMovie)StaticClass().DefaultObject;
+
     internal GFxAction_OpenMovie() { }
 
     /// <summary>

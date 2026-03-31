@@ -21,6 +21,11 @@ public partial class RGunStartleNoise_AlertProxy : BmSDK.BmGame.RStartlePoint, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGunStartleNoise_AlertProxy.
+    /// </summary>
+    public static RGunStartleNoise_AlertProxy DefaultObject => (RGunStartleNoise_AlertProxy)StaticClass().DefaultObject;
+
     internal RGunStartleNoise_AlertProxy() { }
 
     /// <summary>

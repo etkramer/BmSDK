@@ -21,6 +21,11 @@ public partial class RSeqAct_TutorialThugsFire : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TutorialThugsFire.
+    /// </summary>
+    public static RSeqAct_TutorialThugsFire DefaultObject => (RSeqAct_TutorialThugsFire)StaticClass().DefaultObject;
+
     internal RSeqAct_TutorialThugsFire() { }
 
     /// <summary>

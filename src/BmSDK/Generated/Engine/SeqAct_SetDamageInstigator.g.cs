@@ -21,6 +21,11 @@ public partial class SeqAct_SetDamageInstigator : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetDamageInstigator.
+    /// </summary>
+    public static SeqAct_SetDamageInstigator DefaultObject => (SeqAct_SetDamageInstigator)StaticClass().DefaultObject;
+
     internal SeqAct_SetDamageInstigator() { }
 
     /// <summary>

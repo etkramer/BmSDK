@@ -21,6 +21,11 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GetNumPawnsInVolume.
+    /// </summary>
+    public static RSeqAct_GetNumPawnsInVolume DefaultObject => (RSeqAct_GetNumPawnsInVolume)StaticClass().DefaultObject;
+
     internal RSeqAct_GetNumPawnsInVolume() { }
 
     /// <summary>

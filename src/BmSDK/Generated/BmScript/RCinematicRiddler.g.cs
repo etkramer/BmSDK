@@ -21,6 +21,11 @@ public partial class RCinematicRiddler : BmSDK.BmGame.RCinematicActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicRiddler.
+    /// </summary>
+    public static RCinematicRiddler DefaultObject => (RCinematicRiddler)StaticClass().DefaultObject;
+
     internal RCinematicRiddler() { }
 
     /// <summary>

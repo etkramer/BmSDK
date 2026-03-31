@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanAerial : BmSDK.BmGame.RCombatMove_BatmanA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanAerial.
+    /// </summary>
+    public static RCombatMove_BatmanAerial DefaultObject => (RCombatMove_BatmanAerial)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanAerial() { }
 
     /// <summary>

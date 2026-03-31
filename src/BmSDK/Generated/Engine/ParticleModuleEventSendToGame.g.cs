@@ -21,6 +21,11 @@ public partial class ParticleModuleEventSendToGame : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleEventSendToGame.
+    /// </summary>
+    public static ParticleModuleEventSendToGame DefaultObject => (ParticleModuleEventSendToGame)StaticClass().DefaultObject;
+
     internal ParticleModuleEventSendToGame() { }
 
     /// <summary>

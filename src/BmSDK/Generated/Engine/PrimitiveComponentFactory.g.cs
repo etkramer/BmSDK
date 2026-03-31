@@ -21,6 +21,11 @@ public partial class PrimitiveComponentFactory : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrimitiveComponentFactory.
+    /// </summary>
+    public static PrimitiveComponentFactory DefaultObject => (PrimitiveComponentFactory)StaticClass().DefaultObject;
+
     internal PrimitiveComponentFactory() { }
 
     /// <summary>

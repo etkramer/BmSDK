@@ -21,6 +21,11 @@ public partial class RNightwingSticksBounceThrow : BmSDK.BmGame.RBatarang, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingSticksBounceThrow.
+    /// </summary>
+    public static RNightwingSticksBounceThrow DefaultObject => (RNightwingSticksBounceThrow)StaticClass().DefaultObject;
+
     internal RNightwingSticksBounceThrow() { }
 
     /// <summary>

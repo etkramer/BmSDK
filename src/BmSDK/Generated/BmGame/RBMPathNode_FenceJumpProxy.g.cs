@@ -21,6 +21,11 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_FenceJumpProxy.
+    /// </summary>
+    public static RBMPathNode_FenceJumpProxy DefaultObject => (RBMPathNode_FenceJumpProxy)StaticClass().DefaultObject;
+
     internal RBMPathNode_FenceJumpProxy() { }
 
     /// <summary>

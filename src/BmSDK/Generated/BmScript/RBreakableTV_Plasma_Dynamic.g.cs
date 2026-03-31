@@ -21,6 +21,11 @@ public partial class RBreakableTV_Plasma_Dynamic : BmSDK.BmScript.RBreakableTV_P
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableTV_Plasma_Dynamic.
+    /// </summary>
+    public static RBreakableTV_Plasma_Dynamic DefaultObject => (RBreakableTV_Plasma_Dynamic)StaticClass().DefaultObject;
+
     internal RBreakableTV_Plasma_Dynamic() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AnimNotify_ViewShake : BmSDK.Engine.AnimNotify_Scripted, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_ViewShake.
+    /// </summary>
+    public static AnimNotify_ViewShake DefaultObject => (AnimNotify_ViewShake)StaticClass().DefaultObject;
+
     internal AnimNotify_ViewShake() { }
 
     /// <summary>

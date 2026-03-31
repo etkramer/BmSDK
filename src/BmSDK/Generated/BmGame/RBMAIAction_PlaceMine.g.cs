@@ -21,6 +21,11 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PlaceMine.
+    /// </summary>
+    public static RBMAIAction_PlaceMine DefaultObject => (RBMAIAction_PlaceMine)StaticClass().DefaultObject;
+
     internal RBMAIAction_PlaceMine() { }
 
     /// <summary>

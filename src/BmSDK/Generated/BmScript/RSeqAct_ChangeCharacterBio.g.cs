@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangeCharacterBio : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangeCharacterBio.
+    /// </summary>
+    public static RSeqAct_ChangeCharacterBio DefaultObject => (RSeqAct_ChangeCharacterBio)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangeCharacterBio() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_UnarmedArmouredFail : BmSDK.BmScript.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_UnarmedArmouredFail.
+    /// </summary>
+    public static RStealthTakedownStage_UnarmedArmouredFail DefaultObject => (RStealthTakedownStage_UnarmedArmouredFail)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_UnarmedArmouredFail() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class NavMeshGoal_ClosestActorInList : BmSDK.Engine.NavMeshPathGo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoal_ClosestActorInList.
+    /// </summary>
+    public static NavMeshGoal_ClosestActorInList DefaultObject => (NavMeshGoal_ClosestActorInList)StaticClass().DefaultObject;
+
     internal NavMeshGoal_ClosestActorInList() { }
 
     /// <summary>

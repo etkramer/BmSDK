@@ -21,6 +21,11 @@ public partial class RCombatMove_FailedFloorTakedown : BmSDK.BmGame.RCombatMove,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_FailedFloorTakedown.
+    /// </summary>
+    public static RCombatMove_FailedFloorTakedown DefaultObject => (RCombatMove_FailedFloorTakedown)StaticClass().DefaultObject;
+
     internal RCombatMove_FailedFloorTakedown() { }
 
     /// <summary>

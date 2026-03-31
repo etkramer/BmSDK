@@ -21,6 +21,11 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Mover.
+    /// </summary>
+    public static SeqEvent_Mover DefaultObject => (SeqEvent_Mover)StaticClass().DefaultObject;
+
     internal SeqEvent_Mover() { }
 
     /// <summary>

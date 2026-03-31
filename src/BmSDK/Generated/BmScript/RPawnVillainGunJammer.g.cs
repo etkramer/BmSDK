@@ -21,6 +21,11 @@ public partial class RPawnVillainGunJammer : BmSDK.BmScript.RPawnVillainGunJamme
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunJammer.
+    /// </summary>
+    public static RPawnVillainGunJammer DefaultObject => (RPawnVillainGunJammer)StaticClass().DefaultObject;
+
     internal RPawnVillainGunJammer() { }
 
     /// <summary>

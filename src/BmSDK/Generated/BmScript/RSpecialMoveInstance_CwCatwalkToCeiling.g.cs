@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_CwCatwalkToCeiling : BmSDK.BmGame.RSpe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_CwCatwalkToCeiling.
+    /// </summary>
+    public static RSpecialMoveInstance_CwCatwalkToCeiling DefaultObject => (RSpecialMoveInstance_CwCatwalkToCeiling)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_CwCatwalkToCeiling() { }
 
     /// <summary>

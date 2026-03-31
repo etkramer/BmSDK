@@ -21,6 +21,11 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeComponent.
+    /// </summary>
+    public static RCapeComponent DefaultObject => (RCapeComponent)StaticClass().DefaultObject;
+
     internal RCapeComponent() { }
 
     /// <summary>

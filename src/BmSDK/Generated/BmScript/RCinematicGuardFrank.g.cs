@@ -21,6 +21,11 @@ public partial class RCinematicGuardFrank : BmSDK.BmScript.RCinematicGuard, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicGuardFrank.
+    /// </summary>
+    public static RCinematicGuardFrank DefaultObject => (RCinematicGuardFrank)StaticClass().DefaultObject;
+
     internal RCinematicGuardFrank() { }
 
     /// <summary>

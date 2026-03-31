@@ -21,6 +21,11 @@ public partial class RSeqAct_OWDDeathtrapHackFix : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_OWDDeathtrapHackFix.
+    /// </summary>
+    public static RSeqAct_OWDDeathtrapHackFix DefaultObject => (RSeqAct_OWDDeathtrapHackFix)StaticClass().DefaultObject;
+
     internal RSeqAct_OWDDeathtrapHackFix() { }
 
     /// <summary>

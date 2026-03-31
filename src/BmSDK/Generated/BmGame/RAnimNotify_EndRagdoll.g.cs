@@ -21,6 +21,11 @@ public partial class RAnimNotify_EndRagdoll : BmSDK.Engine.AnimNotify, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_EndRagdoll.
+    /// </summary>
+    public static RAnimNotify_EndRagdoll DefaultObject => (RAnimNotify_EndRagdoll)StaticClass().DefaultObject;
+
     internal RAnimNotify_EndRagdoll() { }
 
     /// <summary>

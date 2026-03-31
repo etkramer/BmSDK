@@ -21,6 +21,11 @@ public partial class MaterialExpressionLightmassReplace : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLightmassReplace.
+    /// </summary>
+    public static MaterialExpressionLightmassReplace DefaultObject => (MaterialExpressionLightmassReplace)StaticClass().DefaultObject;
+
     internal MaterialExpressionLightmassReplace() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHarpoonGunLv2 : BmSDK.BmScript.RHarpoonGunBm, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonGunLv2.
+    /// </summary>
+    public static RHarpoonGunLv2 DefaultObject => (RHarpoonGunLv2)StaticClass().DefaultObject;
+
     internal RHarpoonGunLv2() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_ShootGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ShootGarg.
+    /// </summary>
+    public static RBMAIAction_ShootGarg DefaultObject => (RBMAIAction_ShootGarg)StaticClass().DefaultObject;
+
     internal RBMAIAction_ShootGarg() { }
 
     /// <summary>

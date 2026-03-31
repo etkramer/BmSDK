@@ -21,6 +21,11 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDecodeMask.
+    /// </summary>
+    public static MaterialExpressionDecodeMask DefaultObject => (MaterialExpressionDecodeMask)StaticClass().DefaultObject;
+
     internal MaterialExpressionDecodeMask() { }
 
     /// <summary>

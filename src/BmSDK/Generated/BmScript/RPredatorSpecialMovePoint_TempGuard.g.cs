@@ -21,6 +21,11 @@ public partial class RPredatorSpecialMovePoint_TempGuard : BmSDK.BmScript.RPreda
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorSpecialMovePoint_TempGuard.
+    /// </summary>
+    public static RPredatorSpecialMovePoint_TempGuard DefaultObject => (RPredatorSpecialMovePoint_TempGuard)StaticClass().DefaultObject;
+
     internal RPredatorSpecialMovePoint_TempGuard() { }
 
     /// <summary>

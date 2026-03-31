@@ -21,6 +21,11 @@ public partial class RBMCombatCollisionProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatCollisionProxy.
+    /// </summary>
+    public static RBMCombatCollisionProxy DefaultObject => (RBMCombatCollisionProxy)StaticClass().DefaultObject;
+
     internal RBMCombatCollisionProxy() { }
 
     /// <summary>

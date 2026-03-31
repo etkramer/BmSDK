@@ -21,6 +21,11 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysUtil.
+    /// </summary>
+    public static RPhysUtil DefaultObject => (RPhysUtil)StaticClass().DefaultObject;
+
     internal RPhysUtil() { }
 
     /// <summary>

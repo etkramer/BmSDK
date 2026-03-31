@@ -21,6 +21,11 @@ public partial class FluidSurfaceActorMovable : BmSDK.Engine.FluidSurfaceActor, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FluidSurfaceActorMovable.
+    /// </summary>
+    public static FluidSurfaceActorMovable DefaultObject => (FluidSurfaceActorMovable)StaticClass().DefaultObject;
+
     internal FluidSurfaceActorMovable() { }
 
     /// <summary>

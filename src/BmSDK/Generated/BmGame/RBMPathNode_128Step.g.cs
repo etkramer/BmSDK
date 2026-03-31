@@ -21,6 +21,11 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_128Step.
+    /// </summary>
+    public static RBMPathNode_128Step DefaultObject => (RBMPathNode_128Step)StaticClass().DefaultObject;
+
     internal RBMPathNode_128Step() { }
 
     /// <summary>

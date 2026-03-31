@@ -21,6 +21,11 @@ public partial class InterpTrackInstFade : BmSDK.Engine.InterpTrackInst, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstFade.
+    /// </summary>
+    public static InterpTrackInstFade DefaultObject => (InterpTrackInstFade)StaticClass().DefaultObject;
+
     internal InterpTrackInstFade() { }
 
     /// <summary>

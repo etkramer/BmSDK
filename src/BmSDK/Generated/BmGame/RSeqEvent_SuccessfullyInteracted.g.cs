@@ -21,6 +21,11 @@ public partial class RSeqEvent_SuccessfullyInteracted : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SuccessfullyInteracted.
+    /// </summary>
+    public static RSeqEvent_SuccessfullyInteracted DefaultObject => (RSeqEvent_SuccessfullyInteracted)StaticClass().DefaultObject;
+
     internal RSeqEvent_SuccessfullyInteracted() { }
 
     /// <summary>

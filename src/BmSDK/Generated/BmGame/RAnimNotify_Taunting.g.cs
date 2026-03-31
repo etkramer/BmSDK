@@ -21,6 +21,11 @@ public partial class RAnimNotify_Taunting : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Taunting.
+    /// </summary>
+    public static RAnimNotify_Taunting DefaultObject => (RAnimNotify_Taunting)StaticClass().DefaultObject;
+
     internal RAnimNotify_Taunting() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceCharacterIntoRadioMode : BmSDK.Engine.SeqAct_L
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceCharacterIntoRadioMode.
+    /// </summary>
+    public static RSeqAct_ForceCharacterIntoRadioMode DefaultObject => (RSeqAct_ForceCharacterIntoRadioMode)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceCharacterIntoRadioMode() { }
 
     /// <summary>

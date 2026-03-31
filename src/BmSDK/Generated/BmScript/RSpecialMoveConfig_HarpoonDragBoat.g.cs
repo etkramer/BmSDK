@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_HarpoonDragBoat : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_HarpoonDragBoat.
+    /// </summary>
+    public static RSpecialMoveConfig_HarpoonDragBoat DefaultObject => (RSpecialMoveConfig_HarpoonDragBoat)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_HarpoonDragBoat() { }
 
     /// <summary>

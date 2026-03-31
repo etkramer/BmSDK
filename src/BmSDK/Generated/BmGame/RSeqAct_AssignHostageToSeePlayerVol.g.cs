@@ -21,6 +21,11 @@ public partial class RSeqAct_AssignHostageToSeePlayerVol : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AssignHostageToSeePlayerVol.
+    /// </summary>
+    public static RSeqAct_AssignHostageToSeePlayerVol DefaultObject => (RSeqAct_AssignHostageToSeePlayerVol)StaticClass().DefaultObject;
+
     internal RSeqAct_AssignHostageToSeePlayerVol() { }
 
     /// <summary>

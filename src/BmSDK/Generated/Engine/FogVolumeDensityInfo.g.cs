@@ -21,6 +21,11 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FogVolumeDensityInfo.
+    /// </summary>
+    public static FogVolumeDensityInfo DefaultObject => (FogVolumeDensityInfo)StaticClass().DefaultObject;
+
     internal FogVolumeDensityInfo() { }
 
     /// <summary>

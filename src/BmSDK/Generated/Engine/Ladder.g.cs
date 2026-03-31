@@ -21,6 +21,11 @@ public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Ladder.
+    /// </summary>
+    public static Ladder DefaultObject => (Ladder)StaticClass().DefaultObject;
+
     internal Ladder() { }
 
     /// <summary>

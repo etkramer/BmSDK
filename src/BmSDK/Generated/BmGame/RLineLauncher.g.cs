@@ -21,6 +21,11 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncher.
+    /// </summary>
+    public static RLineLauncher DefaultObject => (RLineLauncher)StaticClass().DefaultObject;
+
     internal RLineLauncher() { }
 
     /// <summary>

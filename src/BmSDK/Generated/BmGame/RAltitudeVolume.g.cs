@@ -21,6 +21,11 @@ public partial class RAltitudeVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAltitudeVolume.
+    /// </summary>
+    public static RAltitudeVolume DefaultObject => (RAltitudeVolume)StaticClass().DefaultObject;
+
     internal RAltitudeVolume() { }
 
     /// <summary>

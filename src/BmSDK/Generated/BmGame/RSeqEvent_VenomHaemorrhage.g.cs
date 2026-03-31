@@ -21,6 +21,11 @@ public partial class RSeqEvent_VenomHaemorrhage : BmSDK.Engine.SequenceEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_VenomHaemorrhage.
+    /// </summary>
+    public static RSeqEvent_VenomHaemorrhage DefaultObject => (RSeqEvent_VenomHaemorrhage)StaticClass().DefaultObject;
+
     internal RSeqEvent_VenomHaemorrhage() { }
 
     /// <summary>

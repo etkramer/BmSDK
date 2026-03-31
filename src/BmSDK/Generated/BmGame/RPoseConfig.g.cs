@@ -21,6 +21,11 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPoseConfig.
+    /// </summary>
+    public static RPoseConfig DefaultObject => (RPoseConfig)StaticClass().DefaultObject;
+
     internal RPoseConfig() { }
 
     /// <summary>

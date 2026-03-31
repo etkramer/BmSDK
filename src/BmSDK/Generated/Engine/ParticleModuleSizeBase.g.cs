@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeBase : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeBase.
+    /// </summary>
+    public static ParticleModuleSizeBase DefaultObject => (ParticleModuleSizeBase)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeBase() { }
 
     /// <summary>

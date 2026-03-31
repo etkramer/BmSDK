@@ -21,6 +21,11 @@ public partial class DistributionVectorConstantCurve : BmSDK.DistributionVector,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorConstantCurve.
+    /// </summary>
+    public static DistributionVectorConstantCurve DefaultObject => (DistributionVectorConstantCurve)StaticClass().DefaultObject;
+
     internal DistributionVectorConstantCurve() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RWeakIce : BmSDK.BmGame.RWeakIceBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeakIce.
+    /// </summary>
+    public static RWeakIce DefaultObject => (RWeakIce)StaticClass().DefaultObject;
+
     internal RWeakIce() { }
 
     /// <summary>

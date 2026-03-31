@@ -21,6 +21,11 @@ public partial class RRescuePointVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRescuePointVolume.
+    /// </summary>
+    public static RRescuePointVolume DefaultObject => (RRescuePointVolume)StaticClass().DefaultObject;
+
     internal RRescuePointVolume() { }
 
     /// <summary>

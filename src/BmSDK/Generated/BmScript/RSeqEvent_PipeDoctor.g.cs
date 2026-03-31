@@ -21,6 +21,11 @@ public partial class RSeqEvent_PipeDoctor : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PipeDoctor.
+    /// </summary>
+    public static RSeqEvent_PipeDoctor DefaultObject => (RSeqEvent_PipeDoctor)StaticClass().DefaultObject;
+
     internal RSeqEvent_PipeDoctor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_SaveSlotSelect.
+    /// </summary>
+    public static RGFxMovieUI_SaveSlotSelect DefaultObject => (RGFxMovieUI_SaveSlotSelect)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_SaveSlotSelect() { }
 
     /// <summary>

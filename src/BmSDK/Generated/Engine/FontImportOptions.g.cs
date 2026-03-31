@@ -21,6 +21,11 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FontImportOptions.
+    /// </summary>
+    public static FontImportOptions DefaultObject => (FontImportOptions)StaticClass().DefaultObject;
+
     internal FontImportOptions() { }
 
     /// <summary>

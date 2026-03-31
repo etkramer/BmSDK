@@ -21,6 +21,11 @@ public partial class RPawnVillainVenom : BmSDK.BmGame.RPawnVillain, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainVenom.
+    /// </summary>
+    public static RPawnVillainVenom DefaultObject => (RPawnVillainVenom)StaticClass().DefaultObject;
+
     internal RPawnVillainVenom() { }
 
     /// <summary>

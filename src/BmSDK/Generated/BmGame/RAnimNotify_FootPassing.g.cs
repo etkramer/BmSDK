@@ -21,6 +21,11 @@ public partial class RAnimNotify_FootPassing : BmSDK.Engine.AnimNotify, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_FootPassing.
+    /// </summary>
+    public static RAnimNotify_FootPassing DefaultObject => (RAnimNotify_FootPassing)StaticClass().DefaultObject;
+
     internal RAnimNotify_FootPassing() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCwBolas : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwBolas.
+    /// </summary>
+    public static RCwBolas DefaultObject => (RCwBolas)StaticClass().DefaultObject;
+
     internal RCwBolas() { }
 
     /// <summary>

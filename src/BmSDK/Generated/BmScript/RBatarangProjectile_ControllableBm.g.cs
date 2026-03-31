@@ -21,6 +21,11 @@ public partial class RBatarangProjectile_ControllableBm : BmSDK.BmGame.RBatarang
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangProjectile_ControllableBm.
+    /// </summary>
+    public static RBatarangProjectile_ControllableBm DefaultObject => (RBatarangProjectile_ControllableBm)StaticClass().DefaultObject;
+
     internal RBatarangProjectile_ControllableBm() { }
 
     /// <summary>

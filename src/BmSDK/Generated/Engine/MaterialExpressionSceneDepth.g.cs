@@ -21,6 +21,11 @@ public partial class MaterialExpressionSceneDepth : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSceneDepth.
+    /// </summary>
+    public static MaterialExpressionSceneDepth DefaultObject => (MaterialExpressionSceneDepth)StaticClass().DefaultObject;
+
     internal MaterialExpressionSceneDepth() { }
 
     /// <summary>

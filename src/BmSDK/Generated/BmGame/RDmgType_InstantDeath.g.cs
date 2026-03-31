@@ -21,6 +21,11 @@ public partial class RDmgType_InstantDeath : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_InstantDeath.
+    /// </summary>
+    public static RDmgType_InstantDeath DefaultObject => (RDmgType_InstantDeath)StaticClass().DefaultObject;
+
     internal RDmgType_InstantDeath() { }
 
     /// <summary>

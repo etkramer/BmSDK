@@ -21,6 +21,11 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Camera.
+    /// </summary>
+    public static RAnimNotify_Camera DefaultObject => (RAnimNotify_Camera)StaticClass().DefaultObject;
+
     internal RAnimNotify_Camera() { }
 
     /// <summary>

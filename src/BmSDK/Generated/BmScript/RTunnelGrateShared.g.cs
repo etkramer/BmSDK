@@ -21,6 +21,11 @@ public partial class RTunnelGrateShared : BmSDK.BmGame.RTunnelGrateBase, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelGrateShared.
+    /// </summary>
+    public static RTunnelGrateShared DefaultObject => (RTunnelGrateShared)StaticClass().DefaultObject;
+
     internal RTunnelGrateShared() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_RasCharge : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RasCharge.
+    /// </summary>
+    public static RDmgType_RasCharge DefaultObject => (RDmgType_RasCharge)StaticClass().DefaultObject;
+
     internal RDmgType_RasCharge() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RXRayViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXRayViewPostProcess.
+    /// </summary>
+    public static RXRayViewPostProcess DefaultObject => (RXRayViewPostProcess)StaticClass().DefaultObject;
+
     internal RXRayViewPostProcess() { }
 
     /// <summary>

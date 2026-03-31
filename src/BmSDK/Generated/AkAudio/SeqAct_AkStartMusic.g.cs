@@ -21,6 +21,11 @@ public partial class SeqAct_AkStartMusic : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkStartMusic.
+    /// </summary>
+    public static SeqAct_AkStartMusic DefaultObject => (SeqAct_AkStartMusic)StaticClass().DefaultObject;
+
     internal SeqAct_AkStartMusic() { }
 
     /// <summary>

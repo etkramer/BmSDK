@@ -21,6 +21,11 @@ public partial class RSeqEvent_EnteredCombat : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_EnteredCombat.
+    /// </summary>
+    public static RSeqEvent_EnteredCombat DefaultObject => (RSeqEvent_EnteredCombat)StaticClass().DefaultObject;
+
     internal RSeqEvent_EnteredCombat() { }
 
     /// <summary>

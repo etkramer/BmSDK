@@ -21,6 +21,11 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_TaliaWalkWithBats.
+    /// </summary>
+    public static RBMBehaviour_TaliaWalkWithBats DefaultObject => (RBMBehaviour_TaliaWalkWithBats)StaticClass().DefaultObject;
+
     internal RBMBehaviour_TaliaWalkWithBats() { }
 
     /// <summary>

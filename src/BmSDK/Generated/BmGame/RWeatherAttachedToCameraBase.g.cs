@@ -21,6 +21,11 @@ public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeatherAttachedToCameraBase.
+    /// </summary>
+    public static RWeatherAttachedToCameraBase DefaultObject => (RWeatherAttachedToCameraBase)StaticClass().DefaultObject;
+
     internal RWeatherAttachedToCameraBase() { }
 
     /// <summary>

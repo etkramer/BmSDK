@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatPipe : BmSDK.BmGame.RBMBehaviour_CombatA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatPipe.
+    /// </summary>
+    public static RBMBehaviour_CombatPipe DefaultObject => (RBMBehaviour_CombatPipe)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatPipe() { }
 
     /// <summary>

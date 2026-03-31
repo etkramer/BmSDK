@@ -21,6 +21,11 @@ public partial class RPathNode_DynamicFractureWall : BmSDK.BmGame.RPathNode, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPathNode_DynamicFractureWall.
+    /// </summary>
+    public static RPathNode_DynamicFractureWall DefaultObject => (RPathNode_DynamicFractureWall)StaticClass().DefaultObject;
+
     internal RPathNode_DynamicFractureWall() { }
 
     /// <summary>

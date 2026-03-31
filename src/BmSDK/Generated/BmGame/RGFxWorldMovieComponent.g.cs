@@ -21,6 +21,11 @@ public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxWorldMovieComponent.
+    /// </summary>
+    public static RGFxWorldMovieComponent DefaultObject => (RGFxWorldMovieComponent)StaticClass().DefaultObject;
+
     internal RGFxWorldMovieComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FreezeBlastHitClayDrone : BmSDK.BmGame.RBMBeha
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FreezeBlastHitClayDrone.
+    /// </summary>
+    public static RBMBehaviour_FreezeBlastHitClayDrone DefaultObject => (RBMBehaviour_FreezeBlastHitClayDrone)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FreezeBlastHitClayDrone() { }
 
     /// <summary>

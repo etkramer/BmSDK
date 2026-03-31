@@ -21,6 +21,11 @@ public partial class RSeqAct_SwitchPlayerCharacter : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SwitchPlayerCharacter.
+    /// </summary>
+    public static RSeqAct_SwitchPlayerCharacter DefaultObject => (RSeqAct_SwitchPlayerCharacter)StaticClass().DefaultObject;
+
     internal RSeqAct_SwitchPlayerCharacter() { }
 
     /// <summary>

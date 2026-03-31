@@ -21,6 +21,11 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_MeetingPoint.
+    /// </summary>
+    public static RAnimNotify_MeetingPoint DefaultObject => (RAnimNotify_MeetingPoint)StaticClass().DefaultObject;
+
     internal RAnimNotify_MeetingPoint() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RExplosiveGooMine : BmSDK.BmGame.RThugTrap, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExplosiveGooMine.
+    /// </summary>
+    public static RExplosiveGooMine DefaultObject => (RExplosiveGooMine)StaticClass().DefaultObject;
+
     internal RExplosiveGooMine() { }
 
     /// <summary>

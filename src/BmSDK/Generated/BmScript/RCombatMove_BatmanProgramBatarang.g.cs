@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanProgramBatarang.
+    /// </summary>
+    public static RCombatMove_BatmanProgramBatarang DefaultObject => (RCombatMove_BatmanProgramBatarang)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanProgramBatarang() { }
 
     /// <summary>

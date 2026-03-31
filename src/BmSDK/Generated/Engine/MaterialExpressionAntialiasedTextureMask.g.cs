@@ -21,6 +21,11 @@ public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.Mat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionAntialiasedTextureMask.
+    /// </summary>
+    public static MaterialExpressionAntialiasedTextureMask DefaultObject => (MaterialExpressionAntialiasedTextureMask)StaticClass().DefaultObject;
+
     internal MaterialExpressionAntialiasedTextureMask() { }
 
     /// <summary>

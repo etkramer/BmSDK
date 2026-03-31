@@ -21,6 +21,11 @@ public partial class ActorFactorySpotLight : BmSDK.Engine.ActorFactory, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactorySpotLight.
+    /// </summary>
+    public static ActorFactorySpotLight DefaultObject => (ActorFactorySpotLight)StaticClass().DefaultObject;
+
     internal ActorFactorySpotLight() { }
 
     /// <summary>

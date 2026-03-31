@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm.
+    /// </summary>
+    public static AnimationCompressionAlgorithm DefaultObject => (AnimationCompressionAlgorithm)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm() { }
 
     /// <summary>

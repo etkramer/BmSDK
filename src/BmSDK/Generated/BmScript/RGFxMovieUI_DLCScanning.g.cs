@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_DLCScanning.
+    /// </summary>
+    public static RGFxMovieUI_DLCScanning DefaultObject => (RGFxMovieUI_DLCScanning)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_DLCScanning() { }
 
     /// <summary>

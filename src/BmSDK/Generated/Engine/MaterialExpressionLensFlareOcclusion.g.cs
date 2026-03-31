@@ -21,6 +21,11 @@ public partial class MaterialExpressionLensFlareOcclusion : BmSDK.Engine.Materia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLensFlareOcclusion.
+    /// </summary>
+    public static MaterialExpressionLensFlareOcclusion DefaultObject => (MaterialExpressionLensFlareOcclusion)StaticClass().DefaultObject;
+
     internal MaterialExpressionLensFlareOcclusion() { }
 
     /// <summary>

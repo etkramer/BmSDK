@@ -21,6 +21,11 @@ public partial class RSeqVar_IdleConfigAim : BmSDK.Engine.SequenceVariable, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_IdleConfigAim.
+    /// </summary>
+    public static RSeqVar_IdleConfigAim DefaultObject => (RSeqVar_IdleConfigAim)StaticClass().DefaultObject;
+
     internal RSeqVar_IdleConfigAim() { }
 
     /// <summary>

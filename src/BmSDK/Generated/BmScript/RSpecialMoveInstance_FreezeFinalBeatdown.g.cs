@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_FreezeFinalBeatdown.
+    /// </summary>
+    public static RSpecialMoveInstance_FreezeFinalBeatdown DefaultObject => (RSpecialMoveInstance_FreezeFinalBeatdown)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_FreezeFinalBeatdown() { }
 
     /// <summary>

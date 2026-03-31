@@ -21,6 +21,11 @@ public partial class RBMExitCondition_Flag : BmSDK.BmGame.RBMExitCondition, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition_Flag.
+    /// </summary>
+    public static RBMExitCondition_Flag DefaultObject => (RBMExitCondition_Flag)StaticClass().DefaultObject;
+
     internal RBMExitCondition_Flag() { }
 
     /// <summary>

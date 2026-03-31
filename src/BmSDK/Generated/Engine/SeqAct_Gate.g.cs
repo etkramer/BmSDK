@@ -21,6 +21,11 @@ public partial class SeqAct_Gate : BmSDK.Engine.SequenceAction, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Gate.
+    /// </summary>
+    public static SeqAct_Gate DefaultObject => (SeqAct_Gate)StaticClass().DefaultObject;
+
     internal SeqAct_Gate() { }
 
     /// <summary>

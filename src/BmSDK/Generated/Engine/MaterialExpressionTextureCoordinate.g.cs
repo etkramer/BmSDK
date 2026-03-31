@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureCoordinate : BmSDK.Engine.Material
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureCoordinate.
+    /// </summary>
+    public static MaterialExpressionTextureCoordinate DefaultObject => (MaterialExpressionTextureCoordinate)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureCoordinate() { }
 
     /// <summary>

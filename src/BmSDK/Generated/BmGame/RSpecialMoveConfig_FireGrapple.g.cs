@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_FireGrapple : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_FireGrapple.
+    /// </summary>
+    public static RSpecialMoveConfig_FireGrapple DefaultObject => (RSpecialMoveConfig_FireGrapple)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_FireGrapple() { }
 
     /// <summary>

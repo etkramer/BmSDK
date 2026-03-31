@@ -21,6 +21,11 @@ public partial class RSeqAct_CatwomanJewellryTarget : BmSDK.Engine.SeqAct_Latent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CatwomanJewellryTarget.
+    /// </summary>
+    public static RSeqAct_CatwomanJewellryTarget DefaultObject => (RSeqAct_CatwomanJewellryTarget)StaticClass().DefaultObject;
+
     internal RSeqAct_CatwomanJewellryTarget() { }
 
     /// <summary>

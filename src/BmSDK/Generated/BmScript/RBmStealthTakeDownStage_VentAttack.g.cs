@@ -21,6 +21,11 @@ public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBmStealthTakeDownStage_VentAttack.
+    /// </summary>
+    public static RBmStealthTakeDownStage_VentAttack DefaultObject => (RBmStealthTakeDownStage_VentAttack)StaticClass().DefaultObject;
+
     internal RBmStealthTakeDownStage_VentAttack() { }
 
     /// <summary>

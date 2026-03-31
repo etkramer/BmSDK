@@ -21,6 +21,11 @@ public partial class RDmgType_HeavyObject : BmSDK.BmGame.RDamageType, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HeavyObject.
+    /// </summary>
+    public static RDmgType_HeavyObject DefaultObject => (RDmgType_HeavyObject)StaticClass().DefaultObject;
+
     internal RDmgType_HeavyObject() { }
 
     /// <summary>

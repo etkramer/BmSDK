@@ -21,6 +21,11 @@ public partial class MaterialExpressionMeshSubUVBlend : BmSDK.Engine.MaterialExp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMeshSubUVBlend.
+    /// </summary>
+    public static MaterialExpressionMeshSubUVBlend DefaultObject => (MaterialExpressionMeshSubUVBlend)StaticClass().DefaultObject;
+
     internal MaterialExpressionMeshSubUVBlend() { }
 
     /// <summary>

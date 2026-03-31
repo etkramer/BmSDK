@@ -21,6 +21,11 @@ public partial class ModelComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ModelComponent.
+    /// </summary>
+    public static ModelComponent DefaultObject => (ModelComponent)StaticClass().DefaultObject;
+
     internal ModelComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RTygerCameraControlBox : BmSDK.BmScript.RDisruptableControl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTygerCameraControlBox.
+    /// </summary>
+    public static RTygerCameraControlBox DefaultObject => (RTygerCameraControlBox)StaticClass().DefaultObject;
+
     internal RTygerCameraControlBox() { }
 
     /// <summary>

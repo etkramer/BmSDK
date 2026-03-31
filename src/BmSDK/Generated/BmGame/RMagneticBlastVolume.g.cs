@@ -21,6 +21,11 @@ public partial class RMagneticBlastVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticBlastVolume.
+    /// </summary>
+    public static RMagneticBlastVolume DefaultObject => (RMagneticBlastVolume)StaticClass().DefaultObject;
+
     internal RMagneticBlastVolume() { }
 
     /// <summary>

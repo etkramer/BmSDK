@@ -21,6 +21,11 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossVenomHenchmen.
+    /// </summary>
+    public static RPawnBossVenomHenchmen DefaultObject => (RPawnBossVenomHenchmen)StaticClass().DefaultObject;
+
     internal RPawnBossVenomHenchmen() { }
 
     /// <summary>

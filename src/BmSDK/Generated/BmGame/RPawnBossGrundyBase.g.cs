@@ -21,6 +21,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossGrundyBase.
+    /// </summary>
+    public static RPawnBossGrundyBase DefaultObject => (RPawnBossGrundyBase)StaticClass().DefaultObject;
+
     internal RPawnBossGrundyBase() { }
 
     /// <summary>

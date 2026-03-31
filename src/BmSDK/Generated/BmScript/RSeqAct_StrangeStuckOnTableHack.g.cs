@@ -21,6 +21,11 @@ public partial class RSeqAct_StrangeStuckOnTableHack : BmSDK.Engine.SeqAct_Laten
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StrangeStuckOnTableHack.
+    /// </summary>
+    public static RSeqAct_StrangeStuckOnTableHack DefaultObject => (RSeqAct_StrangeStuckOnTableHack)StaticClass().DefaultObject;
+
     internal RSeqAct_StrangeStuckOnTableHack() { }
 
     /// <summary>

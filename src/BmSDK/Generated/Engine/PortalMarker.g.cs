@@ -21,6 +21,11 @@ public partial class PortalMarker : BmSDK.Engine.NavigationPoint, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PortalMarker.
+    /// </summary>
+    public static PortalMarker DefaultObject => (PortalMarker)StaticClass().DefaultObject;
+
     internal PortalMarker() { }
 
     /// <summary>

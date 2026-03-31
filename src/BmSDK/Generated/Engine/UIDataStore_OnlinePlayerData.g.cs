@@ -21,6 +21,11 @@ public partial class UIDataStore_OnlinePlayerData : BmSDK.Engine.UIDataStore_Rem
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_OnlinePlayerData.
+    /// </summary>
+    public static UIDataStore_OnlinePlayerData DefaultObject => (UIDataStore_OnlinePlayerData)StaticClass().DefaultObject;
+
     internal UIDataStore_OnlinePlayerData() { }
 
     /// <summary>

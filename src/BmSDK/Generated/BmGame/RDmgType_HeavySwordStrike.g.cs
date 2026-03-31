@@ -21,6 +21,11 @@ public partial class RDmgType_HeavySwordStrike : BmSDK.BmGame.RDmgType_HeavyStri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HeavySwordStrike.
+    /// </summary>
+    public static RDmgType_HeavySwordStrike DefaultObject => (RDmgType_HeavySwordStrike)StaticClass().DefaultObject;
+
     internal RDmgType_HeavySwordStrike() { }
 
     /// <summary>

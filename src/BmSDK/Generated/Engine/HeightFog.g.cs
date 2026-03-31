@@ -21,6 +21,11 @@ public partial class HeightFog : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HeightFog.
+    /// </summary>
+    public static HeightFog DefaultObject => (HeightFog)StaticClass().DefaultObject;
+
     internal HeightFog() { }
 
     /// <summary>

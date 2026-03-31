@@ -21,6 +21,11 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDynamicMenu.
+    /// </summary>
+    public static RDynamicMenu DefaultObject => (RDynamicMenu)StaticClass().DefaultObject;
+
     internal RDynamicMenu() { }
 
     /// <summary>

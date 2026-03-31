@@ -21,6 +21,11 @@ public partial class RCharacter_PDLC_HarleyThug2_Head2 : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PDLC_HarleyThug2_Head2.
+    /// </summary>
+    public static RCharacter_PDLC_HarleyThug2_Head2 DefaultObject => (RCharacter_PDLC_HarleyThug2_Head2)StaticClass().DefaultObject;
+
     internal RCharacter_PDLC_HarleyThug2_Head2() { }
 
     /// <summary>

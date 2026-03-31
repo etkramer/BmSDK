@@ -21,6 +21,11 @@ public partial class RLevelTransitionManHoleCover : BmSDK.BmGame.RLevelTransitio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionManHoleCover.
+    /// </summary>
+    public static RLevelTransitionManHoleCover DefaultObject => (RLevelTransitionManHoleCover)StaticClass().DefaultObject;
+
     internal RLevelTransitionManHoleCover() { }
 
     /// <summary>

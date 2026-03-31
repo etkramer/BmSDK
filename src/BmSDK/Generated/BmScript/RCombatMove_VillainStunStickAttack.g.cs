@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainStunStickAttack : BmSDK.BmGame.RCombatMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainStunStickAttack.
+    /// </summary>
+    public static RCombatMove_VillainStunStickAttack DefaultObject => (RCombatMove_VillainStunStickAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainStunStickAttack() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPhysicalMaterialTexture : BmSDK.GameObject, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysicalMaterialTexture.
+    /// </summary>
+    public static RPhysicalMaterialTexture DefaultObject => (RPhysicalMaterialTexture)StaticClass().DefaultObject;
+
     internal RPhysicalMaterialTexture() { }
 
     /// <summary>

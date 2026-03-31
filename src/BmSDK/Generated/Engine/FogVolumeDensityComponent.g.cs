@@ -21,6 +21,11 @@ public partial class FogVolumeDensityComponent : BmSDK.Engine.ActorComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FogVolumeDensityComponent.
+    /// </summary>
+    public static FogVolumeDensityComponent DefaultObject => (FogVolumeDensityComponent)StaticClass().DefaultObject;
+
     internal FogVolumeDensityComponent() { }
 
     /// <summary>

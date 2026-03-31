@@ -21,6 +21,11 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionObjectiveTracking.
+    /// </summary>
+    public static RHudExtensionObjectiveTracking DefaultObject => (RHudExtensionObjectiveTracking)StaticClass().DefaultObject;
+
     internal RHudExtensionObjectiveTracking() { }
 
     /// <summary>

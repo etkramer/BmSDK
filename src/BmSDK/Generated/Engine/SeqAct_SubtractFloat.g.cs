@@ -21,6 +21,11 @@ public partial class SeqAct_SubtractFloat : BmSDK.Engine.SeqAct_SetSequenceVaria
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SubtractFloat.
+    /// </summary>
+    public static SeqAct_SubtractFloat DefaultObject => (SeqAct_SubtractFloat)StaticClass().DefaultObject;
+
     internal SeqAct_SubtractFloat() { }
 
     /// <summary>

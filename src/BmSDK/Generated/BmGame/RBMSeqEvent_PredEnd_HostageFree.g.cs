@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_PredEnd_HostageFree : BmSDK.BmGame.RBMSeqEvent_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_PredEnd_HostageFree.
+    /// </summary>
+    public static RBMSeqEvent_PredEnd_HostageFree DefaultObject => (RBMSeqEvent_PredEnd_HostageFree)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_PredEnd_HostageFree() { }
 
     /// <summary>

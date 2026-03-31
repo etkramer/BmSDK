@@ -21,6 +21,11 @@ public partial class SeqAct_ControlMovieTexture : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ControlMovieTexture.
+    /// </summary>
+    public static SeqAct_ControlMovieTexture DefaultObject => (SeqAct_ControlMovieTexture)StaticClass().DefaultObject;
+
     internal SeqAct_ControlMovieTexture() { }
 
     /// <summary>

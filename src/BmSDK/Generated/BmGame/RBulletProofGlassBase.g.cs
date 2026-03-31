@@ -21,6 +21,11 @@ public partial class RBulletProofGlassBase : BmSDK.Engine.StaticMeshActor, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBulletProofGlassBase.
+    /// </summary>
+    public static RBulletProofGlassBase DefaultObject => (RBulletProofGlassBase)StaticClass().DefaultObject;
+
     internal RBulletProofGlassBase() { }
 
     /// <summary>

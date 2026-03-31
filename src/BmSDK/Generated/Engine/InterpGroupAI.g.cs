@@ -21,6 +21,11 @@ public partial class InterpGroupAI : BmSDK.Engine.InterpGroup, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpGroupAI.
+    /// </summary>
+    public static InterpGroupAI DefaultObject => (InterpGroupAI)StaticClass().DefaultObject;
+
     internal InterpGroupAI() { }
 
     /// <summary>

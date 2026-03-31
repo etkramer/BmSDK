@@ -21,6 +21,11 @@ public partial class RSeqAct_BeatDownObject : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BeatDownObject.
+    /// </summary>
+    public static RSeqAct_BeatDownObject DefaultObject => (RSeqAct_BeatDownObject)StaticClass().DefaultObject;
+
     internal RSeqAct_BeatDownObject() { }
 
     /// <summary>

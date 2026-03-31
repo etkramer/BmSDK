@@ -21,6 +21,11 @@ public partial class RSeqAct_MakeFractureWallGlass : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MakeFractureWallGlass.
+    /// </summary>
+    public static RSeqAct_MakeFractureWallGlass DefaultObject => (RSeqAct_MakeFractureWallGlass)StaticClass().DefaultObject;
+
     internal RSeqAct_MakeFractureWallGlass() { }
 
     /// <summary>

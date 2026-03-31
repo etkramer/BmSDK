@@ -21,6 +21,11 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WorldInfo.
+    /// </summary>
+    public static WorldInfo DefaultObject => (WorldInfo)StaticClass().DefaultObject;
+
     internal WorldInfo() { }
 
     /// <summary>

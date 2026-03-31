@@ -21,6 +21,11 @@ public partial class RSticksGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSticksGadgetBase.
+    /// </summary>
+    public static RSticksGadgetBase DefaultObject => (RSticksGadgetBase)StaticClass().DefaultObject;
+
     internal RSticksGadgetBase() { }
 
     /// <summary>

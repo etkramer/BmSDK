@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BlackMaskPred.
+    /// </summary>
+    public static RBMBehaviour_BlackMaskPred DefaultObject => (RBMBehaviour_BlackMaskPred)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BlackMaskPred() { }
 
     /// <summary>

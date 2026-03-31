@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanStunStrike : BmSDK.BmGame.RCombatMove_Bat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanStunStrike.
+    /// </summary>
+    public static RCombatMove_BatmanStunStrike DefaultObject => (RCombatMove_BatmanStunStrike)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanStunStrike() { }
 
     /// <summary>

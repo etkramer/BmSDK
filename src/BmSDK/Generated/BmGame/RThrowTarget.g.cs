@@ -21,6 +21,11 @@ public partial class RThrowTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThrowTarget.
+    /// </summary>
+    public static RThrowTarget DefaultObject => (RThrowTarget)StaticClass().DefaultObject;
+
     internal RThrowTarget() { }
 
     /// <summary>

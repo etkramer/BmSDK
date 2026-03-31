@@ -21,6 +21,11 @@ public partial class RDmgType_ZipKick : BmSDK.BmGame.RDamageType, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ZipKick.
+    /// </summary>
+    public static RDmgType_ZipKick DefaultObject => (RDmgType_ZipKick)StaticClass().DefaultObject;
+
     internal RDmgType_ZipKick() { }
 
     /// <summary>

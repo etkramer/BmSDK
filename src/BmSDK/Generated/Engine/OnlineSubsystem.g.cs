@@ -21,6 +21,11 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineSubsystem.
+    /// </summary>
+    public static OnlineSubsystem DefaultObject => (OnlineSubsystem)StaticClass().DefaultObject;
+
     internal OnlineSubsystem() { }
 
     /// <summary>

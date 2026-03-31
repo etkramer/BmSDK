@@ -21,6 +21,11 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_ClayfaceDroneHug.
+    /// </summary>
+    public static RCombatMove_ClayfaceDroneHug DefaultObject => (RCombatMove_ClayfaceDroneHug)StaticClass().DefaultObject;
+
     internal RCombatMove_ClayfaceDroneHug() { }
 
     /// <summary>

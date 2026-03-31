@@ -21,6 +21,11 @@ public partial class SeqAct_ModifyObjectList : BmSDK.Engine.SeqAct_SetSequenceVa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ModifyObjectList.
+    /// </summary>
+    public static SeqAct_ModifyObjectList DefaultObject => (SeqAct_ModifyObjectList)StaticClass().DefaultObject;
+
     internal SeqAct_ModifyObjectList() { }
 
     /// <summary>

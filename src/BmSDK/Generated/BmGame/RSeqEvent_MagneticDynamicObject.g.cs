@@ -21,6 +21,11 @@ public partial class RSeqEvent_MagneticDynamicObject : BmSDK.Engine.SequenceEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MagneticDynamicObject.
+    /// </summary>
+    public static RSeqEvent_MagneticDynamicObject DefaultObject => (RSeqEvent_MagneticDynamicObject)StaticClass().DefaultObject;
+
     internal RSeqEvent_MagneticDynamicObject() { }
 
     /// <summary>

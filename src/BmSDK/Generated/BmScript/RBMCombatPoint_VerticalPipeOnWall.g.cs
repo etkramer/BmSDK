@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_VerticalPipeOnWall.
+    /// </summary>
+    public static RBMCombatPoint_VerticalPipeOnWall DefaultObject => (RBMCombatPoint_VerticalPipeOnWall)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_VerticalPipeOnWall() { }
 
     /// <summary>

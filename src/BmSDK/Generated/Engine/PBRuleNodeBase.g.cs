@@ -21,6 +21,11 @@ public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PBRuleNodeBase.
+    /// </summary>
+    public static PBRuleNodeBase DefaultObject => (PBRuleNodeBase)StaticClass().DefaultObject;
+
     internal PBRuleNodeBase() { }
 
     /// <summary>

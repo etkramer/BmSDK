@@ -21,6 +21,11 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioPoint.
+    /// </summary>
+    public static RAudioPoint DefaultObject => (RAudioPoint)StaticClass().DefaultObject;
+
     internal RAudioPoint() { }
 
     /// <summary>

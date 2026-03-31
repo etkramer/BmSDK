@@ -21,6 +21,11 @@ public partial class RBMAIAction_ThermalSmokePerim : BmSDK.BmGame.RBMAIAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ThermalSmokePerim.
+    /// </summary>
+    public static RBMAIAction_ThermalSmokePerim DefaultObject => (RBMAIAction_ThermalSmokePerim)StaticClass().DefaultObject;
+
     internal RBMAIAction_ThermalSmokePerim() { }
 
     /// <summary>

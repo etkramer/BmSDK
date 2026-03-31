@@ -21,6 +21,11 @@ public partial class PlayerManagerInteraction : BmSDK.Engine.Interaction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PlayerManagerInteraction.
+    /// </summary>
+    public static PlayerManagerInteraction DefaultObject => (PlayerManagerInteraction)StaticClass().DefaultObject;
+
     internal PlayerManagerInteraction() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_RasSword : BmSDK.BmGame.RBMCombatThro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_RasSword.
+    /// </summary>
+    public static RBMCombatThrownObject_RasSword DefaultObject => (RBMCombatThrownObject_RasSword)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_RasSword() { }
 
     /// <summary>

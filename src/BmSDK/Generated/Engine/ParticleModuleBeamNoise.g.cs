@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamNoise.
+    /// </summary>
+    public static ParticleModuleBeamNoise DefaultObject => (ParticleModuleBeamNoise)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamNoise() { }
 
     /// <summary>

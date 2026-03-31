@@ -21,6 +21,11 @@ public partial class ParticleModuleKillBase : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleKillBase.
+    /// </summary>
+    public static ParticleModuleKillBase DefaultObject => (ParticleModuleKillBase)StaticClass().DefaultObject;
+
     internal ParticleModuleKillBase() { }
 
     /// <summary>

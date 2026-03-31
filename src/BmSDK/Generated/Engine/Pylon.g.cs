@@ -21,6 +21,11 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Pylon.
+    /// </summary>
+    public static Pylon DefaultObject => (Pylon)StaticClass().DefaultObject;
+
     internal Pylon() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarang_MultiTarget.
+    /// </summary>
+    public static RBatarang_MultiTarget DefaultObject => (RBatarang_MultiTarget)StaticClass().DefaultObject;
+
     internal RBatarang_MultiTarget() { }
 
     /// <summary>

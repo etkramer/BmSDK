@@ -21,6 +21,11 @@ public partial class ROnlineStatsRead : BmSDK.Engine.OnlineStatsRead, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROnlineStatsRead.
+    /// </summary>
+    public static ROnlineStatsRead DefaultObject => (ROnlineStatsRead)StaticClass().DefaultObject;
+
     internal ROnlineStatsRead() { }
 
     /// <summary>

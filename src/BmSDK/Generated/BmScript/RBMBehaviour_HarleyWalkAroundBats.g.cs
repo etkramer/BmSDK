@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HarleyWalkAroundBats.
+    /// </summary>
+    public static RBMBehaviour_HarleyWalkAroundBats DefaultObject => (RBMBehaviour_HarleyWalkAroundBats)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HarleyWalkAroundBats() { }
 
     /// <summary>

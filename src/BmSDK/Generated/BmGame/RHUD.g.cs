@@ -21,6 +21,11 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHUD.
+    /// </summary>
+    public static RHUD DefaultObject => (RHUD)StaticClass().DefaultObject;
+
     internal RHUD() { }
 
     /// <summary>

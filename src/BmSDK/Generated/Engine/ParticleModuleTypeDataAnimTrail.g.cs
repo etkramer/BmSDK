@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataAnimTrail : BmSDK.Engine.ParticleModu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataAnimTrail.
+    /// </summary>
+    public static ParticleModuleTypeDataAnimTrail DefaultObject => (ParticleModuleTypeDataAnimTrail)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataAnimTrail() { }
 
     /// <summary>

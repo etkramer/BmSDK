@@ -21,6 +21,11 @@ public partial class RShieldAttackVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShieldAttackVolume.
+    /// </summary>
+    public static RShieldAttackVolume DefaultObject => (RShieldAttackVolume)StaticClass().DefaultObject;
+
     internal RShieldAttackVolume() { }
 
     /// <summary>

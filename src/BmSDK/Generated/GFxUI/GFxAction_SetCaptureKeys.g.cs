@@ -21,6 +21,11 @@ public partial class GFxAction_SetCaptureKeys : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxAction_SetCaptureKeys.
+    /// </summary>
+    public static GFxAction_SetCaptureKeys DefaultObject => (GFxAction_SetCaptureKeys)StaticClass().DefaultObject;
+
     internal GFxAction_SetCaptureKeys() { }
 
     /// <summary>

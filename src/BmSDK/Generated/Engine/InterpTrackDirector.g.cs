@@ -21,6 +21,11 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackDirector.
+    /// </summary>
+    public static InterpTrackDirector DefaultObject => (InterpTrackDirector)StaticClass().DefaultObject;
+
     internal InterpTrackDirector() { }
 
     /// <summary>

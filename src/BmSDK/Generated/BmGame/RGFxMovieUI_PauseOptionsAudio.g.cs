@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_PauseOptionsAudio.
+    /// </summary>
+    public static RGFxMovieUI_PauseOptionsAudio DefaultObject => (RGFxMovieUI_PauseOptionsAudio)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_PauseOptionsAudio() { }
 
     /// <summary>

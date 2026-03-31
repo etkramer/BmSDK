@@ -21,6 +21,11 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLadder.
+    /// </summary>
+    public static RLadder DefaultObject => (RLadder)StaticClass().DefaultObject;
+
     internal RLadder() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_LinkCinematicProxyToInGameActor : BmSDK.Engine.SeqA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LinkCinematicProxyToInGameActor.
+    /// </summary>
+    public static RSeqAct_LinkCinematicProxyToInGameActor DefaultObject => (RSeqAct_LinkCinematicProxyToInGameActor)StaticClass().DefaultObject;
+
     internal RSeqAct_LinkCinematicProxyToInGameActor() { }
 
     /// <summary>

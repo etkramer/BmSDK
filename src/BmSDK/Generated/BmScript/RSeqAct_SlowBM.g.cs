@@ -21,6 +21,11 @@ public partial class RSeqAct_SlowBM : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SlowBM.
+    /// </summary>
+    public static RSeqAct_SlowBM DefaultObject => (RSeqAct_SlowBM)StaticClass().DefaultObject;
+
     internal RSeqAct_SlowBM() { }
 
     /// <summary>

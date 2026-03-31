@@ -21,6 +21,11 @@ public partial class SpeedTree : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpeedTree.
+    /// </summary>
+    public static SpeedTree DefaultObject => (SpeedTree)StaticClass().DefaultObject;
+
     internal SpeedTree() { }
 
     /// <summary>

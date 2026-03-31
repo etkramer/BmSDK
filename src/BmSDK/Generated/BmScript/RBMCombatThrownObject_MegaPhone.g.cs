@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_MegaPhone : BmSDK.BmGame.RBMCombatThr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_MegaPhone.
+    /// </summary>
+    public static RBMCombatThrownObject_MegaPhone DefaultObject => (RBMCombatThrownObject_MegaPhone)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_MegaPhone() { }
 
     /// <summary>

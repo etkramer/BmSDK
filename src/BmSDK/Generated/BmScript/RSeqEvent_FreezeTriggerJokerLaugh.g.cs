@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeTriggerJokerLaugh : BmSDK.Engine.SequenceEv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeTriggerJokerLaugh.
+    /// </summary>
+    public static RSeqEvent_FreezeTriggerJokerLaugh DefaultObject => (RSeqEvent_FreezeTriggerJokerLaugh)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeTriggerJokerLaugh() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTurret.
+    /// </summary>
+    public static RTurret DefaultObject => (RTurret)StaticClass().DefaultObject;
+
     internal RTurret() { }
 
     /// <summary>

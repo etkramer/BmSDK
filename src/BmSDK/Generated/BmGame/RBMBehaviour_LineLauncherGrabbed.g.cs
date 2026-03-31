@@ -21,6 +21,11 @@ public partial class RBMBehaviour_LineLauncherGrabbed : BmSDK.BmGame.RBMBehaviou
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_LineLauncherGrabbed.
+    /// </summary>
+    public static RBMBehaviour_LineLauncherGrabbed DefaultObject => (RBMBehaviour_LineLauncherGrabbed)StaticClass().DefaultObject;
+
     internal RBMBehaviour_LineLauncherGrabbed() { }
 
     /// <summary>

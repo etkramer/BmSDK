@@ -21,6 +21,11 @@ public partial class RDmgType_DebugKill : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_DebugKill.
+    /// </summary>
+    public static RDmgType_DebugKill DefaultObject => (RDmgType_DebugKill)StaticClass().DefaultObject;
+
     internal RDmgType_DebugKill() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnBossPenguin : BmSDK.BmGame.RPawnBossPenguinBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossPenguin.
+    /// </summary>
+    public static RPawnBossPenguin DefaultObject => (RPawnBossPenguin)StaticClass().DefaultObject;
+
     internal RPawnBossPenguin() { }
 
     /// <summary>

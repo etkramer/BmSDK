@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanGroupStun.
+    /// </summary>
+    public static RCombatMove_BatmanGroupStun DefaultObject => (RCombatMove_BatmanGroupStun)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanGroupStun() { }
 
     /// <summary>

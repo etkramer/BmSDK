@@ -21,6 +21,11 @@ public partial class RSeqVar_GlobalFlag : BmSDK.Engine.SeqVar_Bool, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_GlobalFlag.
+    /// </summary>
+    public static RSeqVar_GlobalFlag DefaultObject => (RSeqVar_GlobalFlag)StaticClass().DefaultObject;
+
     internal RSeqVar_GlobalFlag() { }
 
     /// <summary>

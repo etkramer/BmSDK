@@ -21,6 +21,11 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSceneTexture.
+    /// </summary>
+    public static MaterialExpressionSceneTexture DefaultObject => (MaterialExpressionSceneTexture)StaticClass().DefaultObject;
+
     internal MaterialExpressionSceneTexture() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAttackEdgeSearch.
+    /// </summary>
+    public static RAttackEdgeSearch DefaultObject => (RAttackEdgeSearch)StaticClass().DefaultObject;
+
     internal RAttackEdgeSearch() { }
 
     /// <summary>

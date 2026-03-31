@@ -21,6 +21,11 @@ public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_MuseumBooth.
+    /// </summary>
+    public static RAEC_MuseumBooth DefaultObject => (RAEC_MuseumBooth)StaticClass().DefaultObject;
+
     internal RAEC_MuseumBooth() { }
 
     /// <summary>

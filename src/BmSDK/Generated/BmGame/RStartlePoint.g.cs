@@ -21,6 +21,11 @@ public partial class RStartlePoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStartlePoint.
+    /// </summary>
+    public static RStartlePoint DefaultObject => (RStartlePoint)StaticClass().DefaultObject;
+
     internal RStartlePoint() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCwCaltropsTrap : BmSDK.BmGame.RCwCaltropsTrapBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwCaltropsTrap.
+    /// </summary>
+    public static RCwCaltropsTrap DefaultObject => (RCwCaltropsTrap)StaticClass().DefaultObject;
+
     internal RCwCaltropsTrap() { }
 
     /// <summary>

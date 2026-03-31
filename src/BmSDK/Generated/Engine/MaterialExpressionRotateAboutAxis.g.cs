@@ -21,6 +21,11 @@ public partial class MaterialExpressionRotateAboutAxis : BmSDK.Engine.MaterialEx
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionRotateAboutAxis.
+    /// </summary>
+    public static MaterialExpressionRotateAboutAxis DefaultObject => (MaterialExpressionRotateAboutAxis)StaticClass().DefaultObject;
+
     internal MaterialExpressionRotateAboutAxis() { }
 
     /// <summary>

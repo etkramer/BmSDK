@@ -21,6 +21,11 @@ public partial class ProscribedReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ProscribedReachSpec.
+    /// </summary>
+    public static ProscribedReachSpec DefaultObject => (ProscribedReachSpec)StaticClass().DefaultObject;
+
     internal ProscribedReachSpec() { }
 
     /// <summary>

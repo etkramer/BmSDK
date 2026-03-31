@@ -21,6 +21,11 @@ public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentSpecialMoveWrapper.
+    /// </summary>
+    public static REnvironmentSpecialMoveWrapper DefaultObject => (REnvironmentSpecialMoveWrapper)StaticClass().DefaultObject;
+
     internal REnvironmentSpecialMoveWrapper() { }
 
     /// <summary>

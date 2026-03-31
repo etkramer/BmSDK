@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_VaseOnPlinth : BmSDK.BmGame.RBMCombatPoint_E
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_VaseOnPlinth.
+    /// </summary>
+    public static RBMCombatPoint_VaseOnPlinth DefaultObject => (RBMCombatPoint_VaseOnPlinth)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_VaseOnPlinth() { }
 
     /// <summary>

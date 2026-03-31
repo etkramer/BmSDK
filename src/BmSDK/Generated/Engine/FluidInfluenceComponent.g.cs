@@ -21,6 +21,11 @@ public partial class FluidInfluenceComponent : BmSDK.Engine.PrimitiveComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FluidInfluenceComponent.
+    /// </summary>
+    public static FluidInfluenceComponent DefaultObject => (FluidInfluenceComponent)StaticClass().DefaultObject;
+
     internal FluidInfluenceComponent() { }
 
     /// <summary>

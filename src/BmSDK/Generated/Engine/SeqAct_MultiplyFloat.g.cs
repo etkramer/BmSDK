@@ -21,6 +21,11 @@ public partial class SeqAct_MultiplyFloat : BmSDK.Engine.SeqAct_SetSequenceVaria
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_MultiplyFloat.
+    /// </summary>
+    public static SeqAct_MultiplyFloat DefaultObject => (SeqAct_MultiplyFloat)StaticClass().DefaultObject;
+
     internal SeqAct_MultiplyFloat() { }
 
     /// <summary>

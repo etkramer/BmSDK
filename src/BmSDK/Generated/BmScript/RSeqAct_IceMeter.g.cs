@@ -21,6 +21,11 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IceMeter.
+    /// </summary>
+    public static RSeqAct_IceMeter DefaultObject => (RSeqAct_IceMeter)StaticClass().DefaultObject;
+
     internal RSeqAct_IceMeter() { }
 
     /// <summary>

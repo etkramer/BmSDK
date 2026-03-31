@@ -21,6 +21,11 @@ public partial class RBMAIAction_WeaponSwitch : BmSDK.BmGame.RBMAIAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_WeaponSwitch.
+    /// </summary>
+    public static RBMAIAction_WeaponSwitch DefaultObject => (RBMAIAction_WeaponSwitch)StaticClass().DefaultObject;
+
     internal RBMAIAction_WeaponSwitch() { }
 
     /// <summary>

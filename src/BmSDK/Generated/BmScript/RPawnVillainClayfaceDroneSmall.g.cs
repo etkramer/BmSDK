@@ -21,6 +21,11 @@ public partial class RPawnVillainClayfaceDroneSmall : BmSDK.BmScript.RPawnVillai
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainClayfaceDroneSmall.
+    /// </summary>
+    public static RPawnVillainClayfaceDroneSmall DefaultObject => (RPawnVillainClayfaceDroneSmall)StaticClass().DefaultObject;
+
     internal RPawnVillainClayfaceDroneSmall() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_TygerSurroundBM.
+    /// </summary>
+    public static RBMBehaviour_TygerSurroundBM DefaultObject => (RBMBehaviour_TygerSurroundBM)StaticClass().DefaultObject;
+
     internal RBMBehaviour_TygerSurroundBM() { }
 
     /// <summary>

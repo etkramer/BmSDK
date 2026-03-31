@@ -21,6 +21,11 @@ public partial class SeqAct_ModifyHealth : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ModifyHealth.
+    /// </summary>
+    public static SeqAct_ModifyHealth DefaultObject => (SeqAct_ModifyHealth)StaticClass().DefaultObject;
+
     internal SeqAct_ModifyHealth() { }
 
     /// <summary>

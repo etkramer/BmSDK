@@ -21,6 +21,11 @@ public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAimingBoneConfig.
+    /// </summary>
+    public static RAimingBoneConfig DefaultObject => (RAimingBoneConfig)StaticClass().DefaultObject;
+
     internal RAimingBoneConfig() { }
 
     /// <summary>

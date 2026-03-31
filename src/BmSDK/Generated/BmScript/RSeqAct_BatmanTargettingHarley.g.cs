@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanTargettingHarley : BmSDK.Engine.SeqAct_Latent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanTargettingHarley.
+    /// </summary>
+    public static RSeqAct_BatmanTargettingHarley DefaultObject => (RSeqAct_BatmanTargettingHarley)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanTargettingHarley() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InfiniteCombatSpawner.
+    /// </summary>
+    public static RSeqAct_InfiniteCombatSpawner DefaultObject => (RSeqAct_InfiniteCombatSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_InfiniteCombatSpawner() { }
 
     /// <summary>

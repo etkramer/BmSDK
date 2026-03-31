@@ -21,6 +21,11 @@ public partial class InterpTrackColorScale : BmSDK.Engine.InterpTrackVectorBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackColorScale.
+    /// </summary>
+    public static InterpTrackColorScale DefaultObject => (InterpTrackColorScale)StaticClass().DefaultObject;
+
     internal InterpTrackColorScale() { }
 
     /// <summary>

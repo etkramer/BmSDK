@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainMultiAttackAndCounter.
+    /// </summary>
+    public static RCombatMove_VillainMultiAttackAndCounter DefaultObject => (RCombatMove_VillainMultiAttackAndCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainMultiAttackAndCounter() { }
 
     /// <summary>

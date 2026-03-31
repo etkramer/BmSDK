@@ -21,6 +21,11 @@ public partial class RDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDamageType.
+    /// </summary>
+    public static RDamageType DefaultObject => (RDamageType)StaticClass().DefaultObject;
+
     internal RDamageType() { }
 
     /// <summary>

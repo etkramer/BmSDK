@@ -21,6 +21,11 @@ public partial class RAggGeomCollisionComponent : BmSDK.Engine.PrimitiveComponen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAggGeomCollisionComponent.
+    /// </summary>
+    public static RAggGeomCollisionComponent DefaultObject => (RAggGeomCollisionComponent)StaticClass().DefaultObject;
+
     internal RAggGeomCollisionComponent() { }
 
     /// <summary>

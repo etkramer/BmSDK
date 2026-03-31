@@ -21,6 +21,11 @@ public partial class RSeqEvent_TrainSpawnerEvents : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TrainSpawnerEvents.
+    /// </summary>
+    public static RSeqEvent_TrainSpawnerEvents DefaultObject => (RSeqEvent_TrainSpawnerEvents)StaticClass().DefaultObject;
+
     internal RSeqEvent_TrainSpawnerEvents() { }
 
     /// <summary>

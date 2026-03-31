@@ -21,6 +21,11 @@ public partial class MaterialExpressionConstantBiasScale : BmSDK.Engine.Material
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionConstantBiasScale.
+    /// </summary>
+    public static MaterialExpressionConstantBiasScale DefaultObject => (MaterialExpressionConstantBiasScale)StaticClass().DefaultObject;
+
     internal MaterialExpressionConstantBiasScale() { }
 
     /// <summary>

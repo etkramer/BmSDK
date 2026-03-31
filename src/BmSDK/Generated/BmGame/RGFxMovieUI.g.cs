@@ -21,6 +21,11 @@ public partial class RGFxMovieUI : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI.
+    /// </summary>
+    public static RGFxMovieUI DefaultObject => (RGFxMovieUI)StaticClass().DefaultObject;
+
     internal RGFxMovieUI() { }
 
     /// <summary>

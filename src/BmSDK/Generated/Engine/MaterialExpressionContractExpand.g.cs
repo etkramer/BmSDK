@@ -21,6 +21,11 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionContractExpand.
+    /// </summary>
+    public static MaterialExpressionContractExpand DefaultObject => (MaterialExpressionContractExpand)StaticClass().DefaultObject;
+
     internal MaterialExpressionContractExpand() { }
 
     /// <summary>

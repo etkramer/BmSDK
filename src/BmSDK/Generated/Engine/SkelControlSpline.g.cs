@@ -21,6 +21,11 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlSpline.
+    /// </summary>
+    public static SkelControlSpline DefaultObject => (SkelControlSpline)StaticClass().DefaultObject;
+
     internal SkelControlSpline() { }
 
     /// <summary>

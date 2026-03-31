@@ -21,6 +21,11 @@ public partial class RLevelTransitionDoubleDoors : BmSDK.BmGame.RLevelTransition
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionDoubleDoors.
+    /// </summary>
+    public static RLevelTransitionDoubleDoors DefaultObject => (RLevelTransitionDoubleDoors)StaticClass().DefaultObject;
+
     internal RLevelTransitionDoubleDoors() { }
 
     /// <summary>

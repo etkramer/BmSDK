@@ -21,6 +21,11 @@ public partial class RCinematicHugoStrange : BmSDK.BmGame.RCinematicActor, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicHugoStrange.
+    /// </summary>
+    public static RCinematicHugoStrange DefaultObject => (RCinematicHugoStrange)StaticClass().DefaultObject;
+
     internal RCinematicHugoStrange() { }
 
     /// <summary>

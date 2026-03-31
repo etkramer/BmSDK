@@ -21,6 +21,11 @@ public partial class RDmgType_ElectroBlastWeak : BmSDK.BmGame.RDamageType, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ElectroBlastWeak.
+    /// </summary>
+    public static RDmgType_ElectroBlastWeak DefaultObject => (RDmgType_ElectroBlastWeak)StaticClass().DefaultObject;
+
     internal RDmgType_ElectroBlastWeak() { }
 
     /// <summary>

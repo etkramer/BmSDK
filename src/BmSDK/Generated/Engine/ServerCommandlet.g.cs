@@ -21,6 +21,11 @@ public partial class ServerCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ServerCommandlet.
+    /// </summary>
+    public static ServerCommandlet DefaultObject => (ServerCommandlet)StaticClass().DefaultObject;
+
     internal ServerCommandlet() { }
 
     /// <summary>

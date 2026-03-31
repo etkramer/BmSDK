@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanCough : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanCough.
+    /// </summary>
+    public static RSeqAct_BatmanCough DefaultObject => (RSeqAct_BatmanCough)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanCough() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_DLC_OfferCatwoman.
+    /// </summary>
+    public static RGFxMovieUI_DLC_OfferCatwoman DefaultObject => (RGFxMovieUI_DLC_OfferCatwoman)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_DLC_OfferCatwoman() { }
 
     /// <summary>

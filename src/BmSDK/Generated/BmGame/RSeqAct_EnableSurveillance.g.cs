@@ -21,6 +21,11 @@ public partial class RSeqAct_EnableSurveillance : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EnableSurveillance.
+    /// </summary>
+    public static RSeqAct_EnableSurveillance DefaultObject => (RSeqAct_EnableSurveillance)StaticClass().DefaultObject;
+
     internal RSeqAct_EnableSurveillance() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleSpriteEmitter : BmSDK.Engine.ParticleEmitter, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleSpriteEmitter.
+    /// </summary>
+    public static ParticleSpriteEmitter DefaultObject => (ParticleSpriteEmitter)StaticClass().DefaultObject;
+
     internal ParticleSpriteEmitter() { }
 
     /// <summary>

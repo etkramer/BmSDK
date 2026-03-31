@@ -21,6 +21,11 @@ public partial class RDummyTarget_LookAt : BmSDK.BmGame.RDummyTarget, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDummyTarget_LookAt.
+    /// </summary>
+    public static RDummyTarget_LookAt DefaultObject => (RDummyTarget_LookAt)StaticClass().DefaultObject;
+
     internal RDummyTarget_LookAt() { }
 
     /// <summary>

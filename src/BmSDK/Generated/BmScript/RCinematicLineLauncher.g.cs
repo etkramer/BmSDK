@@ -21,6 +21,11 @@ public partial class RCinematicLineLauncher : BmSDK.BmScript.RLineLauncherBm, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicLineLauncher.
+    /// </summary>
+    public static RCinematicLineLauncher DefaultObject => (RCinematicLineLauncher)StaticClass().DefaultObject;
+
     internal RCinematicLineLauncher() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_SetControlChopper : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetControlChopper.
+    /// </summary>
+    public static RSeqAct_SetControlChopper DefaultObject => (RSeqAct_SetControlChopper)StaticClass().DefaultObject;
+
     internal RSeqAct_SetControlChopper() { }
 
     /// <summary>

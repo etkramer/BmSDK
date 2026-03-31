@@ -21,6 +21,11 @@ public partial class RSeqAct_IgnoreNextFinishedCombatMove : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IgnoreNextFinishedCombatMove.
+    /// </summary>
+    public static RSeqAct_IgnoreNextFinishedCombatMove DefaultObject => (RSeqAct_IgnoreNextFinishedCombatMove)StaticClass().DefaultObject;
+
     internal RSeqAct_IgnoreNextFinishedCombatMove() { }
 
     /// <summary>

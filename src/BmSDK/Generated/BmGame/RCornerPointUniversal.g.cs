@@ -21,6 +21,11 @@ public partial class RCornerPointUniversal : BmSDK.BmGame.RCornerPointBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCornerPointUniversal.
+    /// </summary>
+    public static RCornerPointUniversal DefaultObject => (RCornerPointUniversal)StaticClass().DefaultObject;
+
     internal RCornerPointUniversal() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRope2AutoLengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2AutoLengthUpdater.
+    /// </summary>
+    public static RRope2AutoLengthUpdater DefaultObject => (RRope2AutoLengthUpdater)StaticClass().DefaultObject;
+
     internal RRope2AutoLengthUpdater() { }
 
     /// <summary>

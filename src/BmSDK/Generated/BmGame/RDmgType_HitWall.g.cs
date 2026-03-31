@@ -21,6 +21,11 @@ public partial class RDmgType_HitWall : BmSDK.BmGame.RDamageType, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HitWall.
+    /// </summary>
+    public static RDmgType_HitWall DefaultObject => (RDmgType_HitWall)StaticClass().DefaultObject;
+
     internal RDmgType_HitWall() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkMultipointEmitterLineComponent : BmSDK.Engine.PrimitiveCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkMultipointEmitterLineComponent.
+    /// </summary>
+    public static AkMultipointEmitterLineComponent DefaultObject => (AkMultipointEmitterLineComponent)StaticClass().DefaultObject;
+
     internal AkMultipointEmitterLineComponent() { }
 
     /// <summary>

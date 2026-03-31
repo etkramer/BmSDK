@@ -21,6 +21,11 @@ public partial class RSeqAct_SetOneShotRadioOverride : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetOneShotRadioOverride.
+    /// </summary>
+    public static RSeqAct_SetOneShotRadioOverride DefaultObject => (RSeqAct_SetOneShotRadioOverride)StaticClass().DefaultObject;
+
     internal RSeqAct_SetOneShotRadioOverride() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakedownVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownVolume.
+    /// </summary>
+    public static RStealthTakedownVolume DefaultObject => (RStealthTakedownVolume)StaticClass().DefaultObject;
+
     internal RStealthTakedownVolume() { }
 
     /// <summary>

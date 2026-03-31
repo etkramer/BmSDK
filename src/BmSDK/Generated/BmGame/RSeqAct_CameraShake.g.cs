@@ -21,6 +21,11 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CameraShake.
+    /// </summary>
+    public static RSeqAct_CameraShake DefaultObject => (RSeqAct_CameraShake)StaticClass().DefaultObject;
+
     internal RSeqAct_CameraShake() { }
 
     /// <summary>

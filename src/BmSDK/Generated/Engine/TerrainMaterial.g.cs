@@ -21,6 +21,11 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TerrainMaterial.
+    /// </summary>
+    public static TerrainMaterial DefaultObject => (TerrainMaterial)StaticClass().DefaultObject;
+
     internal TerrainMaterial() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCinematicRasAlGhul : BmSDK.BmGame.RCinematicActor, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicRasAlGhul.
+    /// </summary>
+    public static RCinematicRasAlGhul DefaultObject => (RCinematicRasAlGhul)StaticClass().DefaultObject;
+
     internal RCinematicRasAlGhul() { }
 
     /// <summary>

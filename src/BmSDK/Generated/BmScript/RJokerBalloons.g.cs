@@ -21,6 +21,11 @@ public partial class RJokerBalloons : BmSDK.BmGame.RJokerBalloonsBase, BmSDK.BmG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerBalloons.
+    /// </summary>
+    public static RJokerBalloons DefaultObject => (RJokerBalloons)StaticClass().DefaultObject;
+
     internal RJokerBalloons() { }
 
     /// <summary>

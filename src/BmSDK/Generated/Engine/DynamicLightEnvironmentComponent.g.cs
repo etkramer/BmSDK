@@ -21,6 +21,11 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicLightEnvironmentComponent.
+    /// </summary>
+    public static DynamicLightEnvironmentComponent DefaultObject => (DynamicLightEnvironmentComponent)StaticClass().DefaultObject;
+
     internal DynamicLightEnvironmentComponent() { }
 
     /// <summary>

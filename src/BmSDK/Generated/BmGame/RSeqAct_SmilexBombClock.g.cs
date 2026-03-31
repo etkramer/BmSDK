@@ -21,6 +21,11 @@ public partial class RSeqAct_SmilexBombClock : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SmilexBombClock.
+    /// </summary>
+    public static RSeqAct_SmilexBombClock DefaultObject => (RSeqAct_SmilexBombClock)StaticClass().DefaultObject;
+
     internal RSeqAct_SmilexBombClock() { }
 
     /// <summary>

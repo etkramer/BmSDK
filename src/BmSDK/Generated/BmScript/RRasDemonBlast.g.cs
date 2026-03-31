@@ -21,6 +21,11 @@ public partial class RRasDemonBlast : BmSDK.BmGame.RRasDemonBlastBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRasDemonBlast.
+    /// </summary>
+    public static RRasDemonBlast DefaultObject => (RRasDemonBlast)StaticClass().DefaultObject;
+
     internal RRasDemonBlast() { }
 
     /// <summary>

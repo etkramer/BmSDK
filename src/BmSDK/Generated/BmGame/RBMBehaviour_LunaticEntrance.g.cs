@@ -21,6 +21,11 @@ public partial class RBMBehaviour_LunaticEntrance : BmSDK.BmGame.RBMBehaviour, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_LunaticEntrance.
+    /// </summary>
+    public static RBMBehaviour_LunaticEntrance DefaultObject => (RBMBehaviour_LunaticEntrance)StaticClass().DefaultObject;
+
     internal RBMBehaviour_LunaticEntrance() { }
 
     /// <summary>

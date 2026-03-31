@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown.
+    /// </summary>
+    public static RDmgType_Takedown DefaultObject => (RDmgType_Takedown)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_SmokeBombOutOfCombat : BmSDK.BmGame.RDmgType_Smoke
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SmokeBombOutOfCombat.
+    /// </summary>
+    public static RDmgType_SmokeBombOutOfCombat DefaultObject => (RDmgType_SmokeBombOutOfCombat)StaticClass().DefaultObject;
+
     internal RDmgType_SmokeBombOutOfCombat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IncrementFloat.
+    /// </summary>
+    public static SeqCond_IncrementFloat DefaultObject => (SeqCond_IncrementFloat)StaticClass().DefaultObject;
+
     internal SeqCond_IncrementFloat() { }
 
     /// <summary>

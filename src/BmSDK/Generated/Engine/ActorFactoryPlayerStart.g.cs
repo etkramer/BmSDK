@@ -21,6 +21,11 @@ public partial class ActorFactoryPlayerStart : BmSDK.Engine.ActorFactory, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryPlayerStart.
+    /// </summary>
+    public static ActorFactoryPlayerStart DefaultObject => (ActorFactoryPlayerStart)StaticClass().DefaultObject;
+
     internal ActorFactoryPlayerStart() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_CheckGarg.
+    /// </summary>
+    public static RAEC_Attack_Sub_CheckGarg DefaultObject => (RAEC_Attack_Sub_CheckGarg)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_CheckGarg() { }
 
     /// <summary>

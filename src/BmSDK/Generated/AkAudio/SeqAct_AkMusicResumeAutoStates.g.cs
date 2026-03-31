@@ -21,6 +21,11 @@ public partial class SeqAct_AkMusicResumeAutoStates : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkMusicResumeAutoStates.
+    /// </summary>
+    public static SeqAct_AkMusicResumeAutoStates DefaultObject => (SeqAct_AkMusicResumeAutoStates)StaticClass().DefaultObject;
+
     internal SeqAct_AkMusicResumeAutoStates() { }
 
     /// <summary>

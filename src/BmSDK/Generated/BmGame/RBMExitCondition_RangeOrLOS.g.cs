@@ -21,6 +21,11 @@ public partial class RBMExitCondition_RangeOrLOS : BmSDK.BmGame.RBMExitCondition
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition_RangeOrLOS.
+    /// </summary>
+    public static RBMExitCondition_RangeOrLOS DefaultObject => (RBMExitCondition_RangeOrLOS)StaticClass().DefaultObject;
+
     internal RBMExitCondition_RangeOrLOS() { }
 
     /// <summary>

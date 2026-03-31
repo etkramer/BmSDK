@@ -21,6 +21,11 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThugMineBase.
+    /// </summary>
+    public static RThugMineBase DefaultObject => (RThugMineBase)StaticClass().DefaultObject;
+
     internal RThugMineBase() { }
 
     /// <summary>

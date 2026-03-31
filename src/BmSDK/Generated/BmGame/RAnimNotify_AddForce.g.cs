@@ -21,6 +21,11 @@ public partial class RAnimNotify_AddForce : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_AddForce.
+    /// </summary>
+    public static RAnimNotify_AddForce DefaultObject => (RAnimNotify_AddForce)StaticClass().DefaultObject;
+
     internal RAnimNotify_AddForce() { }
 
     /// <summary>

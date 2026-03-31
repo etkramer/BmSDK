@@ -21,6 +21,11 @@ public partial class SeqCond_IsConsole : BmSDK.Engine.SequenceCondition, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IsConsole.
+    /// </summary>
+    public static SeqCond_IsConsole DefaultObject => (SeqCond_IsConsole)StaticClass().DefaultObject;
+
     internal SeqCond_IsConsole() { }
 
     /// <summary>

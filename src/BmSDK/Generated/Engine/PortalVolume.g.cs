@@ -21,6 +21,11 @@ public partial class PortalVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PortalVolume.
+    /// </summary>
+    public static PortalVolume DefaultObject => (PortalVolume)StaticClass().DefaultObject;
+
     internal PortalVolume() { }
 
     /// <summary>

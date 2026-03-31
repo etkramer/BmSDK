@@ -21,6 +21,11 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ExponentialHeightFogComponent.
+    /// </summary>
+    public static ExponentialHeightFogComponent DefaultObject => (ExponentialHeightFogComponent)StaticClass().DefaultObject;
+
     internal ExponentialHeightFogComponent() { }
 
     /// <summary>

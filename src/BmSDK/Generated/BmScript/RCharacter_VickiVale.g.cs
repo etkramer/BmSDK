@@ -21,6 +21,11 @@ public partial class RCharacter_VickiVale : BmSDK.BmGame.RCharacter, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_VickiVale.
+    /// </summary>
+    public static RCharacter_VickiVale DefaultObject => (RCharacter_VickiVale)StaticClass().DefaultObject;
+
     internal RCharacter_VickiVale() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AICommandNodeRoot : BmSDK.Engine.AICommandNodeBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AICommandNodeRoot.
+    /// </summary>
+    public static AICommandNodeRoot DefaultObject => (AICommandNodeRoot)StaticClass().DefaultObject;
+
     internal AICommandNodeRoot() { }
 
     /// <summary>

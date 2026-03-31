@@ -21,6 +21,11 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Trace.
+    /// </summary>
+    public static SeqAct_Trace DefaultObject => (SeqAct_Trace)StaticClass().DefaultObject;
+
     internal SeqAct_Trace() { }
 
     /// <summary>

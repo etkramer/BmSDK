@@ -21,6 +21,11 @@ public partial class MaterialExpressionTwoSidedSign : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTwoSidedSign.
+    /// </summary>
+    public static MaterialExpressionTwoSidedSign DefaultObject => (MaterialExpressionTwoSidedSign)StaticClass().DefaultObject;
+
     internal MaterialExpressionTwoSidedSign() { }
 
     /// <summary>

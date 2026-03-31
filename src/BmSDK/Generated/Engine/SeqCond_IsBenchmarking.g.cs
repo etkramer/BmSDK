@@ -21,6 +21,11 @@ public partial class SeqCond_IsBenchmarking : BmSDK.Engine.SequenceCondition, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IsBenchmarking.
+    /// </summary>
+    public static SeqCond_IsBenchmarking DefaultObject => (SeqCond_IsBenchmarking)StaticClass().DefaultObject;
+
     internal SeqCond_IsBenchmarking() { }
 
     /// <summary>

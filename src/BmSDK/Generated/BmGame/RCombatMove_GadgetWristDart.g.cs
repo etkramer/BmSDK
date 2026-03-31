@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetWristDart : BmSDK.BmGame.RCombatMove_Batm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetWristDart.
+    /// </summary>
+    public static RCombatMove_GadgetWristDart DefaultObject => (RCombatMove_GadgetWristDart)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetWristDart() { }
 
     /// <summary>

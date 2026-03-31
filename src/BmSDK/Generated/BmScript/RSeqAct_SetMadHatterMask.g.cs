@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMadHatterMask : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMadHatterMask.
+    /// </summary>
+    public static RSeqAct_SetMadHatterMask DefaultObject => (RSeqAct_SetMadHatterMask)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMadHatterMask() { }
 
     /// <summary>

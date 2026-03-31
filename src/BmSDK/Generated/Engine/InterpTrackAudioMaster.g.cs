@@ -21,6 +21,11 @@ public partial class InterpTrackAudioMaster : BmSDK.Engine.InterpTrackVectorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackAudioMaster.
+    /// </summary>
+    public static InterpTrackAudioMaster DefaultObject => (InterpTrackAudioMaster)StaticClass().DefaultObject;
+
     internal InterpTrackAudioMaster() { }
 
     /// <summary>

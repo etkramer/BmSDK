@@ -21,6 +21,11 @@ public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_SniperSearch.
+    /// </summary>
+    public static RBMAIAction_SniperSearch DefaultObject => (RBMAIAction_SniperSearch)StaticClass().DefaultObject;
+
     internal RBMAIAction_SniperSearch() { }
 
     /// <summary>

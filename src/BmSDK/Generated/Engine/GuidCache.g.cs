@@ -21,6 +21,11 @@ public partial class GuidCache : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GuidCache.
+    /// </summary>
+    public static GuidCache DefaultObject => (GuidCache)StaticClass().DefaultObject;
+
     internal GuidCache() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRope2PhysicsUpdater : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2PhysicsUpdater.
+    /// </summary>
+    public static RRope2PhysicsUpdater DefaultObject => (RRope2PhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2PhysicsUpdater() { }
 
     /// <summary>

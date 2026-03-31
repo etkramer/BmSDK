@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetStickyBomb : BmSDK.BmGame.RCombatMove_Bat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetStickyBomb.
+    /// </summary>
+    public static RCombatMove_GadgetStickyBomb DefaultObject => (RCombatMove_GadgetStickyBomb)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetStickyBomb() { }
 
     /// <summary>

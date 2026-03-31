@@ -21,6 +21,11 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCaptureComponent.
+    /// </summary>
+    public static SceneCaptureComponent DefaultObject => (SceneCaptureComponent)StaticClass().DefaultObject;
+
     internal SceneCaptureComponent() { }
 
     /// <summary>

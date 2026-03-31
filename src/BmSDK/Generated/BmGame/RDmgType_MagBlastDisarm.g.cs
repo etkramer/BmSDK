@@ -21,6 +21,11 @@ public partial class RDmgType_MagBlastDisarm : BmSDK.BmGame.RDamageType, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_MagBlastDisarm.
+    /// </summary>
+    public static RDmgType_MagBlastDisarm DefaultObject => (RDmgType_MagBlastDisarm)StaticClass().DefaultObject;
+
     internal RDmgType_MagBlastDisarm() { }
 
     /// <summary>

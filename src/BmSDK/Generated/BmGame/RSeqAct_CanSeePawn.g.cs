@@ -21,6 +21,11 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CanSeePawn.
+    /// </summary>
+    public static RSeqAct_CanSeePawn DefaultObject => (RSeqAct_CanSeePawn)StaticClass().DefaultObject;
+
     internal RSeqAct_CanSeePawn() { }
 
     /// <summary>

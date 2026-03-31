@@ -21,6 +21,11 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezePlaceableFootprint.
+    /// </summary>
+    public static RFreezePlaceableFootprint DefaultObject => (RFreezePlaceableFootprint)StaticClass().DefaultObject;
+
     internal RFreezePlaceableFootprint() { }
 
     /// <summary>

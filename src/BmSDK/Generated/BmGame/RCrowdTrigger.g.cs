@@ -21,6 +21,11 @@ public partial class RCrowdTrigger : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdTrigger.
+    /// </summary>
+    public static RCrowdTrigger DefaultObject => (RCrowdTrigger)StaticClass().DefaultObject;
+
     internal RCrowdTrigger() { }
 
     /// <summary>

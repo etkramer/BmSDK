@@ -21,6 +21,11 @@ public partial class RDmgType_Fracture : BmSDK.Engine.DamageType, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Fracture.
+    /// </summary>
+    public static RDmgType_Fracture DefaultObject => (RDmgType_Fracture)StaticClass().DefaultObject;
+
     internal RDmgType_Fracture() { }
 
     /// <summary>

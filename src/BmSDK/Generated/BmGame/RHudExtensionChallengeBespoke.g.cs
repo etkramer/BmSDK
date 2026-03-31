@@ -21,6 +21,11 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionChallengeBespoke.
+    /// </summary>
+    public static RHudExtensionChallengeBespoke DefaultObject => (RHudExtensionChallengeBespoke)StaticClass().DefaultObject;
+
     internal RHudExtensionChallengeBespoke() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RProfileSettings : BmSDK.Engine.OnlineProfileSettings, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProfileSettings.
+    /// </summary>
+    public static RProfileSettings DefaultObject => (RProfileSettings)StaticClass().DefaultObject;
+
     internal RProfileSettings() { }
 
     /// <summary>

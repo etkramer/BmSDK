@@ -21,6 +21,11 @@ public partial class DistributionFloatParticleParameter : BmSDK.Engine.Distribut
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionFloatParticleParameter.
+    /// </summary>
+    public static DistributionFloatParticleParameter DefaultObject => (DistributionFloatParticleParameter)StaticClass().DefaultObject;
+
     internal DistributionFloatParticleParameter() { }
 
     /// <summary>

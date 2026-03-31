@@ -21,6 +21,11 @@ public partial class NavigationMeshBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavigationMeshBase.
+    /// </summary>
+    public static NavigationMeshBase DefaultObject => (NavigationMeshBase)StaticClass().DefaultObject;
+
     internal NavigationMeshBase() { }
 
     /// <summary>

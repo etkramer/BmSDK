@@ -21,6 +21,11 @@ public partial class RBMExitCondition_Triggered : BmSDK.BmGame.RBMExitCondition,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition_Triggered.
+    /// </summary>
+    public static RBMExitCondition_Triggered DefaultObject => (RBMExitCondition_Triggered)StaticClass().DefaultObject;
+
     internal RBMExitCondition_Triggered() { }
 
     /// <summary>

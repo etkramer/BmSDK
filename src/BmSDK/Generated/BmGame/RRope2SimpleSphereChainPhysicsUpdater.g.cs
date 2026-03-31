@@ -21,6 +21,11 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2SimpleSphereChainPhysicsUpdater.
+    /// </summary>
+    public static RRope2SimpleSphereChainPhysicsUpdater DefaultObject => (RRope2SimpleSphereChainPhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2SimpleSphereChainPhysicsUpdater() { }
 
     /// <summary>

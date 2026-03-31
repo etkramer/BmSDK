@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_MadHatterDrink : BmSDK.BmGame.RSpecial
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_MadHatterDrink.
+    /// </summary>
+    public static RSpecialMoveInstance_MadHatterDrink DefaultObject => (RSpecialMoveInstance_MadHatterDrink)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_MadHatterDrink() { }
 
     /// <summary>

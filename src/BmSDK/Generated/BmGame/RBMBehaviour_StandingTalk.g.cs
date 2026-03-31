@@ -21,6 +21,11 @@ public partial class RBMBehaviour_StandingTalk : BmSDK.BmGame.RBMBehaviour, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_StandingTalk.
+    /// </summary>
+    public static RBMBehaviour_StandingTalk DefaultObject => (RBMBehaviour_StandingTalk)StaticClass().DefaultObject;
+
     internal RBMBehaviour_StandingTalk() { }
 
     /// <summary>

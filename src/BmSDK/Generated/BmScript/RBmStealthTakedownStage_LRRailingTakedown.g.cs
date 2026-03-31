@@ -21,6 +21,11 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBmStealthTakedownStage_LRRailingTakedown.
+    /// </summary>
+    public static RBmStealthTakedownStage_LRRailingTakedown DefaultObject => (RBmStealthTakedownStage_LRRailingTakedown)StaticClass().DefaultObject;
+
     internal RBmStealthTakedownStage_LRRailingTakedown() { }
 
     /// <summary>

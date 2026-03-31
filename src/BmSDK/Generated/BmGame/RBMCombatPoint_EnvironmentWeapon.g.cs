@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_EnvironmentWeapon : BmSDK.BmGame.RBMCombatPo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_EnvironmentWeapon.
+    /// </summary>
+    public static RBMCombatPoint_EnvironmentWeapon DefaultObject => (RBMCombatPoint_EnvironmentWeapon)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_EnvironmentWeapon() { }
 
     /// <summary>

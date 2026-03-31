@@ -21,6 +21,11 @@ public partial class RBreakablePickupPenguinBase : BmSDK.BmGame.RSkeletalMeshAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakablePickupPenguinBase.
+    /// </summary>
+    public static RBreakablePickupPenguinBase DefaultObject => (RBreakablePickupPenguinBase)StaticClass().DefaultObject;
+
     internal RBreakablePickupPenguinBase() { }
 
     /// <summary>

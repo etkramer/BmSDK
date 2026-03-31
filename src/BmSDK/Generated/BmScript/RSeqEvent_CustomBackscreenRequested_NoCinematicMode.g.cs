@@ -21,6 +21,11 @@ public partial class RSeqEvent_CustomBackscreenRequested_NoCinematicMode : BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CustomBackscreenRequested_NoCinematicMode.
+    /// </summary>
+    public static RSeqEvent_CustomBackscreenRequested_NoCinematicMode DefaultObject => (RSeqEvent_CustomBackscreenRequested_NoCinematicMode)StaticClass().DefaultObject;
+
     internal RSeqEvent_CustomBackscreenRequested_NoCinematicMode() { }
 
     /// <summary>

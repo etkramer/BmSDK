@@ -21,6 +21,11 @@ public partial class MaterialExpressionCustomTexture : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionCustomTexture.
+    /// </summary>
+    public static MaterialExpressionCustomTexture DefaultObject => (MaterialExpressionCustomTexture)StaticClass().DefaultObject;
+
     internal MaterialExpressionCustomTexture() { }
 
     /// <summary>

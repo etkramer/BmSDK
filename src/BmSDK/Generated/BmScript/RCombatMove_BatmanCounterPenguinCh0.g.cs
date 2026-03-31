@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanCounterPenguinCh0 : BmSDK.BmGame.RCombatM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounterPenguinCh0.
+    /// </summary>
+    public static RCombatMove_BatmanCounterPenguinCh0 DefaultObject => (RCombatMove_BatmanCounterPenguinCh0)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounterPenguinCh0() { }
 
     /// <summary>

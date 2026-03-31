@@ -21,6 +21,11 @@ public partial class PostProcessChain : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PostProcessChain.
+    /// </summary>
+    public static PostProcessChain DefaultObject => (PostProcessChain)StaticClass().DefaultObject;
+
     internal PostProcessChain() { }
 
     /// <summary>

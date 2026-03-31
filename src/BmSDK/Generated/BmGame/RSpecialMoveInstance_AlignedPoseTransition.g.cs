@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_AlignedPoseTransition : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_AlignedPoseTransition.
+    /// </summary>
+    public static RSpecialMoveInstance_AlignedPoseTransition DefaultObject => (RSpecialMoveInstance_AlignedPoseTransition)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_AlignedPoseTransition() { }
 
     /// <summary>

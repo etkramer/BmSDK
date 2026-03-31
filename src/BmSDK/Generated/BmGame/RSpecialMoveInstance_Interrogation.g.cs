@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_Interrogation.
+    /// </summary>
+    public static RSpecialMoveInstance_Interrogation DefaultObject => (RSpecialMoveInstance_Interrogation)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_Interrogation() { }
 
     /// <summary>

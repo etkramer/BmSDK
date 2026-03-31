@@ -21,6 +21,11 @@ public partial class SeqAct_DivideInt : BmSDK.Engine.SeqAct_SetSequenceVariable,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_DivideInt.
+    /// </summary>
+    public static SeqAct_DivideInt DefaultObject => (SeqAct_DivideInt)StaticClass().DefaultObject;
+
     internal SeqAct_DivideInt() { }
 
     /// <summary>

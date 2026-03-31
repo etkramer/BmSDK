@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_OpenGrundysHand : BmSDK.BmGame.RSpecia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_OpenGrundysHand.
+    /// </summary>
+    public static RSpecialMoveInstance_OpenGrundysHand DefaultObject => (RSpecialMoveInstance_OpenGrundysHand)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_OpenGrundysHand() { }
 
     /// <summary>

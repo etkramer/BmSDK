@@ -21,6 +21,11 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ApproachingFreeze.
+    /// </summary>
+    public static RSeqAct_ApproachingFreeze DefaultObject => (RSeqAct_ApproachingFreeze)StaticClass().DefaultObject;
+
     internal RSeqAct_ApproachingFreeze() { }
 
     /// <summary>

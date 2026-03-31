@@ -21,6 +21,11 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeapon.
+    /// </summary>
+    public static RBMWeapon DefaultObject => (RBMWeapon)StaticClass().DefaultObject;
+
     internal RBMWeapon() { }
 
     /// <summary>

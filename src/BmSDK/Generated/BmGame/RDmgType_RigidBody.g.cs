@@ -21,6 +21,11 @@ public partial class RDmgType_RigidBody : BmSDK.Engine.DamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RigidBody.
+    /// </summary>
+    public static RDmgType_RigidBody DefaultObject => (RDmgType_RigidBody)StaticClass().DefaultObject;
+
     internal RDmgType_RigidBody() { }
 
     /// <summary>

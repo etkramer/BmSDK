@@ -21,6 +21,11 @@ public partial class RAddContentCharacterSelect : BmSDK.BmGame.RAdditionalConten
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentCharacterSelect.
+    /// </summary>
+    public static RAddContentCharacterSelect DefaultObject => (RAddContentCharacterSelect)StaticClass().DefaultObject;
+
     internal RAddContentCharacterSelect() { }
 
     /// <summary>

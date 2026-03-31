@@ -21,6 +21,11 @@ public partial class LevelStreamingKismet : BmSDK.Engine.LevelStreaming, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreamingKismet.
+    /// </summary>
+    public static LevelStreamingKismet DefaultObject => (LevelStreamingKismet)StaticClass().DefaultObject;
+
     internal LevelStreamingKismet() { }
 
     /// <summary>

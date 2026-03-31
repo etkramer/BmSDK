@@ -21,6 +21,11 @@ public partial class RSpecialMoveEnvironmentObject : BmSDK.Engine.Actor, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveEnvironmentObject.
+    /// </summary>
+    public static RSpecialMoveEnvironmentObject DefaultObject => (RSpecialMoveEnvironmentObject)StaticClass().DefaultObject;
+
     internal RSpecialMoveEnvironmentObject() { }
 
     /// <summary>

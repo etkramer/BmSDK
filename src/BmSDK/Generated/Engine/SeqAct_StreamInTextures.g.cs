@@ -21,6 +21,11 @@ public partial class SeqAct_StreamInTextures : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_StreamInTextures.
+    /// </summary>
+    public static SeqAct_StreamInTextures DefaultObject => (SeqAct_StreamInTextures)StaticClass().DefaultObject;
+
     internal SeqAct_StreamInTextures() { }
 
     /// <summary>

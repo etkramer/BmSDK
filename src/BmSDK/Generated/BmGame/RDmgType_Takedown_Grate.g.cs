@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_Grate : BmSDK.BmGame.RDmgType_Takedown, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_Grate.
+    /// </summary>
+    public static RDmgType_Takedown_Grate DefaultObject => (RDmgType_Takedown_Grate)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_Grate() { }
 
     /// <summary>

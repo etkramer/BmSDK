@@ -21,6 +21,11 @@ public partial class RDirectionalLightStaticShadows : BmSDK.Engine.DirectionalLi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDirectionalLightStaticShadows.
+    /// </summary>
+    public static RDirectionalLightStaticShadows DefaultObject => (RDirectionalLightStaticShadows)StaticClass().DefaultObject;
+
     internal RDirectionalLightStaticShadows() { }
 
     /// <summary>

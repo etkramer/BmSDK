@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_LineLauncher : BmSDK.BmGame.RDmgType_Take
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_LineLauncher.
+    /// </summary>
+    public static RDmgType_Takedown_LineLauncher DefaultObject => (RDmgType_Takedown_LineLauncher)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_LineLauncher() { }
 
     /// <summary>

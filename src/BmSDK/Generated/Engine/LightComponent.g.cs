@@ -21,6 +21,11 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightComponent.
+    /// </summary>
+    public static LightComponent DefaultObject => (LightComponent)StaticClass().DefaultObject;
+
     internal LightComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_PawnDisturbed : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PawnDisturbed.
+    /// </summary>
+    public static RSeqEvent_PawnDisturbed DefaultObject => (RSeqEvent_PawnDisturbed)StaticClass().DefaultObject;
+
     internal RSeqEvent_PawnDisturbed() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_CornerGrab : BmSDK.BmGame.RStealthTak
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_CornerGrab.
+    /// </summary>
+    public static RStealthTakeDownStage_CornerGrab DefaultObject => (RStealthTakeDownStage_CornerGrab)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_CornerGrab() { }
 
     /// <summary>

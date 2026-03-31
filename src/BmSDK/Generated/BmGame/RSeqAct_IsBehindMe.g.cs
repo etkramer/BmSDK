@@ -21,6 +21,11 @@ public partial class RSeqAct_IsBehindMe : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IsBehindMe.
+    /// </summary>
+    public static RSeqAct_IsBehindMe DefaultObject => (RSeqAct_IsBehindMe)StaticClass().DefaultObject;
+
     internal RSeqAct_IsBehindMe() { }
 
     /// <summary>

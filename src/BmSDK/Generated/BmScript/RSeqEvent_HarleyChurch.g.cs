@@ -21,6 +21,11 @@ public partial class RSeqEvent_HarleyChurch : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HarleyChurch.
+    /// </summary>
+    public static RSeqEvent_HarleyChurch DefaultObject => (RSeqEvent_HarleyChurch)StaticClass().DefaultObject;
+
     internal RSeqEvent_HarleyChurch() { }
 
     /// <summary>

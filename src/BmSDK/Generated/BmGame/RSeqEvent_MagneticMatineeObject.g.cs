@@ -21,6 +21,11 @@ public partial class RSeqEvent_MagneticMatineeObject : BmSDK.Engine.SequenceEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MagneticMatineeObject.
+    /// </summary>
+    public static RSeqEvent_MagneticMatineeObject DefaultObject => (RSeqEvent_MagneticMatineeObject)StaticClass().DefaultObject;
+
     internal RSeqEvent_MagneticMatineeObject() { }
 
     /// <summary>

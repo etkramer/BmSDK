@@ -21,6 +21,11 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponNinjaSword.
+    /// </summary>
+    public static RBMWeaponNinjaSword DefaultObject => (RBMWeaponNinjaSword)StaticClass().DefaultObject;
+
     internal RBMWeaponNinjaSword() { }
 
     /// <summary>

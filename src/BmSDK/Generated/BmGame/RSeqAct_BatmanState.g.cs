@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanState : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanState.
+    /// </summary>
+    public static RSeqAct_BatmanState DefaultObject => (RSeqAct_BatmanState)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanState() { }
 
     /// <summary>

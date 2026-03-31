@@ -21,6 +21,11 @@ public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MultiFont.
+    /// </summary>
+    public static MultiFont DefaultObject => (MultiFont)StaticClass().DefaultObject;
+
     internal MultiFont() { }
 
     /// <summary>

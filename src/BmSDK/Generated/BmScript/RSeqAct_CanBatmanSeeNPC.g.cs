@@ -21,6 +21,11 @@ public partial class RSeqAct_CanBatmanSeeNPC : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CanBatmanSeeNPC.
+    /// </summary>
+    public static RSeqAct_CanBatmanSeeNPC DefaultObject => (RSeqAct_CanBatmanSeeNPC)StaticClass().DefaultObject;
+
     internal RSeqAct_CanBatmanSeeNPC() { }
 
     /// <summary>

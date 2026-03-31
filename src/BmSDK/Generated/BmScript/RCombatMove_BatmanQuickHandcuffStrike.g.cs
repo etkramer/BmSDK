@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanQuickHandcuffStrike : BmSDK.BmGame.RComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanQuickHandcuffStrike.
+    /// </summary>
+    public static RCombatMove_BatmanQuickHandcuffStrike DefaultObject => (RCombatMove_BatmanQuickHandcuffStrike)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanQuickHandcuffStrike() { }
 
     /// <summary>

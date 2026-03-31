@@ -21,6 +21,11 @@ public partial class RSeqAct_SetReallyDead : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetReallyDead.
+    /// </summary>
+    public static RSeqAct_SetReallyDead DefaultObject => (RSeqAct_SetReallyDead)StaticClass().DefaultObject;
+
     internal RSeqAct_SetReallyDead() { }
 
     /// <summary>

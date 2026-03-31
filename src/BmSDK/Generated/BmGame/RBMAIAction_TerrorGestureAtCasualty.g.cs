@@ -21,6 +21,11 @@ public partial class RBMAIAction_TerrorGestureAtCasualty : BmSDK.BmGame.RBMAIAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_TerrorGestureAtCasualty.
+    /// </summary>
+    public static RBMAIAction_TerrorGestureAtCasualty DefaultObject => (RBMAIAction_TerrorGestureAtCasualty)StaticClass().DefaultObject;
+
     internal RBMAIAction_TerrorGestureAtCasualty() { }
 
     /// <summary>

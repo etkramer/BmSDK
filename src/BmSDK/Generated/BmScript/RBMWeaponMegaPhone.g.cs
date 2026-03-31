@@ -21,6 +21,11 @@ public partial class RBMWeaponMegaPhone : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponMegaPhone.
+    /// </summary>
+    public static RBMWeaponMegaPhone DefaultObject => (RBMWeaponMegaPhone)StaticClass().DefaultObject;
+
     internal RBMWeaponMegaPhone() { }
 
     /// <summary>

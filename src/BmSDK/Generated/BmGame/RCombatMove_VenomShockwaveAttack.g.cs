@@ -21,6 +21,11 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VenomShockwaveAttack.
+    /// </summary>
+    public static RCombatMove_VenomShockwaveAttack DefaultObject => (RCombatMove_VenomShockwaveAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VenomShockwaveAttack() { }
 
     /// <summary>

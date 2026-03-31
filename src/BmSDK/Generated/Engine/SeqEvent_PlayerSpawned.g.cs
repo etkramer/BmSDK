@@ -21,6 +21,11 @@ public partial class SeqEvent_PlayerSpawned : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_PlayerSpawned.
+    /// </summary>
+    public static SeqEvent_PlayerSpawned DefaultObject => (SeqEvent_PlayerSpawned)StaticClass().DefaultObject;
+
     internal SeqEvent_PlayerSpawned() { }
 
     /// <summary>

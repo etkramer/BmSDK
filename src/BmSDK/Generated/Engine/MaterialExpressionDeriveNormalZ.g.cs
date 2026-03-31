@@ -21,6 +21,11 @@ public partial class MaterialExpressionDeriveNormalZ : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDeriveNormalZ.
+    /// </summary>
+    public static MaterialExpressionDeriveNormalZ DefaultObject => (MaterialExpressionDeriveNormalZ)StaticClass().DefaultObject;
+
     internal MaterialExpressionDeriveNormalZ() { }
 
     /// <summary>

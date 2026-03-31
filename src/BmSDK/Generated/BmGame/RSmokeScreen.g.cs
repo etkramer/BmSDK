@@ -21,6 +21,11 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmokeScreen.
+    /// </summary>
+    public static RSmokeScreen DefaultObject => (RSmokeScreen)StaticClass().DefaultObject;
+
     internal RSmokeScreen() { }
 
     /// <summary>

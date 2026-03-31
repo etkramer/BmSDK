@@ -21,6 +21,11 @@ public partial class RBMAIAction_WallSmashBatarang : BmSDK.BmGame.RBMAIAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_WallSmashBatarang.
+    /// </summary>
+    public static RBMAIAction_WallSmashBatarang DefaultObject => (RBMAIAction_WallSmashBatarang)StaticClass().DefaultObject;
+
     internal RBMAIAction_WallSmashBatarang() { }
 
     /// <summary>

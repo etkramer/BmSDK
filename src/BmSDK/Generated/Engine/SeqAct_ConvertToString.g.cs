@@ -21,6 +21,11 @@ public partial class SeqAct_ConvertToString : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ConvertToString.
+    /// </summary>
+    public static SeqAct_ConvertToString DefaultObject => (SeqAct_ConvertToString)StaticClass().DefaultObject;
+
     internal SeqAct_ConvertToString() { }
 
     /// <summary>

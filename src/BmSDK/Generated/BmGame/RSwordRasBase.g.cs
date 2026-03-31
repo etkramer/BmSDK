@@ -21,6 +21,11 @@ public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSwordRasBase.
+    /// </summary>
+    public static RSwordRasBase DefaultObject => (RSwordRasBase)StaticClass().DefaultObject;
+
     internal RSwordRasBase() { }
 
     /// <summary>

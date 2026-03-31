@@ -21,6 +21,11 @@ public partial class RSeqAct_CrowdSpawner : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CrowdSpawner.
+    /// </summary>
+    public static RSeqAct_CrowdSpawner DefaultObject => (RSeqAct_CrowdSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_CrowdSpawner() { }
 
     /// <summary>

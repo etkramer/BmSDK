@@ -21,6 +21,11 @@ public partial class HelpCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HelpCommandlet.
+    /// </summary>
+    public static HelpCommandlet DefaultObject => (HelpCommandlet)StaticClass().DefaultObject;
+
     internal HelpCommandlet() { }
 
     /// <summary>

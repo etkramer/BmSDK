@@ -21,6 +21,11 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialInstanceConstant.
+    /// </summary>
+    public static MaterialInstanceConstant DefaultObject => (MaterialInstanceConstant)StaticClass().DefaultObject;
+
     internal MaterialInstanceConstant() { }
 
     /// <summary>

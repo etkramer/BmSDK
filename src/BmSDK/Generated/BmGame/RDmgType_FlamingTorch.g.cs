@@ -21,6 +21,11 @@ public partial class RDmgType_FlamingTorch : BmSDK.BmGame.RDmgType_StunStick, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_FlamingTorch.
+    /// </summary>
+    public static RDmgType_FlamingTorch DefaultObject => (RDmgType_FlamingTorch)StaticClass().DefaultObject;
+
     internal RDmgType_FlamingTorch() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezableVentBase.
+    /// </summary>
+    public static RFreezableVentBase DefaultObject => (RFreezableVentBase)StaticClass().DefaultObject;
+
     internal RFreezableVentBase() { }
 
     /// <summary>

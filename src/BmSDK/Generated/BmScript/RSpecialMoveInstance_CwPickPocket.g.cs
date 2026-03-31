@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_CwPickPocket : BmSDK.BmGame.RSpecialMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_CwPickPocket.
+    /// </summary>
+    public static RSpecialMoveInstance_CwPickPocket DefaultObject => (RSpecialMoveInstance_CwPickPocket)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_CwPickPocket() { }
 
     /// <summary>

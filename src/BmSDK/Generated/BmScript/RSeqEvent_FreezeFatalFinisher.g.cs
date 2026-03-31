@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeFatalFinisher : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeFatalFinisher.
+    /// </summary>
+    public static RSeqEvent_FreezeFatalFinisher DefaultObject => (RSeqEvent_FreezeFatalFinisher)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeFatalFinisher() { }
 
     /// <summary>

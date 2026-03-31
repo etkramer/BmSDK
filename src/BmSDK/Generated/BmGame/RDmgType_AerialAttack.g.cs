@@ -21,6 +21,11 @@ public partial class RDmgType_AerialAttack : BmSDK.BmGame.RDmgType_Strike, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_AerialAttack.
+    /// </summary>
+    public static RDmgType_AerialAttack DefaultObject => (RDmgType_AerialAttack)StaticClass().DefaultObject;
+
     internal RDmgType_AerialAttack() { }
 
     /// <summary>

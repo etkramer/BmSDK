@@ -21,6 +21,11 @@ public partial class RDmgType_QuickBatarang : BmSDK.BmGame.RDmgType_Batarang, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_QuickBatarang.
+    /// </summary>
+    public static RDmgType_QuickBatarang DefaultObject => (RDmgType_QuickBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_QuickBatarang() { }
 
     /// <summary>

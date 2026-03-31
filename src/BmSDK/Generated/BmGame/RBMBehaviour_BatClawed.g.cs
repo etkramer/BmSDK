@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BatClawed : BmSDK.BmGame.RBMBehaviour_HitReact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BatClawed.
+    /// </summary>
+    public static RBMBehaviour_BatClawed DefaultObject => (RBMBehaviour_BatClawed)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BatClawed() { }
 
     /// <summary>

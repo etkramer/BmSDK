@@ -21,6 +21,11 @@ public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_BlendBonesFromPoses.
+    /// </summary>
+    public static RAnimNode_BlendBonesFromPoses DefaultObject => (RAnimNode_BlendBonesFromPoses)StaticClass().DefaultObject;
+
     internal RAnimNode_BlendBonesFromPoses() { }
 
     /// <summary>

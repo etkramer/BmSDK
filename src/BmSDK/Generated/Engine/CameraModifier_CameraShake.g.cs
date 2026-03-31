@@ -21,6 +21,11 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CameraModifier_CameraShake.
+    /// </summary>
+    public static CameraModifier_CameraShake DefaultObject => (CameraModifier_CameraShake)StaticClass().DefaultObject;
+
     internal CameraModifier_CameraShake() { }
 
     /// <summary>

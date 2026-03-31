@@ -21,6 +21,11 @@ public partial class RNightwingStickDumbActor : BmSDK.BmScript.RSkeletalMeshActo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingStickDumbActor.
+    /// </summary>
+    public static RNightwingStickDumbActor DefaultObject => (RNightwingStickDumbActor)StaticClass().DefaultObject;
+
     internal RNightwingStickDumbActor() { }
 
     /// <summary>

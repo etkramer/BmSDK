@@ -21,6 +21,11 @@ public partial class RWaterVolume_BoilingCoolant : BmSDK.BmGame.RWaterVolumeBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWaterVolume_BoilingCoolant.
+    /// </summary>
+    public static RWaterVolume_BoilingCoolant DefaultObject => (RWaterVolume_BoilingCoolant)StaticClass().DefaultObject;
+
     internal RWaterVolume_BoilingCoolant() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_JokerMercyDialogue : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_JokerMercyDialogue.
+    /// </summary>
+    public static RSeqAct_JokerMercyDialogue DefaultObject => (RSeqAct_JokerMercyDialogue)StaticClass().DefaultObject;
+
     internal RSeqAct_JokerMercyDialogue() { }
 
     /// <summary>

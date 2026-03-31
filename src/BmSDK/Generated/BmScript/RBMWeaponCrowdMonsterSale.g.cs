@@ -21,6 +21,11 @@ public partial class RBMWeaponCrowdMonsterSale : BmSDK.BmScript.RBMWeaponCrowdPi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponCrowdMonsterSale.
+    /// </summary>
+    public static RBMWeaponCrowdMonsterSale DefaultObject => (RBMWeaponCrowdMonsterSale)StaticClass().DefaultObject;
+
     internal RBMWeaponCrowdMonsterSale() { }
 
     /// <summary>

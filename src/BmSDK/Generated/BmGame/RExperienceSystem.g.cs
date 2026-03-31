@@ -21,6 +21,11 @@ public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExperienceSystem.
+    /// </summary>
+    public static RExperienceSystem DefaultObject => (RExperienceSystem)StaticClass().DefaultObject;
+
     internal RExperienceSystem() { }
 
     /// <summary>

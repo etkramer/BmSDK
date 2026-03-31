@@ -21,6 +21,11 @@ public partial class RChapterLineSet : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChapterLineSet.
+    /// </summary>
+    public static RChapterLineSet DefaultObject => (RChapterLineSet)StaticClass().DefaultObject;
+
     internal RChapterLineSet() { }
 
     /// <summary>

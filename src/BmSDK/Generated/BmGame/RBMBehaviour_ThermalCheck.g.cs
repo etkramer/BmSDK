@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ThermalCheck : BmSDK.BmGame.RBMBehaviour_Actio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ThermalCheck.
+    /// </summary>
+    public static RBMBehaviour_ThermalCheck DefaultObject => (RBMBehaviour_ThermalCheck)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ThermalCheck() { }
 
     /// <summary>

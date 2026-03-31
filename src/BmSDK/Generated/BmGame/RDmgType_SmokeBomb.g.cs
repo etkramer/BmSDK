@@ -21,6 +21,11 @@ public partial class RDmgType_SmokeBomb : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SmokeBomb.
+    /// </summary>
+    public static RDmgType_SmokeBomb DefaultObject => (RDmgType_SmokeBomb)StaticClass().DefaultObject;
+
     internal RDmgType_SmokeBomb() { }
 
     /// <summary>

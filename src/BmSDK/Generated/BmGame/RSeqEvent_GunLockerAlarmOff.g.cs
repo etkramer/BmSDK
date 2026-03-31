@@ -21,6 +21,11 @@ public partial class RSeqEvent_GunLockerAlarmOff : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GunLockerAlarmOff.
+    /// </summary>
+    public static RSeqEvent_GunLockerAlarmOff DefaultObject => (RSeqEvent_GunLockerAlarmOff)StaticClass().DefaultObject;
+
     internal RSeqEvent_GunLockerAlarmOff() { }
 
     /// <summary>

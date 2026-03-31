@@ -21,6 +21,11 @@ public partial class RCharacter_HoboBloodOnHands : BmSDK.BmGame.RCharacter_Joker
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_HoboBloodOnHands.
+    /// </summary>
+    public static RCharacter_HoboBloodOnHands DefaultObject => (RCharacter_HoboBloodOnHands)StaticClass().DefaultObject;
+
     internal RCharacter_HoboBloodOnHands() { }
 
     /// <summary>

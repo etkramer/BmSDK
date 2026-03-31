@@ -21,6 +21,11 @@ public partial class SeqAct_AkAudioParameterReset : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkAudioParameterReset.
+    /// </summary>
+    public static SeqAct_AkAudioParameterReset DefaultObject => (SeqAct_AkAudioParameterReset)StaticClass().DefaultObject;
+
     internal SeqAct_AkAudioParameterReset() { }
 
     /// <summary>

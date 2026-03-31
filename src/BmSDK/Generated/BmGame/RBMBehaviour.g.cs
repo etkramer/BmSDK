@@ -21,6 +21,11 @@ public partial class RBMBehaviour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour.
+    /// </summary>
+    public static RBMBehaviour DefaultObject => (RBMBehaviour)StaticClass().DefaultObject;
+
     internal RBMBehaviour() { }
 
     /// <summary>

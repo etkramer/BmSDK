@@ -21,6 +21,11 @@ public partial class RDmgType_RiddlerRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RiddlerRagdoll.
+    /// </summary>
+    public static RDmgType_RiddlerRagdoll DefaultObject => (RDmgType_RiddlerRagdoll)StaticClass().DefaultObject;
+
     internal RDmgType_RiddlerRagdoll() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SequenceObject.
+    /// </summary>
+    public static SequenceObject DefaultObject => (SequenceObject)StaticClass().DefaultObject;
+
     internal SequenceObject() { }
 
     /// <summary>

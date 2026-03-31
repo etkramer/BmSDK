@@ -21,6 +21,11 @@ public partial class BookMark2D : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BookMark2D.
+    /// </summary>
+    public static BookMark2D DefaultObject => (BookMark2D)StaticClass().DefaultObject;
+
     internal BookMark2D() { }
 
     /// <summary>

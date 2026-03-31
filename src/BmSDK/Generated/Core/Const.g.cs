@@ -21,6 +21,11 @@ public partial class Const : BmSDK.Field, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Const.
+    /// </summary>
+    public static Const DefaultObject => (Const)StaticClass().DefaultObject;
+
     internal Const() { }
 
     /// <summary>

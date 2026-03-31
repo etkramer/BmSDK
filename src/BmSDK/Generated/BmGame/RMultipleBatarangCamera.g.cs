@@ -21,6 +21,11 @@ public partial class RMultipleBatarangCamera : BmSDK.BmGame.RBatarangCamera, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMultipleBatarangCamera.
+    /// </summary>
+    public static RMultipleBatarangCamera DefaultObject => (RMultipleBatarangCamera)StaticClass().DefaultObject;
+
     internal RMultipleBatarangCamera() { }
 
     /// <summary>

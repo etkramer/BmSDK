@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_MonsterSaleSign : BmSDK.BmGame.RBMCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_MonsterSaleSign.
+    /// </summary>
+    public static RBMCombatThrownObject_MonsterSaleSign DefaultObject => (RBMCombatThrownObject_MonsterSaleSign)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_MonsterSaleSign() { }
 
     /// <summary>

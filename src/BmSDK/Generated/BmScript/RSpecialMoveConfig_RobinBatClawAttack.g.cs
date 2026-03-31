@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RobinBatClawAttack : BmSDK.BmGame.RSpeci
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RobinBatClawAttack.
+    /// </summary>
+    public static RSpecialMoveConfig_RobinBatClawAttack DefaultObject => (RSpecialMoveConfig_RobinBatClawAttack)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RobinBatClawAttack() { }
 
     /// <summary>

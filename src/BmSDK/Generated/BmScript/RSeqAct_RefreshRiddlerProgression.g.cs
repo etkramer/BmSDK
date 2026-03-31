@@ -21,6 +21,11 @@ public partial class RSeqAct_RefreshRiddlerProgression : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RefreshRiddlerProgression.
+    /// </summary>
+    public static RSeqAct_RefreshRiddlerProgression DefaultObject => (RSeqAct_RefreshRiddlerProgression)StaticClass().DefaultObject;
+
     internal RSeqAct_RefreshRiddlerProgression() { }
 
     /// <summary>

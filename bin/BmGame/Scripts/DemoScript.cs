@@ -17,7 +17,7 @@ public class DemoScript : Script
     public override void Main()
     {
         // Boost snow intensity on CDO (template object)
-        var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
+        var defaultRainComponent = RRainComponent.DefaultObject;
         defaultRainComponent?.ParticleCount *= 5;
 
         // Set max players (default and current/frontend)

@@ -21,6 +21,11 @@ public partial class _OnlineSubsystemPC : BmSDK.IpDrv.OnlineSubsystemCommonImpl,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _OnlineSubsystemPC.
+    /// </summary>
+    public static _OnlineSubsystemPC DefaultObject => (_OnlineSubsystemPC)StaticClass().DefaultObject;
+
     internal _OnlineSubsystemPC() { }
 
     /// <summary>

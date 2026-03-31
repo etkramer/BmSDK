@@ -21,6 +21,11 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameReplicationInfo.
+    /// </summary>
+    public static GameReplicationInfo DefaultObject => (GameReplicationInfo)StaticClass().DefaultObject;
+
     internal GameReplicationInfo() { }
 
     /// <summary>

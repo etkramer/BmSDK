@@ -21,6 +21,11 @@ public partial class MaterialExpressionOneMinus : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionOneMinus.
+    /// </summary>
+    public static MaterialExpressionOneMinus DefaultObject => (MaterialExpressionOneMinus)StaticClass().DefaultObject;
+
     internal MaterialExpressionOneMinus() { }
 
     /// <summary>

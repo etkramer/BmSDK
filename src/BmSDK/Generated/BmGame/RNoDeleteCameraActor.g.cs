@@ -21,6 +21,11 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNoDeleteCameraActor.
+    /// </summary>
+    public static RNoDeleteCameraActor DefaultObject => (RNoDeleteCameraActor)StaticClass().DefaultObject;
+
     internal RNoDeleteCameraActor() { }
 
     /// <summary>

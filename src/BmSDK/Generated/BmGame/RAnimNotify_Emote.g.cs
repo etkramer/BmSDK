@@ -21,6 +21,11 @@ public partial class RAnimNotify_Emote : BmSDK.BmGame.RAnimNotify_Script, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Emote.
+    /// </summary>
+    public static RAnimNotify_Emote DefaultObject => (RAnimNotify_Emote)StaticClass().DefaultObject;
+
     internal RAnimNotify_Emote() { }
 
     /// <summary>

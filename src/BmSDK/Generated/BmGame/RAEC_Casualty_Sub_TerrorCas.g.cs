@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_TerrorCas : BmSDK.BmGame.RAEC_Casualty_Su
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_TerrorCas.
+    /// </summary>
+    public static RAEC_Casualty_Sub_TerrorCas DefaultObject => (RAEC_Casualty_Sub_TerrorCas)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_TerrorCas() { }
 
     /// <summary>

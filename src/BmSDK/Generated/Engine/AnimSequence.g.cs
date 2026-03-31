@@ -21,6 +21,11 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimSequence.
+    /// </summary>
+    public static AnimSequence DefaultObject => (AnimSequence)StaticClass().DefaultObject;
+
     internal AnimSequence() { }
 
     /// <summary>

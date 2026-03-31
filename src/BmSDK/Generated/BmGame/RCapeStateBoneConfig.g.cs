@@ -21,6 +21,11 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeStateBoneConfig.
+    /// </summary>
+    public static RCapeStateBoneConfig DefaultObject => (RCapeStateBoneConfig)StaticClass().DefaultObject;
+
     internal RCapeStateBoneConfig() { }
 
     /// <summary>

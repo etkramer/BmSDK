@@ -21,6 +21,11 @@ public partial class AkAssetPack : BmSDK.Engine.AkHash, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAssetPack.
+    /// </summary>
+    public static AkAssetPack DefaultObject => (AkAssetPack)StaticClass().DefaultObject;
+
     internal AkAssetPack() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShimmyEdgeMarker.
+    /// </summary>
+    public static RShimmyEdgeMarker DefaultObject => (RShimmyEdgeMarker)StaticClass().DefaultObject;
+
     internal RShimmyEdgeMarker() { }
 
     /// <summary>

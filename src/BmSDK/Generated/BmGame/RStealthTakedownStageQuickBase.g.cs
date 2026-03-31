@@ -21,6 +21,11 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStageQuickBase.
+    /// </summary>
+    public static RStealthTakedownStageQuickBase DefaultObject => (RStealthTakedownStageQuickBase)StaticClass().DefaultObject;
+
     internal RStealthTakedownStageQuickBase() { }
 
     /// <summary>

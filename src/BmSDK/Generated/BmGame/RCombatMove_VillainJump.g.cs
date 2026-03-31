@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainJump.
+    /// </summary>
+    public static RCombatMove_VillainJump DefaultObject => (RCombatMove_VillainJump)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainJump() { }
 
     /// <summary>

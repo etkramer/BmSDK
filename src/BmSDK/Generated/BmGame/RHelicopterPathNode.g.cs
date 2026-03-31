@@ -21,6 +21,11 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.Engine.E
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterPathNode.
+    /// </summary>
+    public static RHelicopterPathNode DefaultObject => (RHelicopterPathNode)StaticClass().DefaultObject;
+
     internal RHelicopterPathNode() { }
 
     /// <summary>

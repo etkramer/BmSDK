@@ -21,6 +21,11 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PointLightComponent.
+    /// </summary>
+    public static PointLightComponent DefaultObject => (PointLightComponent)StaticClass().DefaultObject;
+
     internal PointLightComponent() { }
 
     /// <summary>

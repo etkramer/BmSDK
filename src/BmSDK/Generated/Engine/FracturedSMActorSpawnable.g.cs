@@ -21,6 +21,11 @@ public partial class FracturedSMActorSpawnable : BmSDK.Engine.FracturedStaticMes
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedSMActorSpawnable.
+    /// </summary>
+    public static FracturedSMActorSpawnable DefaultObject => (FracturedSMActorSpawnable)StaticClass().DefaultObject;
+
     internal FracturedSMActorSpawnable() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleLocationSphereSection.
+    /// </summary>
+    public static RParticleModuleLocationSphereSection DefaultObject => (RParticleModuleLocationSphereSection)StaticClass().DefaultObject;
+
     internal RParticleModuleLocationSphereSection() { }
 
     /// <summary>

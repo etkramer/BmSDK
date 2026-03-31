@@ -21,6 +21,11 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ClayfaceRollHack.
+    /// </summary>
+    public static RSeqAct_ClayfaceRollHack DefaultObject => (RSeqAct_ClayfaceRollHack)StaticClass().DefaultObject;
+
     internal RSeqAct_ClayfaceRollHack() { }
 
     /// <summary>

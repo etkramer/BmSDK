@@ -21,6 +21,11 @@ public partial class RCrowdAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdAttractor.
+    /// </summary>
+    public static RCrowdAttractor DefaultObject => (RCrowdAttractor)StaticClass().DefaultObject;
+
     internal RCrowdAttractor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_StopCasualtyBeeps : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StopCasualtyBeeps.
+    /// </summary>
+    public static RSeqAct_StopCasualtyBeeps DefaultObject => (RSeqAct_StopCasualtyBeeps)StaticClass().DefaultObject;
+
     internal RSeqAct_StopCasualtyBeeps() { }
 
     /// <summary>

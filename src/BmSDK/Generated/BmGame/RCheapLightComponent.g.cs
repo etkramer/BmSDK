@@ -21,6 +21,11 @@ public partial class RCheapLightComponent : BmSDK.Engine.FogVolumeSphericalDensi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCheapLightComponent.
+    /// </summary>
+    public static RCheapLightComponent DefaultObject => (RCheapLightComponent)StaticClass().DefaultObject;
+
     internal RCheapLightComponent() { }
 
     /// <summary>

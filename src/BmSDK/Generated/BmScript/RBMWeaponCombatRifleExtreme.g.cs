@@ -21,6 +21,11 @@ public partial class RBMWeaponCombatRifleExtreme : BmSDK.BmScript.RBMWeaponComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponCombatRifleExtreme.
+    /// </summary>
+    public static RBMWeaponCombatRifleExtreme DefaultObject => (RBMWeaponCombatRifleExtreme)StaticClass().DefaultObject;
+
     internal RBMWeaponCombatRifleExtreme() { }
 
     /// <summary>

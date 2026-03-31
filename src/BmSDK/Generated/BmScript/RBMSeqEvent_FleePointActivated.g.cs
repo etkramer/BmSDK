@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_FleePointActivated : BmSDK.BmGame.RBMSeqEvent_B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_FleePointActivated.
+    /// </summary>
+    public static RBMSeqEvent_FleePointActivated DefaultObject => (RBMSeqEvent_FleePointActivated)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_FleePointActivated() { }
 
     /// <summary>

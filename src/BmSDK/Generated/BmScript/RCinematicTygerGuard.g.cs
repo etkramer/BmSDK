@@ -21,6 +21,11 @@ public partial class RCinematicTygerGuard : BmSDK.BmGame.RCinematicActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicTygerGuard.
+    /// </summary>
+    public static RCinematicTygerGuard DefaultObject => (RCinematicTygerGuard)StaticClass().DefaultObject;
+
     internal RCinematicTygerGuard() { }
 
     /// <summary>

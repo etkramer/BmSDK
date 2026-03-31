@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetShieldBash : BmSDK.BmGame.RCombatMove_Bat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetShieldBash.
+    /// </summary>
+    public static RCombatMove_GadgetShieldBash DefaultObject => (RCombatMove_GadgetShieldBash)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetShieldBash() { }
 
     /// <summary>

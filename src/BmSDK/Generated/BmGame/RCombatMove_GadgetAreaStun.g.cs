@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetAreaStun : BmSDK.BmGame.RCombatMove_Batma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetAreaStun.
+    /// </summary>
+    public static RCombatMove_GadgetAreaStun DefaultObject => (RCombatMove_GadgetAreaStun)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetAreaStun() { }
 
     /// <summary>

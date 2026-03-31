@@ -21,6 +21,11 @@ public partial class RBMWeaponShield : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponShield.
+    /// </summary>
+    public static RBMWeaponShield DefaultObject => (RBMWeaponShield)StaticClass().DefaultObject;
+
     internal RBMWeaponShield() { }
 
     /// <summary>

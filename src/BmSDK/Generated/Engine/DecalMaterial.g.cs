@@ -21,6 +21,11 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DecalMaterial.
+    /// </summary>
+    public static DecalMaterial DefaultObject => (DecalMaterial)StaticClass().DefaultObject;
+
     internal DecalMaterial() { }
 
     /// <summary>

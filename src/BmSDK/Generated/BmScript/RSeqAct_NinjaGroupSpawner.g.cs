@@ -21,6 +21,11 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NinjaGroupSpawner.
+    /// </summary>
+    public static RSeqAct_NinjaGroupSpawner DefaultObject => (RSeqAct_NinjaGroupSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_NinjaGroupSpawner() { }
 
     /// <summary>

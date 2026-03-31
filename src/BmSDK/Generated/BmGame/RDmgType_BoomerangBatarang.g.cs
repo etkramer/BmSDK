@@ -21,6 +21,11 @@ public partial class RDmgType_BoomerangBatarang : BmSDK.BmGame.RDmgType_StealthB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BoomerangBatarang.
+    /// </summary>
+    public static RDmgType_BoomerangBatarang DefaultObject => (RDmgType_BoomerangBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_BoomerangBatarang() { }
 
     /// <summary>

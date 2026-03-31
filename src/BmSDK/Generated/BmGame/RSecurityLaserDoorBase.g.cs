@@ -21,6 +21,11 @@ public partial class RSecurityLaserDoorBase : BmSDK.Engine.SkeletalMeshActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSecurityLaserDoorBase.
+    /// </summary>
+    public static RSecurityLaserDoorBase DefaultObject => (RSecurityLaserDoorBase)StaticClass().DefaultObject;
+
     internal RSecurityLaserDoorBase() { }
 
     /// <summary>

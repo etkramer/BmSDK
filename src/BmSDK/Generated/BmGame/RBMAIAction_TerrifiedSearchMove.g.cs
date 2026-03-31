@@ -21,6 +21,11 @@ public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_TerrifiedSearchMove.
+    /// </summary>
+    public static RBMAIAction_TerrifiedSearchMove DefaultObject => (RBMAIAction_TerrifiedSearchMove)StaticClass().DefaultObject;
+
     internal RBMAIAction_TerrifiedSearchMove() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_PauseAndLook : BmSDK.BmGame.RAlertEventCoordinatorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_PauseAndLook.
+    /// </summary>
+    public static RAEC_PauseAndLook DefaultObject => (RAEC_PauseAndLook)StaticClass().DefaultObject;
+
     internal RAEC_PauseAndLook() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_SharkPoolRescue.
+    /// </summary>
+    public static RSpecialMoveInstance_SharkPoolRescue DefaultObject => (RSpecialMoveInstance_SharkPoolRescue)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_SharkPoolRescue() { }
 
     /// <summary>

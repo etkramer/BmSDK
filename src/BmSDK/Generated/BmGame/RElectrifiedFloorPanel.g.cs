@@ -21,6 +21,11 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RElectrifiedFloorPanel.
+    /// </summary>
+    public static RElectrifiedFloorPanel DefaultObject => (RElectrifiedFloorPanel)StaticClass().DefaultObject;
+
     internal RElectrifiedFloorPanel() { }
 
     /// <summary>

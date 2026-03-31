@@ -21,6 +21,11 @@ public partial class RCharacter_Hobo3 : BmSDK.BmGame.RCharacter_JokerThug, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Hobo3.
+    /// </summary>
+    public static RCharacter_Hobo3 DefaultObject => (RCharacter_Hobo3)StaticClass().DefaultObject;
+
     internal RCharacter_Hobo3() { }
 
     /// <summary>

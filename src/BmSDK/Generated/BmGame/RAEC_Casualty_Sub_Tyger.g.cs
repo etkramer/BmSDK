@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_Tyger : BmSDK.BmGame.RAEC_Casualty_Sub_So
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_Tyger.
+    /// </summary>
+    public static RAEC_Casualty_Sub_Tyger DefaultObject => (RAEC_Casualty_Sub_Tyger)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_Tyger() { }
 
     /// <summary>

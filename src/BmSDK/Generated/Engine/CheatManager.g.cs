@@ -21,6 +21,11 @@ public partial class CheatManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CheatManager.
+    /// </summary>
+    public static CheatManager DefaultObject => (CheatManager)StaticClass().DefaultObject;
+
     internal CheatManager() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RNinjaSpawnPointBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNinjaSpawnPointBase.
+    /// </summary>
+    public static RNinjaSpawnPointBase DefaultObject => (RNinjaSpawnPointBase)StaticClass().DefaultObject;
+
     internal RNinjaSpawnPointBase() { }
 
     /// <summary>

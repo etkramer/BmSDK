@@ -21,6 +21,11 @@ public partial class NavMeshPathConstraint : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPathConstraint.
+    /// </summary>
+    public static NavMeshPathConstraint DefaultObject => (NavMeshPathConstraint)StaticClass().DefaultObject;
+
     internal NavMeshPathConstraint() { }
 
     /// <summary>

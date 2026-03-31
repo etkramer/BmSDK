@@ -21,6 +21,11 @@ public partial class RCinematicCatwomanWithWhip : BmSDK.BmGame.RCinematicPlayerC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicCatwomanWithWhip.
+    /// </summary>
+    public static RCinematicCatwomanWithWhip DefaultObject => (RCinematicCatwomanWithWhip)StaticClass().DefaultObject;
+
     internal RCinematicCatwomanWithWhip() { }
 
     /// <summary>

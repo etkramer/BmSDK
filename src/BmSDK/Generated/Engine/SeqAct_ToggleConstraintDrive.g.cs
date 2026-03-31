@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleConstraintDrive : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleConstraintDrive.
+    /// </summary>
+    public static SeqAct_ToggleConstraintDrive DefaultObject => (SeqAct_ToggleConstraintDrive)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleConstraintDrive() { }
 
     /// <summary>

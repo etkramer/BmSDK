@@ -21,6 +21,11 @@ public partial class RSeqEvent_BreakablePropDamage : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BreakablePropDamage.
+    /// </summary>
+    public static RSeqEvent_BreakablePropDamage DefaultObject => (RSeqEvent_BreakablePropDamage)StaticClass().DefaultObject;
+
     internal RSeqEvent_BreakablePropDamage() { }
 
     /// <summary>

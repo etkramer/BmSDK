@@ -21,6 +21,11 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider.
+    /// </summary>
+    public static UIDataProvider DefaultObject => (UIDataProvider)StaticClass().DefaultObject;
+
     internal UIDataProvider() { }
 
     /// <summary>

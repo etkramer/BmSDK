@@ -21,6 +21,11 @@ public partial class RMagneticBlastReceiver : BmSDK.BmGame.RProjectile, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticBlastReceiver.
+    /// </summary>
+    public static RMagneticBlastReceiver DefaultObject => (RMagneticBlastReceiver)StaticClass().DefaultObject;
+
     internal RMagneticBlastReceiver() { }
 
     /// <summary>

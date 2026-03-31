@@ -21,6 +21,11 @@ public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GenericParamListStatEntry.
+    /// </summary>
+    public static GenericParamListStatEntry DefaultObject => (GenericParamListStatEntry)StaticClass().DefaultObject;
+
     internal GenericParamListStatEntry() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class TriggeredPath : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TriggeredPath.
+    /// </summary>
+    public static TriggeredPath DefaultObject => (TriggeredPath)StaticClass().DefaultObject;
+
     internal TriggeredPath() { }
 
     /// <summary>

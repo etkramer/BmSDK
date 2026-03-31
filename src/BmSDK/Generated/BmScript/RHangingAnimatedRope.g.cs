@@ -21,6 +21,11 @@ public partial class RHangingAnimatedRope : BmSDK.BmGame.RSkeletalMeshActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHangingAnimatedRope.
+    /// </summary>
+    public static RHangingAnimatedRope DefaultObject => (RHangingAnimatedRope)StaticClass().DefaultObject;
+
     internal RHangingAnimatedRope() { }
 
     /// <summary>

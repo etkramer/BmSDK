@@ -21,6 +21,11 @@ public partial class ApexRenderVolumeComponent : BmSDK.Engine.PrimitiveComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexRenderVolumeComponent.
+    /// </summary>
+    public static ApexRenderVolumeComponent DefaultObject => (ApexRenderVolumeComponent)StaticClass().DefaultObject;
+
     internal ApexRenderVolumeComponent() { }
 
     /// <summary>

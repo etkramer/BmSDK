@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanIntoThrow : BmSDK.BmGame.RCombatMove_Batm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanIntoThrow.
+    /// </summary>
+    public static RCombatMove_BatmanIntoThrow DefaultObject => (RCombatMove_BatmanIntoThrow)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanIntoThrow() { }
 
     /// <summary>

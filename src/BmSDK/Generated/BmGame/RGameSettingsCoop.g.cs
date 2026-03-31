@@ -21,6 +21,11 @@ public partial class RGameSettingsCoop : BmSDK.Engine.OnlineGameSettings, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameSettingsCoop.
+    /// </summary>
+    public static RGameSettingsCoop DefaultObject => (RGameSettingsCoop)StaticClass().DefaultObject;
+
     internal RGameSettingsCoop() { }
 
     /// <summary>

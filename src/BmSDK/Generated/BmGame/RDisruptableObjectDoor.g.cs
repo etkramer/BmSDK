@@ -21,6 +21,11 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableObjectDoor.
+    /// </summary>
+    public static RDisruptableObjectDoor DefaultObject => (RDisruptableObjectDoor)StaticClass().DefaultObject;
+
     internal RDisruptableObjectDoor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_NinjaWaypointReached : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_NinjaWaypointReached.
+    /// </summary>
+    public static RSeqEvent_NinjaWaypointReached DefaultObject => (RSeqEvent_NinjaWaypointReached)StaticClass().DefaultObject;
+
     internal RSeqEvent_NinjaWaypointReached() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RThugMine : BmSDK.BmGame.RThugMineBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThugMine.
+    /// </summary>
+    public static RThugMine DefaultObject => (RThugMine)StaticClass().DefaultObject;
+
     internal RThugMine() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ROutcastWaveController : BmSDK.BmGame.RBMWaveController, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROutcastWaveController.
+    /// </summary>
+    public static ROutcastWaveController DefaultObject => (ROutcastWaveController)StaticClass().DefaultObject;
+
     internal ROutcastWaveController() { }
 
     /// <summary>

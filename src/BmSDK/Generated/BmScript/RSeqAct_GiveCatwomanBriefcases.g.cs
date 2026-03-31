@@ -21,6 +21,11 @@ public partial class RSeqAct_GiveCatwomanBriefcases : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GiveCatwomanBriefcases.
+    /// </summary>
+    public static RSeqAct_GiveCatwomanBriefcases DefaultObject => (RSeqAct_GiveCatwomanBriefcases)StaticClass().DefaultObject;
+
     internal RSeqAct_GiveCatwomanBriefcases() { }
 
     /// <summary>

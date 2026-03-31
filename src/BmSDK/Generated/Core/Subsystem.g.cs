@@ -21,6 +21,11 @@ public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Subsystem.
+    /// </summary>
+    public static Subsystem DefaultObject => (Subsystem)StaticClass().DefaultObject;
+
     internal Subsystem() { }
 
     /// <summary>

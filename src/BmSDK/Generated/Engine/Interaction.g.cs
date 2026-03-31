@@ -21,6 +21,11 @@ public partial class Interaction : BmSDK.Engine.UIRoot, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Interaction.
+    /// </summary>
+    public static Interaction DefaultObject => (Interaction)StaticClass().DefaultObject;
+
     internal Interaction() { }
 
     /// <summary>

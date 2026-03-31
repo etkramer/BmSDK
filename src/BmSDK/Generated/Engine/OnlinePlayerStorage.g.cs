@@ -21,6 +21,11 @@ public partial class OnlinePlayerStorage : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlinePlayerStorage.
+    /// </summary>
+    public static OnlinePlayerStorage DefaultObject => (OnlinePlayerStorage)StaticClass().DefaultObject;
+
     internal OnlinePlayerStorage() { }
 
     /// <summary>

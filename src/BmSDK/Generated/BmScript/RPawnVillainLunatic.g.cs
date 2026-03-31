@@ -21,6 +21,11 @@ public partial class RPawnVillainLunatic : BmSDK.BmScript.RPawnVillainLunaticBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainLunatic.
+    /// </summary>
+    public static RPawnVillainLunatic DefaultObject => (RPawnVillainLunatic)StaticClass().DefaultObject;
+
     internal RPawnVillainLunatic() { }
 
     /// <summary>

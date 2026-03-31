@@ -21,6 +21,11 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ForceFieldShape.
+    /// </summary>
+    public static ForceFieldShape DefaultObject => (ForceFieldShape)StaticClass().DefaultObject;
+
     internal ForceFieldShape() { }
 
     /// <summary>

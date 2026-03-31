@@ -21,6 +21,11 @@ public partial class RNavigationManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavigationManager.
+    /// </summary>
+    public static RNavigationManager DefaultObject => (RNavigationManager)StaticClass().DefaultObject;
+
     internal RNavigationManager() { }
 
     /// <summary>

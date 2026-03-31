@@ -21,6 +21,11 @@ public partial class RSeqVar_CurrentLevel : BmSDK.Engine.SeqVar_String, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_CurrentLevel.
+    /// </summary>
+    public static RSeqVar_CurrentLevel DefaultObject => (RSeqVar_CurrentLevel)StaticClass().DefaultObject;
+
     internal RSeqVar_CurrentLevel() { }
 
     /// <summary>

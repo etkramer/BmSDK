@@ -21,6 +21,11 @@ public partial class RAnimNotify_Takedown : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Takedown.
+    /// </summary>
+    public static RAnimNotify_Takedown DefaultObject => (RAnimNotify_Takedown)StaticClass().DefaultObject;
+
     internal RAnimNotify_Takedown() { }
 
     /// <summary>

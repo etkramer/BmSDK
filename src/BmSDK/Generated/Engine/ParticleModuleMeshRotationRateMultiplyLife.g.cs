@@ -21,6 +21,11 @@ public partial class ParticleModuleMeshRotationRateMultiplyLife : BmSDK.Engine.P
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleMeshRotationRateMultiplyLife.
+    /// </summary>
+    public static ParticleModuleMeshRotationRateMultiplyLife DefaultObject => (ParticleModuleMeshRotationRateMultiplyLife)StaticClass().DefaultObject;
+
     internal ParticleModuleMeshRotationRateMultiplyLife() { }
 
     /// <summary>

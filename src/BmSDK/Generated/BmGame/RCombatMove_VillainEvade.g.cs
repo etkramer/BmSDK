@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainEvade.
+    /// </summary>
+    public static RCombatMove_VillainEvade DefaultObject => (RCombatMove_VillainEvade)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainEvade() { }
 
     /// <summary>

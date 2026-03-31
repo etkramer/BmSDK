@@ -21,6 +21,11 @@ public partial class LightmassPrimitiveSettingsObject : BmSDK.GameObject, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightmassPrimitiveSettingsObject.
+    /// </summary>
+    public static LightmassPrimitiveSettingsObject DefaultObject => (LightmassPrimitiveSettingsObject)StaticClass().DefaultObject;
+
     internal LightmassPrimitiveSettingsObject() { }
 
     /// <summary>

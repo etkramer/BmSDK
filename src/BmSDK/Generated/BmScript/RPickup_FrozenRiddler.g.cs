@@ -21,6 +21,11 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPickup_FrozenRiddler.
+    /// </summary>
+    public static RPickup_FrozenRiddler DefaultObject => (RPickup_FrozenRiddler)StaticClass().DefaultObject;
+
     internal RPickup_FrozenRiddler() { }
 
     /// <summary>

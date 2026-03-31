@@ -21,6 +21,11 @@ public partial class WindPointSource : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WindPointSource.
+    /// </summary>
+    public static WindPointSource DefaultObject => (WindPointSource)StaticClass().DefaultObject;
+
     internal WindPointSource() { }
 
     /// <summary>

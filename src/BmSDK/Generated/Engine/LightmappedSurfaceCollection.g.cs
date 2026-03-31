@@ -21,6 +21,11 @@ public partial class LightmappedSurfaceCollection : BmSDK.GameObject, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightmappedSurfaceCollection.
+    /// </summary>
+    public static LightmappedSurfaceCollection DefaultObject => (LightmappedSurfaceCollection)StaticClass().DefaultObject;
+
     internal LightmappedSurfaceCollection() { }
 
     /// <summary>

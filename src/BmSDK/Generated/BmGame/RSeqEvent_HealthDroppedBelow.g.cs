@@ -21,6 +21,11 @@ public partial class RSeqEvent_HealthDroppedBelow : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HealthDroppedBelow.
+    /// </summary>
+    public static RSeqEvent_HealthDroppedBelow DefaultObject => (RSeqEvent_HealthDroppedBelow)StaticClass().DefaultObject;
+
     internal RSeqEvent_HealthDroppedBelow() { }
 
     /// <summary>

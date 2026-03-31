@@ -21,6 +21,11 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DecalComponent.
+    /// </summary>
+    public static DecalComponent DefaultObject => (DecalComponent)StaticClass().DefaultObject;
+
     internal DecalComponent() { }
 
     /// <summary>

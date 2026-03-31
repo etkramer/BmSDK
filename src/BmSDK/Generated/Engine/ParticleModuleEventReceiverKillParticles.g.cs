@@ -21,6 +21,11 @@ public partial class ParticleModuleEventReceiverKillParticles : BmSDK.Engine.Par
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleEventReceiverKillParticles.
+    /// </summary>
+    public static ParticleModuleEventReceiverKillParticles DefaultObject => (ParticleModuleEventReceiverKillParticles)StaticClass().DefaultObject;
+
     internal ParticleModuleEventReceiverKillParticles() { }
 
     /// <summary>

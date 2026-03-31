@@ -21,6 +21,11 @@ public partial class RBMBehaviour_MadHatterThugSpawn : BmSDK.BmGame.RBMBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_MadHatterThugSpawn.
+    /// </summary>
+    public static RBMBehaviour_MadHatterThugSpawn DefaultObject => (RBMBehaviour_MadHatterThugSpawn)StaticClass().DefaultObject;
+
     internal RBMBehaviour_MadHatterThugSpawn() { }
 
     /// <summary>

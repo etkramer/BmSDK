@@ -21,6 +21,11 @@ public partial class State : BmSDK.Struct, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as State.
+    /// </summary>
+    public static State DefaultObject => (State)StaticClass().DefaultObject;
+
     internal State() { }
 
     /// <summary>

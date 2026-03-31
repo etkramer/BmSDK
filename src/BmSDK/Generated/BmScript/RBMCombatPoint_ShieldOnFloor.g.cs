@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_ShieldOnFloor : BmSDK.BmGame.RBMCombatPoint_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_ShieldOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_ShieldOnFloor DefaultObject => (RBMCombatPoint_ShieldOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_ShieldOnFloor() { }
 
     /// <summary>

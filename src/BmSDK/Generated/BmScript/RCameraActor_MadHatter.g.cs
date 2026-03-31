@@ -21,6 +21,11 @@ public partial class RCameraActor_MadHatter : BmSDK.BmGame.RCameraActor, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCameraActor_MadHatter.
+    /// </summary>
+    public static RCameraActor_MadHatter DefaultObject => (RCameraActor_MadHatter)StaticClass().DefaultObject;
+
     internal RCameraActor_MadHatter() { }
 
     /// <summary>

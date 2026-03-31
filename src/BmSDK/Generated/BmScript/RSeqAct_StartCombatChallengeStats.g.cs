@@ -21,6 +21,11 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartCombatChallengeStats.
+    /// </summary>
+    public static RSeqAct_StartCombatChallengeStats DefaultObject => (RSeqAct_StartCombatChallengeStats)StaticClass().DefaultObject;
+
     internal RSeqAct_StartCombatChallengeStats() { }
 
     /// <summary>

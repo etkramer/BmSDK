@@ -21,6 +21,11 @@ public partial class TcpNetDriver : BmSDK.Engine.NetDriver, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TcpNetDriver.
+    /// </summary>
+    public static TcpNetDriver DefaultObject => (TcpNetDriver)StaticClass().DefaultObject;
+
     internal TcpNetDriver() { }
 
     /// <summary>

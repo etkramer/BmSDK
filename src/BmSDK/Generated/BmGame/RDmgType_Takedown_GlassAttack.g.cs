@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_GlassAttack : BmSDK.BmGame.RDmgType_Taked
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_GlassAttack.
+    /// </summary>
+    public static RDmgType_Takedown_GlassAttack DefaultObject => (RDmgType_Takedown_GlassAttack)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_GlassAttack() { }
 
     /// <summary>

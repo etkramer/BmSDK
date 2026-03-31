@@ -21,6 +21,11 @@ public partial class RCharacter_OutcastTwoFace1Thin_Ivy : BmSDK.BmScript.RCharac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_OutcastTwoFace1Thin_Ivy.
+    /// </summary>
+    public static RCharacter_OutcastTwoFace1Thin_Ivy DefaultObject => (RCharacter_OutcastTwoFace1Thin_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_OutcastTwoFace1Thin_Ivy() { }
 
     /// <summary>

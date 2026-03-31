@@ -21,6 +21,11 @@ public partial class RSeqAct_SetTVTexture : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetTVTexture.
+    /// </summary>
+    public static RSeqAct_SetTVTexture DefaultObject => (RSeqAct_SetTVTexture)StaticClass().DefaultObject;
+
     internal RSeqAct_SetTVTexture() { }
 
     /// <summary>

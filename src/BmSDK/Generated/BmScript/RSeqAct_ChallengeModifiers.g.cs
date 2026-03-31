@@ -21,6 +21,11 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChallengeModifiers.
+    /// </summary>
+    public static RSeqAct_ChallengeModifiers DefaultObject => (RSeqAct_ChallengeModifiers)StaticClass().DefaultObject;
+
     internal RSeqAct_ChallengeModifiers() { }
 
     /// <summary>

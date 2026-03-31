@@ -21,6 +21,11 @@ public partial class RSeqAct_BatFlock : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatFlock.
+    /// </summary>
+    public static RSeqAct_BatFlock DefaultObject => (RSeqAct_BatFlock)StaticClass().DefaultObject;
+
     internal RSeqAct_BatFlock() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_AttachToEvents : BmSDK.BmGame.RBMBehaviour, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_AttachToEvents.
+    /// </summary>
+    public static RBMBehaviour_AttachToEvents DefaultObject => (RBMBehaviour_AttachToEvents)StaticClass().DefaultObject;
+
     internal RBMBehaviour_AttachToEvents() { }
 
     /// <summary>

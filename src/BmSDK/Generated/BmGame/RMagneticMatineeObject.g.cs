@@ -21,6 +21,11 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticMatineeObject.
+    /// </summary>
+    public static RMagneticMatineeObject DefaultObject => (RMagneticMatineeObject)StaticClass().DefaultObject;
+
     internal RMagneticMatineeObject() { }
 
     /// <summary>

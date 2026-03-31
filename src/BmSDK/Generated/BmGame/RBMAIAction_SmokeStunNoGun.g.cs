@@ -21,6 +21,11 @@ public partial class RBMAIAction_SmokeStunNoGun : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_SmokeStunNoGun.
+    /// </summary>
+    public static RBMAIAction_SmokeStunNoGun DefaultObject => (RBMAIAction_SmokeStunNoGun)StaticClass().DefaultObject;
+
     internal RBMAIAction_SmokeStunNoGun() { }
 
     /// <summary>

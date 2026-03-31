@@ -21,6 +21,11 @@ public partial class RCharacter_Talia : BmSDK.BmGame.RCharacter, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Talia.
+    /// </summary>
+    public static RCharacter_Talia DefaultObject => (RCharacter_Talia)StaticClass().DefaultObject;
+
     internal RCharacter_Talia() { }
 
     /// <summary>

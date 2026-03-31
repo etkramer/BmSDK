@@ -21,6 +21,11 @@ public partial class RBMAIAction_NervousCorner_Out_Right : BmSDK.BmGame.RBMAIAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_NervousCorner_Out_Right.
+    /// </summary>
+    public static RBMAIAction_NervousCorner_Out_Right DefaultObject => (RBMAIAction_NervousCorner_Out_Right)StaticClass().DefaultObject;
+
     internal RBMAIAction_NervousCorner_Out_Right() { }
 
     /// <summary>

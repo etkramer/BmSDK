@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_Rail.
+    /// </summary>
+    public static RAEC_Attack_Sub_Rail DefaultObject => (RAEC_Attack_Sub_Rail)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_Rail() { }
 
     /// <summary>

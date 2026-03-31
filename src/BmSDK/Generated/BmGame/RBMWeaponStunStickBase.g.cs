@@ -21,6 +21,11 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponStunStickBase.
+    /// </summary>
+    public static RBMWeaponStunStickBase DefaultObject => (RBMWeaponStunStickBase)StaticClass().DefaultObject;
+
     internal RBMWeaponStunStickBase() { }
 
     /// <summary>

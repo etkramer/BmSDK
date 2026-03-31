@@ -21,6 +21,11 @@ public partial class RSeqAct_SecretsLeft : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SecretsLeft.
+    /// </summary>
+    public static RSeqAct_SecretsLeft DefaultObject => (RSeqAct_SecretsLeft)StaticClass().DefaultObject;
+
     internal RSeqAct_SecretsLeft() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DwTriovizImplEffect : BmSDK.Engine.PostProcessEffect, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DwTriovizImplEffect.
+    /// </summary>
+    public static DwTriovizImplEffect DefaultObject => (DwTriovizImplEffect)StaticClass().DefaultObject;
+
     internal DwTriovizImplEffect() { }
 
     /// <summary>

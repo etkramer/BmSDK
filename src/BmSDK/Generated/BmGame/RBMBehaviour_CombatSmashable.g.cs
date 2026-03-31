@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatSmashable : BmSDK.BmGame.RBMBehaviour_Co
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatSmashable.
+    /// </summary>
+    public static RBMBehaviour_CombatSmashable DefaultObject => (RBMBehaviour_CombatSmashable)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatSmashable() { }
 
     /// <summary>

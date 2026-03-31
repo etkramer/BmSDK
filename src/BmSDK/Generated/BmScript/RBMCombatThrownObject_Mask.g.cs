@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Mask : BmSDK.BmScript.RBMCombatThrown
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Mask.
+    /// </summary>
+    public static RBMCombatThrownObject_Mask DefaultObject => (RBMCombatThrownObject_Mask)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Mask() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_AllowNPCOnRaft : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AllowNPCOnRaft.
+    /// </summary>
+    public static RSeqAct_AllowNPCOnRaft DefaultObject => (RSeqAct_AllowNPCOnRaft)StaticClass().DefaultObject;
+
     internal RSeqAct_AllowNPCOnRaft() { }
 
     /// <summary>

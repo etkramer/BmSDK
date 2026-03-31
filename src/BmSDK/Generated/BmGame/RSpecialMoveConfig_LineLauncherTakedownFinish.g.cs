@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_LineLauncherTakedownFinish : BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_LineLauncherTakedownFinish.
+    /// </summary>
+    public static RSpecialMoveConfig_LineLauncherTakedownFinish DefaultObject => (RSpecialMoveConfig_LineLauncherTakedownFinish)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_LineLauncherTakedownFinish() { }
 
     /// <summary>

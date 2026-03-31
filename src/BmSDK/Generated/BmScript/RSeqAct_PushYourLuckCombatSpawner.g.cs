@@ -21,6 +21,11 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PushYourLuckCombatSpawner.
+    /// </summary>
+    public static RSeqAct_PushYourLuckCombatSpawner DefaultObject => (RSeqAct_PushYourLuckCombatSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_PushYourLuckCombatSpawner() { }
 
     /// <summary>

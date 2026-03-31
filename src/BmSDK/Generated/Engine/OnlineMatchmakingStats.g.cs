@@ -21,6 +21,11 @@ public partial class OnlineMatchmakingStats : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineMatchmakingStats.
+    /// </summary>
+    public static OnlineMatchmakingStats DefaultObject => (OnlineMatchmakingStats)StaticClass().DefaultObject;
+
     internal OnlineMatchmakingStats() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_ThermalCheck_Cocky : BmSDK.BmGame.RBMAIAction_T
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ThermalCheck_Cocky.
+    /// </summary>
+    public static RBMAIAction_ThermalCheck_Cocky DefaultObject => (RBMAIAction_ThermalCheck_Cocky)StaticClass().DefaultObject;
+
     internal RBMAIAction_ThermalCheck_Cocky() { }
 
     /// <summary>

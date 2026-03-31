@@ -21,6 +21,11 @@ public partial class SeqEvent_RemoteEvent : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_RemoteEvent.
+    /// </summary>
+    public static SeqEvent_RemoteEvent DefaultObject => (SeqEvent_RemoteEvent)StaticClass().DefaultObject;
+
     internal SeqEvent_RemoteEvent() { }
 
     /// <summary>

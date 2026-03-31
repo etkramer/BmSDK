@@ -21,6 +21,11 @@ public partial class TextureRenderTargetCube : BmSDK.Engine.TextureRenderTarget,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextureRenderTargetCube.
+    /// </summary>
+    public static TextureRenderTargetCube DefaultObject => (TextureRenderTargetCube)StaticClass().DefaultObject;
+
     internal TextureRenderTargetCube() { }
 
     /// <summary>

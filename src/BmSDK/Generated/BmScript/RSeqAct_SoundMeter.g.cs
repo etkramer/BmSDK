@@ -21,6 +21,11 @@ public partial class RSeqAct_SoundMeter : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SoundMeter.
+    /// </summary>
+    public static RSeqAct_SoundMeter DefaultObject => (RSeqAct_SoundMeter)StaticClass().DefaultObject;
+
     internal RSeqAct_SoundMeter() { }
 
     /// <summary>

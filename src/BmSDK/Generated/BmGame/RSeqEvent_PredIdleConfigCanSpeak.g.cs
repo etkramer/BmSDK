@@ -21,6 +21,11 @@ public partial class RSeqEvent_PredIdleConfigCanSpeak : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PredIdleConfigCanSpeak.
+    /// </summary>
+    public static RSeqEvent_PredIdleConfigCanSpeak DefaultObject => (RSeqEvent_PredIdleConfigCanSpeak)StaticClass().DefaultObject;
+
     internal RSeqEvent_PredIdleConfigCanSpeak() { }
 
     /// <summary>

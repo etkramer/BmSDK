@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_AnimMove : BmSDK.BmGame.RSpecialMoveIn
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_AnimMove.
+    /// </summary>
+    public static RSpecialMoveInstance_AnimMove DefaultObject => (RSpecialMoveInstance_AnimMove)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_AnimMove() { }
 
     /// <summary>

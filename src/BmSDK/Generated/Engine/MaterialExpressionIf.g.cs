@@ -21,6 +21,11 @@ public partial class MaterialExpressionIf : BmSDK.Engine.MaterialExpression, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionIf.
+    /// </summary>
+    public static MaterialExpressionIf DefaultObject => (MaterialExpressionIf)StaticClass().DefaultObject;
+
     internal MaterialExpressionIf() { }
 
     /// <summary>

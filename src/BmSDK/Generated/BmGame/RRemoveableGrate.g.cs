@@ -21,6 +21,11 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRemoveableGrate.
+    /// </summary>
+    public static RRemoveableGrate DefaultObject => (RRemoveableGrate)StaticClass().DefaultObject;
+
     internal RRemoveableGrate() { }
 
     /// <summary>

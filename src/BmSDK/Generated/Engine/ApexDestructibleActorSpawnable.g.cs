@@ -21,6 +21,11 @@ public partial class ApexDestructibleActorSpawnable : BmSDK.Engine.ApexDestructi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDestructibleActorSpawnable.
+    /// </summary>
+    public static ApexDestructibleActorSpawnable DefaultObject => (ApexDestructibleActorSpawnable)StaticClass().DefaultObject;
+
     internal ApexDestructibleActorSpawnable() { }
 
     /// <summary>

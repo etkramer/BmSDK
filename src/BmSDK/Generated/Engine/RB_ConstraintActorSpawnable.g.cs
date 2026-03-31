@@ -21,6 +21,11 @@ public partial class RB_ConstraintActorSpawnable : BmSDK.Engine.RB_ConstraintAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ConstraintActorSpawnable.
+    /// </summary>
+    public static RB_ConstraintActorSpawnable DefaultObject => (RB_ConstraintActorSpawnable)StaticClass().DefaultObject;
+
     internal RB_ConstraintActorSpawnable() { }
 
     /// <summary>

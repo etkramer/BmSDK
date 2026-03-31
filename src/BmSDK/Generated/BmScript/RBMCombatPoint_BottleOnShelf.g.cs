@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_BottleOnShelf : BmSDK.BmGame.RBMCombatPoint_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_BottleOnShelf.
+    /// </summary>
+    public static RBMCombatPoint_BottleOnShelf DefaultObject => (RBMCombatPoint_BottleOnShelf)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_BottleOnShelf() { }
 
     /// <summary>

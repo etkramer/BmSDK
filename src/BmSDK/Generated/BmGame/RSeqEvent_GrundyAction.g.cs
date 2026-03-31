@@ -21,6 +21,11 @@ public partial class RSeqEvent_GrundyAction : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GrundyAction.
+    /// </summary>
+    public static RSeqEvent_GrundyAction DefaultObject => (RSeqEvent_GrundyAction)StaticClass().DefaultObject;
+
     internal RSeqEvent_GrundyAction() { }
 
     /// <summary>

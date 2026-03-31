@@ -21,6 +21,11 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BaneCharge.
+    /// </summary>
+    public static RCombatMove_BaneCharge DefaultObject => (RCombatMove_BaneCharge)StaticClass().DefaultObject;
+
     internal RCombatMove_BaneCharge() { }
 
     /// <summary>

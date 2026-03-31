@@ -21,6 +21,11 @@ public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCaptureReflectComponent.
+    /// </summary>
+    public static SceneCaptureReflectComponent DefaultObject => (SceneCaptureReflectComponent)StaticClass().DefaultObject;
+
     internal SceneCaptureReflectComponent() { }
 
     /// <summary>

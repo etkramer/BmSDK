@@ -21,6 +21,11 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DroppedPickup.
+    /// </summary>
+    public static DroppedPickup DefaultObject => (DroppedPickup)StaticClass().DefaultObject;
+
     internal DroppedPickup() { }
 
     /// <summary>

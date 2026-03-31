@@ -21,6 +21,11 @@ public partial class RSeqEvent_SecurityCameraUpdate : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SecurityCameraUpdate.
+    /// </summary>
+    public static RSeqEvent_SecurityCameraUpdate DefaultObject => (RSeqEvent_SecurityCameraUpdate)StaticClass().DefaultObject;
+
     internal RSeqEvent_SecurityCameraUpdate() { }
 
     /// <summary>

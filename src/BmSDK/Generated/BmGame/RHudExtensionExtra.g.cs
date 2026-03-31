@@ -21,6 +21,11 @@ public partial class RHudExtensionExtra : BmSDK.BmGame.RHudExtension, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionExtra.
+    /// </summary>
+    public static RHudExtensionExtra DefaultObject => (RHudExtensionExtra)StaticClass().DefaultObject;
+
     internal RHudExtensionExtra() { }
 
     /// <summary>

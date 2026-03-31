@@ -21,6 +21,11 @@ public partial class RCharacter_ClayfaceDroneSmall : BmSDK.BmGame.RCharacter_Jok
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_ClayfaceDroneSmall.
+    /// </summary>
+    public static RCharacter_ClayfaceDroneSmall DefaultObject => (RCharacter_ClayfaceDroneSmall)StaticClass().DefaultObject;
+
     internal RCharacter_ClayfaceDroneSmall() { }
 
     /// <summary>

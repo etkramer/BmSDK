@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_ReverseLedge : BmSDK.BmGame.RDmgType_Take
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_ReverseLedge.
+    /// </summary>
+    public static RDmgType_Takedown_ReverseLedge DefaultObject => (RDmgType_Takedown_ReverseLedge)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_ReverseLedge() { }
 
     /// <summary>

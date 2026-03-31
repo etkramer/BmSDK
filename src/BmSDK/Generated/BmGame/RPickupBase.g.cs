@@ -21,6 +21,11 @@ public partial class RPickupBase : BmSDK.Engine.Actor, BmSDK.BmGame.RSecretInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPickupBase.
+    /// </summary>
+    public static RPickupBase DefaultObject => (RPickupBase)StaticClass().DefaultObject;
+
     internal RPickupBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Selection : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Selection.
+    /// </summary>
+    public static Selection DefaultObject => (Selection)StaticClass().DefaultObject;
+
     internal Selection() { }
 
     /// <summary>

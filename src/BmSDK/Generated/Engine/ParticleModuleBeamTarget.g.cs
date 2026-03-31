@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamTarget.
+    /// </summary>
+    public static ParticleModuleBeamTarget DefaultObject => (ParticleModuleBeamTarget)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamTarget() { }
 
     /// <summary>

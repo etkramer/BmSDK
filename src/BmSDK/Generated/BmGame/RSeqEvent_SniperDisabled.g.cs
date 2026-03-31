@@ -21,6 +21,11 @@ public partial class RSeqEvent_SniperDisabled : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SniperDisabled.
+    /// </summary>
+    public static RSeqEvent_SniperDisabled DefaultObject => (RSeqEvent_SniperDisabled)StaticClass().DefaultObject;
+
     internal RSeqEvent_SniperDisabled() { }
 
     /// <summary>

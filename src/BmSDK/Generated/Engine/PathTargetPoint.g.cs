@@ -21,6 +21,11 @@ public partial class PathTargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathTargetPoint.
+    /// </summary>
+    public static PathTargetPoint DefaultObject => (PathTargetPoint)StaticClass().DefaultObject;
+
     internal PathTargetPoint() { }
 
     /// <summary>

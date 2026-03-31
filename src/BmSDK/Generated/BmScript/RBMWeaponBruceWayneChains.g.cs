@@ -21,6 +21,11 @@ public partial class RBMWeaponBruceWayneChains : BmSDK.BmGame.RBMWeapon, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBruceWayneChains.
+    /// </summary>
+    public static RBMWeaponBruceWayneChains DefaultObject => (RBMWeaponBruceWayneChains)StaticClass().DefaultObject;
+
     internal RBMWeaponBruceWayneChains() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMapMarker : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMapMarker.
+    /// </summary>
+    public static RSeqAct_SetMapMarker DefaultObject => (RSeqAct_SetMapMarker)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMapMarker() { }
 
     /// <summary>

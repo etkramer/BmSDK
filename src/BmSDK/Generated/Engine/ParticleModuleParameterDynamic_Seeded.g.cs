@@ -21,6 +21,11 @@ public partial class ParticleModuleParameterDynamic_Seeded : BmSDK.Engine.Partic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleParameterDynamic_Seeded.
+    /// </summary>
+    public static ParticleModuleParameterDynamic_Seeded DefaultObject => (ParticleModuleParameterDynamic_Seeded)StaticClass().DefaultObject;
+
     internal ParticleModuleParameterDynamic_Seeded() { }
 
     /// <summary>

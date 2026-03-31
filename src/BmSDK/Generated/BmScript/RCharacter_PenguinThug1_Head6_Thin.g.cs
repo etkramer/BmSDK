@@ -21,6 +21,11 @@ public partial class RCharacter_PenguinThug1_Head6_Thin : BmSDK.BmScript.RCharac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PenguinThug1_Head6_Thin.
+    /// </summary>
+    public static RCharacter_PenguinThug1_Head6_Thin DefaultObject => (RCharacter_PenguinThug1_Head6_Thin)StaticClass().DefaultObject;
+
     internal RCharacter_PenguinThug1_Head6_Thin() { }
 
     /// <summary>

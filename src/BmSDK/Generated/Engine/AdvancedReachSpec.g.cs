@@ -21,6 +21,11 @@ public partial class AdvancedReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AdvancedReachSpec.
+    /// </summary>
+    public static AdvancedReachSpec DefaultObject => (AdvancedReachSpec)StaticClass().DefaultObject;
+
     internal AdvancedReachSpec() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGrinderVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrinderVolume.
+    /// </summary>
+    public static RGrinderVolume DefaultObject => (RGrinderVolume)StaticClass().DefaultObject;
+
     internal RGrinderVolume() { }
 
     /// <summary>

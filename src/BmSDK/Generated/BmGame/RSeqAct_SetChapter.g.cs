@@ -21,6 +21,11 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetChapter.
+    /// </summary>
+    public static RSeqAct_SetChapter DefaultObject => (RSeqAct_SetChapter)StaticClass().DefaultObject;
+
     internal RSeqAct_SetChapter() { }
 
     /// <summary>

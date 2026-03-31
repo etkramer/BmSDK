@@ -21,6 +21,11 @@ public partial class RCinematicGrappleGun : BmSDK.BmScript.RGrappleGunBm, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicGrappleGun.
+    /// </summary>
+    public static RCinematicGrappleGun DefaultObject => (RCinematicGrappleGun)StaticClass().DefaultObject;
+
     internal RCinematicGrappleGun() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionLightVector : BmSDK.Engine.MaterialExpres
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLightVector.
+    /// </summary>
+    public static MaterialExpressionLightVector DefaultObject => (MaterialExpressionLightVector)StaticClass().DefaultObject;
+
     internal MaterialExpressionLightVector() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Sub_SearchlightCower : BmSDK.BmGame.RAlertEventCoordin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Sub_SearchlightCower.
+    /// </summary>
+    public static RAEC_Sub_SearchlightCower DefaultObject => (RAEC_Sub_SearchlightCower)StaticClass().DefaultObject;
+
     internal RAEC_Sub_SearchlightCower() { }
 
     /// <summary>

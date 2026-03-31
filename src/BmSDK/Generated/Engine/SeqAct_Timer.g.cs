@@ -21,6 +21,11 @@ public partial class SeqAct_Timer : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Timer.
+    /// </summary>
+    public static SeqAct_Timer DefaultObject => (SeqAct_Timer)StaticClass().DefaultObject;
+
     internal SeqAct_Timer() { }
 
     /// <summary>

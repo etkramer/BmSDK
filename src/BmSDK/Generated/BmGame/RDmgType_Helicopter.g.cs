@@ -21,6 +21,11 @@ public partial class RDmgType_Helicopter : BmSDK.BmGame.RDmgType_Ranged, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Helicopter.
+    /// </summary>
+    public static RDmgType_Helicopter DefaultObject => (RDmgType_Helicopter)StaticClass().DefaultObject;
+
     internal RDmgType_Helicopter() { }
 
     /// <summary>

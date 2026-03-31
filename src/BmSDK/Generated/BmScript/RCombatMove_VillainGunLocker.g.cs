@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainGunLocker : BmSDK.BmGame.RCombatMove, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainGunLocker.
+    /// </summary>
+    public static RCombatMove_VillainGunLocker DefaultObject => (RCombatMove_VillainGunLocker)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainGunLocker() { }
 
     /// <summary>

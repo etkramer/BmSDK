@@ -21,6 +21,11 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_PDLCHarleyAttack.
+    /// </summary>
+    public static RCombatMove_PDLCHarleyAttack DefaultObject => (RCombatMove_PDLCHarleyAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_PDLCHarleyAttack() { }
 
     /// <summary>

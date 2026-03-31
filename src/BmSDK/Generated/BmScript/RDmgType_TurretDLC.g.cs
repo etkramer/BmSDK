@@ -21,6 +21,11 @@ public partial class RDmgType_TurretDLC : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_TurretDLC.
+    /// </summary>
+    public static RDmgType_TurretDLC DefaultObject => (RDmgType_TurretDLC)StaticClass().DefaultObject;
+
     internal RDmgType_TurretDLC() { }
 
     /// <summary>

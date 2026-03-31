@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatKnife : BmSDK.BmGame.RBMBehaviour_Combat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatKnife.
+    /// </summary>
+    public static RBMBehaviour_CombatKnife DefaultObject => (RBMBehaviour_CombatKnife)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatKnife() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleEventReceiverSpawn.
+    /// </summary>
+    public static ParticleModuleEventReceiverSpawn DefaultObject => (ParticleModuleEventReceiverSpawn)StaticClass().DefaultObject;
+
     internal ParticleModuleEventReceiverSpawn() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_GrundySwing : BmSDK.BmGame.RDmgType_Grundy, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GrundySwing.
+    /// </summary>
+    public static RDmgType_GrundySwing DefaultObject => (RDmgType_GrundySwing)StaticClass().DefaultObject;
+
     internal RDmgType_GrundySwing() { }
 
     /// <summary>

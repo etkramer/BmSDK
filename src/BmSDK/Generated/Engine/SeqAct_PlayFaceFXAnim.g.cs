@@ -21,6 +21,11 @@ public partial class SeqAct_PlayFaceFXAnim : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_PlayFaceFXAnim.
+    /// </summary>
+    public static SeqAct_PlayFaceFXAnim DefaultObject => (SeqAct_PlayFaceFXAnim)StaticClass().DefaultObject;
+
     internal SeqAct_PlayFaceFXAnim() { }
 
     /// <summary>

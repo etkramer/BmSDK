@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_PlaceGooMine : BmSDK.BmGame.RSpecialMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_PlaceGooMine.
+    /// </summary>
+    public static RSpecialMoveConfig_PlaceGooMine DefaultObject => (RSpecialMoveConfig_PlaceGooMine)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_PlaceGooMine() { }
 
     /// <summary>

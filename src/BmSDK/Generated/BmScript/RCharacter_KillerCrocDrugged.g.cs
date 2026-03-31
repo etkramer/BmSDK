@@ -21,6 +21,11 @@ public partial class RCharacter_KillerCrocDrugged : BmSDK.BmGame.RCharacter, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_KillerCrocDrugged.
+    /// </summary>
+    public static RCharacter_KillerCrocDrugged DefaultObject => (RCharacter_KillerCrocDrugged)StaticClass().DefaultObject;
+
     internal RCharacter_KillerCrocDrugged() { }
 
     /// <summary>

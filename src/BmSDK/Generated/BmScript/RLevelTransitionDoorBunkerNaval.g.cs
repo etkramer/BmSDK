@@ -21,6 +21,11 @@ public partial class RLevelTransitionDoorBunkerNaval : BmSDK.BmScript.RLevelTran
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionDoorBunkerNaval.
+    /// </summary>
+    public static RLevelTransitionDoorBunkerNaval DefaultObject => (RLevelTransitionDoorBunkerNaval)StaticClass().DefaultObject;
+
     internal RLevelTransitionDoorBunkerNaval() { }
 
     /// <summary>

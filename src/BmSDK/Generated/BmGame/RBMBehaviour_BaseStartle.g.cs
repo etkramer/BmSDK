@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BaseStartle.
+    /// </summary>
+    public static RBMBehaviour_BaseStartle DefaultObject => (RBMBehaviour_BaseStartle)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BaseStartle() { }
 
     /// <summary>

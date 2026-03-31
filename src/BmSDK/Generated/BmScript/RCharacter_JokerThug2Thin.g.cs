@@ -21,6 +21,11 @@ public partial class RCharacter_JokerThug2Thin : BmSDK.BmGame.RCharacter_JokerTh
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerThug2Thin.
+    /// </summary>
+    public static RCharacter_JokerThug2Thin DefaultObject => (RCharacter_JokerThug2Thin)StaticClass().DefaultObject;
+
     internal RCharacter_JokerThug2Thin() { }
 
     /// <summary>

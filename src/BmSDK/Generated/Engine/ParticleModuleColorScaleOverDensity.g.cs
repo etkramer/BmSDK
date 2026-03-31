@@ -21,6 +21,11 @@ public partial class ParticleModuleColorScaleOverDensity : BmSDK.Engine.Particle
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleColorScaleOverDensity.
+    /// </summary>
+    public static ParticleModuleColorScaleOverDensity DefaultObject => (ParticleModuleColorScaleOverDensity)StaticClass().DefaultObject;
+
     internal ParticleModuleColorScaleOverDensity() { }
 
     /// <summary>

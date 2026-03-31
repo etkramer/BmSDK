@@ -21,6 +21,11 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AIController.
+    /// </summary>
+    public static AIController DefaultObject => (AIController)StaticClass().DefaultObject;
+
     internal AIController() { }
 
     /// <summary>

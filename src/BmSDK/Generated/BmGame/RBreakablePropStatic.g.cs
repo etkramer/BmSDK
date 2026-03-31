@@ -21,6 +21,11 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakablePropStatic.
+    /// </summary>
+    public static RBreakablePropStatic DefaultObject => (RBreakablePropStatic)StaticClass().DefaultObject;
+
     internal RBreakablePropStatic() { }
 
     /// <summary>

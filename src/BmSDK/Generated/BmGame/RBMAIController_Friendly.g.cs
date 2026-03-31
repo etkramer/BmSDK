@@ -21,6 +21,11 @@ public partial class RBMAIController_Friendly : BmSDK.BmGame.RBMAIController, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIController_Friendly.
+    /// </summary>
+    public static RBMAIController_Friendly DefaultObject => (RBMAIController_Friendly)StaticClass().DefaultObject;
+
     internal RBMAIController_Friendly() { }
 
     /// <summary>

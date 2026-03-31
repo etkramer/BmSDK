@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_GalleryImage : BmSDK.BmGame.RGFxMovieUI, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_GalleryImage.
+    /// </summary>
+    public static RGFxMovieUI_GalleryImage DefaultObject => (RGFxMovieUI_GalleryImage)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_GalleryImage() { }
 
     /// <summary>

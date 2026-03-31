@@ -21,6 +21,11 @@ public partial class PhysicsLODVerticalEmitter : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PhysicsLODVerticalEmitter.
+    /// </summary>
+    public static PhysicsLODVerticalEmitter DefaultObject => (PhysicsLODVerticalEmitter)StaticClass().DefaultObject;
+
     internal PhysicsLODVerticalEmitter() { }
 
     /// <summary>

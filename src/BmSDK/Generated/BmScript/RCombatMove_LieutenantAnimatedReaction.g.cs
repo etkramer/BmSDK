@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantAnimatedReaction : BmSDK.BmGame.RComb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantAnimatedReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantAnimatedReaction DefaultObject => (RCombatMove_LieutenantAnimatedReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantAnimatedReaction() { }
 
     /// <summary>

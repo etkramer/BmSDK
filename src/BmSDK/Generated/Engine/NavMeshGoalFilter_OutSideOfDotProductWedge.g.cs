@@ -21,6 +21,11 @@ public partial class NavMeshGoalFilter_OutSideOfDotProductWedge : BmSDK.Engine.N
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoalFilter_OutSideOfDotProductWedge.
+    /// </summary>
+    public static NavMeshGoalFilter_OutSideOfDotProductWedge DefaultObject => (NavMeshGoalFilter_OutSideOfDotProductWedge)StaticClass().DefaultObject;
+
     internal NavMeshGoalFilter_OutSideOfDotProductWedge() { }
 
     /// <summary>

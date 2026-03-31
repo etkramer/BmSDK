@@ -21,6 +21,11 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Footstep.
+    /// </summary>
+    public static RAnimNotify_Footstep DefaultObject => (RAnimNotify_Footstep)StaticClass().DefaultObject;
+
     internal RAnimNotify_Footstep() { }
 
     /// <summary>

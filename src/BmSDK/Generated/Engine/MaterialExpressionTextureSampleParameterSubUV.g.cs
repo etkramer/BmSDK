@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureSampleParameterSubUV : BmSDK.Engin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureSampleParameterSubUV.
+    /// </summary>
+    public static MaterialExpressionTextureSampleParameterSubUV DefaultObject => (MaterialExpressionTextureSampleParameterSubUV)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureSampleParameterSubUV() { }
 
     /// <summary>

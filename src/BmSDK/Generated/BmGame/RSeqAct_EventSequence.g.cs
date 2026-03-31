@@ -21,6 +21,11 @@ public partial class RSeqAct_EventSequence : BmSDK.Engine.SeqAct_Latent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EventSequence.
+    /// </summary>
+    public static RSeqAct_EventSequence DefaultObject => (RSeqAct_EventSequence)StaticClass().DefaultObject;
+
     internal RSeqAct_EventSequence() { }
 
     /// <summary>

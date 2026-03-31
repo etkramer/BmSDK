@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RipOffGrate : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RipOffGrate.
+    /// </summary>
+    public static RSpecialMoveConfig_RipOffGrate DefaultObject => (RSpecialMoveConfig_RipOffGrate)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RipOffGrate() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_GelMineExplosion.
+    /// </summary>
+    public static RAEC_GelMineExplosion DefaultObject => (RAEC_GelMineExplosion)StaticClass().DefaultObject;
+
     internal RAEC_GelMineExplosion() { }
 
     /// <summary>

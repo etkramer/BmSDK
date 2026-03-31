@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ChurchHarley : BmSDK.BmGame.RBMBehaviour_Comba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ChurchHarley.
+    /// </summary>
+    public static RBMBehaviour_ChurchHarley DefaultObject => (RBMBehaviour_ChurchHarley)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ChurchHarley() { }
 
     /// <summary>

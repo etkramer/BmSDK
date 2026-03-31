@@ -21,6 +21,11 @@ public partial class RNightwingSticksBounceCamera : BmSDK.BmGame.RBatarangCamera
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingSticksBounceCamera.
+    /// </summary>
+    public static RNightwingSticksBounceCamera DefaultObject => (RNightwingSticksBounceCamera)StaticClass().DefaultObject;
+
     internal RNightwingSticksBounceCamera() { }
 
     /// <summary>

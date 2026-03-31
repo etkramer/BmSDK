@@ -21,6 +21,11 @@ public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSpawner.
+    /// </summary>
+    public static RCrowdSpawner DefaultObject => (RCrowdSpawner)StaticClass().DefaultObject;
+
     internal RCrowdSpawner() { }
 
     /// <summary>

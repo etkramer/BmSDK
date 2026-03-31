@@ -21,6 +21,11 @@ public partial class RBatclawPipeCoverBase : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatclawPipeCoverBase.
+    /// </summary>
+    public static RBatclawPipeCoverBase DefaultObject => (RBatclawPipeCoverBase)StaticClass().DefaultObject;
+
     internal RBatclawPipeCoverBase() { }
 
     /// <summary>

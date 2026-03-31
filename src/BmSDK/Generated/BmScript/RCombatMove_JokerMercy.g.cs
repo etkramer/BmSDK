@@ -21,6 +21,11 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_JokerMercy.
+    /// </summary>
+    public static RCombatMove_JokerMercy DefaultObject => (RCombatMove_JokerMercy)StaticClass().DefaultObject;
+
     internal RCombatMove_JokerMercy() { }
 
     /// <summary>

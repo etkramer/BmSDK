@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetCaltrops : BmSDK.BmGame.RCombatMove_Batma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetCaltrops.
+    /// </summary>
+    public static RCombatMove_GadgetCaltrops DefaultObject => (RCombatMove_GadgetCaltrops)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetCaltrops() { }
 
     /// <summary>

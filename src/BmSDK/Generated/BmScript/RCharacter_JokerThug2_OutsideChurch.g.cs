@@ -21,6 +21,11 @@ public partial class RCharacter_JokerThug2_OutsideChurch : BmSDK.BmScript.RChara
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerThug2_OutsideChurch.
+    /// </summary>
+    public static RCharacter_JokerThug2_OutsideChurch DefaultObject => (RCharacter_JokerThug2_OutsideChurch)StaticClass().DefaultObject;
+
     internal RCharacter_JokerThug2_OutsideChurch() { }
 
     /// <summary>

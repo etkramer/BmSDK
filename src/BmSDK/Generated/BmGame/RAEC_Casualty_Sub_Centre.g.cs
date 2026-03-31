@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_Centre : BmSDK.BmGame.RAlertEventCoordina
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_Centre.
+    /// </summary>
+    public static RAEC_Casualty_Sub_Centre DefaultObject => (RAEC_Casualty_Sub_Centre)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_Centre() { }
 
     /// <summary>

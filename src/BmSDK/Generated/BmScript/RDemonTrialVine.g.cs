@@ -21,6 +21,11 @@ public partial class RDemonTrialVine : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDemonTrialVine.
+    /// </summary>
+    public static RDemonTrialVine DefaultObject => (RDemonTrialVine)StaticClass().DefaultObject;
+
     internal RDemonTrialVine() { }
 
     /// <summary>

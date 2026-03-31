@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanEvade.
+    /// </summary>
+    public static RCombatMove_BatmanEvade DefaultObject => (RCombatMove_BatmanEvade)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanEvade() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkAudioActionParameter : BmSDK.Engine.AkAudioAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioActionParameter.
+    /// </summary>
+    public static AkAudioActionParameter DefaultObject => (AkAudioActionParameter)StaticClass().DefaultObject;
+
     internal AkAudioActionParameter() { }
 
     /// <summary>

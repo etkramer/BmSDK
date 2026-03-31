@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FriendlyPatrolNavMesh.
+    /// </summary>
+    public static RBMBehaviour_FriendlyPatrolNavMesh DefaultObject => (RBMBehaviour_FriendlyPatrolNavMesh)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FriendlyPatrolNavMesh() { }
 
     /// <summary>

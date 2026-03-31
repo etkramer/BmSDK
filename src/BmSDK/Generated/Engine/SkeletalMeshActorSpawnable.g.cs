@@ -21,6 +21,11 @@ public partial class SkeletalMeshActorSpawnable : BmSDK.Engine.SkeletalMeshActor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMeshActorSpawnable.
+    /// </summary>
+    public static SkeletalMeshActorSpawnable DefaultObject => (SkeletalMeshActorSpawnable)StaticClass().DefaultObject;
+
     internal SkeletalMeshActorSpawnable() { }
 
     /// <summary>

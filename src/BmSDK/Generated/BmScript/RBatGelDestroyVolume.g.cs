@@ -21,6 +21,11 @@ public partial class RBatGelDestroyVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatGelDestroyVolume.
+    /// </summary>
+    public static RBatGelDestroyVolume DefaultObject => (RBatGelDestroyVolume)StaticClass().DefaultObject;
+
     internal RBatGelDestroyVolume() { }
 
     /// <summary>

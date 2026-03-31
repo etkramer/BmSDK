@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DoctorWithPipe : BmSDK.BmGame.RBMBehaviour_Com
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DoctorWithPipe.
+    /// </summary>
+    public static RBMBehaviour_DoctorWithPipe DefaultObject => (RBMBehaviour_DoctorWithPipe)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DoctorWithPipe() { }
 
     /// <summary>

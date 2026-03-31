@@ -21,6 +21,11 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmashableProp.
+    /// </summary>
+    public static RSmashableProp DefaultObject => (RSmashableProp)StaticClass().DefaultObject;
+
     internal RSmashableProp() { }
 
     /// <summary>

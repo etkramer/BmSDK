@@ -21,6 +21,11 @@ public partial class GFxFSCmdHandler : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxFSCmdHandler.
+    /// </summary>
+    public static GFxFSCmdHandler DefaultObject => (GFxFSCmdHandler)StaticClass().DefaultObject;
+
     internal GFxFSCmdHandler() { }
 
     /// <summary>

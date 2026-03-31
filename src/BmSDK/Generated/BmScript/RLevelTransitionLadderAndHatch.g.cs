@@ -21,6 +21,11 @@ public partial class RLevelTransitionLadderAndHatch : BmSDK.BmGame.RLevelTransit
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionLadderAndHatch.
+    /// </summary>
+    public static RLevelTransitionLadderAndHatch DefaultObject => (RLevelTransitionLadderAndHatch)StaticClass().DefaultObject;
+
     internal RLevelTransitionLadderAndHatch() { }
 
     /// <summary>

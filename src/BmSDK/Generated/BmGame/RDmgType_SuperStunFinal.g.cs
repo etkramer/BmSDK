@@ -21,6 +21,11 @@ public partial class RDmgType_SuperStunFinal : BmSDK.BmGame.RDmgType_SuperStun, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SuperStunFinal.
+    /// </summary>
+    public static RDmgType_SuperStunFinal DefaultObject => (RDmgType_SuperStunFinal)StaticClass().DefaultObject;
+
     internal RDmgType_SuperStunFinal() { }
 
     /// <summary>

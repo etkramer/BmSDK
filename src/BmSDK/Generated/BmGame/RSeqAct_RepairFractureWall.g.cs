@@ -21,6 +21,11 @@ public partial class RSeqAct_RepairFractureWall : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RepairFractureWall.
+    /// </summary>
+    public static RSeqAct_RepairFractureWall DefaultObject => (RSeqAct_RepairFractureWall)StaticClass().DefaultObject;
+
     internal RSeqAct_RepairFractureWall() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_HelicopterDialogueTrigger : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HelicopterDialogueTrigger.
+    /// </summary>
+    public static RSeqEvent_HelicopterDialogueTrigger DefaultObject => (RSeqEvent_HelicopterDialogueTrigger)StaticClass().DefaultObject;
+
     internal RSeqEvent_HelicopterDialogueTrigger() { }
 
     /// <summary>

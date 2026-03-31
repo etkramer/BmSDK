@@ -21,6 +21,11 @@ public partial class RAEC_Smoke_Sub_Armed : BmSDK.BmGame.RAlertEventCoordinatorB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Smoke_Sub_Armed.
+    /// </summary>
+    public static RAEC_Smoke_Sub_Armed DefaultObject => (RAEC_Smoke_Sub_Armed)StaticClass().DefaultObject;
+
     internal RAEC_Smoke_Sub_Armed() { }
 
     /// <summary>

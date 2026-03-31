@@ -21,6 +21,11 @@ public partial class RCinematicBatman : BmSDK.BmGame.RCinematicBatmanBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicBatman.
+    /// </summary>
+    public static RCinematicBatman DefaultObject => (RCinematicBatman)StaticClass().DefaultObject;
+
     internal RCinematicBatman() { }
 
     /// <summary>

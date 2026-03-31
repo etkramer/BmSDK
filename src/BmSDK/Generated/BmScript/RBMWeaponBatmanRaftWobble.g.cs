@@ -21,6 +21,11 @@ public partial class RBMWeaponBatmanRaftWobble : BmSDK.BmGame.RBMWeapon, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBatmanRaftWobble.
+    /// </summary>
+    public static RBMWeaponBatmanRaftWobble DefaultObject => (RBMWeaponBatmanRaftWobble)StaticClass().DefaultObject;
+
     internal RBMWeaponBatmanRaftWobble() { }
 
     /// <summary>

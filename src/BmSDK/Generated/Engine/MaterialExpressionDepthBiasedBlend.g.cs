@@ -21,6 +21,11 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDepthBiasedBlend.
+    /// </summary>
+    public static MaterialExpressionDepthBiasedBlend DefaultObject => (MaterialExpressionDepthBiasedBlend)StaticClass().DefaultObject;
+
     internal MaterialExpressionDepthBiasedBlend() { }
 
     /// <summary>

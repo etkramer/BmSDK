@@ -21,6 +21,11 @@ public partial class RSeqAct_FixRoomNameForAR : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FixRoomNameForAR.
+    /// </summary>
+    public static RSeqAct_FixRoomNameForAR DefaultObject => (RSeqAct_FixRoomNameForAR)StaticClass().DefaultObject;
+
     internal RSeqAct_FixRoomNameForAR() { }
 
     /// <summary>

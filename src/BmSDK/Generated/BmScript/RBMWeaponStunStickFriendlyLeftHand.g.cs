@@ -21,6 +21,11 @@ public partial class RBMWeaponStunStickFriendlyLeftHand : BmSDK.BmScript.RBMWeap
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponStunStickFriendlyLeftHand.
+    /// </summary>
+    public static RBMWeaponStunStickFriendlyLeftHand DefaultObject => (RBMWeaponStunStickFriendlyLeftHand)StaticClass().DefaultObject;
+
     internal RBMWeaponStunStickFriendlyLeftHand() { }
 
     /// <summary>

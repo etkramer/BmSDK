@@ -21,6 +21,11 @@ public partial class RInGameCinematicCam : BmSDK.BmGame.RCameraActor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInGameCinematicCam.
+    /// </summary>
+    public static RInGameCinematicCam DefaultObject => (RInGameCinematicCam)StaticClass().DefaultObject;
+
     internal RInGameCinematicCam() { }
 
     /// <summary>

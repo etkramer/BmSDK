@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_GrappleBoostTakedown : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_GrappleBoostTakedown.
+    /// </summary>
+    public static RStealthTakedownStage_GrappleBoostTakedown DefaultObject => (RStealthTakedownStage_GrappleBoostTakedown)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_GrappleBoostTakedown() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_CombatRifle : BmSDK.BmGame.RDmgType_Rifle, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CombatRifle.
+    /// </summary>
+    public static RDmgType_CombatRifle DefaultObject => (RDmgType_CombatRifle)StaticClass().DefaultObject;
+
     internal RDmgType_CombatRifle() { }
 
     /// <summary>

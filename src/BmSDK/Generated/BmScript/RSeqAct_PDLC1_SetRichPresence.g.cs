@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC1_SetRichPresence : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC1_SetRichPresence.
+    /// </summary>
+    public static RSeqAct_PDLC1_SetRichPresence DefaultObject => (RSeqAct_PDLC1_SetRichPresence)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC1_SetRichPresence() { }
 
     /// <summary>

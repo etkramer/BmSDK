@@ -21,6 +21,11 @@ public partial class RRasSwordAttackBladeBase : BmSDK.Engine.Actor, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRasSwordAttackBladeBase.
+    /// </summary>
+    public static RRasSwordAttackBladeBase DefaultObject => (RRasSwordAttackBladeBase)StaticClass().DefaultObject;
+
     internal RRasSwordAttackBladeBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRCBatarangViewPostProcess : BmSDK.BmGame.RViewPostProcess,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRCBatarangViewPostProcess.
+    /// </summary>
+    public static RRCBatarangViewPostProcess DefaultObject => (RRCBatarangViewPostProcess)StaticClass().DefaultObject;
+
     internal RRCBatarangViewPostProcess() { }
 
     /// <summary>

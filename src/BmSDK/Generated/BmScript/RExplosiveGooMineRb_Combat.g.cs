@@ -21,6 +21,11 @@ public partial class RExplosiveGooMineRb_Combat : BmSDK.BmScript.RExplosiveGooMi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExplosiveGooMineRb_Combat.
+    /// </summary>
+    public static RExplosiveGooMineRb_Combat DefaultObject => (RExplosiveGooMineRb_Combat)StaticClass().DefaultObject;
+
     internal RExplosiveGooMineRb_Combat() { }
 
     /// <summary>

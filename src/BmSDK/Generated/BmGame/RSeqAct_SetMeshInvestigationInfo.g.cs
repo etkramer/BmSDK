@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMeshInvestigationInfo : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMeshInvestigationInfo.
+    /// </summary>
+    public static RSeqAct_SetMeshInvestigationInfo DefaultObject => (RSeqAct_SetMeshInvestigationInfo)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMeshInvestigationInfo() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StopPlayerUsingGadgets.
+    /// </summary>
+    public static RSeqAct_StopPlayerUsingGadgets DefaultObject => (RSeqAct_StopPlayerUsingGadgets)StaticClass().DefaultObject;
+
     internal RSeqAct_StopPlayerUsingGadgets() { }
 
     /// <summary>

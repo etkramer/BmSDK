@@ -21,6 +21,11 @@ public partial class RDmgType_BeatDownEnd : BmSDK.BmGame.RDmgType_BeatDown, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BeatDownEnd.
+    /// </summary>
+    public static RDmgType_BeatDownEnd DefaultObject => (RDmgType_BeatDownEnd)StaticClass().DefaultObject;
+
     internal RDmgType_BeatDownEnd() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_HeavyStrikeUnblockable : BmSDK.BmGame.RDmgType_Hea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HeavyStrikeUnblockable.
+    /// </summary>
+    public static RDmgType_HeavyStrikeUnblockable DefaultObject => (RDmgType_HeavyStrikeUnblockable)StaticClass().DefaultObject;
+
     internal RDmgType_HeavyStrikeUnblockable() { }
 
     /// <summary>

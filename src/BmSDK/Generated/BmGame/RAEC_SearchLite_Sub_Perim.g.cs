@@ -21,6 +21,11 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAEC_Search_Sub, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SearchLite_Sub_Perim.
+    /// </summary>
+    public static RAEC_SearchLite_Sub_Perim DefaultObject => (RAEC_SearchLite_Sub_Perim)StaticClass().DefaultObject;
+
     internal RAEC_SearchLite_Sub_Perim() { }
 
     /// <summary>

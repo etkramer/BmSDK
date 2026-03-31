@@ -21,6 +21,11 @@ public partial class RCharacter_JokerThug1_MaskPhysics : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerThug1_MaskPhysics.
+    /// </summary>
+    public static RCharacter_JokerThug1_MaskPhysics DefaultObject => (RCharacter_JokerThug1_MaskPhysics)StaticClass().DefaultObject;
+
     internal RCharacter_JokerThug1_MaskPhysics() { }
 
     /// <summary>

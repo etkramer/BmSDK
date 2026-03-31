@@ -21,6 +21,11 @@ public partial class ByteProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ByteProperty.
+    /// </summary>
+    public static ByteProperty DefaultObject => (ByteProperty)StaticClass().DefaultObject;
+
     internal ByteProperty() { }
 
     /// <summary>

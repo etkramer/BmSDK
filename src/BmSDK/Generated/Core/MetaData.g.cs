@@ -21,6 +21,11 @@ public partial class MetaData : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MetaData.
+    /// </summary>
+    public static MetaData DefaultObject => (MetaData)StaticClass().DefaultObject;
+
     internal MetaData() { }
 
     /// <summary>

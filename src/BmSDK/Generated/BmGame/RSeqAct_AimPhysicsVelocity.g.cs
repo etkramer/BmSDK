@@ -21,6 +21,11 @@ public partial class RSeqAct_AimPhysicsVelocity : BmSDK.BmGame.RSeqAct_SetPhysic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AimPhysicsVelocity.
+    /// </summary>
+    public static RSeqAct_AimPhysicsVelocity DefaultObject => (RSeqAct_AimPhysicsVelocity)StaticClass().DefaultObject;
+
     internal RSeqAct_AimPhysicsVelocity() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayRefConversation : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayRefConversation.
+    /// </summary>
+    public static RSeqAct_PlayRefConversation DefaultObject => (RSeqAct_PlayRefConversation)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayRefConversation() { }
 
     /// <summary>

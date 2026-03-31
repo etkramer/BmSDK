@@ -21,6 +21,11 @@ public partial class RSeqAct_LoadCapeAnims : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LoadCapeAnims.
+    /// </summary>
+    public static RSeqAct_LoadCapeAnims DefaultObject => (RSeqAct_LoadCapeAnims)StaticClass().DefaultObject;
+
     internal RSeqAct_LoadCapeAnims() { }
 
     /// <summary>

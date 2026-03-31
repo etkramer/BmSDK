@@ -21,6 +21,11 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticDoor.
+    /// </summary>
+    public static RMagneticDoor DefaultObject => (RMagneticDoor)StaticClass().DefaultObject;
+
     internal RMagneticDoor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockTapes : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockTapes.
+    /// </summary>
+    public static RSeqAct_UnlockTapes DefaultObject => (RSeqAct_UnlockTapes)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockTapes() { }
 
     /// <summary>

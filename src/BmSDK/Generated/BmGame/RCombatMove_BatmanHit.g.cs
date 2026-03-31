@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanHit : BmSDK.BmGame.RCombatMove, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanHit.
+    /// </summary>
+    public static RCombatMove_BatmanHit DefaultObject => (RCombatMove_BatmanHit)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanHit() { }
 
     /// <summary>

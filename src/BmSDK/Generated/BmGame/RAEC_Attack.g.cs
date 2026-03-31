@@ -21,6 +21,11 @@ public partial class RAEC_Attack : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack.
+    /// </summary>
+    public static RAEC_Attack DefaultObject => (RAEC_Attack)StaticClass().DefaultObject;
+
     internal RAEC_Attack() { }
 
     /// <summary>

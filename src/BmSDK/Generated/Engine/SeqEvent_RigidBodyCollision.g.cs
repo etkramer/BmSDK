@@ -21,6 +21,11 @@ public partial class SeqEvent_RigidBodyCollision : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_RigidBodyCollision.
+    /// </summary>
+    public static SeqEvent_RigidBodyCollision DefaultObject => (SeqEvent_RigidBodyCollision)StaticClass().DefaultObject;
+
     internal SeqEvent_RigidBodyCollision() { }
 
     /// <summary>

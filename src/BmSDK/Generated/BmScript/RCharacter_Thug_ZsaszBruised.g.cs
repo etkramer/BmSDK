@@ -21,6 +21,11 @@ public partial class RCharacter_Thug_ZsaszBruised : BmSDK.BmScript.RCharacter_Th
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Thug_ZsaszBruised.
+    /// </summary>
+    public static RCharacter_Thug_ZsaszBruised DefaultObject => (RCharacter_Thug_ZsaszBruised)StaticClass().DefaultObject;
+
     internal RCharacter_Thug_ZsaszBruised() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_PlacingSnapFlash : BmSDK.Engine.SequenceEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PlacingSnapFlash.
+    /// </summary>
+    public static RSeqEvent_PlacingSnapFlash DefaultObject => (RSeqEvent_PlacingSnapFlash)StaticClass().DefaultObject;
+
     internal RSeqEvent_PlacingSnapFlash() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RobinPlaceStickyBomb : BmSDK.BmGame.RSpe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RobinPlaceStickyBomb.
+    /// </summary>
+    public static RSpecialMoveConfig_RobinPlaceStickyBomb DefaultObject => (RSpecialMoveConfig_RobinPlaceStickyBomb)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RobinPlaceStickyBomb() { }
 
     /// <summary>

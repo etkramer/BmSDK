@@ -21,6 +21,11 @@ public partial class SeqAct_GetProperty : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_GetProperty.
+    /// </summary>
+    public static SeqAct_GetProperty DefaultObject => (SeqAct_GetProperty)StaticClass().DefaultObject;
+
     internal SeqAct_GetProperty() { }
 
     /// <summary>

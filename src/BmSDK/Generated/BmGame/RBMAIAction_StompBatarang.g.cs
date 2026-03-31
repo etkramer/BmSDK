@@ -21,6 +21,11 @@ public partial class RBMAIAction_StompBatarang : BmSDK.BmGame.RBMAIAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_StompBatarang.
+    /// </summary>
+    public static RBMAIAction_StompBatarang DefaultObject => (RBMAIAction_StompBatarang)StaticClass().DefaultObject;
+
     internal RBMAIAction_StompBatarang() { }
 
     /// <summary>

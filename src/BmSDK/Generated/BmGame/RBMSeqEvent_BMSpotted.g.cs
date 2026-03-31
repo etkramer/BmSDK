@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_BMSpotted : BmSDK.BmGame.RBMSeqEvent_BehaviourR
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_BMSpotted.
+    /// </summary>
+    public static RBMSeqEvent_BMSpotted DefaultObject => (RBMSeqEvent_BMSpotted)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_BMSpotted() { }
 
     /// <summary>

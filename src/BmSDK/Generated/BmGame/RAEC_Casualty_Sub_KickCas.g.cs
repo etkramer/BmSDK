@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_KickCas.
+    /// </summary>
+    public static RAEC_Casualty_Sub_KickCas DefaultObject => (RAEC_Casualty_Sub_KickCas)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_KickCas() { }
 
     /// <summary>

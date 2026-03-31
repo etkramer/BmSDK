@@ -21,6 +21,11 @@ public partial class RMagneticProp : BmSDK.Engine.KActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticProp.
+    /// </summary>
+    public static RMagneticProp DefaultObject => (RMagneticProp)StaticClass().DefaultObject;
+
     internal RMagneticProp() { }
 
     /// <summary>

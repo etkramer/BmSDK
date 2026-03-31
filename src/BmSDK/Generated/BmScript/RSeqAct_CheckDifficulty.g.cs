@@ -21,6 +21,11 @@ public partial class RSeqAct_CheckDifficulty : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CheckDifficulty.
+    /// </summary>
+    public static RSeqAct_CheckDifficulty DefaultObject => (RSeqAct_CheckDifficulty)StaticClass().DefaultObject;
+
     internal RSeqAct_CheckDifficulty() { }
 
     /// <summary>

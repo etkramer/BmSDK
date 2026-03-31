@@ -21,6 +21,11 @@ public partial class RDmgType_BoilingWater : BmSDK.BmGame.RDmgType_Fell, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BoilingWater.
+    /// </summary>
+    public static RDmgType_BoilingWater DefaultObject => (RDmgType_BoilingWater)StaticClass().DefaultObject;
+
     internal RDmgType_BoilingWater() { }
 
     /// <summary>

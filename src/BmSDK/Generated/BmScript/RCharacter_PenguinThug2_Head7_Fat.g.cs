@@ -21,6 +21,11 @@ public partial class RCharacter_PenguinThug2_Head7_Fat : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PenguinThug2_Head7_Fat.
+    /// </summary>
+    public static RCharacter_PenguinThug2_Head7_Fat DefaultObject => (RCharacter_PenguinThug2_Head7_Fat)StaticClass().DefaultObject;
+
     internal RCharacter_PenguinThug2_Head7_Fat() { }
 
     /// <summary>

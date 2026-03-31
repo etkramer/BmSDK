@@ -21,6 +21,11 @@ public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ChildConnection.
+    /// </summary>
+    public static ChildConnection DefaultObject => (ChildConnection)StaticClass().DefaultObject;
+
     internal ChildConnection() { }
 
     /// <summary>

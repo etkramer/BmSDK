@@ -21,6 +21,11 @@ public partial class RSeqAct_MagneticBlastResetPlayer : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MagneticBlastResetPlayer.
+    /// </summary>
+    public static RSeqAct_MagneticBlastResetPlayer DefaultObject => (RSeqAct_MagneticBlastResetPlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_MagneticBlastResetPlayer() { }
 
     /// <summary>

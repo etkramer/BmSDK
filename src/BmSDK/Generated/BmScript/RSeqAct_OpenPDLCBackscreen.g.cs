@@ -21,6 +21,11 @@ public partial class RSeqAct_OpenPDLCBackscreen : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_OpenPDLCBackscreen.
+    /// </summary>
+    public static RSeqAct_OpenPDLCBackscreen DefaultObject => (RSeqAct_OpenPDLCBackscreen)StaticClass().DefaultObject;
+
     internal RSeqAct_OpenPDLCBackscreen() { }
 
     /// <summary>

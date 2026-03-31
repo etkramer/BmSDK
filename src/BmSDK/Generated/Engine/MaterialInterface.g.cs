@@ -21,6 +21,11 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialInterface.
+    /// </summary>
+    public static MaterialInterface DefaultObject => (MaterialInterface)StaticClass().DefaultObject;
+
     internal MaterialInterface() { }
 
     /// <summary>

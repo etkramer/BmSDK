@@ -21,6 +21,11 @@ public partial class RFrameRateKiller : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFrameRateKiller.
+    /// </summary>
+    public static RFrameRateKiller DefaultObject => (RFrameRateKiller)StaticClass().DefaultObject;
+
     internal RFrameRateKiller() { }
 
     /// <summary>

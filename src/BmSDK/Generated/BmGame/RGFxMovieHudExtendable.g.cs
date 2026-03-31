@@ -21,6 +21,11 @@ public partial class RGFxMovieHudExtendable : BmSDK.BmGame.RGFxMovie, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieHudExtendable.
+    /// </summary>
+    public static RGFxMovieHudExtendable DefaultObject => (RGFxMovieHudExtendable)StaticClass().DefaultObject;
+
     internal RGFxMovieHudExtendable() { }
 
     /// <summary>

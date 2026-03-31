@@ -21,6 +21,11 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_KickCas.
+    /// </summary>
+    public static RBMAIAction_KickCas DefaultObject => (RBMAIAction_KickCas)StaticClass().DefaultObject;
+
     internal RBMAIAction_KickCas() { }
 
     /// <summary>

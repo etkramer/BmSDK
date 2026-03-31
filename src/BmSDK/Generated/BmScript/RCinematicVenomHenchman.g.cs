@@ -21,6 +21,11 @@ public partial class RCinematicVenomHenchman : BmSDK.BmGame.RCinematicActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicVenomHenchman.
+    /// </summary>
+    public static RCinematicVenomHenchman DefaultObject => (RCinematicVenomHenchman)StaticClass().DefaultObject;
+
     internal RCinematicVenomHenchman() { }
 
     /// <summary>

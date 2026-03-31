@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_MadHatterMindControl : BmSDK.BmGame.RSpe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_MadHatterMindControl.
+    /// </summary>
+    public static RSpecialMoveConfig_MadHatterMindControl DefaultObject => (RSpecialMoveConfig_MadHatterMindControl)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_MadHatterMindControl() { }
 
     /// <summary>

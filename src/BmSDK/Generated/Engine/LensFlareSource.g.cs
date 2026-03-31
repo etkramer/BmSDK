@@ -21,6 +21,11 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LensFlareSource.
+    /// </summary>
+    public static LensFlareSource DefaultObject => (LensFlareSource)StaticClass().DefaultObject;
+
     internal LensFlareSource() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDOFManager.
+    /// </summary>
+    public static RDOFManager DefaultObject => (RDOFManager)StaticClass().DefaultObject;
+
     internal RDOFManager() { }
 
     /// <summary>

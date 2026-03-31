@@ -21,6 +21,11 @@ public partial class SeqAct_ConsoleCommand : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ConsoleCommand.
+    /// </summary>
+    public static SeqAct_ConsoleCommand DefaultObject => (SeqAct_ConsoleCommand)StaticClass().DefaultObject;
+
     internal SeqAct_ConsoleCommand() { }
 
     /// <summary>

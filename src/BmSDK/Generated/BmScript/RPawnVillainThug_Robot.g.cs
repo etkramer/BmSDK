@@ -21,6 +21,11 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThug_Robot.
+    /// </summary>
+    public static RPawnVillainThug_Robot DefaultObject => (RPawnVillainThug_Robot)StaticClass().DefaultObject;
+
     internal RPawnVillainThug_Robot() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBmPawnSpawner.
+    /// </summary>
+    public static RBmPawnSpawner DefaultObject => (RBmPawnSpawner)StaticClass().DefaultObject;
+
     internal RBmPawnSpawner() { }
 
     /// <summary>

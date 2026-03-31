@@ -21,6 +21,11 @@ public partial class RBMAIController_Venom : BmSDK.BmGame.RBMAIController, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIController_Venom.
+    /// </summary>
+    public static RBMAIController_Venom DefaultObject => (RBMAIController_Venom)StaticClass().DefaultObject;
+
     internal RBMAIController_Venom() { }
 
     /// <summary>

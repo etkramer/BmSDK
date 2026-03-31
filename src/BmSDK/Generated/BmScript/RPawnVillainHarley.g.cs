@@ -21,6 +21,11 @@ public partial class RPawnVillainHarley : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainHarley.
+    /// </summary>
+    public static RPawnVillainHarley DefaultObject => (RPawnVillainHarley)StaticClass().DefaultObject;
+
     internal RPawnVillainHarley() { }
 
     /// <summary>

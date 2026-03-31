@@ -21,6 +21,11 @@ public partial class RSeqAct_AttachRopeToActor : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AttachRopeToActor.
+    /// </summary>
+    public static RSeqAct_AttachRopeToActor DefaultObject => (RSeqAct_AttachRopeToActor)StaticClass().DefaultObject;
+
     internal RSeqAct_AttachRopeToActor() { }
 
     /// <summary>

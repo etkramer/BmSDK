@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieUI : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieUI.
+    /// </summary>
+    public static RSeqAct_GFxMovieUI DefaultObject => (RSeqAct_GFxMovieUI)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieUI() { }
 
     /// <summary>

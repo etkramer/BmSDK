@@ -21,6 +21,11 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SoundNodeWave.
+    /// </summary>
+    public static SoundNodeWave DefaultObject => (SoundNodeWave)StaticClass().DefaultObject;
+
     internal SoundNodeWave() { }
 
     /// <summary>

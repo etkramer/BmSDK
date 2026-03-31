@@ -21,6 +21,11 @@ public partial class AutoNavMeshPathObstacleUnregister : BmSDK.GameObject, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AutoNavMeshPathObstacleUnregister.
+    /// </summary>
+    public static AutoNavMeshPathObstacleUnregister DefaultObject => (AutoNavMeshPathObstacleUnregister)StaticClass().DefaultObject;
+
     internal AutoNavMeshPathObstacleUnregister() { }
 
     /// <summary>

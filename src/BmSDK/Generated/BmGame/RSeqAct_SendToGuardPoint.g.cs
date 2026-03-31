@@ -21,6 +21,11 @@ public partial class RSeqAct_SendToGuardPoint : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SendToGuardPoint.
+    /// </summary>
+    public static RSeqAct_SendToGuardPoint DefaultObject => (RSeqAct_SendToGuardPoint)StaticClass().DefaultObject;
+
     internal RSeqAct_SendToGuardPoint() { }
 
     /// <summary>

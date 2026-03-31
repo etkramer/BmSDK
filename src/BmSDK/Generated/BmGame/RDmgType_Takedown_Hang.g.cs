@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_Hang : BmSDK.BmGame.RDmgType_Takedown, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_Hang.
+    /// </summary>
+    public static RDmgType_Takedown_Hang DefaultObject => (RDmgType_Takedown_Hang)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_Hang() { }
 
     /// <summary>

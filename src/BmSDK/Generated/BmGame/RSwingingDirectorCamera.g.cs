@@ -21,6 +21,11 @@ public partial class RSwingingDirectorCamera : BmSDK.BmGame.RLineLauncherDirecto
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSwingingDirectorCamera.
+    /// </summary>
+    public static RSwingingDirectorCamera DefaultObject => (RSwingingDirectorCamera)StaticClass().DefaultObject;
+
     internal RSwingingDirectorCamera() { }
 
     /// <summary>

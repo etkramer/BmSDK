@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PushyGuards.
+    /// </summary>
+    public static RBMBehaviour_PushyGuards DefaultObject => (RBMBehaviour_PushyGuards)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PushyGuards() { }
 
     /// <summary>

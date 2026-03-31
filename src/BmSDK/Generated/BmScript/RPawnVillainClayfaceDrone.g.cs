@@ -21,6 +21,11 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainClayfaceDrone.
+    /// </summary>
+    public static RPawnVillainClayfaceDrone DefaultObject => (RPawnVillainClayfaceDrone)StaticClass().DefaultObject;
+
     internal RPawnVillainClayfaceDrone() { }
 
     /// <summary>

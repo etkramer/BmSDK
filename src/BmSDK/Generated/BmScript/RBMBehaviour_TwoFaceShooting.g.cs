@@ -21,6 +21,11 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_TwoFaceShooting.
+    /// </summary>
+    public static RBMBehaviour_TwoFaceShooting DefaultObject => (RBMBehaviour_TwoFaceShooting)StaticClass().DefaultObject;
+
     internal RBMBehaviour_TwoFaceShooting() { }
 
     /// <summary>

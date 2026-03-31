@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeBlastHit : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeBlastHit.
+    /// </summary>
+    public static RSeqEvent_FreezeBlastHit DefaultObject => (RSeqEvent_FreezeBlastHit)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeBlastHit() { }
 
     /// <summary>

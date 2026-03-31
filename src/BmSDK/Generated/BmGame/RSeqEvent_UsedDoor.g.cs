@@ -21,6 +21,11 @@ public partial class RSeqEvent_UsedDoor : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_UsedDoor.
+    /// </summary>
+    public static RSeqEvent_UsedDoor DefaultObject => (RSeqEvent_UsedDoor)StaticClass().DefaultObject;
+
     internal RSeqEvent_UsedDoor() { }
 
     /// <summary>

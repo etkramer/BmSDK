@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC1_KickToPressStartIfNoStory : BmSDK.Engine.Sequ
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC1_KickToPressStartIfNoStory.
+    /// </summary>
+    public static RSeqAct_PDLC1_KickToPressStartIfNoStory DefaultObject => (RSeqAct_PDLC1_KickToPressStartIfNoStory)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC1_KickToPressStartIfNoStory() { }
 
     /// <summary>

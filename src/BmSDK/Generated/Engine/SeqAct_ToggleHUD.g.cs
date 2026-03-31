@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleHUD : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleHUD.
+    /// </summary>
+    public static SeqAct_ToggleHUD DefaultObject => (SeqAct_ToggleHUD)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleHUD() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_TempGuardPoint.
+    /// </summary>
+    public static RBMAIAction_TempGuardPoint DefaultObject => (RBMAIAction_TempGuardPoint)StaticClass().DefaultObject;
+
     internal RBMAIAction_TempGuardPoint() { }
 
     /// <summary>

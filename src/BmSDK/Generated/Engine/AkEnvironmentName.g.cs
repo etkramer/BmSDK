@@ -21,6 +21,11 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkEnvironmentName.
+    /// </summary>
+    public static AkEnvironmentName DefaultObject => (AkEnvironmentName)StaticClass().DefaultObject;
+
     internal AkEnvironmentName() { }
 
     /// <summary>

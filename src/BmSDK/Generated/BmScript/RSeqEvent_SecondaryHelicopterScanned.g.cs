@@ -21,6 +21,11 @@ public partial class RSeqEvent_SecondaryHelicopterScanned : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SecondaryHelicopterScanned.
+    /// </summary>
+    public static RSeqEvent_SecondaryHelicopterScanned DefaultObject => (RSeqEvent_SecondaryHelicopterScanned)StaticClass().DefaultObject;
+
     internal RSeqEvent_SecondaryHelicopterScanned() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeComponent.
+    /// </summary>
+    public static RRopeComponent DefaultObject => (RRopeComponent)StaticClass().DefaultObject;
+
     internal RRopeComponent() { }
 
     /// <summary>

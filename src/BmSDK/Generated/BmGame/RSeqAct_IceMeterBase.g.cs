@@ -21,6 +21,11 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IceMeterBase.
+    /// </summary>
+    public static RSeqAct_IceMeterBase DefaultObject => (RSeqAct_IceMeterBase)StaticClass().DefaultObject;
+
     internal RSeqAct_IceMeterBase() { }
 
     /// <summary>

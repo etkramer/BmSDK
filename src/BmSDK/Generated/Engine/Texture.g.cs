@@ -21,6 +21,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Texture.
+    /// </summary>
+    public static Texture DefaultObject => (Texture)StaticClass().DefaultObject;
+
     internal Texture() { }
 
     /// <summary>

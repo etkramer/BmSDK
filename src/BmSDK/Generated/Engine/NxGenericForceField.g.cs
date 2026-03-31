@@ -21,6 +21,11 @@ public partial class NxGenericForceField : BmSDK.Engine.NxForceField, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxGenericForceField.
+    /// </summary>
+    public static NxGenericForceField DefaultObject => (NxGenericForceField)StaticClass().DefaultObject;
+
     internal NxGenericForceField() { }
 
     /// <summary>

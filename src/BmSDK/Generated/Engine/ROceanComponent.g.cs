@@ -21,6 +21,11 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROceanComponent.
+    /// </summary>
+    public static ROceanComponent DefaultObject => (ROceanComponent)StaticClass().DefaultObject;
+
     internal ROceanComponent() { }
 
     /// <summary>

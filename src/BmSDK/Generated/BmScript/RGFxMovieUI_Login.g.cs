@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_Login.
+    /// </summary>
+    public static RGFxMovieUI_Login DefaultObject => (RGFxMovieUI_Login)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_Login() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ThermalInSmoke.
+    /// </summary>
+    public static RBMAIAction_ThermalInSmoke DefaultObject => (RBMAIAction_ThermalInSmoke)StaticClass().DefaultObject;
+
     internal RBMAIAction_ThermalInSmoke() { }
 
     /// <summary>

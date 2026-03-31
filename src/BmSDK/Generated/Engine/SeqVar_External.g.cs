@@ -21,6 +21,11 @@ public partial class SeqVar_External : BmSDK.Engine.SequenceVariable, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_External.
+    /// </summary>
+    public static SeqVar_External DefaultObject => (SeqVar_External)StaticClass().DefaultObject;
+
     internal SeqVar_External() { }
 
     /// <summary>

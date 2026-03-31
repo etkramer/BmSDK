@@ -21,6 +21,11 @@ public partial class RBMWeaponChurchSpecialShotty : BmSDK.BmScript.RBMWeaponChur
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponChurchSpecialShotty.
+    /// </summary>
+    public static RBMWeaponChurchSpecialShotty DefaultObject => (RBMWeaponChurchSpecialShotty)StaticClass().DefaultObject;
+
     internal RBMWeaponChurchSpecialShotty() { }
 
     /// <summary>

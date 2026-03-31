@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatter : BmSDK.BmGame.RCharacter, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatter.
+    /// </summary>
+    public static RCharacter_MadHatter DefaultObject => (RCharacter_MadHatter)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatter() { }
 
     /// <summary>

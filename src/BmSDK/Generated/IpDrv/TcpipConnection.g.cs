@@ -21,6 +21,11 @@ public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TcpipConnection.
+    /// </summary>
+    public static TcpipConnection DefaultObject => (TcpipConnection)StaticClass().DefaultObject;
+
     internal TcpipConnection() { }
 
     /// <summary>

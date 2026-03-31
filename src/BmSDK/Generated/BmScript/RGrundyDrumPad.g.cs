@@ -21,6 +21,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrundyDrumPad.
+    /// </summary>
+    public static RGrundyDrumPad DefaultObject => (RGrundyDrumPad)StaticClass().DefaultObject;
+
     internal RGrundyDrumPad() { }
 
     /// <summary>

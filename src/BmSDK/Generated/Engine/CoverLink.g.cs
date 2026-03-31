@@ -21,6 +21,11 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CoverLink.
+    /// </summary>
+    public static CoverLink DefaultObject => (CoverLink)StaticClass().DefaultObject;
+
     internal CoverLink() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanRedirect : BmSDK.BmGame.RCombatMove_Batma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanRedirect.
+    /// </summary>
+    public static RCombatMove_BatmanRedirect DefaultObject => (RCombatMove_BatmanRedirect)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanRedirect() { }
 
     /// <summary>

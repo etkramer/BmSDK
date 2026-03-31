@@ -21,6 +21,11 @@ public partial class DistributionFloatConstant : BmSDK.DistributionFloat, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionFloatConstant.
+    /// </summary>
+    public static DistributionFloatConstant DefaultObject => (DistributionFloatConstant)StaticClass().DefaultObject;
+
     internal DistributionFloatConstant() { }
 
     /// <summary>

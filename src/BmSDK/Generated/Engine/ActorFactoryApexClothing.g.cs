@@ -21,6 +21,11 @@ public partial class ActorFactoryApexClothing : BmSDK.Engine.ActorFactorySkeleta
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryApexClothing.
+    /// </summary>
+    public static ActorFactoryApexClothing DefaultObject => (ActorFactoryApexClothing)StaticClass().DefaultObject;
+
     internal ActorFactoryApexClothing() { }
 
     /// <summary>

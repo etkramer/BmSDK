@@ -21,6 +21,11 @@ public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.Mate
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionStaticSwitchParameter.
+    /// </summary>
+    public static MaterialExpressionStaticSwitchParameter DefaultObject => (MaterialExpressionStaticSwitchParameter)StaticClass().DefaultObject;
+
     internal MaterialExpressionStaticSwitchParameter() { }
 
     /// <summary>

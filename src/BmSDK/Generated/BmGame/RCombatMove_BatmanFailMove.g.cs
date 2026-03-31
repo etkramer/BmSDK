@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanFailMove : BmSDK.BmGame.RCombatMove_Batma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanFailMove.
+    /// </summary>
+    public static RCombatMove_BatmanFailMove DefaultObject => (RCombatMove_BatmanFailMove)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanFailMove() { }
 
     /// <summary>

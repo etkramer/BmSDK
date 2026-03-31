@@ -21,6 +21,11 @@ public partial class RBreakableTV_Riddler : BmSDK.BmGame.RBreakableTV, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableTV_Riddler.
+    /// </summary>
+    public static RBreakableTV_Riddler DefaultObject => (RBreakableTV_Riddler)StaticClass().DefaultObject;
+
     internal RBreakableTV_Riddler() { }
 
     /// <summary>

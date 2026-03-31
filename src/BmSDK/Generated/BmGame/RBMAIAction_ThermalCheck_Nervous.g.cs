@@ -21,6 +21,11 @@ public partial class RBMAIAction_ThermalCheck_Nervous : BmSDK.BmGame.RBMAIAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ThermalCheck_Nervous.
+    /// </summary>
+    public static RBMAIAction_ThermalCheck_Nervous DefaultObject => (RBMAIAction_ThermalCheck_Nervous)StaticClass().DefaultObject;
+
     internal RBMAIAction_ThermalCheck_Nervous() { }
 
     /// <summary>

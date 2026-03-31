@@ -21,6 +21,11 @@ public partial class RSeqAct_InIdleConfig : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InIdleConfig.
+    /// </summary>
+    public static RSeqAct_InIdleConfig DefaultObject => (RSeqAct_InIdleConfig)StaticClass().DefaultObject;
+
     internal RSeqAct_InIdleConfig() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RB_ForceComponentCylindrical : BmSDK.Engine.RB_ForceCompone
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ForceComponentCylindrical.
+    /// </summary>
+    public static RB_ForceComponentCylindrical DefaultObject => (RB_ForceComponentCylindrical)StaticClass().DefaultObject;
+
     internal RB_ForceComponentCylindrical() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_RestoreVibrationStateForDeathMovie : BmSDK.Engine.S
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RestoreVibrationStateForDeathMovie.
+    /// </summary>
+    public static RSeqAct_RestoreVibrationStateForDeathMovie DefaultObject => (RSeqAct_RestoreVibrationStateForDeathMovie)StaticClass().DefaultObject;
+
     internal RSeqAct_RestoreVibrationStateForDeathMovie() { }
 
     /// <summary>

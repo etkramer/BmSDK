@@ -21,6 +21,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameInfo.
+    /// </summary>
+    public static RGameInfo DefaultObject => (RGameInfo)StaticClass().DefaultObject;
+
     internal RGameInfo() { }
 
     /// <summary>

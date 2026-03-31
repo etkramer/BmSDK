@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatter_Code : BmSDK.BmScript.RCharacter_MadHa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatter_Code.
+    /// </summary>
+    public static RCharacter_MadHatter_Code DefaultObject => (RCharacter_MadHatter_Code)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatter_Code() { }
 
     /// <summary>

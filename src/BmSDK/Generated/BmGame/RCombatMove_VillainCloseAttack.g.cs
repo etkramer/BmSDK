@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainCloseAttack : BmSDK.BmGame.RCombatMove_V
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainCloseAttack.
+    /// </summary>
+    public static RCombatMove_VillainCloseAttack DefaultObject => (RCombatMove_VillainCloseAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainCloseAttack() { }
 
     /// <summary>

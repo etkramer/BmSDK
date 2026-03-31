@@ -21,6 +21,11 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetHeartbeatType.
+    /// </summary>
+    public static RSeqAct_SetHeartbeatType DefaultObject => (RSeqAct_SetHeartbeatType)StaticClass().DefaultObject;
+
     internal RSeqAct_SetHeartbeatType() { }
 
     /// <summary>

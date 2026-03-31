@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_LedgeShimmy : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_LedgeShimmy.
+    /// </summary>
+    public static RSpecialMoveConfig_LedgeShimmy DefaultObject => (RSpecialMoveConfig_LedgeShimmy)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_LedgeShimmy() { }
 
     /// <summary>

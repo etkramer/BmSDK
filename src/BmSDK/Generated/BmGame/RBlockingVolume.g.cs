@@ -21,6 +21,11 @@ public partial class RBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBlockingVolume.
+    /// </summary>
+    public static RBlockingVolume DefaultObject => (RBlockingVolume)StaticClass().DefaultObject;
+
     internal RBlockingVolume() { }
 
     /// <summary>

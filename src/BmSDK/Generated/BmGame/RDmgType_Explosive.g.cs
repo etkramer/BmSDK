@@ -21,6 +21,11 @@ public partial class RDmgType_Explosive : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Explosive.
+    /// </summary>
+    public static RDmgType_Explosive DefaultObject => (RDmgType_Explosive)StaticClass().DefaultObject;
+
     internal RDmgType_Explosive() { }
 
     /// <summary>

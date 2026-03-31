@@ -21,6 +21,11 @@ public partial class RDmgType_ShockedStumble : BmSDK.BmGame.RDmgType_Strike, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ShockedStumble.
+    /// </summary>
+    public static RDmgType_ShockedStumble DefaultObject => (RDmgType_ShockedStumble)StaticClass().DefaultObject;
+
     internal RDmgType_ShockedStumble() { }
 
     /// <summary>

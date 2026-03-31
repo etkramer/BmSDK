@@ -21,6 +21,11 @@ public partial class RWindVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWindVolume.
+    /// </summary>
+    public static RWindVolume DefaultObject => (RWindVolume)StaticClass().DefaultObject;
+
     internal RWindVolume() { }
 
     /// <summary>

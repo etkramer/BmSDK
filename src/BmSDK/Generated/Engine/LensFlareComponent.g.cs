@@ -21,6 +21,11 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LensFlareComponent.
+    /// </summary>
+    public static LensFlareComponent DefaultObject => (LensFlareComponent)StaticClass().DefaultObject;
+
     internal LensFlareComponent() { }
 
     /// <summary>

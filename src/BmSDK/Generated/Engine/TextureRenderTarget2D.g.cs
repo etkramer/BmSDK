@@ -21,6 +21,11 @@ public partial class TextureRenderTarget2D : BmSDK.Engine.TextureRenderTarget, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextureRenderTarget2D.
+    /// </summary>
+    public static TextureRenderTarget2D DefaultObject => (TextureRenderTarget2D)StaticClass().DefaultObject;
+
     internal TextureRenderTarget2D() { }
 
     /// <summary>

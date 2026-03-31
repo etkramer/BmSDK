@@ -21,6 +21,11 @@ public partial class RSeqAct_SetGunFiring : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetGunFiring.
+    /// </summary>
+    public static RSeqAct_SetGunFiring DefaultObject => (RSeqAct_SetGunFiring)StaticClass().DefaultObject;
+
     internal RSeqAct_SetGunFiring() { }
 
     /// <summary>

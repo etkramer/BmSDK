@@ -21,6 +21,11 @@ public partial class MaterialExpressionOcclusionPercentage : BmSDK.Engine.Materi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionOcclusionPercentage.
+    /// </summary>
+    public static MaterialExpressionOcclusionPercentage DefaultObject => (MaterialExpressionOcclusionPercentage)StaticClass().DefaultObject;
+
     internal MaterialExpressionOcclusionPercentage() { }
 
     /// <summary>

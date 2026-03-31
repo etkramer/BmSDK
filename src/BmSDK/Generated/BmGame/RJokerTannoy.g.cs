@@ -21,6 +21,11 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerTannoy.
+    /// </summary>
+    public static RJokerTannoy DefaultObject => (RJokerTannoy)StaticClass().DefaultObject;
+
     internal RJokerTannoy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVector.
+    /// </summary>
+    public static DistributionVector DefaultObject => (DistributionVector)StaticClass().DefaultObject;
+
     internal DistributionVector() { }
 
     /// <summary>

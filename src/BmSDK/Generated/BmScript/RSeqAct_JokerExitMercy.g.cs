@@ -21,6 +21,11 @@ public partial class RSeqAct_JokerExitMercy : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_JokerExitMercy.
+    /// </summary>
+    public static RSeqAct_JokerExitMercy DefaultObject => (RSeqAct_JokerExitMercy)StaticClass().DefaultObject;
+
     internal RSeqAct_JokerExitMercy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeClusterGrenade : BmSDK.BmGame.RProjectileGadgetBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeClusterGrenade.
+    /// </summary>
+    public static RFreezeClusterGrenade DefaultObject => (RFreezeClusterGrenade)StaticClass().DefaultObject;
+
     internal RFreezeClusterGrenade() { }
 
     /// <summary>

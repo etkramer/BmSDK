@@ -21,6 +21,11 @@ public partial class RDisruptableControlBoxTimed_HS : BmSDK.BmScript.RDisruptabl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableControlBoxTimed_HS.
+    /// </summary>
+    public static RDisruptableControlBoxTimed_HS DefaultObject => (RDisruptableControlBoxTimed_HS)StaticClass().DefaultObject;
+
     internal RDisruptableControlBoxTimed_HS() { }
 
     /// <summary>

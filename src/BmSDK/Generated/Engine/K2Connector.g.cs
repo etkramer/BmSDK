@@ -21,6 +21,11 @@ public partial class K2Connector : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Connector.
+    /// </summary>
+    public static K2Connector DefaultObject => (K2Connector)StaticClass().DefaultObject;
+
     internal K2Connector() { }
 
     /// <summary>

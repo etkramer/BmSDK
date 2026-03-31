@@ -21,6 +21,11 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SavedMove.
+    /// </summary>
+    public static SavedMove DefaultObject => (SavedMove)StaticClass().DefaultObject;
+
     internal SavedMove() { }
 
     /// <summary>

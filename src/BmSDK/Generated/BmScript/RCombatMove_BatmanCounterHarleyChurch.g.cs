@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounterHarleyChurch.
+    /// </summary>
+    public static RCombatMove_BatmanCounterHarleyChurch DefaultObject => (RCombatMove_BatmanCounterHarleyChurch)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounterHarleyChurch() { }
 
     /// <summary>

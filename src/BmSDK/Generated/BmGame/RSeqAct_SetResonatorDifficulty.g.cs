@@ -21,6 +21,11 @@ public partial class RSeqAct_SetResonatorDifficulty : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetResonatorDifficulty.
+    /// </summary>
+    public static RSeqAct_SetResonatorDifficulty DefaultObject => (RSeqAct_SetResonatorDifficulty)StaticClass().DefaultObject;
+
     internal RSeqAct_SetResonatorDifficulty() { }
 
     /// <summary>

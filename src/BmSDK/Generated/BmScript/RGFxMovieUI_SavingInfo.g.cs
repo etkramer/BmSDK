@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_SavingInfo : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_SavingInfo.
+    /// </summary>
+    public static RGFxMovieUI_SavingInfo DefaultObject => (RGFxMovieUI_SavingInfo)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_SavingInfo() { }
 
     /// <summary>

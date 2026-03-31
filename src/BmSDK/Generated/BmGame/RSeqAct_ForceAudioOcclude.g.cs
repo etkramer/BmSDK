@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceAudioOcclude : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceAudioOcclude.
+    /// </summary>
+    public static RSeqAct_ForceAudioOcclude DefaultObject => (RSeqAct_ForceAudioOcclude)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceAudioOcclude() { }
 
     /// <summary>

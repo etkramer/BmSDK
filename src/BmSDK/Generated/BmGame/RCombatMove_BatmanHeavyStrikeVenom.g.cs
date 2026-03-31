@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanHeavyStrikeVenom : BmSDK.BmGame.RCombatMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanHeavyStrikeVenom.
+    /// </summary>
+    public static RCombatMove_BatmanHeavyStrikeVenom DefaultObject => (RCombatMove_BatmanHeavyStrikeVenom)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanHeavyStrikeVenom() { }
 
     /// <summary>

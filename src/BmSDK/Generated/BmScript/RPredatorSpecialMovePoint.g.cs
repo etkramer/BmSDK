@@ -21,6 +21,11 @@ public partial class RPredatorSpecialMovePoint : BmSDK.BmGame.RPredatorSpecialMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorSpecialMovePoint.
+    /// </summary>
+    public static RPredatorSpecialMovePoint DefaultObject => (RPredatorSpecialMovePoint)StaticClass().DefaultObject;
+
     internal RPredatorSpecialMovePoint() { }
 
     /// <summary>

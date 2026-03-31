@@ -21,6 +21,11 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableObjectBase.
+    /// </summary>
+    public static RDisruptableObjectBase DefaultObject => (RDisruptableObjectBase)StaticClass().DefaultObject;
+
     internal RDisruptableObjectBase() { }
 
     /// <summary>

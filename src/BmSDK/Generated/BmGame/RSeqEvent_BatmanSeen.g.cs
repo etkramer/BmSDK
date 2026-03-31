@@ -21,6 +21,11 @@ public partial class RSeqEvent_BatmanSeen : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BatmanSeen.
+    /// </summary>
+    public static RSeqEvent_BatmanSeen DefaultObject => (RSeqEvent_BatmanSeen)StaticClass().DefaultObject;
+
     internal RSeqEvent_BatmanSeen() { }
 
     /// <summary>

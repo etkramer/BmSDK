@@ -21,6 +21,11 @@ public partial class RCinematicTwoFace : BmSDK.BmGame.RCinematicActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicTwoFace.
+    /// </summary>
+    public static RCinematicTwoFace DefaultObject => (RCinematicTwoFace)StaticClass().DefaultObject;
+
     internal RCinematicTwoFace() { }
 
     /// <summary>

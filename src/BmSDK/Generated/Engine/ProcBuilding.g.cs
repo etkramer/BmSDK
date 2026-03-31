@@ -21,6 +21,11 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ProcBuilding.
+    /// </summary>
+    public static ProcBuilding DefaultObject => (ProcBuilding)StaticClass().DefaultObject;
+
     internal ProcBuilding() { }
 
     /// <summary>

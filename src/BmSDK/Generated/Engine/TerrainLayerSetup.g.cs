@@ -21,6 +21,11 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TerrainLayerSetup.
+    /// </summary>
+    public static TerrainLayerSetup DefaultObject => (TerrainLayerSetup)StaticClass().DefaultObject;
+
     internal TerrainLayerSetup() { }
 
     /// <summary>

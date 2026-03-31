@@ -21,6 +21,11 @@ public partial class SkeletalMeshSocket : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMeshSocket.
+    /// </summary>
+    public static SkeletalMeshSocket DefaultObject => (SkeletalMeshSocket)StaticClass().DefaultObject;
+
     internal SkeletalMeshSocket() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMWeaponRasDagger : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponRasDagger.
+    /// </summary>
+    public static RBMWeaponRasDagger DefaultObject => (RBMWeaponRasDagger)StaticClass().DefaultObject;
+
     internal RBMWeaponRasDagger() { }
 
     /// <summary>

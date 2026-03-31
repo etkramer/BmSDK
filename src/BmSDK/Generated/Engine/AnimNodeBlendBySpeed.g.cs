@@ -21,6 +21,11 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeBlendBySpeed.
+    /// </summary>
+    public static AnimNodeBlendBySpeed DefaultObject => (AnimNodeBlendBySpeed)StaticClass().DefaultObject;
+
     internal AnimNodeBlendBySpeed() { }
 
     /// <summary>

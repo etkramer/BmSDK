@@ -21,6 +21,11 @@ public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Sub_ExplodedJammer.
+    /// </summary>
+    public static RAEC_Sub_ExplodedJammer DefaultObject => (RAEC_Sub_ExplodedJammer)StaticClass().DefaultObject;
+
     internal RAEC_Sub_ExplodedJammer() { }
 
     /// <summary>

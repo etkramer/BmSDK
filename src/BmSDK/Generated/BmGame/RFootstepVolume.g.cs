@@ -21,6 +21,11 @@ public partial class RFootstepVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFootstepVolume.
+    /// </summary>
+    public static RFootstepVolume DefaultObject => (RFootstepVolume)StaticClass().DefaultObject;
+
     internal RFootstepVolume() { }
 
     /// <summary>

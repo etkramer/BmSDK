@@ -21,6 +21,11 @@ public partial class RB_SkelJointSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_SkelJointSetup.
+    /// </summary>
+    public static RB_SkelJointSetup DefaultObject => (RB_SkelJointSetup)StaticClass().DefaultObject;
+
     internal RB_SkelJointSetup() { }
 
     /// <summary>

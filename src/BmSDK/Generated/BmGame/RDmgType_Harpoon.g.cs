@@ -21,6 +21,11 @@ public partial class RDmgType_Harpoon : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Harpoon.
+    /// </summary>
+    public static RDmgType_Harpoon DefaultObject => (RDmgType_Harpoon)StaticClass().DefaultObject;
+
     internal RDmgType_Harpoon() { }
 
     /// <summary>

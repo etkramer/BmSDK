@@ -21,6 +21,11 @@ public partial class RMorphNodeAutoSequence : BmSDK.Engine.MorphNodeBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMorphNodeAutoSequence.
+    /// </summary>
+    public static RMorphNodeAutoSequence DefaultObject => (RMorphNodeAutoSequence)StaticClass().DefaultObject;
+
     internal RMorphNodeAutoSequence() { }
 
     /// <summary>

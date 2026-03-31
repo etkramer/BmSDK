@@ -21,6 +21,11 @@ public partial class LevelBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelBase.
+    /// </summary>
+    public static LevelBase DefaultObject => (LevelBase)StaticClass().DefaultObject;
+
     internal LevelBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_OnlineStats.
+    /// </summary>
+    public static UIDataStore_OnlineStats DefaultObject => (UIDataStore_OnlineStats)StaticClass().DefaultObject;
+
     internal UIDataStore_OnlineStats() { }
 
     /// <summary>

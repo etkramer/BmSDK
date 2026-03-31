@@ -21,6 +21,11 @@ public partial class RPawnVillainGunInvestigateTutChurch : BmSDK.BmGame.RPawnVil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunInvestigateTutChurch.
+    /// </summary>
+    public static RPawnVillainGunInvestigateTutChurch DefaultObject => (RPawnVillainGunInvestigateTutChurch)StaticClass().DefaultObject;
+
     internal RPawnVillainGunInvestigateTutChurch() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHelicopterSpotLightComponent : BmSDK.Engine.SpotLightCompo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterSpotLightComponent.
+    /// </summary>
+    public static RHelicopterSpotLightComponent DefaultObject => (RHelicopterSpotLightComponent)StaticClass().DefaultObject;
+
     internal RHelicopterSpotLightComponent() { }
 
     /// <summary>

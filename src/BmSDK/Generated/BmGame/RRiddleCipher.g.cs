@@ -21,6 +21,11 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddleCipher.
+    /// </summary>
+    public static RRiddleCipher DefaultObject => (RRiddleCipher)StaticClass().DefaultObject;
+
     internal RRiddleCipher() { }
 
     /// <summary>

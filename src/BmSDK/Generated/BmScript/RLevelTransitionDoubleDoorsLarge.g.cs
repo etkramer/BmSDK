@@ -21,6 +21,11 @@ public partial class RLevelTransitionDoubleDoorsLarge : BmSDK.BmScript.RLevelTra
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionDoubleDoorsLarge.
+    /// </summary>
+    public static RLevelTransitionDoubleDoorsLarge DefaultObject => (RLevelTransitionDoubleDoorsLarge)StaticClass().DefaultObject;
+
     internal RLevelTransitionDoubleDoorsLarge() { }
 
     /// <summary>

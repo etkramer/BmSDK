@@ -21,6 +21,11 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NewCombatMusic.
+    /// </summary>
+    public static RSeqAct_NewCombatMusic DefaultObject => (RSeqAct_NewCombatMusic)StaticClass().DefaultObject;
+
     internal RSeqAct_NewCombatMusic() { }
 
     /// <summary>

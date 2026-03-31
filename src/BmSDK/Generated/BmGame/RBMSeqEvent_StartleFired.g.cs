@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_StartleFired : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_StartleFired.
+    /// </summary>
+    public static RBMSeqEvent_StartleFired DefaultObject => (RBMSeqEvent_StartleFired)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_StartleFired() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DelegateProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DelegateProperty.
+    /// </summary>
+    public static DelegateProperty DefaultObject => (DelegateProperty)StaticClass().DefaultObject;
+
     internal DelegateProperty() { }
 
     /// <summary>

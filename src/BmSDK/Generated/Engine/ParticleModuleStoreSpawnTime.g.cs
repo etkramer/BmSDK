@@ -21,6 +21,11 @@ public partial class ParticleModuleStoreSpawnTime : BmSDK.Engine.ParticleModuleS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleStoreSpawnTime.
+    /// </summary>
+    public static ParticleModuleStoreSpawnTime DefaultObject => (ParticleModuleStoreSpawnTime)StaticClass().DefaultObject;
+
     internal ParticleModuleStoreSpawnTime() { }
 
     /// <summary>

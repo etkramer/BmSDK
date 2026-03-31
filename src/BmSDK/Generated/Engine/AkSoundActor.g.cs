@@ -21,6 +21,11 @@ public partial class AkSoundActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkSoundActor.
+    /// </summary>
+    public static AkSoundActor DefaultObject => (AkSoundActor)StaticClass().DefaultObject;
+
     internal AkSoundActor() { }
 
     /// <summary>

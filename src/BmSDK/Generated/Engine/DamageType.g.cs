@@ -21,6 +21,11 @@ public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DamageType.
+    /// </summary>
+    public static DamageType DefaultObject => (DamageType)StaticClass().DefaultObject;
+
     internal DamageType() { }
 
     /// <summary>

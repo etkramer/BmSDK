@@ -21,6 +21,11 @@ public partial class MaterialExpressionSceneWorldPos : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSceneWorldPos.
+    /// </summary>
+    public static MaterialExpressionSceneWorldPos DefaultObject => (MaterialExpressionSceneWorldPos)StaticClass().DefaultObject;
+
     internal MaterialExpressionSceneWorldPos() { }
 
     /// <summary>

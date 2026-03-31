@@ -21,6 +21,11 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UberPostProcessEffect.
+    /// </summary>
+    public static UberPostProcessEffect DefaultObject => (UberPostProcessEffect)StaticClass().DefaultObject;
+
     internal UberPostProcessEffect() { }
 
     /// <summary>

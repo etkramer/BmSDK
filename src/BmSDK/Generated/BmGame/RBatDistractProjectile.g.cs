@@ -21,6 +21,11 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatDistractProjectile.
+    /// </summary>
+    public static RBatDistractProjectile DefaultObject => (RBatDistractProjectile)StaticClass().DefaultObject;
+
     internal RBatDistractProjectile() { }
 
     /// <summary>

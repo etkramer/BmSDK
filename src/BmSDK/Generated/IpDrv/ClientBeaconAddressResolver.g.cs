@@ -21,6 +21,11 @@ public partial class ClientBeaconAddressResolver : BmSDK.GameObject, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ClientBeaconAddressResolver.
+    /// </summary>
+    public static ClientBeaconAddressResolver DefaultObject => (ClientBeaconAddressResolver)StaticClass().DefaultObject;
+
     internal ClientBeaconAddressResolver() { }
 
     /// <summary>

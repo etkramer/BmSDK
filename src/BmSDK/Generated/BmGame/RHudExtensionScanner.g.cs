@@ -21,6 +21,11 @@ public partial class RHudExtensionScanner : BmSDK.BmGame.RHudExtension, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionScanner.
+    /// </summary>
+    public static RHudExtensionScanner DefaultObject => (RHudExtensionScanner)StaticClass().DefaultObject;
+
     internal RHudExtensionScanner() { }
 
     /// <summary>

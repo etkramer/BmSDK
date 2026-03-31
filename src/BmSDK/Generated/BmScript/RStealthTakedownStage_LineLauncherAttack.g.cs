@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_LineLauncherAttack : BmSDK.BmGame.RSt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_LineLauncherAttack.
+    /// </summary>
+    public static RStealthTakedownStage_LineLauncherAttack DefaultObject => (RStealthTakedownStage_LineLauncherAttack)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_LineLauncherAttack() { }
 
     /// <summary>

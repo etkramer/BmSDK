@@ -21,6 +21,11 @@ public partial class RSeqCond_LevelLoaded : BmSDK.Engine.SequenceCondition, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqCond_LevelLoaded.
+    /// </summary>
+    public static RSeqCond_LevelLoaded DefaultObject => (RSeqCond_LevelLoaded)StaticClass().DefaultObject;
+
     internal RSeqCond_LevelLoaded() { }
 
     /// <summary>

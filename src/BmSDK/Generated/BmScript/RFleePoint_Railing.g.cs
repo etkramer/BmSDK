@@ -21,6 +21,11 @@ public partial class RFleePoint_Railing : BmSDK.BmGame.RFleePoint, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint_Railing.
+    /// </summary>
+    public static RFleePoint_Railing DefaultObject => (RFleePoint_Railing)StaticClass().DefaultObject;
+
     internal RFleePoint_Railing() { }
 
     /// <summary>

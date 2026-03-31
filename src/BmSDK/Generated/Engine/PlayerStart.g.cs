@@ -21,6 +21,11 @@ public partial class PlayerStart : BmSDK.Engine.NavigationPoint, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PlayerStart.
+    /// </summary>
+    public static PlayerStart DefaultObject => (PlayerStart)StaticClass().DefaultObject;
+
     internal PlayerStart() { }
 
     /// <summary>

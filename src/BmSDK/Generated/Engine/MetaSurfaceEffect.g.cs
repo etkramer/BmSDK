@@ -21,6 +21,11 @@ public partial class MetaSurfaceEffect : BmSDK.Engine.PostProcessEffect, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MetaSurfaceEffect.
+    /// </summary>
+    public static MetaSurfaceEffect DefaultObject => (MetaSurfaceEffect)StaticClass().DefaultObject;
+
     internal MetaSurfaceEffect() { }
 
     /// <summary>

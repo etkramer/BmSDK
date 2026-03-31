@@ -21,6 +21,11 @@ public partial class RCombatMove_LunaticDodgeThrow : BmSDK.BmGame.RCombatMove, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LunaticDodgeThrow.
+    /// </summary>
+    public static RCombatMove_LunaticDodgeThrow DefaultObject => (RCombatMove_LunaticDodgeThrow)StaticClass().DefaultObject;
+
     internal RCombatMove_LunaticDodgeThrow() { }
 
     /// <summary>

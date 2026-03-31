@@ -21,6 +21,11 @@ public partial class RDmgType_IvyGas : BmSDK.BmGame.RDmgType_Smilex, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_IvyGas.
+    /// </summary>
+    public static RDmgType_IvyGas DefaultObject => (RDmgType_IvyGas)StaticClass().DefaultObject;
+
     internal RDmgType_IvyGas() { }
 
     /// <summary>

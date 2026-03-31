@@ -21,6 +21,11 @@ public partial class RCharacter_Cop6 : BmSDK.BmScript.RCharacter_Cop, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Cop6.
+    /// </summary>
+    public static RCharacter_Cop6 DefaultObject => (RCharacter_Cop6)StaticClass().DefaultObject;
+
     internal RCharacter_Cop6() { }
 
     /// <summary>

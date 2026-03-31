@@ -21,6 +21,11 @@ public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RObjectCounterVolume.
+    /// </summary>
+    public static RObjectCounterVolume DefaultObject => (RObjectCounterVolume)StaticClass().DefaultObject;
+
     internal RObjectCounterVolume() { }
 
     /// <summary>

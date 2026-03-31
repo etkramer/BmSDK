@@ -21,6 +21,11 @@ public partial class RLevelTransitionDoorBase : BmSDK.BmGame.RLevelTransitionP, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionDoorBase.
+    /// </summary>
+    public static RLevelTransitionDoorBase DefaultObject => (RLevelTransitionDoorBase)StaticClass().DefaultObject;
+
     internal RLevelTransitionDoorBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatTeleport : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatTeleport.
+    /// </summary>
+    public static RCombatTeleport DefaultObject => (RCombatTeleport)StaticClass().DefaultObject;
+
     internal RCombatTeleport() { }
 
     /// <summary>

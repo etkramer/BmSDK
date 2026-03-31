@@ -21,6 +21,11 @@ public partial class RSeqAct_IsDLCPresent : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IsDLCPresent.
+    /// </summary>
+    public static RSeqAct_IsDLCPresent DefaultObject => (RSeqAct_IsDLCPresent)StaticClass().DefaultObject;
+
     internal RSeqAct_IsDLCPresent() { }
 
     /// <summary>

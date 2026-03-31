@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FenceJump.
+    /// </summary>
+    public static RBMBehaviour_FenceJump DefaultObject => (RBMBehaviour_FenceJump)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FenceJump() { }
 
     /// <summary>

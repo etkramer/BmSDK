@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataPhysX : BmSDK.Engine.ParticleModuleTy
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataPhysX.
+    /// </summary>
+    public static ParticleModuleTypeDataPhysX DefaultObject => (ParticleModuleTypeDataPhysX)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataPhysX() { }
 
     /// <summary>

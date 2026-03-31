@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateAzraelStoryCompletion : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateAzraelStoryCompletion.
+    /// </summary>
+    public static RSeqAct_UpdateAzraelStoryCompletion DefaultObject => (RSeqAct_UpdateAzraelStoryCompletion)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateAzraelStoryCompletion() { }
 
     /// <summary>

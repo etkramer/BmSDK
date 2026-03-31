@@ -21,6 +21,11 @@ public partial class SeqAct_SetVector : BmSDK.Engine.SeqAct_SetSequenceVariable,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetVector.
+    /// </summary>
+    public static SeqAct_SetVector DefaultObject => (SeqAct_SetVector)StaticClass().DefaultObject;
+
     internal SeqAct_SetVector() { }
 
     /// <summary>

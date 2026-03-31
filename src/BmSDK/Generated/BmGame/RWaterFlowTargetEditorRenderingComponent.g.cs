@@ -21,6 +21,11 @@ public partial class RWaterFlowTargetEditorRenderingComponent : BmSDK.Engine.Pri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWaterFlowTargetEditorRenderingComponent.
+    /// </summary>
+    public static RWaterFlowTargetEditorRenderingComponent DefaultObject => (RWaterFlowTargetEditorRenderingComponent)StaticClass().DefaultObject;
+
     internal RWaterFlowTargetEditorRenderingComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleLifetime : BmSDK.Engine.ParticleModuleLifetim
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLifetime.
+    /// </summary>
+    public static ParticleModuleLifetime DefaultObject => (ParticleModuleLifetime)StaticClass().DefaultObject;
+
     internal ParticleModuleLifetime() { }
 
     /// <summary>

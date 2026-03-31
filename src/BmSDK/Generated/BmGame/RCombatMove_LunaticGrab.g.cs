@@ -21,6 +21,11 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LunaticGrab.
+    /// </summary>
+    public static RCombatMove_LunaticGrab DefaultObject => (RCombatMove_LunaticGrab)StaticClass().DefaultObject;
+
     internal RCombatMove_LunaticGrab() { }
 
     /// <summary>

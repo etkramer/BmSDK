@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_Jump : BmSDK.BmGame.RSpecialMoveConfig_R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_Jump.
+    /// </summary>
+    public static RSpecialMoveConfig_Jump DefaultObject => (RSpecialMoveConfig_Jump)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_Jump() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeMultiplyVelocity.
+    /// </summary>
+    public static ParticleModuleSizeMultiplyVelocity DefaultObject => (ParticleModuleSizeMultiplyVelocity)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeMultiplyVelocity() { }
 
     /// <summary>

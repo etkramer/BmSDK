@@ -21,6 +21,11 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponCatwomanBriefcases.
+    /// </summary>
+    public static RBMWeaponCatwomanBriefcases DefaultObject => (RBMWeaponCatwomanBriefcases)StaticClass().DefaultObject;
+
     internal RBMWeaponCatwomanBriefcases() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioVolume.
+    /// </summary>
+    public static AkAudioVolume DefaultObject => (AkAudioVolume)StaticClass().DefaultObject;
+
     internal AkAudioVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControlWhip.
+    /// </summary>
+    public static RSkelControlWhip DefaultObject => (RSkelControlWhip)StaticClass().DefaultObject;
+
     internal RSkelControlWhip() { }
 
     /// <summary>

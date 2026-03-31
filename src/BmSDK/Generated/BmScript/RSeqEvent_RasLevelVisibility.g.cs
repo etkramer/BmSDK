@@ -21,6 +21,11 @@ public partial class RSeqEvent_RasLevelVisibility : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RasLevelVisibility.
+    /// </summary>
+    public static RSeqEvent_RasLevelVisibility DefaultObject => (RSeqEvent_RasLevelVisibility)StaticClass().DefaultObject;
+
     internal RSeqEvent_RasLevelVisibility() { }
 
     /// <summary>

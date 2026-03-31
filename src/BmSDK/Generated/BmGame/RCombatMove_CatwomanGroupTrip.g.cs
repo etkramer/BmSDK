@@ -21,6 +21,11 @@ public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_Pl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_CatwomanGroupTrip.
+    /// </summary>
+    public static RCombatMove_CatwomanGroupTrip DefaultObject => (RCombatMove_CatwomanGroupTrip)StaticClass().DefaultObject;
+
     internal RCombatMove_CatwomanGroupTrip() { }
 
     /// <summary>

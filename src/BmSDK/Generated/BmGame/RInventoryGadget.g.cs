@@ -21,6 +21,11 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInventoryGadget.
+    /// </summary>
+    public static RInventoryGadget DefaultObject => (RInventoryGadget)StaticClass().DefaultObject;
+
     internal RInventoryGadget() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RWaterVolume : BmSDK.BmGame.RWaterVolumeBase, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWaterVolume.
+    /// </summary>
+    public static RWaterVolume DefaultObject => (RWaterVolume)StaticClass().DefaultObject;
+
     internal RWaterVolume() { }
 
     /// <summary>

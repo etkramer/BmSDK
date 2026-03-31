@@ -21,6 +21,11 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ClearDeadBodies.
+    /// </summary>
+    public static RSeqAct_ClearDeadBodies DefaultObject => (RSeqAct_ClearDeadBodies)StaticClass().DefaultObject;
+
     internal RSeqAct_ClearDeadBodies() { }
 
     /// <summary>

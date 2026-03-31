@@ -21,6 +21,11 @@ public partial class RMadHatterPostProcess : BmSDK.BmGame.RViewPostProcess, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMadHatterPostProcess.
+    /// </summary>
+    public static RMadHatterPostProcess DefaultObject => (RMadHatterPostProcess)StaticClass().DefaultObject;
+
     internal RMadHatterPostProcess() { }
 
     /// <summary>

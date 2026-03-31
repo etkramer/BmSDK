@@ -21,6 +21,11 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeProjectileGrenade.
+    /// </summary>
+    public static RFreezeProjectileGrenade DefaultObject => (RFreezeProjectileGrenade)StaticClass().DefaultObject;
+
     internal RFreezeProjectileGrenade() { }
 
     /// <summary>

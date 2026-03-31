@@ -21,6 +21,11 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LocalPlayer.
+    /// </summary>
+    public static LocalPlayer DefaultObject => (LocalPlayer)StaticClass().DefaultObject;
+
     internal LocalPlayer() { }
 
     /// <summary>

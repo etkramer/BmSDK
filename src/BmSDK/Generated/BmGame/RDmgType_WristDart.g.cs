@@ -21,6 +21,11 @@ public partial class RDmgType_WristDart : BmSDK.BmGame.RDamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_WristDart.
+    /// </summary>
+    public static RDmgType_WristDart DefaultObject => (RDmgType_WristDart)StaticClass().DefaultObject;
+
     internal RDmgType_WristDart() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_AerialAttackArmouredFail : BmSDK.BmSc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_AerialAttackArmouredFail.
+    /// </summary>
+    public static RStealthTakedownStage_AerialAttackArmouredFail DefaultObject => (RStealthTakedownStage_AerialAttackArmouredFail)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_AerialAttackArmouredFail() { }
 
     /// <summary>

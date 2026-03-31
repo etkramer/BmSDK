@@ -21,6 +21,11 @@ public partial class RClimbLocatorContainer : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClimbLocatorContainer.
+    /// </summary>
+    public static RClimbLocatorContainer DefaultObject => (RClimbLocatorContainer)StaticClass().DefaultObject;
+
     internal RClimbLocatorContainer() { }
 
     /// <summary>

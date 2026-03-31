@@ -21,6 +21,11 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlaySpeechBase.
+    /// </summary>
+    public static RSeqAct_PlaySpeechBase DefaultObject => (RSeqAct_PlaySpeechBase)StaticClass().DefaultObject;
+
     internal RSeqAct_PlaySpeechBase() { }
 
     /// <summary>

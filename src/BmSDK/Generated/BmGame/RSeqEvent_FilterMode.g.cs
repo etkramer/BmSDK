@@ -21,6 +21,11 @@ public partial class RSeqEvent_FilterMode : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FilterMode.
+    /// </summary>
+    public static RSeqEvent_FilterMode DefaultObject => (RSeqEvent_FilterMode)StaticClass().DefaultObject;
+
     internal RSeqEvent_FilterMode() { }
 
     /// <summary>

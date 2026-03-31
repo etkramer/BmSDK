@@ -21,6 +21,11 @@ public partial class RSeqAct_SmashablePropChange : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SmashablePropChange.
+    /// </summary>
+    public static RSeqAct_SmashablePropChange DefaultObject => (RSeqAct_SmashablePropChange)StaticClass().DefaultObject;
+
     internal RSeqAct_SmashablePropChange() { }
 
     /// <summary>

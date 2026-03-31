@@ -21,6 +21,11 @@ public partial class RSeqAct_SaveToMemoryOnly : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SaveToMemoryOnly.
+    /// </summary>
+    public static RSeqAct_SaveToMemoryOnly DefaultObject => (RSeqAct_SaveToMemoryOnly)StaticClass().DefaultObject;
+
     internal RSeqAct_SaveToMemoryOnly() { }
 
     /// <summary>

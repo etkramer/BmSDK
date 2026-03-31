@@ -21,6 +21,11 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SonicBatarang.
+    /// </summary>
+    public static RAEC_SonicBatarang DefaultObject => (RAEC_SonicBatarang)StaticClass().DefaultObject;
+
     internal RAEC_SonicBatarang() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class KAsset : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KAsset.
+    /// </summary>
+    public static KAsset DefaultObject => (KAsset)StaticClass().DefaultObject;
+
     internal KAsset() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwGrappleGun.
+    /// </summary>
+    public static RCwGrappleGun DefaultObject => (RCwGrappleGun)StaticClass().DefaultObject;
+
     internal RCwGrappleGun() { }
 
     /// <summary>

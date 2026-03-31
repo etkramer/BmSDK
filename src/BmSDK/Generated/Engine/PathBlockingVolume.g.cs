@@ -21,6 +21,11 @@ public partial class PathBlockingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathBlockingVolume.
+    /// </summary>
+    public static PathBlockingVolume DefaultObject => (PathBlockingVolume)StaticClass().DefaultObject;
+
     internal PathBlockingVolume() { }
 
     /// <summary>

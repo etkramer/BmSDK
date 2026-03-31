@@ -21,6 +21,11 @@ public partial class SeqAct_CommitMapChange : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_CommitMapChange.
+    /// </summary>
+    public static SeqAct_CommitMapChange DefaultObject => (SeqAct_CommitMapChange)StaticClass().DefaultObject;
+
     internal SeqAct_CommitMapChange() { }
 
     /// <summary>

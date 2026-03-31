@@ -21,6 +21,11 @@ public partial class SeqAct_AkAudioEventLoop : BmSDK.AkAudio.SeqAct_AkAudioEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkAudioEventLoop.
+    /// </summary>
+    public static SeqAct_AkAudioEventLoop DefaultObject => (SeqAct_AkAudioEventLoop)StaticClass().DefaultObject;
+
     internal SeqAct_AkAudioEventLoop() { }
 
     /// <summary>

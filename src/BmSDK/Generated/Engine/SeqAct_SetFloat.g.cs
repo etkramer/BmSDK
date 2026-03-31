@@ -21,6 +21,11 @@ public partial class SeqAct_SetFloat : BmSDK.Engine.SeqAct_SetSequenceVariable, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetFloat.
+    /// </summary>
+    public static SeqAct_SetFloat DefaultObject => (SeqAct_SetFloat)StaticClass().DefaultObject;
+
     internal SeqAct_SetFloat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_PenguinJammerDown : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PenguinJammerDown.
+    /// </summary>
+    public static RSeqAct_PenguinJammerDown DefaultObject => (RSeqAct_PenguinJammerDown)StaticClass().DefaultObject;
+
     internal RSeqAct_PenguinJammerDown() { }
 
     /// <summary>

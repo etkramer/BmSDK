@@ -21,6 +21,11 @@ public partial class RPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPathNode.
+    /// </summary>
+    public static RPathNode DefaultObject => (RPathNode)StaticClass().DefaultObject;
+
     internal RPathNode() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_StrikeContact.
+    /// </summary>
+    public static RAnimNotify_StrikeContact DefaultObject => (RAnimNotify_StrikeContact)StaticClass().DefaultObject;
+
     internal RAnimNotify_StrikeContact() { }
 
     /// <summary>

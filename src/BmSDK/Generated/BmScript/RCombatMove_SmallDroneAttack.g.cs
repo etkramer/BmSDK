@@ -21,6 +21,11 @@ public partial class RCombatMove_SmallDroneAttack : BmSDK.BmGame.RCombatMove_Vil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_SmallDroneAttack.
+    /// </summary>
+    public static RCombatMove_SmallDroneAttack DefaultObject => (RCombatMove_SmallDroneAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_SmallDroneAttack() { }
 
     /// <summary>

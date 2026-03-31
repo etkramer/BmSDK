@@ -21,6 +21,11 @@ public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ModifyPostProcess.
+    /// </summary>
+    public static RSeqAct_ModifyPostProcess DefaultObject => (RSeqAct_ModifyPostProcess)StaticClass().DefaultObject;
+
     internal RSeqAct_ModifyPostProcess() { }
 
     /// <summary>

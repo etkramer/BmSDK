@@ -21,6 +21,11 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KMeshProps.
+    /// </summary>
+    public static KMeshProps DefaultObject => (KMeshProps)StaticClass().DefaultObject;
+
     internal KMeshProps() { }
 
     /// <summary>

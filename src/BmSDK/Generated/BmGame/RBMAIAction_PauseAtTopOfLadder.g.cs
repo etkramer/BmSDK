@@ -21,6 +21,11 @@ public partial class RBMAIAction_PauseAtTopOfLadder : BmSDK.BmGame.RBMAIAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PauseAtTopOfLadder.
+    /// </summary>
+    public static RBMAIAction_PauseAtTopOfLadder DefaultObject => (RBMAIAction_PauseAtTopOfLadder)StaticClass().DefaultObject;
+
     internal RBMAIAction_PauseAtTopOfLadder() { }
 
     /// <summary>

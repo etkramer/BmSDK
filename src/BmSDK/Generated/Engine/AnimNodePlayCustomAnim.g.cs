@@ -21,6 +21,11 @@ public partial class AnimNodePlayCustomAnim : BmSDK.Engine.AnimNodeBlend, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodePlayCustomAnim.
+    /// </summary>
+    public static AnimNodePlayCustomAnim DefaultObject => (AnimNodePlayCustomAnim)StaticClass().DefaultObject;
+
     internal AnimNodePlayCustomAnim() { }
 
     /// <summary>

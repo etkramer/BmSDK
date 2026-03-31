@@ -21,6 +21,11 @@ public partial class RBMWeaponSledgeHammer : BmSDK.BmGame.RBMWeaponMelee, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponSledgeHammer.
+    /// </summary>
+    public static RBMWeaponSledgeHammer DefaultObject => (RBMWeaponSledgeHammer)StaticClass().DefaultObject;
+
     internal RBMWeaponSledgeHammer() { }
 
     /// <summary>

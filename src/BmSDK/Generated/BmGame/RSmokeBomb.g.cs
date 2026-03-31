@@ -21,6 +21,11 @@ public partial class RSmokeBomb : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmokeBomb.
+    /// </summary>
+    public static RSmokeBomb DefaultObject => (RSmokeBomb)StaticClass().DefaultObject;
+
     internal RSmokeBomb() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RLevelSelectMenu : BmSDK.BmGame.RDynamicMenu, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelSelectMenu.
+    /// </summary>
+    public static RLevelSelectMenu DefaultObject => (RLevelSelectMenu)StaticClass().DefaultObject;
+
     internal RLevelSelectMenu() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MCPBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MCPBase.
+    /// </summary>
+    public static MCPBase DefaultObject => (MCPBase)StaticClass().DefaultObject;
+
     internal MCPBase() { }
 
     /// <summary>

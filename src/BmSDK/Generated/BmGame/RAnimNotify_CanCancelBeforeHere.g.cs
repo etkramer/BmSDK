@@ -21,6 +21,11 @@ public partial class RAnimNotify_CanCancelBeforeHere : BmSDK.Engine.AnimNotify, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CanCancelBeforeHere.
+    /// </summary>
+    public static RAnimNotify_CanCancelBeforeHere DefaultObject => (RAnimNotify_CanCancelBeforeHere)StaticClass().DefaultObject;
+
     internal RAnimNotify_CanCancelBeforeHere() { }
 
     /// <summary>

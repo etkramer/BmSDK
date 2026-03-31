@@ -21,6 +21,11 @@ public partial class RSeqAct_SetBatmanBreathEffect : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetBatmanBreathEffect.
+    /// </summary>
+    public static RSeqAct_SetBatmanBreathEffect DefaultObject => (RSeqAct_SetBatmanBreathEffect)StaticClass().DefaultObject;
+
     internal RSeqAct_SetBatmanBreathEffect() { }
 
     /// <summary>

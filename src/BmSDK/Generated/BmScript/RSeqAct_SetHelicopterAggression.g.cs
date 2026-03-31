@@ -21,6 +21,11 @@ public partial class RSeqAct_SetHelicopterAggression : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetHelicopterAggression.
+    /// </summary>
+    public static RSeqAct_SetHelicopterAggression DefaultObject => (RSeqAct_SetHelicopterAggression)StaticClass().DefaultObject;
+
     internal RSeqAct_SetHelicopterAggression() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DefaultPhysicsVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DefaultPhysicsVolume.
+    /// </summary>
+    public static DefaultPhysicsVolume DefaultObject => (DefaultPhysicsVolume)StaticClass().DefaultObject;
+
     internal DefaultPhysicsVolume() { }
 
     /// <summary>

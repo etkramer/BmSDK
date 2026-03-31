@@ -21,6 +21,11 @@ public partial class RVantageCameraLookAt : BmSDK.BmGame.RDummyTarget, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVantageCameraLookAt.
+    /// </summary>
+    public static RVantageCameraLookAt DefaultObject => (RVantageCameraLookAt)StaticClass().DefaultObject;
+
     internal RVantageCameraLookAt() { }
 
     /// <summary>

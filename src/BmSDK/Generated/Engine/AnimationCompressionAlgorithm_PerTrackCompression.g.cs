@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_PerTrackCompression : BmSDK.E
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_PerTrackCompression.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_PerTrackCompression DefaultObject => (AnimationCompressionAlgorithm_PerTrackCompression)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_PerTrackCompression() { }
 
     /// <summary>

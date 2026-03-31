@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockCharacterTrophy : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockCharacterTrophy.
+    /// </summary>
+    public static RSeqAct_UnlockCharacterTrophy DefaultObject => (RSeqAct_UnlockCharacterTrophy)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockCharacterTrophy() { }
 
     /// <summary>

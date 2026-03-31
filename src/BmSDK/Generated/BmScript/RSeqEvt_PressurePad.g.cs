@@ -21,6 +21,11 @@ public partial class RSeqEvt_PressurePad : BmSDK.Engine.SequenceEvent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvt_PressurePad.
+    /// </summary>
+    public static RSeqEvt_PressurePad DefaultObject => (RSeqEvt_PressurePad)StaticClass().DefaultObject;
+
     internal RSeqEvt_PressurePad() { }
 
     /// <summary>

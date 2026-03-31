@@ -21,6 +21,11 @@ public partial class RBMWeaponChurchSpecialRifle : BmSDK.BmGame.RBMWeaponRanged,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponChurchSpecialRifle.
+    /// </summary>
+    public static RBMWeaponChurchSpecialRifle DefaultObject => (RBMWeaponChurchSpecialRifle)StaticClass().DefaultObject;
+
     internal RBMWeaponChurchSpecialRifle() { }
 
     /// <summary>

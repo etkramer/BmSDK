@@ -21,6 +21,11 @@ public partial class RAudioPoint_DisplayCase : BmSDK.BmGame.RAudioPointControlle
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioPoint_DisplayCase.
+    /// </summary>
+    public static RAudioPoint_DisplayCase DefaultObject => (RAudioPoint_DisplayCase)StaticClass().DefaultObject;
+
     internal RAudioPoint_DisplayCase() { }
 
     /// <summary>

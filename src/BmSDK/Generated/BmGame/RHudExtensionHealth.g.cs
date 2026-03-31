@@ -21,6 +21,11 @@ public partial class RHudExtensionHealth : BmSDK.BmGame.RHudExtension, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionHealth.
+    /// </summary>
+    public static RHudExtensionHealth DefaultObject => (RHudExtensionHealth)StaticClass().DefaultObject;
+
     internal RHudExtensionHealth() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionFrac : BmSDK.Engine.MaterialExpression, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFrac.
+    /// </summary>
+    public static MaterialExpressionFrac DefaultObject => (MaterialExpressionFrac)StaticClass().DefaultObject;
+
     internal MaterialExpressionFrac() { }
 
     /// <summary>

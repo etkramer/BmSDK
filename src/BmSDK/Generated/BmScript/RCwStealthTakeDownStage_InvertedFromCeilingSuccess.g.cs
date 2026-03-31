@@ -21,6 +21,11 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeilingSuccess : BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwStealthTakeDownStage_InvertedFromCeilingSuccess.
+    /// </summary>
+    public static RCwStealthTakeDownStage_InvertedFromCeilingSuccess DefaultObject => (RCwStealthTakeDownStage_InvertedFromCeilingSuccess)StaticClass().DefaultObject;
+
     internal RCwStealthTakeDownStage_InvertedFromCeilingSuccess() { }
 
     /// <summary>

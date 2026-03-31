@@ -21,6 +21,11 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCapture2DHitMaskComponent.
+    /// </summary>
+    public static SceneCapture2DHitMaskComponent DefaultObject => (SceneCapture2DHitMaskComponent)StaticClass().DefaultObject;
+
     internal SceneCapture2DHitMaskComponent() { }
 
     /// <summary>

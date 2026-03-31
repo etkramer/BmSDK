@@ -21,6 +21,11 @@ public partial class InterpTrackBoolProp : BmSDK.Engine.InterpTrack, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackBoolProp.
+    /// </summary>
+    public static InterpTrackBoolProp DefaultObject => (InterpTrackBoolProp)StaticClass().DefaultObject;
+
     internal InterpTrackBoolProp() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Magnetised : BmSDK.BmGame.RBMBehaviour, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Magnetised.
+    /// </summary>
+    public static RBMBehaviour_Magnetised DefaultObject => (RBMBehaviour_Magnetised)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Magnetised() { }
 
     /// <summary>

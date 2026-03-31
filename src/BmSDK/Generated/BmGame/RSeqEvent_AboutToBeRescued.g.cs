@@ -21,6 +21,11 @@ public partial class RSeqEvent_AboutToBeRescued : BmSDK.Engine.SequenceEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_AboutToBeRescued.
+    /// </summary>
+    public static RSeqEvent_AboutToBeRescued DefaultObject => (RSeqEvent_AboutToBeRescued)StaticClass().DefaultObject;
+
     internal RSeqEvent_AboutToBeRescued() { }
 
     /// <summary>

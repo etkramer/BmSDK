@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMaterialInstance : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMaterialInstance.
+    /// </summary>
+    public static RSeqAct_SetMaterialInstance DefaultObject => (RSeqAct_SetMaterialInstance)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMaterialInstance() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAudioHornSpeakerPoint : BmSDK.BmGame.RAudioPoint, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioHornSpeakerPoint.
+    /// </summary>
+    public static RAudioHornSpeakerPoint DefaultObject => (RAudioHornSpeakerPoint)StaticClass().DefaultObject;
+
     internal RAudioHornSpeakerPoint() { }
 
     /// <summary>

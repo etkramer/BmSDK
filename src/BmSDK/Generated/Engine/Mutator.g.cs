@@ -21,6 +21,11 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Mutator.
+    /// </summary>
+    public static Mutator DefaultObject => (Mutator)StaticClass().DefaultObject;
+
     internal Mutator() { }
 
     /// <summary>

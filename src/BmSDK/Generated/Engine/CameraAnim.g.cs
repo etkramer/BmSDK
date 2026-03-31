@@ -21,6 +21,11 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CameraAnim.
+    /// </summary>
+    public static CameraAnim DefaultObject => (CameraAnim)StaticClass().DefaultObject;
+
     internal CameraAnim() { }
 
     /// <summary>

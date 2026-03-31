@@ -21,6 +21,11 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCaptureCubeMapComponent.
+    /// </summary>
+    public static SceneCaptureCubeMapComponent DefaultObject => (SceneCaptureCubeMapComponent)StaticClass().DefaultObject;
+
     internal SceneCaptureCubeMapComponent() { }
 
     /// <summary>

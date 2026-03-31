@@ -21,6 +21,11 @@ public partial class RAEC_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorBa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_ExplodedJammer.
+    /// </summary>
+    public static RAEC_ExplodedJammer DefaultObject => (RAEC_ExplodedJammer)StaticClass().DefaultObject;
+
     internal RAEC_ExplodedJammer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_FirstRiddlerTrophyCollected : BmSDK.Engine.Sequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FirstRiddlerTrophyCollected.
+    /// </summary>
+    public static RSeqEvent_FirstRiddlerTrophyCollected DefaultObject => (RSeqEvent_FirstRiddlerTrophyCollected)StaticClass().DefaultObject;
+
     internal RSeqEvent_FirstRiddlerTrophyCollected() { }
 
     /// <summary>

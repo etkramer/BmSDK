@@ -21,6 +21,11 @@ public partial class Admin : BmSDK.Engine.PlayerController, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Admin.
+    /// </summary>
+    public static Admin DefaultObject => (Admin)StaticClass().DefaultObject;
+
     internal Admin() { }
 
     /// <summary>

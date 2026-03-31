@@ -21,6 +21,11 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkEmitter.
+    /// </summary>
+    public static AkEmitter DefaultObject => (AkEmitter)StaticClass().DefaultObject;
+
     internal AkEmitter() { }
 
     /// <summary>

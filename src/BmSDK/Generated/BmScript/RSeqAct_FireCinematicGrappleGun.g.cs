@@ -21,6 +21,11 @@ public partial class RSeqAct_FireCinematicGrappleGun : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FireCinematicGrappleGun.
+    /// </summary>
+    public static RSeqAct_FireCinematicGrappleGun DefaultObject => (RSeqAct_FireCinematicGrappleGun)StaticClass().DefaultObject;
+
     internal RSeqAct_FireCinematicGrappleGun() { }
 
     /// <summary>

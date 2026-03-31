@@ -21,6 +21,11 @@ public partial class RSeqAct_CameraLookAt : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CameraLookAt.
+    /// </summary>
+    public static RSeqAct_CameraLookAt DefaultObject => (RSeqAct_CameraLookAt)StaticClass().DefaultObject;
+
     internal RSeqAct_CameraLookAt() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqVar_Colour : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_Colour.
+    /// </summary>
+    public static SeqVar_Colour DefaultObject => (SeqVar_Colour)StaticClass().DefaultObject;
+
     internal SeqVar_Colour() { }
 
     /// <summary>

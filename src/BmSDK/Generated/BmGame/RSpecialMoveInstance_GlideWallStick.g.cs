@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_GlideWallStick.
+    /// </summary>
+    public static RSpecialMoveInstance_GlideWallStick DefaultObject => (RSpecialMoveInstance_GlideWallStick)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_GlideWallStick() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCwStealthTakeDownStage_PullFromCatwalk : BmSDK.BmGame.RSte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwStealthTakeDownStage_PullFromCatwalk.
+    /// </summary>
+    public static RCwStealthTakeDownStage_PullFromCatwalk DefaultObject => (RCwStealthTakeDownStage_PullFromCatwalk)StaticClass().DefaultObject;
+
     internal RCwStealthTakeDownStage_PullFromCatwalk() { }
 
     /// <summary>

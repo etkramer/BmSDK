@@ -21,6 +21,11 @@ public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Keypoint.
+    /// </summary>
+    public static Keypoint DefaultObject => (Keypoint)StaticClass().DefaultObject;
+
     internal Keypoint() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Teleporter.
+    /// </summary>
+    public static Teleporter DefaultObject => (Teleporter)StaticClass().DefaultObject;
+
     internal Teleporter() { }
 
     /// <summary>

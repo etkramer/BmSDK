@@ -21,6 +21,11 @@ public partial class RPawnFriendlyAzriel : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyAzriel.
+    /// </summary>
+    public static RPawnFriendlyAzriel DefaultObject => (RPawnFriendlyAzriel)StaticClass().DefaultObject;
+
     internal RPawnFriendlyAzriel() { }
 
     /// <summary>

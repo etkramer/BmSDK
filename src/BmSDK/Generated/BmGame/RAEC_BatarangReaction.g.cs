@@ -21,6 +21,11 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_BatarangReaction.
+    /// </summary>
+    public static RAEC_BatarangReaction DefaultObject => (RAEC_BatarangReaction)StaticClass().DefaultObject;
+
     internal RAEC_BatarangReaction() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FluidSurfaceComponent.
+    /// </summary>
+    public static FluidSurfaceComponent DefaultObject => (FluidSurfaceComponent)StaticClass().DefaultObject;
+
     internal FluidSurfaceComponent() { }
 
     /// <summary>

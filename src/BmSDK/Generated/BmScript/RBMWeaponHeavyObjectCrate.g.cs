@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObjectCrate : BmSDK.BmScript.RBMWeaponHeavyOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObjectCrate.
+    /// </summary>
+    public static RBMWeaponHeavyObjectCrate DefaultObject => (RBMWeaponHeavyObjectCrate)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObjectCrate() { }
 
     /// <summary>

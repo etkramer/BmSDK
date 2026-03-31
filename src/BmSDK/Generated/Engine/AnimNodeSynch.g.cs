@@ -21,6 +21,11 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeSynch.
+    /// </summary>
+    public static AnimNodeSynch DefaultObject => (AnimNodeSynch)StaticClass().DefaultObject;
+
     internal AnimNodeSynch() { }
 
     /// <summary>

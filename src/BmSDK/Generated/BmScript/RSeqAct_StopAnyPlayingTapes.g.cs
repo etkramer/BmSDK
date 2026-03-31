@@ -21,6 +21,11 @@ public partial class RSeqAct_StopAnyPlayingTapes : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StopAnyPlayingTapes.
+    /// </summary>
+    public static RSeqAct_StopAnyPlayingTapes DefaultObject => (RSeqAct_StopAnyPlayingTapes)StaticClass().DefaultObject;
+
     internal RSeqAct_StopAnyPlayingTapes() { }
 
     /// <summary>

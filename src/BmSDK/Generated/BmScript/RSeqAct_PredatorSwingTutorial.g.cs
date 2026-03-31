@@ -21,6 +21,11 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PredatorSwingTutorial.
+    /// </summary>
+    public static RSeqAct_PredatorSwingTutorial DefaultObject => (RSeqAct_PredatorSwingTutorial)StaticClass().DefaultObject;
+
     internal RSeqAct_PredatorSwingTutorial() { }
 
     /// <summary>

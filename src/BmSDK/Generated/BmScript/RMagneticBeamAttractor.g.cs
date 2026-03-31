@@ -21,6 +21,11 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticBeamAttractor.
+    /// </summary>
+    public static RMagneticBeamAttractor DefaultObject => (RMagneticBeamAttractor)StaticClass().DefaultObject;
+
     internal RMagneticBeamAttractor() { }
 
     /// <summary>

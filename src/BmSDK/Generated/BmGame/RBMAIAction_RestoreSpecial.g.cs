@@ -21,6 +21,11 @@ public partial class RBMAIAction_RestoreSpecial : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RestoreSpecial.
+    /// </summary>
+    public static RBMAIAction_RestoreSpecial DefaultObject => (RBMAIAction_RestoreSpecial)StaticClass().DefaultObject;
+
     internal RBMAIAction_RestoreSpecial() { }
 
     /// <summary>

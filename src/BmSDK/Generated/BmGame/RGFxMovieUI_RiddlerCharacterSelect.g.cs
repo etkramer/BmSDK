@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_RiddlerCharacterSelect.
+    /// </summary>
+    public static RGFxMovieUI_RiddlerCharacterSelect DefaultObject => (RGFxMovieUI_RiddlerCharacterSelect)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_RiddlerCharacterSelect() { }
 
     /// <summary>

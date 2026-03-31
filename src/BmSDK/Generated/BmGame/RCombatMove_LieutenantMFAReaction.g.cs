@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantMFAReaction : BmSDK.BmGame.RCombatMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantMFAReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantMFAReaction DefaultObject => (RCombatMove_LieutenantMFAReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantMFAReaction() { }
 
     /// <summary>

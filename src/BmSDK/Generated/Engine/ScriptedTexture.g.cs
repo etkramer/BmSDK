@@ -21,6 +21,11 @@ public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ScriptedTexture.
+    /// </summary>
+    public static ScriptedTexture DefaultObject => (ScriptedTexture)StaticClass().DefaultObject;
+
     internal ScriptedTexture() { }
 
     /// <summary>

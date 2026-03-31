@@ -21,6 +21,11 @@ public partial class RCharacter_OutcastTwoFace4 : BmSDK.BmGame.RCharacter_TwoFac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_OutcastTwoFace4.
+    /// </summary>
+    public static RCharacter_OutcastTwoFace4 DefaultObject => (RCharacter_OutcastTwoFace4)StaticClass().DefaultObject;
+
     internal RCharacter_OutcastTwoFace4() { }
 
     /// <summary>

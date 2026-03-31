@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_LedgeGrab.
+    /// </summary>
+    public static RFreezeTakeDownStage_LedgeGrab DefaultObject => (RFreezeTakeDownStage_LedgeGrab)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_LedgeGrab() { }
 
     /// <summary>

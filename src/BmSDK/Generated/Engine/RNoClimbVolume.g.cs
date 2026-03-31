@@ -21,6 +21,11 @@ public partial class RNoClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNoClimbVolume.
+    /// </summary>
+    public static RNoClimbVolume DefaultObject => (RNoClimbVolume)StaticClass().DefaultObject;
+
     internal RNoClimbVolume() { }
 
     /// <summary>

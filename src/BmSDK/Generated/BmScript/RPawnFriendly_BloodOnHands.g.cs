@@ -21,6 +21,11 @@ public partial class RPawnFriendly_BloodOnHands : BmSDK.BmGame.RPawnFriendly, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendly_BloodOnHands.
+    /// </summary>
+    public static RPawnFriendly_BloodOnHands DefaultObject => (RPawnFriendly_BloodOnHands)StaticClass().DefaultObject;
+
     internal RPawnFriendly_BloodOnHands() { }
 
     /// <summary>

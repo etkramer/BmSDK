@@ -21,6 +21,11 @@ public partial class RPDLC_HarleyBalloons : BmSDK.BmGame.RJokerBalloonsBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPDLC_HarleyBalloons.
+    /// </summary>
+    public static RPDLC_HarleyBalloons DefaultObject => (RPDLC_HarleyBalloons)StaticClass().DefaultObject;
+
     internal RPDLC_HarleyBalloons() { }
 
     /// <summary>

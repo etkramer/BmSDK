@@ -21,6 +21,11 @@ public partial class RExplosionDetector : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExplosionDetector.
+    /// </summary>
+    public static RExplosionDetector DefaultObject => (RExplosionDetector)StaticClass().DefaultObject;
+
     internal RExplosionDetector() { }
 
     /// <summary>

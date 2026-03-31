@@ -21,6 +21,11 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakablePickupPenguin.
+    /// </summary>
+    public static RBreakablePickupPenguin DefaultObject => (RBreakablePickupPenguin)StaticClass().DefaultObject;
+
     internal RBreakablePickupPenguin() { }
 
     /// <summary>

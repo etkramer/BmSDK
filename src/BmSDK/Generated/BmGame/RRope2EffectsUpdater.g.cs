@@ -21,6 +21,11 @@ public partial class RRope2EffectsUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2EffectsUpdater.
+    /// </summary>
+    public static RRope2EffectsUpdater DefaultObject => (RRope2EffectsUpdater)StaticClass().DefaultObject;
+
     internal RRope2EffectsUpdater() { }
 
     /// <summary>

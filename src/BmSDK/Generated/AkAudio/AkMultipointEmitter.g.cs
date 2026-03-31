@@ -21,6 +21,11 @@ public partial class AkMultipointEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkMultipointEmitter.
+    /// </summary>
+    public static AkMultipointEmitter DefaultObject => (AkMultipointEmitter)StaticClass().DefaultObject;
+
     internal AkMultipointEmitter() { }
 
     /// <summary>

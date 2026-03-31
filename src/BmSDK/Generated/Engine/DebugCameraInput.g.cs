@@ -21,6 +21,11 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DebugCameraInput.
+    /// </summary>
+    public static DebugCameraInput DefaultObject => (DebugCameraInput)StaticClass().DefaultObject;
+
     internal DebugCameraInput() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Info : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Info.
+    /// </summary>
+    public static Info DefaultObject => (Info)StaticClass().DefaultObject;
+
     internal Info() { }
 
     /// <summary>

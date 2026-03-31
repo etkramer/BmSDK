@@ -21,6 +21,11 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AudioDevice.
+    /// </summary>
+    public static AudioDevice DefaultObject => (AudioDevice)StaticClass().DefaultObject;
+
     internal AudioDevice() { }
 
     /// <summary>

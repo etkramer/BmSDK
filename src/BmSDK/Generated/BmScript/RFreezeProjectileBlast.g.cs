@@ -21,6 +21,11 @@ public partial class RFreezeProjectileBlast : BmSDK.BmGame.RProjectile, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeProjectileBlast.
+    /// </summary>
+    public static RFreezeProjectileBlast DefaultObject => (RFreezeProjectileBlast)StaticClass().DefaultObject;
+
     internal RFreezeProjectileBlast() { }
 
     /// <summary>

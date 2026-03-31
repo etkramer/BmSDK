@@ -21,6 +21,11 @@ public partial class RSeqEvent_DisabledControlChopper : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_DisabledControlChopper.
+    /// </summary>
+    public static RSeqEvent_DisabledControlChopper DefaultObject => (RSeqEvent_DisabledControlChopper)StaticClass().DefaultObject;
+
     internal RSeqEvent_DisabledControlChopper() { }
 
     /// <summary>

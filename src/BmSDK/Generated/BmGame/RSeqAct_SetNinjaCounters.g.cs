@@ -21,6 +21,11 @@ public partial class RSeqAct_SetNinjaCounters : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetNinjaCounters.
+    /// </summary>
+    public static RSeqAct_SetNinjaCounters DefaultObject => (RSeqAct_SetNinjaCounters)StaticClass().DefaultObject;
+
     internal RSeqAct_SetNinjaCounters() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_CheckAggressiveHelicopter : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CheckAggressiveHelicopter.
+    /// </summary>
+    public static RSeqAct_CheckAggressiveHelicopter DefaultObject => (RSeqAct_CheckAggressiveHelicopter)StaticClass().DefaultObject;
+
     internal RSeqAct_CheckAggressiveHelicopter() { }
 
     /// <summary>

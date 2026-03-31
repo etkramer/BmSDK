@@ -21,6 +21,11 @@ public partial class RSeqAct_SaveDataLoaded : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SaveDataLoaded.
+    /// </summary>
+    public static RSeqAct_SaveDataLoaded DefaultObject => (RSeqAct_SaveDataLoaded)StaticClass().DefaultObject;
+
     internal RSeqAct_SaveDataLoaded() { }
 
     /// <summary>

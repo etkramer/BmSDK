@@ -21,6 +21,11 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRainVolumeBase.
+    /// </summary>
+    public static RRainVolumeBase DefaultObject => (RRainVolumeBase)StaticClass().DefaultObject;
+
     internal RRainVolumeBase() { }
 
     /// <summary>

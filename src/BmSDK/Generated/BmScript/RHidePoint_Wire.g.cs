@@ -21,6 +21,11 @@ public partial class RHidePoint_Wire : BmSDK.BmScript.RHidePoint_Rope, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_Wire.
+    /// </summary>
+    public static RHidePoint_Wire DefaultObject => (RHidePoint_Wire)StaticClass().DefaultObject;
+
     internal RHidePoint_Wire() { }
 
     /// <summary>

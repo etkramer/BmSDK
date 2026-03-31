@@ -21,6 +21,11 @@ public partial class RTauntVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTauntVolume.
+    /// </summary>
+    public static RTauntVolume DefaultObject => (RTauntVolume)StaticClass().DefaultObject;
+
     internal RTauntVolume() { }
 
     /// <summary>

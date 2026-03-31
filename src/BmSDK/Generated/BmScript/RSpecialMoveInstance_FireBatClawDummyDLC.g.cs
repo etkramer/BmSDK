@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_FireBatClawDummyDLC : BmSDK.BmGame.RSp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_FireBatClawDummyDLC.
+    /// </summary>
+    public static RSpecialMoveInstance_FireBatClawDummyDLC DefaultObject => (RSpecialMoveInstance_FireBatClawDummyDLC)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_FireBatClawDummyDLC() { }
 
     /// <summary>

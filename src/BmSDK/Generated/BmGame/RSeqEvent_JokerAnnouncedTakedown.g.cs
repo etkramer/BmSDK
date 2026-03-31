@@ -21,6 +21,11 @@ public partial class RSeqEvent_JokerAnnouncedTakedown : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_JokerAnnouncedTakedown.
+    /// </summary>
+    public static RSeqEvent_JokerAnnouncedTakedown DefaultObject => (RSeqEvent_JokerAnnouncedTakedown)StaticClass().DefaultObject;
+
     internal RSeqEvent_JokerAnnouncedTakedown() { }
 
     /// <summary>

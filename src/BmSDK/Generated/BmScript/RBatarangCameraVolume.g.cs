@@ -21,6 +21,11 @@ public partial class RBatarangCameraVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangCameraVolume.
+    /// </summary>
+    public static RBatarangCameraVolume DefaultObject => (RBatarangCameraVolume)StaticClass().DefaultObject;
+
     internal RBatarangCameraVolume() { }
 
     /// <summary>

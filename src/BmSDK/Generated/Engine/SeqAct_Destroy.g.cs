@@ -21,6 +21,11 @@ public partial class SeqAct_Destroy : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Destroy.
+    /// </summary>
+    public static SeqAct_Destroy DefaultObject => (SeqAct_Destroy)StaticClass().DefaultObject;
+
     internal SeqAct_Destroy() { }
 
     /// <summary>

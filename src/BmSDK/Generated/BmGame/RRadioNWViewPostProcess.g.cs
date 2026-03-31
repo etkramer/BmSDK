@@ -21,6 +21,11 @@ public partial class RRadioNWViewPostProcess : BmSDK.BmGame.RViewPostProcess, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRadioNWViewPostProcess.
+    /// </summary>
+    public static RRadioNWViewPostProcess DefaultObject => (RRadioNWViewPostProcess)StaticClass().DefaultObject;
+
     internal RRadioNWViewPostProcess() { }
 
     /// <summary>

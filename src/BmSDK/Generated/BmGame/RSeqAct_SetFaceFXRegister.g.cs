@@ -21,6 +21,11 @@ public partial class RSeqAct_SetFaceFXRegister : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetFaceFXRegister.
+    /// </summary>
+    public static RSeqAct_SetFaceFXRegister DefaultObject => (RSeqAct_SetFaceFXRegister)StaticClass().DefaultObject;
+
     internal RSeqAct_SetFaceFXRegister() { }
 
     /// <summary>

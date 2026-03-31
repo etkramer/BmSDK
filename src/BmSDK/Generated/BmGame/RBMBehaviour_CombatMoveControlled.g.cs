@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatMoveControlled : BmSDK.BmGame.RBMBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatMoveControlled.
+    /// </summary>
+    public static RBMBehaviour_CombatMoveControlled DefaultObject => (RBMBehaviour_CombatMoveControlled)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatMoveControlled() { }
 
     /// <summary>

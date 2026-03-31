@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanGrabbedByGrundy : BmSDK.BmGame.RCombatMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanGrabbedByGrundy.
+    /// </summary>
+    public static RCombatMove_BatmanGrabbedByGrundy DefaultObject => (RCombatMove_BatmanGrabbedByGrundy)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanGrabbedByGrundy() { }
 
     /// <summary>

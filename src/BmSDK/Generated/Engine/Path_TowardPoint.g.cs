@@ -21,6 +21,11 @@ public partial class Path_TowardPoint : BmSDK.Engine.PathConstraint, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_TowardPoint.
+    /// </summary>
+    public static Path_TowardPoint DefaultObject => (Path_TowardPoint)StaticClass().DefaultObject;
+
     internal Path_TowardPoint() { }
 
     /// <summary>

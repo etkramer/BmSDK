@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HitReactionShocked.
+    /// </summary>
+    public static RBMBehaviour_HitReactionShocked DefaultObject => (RBMBehaviour_HitReactionShocked)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HitReactionShocked() { }
 
     /// <summary>

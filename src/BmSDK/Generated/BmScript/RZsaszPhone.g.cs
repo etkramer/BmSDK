@@ -21,6 +21,11 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RZsaszPhone.
+    /// </summary>
+    public static RZsaszPhone DefaultObject => (RZsaszPhone)StaticClass().DefaultObject;
+
     internal RZsaszPhone() { }
 
     /// <summary>

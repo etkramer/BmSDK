@@ -21,6 +21,11 @@ public partial class RSeqAct_ZsaszPhonecallGloating : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ZsaszPhonecallGloating.
+    /// </summary>
+    public static RSeqAct_ZsaszPhonecallGloating DefaultObject => (RSeqAct_ZsaszPhonecallGloating)StaticClass().DefaultObject;
+
     internal RSeqAct_ZsaszPhonecallGloating() { }
 
     /// <summary>

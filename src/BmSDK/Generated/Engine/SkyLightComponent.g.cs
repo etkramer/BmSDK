@@ -21,6 +21,11 @@ public partial class SkyLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkyLightComponent.
+    /// </summary>
+    public static SkyLightComponent DefaultObject => (SkyLightComponent)StaticClass().DefaultObject;
+
     internal SkyLightComponent() { }
 
     /// <summary>

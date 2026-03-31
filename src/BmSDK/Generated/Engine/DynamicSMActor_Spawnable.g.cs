@@ -21,6 +21,11 @@ public partial class DynamicSMActor_Spawnable : BmSDK.Engine.DynamicSMActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicSMActor_Spawnable.
+    /// </summary>
+    public static DynamicSMActor_Spawnable DefaultObject => (DynamicSMActor_Spawnable)StaticClass().DefaultObject;
+
     internal DynamicSMActor_Spawnable() { }
 
     /// <summary>

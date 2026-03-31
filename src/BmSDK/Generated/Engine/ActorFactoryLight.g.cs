@@ -21,6 +21,11 @@ public partial class ActorFactoryLight : BmSDK.Engine.ActorFactory, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryLight.
+    /// </summary>
+    public static ActorFactoryLight DefaultObject => (ActorFactoryLight)StaticClass().DefaultObject;
+
     internal ActorFactoryLight() { }
 
     /// <summary>

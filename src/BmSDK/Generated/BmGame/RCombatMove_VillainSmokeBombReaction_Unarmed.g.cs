@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainSmokeBombReaction_Unarmed : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainSmokeBombReaction_Unarmed.
+    /// </summary>
+    public static RCombatMove_VillainSmokeBombReaction_Unarmed DefaultObject => (RCombatMove_VillainSmokeBombReaction_Unarmed)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainSmokeBombReaction_Unarmed() { }
 
     /// <summary>

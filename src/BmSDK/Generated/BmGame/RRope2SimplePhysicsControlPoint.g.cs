@@ -21,6 +21,11 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2SimplePhysicsControlPoint.
+    /// </summary>
+    public static RRope2SimplePhysicsControlPoint DefaultObject => (RRope2SimplePhysicsControlPoint)StaticClass().DefaultObject;
+
     internal RRope2SimplePhysicsControlPoint() { }
 
     /// <summary>

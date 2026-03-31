@@ -21,6 +21,11 @@ public partial class RB_HingeSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_HingeSetup.
+    /// </summary>
+    public static RB_HingeSetup DefaultObject => (RB_HingeSetup)StaticClass().DefaultObject;
+
     internal RB_HingeSetup() { }
 
     /// <summary>

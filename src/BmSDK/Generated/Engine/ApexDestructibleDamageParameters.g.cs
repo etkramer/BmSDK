@@ -21,6 +21,11 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDestructibleDamageParameters.
+    /// </summary>
+    public static ApexDestructibleDamageParameters DefaultObject => (ApexDestructibleDamageParameters)StaticClass().DefaultObject;
+
     internal ApexDestructibleDamageParameters() { }
 
     /// <summary>

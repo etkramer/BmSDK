@@ -21,6 +21,11 @@ public partial class RFloatingIceRaft_Fat : BmSDK.BmScript.RFloatingIceRaft, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingIceRaft_Fat.
+    /// </summary>
+    public static RFloatingIceRaft_Fat DefaultObject => (RFloatingIceRaft_Fat)StaticClass().DefaultObject;
+
     internal RFloatingIceRaft_Fat() { }
 
     /// <summary>

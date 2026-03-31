@@ -21,6 +21,11 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkeletalMeshComponent_Export.
+    /// </summary>
+    public static RSkeletalMeshComponent_Export DefaultObject => (RSkeletalMeshComponent_Export)StaticClass().DefaultObject;
+
     internal RSkeletalMeshComponent_Export() { }
 
     /// <summary>

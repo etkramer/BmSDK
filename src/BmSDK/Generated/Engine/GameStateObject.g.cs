@@ -21,6 +21,11 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameStateObject.
+    /// </summary>
+    public static GameStateObject DefaultObject => (GameStateObject)StaticClass().DefaultObject;
+
     internal GameStateObject() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class PersistentDebugData : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PersistentDebugData.
+    /// </summary>
+    public static PersistentDebugData DefaultObject => (PersistentDebugData)StaticClass().DefaultObject;
+
     internal PersistentDebugData() { }
 
     /// <summary>

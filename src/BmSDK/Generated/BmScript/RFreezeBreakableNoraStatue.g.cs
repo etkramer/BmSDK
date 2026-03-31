@@ -21,6 +21,11 @@ public partial class RFreezeBreakableNoraStatue : BmSDK.Engine.FracturedStaticMe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeBreakableNoraStatue.
+    /// </summary>
+    public static RFreezeBreakableNoraStatue DefaultObject => (RFreezeBreakableNoraStatue)StaticClass().DefaultObject;
+
     internal RFreezeBreakableNoraStatue() { }
 
     /// <summary>

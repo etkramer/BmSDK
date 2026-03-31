@@ -21,6 +21,11 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceProjectile.
+    /// </summary>
+    public static RClayfaceProjectile DefaultObject => (RClayfaceProjectile)StaticClass().DefaultObject;
+
     internal RClayfaceProjectile() { }
 
     /// <summary>

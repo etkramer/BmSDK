@@ -21,6 +21,11 @@ public partial class RDmgType_StunStick : BmSDK.BmGame.RDmgType_Electricity, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_StunStick.
+    /// </summary>
+    public static RDmgType_StunStick DefaultObject => (RDmgType_StunStick)StaticClass().DefaultObject;
+
     internal RDmgType_StunStick() { }
 
     /// <summary>

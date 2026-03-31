@@ -21,6 +21,11 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KActor.
+    /// </summary>
+    public static KActor DefaultObject => (KActor)StaticClass().DefaultObject;
+
     internal KActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThugTrap.
+    /// </summary>
+    public static RThugTrap DefaultObject => (RThugTrap)StaticClass().DefaultObject;
+
     internal RThugTrap() { }
 
     /// <summary>

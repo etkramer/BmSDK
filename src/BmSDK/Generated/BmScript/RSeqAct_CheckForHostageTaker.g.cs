@@ -21,6 +21,11 @@ public partial class RSeqAct_CheckForHostageTaker : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CheckForHostageTaker.
+    /// </summary>
+    public static RSeqAct_CheckForHostageTaker DefaultObject => (RSeqAct_CheckForHostageTaker)StaticClass().DefaultObject;
+
     internal RSeqAct_CheckForHostageTaker() { }
 
     /// <summary>

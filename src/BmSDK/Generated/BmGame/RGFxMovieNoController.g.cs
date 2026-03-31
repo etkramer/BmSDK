@@ -21,6 +21,11 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieNoController.
+    /// </summary>
+    public static RGFxMovieNoController DefaultObject => (RGFxMovieNoController)StaticClass().DefaultObject;
+
     internal RGFxMovieNoController() { }
 
     /// <summary>

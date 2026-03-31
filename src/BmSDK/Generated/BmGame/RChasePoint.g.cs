@@ -21,6 +21,11 @@ public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChasePoint.
+    /// </summary>
+    public static RChasePoint DefaultObject => (RChasePoint)StaticClass().DefaultObject;
+
     internal RChasePoint() { }
 
     /// <summary>

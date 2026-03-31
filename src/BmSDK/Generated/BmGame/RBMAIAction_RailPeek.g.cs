@@ -21,6 +21,11 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RailPeek.
+    /// </summary>
+    public static RBMAIAction_RailPeek DefaultObject => (RBMAIAction_RailPeek)StaticClass().DefaultObject;
+
     internal RBMAIAction_RailPeek() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieBenchmarking : BmSDK.Engine.SeqAct_Latent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieBenchmarking.
+    /// </summary>
+    public static RSeqAct_GFxMovieBenchmarking DefaultObject => (RSeqAct_GFxMovieBenchmarking)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieBenchmarking() { }
 
     /// <summary>

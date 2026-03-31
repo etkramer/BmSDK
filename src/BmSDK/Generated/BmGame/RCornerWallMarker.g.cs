@@ -21,6 +21,11 @@ public partial class RCornerWallMarker : BmSDK.BmGame.RCornerWallMarkerBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCornerWallMarker.
+    /// </summary>
+    public static RCornerWallMarker DefaultObject => (RCornerWallMarker)StaticClass().DefaultObject;
+
     internal RCornerWallMarker() { }
 
     /// <summary>

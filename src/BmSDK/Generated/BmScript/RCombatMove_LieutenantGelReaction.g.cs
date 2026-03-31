@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantGelReaction : BmSDK.BmGame.RCombatMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantGelReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantGelReaction DefaultObject => (RCombatMove_LieutenantGelReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantGelReaction() { }
 
     /// <summary>

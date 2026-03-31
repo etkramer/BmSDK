@@ -21,6 +21,11 @@ public partial class RLineLauncherNw : BmSDK.BmScript.RLineLauncherBm, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherNw.
+    /// </summary>
+    public static RLineLauncherNw DefaultObject => (RLineLauncherNw)StaticClass().DefaultObject;
+
     internal RLineLauncherNw() { }
 
     /// <summary>

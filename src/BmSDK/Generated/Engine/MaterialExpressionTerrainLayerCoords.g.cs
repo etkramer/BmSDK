@@ -21,6 +21,11 @@ public partial class MaterialExpressionTerrainLayerCoords : BmSDK.Engine.Materia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTerrainLayerCoords.
+    /// </summary>
+    public static MaterialExpressionTerrainLayerCoords DefaultObject => (MaterialExpressionTerrainLayerCoords)StaticClass().DefaultObject;
+
     internal MaterialExpressionTerrainLayerCoords() { }
 
     /// <summary>

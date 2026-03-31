@@ -21,6 +21,11 @@ public partial class RGrundyRopeComponent : BmSDK.BmGame.RRope2Component, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrundyRopeComponent.
+    /// </summary>
+    public static RGrundyRopeComponent DefaultObject => (RGrundyRopeComponent)StaticClass().DefaultObject;
+
     internal RGrundyRopeComponent() { }
 
     /// <summary>

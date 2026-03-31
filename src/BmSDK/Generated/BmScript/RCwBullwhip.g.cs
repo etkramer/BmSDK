@@ -21,6 +21,11 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwBullwhip.
+    /// </summary>
+    public static RCwBullwhip DefaultObject => (RCwBullwhip)StaticClass().DefaultObject;
+
     internal RCwBullwhip() { }
 
     /// <summary>

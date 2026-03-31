@@ -21,6 +21,11 @@ public partial class ParticleModuleAccelerationOverLifetime : BmSDK.Engine.Parti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleAccelerationOverLifetime.
+    /// </summary>
+    public static ParticleModuleAccelerationOverLifetime DefaultObject => (ParticleModuleAccelerationOverLifetime)StaticClass().DefaultObject;
+
     internal ParticleModuleAccelerationOverLifetime() { }
 
     /// <summary>

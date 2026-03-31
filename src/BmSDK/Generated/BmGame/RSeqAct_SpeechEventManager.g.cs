@@ -21,6 +21,11 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SpeechEventManager.
+    /// </summary>
+    public static RSeqAct_SpeechEventManager DefaultObject => (RSeqAct_SpeechEventManager)StaticClass().DefaultObject;
+
     internal RSeqAct_SpeechEventManager() { }
 
     /// <summary>

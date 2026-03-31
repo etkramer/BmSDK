@@ -21,6 +21,11 @@ public partial class RB_StayUprightSetup : BmSDK.Engine.RB_ConstraintSetup, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_StayUprightSetup.
+    /// </summary>
+    public static RB_StayUprightSetup DefaultObject => (RB_StayUprightSetup)StaticClass().DefaultObject;
+
     internal RB_StayUprightSetup() { }
 
     /// <summary>

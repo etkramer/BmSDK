@@ -21,6 +21,11 @@ public partial class RBMAIAction_Punch : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_Punch.
+    /// </summary>
+    public static RBMAIAction_Punch DefaultObject => (RBMAIAction_Punch)StaticClass().DefaultObject;
+
     internal RBMAIAction_Punch() { }
 
     /// <summary>

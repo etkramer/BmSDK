@@ -21,6 +21,11 @@ public partial class RCombatMove_PenguinCh0Attack : BmSDK.BmGame.RCombatMove_Vil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_PenguinCh0Attack.
+    /// </summary>
+    public static RCombatMove_PenguinCh0Attack DefaultObject => (RCombatMove_PenguinCh0Attack)StaticClass().DefaultObject;
+
     internal RCombatMove_PenguinCh0Attack() { }
 
     /// <summary>

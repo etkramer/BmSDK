@@ -21,6 +21,11 @@ public partial class ActorFactorySpotLightToggleable : BmSDK.Engine.ActorFactory
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactorySpotLightToggleable.
+    /// </summary>
+    public static ActorFactorySpotLightToggleable DefaultObject => (ActorFactorySpotLightToggleable)StaticClass().DefaultObject;
+
     internal ActorFactorySpotLightToggleable() { }
 
     /// <summary>

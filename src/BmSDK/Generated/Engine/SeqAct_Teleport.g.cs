@@ -21,6 +21,11 @@ public partial class SeqAct_Teleport : BmSDK.Engine.SequenceAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Teleport.
+    /// </summary>
+    public static SeqAct_Teleport DefaultObject => (SeqAct_Teleport)StaticClass().DefaultObject;
+
     internal SeqAct_Teleport() { }
 
     /// <summary>

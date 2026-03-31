@@ -21,6 +21,11 @@ public partial class FaceFXAsset : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FaceFXAsset.
+    /// </summary>
+    public static FaceFXAsset DefaultObject => (FaceFXAsset)StaticClass().DefaultObject;
+
     internal FaceFXAsset() { }
 
     /// <summary>

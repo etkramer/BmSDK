@@ -21,6 +21,11 @@ public partial class RBMCombatPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint.
+    /// </summary>
+    public static RBMCombatPoint DefaultObject => (RBMCombatPoint)StaticClass().DefaultObject;
+
     internal RBMCombatPoint() { }
 
     /// <summary>

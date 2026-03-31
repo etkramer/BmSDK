@@ -21,6 +21,11 @@ public partial class ForceFeedbackWaveform : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ForceFeedbackWaveform.
+    /// </summary>
+    public static ForceFeedbackWaveform DefaultObject => (ForceFeedbackWaveform)StaticClass().DefaultObject;
+
     internal ForceFeedbackWaveform() { }
 
     /// <summary>

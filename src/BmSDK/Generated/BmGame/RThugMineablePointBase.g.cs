@@ -21,6 +21,11 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RThugMineablePointBase.
+    /// </summary>
+    public static RThugMineablePointBase DefaultObject => (RThugMineablePointBase)StaticClass().DefaultObject;
+
     internal RThugMineablePointBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpriteComponent.
+    /// </summary>
+    public static SpriteComponent DefaultObject => (SpriteComponent)StaticClass().DefaultObject;
+
     internal SpriteComponent() { }
 
     /// <summary>

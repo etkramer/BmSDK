@@ -21,6 +21,11 @@ public partial class SeqEvent_AIReachedRouteActor : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_AIReachedRouteActor.
+    /// </summary>
+    public static SeqEvent_AIReachedRouteActor DefaultObject => (SeqEvent_AIReachedRouteActor)StaticClass().DefaultObject;
+
     internal SeqEvent_AIReachedRouteActor() { }
 
     /// <summary>

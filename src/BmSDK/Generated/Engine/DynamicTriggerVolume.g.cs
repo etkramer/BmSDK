@@ -21,6 +21,11 @@ public partial class DynamicTriggerVolume : BmSDK.Engine.TriggerVolume, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicTriggerVolume.
+    /// </summary>
+    public static DynamicTriggerVolume DefaultObject => (DynamicTriggerVolume)StaticClass().DefaultObject;
+
     internal DynamicTriggerVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIController_Clayface : BmSDK.BmGame.RBMAIController, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIController_Clayface.
+    /// </summary>
+    public static RBMAIController_Clayface DefaultObject => (RBMAIController_Clayface)StaticClass().DefaultObject;
+
     internal RBMAIController_Clayface() { }
 
     /// <summary>

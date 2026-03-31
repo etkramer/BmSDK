@@ -21,6 +21,11 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IvyAttackController.
+    /// </summary>
+    public static RSeqAct_IvyAttackController DefaultObject => (RSeqAct_IvyAttackController)StaticClass().DefaultObject;
+
     internal RSeqAct_IvyAttackController() { }
 
     /// <summary>

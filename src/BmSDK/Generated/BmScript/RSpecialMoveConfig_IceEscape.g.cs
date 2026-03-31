@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_IceEscape : BmSDK.BmGame.RSpecialMoveCon
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_IceEscape.
+    /// </summary>
+    public static RSpecialMoveConfig_IceEscape DefaultObject => (RSpecialMoveConfig_IceEscape)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_IceEscape() { }
 
     /// <summary>

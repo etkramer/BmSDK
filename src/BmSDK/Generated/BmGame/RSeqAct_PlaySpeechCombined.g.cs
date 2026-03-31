@@ -21,6 +21,11 @@ public partial class RSeqAct_PlaySpeechCombined : BmSDK.BmGame.RSeqAct_PlaySpeec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlaySpeechCombined.
+    /// </summary>
+    public static RSeqAct_PlaySpeechCombined DefaultObject => (RSeqAct_PlaySpeechCombined)StaticClass().DefaultObject;
+
     internal RSeqAct_PlaySpeechCombined() { }
 
     /// <summary>

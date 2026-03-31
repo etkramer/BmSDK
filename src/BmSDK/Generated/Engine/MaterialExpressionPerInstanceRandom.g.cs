@@ -21,6 +21,11 @@ public partial class MaterialExpressionPerInstanceRandom : BmSDK.Engine.Material
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionPerInstanceRandom.
+    /// </summary>
+    public static MaterialExpressionPerInstanceRandom DefaultObject => (MaterialExpressionPerInstanceRandom)StaticClass().DefaultObject;
+
     internal MaterialExpressionPerInstanceRandom() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FractureManager.
+    /// </summary>
+    public static FractureManager DefaultObject => (FractureManager)StaticClass().DefaultObject;
+
     internal FractureManager() { }
 
     /// <summary>

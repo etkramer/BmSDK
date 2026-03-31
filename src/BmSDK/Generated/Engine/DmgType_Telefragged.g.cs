@@ -21,6 +21,11 @@ public partial class DmgType_Telefragged : BmSDK.Engine.DamageType, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DmgType_Telefragged.
+    /// </summary>
+    public static DmgType_Telefragged DefaultObject => (DmgType_Telefragged)StaticClass().DefaultObject;
+
     internal DmgType_Telefragged() { }
 
     /// <summary>

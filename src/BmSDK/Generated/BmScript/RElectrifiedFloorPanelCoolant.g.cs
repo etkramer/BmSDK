@@ -21,6 +21,11 @@ public partial class RElectrifiedFloorPanelCoolant : BmSDK.BmGame.RElectrifiedFl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RElectrifiedFloorPanelCoolant.
+    /// </summary>
+    public static RElectrifiedFloorPanelCoolant DefaultObject => (RElectrifiedFloorPanelCoolant)StaticClass().DefaultObject;
+
     internal RElectrifiedFloorPanelCoolant() { }
 
     /// <summary>

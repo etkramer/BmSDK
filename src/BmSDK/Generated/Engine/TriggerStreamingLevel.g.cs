@@ -21,6 +21,11 @@ public partial class TriggerStreamingLevel : BmSDK.Engine.Trigger, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TriggerStreamingLevel.
+    /// </summary>
+    public static TriggerStreamingLevel DefaultObject => (TriggerStreamingLevel)StaticClass().DefaultObject;
+
     internal TriggerStreamingLevel() { }
 
     /// <summary>

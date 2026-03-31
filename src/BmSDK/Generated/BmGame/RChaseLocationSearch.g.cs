@@ -21,6 +21,11 @@ public partial class RChaseLocationSearch : BmSDK.BmGame.RSearchTreeFinder, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChaseLocationSearch.
+    /// </summary>
+    public static RChaseLocationSearch DefaultObject => (RChaseLocationSearch)StaticClass().DefaultObject;
+
     internal RChaseLocationSearch() { }
 
     /// <summary>

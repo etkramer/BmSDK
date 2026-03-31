@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_LineLauncherRescueFinish : BmSDK.BmGame.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_LineLauncherRescueFinish.
+    /// </summary>
+    public static RSpecialMoveConfig_LineLauncherRescueFinish DefaultObject => (RSpecialMoveConfig_LineLauncherRescueFinish)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_LineLauncherRescueFinish() { }
 
     /// <summary>

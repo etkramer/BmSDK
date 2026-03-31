@@ -21,6 +21,11 @@ public partial class RSeqAct_GenericObjectiveTracker : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GenericObjectiveTracker.
+    /// </summary>
+    public static RSeqAct_GenericObjectiveTracker DefaultObject => (RSeqAct_GenericObjectiveTracker)StaticClass().DefaultObject;
+
     internal RSeqAct_GenericObjectiveTracker() { }
 
     /// <summary>

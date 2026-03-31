@@ -21,6 +21,11 @@ public partial class ParticleModuleUberLTISIVCL : BmSDK.Engine.ParticleModuleUbe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleUberLTISIVCL.
+    /// </summary>
+    public static ParticleModuleUberLTISIVCL DefaultObject => (ParticleModuleUberLTISIVCL)StaticClass().DefaultObject;
+
     internal ParticleModuleUberLTISIVCL() { }
 
     /// <summary>

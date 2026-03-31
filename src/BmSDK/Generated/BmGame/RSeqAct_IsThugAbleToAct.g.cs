@@ -21,6 +21,11 @@ public partial class RSeqAct_IsThugAbleToAct : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IsThugAbleToAct.
+    /// </summary>
+    public static RSeqAct_IsThugAbleToAct DefaultObject => (RSeqAct_IsThugAbleToAct)StaticClass().DefaultObject;
+
     internal RSeqAct_IsThugAbleToAct() { }
 
     /// <summary>

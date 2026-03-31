@@ -21,6 +21,11 @@ public partial class DmgType_Fell : BmSDK.Engine.DamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DmgType_Fell.
+    /// </summary>
+    public static DmgType_Fell DefaultObject => (DmgType_Fell)StaticClass().DefaultObject;
+
     internal DmgType_Fell() { }
 
     /// <summary>

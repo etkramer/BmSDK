@@ -21,6 +21,11 @@ public partial class RBreakableTV_CRT : BmSDK.BmGame.RBreakableTV, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableTV_CRT.
+    /// </summary>
+    public static RBreakableTV_CRT DefaultObject => (RBreakableTV_CRT)StaticClass().DefaultObject;
+
     internal RBreakableTV_CRT() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMWeaponStuddedBat : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponStuddedBat.
+    /// </summary>
+    public static RBMWeaponStuddedBat DefaultObject => (RBMWeaponStuddedBat)StaticClass().DefaultObject;
+
     internal RBMWeaponStuddedBat() { }
 
     /// <summary>

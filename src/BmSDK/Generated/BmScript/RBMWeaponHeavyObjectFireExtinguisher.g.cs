@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObjectFireExtinguisher : BmSDK.BmScript.RBMWe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObjectFireExtinguisher.
+    /// </summary>
+    public static RBMWeaponHeavyObjectFireExtinguisher DefaultObject => (RBMWeaponHeavyObjectFireExtinguisher)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObjectFireExtinguisher() { }
 
     /// <summary>

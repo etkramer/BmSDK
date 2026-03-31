@@ -21,6 +21,11 @@ public partial class TargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TargetPoint.
+    /// </summary>
+    public static TargetPoint DefaultObject => (TargetPoint)StaticClass().DefaultObject;
+
     internal TargetPoint() { }
 
     /// <summary>

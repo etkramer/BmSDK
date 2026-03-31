@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleEffectBatmanOnLaserWall : BmSDK.Engine.Sequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleEffectBatmanOnLaserWall.
+    /// </summary>
+    public static RSeqAct_ToggleEffectBatmanOnLaserWall DefaultObject => (RSeqAct_ToggleEffectBatmanOnLaserWall)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleEffectBatmanOnLaserWall() { }
 
     /// <summary>

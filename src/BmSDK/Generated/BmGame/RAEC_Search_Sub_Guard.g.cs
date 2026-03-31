@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Guard.
+    /// </summary>
+    public static RAEC_Search_Sub_Guard DefaultObject => (RAEC_Search_Sub_Guard)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Guard() { }
 
     /// <summary>

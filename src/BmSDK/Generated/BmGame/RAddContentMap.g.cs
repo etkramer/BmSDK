@@ -21,6 +21,11 @@ public partial class RAddContentMap : BmSDK.BmGame.RAdditionalContent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentMap.
+    /// </summary>
+    public static RAddContentMap DefaultObject => (RAddContentMap)StaticClass().DefaultObject;
+
     internal RAddContentMap() { }
 
     /// <summary>

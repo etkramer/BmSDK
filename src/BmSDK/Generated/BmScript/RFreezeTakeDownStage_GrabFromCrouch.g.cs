@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_GrabFromCrouch : BmSDK.BmScript.RFreez
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_GrabFromCrouch.
+    /// </summary>
+    public static RFreezeTakeDownStage_GrabFromCrouch DefaultObject => (RFreezeTakeDownStage_GrabFromCrouch)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_GrabFromCrouch() { }
 
     /// <summary>

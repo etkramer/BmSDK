@@ -21,6 +21,11 @@ public partial class RBatarang_ControllableTut : BmSDK.BmScript.RBatarang_Contro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarang_ControllableTut.
+    /// </summary>
+    public static RBatarang_ControllableTut DefaultObject => (RBatarang_ControllableTut)StaticClass().DefaultObject;
+
     internal RBatarang_ControllableTut() { }
 
     /// <summary>

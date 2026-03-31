@@ -21,6 +21,11 @@ public partial class RBMWeaponGuardRifle : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponGuardRifle.
+    /// </summary>
+    public static RBMWeaponGuardRifle DefaultObject => (RBMWeaponGuardRifle)StaticClass().DefaultObject;
+
     internal RBMWeaponGuardRifle() { }
 
     /// <summary>

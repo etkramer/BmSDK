@@ -21,6 +21,11 @@ public partial class ArrayProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ArrayProperty.
+    /// </summary>
+    public static ArrayProperty DefaultObject => (ArrayProperty)StaticClass().DefaultObject;
+
     internal ArrayProperty() { }
 
     /// <summary>

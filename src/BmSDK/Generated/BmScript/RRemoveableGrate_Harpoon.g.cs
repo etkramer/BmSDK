@@ -21,6 +21,11 @@ public partial class RRemoveableGrate_Harpoon : BmSDK.BmGame.RRemoveableGrate, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRemoveableGrate_Harpoon.
+    /// </summary>
+    public static RRemoveableGrate_Harpoon DefaultObject => (RRemoveableGrate_Harpoon)StaticClass().DefaultObject;
+
     internal RRemoveableGrate_Harpoon() { }
 
     /// <summary>

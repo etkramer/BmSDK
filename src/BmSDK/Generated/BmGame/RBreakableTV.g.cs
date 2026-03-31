@@ -21,6 +21,11 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableTV.
+    /// </summary>
+    public static RBreakableTV DefaultObject => (RBreakableTV)StaticClass().DefaultObject;
+
     internal RBreakableTV() { }
 
     /// <summary>

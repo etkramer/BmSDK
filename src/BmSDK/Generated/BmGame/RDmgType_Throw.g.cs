@@ -21,6 +21,11 @@ public partial class RDmgType_Throw : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Throw.
+    /// </summary>
+    public static RDmgType_Throw DefaultObject => (RDmgType_Throw)StaticClass().DefaultObject;
+
     internal RDmgType_Throw() { }
 
     /// <summary>

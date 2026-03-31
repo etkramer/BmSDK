@@ -21,6 +21,11 @@ public partial class RDmgType_ShieldBlockAndBash : BmSDK.BmGame.RDmgType_ShieldB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ShieldBlockAndBash.
+    /// </summary>
+    public static RDmgType_ShieldBlockAndBash DefaultObject => (RDmgType_ShieldBlockAndBash)StaticClass().DefaultObject;
+
     internal RDmgType_ShieldBlockAndBash() { }
 
     /// <summary>

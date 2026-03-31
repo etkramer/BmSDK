@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayCameraEmitter.
+    /// </summary>
+    public static RSeqAct_PlayCameraEmitter DefaultObject => (RSeqAct_PlayCameraEmitter)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayCameraEmitter() { }
 
     /// <summary>

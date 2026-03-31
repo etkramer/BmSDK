@@ -21,6 +21,11 @@ public partial class MaterialExpressionObjectRadius : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionObjectRadius.
+    /// </summary>
+    public static MaterialExpressionObjectRadius DefaultObject => (MaterialExpressionObjectRadius)StaticClass().DefaultObject;
+
     internal MaterialExpressionObjectRadius() { }
 
     /// <summary>

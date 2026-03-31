@@ -21,6 +21,11 @@ public partial class NxTornadoForceFieldCapsule : BmSDK.Engine.NxTornadoForceFie
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxTornadoForceFieldCapsule.
+    /// </summary>
+    public static NxTornadoForceFieldCapsule DefaultObject => (NxTornadoForceFieldCapsule)StaticClass().DefaultObject;
+
     internal NxTornadoForceFieldCapsule() { }
 
     /// <summary>

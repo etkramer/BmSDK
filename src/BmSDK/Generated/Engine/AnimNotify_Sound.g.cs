@@ -21,6 +21,11 @@ public partial class AnimNotify_Sound : BmSDK.Engine.AnimNotify, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_Sound.
+    /// </summary>
+    public static AnimNotify_Sound DefaultObject => (AnimNotify_Sound)StaticClass().DefaultObject;
+
     internal AnimNotify_Sound() { }
 
     /// <summary>

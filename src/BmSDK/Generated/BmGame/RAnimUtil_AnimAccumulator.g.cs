@@ -21,6 +21,11 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_AnimAccumulator.
+    /// </summary>
+    public static RAnimUtil_AnimAccumulator DefaultObject => (RAnimUtil_AnimAccumulator)StaticClass().DefaultObject;
+
     internal RAnimUtil_AnimAccumulator() { }
 
     /// <summary>

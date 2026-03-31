@@ -21,6 +21,11 @@ public partial class InterpActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpActor.
+    /// </summary>
+    public static InterpActor DefaultObject => (InterpActor)StaticClass().DefaultObject;
+
     internal InterpActor() { }
 
     /// <summary>

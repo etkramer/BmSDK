@@ -21,6 +21,11 @@ public partial class RRope2Spawnable : BmSDK.BmScript.RRope2, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2Spawnable.
+    /// </summary>
+    public static RRope2Spawnable DefaultObject => (RRope2Spawnable)StaticClass().DefaultObject;
+
     internal RRope2Spawnable() { }
 
     /// <summary>

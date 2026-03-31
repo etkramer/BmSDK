@@ -21,6 +21,11 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRagdollProcessor.
+    /// </summary>
+    public static RRagdollProcessor DefaultObject => (RRagdollProcessor)StaticClass().DefaultObject;
+
     internal RRagdollProcessor() { }
 
     /// <summary>

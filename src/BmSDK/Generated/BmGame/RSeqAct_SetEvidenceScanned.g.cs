@@ -21,6 +21,11 @@ public partial class RSeqAct_SetEvidenceScanned : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetEvidenceScanned.
+    /// </summary>
+    public static RSeqAct_SetEvidenceScanned DefaultObject => (RSeqAct_SetEvidenceScanned)StaticClass().DefaultObject;
+
     internal RSeqAct_SetEvidenceScanned() { }
 
     /// <summary>

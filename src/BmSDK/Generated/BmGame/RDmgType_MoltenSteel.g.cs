@@ -21,6 +21,11 @@ public partial class RDmgType_MoltenSteel : BmSDK.BmGame.RDmgType_KillZone, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_MoltenSteel.
+    /// </summary>
+    public static RDmgType_MoltenSteel DefaultObject => (RDmgType_MoltenSteel)StaticClass().DefaultObject;
+
     internal RDmgType_MoltenSteel() { }
 
     /// <summary>

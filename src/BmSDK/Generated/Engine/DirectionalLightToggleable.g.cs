@@ -21,6 +21,11 @@ public partial class DirectionalLightToggleable : BmSDK.Engine.DirectionalLight,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DirectionalLightToggleable.
+    /// </summary>
+    public static DirectionalLightToggleable DefaultObject => (DirectionalLightToggleable)StaticClass().DefaultObject;
+
     internal DirectionalLightToggleable() { }
 
     /// <summary>

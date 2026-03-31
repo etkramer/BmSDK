@@ -21,6 +21,11 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_ParticleEvent.
+    /// </summary>
+    public static SeqEvent_ParticleEvent DefaultObject => (SeqEvent_ParticleEvent)StaticClass().DefaultObject;
+
     internal SeqEvent_ParticleEvent() { }
 
     /// <summary>

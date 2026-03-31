@@ -21,6 +21,11 @@ public partial class MaterialExpressionRotator : BmSDK.Engine.MaterialExpression
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionRotator.
+    /// </summary>
+    public static MaterialExpressionRotator DefaultObject => (MaterialExpressionRotator)StaticClass().DefaultObject;
+
     internal MaterialExpressionRotator() { }
 
     /// <summary>

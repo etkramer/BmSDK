@@ -21,6 +21,11 @@ public partial class RDmgType_GroupTrip : BmSDK.BmGame.RDmgType_Ragdoll, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GroupTrip.
+    /// </summary>
+    public static RDmgType_GroupTrip DefaultObject => (RDmgType_GroupTrip)StaticClass().DefaultObject;
+
     internal RDmgType_GroupTrip() { }
 
     /// <summary>

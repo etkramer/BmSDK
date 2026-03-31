@@ -21,6 +21,11 @@ public partial class ActorFactoryRigidBody : BmSDK.Engine.ActorFactoryDynamicSM,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryRigidBody.
+    /// </summary>
+    public static ActorFactoryRigidBody DefaultObject => (ActorFactoryRigidBody)StaticClass().DefaultObject;
+
     internal ActorFactoryRigidBody() { }
 
     /// <summary>

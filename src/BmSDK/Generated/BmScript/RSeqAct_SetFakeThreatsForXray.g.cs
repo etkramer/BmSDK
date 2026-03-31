@@ -21,6 +21,11 @@ public partial class RSeqAct_SetFakeThreatsForXray : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetFakeThreatsForXray.
+    /// </summary>
+    public static RSeqAct_SetFakeThreatsForXray DefaultObject => (RSeqAct_SetFakeThreatsForXray)StaticClass().DefaultObject;
+
     internal RSeqAct_SetFakeThreatsForXray() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RParticleModuleSpawnOnDeath : BmSDK.BmGame.RParticleModuleO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleSpawnOnDeath.
+    /// </summary>
+    public static RParticleModuleSpawnOnDeath DefaultObject => (RParticleModuleSpawnOnDeath)StaticClass().DefaultObject;
+
     internal RParticleModuleSpawnOnDeath() { }
 
     /// <summary>

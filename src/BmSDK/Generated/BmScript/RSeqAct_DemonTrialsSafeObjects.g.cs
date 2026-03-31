@@ -21,6 +21,11 @@ public partial class RSeqAct_DemonTrialsSafeObjects : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DemonTrialsSafeObjects.
+    /// </summary>
+    public static RSeqAct_DemonTrialsSafeObjects DefaultObject => (RSeqAct_DemonTrialsSafeObjects)StaticClass().DefaultObject;
+
     internal RSeqAct_DemonTrialsSafeObjects() { }
 
     /// <summary>

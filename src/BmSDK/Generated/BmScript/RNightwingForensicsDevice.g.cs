@@ -21,6 +21,11 @@ public partial class RNightwingForensicsDevice : BmSDK.BmGame.RForensicsDevice, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingForensicsDevice.
+    /// </summary>
+    public static RNightwingForensicsDevice DefaultObject => (RNightwingForensicsDevice)StaticClass().DefaultObject;
+
     internal RNightwingForensicsDevice() { }
 
     /// <summary>

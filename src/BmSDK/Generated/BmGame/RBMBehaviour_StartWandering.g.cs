@@ -21,6 +21,11 @@ public partial class RBMBehaviour_StartWandering : BmSDK.BmGame.RBMBehaviour, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_StartWandering.
+    /// </summary>
+    public static RBMBehaviour_StartWandering DefaultObject => (RBMBehaviour_StartWandering)StaticClass().DefaultObject;
+
     internal RBMBehaviour_StartWandering() { }
 
     /// <summary>

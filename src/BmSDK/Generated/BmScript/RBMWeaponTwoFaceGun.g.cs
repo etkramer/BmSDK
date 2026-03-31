@@ -21,6 +21,11 @@ public partial class RBMWeaponTwoFaceGun : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponTwoFaceGun.
+    /// </summary>
+    public static RBMWeaponTwoFaceGun DefaultObject => (RBMWeaponTwoFaceGun)StaticClass().DefaultObject;
+
     internal RBMWeaponTwoFaceGun() { }
 
     /// <summary>

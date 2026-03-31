@@ -21,6 +21,11 @@ public partial class RCinematicJoker : BmSDK.BmGame.RCinematicActor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicJoker.
+    /// </summary>
+    public static RCinematicJoker DefaultObject => (RCinematicJoker)StaticClass().DefaultObject;
+
     internal RCinematicJoker() { }
 
     /// <summary>

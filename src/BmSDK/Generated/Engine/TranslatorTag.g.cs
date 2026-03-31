@@ -21,6 +21,11 @@ public partial class TranslatorTag : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TranslatorTag.
+    /// </summary>
+    public static TranslatorTag DefaultObject => (TranslatorTag)StaticClass().DefaultObject;
+
     internal TranslatorTag() { }
 
     /// <summary>

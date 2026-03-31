@@ -21,6 +21,11 @@ public partial class RSkelControl_PositionConstraint : BmSDK.Engine.SkelControlB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControl_PositionConstraint.
+    /// </summary>
+    public static RSkelControl_PositionConstraint DefaultObject => (RSkelControl_PositionConstraint)StaticClass().DefaultObject;
+
     internal RSkelControl_PositionConstraint() { }
 
     /// <summary>

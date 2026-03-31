@@ -21,6 +21,11 @@ public partial class AnimNodeBlendPerBone : BmSDK.Engine.AnimNodeBlend, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeBlendPerBone.
+    /// </summary>
+    public static AnimNodeBlendPerBone DefaultObject => (AnimNodeBlendPerBone)StaticClass().DefaultObject;
+
     internal AnimNodeBlendPerBone() { }
 
     /// <summary>

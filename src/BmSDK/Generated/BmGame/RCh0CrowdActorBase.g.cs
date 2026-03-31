@@ -21,6 +21,11 @@ public partial class RCh0CrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCh0CrowdActorBase.
+    /// </summary>
+    public static RCh0CrowdActorBase DefaultObject => (RCh0CrowdActorBase)StaticClass().DefaultObject;
+
     internal RCh0CrowdActorBase() { }
 
     /// <summary>

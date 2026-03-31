@@ -21,6 +21,11 @@ public partial class RSeqAct_IncreaseMovementSpeed : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_IncreaseMovementSpeed.
+    /// </summary>
+    public static RSeqAct_IncreaseMovementSpeed DefaultObject => (RSeqAct_IncreaseMovementSpeed)StaticClass().DefaultObject;
+
     internal RSeqAct_IncreaseMovementSpeed() { }
 
     /// <summary>

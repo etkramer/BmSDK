@@ -21,6 +21,11 @@ public partial class RAEC_IceBreaker : BmSDK.BmGame.RAlertEventCoordinatorBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_IceBreaker.
+    /// </summary>
+    public static RAEC_IceBreaker DefaultObject => (RAEC_IceBreaker)StaticClass().DefaultObject;
+
     internal RAEC_IceBreaker() { }
 
     /// <summary>

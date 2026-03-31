@@ -21,6 +21,11 @@ public partial class RRope2DirectConnectPhysicsUpdater : BmSDK.BmGame.RRope2Base
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2DirectConnectPhysicsUpdater.
+    /// </summary>
+    public static RRope2DirectConnectPhysicsUpdater DefaultObject => (RRope2DirectConnectPhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2DirectConnectPhysicsUpdater() { }
 
     /// <summary>

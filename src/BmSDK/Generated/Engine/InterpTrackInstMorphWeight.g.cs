@@ -21,6 +21,11 @@ public partial class InterpTrackInstMorphWeight : BmSDK.Engine.InterpTrackInst, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstMorphWeight.
+    /// </summary>
+    public static InterpTrackInstMorphWeight DefaultObject => (InterpTrackInstMorphWeight)StaticClass().DefaultObject;
+
     internal InterpTrackInstMorphWeight() { }
 
     /// <summary>

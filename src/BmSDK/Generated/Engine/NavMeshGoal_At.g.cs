@@ -21,6 +21,11 @@ public partial class NavMeshGoal_At : BmSDK.Engine.NavMeshPathGoalEvaluator, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoal_At.
+    /// </summary>
+    public static NavMeshGoal_At DefaultObject => (NavMeshGoal_At)StaticClass().DefaultObject;
+
     internal NavMeshGoal_At() { }
 
     /// <summary>

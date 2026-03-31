@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainKnifeAttack : BmSDK.BmGame.RCombatMove_V
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainKnifeAttack.
+    /// </summary>
+    public static RCombatMove_VillainKnifeAttack DefaultObject => (RCombatMove_VillainKnifeAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainKnifeAttack() { }
 
     /// <summary>

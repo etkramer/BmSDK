@@ -21,6 +21,11 @@ public partial class MaterialExpressionPlatformConstant : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionPlatformConstant.
+    /// </summary>
+    public static MaterialExpressionPlatformConstant DefaultObject => (MaterialExpressionPlatformConstant)StaticClass().DefaultObject;
+
     internal MaterialExpressionPlatformConstant() { }
 
     /// <summary>

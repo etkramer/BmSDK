@@ -21,6 +21,11 @@ public partial class RSeqAct_BoolCounter : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BoolCounter.
+    /// </summary>
+    public static RSeqAct_BoolCounter DefaultObject => (RSeqAct_BoolCounter)StaticClass().DefaultObject;
+
     internal RSeqAct_BoolCounter() { }
 
     /// <summary>

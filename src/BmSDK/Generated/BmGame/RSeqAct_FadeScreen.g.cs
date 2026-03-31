@@ -21,6 +21,11 @@ public partial class RSeqAct_FadeScreen : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FadeScreen.
+    /// </summary>
+    public static RSeqAct_FadeScreen DefaultObject => (RSeqAct_FadeScreen)StaticClass().DefaultObject;
+
     internal RSeqAct_FadeScreen() { }
 
     /// <summary>

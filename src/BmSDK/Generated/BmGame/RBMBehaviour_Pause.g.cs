@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Pause : BmSDK.BmGame.RBMBehaviour, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Pause.
+    /// </summary>
+    public static RBMBehaviour_Pause DefaultObject => (RBMBehaviour_Pause)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Pause() { }
 
     /// <summary>

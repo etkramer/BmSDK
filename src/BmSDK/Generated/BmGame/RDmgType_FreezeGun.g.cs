@@ -21,6 +21,11 @@ public partial class RDmgType_FreezeGun : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_FreezeGun.
+    /// </summary>
+    public static RDmgType_FreezeGun DefaultObject => (RDmgType_FreezeGun)StaticClass().DefaultObject;
+
     internal RDmgType_FreezeGun() { }
 
     /// <summary>

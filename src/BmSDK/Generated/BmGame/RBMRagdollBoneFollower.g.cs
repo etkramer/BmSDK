@@ -21,6 +21,11 @@ public partial class RBMRagdollBoneFollower : BmSDK.Engine.ActorComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMRagdollBoneFollower.
+    /// </summary>
+    public static RBMRagdollBoneFollower DefaultObject => (RBMRagdollBoneFollower)StaticClass().DefaultObject;
+
     internal RBMRagdollBoneFollower() { }
 
     /// <summary>

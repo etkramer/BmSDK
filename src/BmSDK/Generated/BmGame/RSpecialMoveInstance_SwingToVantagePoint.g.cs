@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_SwingToVantagePoint.
+    /// </summary>
+    public static RSpecialMoveInstance_SwingToVantagePoint DefaultObject => (RSpecialMoveInstance_SwingToVantagePoint)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_SwingToVantagePoint() { }
 
     /// <summary>

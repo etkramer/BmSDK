@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateGrundy : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateGrundy.
+    /// </summary>
+    public static RSeqAct_UpdateGrundy DefaultObject => (RSeqAct_UpdateGrundy)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateGrundy() { }
 
     /// <summary>

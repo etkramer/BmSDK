@@ -21,6 +21,11 @@ public partial class RBMCameraEmitterBloodSplat : BmSDK.BmGame.RBMCameraEmitter,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCameraEmitterBloodSplat.
+    /// </summary>
+    public static RBMCameraEmitterBloodSplat DefaultObject => (RBMCameraEmitterBloodSplat)StaticClass().DefaultObject;
+
     internal RBMCameraEmitterBloodSplat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeBlastIceSphereClayface : BmSDK.BmScript.RFreezeBlast
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeBlastIceSphereClayface.
+    /// </summary>
+    public static RFreezeBlastIceSphereClayface DefaultObject => (RFreezeBlastIceSphereClayface)StaticClass().DefaultObject;
+
     internal RFreezeBlastIceSphereClayface() { }
 
     /// <summary>

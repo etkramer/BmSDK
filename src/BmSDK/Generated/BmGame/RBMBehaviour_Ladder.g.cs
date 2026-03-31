@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Ladder : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Ladder.
+    /// </summary>
+    public static RBMBehaviour_Ladder DefaultObject => (RBMBehaviour_Ladder)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Ladder() { }
 
     /// <summary>

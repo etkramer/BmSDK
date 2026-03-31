@@ -21,6 +21,11 @@ public partial class RNightwingWristDartProjectile : BmSDK.BmGame.RProjectile, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingWristDartProjectile.
+    /// </summary>
+    public static RNightwingWristDartProjectile DefaultObject => (RNightwingWristDartProjectile)StaticClass().DefaultObject;
+
     internal RNightwingWristDartProjectile() { }
 
     /// <summary>

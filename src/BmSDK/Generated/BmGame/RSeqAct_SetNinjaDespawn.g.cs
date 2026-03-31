@@ -21,6 +21,11 @@ public partial class RSeqAct_SetNinjaDespawn : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetNinjaDespawn.
+    /// </summary>
+    public static RSeqAct_SetNinjaDespawn DefaultObject => (RSeqAct_SetNinjaDespawn)StaticClass().DefaultObject;
+
     internal RSeqAct_SetNinjaDespawn() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionLength : BmSDK.Engine.MaterialExpression,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLength.
+    /// </summary>
+    public static MaterialExpressionLength DefaultObject => (MaterialExpressionLength)StaticClass().DefaultObject;
+
     internal MaterialExpressionLength() { }
 
     /// <summary>

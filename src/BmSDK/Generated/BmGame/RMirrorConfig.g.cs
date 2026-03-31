@@ -21,6 +21,11 @@ public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMirrorConfig.
+    /// </summary>
+    public static RMirrorConfig DefaultObject => (RMirrorConfig)StaticClass().DefaultObject;
+
     internal RMirrorConfig() { }
 
     /// <summary>

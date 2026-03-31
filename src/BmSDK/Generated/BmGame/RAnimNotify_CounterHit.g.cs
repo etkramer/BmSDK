@@ -21,6 +21,11 @@ public partial class RAnimNotify_CounterHit : BmSDK.Engine.AnimNotify, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CounterHit.
+    /// </summary>
+    public static RAnimNotify_CounterHit DefaultObject => (RAnimNotify_CounterHit)StaticClass().DefaultObject;
+
     internal RAnimNotify_CounterHit() { }
 
     /// <summary>

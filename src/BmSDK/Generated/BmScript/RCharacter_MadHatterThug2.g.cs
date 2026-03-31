@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatterThug2 : BmSDK.BmScript.RCharacter_Pengu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatterThug2.
+    /// </summary>
+    public static RCharacter_MadHatterThug2 DefaultObject => (RCharacter_MadHatterThug2)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatterThug2() { }
 
     /// <summary>

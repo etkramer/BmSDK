@@ -21,6 +21,11 @@ public partial class MaterialExpressionSmoothStep : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSmoothStep.
+    /// </summary>
+    public static MaterialExpressionSmoothStep DefaultObject => (MaterialExpressionSmoothStep)StaticClass().DefaultObject;
+
     internal MaterialExpressionSmoothStep() { }
 
     /// <summary>

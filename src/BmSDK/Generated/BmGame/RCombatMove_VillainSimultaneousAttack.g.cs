@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainSimultaneousAttack : BmSDK.BmGame.RComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainSimultaneousAttack.
+    /// </summary>
+    public static RCombatMove_VillainSimultaneousAttack DefaultObject => (RCombatMove_VillainSimultaneousAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainSimultaneousAttack() { }
 
     /// <summary>

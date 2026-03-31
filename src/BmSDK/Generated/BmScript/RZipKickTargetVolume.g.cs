@@ -21,6 +21,11 @@ public partial class RZipKickTargetVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RZipKickTargetVolume.
+    /// </summary>
+    public static RZipKickTargetVolume DefaultObject => (RZipKickTargetVolume)StaticClass().DefaultObject;
+
     internal RZipKickTargetVolume() { }
 
     /// <summary>

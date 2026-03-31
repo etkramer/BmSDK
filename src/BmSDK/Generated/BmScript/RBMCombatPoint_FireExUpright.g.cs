@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_FireExUpright.
+    /// </summary>
+    public static RBMCombatPoint_FireExUpright DefaultObject => (RBMCombatPoint_FireExUpright)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_FireExUpright() { }
 
     /// <summary>

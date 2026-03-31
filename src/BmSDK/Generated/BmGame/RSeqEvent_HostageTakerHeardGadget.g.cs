@@ -21,6 +21,11 @@ public partial class RSeqEvent_HostageTakerHeardGadget : BmSDK.Engine.SequenceEv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HostageTakerHeardGadget.
+    /// </summary>
+    public static RSeqEvent_HostageTakerHeardGadget DefaultObject => (RSeqEvent_HostageTakerHeardGadget)StaticClass().DefaultObject;
+
     internal RSeqEvent_HostageTakerHeardGadget() { }
 
     /// <summary>

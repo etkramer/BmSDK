@@ -21,6 +21,11 @@ public partial class RDmgType_CaltropsTrap : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CaltropsTrap.
+    /// </summary>
+    public static RDmgType_CaltropsTrap DefaultObject => (RDmgType_CaltropsTrap)StaticClass().DefaultObject;
+
     internal RDmgType_CaltropsTrap() { }
 
     /// <summary>

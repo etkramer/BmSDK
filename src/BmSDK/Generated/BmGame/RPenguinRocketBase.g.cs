@@ -21,6 +21,11 @@ public partial class RPenguinRocketBase : BmSDK.Engine.DynamicSMActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPenguinRocketBase.
+    /// </summary>
+    public static RPenguinRocketBase DefaultObject => (RPenguinRocketBase)StaticClass().DefaultObject;
+
     internal RPenguinRocketBase() { }
 
     /// <summary>

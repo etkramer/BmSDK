@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainGetWeaponFromEnvironment : BmSDK.BmGame.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainGetWeaponFromEnvironment.
+    /// </summary>
+    public static RCombatMove_VillainGetWeaponFromEnvironment DefaultObject => (RCombatMove_VillainGetWeaponFromEnvironment)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainGetWeaponFromEnvironment() { }
 
     /// <summary>

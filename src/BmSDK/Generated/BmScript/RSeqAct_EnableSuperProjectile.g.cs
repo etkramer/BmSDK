@@ -21,6 +21,11 @@ public partial class RSeqAct_EnableSuperProjectile : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EnableSuperProjectile.
+    /// </summary>
+    public static RSeqAct_EnableSuperProjectile DefaultObject => (RSeqAct_EnableSuperProjectile)StaticClass().DefaultObject;
+
     internal RSeqAct_EnableSuperProjectile() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionInformants.
+    /// </summary>
+    public static RHudExtensionInformants DefaultObject => (RHudExtensionInformants)StaticClass().DefaultObject;
+
     internal RHudExtensionInformants() { }
 
     /// <summary>

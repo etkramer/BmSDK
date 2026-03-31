@@ -21,6 +21,11 @@ public partial class RDmgType_Fell : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Fell.
+    /// </summary>
+    public static RDmgType_Fell DefaultObject => (RDmgType_Fell)StaticClass().DefaultObject;
+
     internal RDmgType_Fell() { }
 
     /// <summary>

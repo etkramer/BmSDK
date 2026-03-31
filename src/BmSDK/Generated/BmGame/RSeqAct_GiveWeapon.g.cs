@@ -21,6 +21,11 @@ public partial class RSeqAct_GiveWeapon : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GiveWeapon.
+    /// </summary>
+    public static RSeqAct_GiveWeapon DefaultObject => (RSeqAct_GiveWeapon)StaticClass().DefaultObject;
+
     internal RSeqAct_GiveWeapon() { }
 
     /// <summary>

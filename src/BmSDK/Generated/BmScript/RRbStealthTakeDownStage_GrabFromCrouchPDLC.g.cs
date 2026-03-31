@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GrabFromCrouchPDLC : BmSDK.BmScript
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GrabFromCrouchPDLC.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GrabFromCrouchPDLC DefaultObject => (RRbStealthTakeDownStage_GrabFromCrouchPDLC)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GrabFromCrouchPDLC() { }
 
     /// <summary>

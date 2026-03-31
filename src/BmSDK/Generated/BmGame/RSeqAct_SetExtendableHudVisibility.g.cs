@@ -21,6 +21,11 @@ public partial class RSeqAct_SetExtendableHudVisibility : BmSDK.Engine.SequenceA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetExtendableHudVisibility.
+    /// </summary>
+    public static RSeqAct_SetExtendableHudVisibility DefaultObject => (RSeqAct_SetExtendableHudVisibility)StaticClass().DefaultObject;
+
     internal RSeqAct_SetExtendableHudVisibility() { }
 
     /// <summary>

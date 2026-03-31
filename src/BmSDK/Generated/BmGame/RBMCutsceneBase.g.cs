@@ -21,6 +21,11 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCutsceneBase.
+    /// </summary>
+    public static RBMCutsceneBase DefaultObject => (RBMCutsceneBase)StaticClass().DefaultObject;
+
     internal RBMCutsceneBase() { }
 
     /// <summary>

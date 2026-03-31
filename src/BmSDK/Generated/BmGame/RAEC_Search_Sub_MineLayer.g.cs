@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_MineLayer : BmSDK.BmGame.RAEC_Search_Sub, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_MineLayer.
+    /// </summary>
+    public static RAEC_Search_Sub_MineLayer DefaultObject => (RAEC_Search_Sub_MineLayer)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_MineLayer() { }
 
     /// <summary>

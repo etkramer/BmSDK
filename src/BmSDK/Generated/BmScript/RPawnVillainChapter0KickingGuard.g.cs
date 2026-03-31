@@ -21,6 +21,11 @@ public partial class RPawnVillainChapter0KickingGuard : BmSDK.BmGame.RPawnVillai
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainChapter0KickingGuard.
+    /// </summary>
+    public static RPawnVillainChapter0KickingGuard DefaultObject => (RPawnVillainChapter0KickingGuard)StaticClass().DefaultObject;
+
     internal RPawnVillainChapter0KickingGuard() { }
 
     /// <summary>

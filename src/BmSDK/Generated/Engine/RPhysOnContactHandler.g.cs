@@ -21,6 +21,11 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysOnContactHandler.
+    /// </summary>
+    public static RPhysOnContactHandler DefaultObject => (RPhysOnContactHandler)StaticClass().DefaultObject;
+
     internal RPhysOnContactHandler() { }
 
     /// <summary>

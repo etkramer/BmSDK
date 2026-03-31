@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureSampleParameterMovie : BmSDK.Engin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureSampleParameterMovie.
+    /// </summary>
+    public static MaterialExpressionTextureSampleParameterMovie DefaultObject => (MaterialExpressionTextureSampleParameterMovie)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureSampleParameterMovie() { }
 
     /// <summary>

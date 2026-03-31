@@ -21,6 +21,11 @@ public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeaponPickupSearch.
+    /// </summary>
+    public static RWeaponPickupSearch DefaultObject => (RWeaponPickupSearch)StaticClass().DefaultObject;
+
     internal RWeaponPickupSearch() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RB_ConstraintDrawComponent : BmSDK.Engine.PrimitiveComponen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ConstraintDrawComponent.
+    /// </summary>
+    public static RB_ConstraintDrawComponent DefaultObject => (RB_ConstraintDrawComponent)StaticClass().DefaultObject;
+
     internal RB_ConstraintDrawComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_StartCameraWander : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartCameraWander.
+    /// </summary>
+    public static RSeqAct_StartCameraWander DefaultObject => (RSeqAct_StartCameraWander)StaticClass().DefaultObject;
+
     internal RSeqAct_StartCameraWander() { }
 
     /// <summary>

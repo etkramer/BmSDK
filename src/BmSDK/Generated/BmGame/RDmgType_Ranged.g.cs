@@ -21,6 +21,11 @@ public partial class RDmgType_Ranged : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Ranged.
+    /// </summary>
+    public static RDmgType_Ranged DefaultObject => (RDmgType_Ranged)StaticClass().DefaultObject;
+
     internal RDmgType_Ranged() { }
 
     /// <summary>

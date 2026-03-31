@@ -21,6 +21,11 @@ public partial class RDisruptableLaserGridInvisible : BmSDK.BmScript.RDisruptabl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableLaserGridInvisible.
+    /// </summary>
+    public static RDisruptableLaserGridInvisible DefaultObject => (RDisruptableLaserGridInvisible)StaticClass().DefaultObject;
+
     internal RDisruptableLaserGridInvisible() { }
 
     /// <summary>

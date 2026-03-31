@@ -21,6 +21,11 @@ public partial class RSeqAct_HideBatsHead : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HideBatsHead.
+    /// </summary>
+    public static RSeqAct_HideBatsHead DefaultObject => (RSeqAct_HideBatsHead)StaticClass().DefaultObject;
+
     internal RSeqAct_HideBatsHead() { }
 
     /// <summary>

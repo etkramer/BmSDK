@@ -21,6 +21,11 @@ public partial class RCrawlSpaceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrawlSpaceVolume.
+    /// </summary>
+    public static RCrawlSpaceVolume DefaultObject => (RCrawlSpaceVolume)StaticClass().DefaultObject;
+
     internal RCrawlSpaceVolume() { }
 
     /// <summary>

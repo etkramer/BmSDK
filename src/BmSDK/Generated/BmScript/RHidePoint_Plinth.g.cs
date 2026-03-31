@@ -21,6 +21,11 @@ public partial class RHidePoint_Plinth : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_Plinth.
+    /// </summary>
+    public static RHidePoint_Plinth DefaultObject => (RHidePoint_Plinth)StaticClass().DefaultObject;
+
     internal RHidePoint_Plinth() { }
 
     /// <summary>

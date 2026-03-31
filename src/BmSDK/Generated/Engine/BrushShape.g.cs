@@ -21,6 +21,11 @@ public partial class BrushShape : BmSDK.Engine.Brush, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BrushShape.
+    /// </summary>
+    public static BrushShape DefaultObject => (BrushShape)StaticClass().DefaultObject;
+
     internal BrushShape() { }
 
     /// <summary>

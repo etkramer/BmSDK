@@ -21,6 +21,11 @@ public partial class MaterialExpressionNoise : BmSDK.Engine.MaterialExpression, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionNoise.
+    /// </summary>
+    public static MaterialExpressionNoise DefaultObject => (MaterialExpressionNoise)StaticClass().DefaultObject;
+
     internal MaterialExpressionNoise() { }
 
     /// <summary>

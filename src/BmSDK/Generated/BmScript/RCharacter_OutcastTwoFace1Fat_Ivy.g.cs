@@ -21,6 +21,11 @@ public partial class RCharacter_OutcastTwoFace1Fat_Ivy : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_OutcastTwoFace1Fat_Ivy.
+    /// </summary>
+    public static RCharacter_OutcastTwoFace1Fat_Ivy DefaultObject => (RCharacter_OutcastTwoFace1Fat_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_OutcastTwoFace1Fat_Ivy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNode_Bat : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_Bat.
+    /// </summary>
+    public static RAnimNode_Bat DefaultObject => (RAnimNode_Bat)StaticClass().DefaultObject;
+
     internal RAnimNode_Bat() { }
 
     /// <summary>

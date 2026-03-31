@@ -21,6 +21,11 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatDistract.
+    /// </summary>
+    public static RBatDistract DefaultObject => (RBatDistract)StaticClass().DefaultObject;
+
     internal RBatDistract() { }
 
     /// <summary>

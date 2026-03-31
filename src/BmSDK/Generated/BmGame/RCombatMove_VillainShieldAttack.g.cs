@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainShieldAttack : BmSDK.BmGame.RCombatMove_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainShieldAttack.
+    /// </summary>
+    public static RCombatMove_VillainShieldAttack DefaultObject => (RCombatMove_VillainShieldAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainShieldAttack() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDisorientationPostProcess : BmSDK.BmGame.RViewPostProcess,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisorientationPostProcess.
+    /// </summary>
+    public static RDisorientationPostProcess DefaultObject => (RDisorientationPostProcess)StaticClass().DefaultObject;
+
     internal RDisorientationPostProcess() { }
 
     /// <summary>

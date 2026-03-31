@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantCaltropReaction : BmSDK.BmGame.RComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantCaltropReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantCaltropReaction DefaultObject => (RCombatMove_LieutenantCaltropReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantCaltropReaction() { }
 
     /// <summary>

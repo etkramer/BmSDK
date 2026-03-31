@@ -21,6 +21,11 @@ public partial class K2Input_Float : BmSDK.Engine.K2Input, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Input_Float.
+    /// </summary>
+    public static K2Input_Float DefaultObject => (K2Input_Float)StaticClass().DefaultObject;
+
     internal K2Input_Float() { }
 
     /// <summary>

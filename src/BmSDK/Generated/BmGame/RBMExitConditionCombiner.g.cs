@@ -21,6 +21,11 @@ public partial class RBMExitConditionCombiner : BmSDK.BmGame.RBMExitCondition, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitConditionCombiner.
+    /// </summary>
+    public static RBMExitConditionCombiner DefaultObject => (RBMExitConditionCombiner)StaticClass().DefaultObject;
+
     internal RBMExitConditionCombiner() { }
 
     /// <summary>

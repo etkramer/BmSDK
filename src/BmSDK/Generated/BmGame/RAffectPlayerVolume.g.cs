@@ -21,6 +21,11 @@ public partial class RAffectPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAffectPlayerVolume.
+    /// </summary>
+    public static RAffectPlayerVolume DefaultObject => (RAffectPlayerVolume)StaticClass().DefaultObject;
+
     internal RAffectPlayerVolume() { }
 
     /// <summary>

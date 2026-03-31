@@ -21,6 +21,11 @@ public partial class RDmgType_SledgeHammerNoRagdoll : BmSDK.BmGame.RDmgType_Sled
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SledgeHammerNoRagdoll.
+    /// </summary>
+    public static RDmgType_SledgeHammerNoRagdoll DefaultObject => (RDmgType_SledgeHammerNoRagdoll)StaticClass().DefaultObject;
+
     internal RDmgType_SledgeHammerNoRagdoll() { }
 
     /// <summary>

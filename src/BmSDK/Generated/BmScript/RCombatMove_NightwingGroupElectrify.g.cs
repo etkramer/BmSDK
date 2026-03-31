@@ -21,6 +21,11 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NightwingGroupElectrify.
+    /// </summary>
+    public static RCombatMove_NightwingGroupElectrify DefaultObject => (RCombatMove_NightwingGroupElectrify)StaticClass().DefaultObject;
+
     internal RCombatMove_NightwingGroupElectrify() { }
 
     /// <summary>

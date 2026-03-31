@@ -21,6 +21,11 @@ public partial class RDmgType_JokerTeeth : BmSDK.BmGame.RDamageType, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_JokerTeeth.
+    /// </summary>
+    public static RDmgType_JokerTeeth DefaultObject => (RDmgType_JokerTeeth)StaticClass().DefaultObject;
+
     internal RDmgType_JokerTeeth() { }
 
     /// <summary>

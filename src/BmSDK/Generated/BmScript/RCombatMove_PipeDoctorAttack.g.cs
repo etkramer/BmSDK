@@ -21,6 +21,11 @@ public partial class RCombatMove_PipeDoctorAttack : BmSDK.BmGame.RCombatMove_Vil
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_PipeDoctorAttack.
+    /// </summary>
+    public static RCombatMove_PipeDoctorAttack DefaultObject => (RCombatMove_PipeDoctorAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_PipeDoctorAttack() { }
 
     /// <summary>

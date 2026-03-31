@@ -21,6 +21,11 @@ public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WaterVolume.
+    /// </summary>
+    public static WaterVolume DefaultObject => (WaterVolume)StaticClass().DefaultObject;
+
     internal WaterVolume() { }
 
     /// <summary>

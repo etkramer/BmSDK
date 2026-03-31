@@ -21,6 +21,11 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Interp.
+    /// </summary>
+    public static SeqAct_Interp DefaultObject => (SeqAct_Interp)StaticClass().DefaultObject;
+
     internal SeqAct_Interp() { }
 
     /// <summary>

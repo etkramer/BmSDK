@@ -21,6 +21,11 @@ public partial class RBMWeaponPenguinLauncher : BmSDK.BmGame.RBMWeaponRanged, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponPenguinLauncher.
+    /// </summary>
+    public static RBMWeaponPenguinLauncher DefaultObject => (RBMWeaponPenguinLauncher)StaticClass().DefaultObject;
+
     internal RBMWeaponPenguinLauncher() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialInstanceTimeVaryingActor : BmSDK.Engine.Actor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialInstanceTimeVaryingActor.
+    /// </summary>
+    public static MaterialInstanceTimeVaryingActor DefaultObject => (MaterialInstanceTimeVaryingActor)StaticClass().DefaultObject;
+
     internal MaterialInstanceTimeVaryingActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_CrouchByCasualty.
+    /// </summary>
+    public static RBMAIAction_CrouchByCasualty DefaultObject => (RBMAIAction_CrouchByCasualty)StaticClass().DefaultObject;
+
     internal RBMAIAction_CrouchByCasualty() { }
 
     /// <summary>

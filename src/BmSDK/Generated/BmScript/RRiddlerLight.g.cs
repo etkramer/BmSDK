@@ -21,6 +21,11 @@ public partial class RRiddlerLight : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlerLight.
+    /// </summary>
+    public static RRiddlerLight DefaultObject => (RRiddlerLight)StaticClass().DefaultObject;
+
     internal RRiddlerLight() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Font.
+    /// </summary>
+    public static Font DefaultObject => (Font)StaticClass().DefaultObject;
+
     internal Font() { }
 
     /// <summary>

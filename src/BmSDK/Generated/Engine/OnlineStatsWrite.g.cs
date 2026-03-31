@@ -21,6 +21,11 @@ public partial class OnlineStatsWrite : BmSDK.Engine.OnlineStats, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineStatsWrite.
+    /// </summary>
+    public static OnlineStatsWrite DefaultObject => (OnlineStatsWrite)StaticClass().DefaultObject;
+
     internal OnlineStatsWrite() { }
 
     /// <summary>

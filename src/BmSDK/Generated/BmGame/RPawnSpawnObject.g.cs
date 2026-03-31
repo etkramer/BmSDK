@@ -21,6 +21,11 @@ public partial class RPawnSpawnObject : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnSpawnObject.
+    /// </summary>
+    public static RPawnSpawnObject DefaultObject => (RPawnSpawnObject)StaticClass().DefaultObject;
+
     internal RPawnSpawnObject() { }
 
     /// <summary>

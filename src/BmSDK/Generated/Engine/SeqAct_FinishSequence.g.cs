@@ -21,6 +21,11 @@ public partial class SeqAct_FinishSequence : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_FinishSequence.
+    /// </summary>
+    public static SeqAct_FinishSequence DefaultObject => (SeqAct_FinishSequence)StaticClass().DefaultObject;
+
     internal SeqAct_FinishSequence() { }
 
     /// <summary>

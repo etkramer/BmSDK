@@ -21,6 +21,11 @@ public partial class RCharacter_JokerThug1Thin_Mask : BmSDK.BmScript.RCharacter_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerThug1Thin_Mask.
+    /// </summary>
+    public static RCharacter_JokerThug1Thin_Mask DefaultObject => (RCharacter_JokerThug1Thin_Mask)StaticClass().DefaultObject;
+
     internal RCharacter_JokerThug1Thin_Mask() { }
 
     /// <summary>

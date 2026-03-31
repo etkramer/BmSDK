@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PlayEntryAnim : BmSDK.BmGame.RBMBehaviour_Cont
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PlayEntryAnim.
+    /// </summary>
+    public static RBMBehaviour_PlayEntryAnim DefaultObject => (RBMBehaviour_PlayEntryAnim)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PlayEntryAnim() { }
 
     /// <summary>

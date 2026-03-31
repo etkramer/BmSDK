@@ -21,6 +21,11 @@ public partial class RBMAIAction_TerrorMoveTo : BmSDK.BmGame.RBMAIAction_BaseMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_TerrorMoveTo.
+    /// </summary>
+    public static RBMAIAction_TerrorMoveTo DefaultObject => (RBMAIAction_TerrorMoveTo)StaticClass().DefaultObject;
+
     internal RBMAIAction_TerrorMoveTo() { }
 
     /// <summary>

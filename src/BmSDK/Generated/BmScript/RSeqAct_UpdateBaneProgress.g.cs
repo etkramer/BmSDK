@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateBaneProgress : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateBaneProgress.
+    /// </summary>
+    public static RSeqAct_UpdateBaneProgress DefaultObject => (RSeqAct_UpdateBaneProgress)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateBaneProgress() { }
 
     /// <summary>

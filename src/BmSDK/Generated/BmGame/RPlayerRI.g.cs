@@ -21,6 +21,11 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerRI.
+    /// </summary>
+    public static RPlayerRI DefaultObject => (RPlayerRI)StaticClass().DefaultObject;
+
     internal RPlayerRI() { }
 
     /// <summary>

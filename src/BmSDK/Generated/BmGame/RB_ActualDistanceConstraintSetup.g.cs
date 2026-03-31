@@ -21,6 +21,11 @@ public partial class RB_ActualDistanceConstraintSetup : BmSDK.Engine.RB_Constrai
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ActualDistanceConstraintSetup.
+    /// </summary>
+    public static RB_ActualDistanceConstraintSetup DefaultObject => (RB_ActualDistanceConstraintSetup)StaticClass().DefaultObject;
+
     internal RB_ActualDistanceConstraintSetup() { }
 
     /// <summary>

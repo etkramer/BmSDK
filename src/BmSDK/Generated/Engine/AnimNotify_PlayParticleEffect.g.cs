@@ -21,6 +21,11 @@ public partial class AnimNotify_PlayParticleEffect : BmSDK.Engine.AnimNotify, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_PlayParticleEffect.
+    /// </summary>
+    public static AnimNotify_PlayParticleEffect DefaultObject => (AnimNotify_PlayParticleEffect)StaticClass().DefaultObject;
+
     internal AnimNotify_PlayParticleEffect() { }
 
     /// <summary>

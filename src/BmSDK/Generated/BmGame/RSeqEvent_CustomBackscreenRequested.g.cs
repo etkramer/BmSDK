@@ -21,6 +21,11 @@ public partial class RSeqEvent_CustomBackscreenRequested : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CustomBackscreenRequested.
+    /// </summary>
+    public static RSeqEvent_CustomBackscreenRequested DefaultObject => (RSeqEvent_CustomBackscreenRequested)StaticClass().DefaultObject;
+
     internal RSeqEvent_CustomBackscreenRequested() { }
 
     /// <summary>

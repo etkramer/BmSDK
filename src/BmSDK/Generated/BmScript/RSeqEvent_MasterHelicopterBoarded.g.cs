@@ -21,6 +21,11 @@ public partial class RSeqEvent_MasterHelicopterBoarded : BmSDK.Engine.SequenceEv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MasterHelicopterBoarded.
+    /// </summary>
+    public static RSeqEvent_MasterHelicopterBoarded DefaultObject => (RSeqEvent_MasterHelicopterBoarded)StaticClass().DefaultObject;
+
     internal RSeqEvent_MasterHelicopterBoarded() { }
 
     /// <summary>

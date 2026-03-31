@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GlassWallAttack_Harley : BmSDK.BmGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GlassWallAttack_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GlassWallAttack_Harley DefaultObject => (RRbStealthTakeDownStage_GlassWallAttack_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GlassWallAttack_Harley() { }
 
     /// <summary>

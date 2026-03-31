@@ -21,6 +21,11 @@ public partial class RDmgType_GargoyleBomb : BmSDK.BmGame.RDmgType_Explosion, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GargoyleBomb.
+    /// </summary>
+    public static RDmgType_GargoyleBomb DefaultObject => (RDmgType_GargoyleBomb)StaticClass().DefaultObject;
+
     internal RDmgType_GargoyleBomb() { }
 
     /// <summary>

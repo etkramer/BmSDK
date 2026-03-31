@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_GargSmash : BmSDK.BmGame.RAEC_Search_Sub, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_GargSmash.
+    /// </summary>
+    public static RAEC_Search_Sub_GargSmash DefaultObject => (RAEC_Search_Sub_GargSmash)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_GargSmash() { }
 
     /// <summary>

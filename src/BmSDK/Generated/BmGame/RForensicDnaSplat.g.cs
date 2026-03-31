@@ -21,6 +21,11 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicDnaSplat.
+    /// </summary>
+    public static RForensicDnaSplat DefaultObject => (RForensicDnaSplat)StaticClass().DefaultObject;
+
     internal RForensicDnaSplat() { }
 
     /// <summary>

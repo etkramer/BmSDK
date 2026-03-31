@@ -21,6 +21,11 @@ public partial class RSeqEvent_ObjectCountIsZero : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_ObjectCountIsZero.
+    /// </summary>
+    public static RSeqEvent_ObjectCountIsZero DefaultObject => (RSeqEvent_ObjectCountIsZero)StaticClass().DefaultObject;
+
     internal RSeqEvent_ObjectCountIsZero() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_Ras : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Ras.
+    /// </summary>
+    public static RDmgType_Ras DefaultObject => (RDmgType_Ras)StaticClass().DefaultObject;
+
     internal RDmgType_Ras() { }
 
     /// <summary>

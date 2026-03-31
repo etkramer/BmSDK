@@ -21,6 +21,11 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonProjectile.
+    /// </summary>
+    public static RHarpoonProjectile DefaultObject => (RHarpoonProjectile)StaticClass().DefaultObject;
+
     internal RHarpoonProjectile() { }
 
     /// <summary>

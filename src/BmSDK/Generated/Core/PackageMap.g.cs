@@ -21,6 +21,11 @@ public partial class PackageMap : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PackageMap.
+    /// </summary>
+    public static PackageMap DefaultObject => (PackageMap)StaticClass().DefaultObject;
+
     internal PackageMap() { }
 
     /// <summary>

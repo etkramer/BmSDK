@@ -21,6 +21,11 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GhostTrainCombatSpawner.
+    /// </summary>
+    public static RSeqAct_GhostTrainCombatSpawner DefaultObject => (RSeqAct_GhostTrainCombatSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_GhostTrainCombatSpawner() { }
 
     /// <summary>

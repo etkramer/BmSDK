@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_RemoveEverySecondKey : BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_RemoveEverySecondKey.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_RemoveEverySecondKey DefaultObject => (AnimationCompressionAlgorithm_RemoveEverySecondKey)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_RemoveEverySecondKey() { }
 
     /// <summary>

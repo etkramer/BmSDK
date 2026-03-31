@@ -21,6 +21,11 @@ public partial class RAnimNotify_Clip : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Clip.
+    /// </summary>
+    public static RAnimNotify_Clip DefaultObject => (RAnimNotify_Clip)StaticClass().DefaultObject;
+
     internal RAnimNotify_Clip() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_NinjaChase.
+    /// </summary>
+    public static RBMBehaviour_NinjaChase DefaultObject => (RBMBehaviour_NinjaChase)StaticClass().DefaultObject;
+
     internal RBMBehaviour_NinjaChase() { }
 
     /// <summary>

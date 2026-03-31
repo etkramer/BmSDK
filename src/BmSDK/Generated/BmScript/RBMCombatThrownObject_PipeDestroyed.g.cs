@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_PipeDestroyed : BmSDK.BmGame.RBMComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_PipeDestroyed.
+    /// </summary>
+    public static RBMCombatThrownObject_PipeDestroyed DefaultObject => (RBMCombatThrownObject_PipeDestroyed)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_PipeDestroyed() { }
 
     /// <summary>

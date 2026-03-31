@@ -21,6 +21,11 @@ public partial class RSeqAct_SpawnCombatWeapon : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SpawnCombatWeapon.
+    /// </summary>
+    public static RSeqAct_SpawnCombatWeapon DefaultObject => (RSeqAct_SpawnCombatWeapon)StaticClass().DefaultObject;
+
     internal RSeqAct_SpawnCombatWeapon() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_SetCanPickPocket : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetCanPickPocket.
+    /// </summary>
+    public static RSeqAct_SetCanPickPocket DefaultObject => (RSeqAct_SetCanPickPocket)StaticClass().DefaultObject;
+
     internal RSeqAct_SetCanPickPocket() { }
 
     /// <summary>

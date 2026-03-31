@@ -21,6 +21,11 @@ public partial class RPawnVillainGunPredLite : BmSDK.BmGame.RPawnVillainGunPredB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunPredLite.
+    /// </summary>
+    public static RPawnVillainGunPredLite DefaultObject => (RPawnVillainGunPredLite)StaticClass().DefaultObject;
+
     internal RPawnVillainGunPredLite() { }
 
     /// <summary>

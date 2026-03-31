@@ -21,6 +21,11 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SwfMovie.
+    /// </summary>
+    public static SwfMovie DefaultObject => (SwfMovie)StaticClass().DefaultObject;
+
     internal SwfMovie() { }
 
     /// <summary>

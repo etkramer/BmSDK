@@ -21,6 +21,11 @@ public partial class RPostFleePoint_Behaviour : BmSDK.BmGame.RPostFleePoint, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPostFleePoint_Behaviour.
+    /// </summary>
+    public static RPostFleePoint_Behaviour DefaultObject => (RPostFleePoint_Behaviour)StaticClass().DefaultObject;
+
     internal RPostFleePoint_Behaviour() { }
 
     /// <summary>

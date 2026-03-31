@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_PDLC1_Map.
+    /// </summary>
+    public static RGFxMovieUI_PDLC1_Map DefaultObject => (RGFxMovieUI_PDLC1_Map)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_PDLC1_Map() { }
 
     /// <summary>

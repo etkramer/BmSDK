@@ -21,6 +21,11 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RockAtmos.
+    /// </summary>
+    public static RockAtmos DefaultObject => (RockAtmos)StaticClass().DefaultObject;
+
     internal RockAtmos() { }
 
     /// <summary>

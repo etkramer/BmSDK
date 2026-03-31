@@ -21,6 +21,11 @@ public partial class RSwingFloorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSwingFloorVolume.
+    /// </summary>
+    public static RSwingFloorVolume DefaultObject => (RSwingFloorVolume)StaticClass().DefaultObject;
+
     internal RSwingFloorVolume() { }
 
     /// <summary>

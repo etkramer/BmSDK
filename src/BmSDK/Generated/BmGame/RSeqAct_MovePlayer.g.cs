@@ -21,6 +21,11 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MovePlayer.
+    /// </summary>
+    public static RSeqAct_MovePlayer DefaultObject => (RSeqAct_MovePlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_MovePlayer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class PathNode : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathNode.
+    /// </summary>
+    public static PathNode DefaultObject => (PathNode)StaticClass().DefaultObject;
+
     internal PathNode() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_ThugMineExplosion : BmSDK.BmGame.RDmgType_Explosio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ThugMineExplosion.
+    /// </summary>
+    public static RDmgType_ThugMineExplosion DefaultObject => (RDmgType_ThugMineExplosion)StaticClass().DefaultObject;
+
     internal RDmgType_ThugMineExplosion() { }
 
     /// <summary>

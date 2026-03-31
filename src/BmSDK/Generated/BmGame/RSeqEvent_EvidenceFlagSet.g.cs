@@ -21,6 +21,11 @@ public partial class RSeqEvent_EvidenceFlagSet : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_EvidenceFlagSet.
+    /// </summary>
+    public static RSeqEvent_EvidenceFlagSet DefaultObject => (RSeqEvent_EvidenceFlagSet)StaticClass().DefaultObject;
+
     internal RSeqEvent_EvidenceFlagSet() { }
 
     /// <summary>

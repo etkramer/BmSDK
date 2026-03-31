@@ -21,6 +21,11 @@ public partial class SeqEvent_Used : BmSDK.Engine.SequenceEvent, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Used.
+    /// </summary>
+    public static SeqEvent_Used DefaultObject => (SeqEvent_Used)StaticClass().DefaultObject;
+
     internal SeqEvent_Used() { }
 
     /// <summary>

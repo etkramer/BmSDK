@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieExtraHUDControl : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieExtraHUDControl.
+    /// </summary>
+    public static RSeqAct_GFxMovieExtraHUDControl DefaultObject => (RSeqAct_GFxMovieExtraHUDControl)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieExtraHUDControl() { }
 
     /// <summary>

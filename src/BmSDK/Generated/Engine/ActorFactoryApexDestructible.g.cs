@@ -21,6 +21,11 @@ public partial class ActorFactoryApexDestructible : BmSDK.Engine.ActorFactory, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryApexDestructible.
+    /// </summary>
+    public static ActorFactoryApexDestructible DefaultObject => (ActorFactoryApexDestructible)StaticClass().DefaultObject;
+
     internal ActorFactoryApexDestructible() { }
 
     /// <summary>

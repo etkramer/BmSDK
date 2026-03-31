@@ -21,6 +21,11 @@ public partial class RDialogueLocationVolume : BmSDK.Engine.Volume, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDialogueLocationVolume.
+    /// </summary>
+    public static RDialogueLocationVolume DefaultObject => (RDialogueLocationVolume)StaticClass().DefaultObject;
+
     internal RDialogueLocationVolume() { }
 
     /// <summary>

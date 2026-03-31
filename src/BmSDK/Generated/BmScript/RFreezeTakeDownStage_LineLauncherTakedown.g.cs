@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_LineLauncherTakedown : BmSDK.BmScript.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_LineLauncherTakedown.
+    /// </summary>
+    public static RFreezeTakeDownStage_LineLauncherTakedown DefaultObject => (RFreezeTakeDownStage_LineLauncherTakedown)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_LineLauncherTakedown() { }
 
     /// <summary>

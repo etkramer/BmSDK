@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_Perim.
+    /// </summary>
+    public static RAEC_Casualty_Sub_Perim DefaultObject => (RAEC_Casualty_Sub_Perim)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_Perim() { }
 
     /// <summary>

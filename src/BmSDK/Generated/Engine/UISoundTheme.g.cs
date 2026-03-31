@@ -21,6 +21,11 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UISoundTheme.
+    /// </summary>
+    public static UISoundTheme DefaultObject => (UISoundTheme)StaticClass().DefaultObject;
+
     internal UISoundTheme() { }
 
     /// <summary>

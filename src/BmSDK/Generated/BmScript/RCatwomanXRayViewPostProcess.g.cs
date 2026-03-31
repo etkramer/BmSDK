@@ -21,6 +21,11 @@ public partial class RCatwomanXRayViewPostProcess : BmSDK.BmGame.RXRayViewPostPr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCatwomanXRayViewPostProcess.
+    /// </summary>
+    public static RCatwomanXRayViewPostProcess DefaultObject => (RCatwomanXRayViewPostProcess)StaticClass().DefaultObject;
+
     internal RCatwomanXRayViewPostProcess() { }
 
     /// <summary>

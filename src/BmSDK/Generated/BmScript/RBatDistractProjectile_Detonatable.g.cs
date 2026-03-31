@@ -21,6 +21,11 @@ public partial class RBatDistractProjectile_Detonatable : BmSDK.BmScript.RBatDis
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatDistractProjectile_Detonatable.
+    /// </summary>
+    public static RBatDistractProjectile_Detonatable DefaultObject => (RBatDistractProjectile_Detonatable)StaticClass().DefaultObject;
+
     internal RBatDistractProjectile_Detonatable() { }
 
     /// <summary>

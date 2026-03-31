@@ -21,6 +21,11 @@ public partial class GFxEvent_FSCommand : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxEvent_FSCommand.
+    /// </summary>
+    public static GFxEvent_FSCommand DefaultObject => (GFxEvent_FSCommand)StaticClass().DefaultObject;
+
     internal GFxEvent_FSCommand() { }
 
     /// <summary>

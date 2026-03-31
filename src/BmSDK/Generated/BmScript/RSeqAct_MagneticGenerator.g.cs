@@ -21,6 +21,11 @@ public partial class RSeqAct_MagneticGenerator : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MagneticGenerator.
+    /// </summary>
+    public static RSeqAct_MagneticGenerator DefaultObject => (RSeqAct_MagneticGenerator)StaticClass().DefaultObject;
+
     internal RSeqAct_MagneticGenerator() { }
 
     /// <summary>

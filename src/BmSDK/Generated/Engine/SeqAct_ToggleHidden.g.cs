@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleHidden : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleHidden.
+    /// </summary>
+    public static SeqAct_ToggleHidden DefaultObject => (SeqAct_ToggleHidden)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleHidden() { }
 
     /// <summary>

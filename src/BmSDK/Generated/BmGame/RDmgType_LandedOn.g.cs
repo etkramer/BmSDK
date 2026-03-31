@@ -21,6 +21,11 @@ public partial class RDmgType_LandedOn : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_LandedOn.
+    /// </summary>
+    public static RDmgType_LandedOn DefaultObject => (RDmgType_LandedOn)StaticClass().DefaultObject;
+
     internal RDmgType_LandedOn() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_PosePlayer.
+    /// </summary>
+    public static RAnimUtil_PosePlayer DefaultObject => (RAnimUtil_PosePlayer)StaticClass().DefaultObject;
+
     internal RAnimUtil_PosePlayer() { }
 
     /// <summary>

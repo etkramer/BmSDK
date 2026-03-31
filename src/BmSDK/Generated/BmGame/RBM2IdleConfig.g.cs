@@ -21,6 +21,11 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBM2IdleConfig.
+    /// </summary>
+    public static RBM2IdleConfig DefaultObject => (RBM2IdleConfig)StaticClass().DefaultObject;
+
     internal RBM2IdleConfig() { }
 
     /// <summary>

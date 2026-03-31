@@ -21,6 +21,11 @@ public partial class RParticleModuleKillInVolume : BmSDK.Engine.ParticleModuleKi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleKillInVolume.
+    /// </summary>
+    public static RParticleModuleKillInVolume DefaultObject => (RParticleModuleKillInVolume)StaticClass().DefaultObject;
+
     internal RParticleModuleKillInVolume() { }
 
     /// <summary>

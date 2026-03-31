@@ -21,6 +21,11 @@ public partial class AnimNodeAdditiveBlending : BmSDK.Engine.AnimNodeBlend, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeAdditiveBlending.
+    /// </summary>
+    public static AnimNodeAdditiveBlending DefaultObject => (AnimNodeAdditiveBlending)StaticClass().DefaultObject;
+
     internal AnimNodeAdditiveBlending() { }
 
     /// <summary>

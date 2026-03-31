@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockNewGamePlus : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockNewGamePlus.
+    /// </summary>
+    public static RSeqAct_UnlockNewGamePlus DefaultObject => (RSeqAct_UnlockNewGamePlus)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockNewGamePlus() { }
 
     /// <summary>

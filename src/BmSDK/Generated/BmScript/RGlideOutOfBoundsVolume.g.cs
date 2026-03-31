@@ -21,6 +21,11 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.BmGame.RBlockingVolume, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGlideOutOfBoundsVolume.
+    /// </summary>
+    public static RGlideOutOfBoundsVolume DefaultObject => (RGlideOutOfBoundsVolume)StaticClass().DefaultObject;
+
     internal RGlideOutOfBoundsVolume() { }
 
     /// <summary>

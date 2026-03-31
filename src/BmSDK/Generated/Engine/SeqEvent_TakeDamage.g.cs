@@ -21,6 +21,11 @@ public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_TakeDamage.
+    /// </summary>
+    public static SeqEvent_TakeDamage DefaultObject => (SeqEvent_TakeDamage)StaticClass().DefaultObject;
+
     internal SeqEvent_TakeDamage() { }
 
     /// <summary>

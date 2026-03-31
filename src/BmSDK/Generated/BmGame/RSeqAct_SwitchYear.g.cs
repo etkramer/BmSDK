@@ -21,6 +21,11 @@ public partial class RSeqAct_SwitchYear : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SwitchYear.
+    /// </summary>
+    public static RSeqAct_SwitchYear DefaultObject => (RSeqAct_SwitchYear)StaticClass().DefaultObject;
+
     internal RSeqAct_SwitchYear() { }
 
     /// <summary>

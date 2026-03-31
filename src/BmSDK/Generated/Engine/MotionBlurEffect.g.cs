@@ -21,6 +21,11 @@ public partial class MotionBlurEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MotionBlurEffect.
+    /// </summary>
+    public static MotionBlurEffect DefaultObject => (MotionBlurEffect)StaticClass().DefaultObject;
+
     internal MotionBlurEffect() { }
 
     /// <summary>

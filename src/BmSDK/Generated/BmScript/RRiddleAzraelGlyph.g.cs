@@ -21,6 +21,11 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddleAzraelGlyph.
+    /// </summary>
+    public static RRiddleAzraelGlyph DefaultObject => (RRiddleAzraelGlyph)StaticClass().DefaultObject;
+
     internal RRiddleAzraelGlyph() { }
 
     /// <summary>

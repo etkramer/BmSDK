@@ -21,6 +21,11 @@ public partial class RB_Thruster : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_Thruster.
+    /// </summary>
+    public static RB_Thruster DefaultObject => (RB_Thruster)StaticClass().DefaultObject;
+
     internal RB_Thruster() { }
 
     /// <summary>

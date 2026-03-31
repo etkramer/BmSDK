@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_ReverseChokeSuccess : BmSDK.BmGame.RS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_ReverseChokeSuccess.
+    /// </summary>
+    public static RStealthTakeDownStage_ReverseChokeSuccess DefaultObject => (RStealthTakeDownStage_ReverseChokeSuccess)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_ReverseChokeSuccess() { }
 
     /// <summary>

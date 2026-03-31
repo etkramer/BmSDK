@@ -21,6 +21,11 @@ public partial class InterpTrackFaceFXRegister : BmSDK.Engine.InterpTrackFloatBa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackFaceFXRegister.
+    /// </summary>
+    public static InterpTrackFaceFXRegister DefaultObject => (InterpTrackFaceFXRegister)StaticClass().DefaultObject;
+
     internal InterpTrackFaceFXRegister() { }
 
     /// <summary>

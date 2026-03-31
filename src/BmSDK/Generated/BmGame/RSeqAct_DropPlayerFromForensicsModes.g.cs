@@ -21,6 +21,11 @@ public partial class RSeqAct_DropPlayerFromForensicsModes : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DropPlayerFromForensicsModes.
+    /// </summary>
+    public static RSeqAct_DropPlayerFromForensicsModes DefaultObject => (RSeqAct_DropPlayerFromForensicsModes)StaticClass().DefaultObject;
+
     internal RSeqAct_DropPlayerFromForensicsModes() { }
 
     /// <summary>

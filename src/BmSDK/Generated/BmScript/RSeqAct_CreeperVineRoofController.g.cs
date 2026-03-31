@@ -21,6 +21,11 @@ public partial class RSeqAct_CreeperVineRoofController : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CreeperVineRoofController.
+    /// </summary>
+    public static RSeqAct_CreeperVineRoofController DefaultObject => (RSeqAct_CreeperVineRoofController)StaticClass().DefaultObject;
+
     internal RSeqAct_CreeperVineRoofController() { }
 
     /// <summary>

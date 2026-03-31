@@ -21,6 +21,11 @@ public partial class RDmgType_Rifle : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Rifle.
+    /// </summary>
+    public static RDmgType_Rifle DefaultObject => (RDmgType_Rifle)StaticClass().DefaultObject;
+
     internal RDmgType_Rifle() { }
 
     /// <summary>

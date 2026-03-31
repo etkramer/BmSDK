@@ -21,6 +21,11 @@ public partial class RInstancedStaticMeshActor : BmSDK.Engine.StaticMeshActorBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInstancedStaticMeshActor.
+    /// </summary>
+    public static RInstancedStaticMeshActor DefaultObject => (RInstancedStaticMeshActor)StaticClass().DefaultObject;
+
     internal RInstancedStaticMeshActor() { }
 
     /// <summary>

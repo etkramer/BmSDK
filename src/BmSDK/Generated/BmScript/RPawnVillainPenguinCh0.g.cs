@@ -21,6 +21,11 @@ public partial class RPawnVillainPenguinCh0 : BmSDK.BmGame.RPawnVillainThug, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainPenguinCh0.
+    /// </summary>
+    public static RPawnVillainPenguinCh0 DefaultObject => (RPawnVillainPenguinCh0)StaticClass().DefaultObject;
+
     internal RPawnVillainPenguinCh0() { }
 
     /// <summary>

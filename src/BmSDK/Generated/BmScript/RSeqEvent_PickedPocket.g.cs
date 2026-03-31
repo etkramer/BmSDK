@@ -21,6 +21,11 @@ public partial class RSeqEvent_PickedPocket : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PickedPocket.
+    /// </summary>
+    public static RSeqEvent_PickedPocket DefaultObject => (RSeqEvent_PickedPocket)StaticClass().DefaultObject;
+
     internal RSeqEvent_PickedPocket() { }
 
     /// <summary>

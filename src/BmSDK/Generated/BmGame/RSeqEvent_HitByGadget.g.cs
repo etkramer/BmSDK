@@ -21,6 +21,11 @@ public partial class RSeqEvent_HitByGadget : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HitByGadget.
+    /// </summary>
+    public static RSeqEvent_HitByGadget DefaultObject => (RSeqEvent_HitByGadget)StaticClass().DefaultObject;
+
     internal RSeqEvent_HitByGadget() { }
 
     /// <summary>

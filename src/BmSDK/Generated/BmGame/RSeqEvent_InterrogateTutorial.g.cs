@@ -21,6 +21,11 @@ public partial class RSeqEvent_InterrogateTutorial : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_InterrogateTutorial.
+    /// </summary>
+    public static RSeqEvent_InterrogateTutorial DefaultObject => (RSeqEvent_InterrogateTutorial)StaticClass().DefaultObject;
+
     internal RSeqEvent_InterrogateTutorial() { }
 
     /// <summary>

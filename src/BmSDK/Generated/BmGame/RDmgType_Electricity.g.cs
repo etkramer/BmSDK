@@ -21,6 +21,11 @@ public partial class RDmgType_Electricity : BmSDK.BmGame.RDamageType, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Electricity.
+    /// </summary>
+    public static RDmgType_Electricity DefaultObject => (RDmgType_Electricity)StaticClass().DefaultObject;
+
     internal RDmgType_Electricity() { }
 
     /// <summary>

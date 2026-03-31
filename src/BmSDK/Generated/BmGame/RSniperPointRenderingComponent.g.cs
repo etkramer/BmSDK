@@ -21,6 +21,11 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSniperPointRenderingComponent.
+    /// </summary>
+    public static RSniperPointRenderingComponent DefaultObject => (RSniperPointRenderingComponent)StaticClass().DefaultObject;
+
     internal RSniperPointRenderingComponent() { }
 
     /// <summary>

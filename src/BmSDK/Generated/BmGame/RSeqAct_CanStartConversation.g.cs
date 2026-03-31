@@ -21,6 +21,11 @@ public partial class RSeqAct_CanStartConversation : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CanStartConversation.
+    /// </summary>
+    public static RSeqAct_CanStartConversation DefaultObject => (RSeqAct_CanStartConversation)StaticClass().DefaultObject;
+
     internal RSeqAct_CanStartConversation() { }
 
     /// <summary>

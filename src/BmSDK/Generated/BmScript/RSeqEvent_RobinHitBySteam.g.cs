@@ -21,6 +21,11 @@ public partial class RSeqEvent_RobinHitBySteam : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RobinHitBySteam.
+    /// </summary>
+    public static RSeqEvent_RobinHitBySteam DefaultObject => (RSeqEvent_RobinHitBySteam)StaticClass().DefaultObject;
+
     internal RSeqEvent_RobinHitBySteam() { }
 
     /// <summary>

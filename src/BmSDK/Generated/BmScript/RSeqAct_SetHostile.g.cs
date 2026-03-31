@@ -21,6 +21,11 @@ public partial class RSeqAct_SetHostile : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetHostile.
+    /// </summary>
+    public static RSeqAct_SetHostile DefaultObject => (RSeqAct_SetHostile)StaticClass().DefaultObject;
+
     internal RSeqAct_SetHostile() { }
 
     /// <summary>

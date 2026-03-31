@@ -21,6 +21,11 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpeedTreeComponent.
+    /// </summary>
+    public static SpeedTreeComponent DefaultObject => (SpeedTreeComponent)StaticClass().DefaultObject;
+
     internal SpeedTreeComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameSearchCoop.
+    /// </summary>
+    public static RGameSearchCoop DefaultObject => (RGameSearchCoop)StaticClass().DefaultObject;
+
     internal RGameSearchCoop() { }
 
     /// <summary>

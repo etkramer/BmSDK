@@ -21,6 +21,11 @@ public partial class RPawnVillainGunPredLiteInformantDLC : BmSDK.BmScript.RPawnV
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunPredLiteInformantDLC.
+    /// </summary>
+    public static RPawnVillainGunPredLiteInformantDLC DefaultObject => (RPawnVillainGunPredLiteInformantDLC)StaticClass().DefaultObject;
+
     internal RPawnVillainGunPredLiteInformantDLC() { }
 
     /// <summary>

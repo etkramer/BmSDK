@@ -21,6 +21,11 @@ public partial class RDmgType_FloorTakedownBatarang : BmSDK.BmGame.RDmgType_Bata
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_FloorTakedownBatarang.
+    /// </summary>
+    public static RDmgType_FloorTakedownBatarang DefaultObject => (RDmgType_FloorTakedownBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_FloorTakedownBatarang() { }
 
     /// <summary>

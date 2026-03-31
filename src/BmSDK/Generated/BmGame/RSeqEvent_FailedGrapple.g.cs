@@ -21,6 +21,11 @@ public partial class RSeqEvent_FailedGrapple : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FailedGrapple.
+    /// </summary>
+    public static RSeqEvent_FailedGrapple DefaultObject => (RSeqEvent_FailedGrapple)StaticClass().DefaultObject;
+
     internal RSeqEvent_FailedGrapple() { }
 
     /// <summary>

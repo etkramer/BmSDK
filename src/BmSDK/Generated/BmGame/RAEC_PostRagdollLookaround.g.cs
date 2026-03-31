@@ -21,6 +21,11 @@ public partial class RAEC_PostRagdollLookaround : BmSDK.BmGame.RAlertEventCoordi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_PostRagdollLookaround.
+    /// </summary>
+    public static RAEC_PostRagdollLookaround DefaultObject => (RAEC_PostRagdollLookaround)StaticClass().DefaultObject;
+
     internal RAEC_PostRagdollLookaround() { }
 
     /// <summary>

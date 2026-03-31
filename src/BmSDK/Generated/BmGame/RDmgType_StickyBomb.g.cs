@@ -21,6 +21,11 @@ public partial class RDmgType_StickyBomb : BmSDK.BmGame.RDamageType, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_StickyBomb.
+    /// </summary>
+    public static RDmgType_StickyBomb DefaultObject => (RDmgType_StickyBomb)StaticClass().DefaultObject;
+
     internal RDmgType_StickyBomb() { }
 
     /// <summary>

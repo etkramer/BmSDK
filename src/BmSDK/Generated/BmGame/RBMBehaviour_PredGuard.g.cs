@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PredGuard : BmSDK.BmGame.RBMBehaviour_ActionQu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PredGuard.
+    /// </summary>
+    public static RBMBehaviour_PredGuard DefaultObject => (RBMBehaviour_PredGuard)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PredGuard() { }
 
     /// <summary>

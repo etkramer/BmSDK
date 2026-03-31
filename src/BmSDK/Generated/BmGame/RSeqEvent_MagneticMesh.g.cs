@@ -21,6 +21,11 @@ public partial class RSeqEvent_MagneticMesh : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MagneticMesh.
+    /// </summary>
+    public static RSeqEvent_MagneticMesh DefaultObject => (RSeqEvent_MagneticMesh)StaticClass().DefaultObject;
+
     internal RSeqEvent_MagneticMesh() { }
 
     /// <summary>

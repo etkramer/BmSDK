@@ -21,6 +21,11 @@ public partial class RXPSequence : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXPSequence.
+    /// </summary>
+    public static RXPSequence DefaultObject => (RXPSequence)StaticClass().DefaultObject;
+
     internal RXPSequence() { }
 
     /// <summary>

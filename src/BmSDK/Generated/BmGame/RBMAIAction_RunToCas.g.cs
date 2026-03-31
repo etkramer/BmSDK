@@ -21,6 +21,11 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RunToCas.
+    /// </summary>
+    public static RBMAIAction_RunToCas DefaultObject => (RBMAIAction_RunToCas)StaticClass().DefaultObject;
+
     internal RBMAIAction_RunToCas() { }
 
     /// <summary>

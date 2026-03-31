@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_Automatic : BmSDK.Engine.Anim
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_Automatic.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_Automatic DefaultObject => (AnimationCompressionAlgorithm_Automatic)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_Automatic() { }
 
     /// <summary>

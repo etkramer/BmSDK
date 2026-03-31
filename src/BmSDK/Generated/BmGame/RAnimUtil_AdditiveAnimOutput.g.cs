@@ -21,6 +21,11 @@ public partial class RAnimUtil_AdditiveAnimOutput : BmSDK.GameObject, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_AdditiveAnimOutput.
+    /// </summary>
+    public static RAnimUtil_AdditiveAnimOutput DefaultObject => (RAnimUtil_AdditiveAnimOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_AdditiveAnimOutput() { }
 
     /// <summary>

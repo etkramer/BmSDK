@@ -21,6 +21,11 @@ public partial class AnimNotify_PlayFaceFXAnim : BmSDK.Engine.AnimNotify_Scripte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_PlayFaceFXAnim.
+    /// </summary>
+    public static AnimNotify_PlayFaceFXAnim DefaultObject => (AnimNotify_PlayFaceFXAnim)StaticClass().DefaultObject;
+
     internal AnimNotify_PlayFaceFXAnim() { }
 
     /// <summary>

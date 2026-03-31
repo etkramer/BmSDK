@@ -21,6 +21,11 @@ public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ParticleEventGenerator.
+    /// </summary>
+    public static SeqAct_ParticleEventGenerator DefaultObject => (SeqAct_ParticleEventGenerator)StaticClass().DefaultObject;
+
     internal SeqAct_ParticleEventGenerator() { }
 
     /// <summary>

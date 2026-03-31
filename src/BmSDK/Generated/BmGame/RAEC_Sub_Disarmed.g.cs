@@ -21,6 +21,11 @@ public partial class RAEC_Sub_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Sub_Disarmed.
+    /// </summary>
+    public static RAEC_Sub_Disarmed DefaultObject => (RAEC_Sub_Disarmed)StaticClass().DefaultObject;
+
     internal RAEC_Sub_Disarmed() { }
 
     /// <summary>

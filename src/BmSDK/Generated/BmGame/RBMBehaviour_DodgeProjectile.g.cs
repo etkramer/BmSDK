@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DodgeProjectile.
+    /// </summary>
+    public static RBMBehaviour_DodgeProjectile DefaultObject => (RBMBehaviour_DodgeProjectile)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DodgeProjectile() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class UIPropertyDataProvider : BmSDK.Engine.UIDataProvider, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIPropertyDataProvider.
+    /// </summary>
+    public static UIPropertyDataProvider DefaultObject => (UIPropertyDataProvider)StaticClass().DefaultObject;
+
     internal UIPropertyDataProvider() { }
 
     /// <summary>

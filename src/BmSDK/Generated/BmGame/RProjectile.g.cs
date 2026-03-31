@@ -21,6 +21,11 @@ public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProjectile.
+    /// </summary>
+    public static RProjectile DefaultObject => (RProjectile)StaticClass().DefaultObject;
+
     internal RProjectile() { }
 
     /// <summary>

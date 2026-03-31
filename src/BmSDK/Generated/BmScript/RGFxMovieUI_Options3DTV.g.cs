@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_Options3DTV : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_Options3DTV.
+    /// </summary>
+    public static RGFxMovieUI_Options3DTV DefaultObject => (RGFxMovieUI_Options3DTV)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_Options3DTV() { }
 
     /// <summary>

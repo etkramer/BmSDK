@@ -21,6 +21,11 @@ public partial class RSeqAct_NvidiaFireFreezeGunAt : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NvidiaFireFreezeGunAt.
+    /// </summary>
+    public static RSeqAct_NvidiaFireFreezeGunAt DefaultObject => (RSeqAct_NvidiaFireFreezeGunAt)StaticClass().DefaultObject;
+
     internal RSeqAct_NvidiaFireFreezeGunAt() { }
 
     /// <summary>

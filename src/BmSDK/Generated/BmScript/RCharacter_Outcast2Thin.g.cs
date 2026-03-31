@@ -21,6 +21,11 @@ public partial class RCharacter_Outcast2Thin : BmSDK.BmScript.RCharacter_Outcast
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Outcast2Thin.
+    /// </summary>
+    public static RCharacter_Outcast2Thin DefaultObject => (RCharacter_Outcast2Thin)StaticClass().DefaultObject;
+
     internal RCharacter_Outcast2Thin() { }
 
     /// <summary>

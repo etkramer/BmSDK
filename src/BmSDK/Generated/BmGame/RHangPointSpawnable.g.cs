@@ -21,6 +21,11 @@ public partial class RHangPointSpawnable : BmSDK.BmGame.RHangAttackHook, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHangPointSpawnable.
+    /// </summary>
+    public static RHangPointSpawnable DefaultObject => (RHangPointSpawnable)StaticClass().DefaultObject;
+
     internal RHangPointSpawnable() { }
 
     /// <summary>

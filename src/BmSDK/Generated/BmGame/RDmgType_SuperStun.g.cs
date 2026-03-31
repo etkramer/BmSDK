@@ -21,6 +21,11 @@ public partial class RDmgType_SuperStun : BmSDK.BmGame.RDmgType_BlockBreaker, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SuperStun.
+    /// </summary>
+    public static RDmgType_SuperStun DefaultObject => (RDmgType_SuperStun)StaticClass().DefaultObject;
+
     internal RDmgType_SuperStun() { }
 
     /// <summary>

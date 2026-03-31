@@ -21,6 +21,11 @@ public partial class RJammerGadgetNw : BmSDK.BmScript.RJammerGadgetBm, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJammerGadgetNw.
+    /// </summary>
+    public static RJammerGadgetNw DefaultObject => (RJammerGadgetNw)StaticClass().DefaultObject;
+
     internal RJammerGadgetNw() { }
 
     /// <summary>

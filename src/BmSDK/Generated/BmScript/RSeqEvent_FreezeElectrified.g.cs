@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeElectrified : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeElectrified.
+    /// </summary>
+    public static RSeqEvent_FreezeElectrified DefaultObject => (RSeqEvent_FreezeElectrified)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeElectrified() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantSledgehammerAttack.
+    /// </summary>
+    public static RCombatMove_LieutenantSledgehammerAttack DefaultObject => (RCombatMove_LieutenantSledgehammerAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantSledgehammerAttack() { }
 
     /// <summary>

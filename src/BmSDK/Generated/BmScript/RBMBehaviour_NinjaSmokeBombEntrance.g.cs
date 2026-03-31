@@ -21,6 +21,11 @@ public partial class RBMBehaviour_NinjaSmokeBombEntrance : BmSDK.BmGame.RBMBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_NinjaSmokeBombEntrance.
+    /// </summary>
+    public static RBMBehaviour_NinjaSmokeBombEntrance DefaultObject => (RBMBehaviour_NinjaSmokeBombEntrance)StaticClass().DefaultObject;
+
     internal RBMBehaviour_NinjaSmokeBombEntrance() { }
 
     /// <summary>

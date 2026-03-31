@@ -21,6 +21,11 @@ public partial class SeqAct_PrepareMapChange : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_PrepareMapChange.
+    /// </summary>
+    public static SeqAct_PrepareMapChange DefaultObject => (SeqAct_PrepareMapChange)StaticClass().DefaultObject;
+
     internal SeqAct_PrepareMapChange() { }
 
     /// <summary>
