@@ -9,7 +9,7 @@ public partial class Actor
     /// Returns false for actors that are in memory from a <see cref="Game.LoadPackage"/> call
     /// but whose level has not been streamed into the world.
     /// </summary>
-    public bool IsSpawned => Outer?.Outer is World;
+    public bool IsSpawned => WorldInfo == Game.GetWorldInfo();
 
     /// <inheritdoc cref="GameObject.Clone"/>
     public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);
