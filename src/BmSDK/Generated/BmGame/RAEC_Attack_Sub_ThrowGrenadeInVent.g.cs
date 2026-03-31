@@ -176,11 +176,8 @@ public partial class RAEC_Attack_Sub_ThrowGrenadeInVent : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// StructProperty: StandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// ObjectProperty: VentGrenadeTarget

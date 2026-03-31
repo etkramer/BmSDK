@@ -272,29 +272,20 @@ public partial class RSpecialMoveInstance_FireGrapple : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// StructProperty: InitialFireDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialFireDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialFireDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: TightenedAimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TightenedAimLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 TightenedAimLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// FloatProperty: MoveTimer
@@ -308,11 +299,8 @@ public partial class RSpecialMoveInstance_FireGrapple : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// StructProperty: FireOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId FireOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId FireOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 620);
 
     /// <summary>
     /// NameProperty: GrappleAimPose

@@ -76,11 +76,8 @@ public partial class MaterialExpressionSine : BmSDK.Engine.MaterialExpression, B
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// FloatProperty: Period

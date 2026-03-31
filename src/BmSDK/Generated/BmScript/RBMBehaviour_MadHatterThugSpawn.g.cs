@@ -130,11 +130,8 @@ public partial class RBMBehaviour_MadHatterThugSpawn : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 400);
 
     /// <summary>
     /// BoolProperty: bInitialised

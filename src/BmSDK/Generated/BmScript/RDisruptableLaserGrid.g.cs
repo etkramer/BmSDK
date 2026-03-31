@@ -377,20 +377,14 @@ public partial class RDisruptableLaserGrid : BmSDK.BmGame.RDisruptableObjectDoor
     /// <summary>
     /// StructProperty: ShockedFXSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle ShockedFXSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle ShockedFXSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 516);
 
     /// <summary>
     /// StructProperty: DoorSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle DoorSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle DoorSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 528);
 
     /// <summary>
     /// ObjectProperty: GridMatInst

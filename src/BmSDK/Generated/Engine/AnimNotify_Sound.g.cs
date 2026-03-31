@@ -218,9 +218,6 @@ public partial class AnimNotify_Sound : BmSDK.Engine.AnimNotify, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: CharacterFilter
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter CharacterFilter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter CharacterFilter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 60);
 }

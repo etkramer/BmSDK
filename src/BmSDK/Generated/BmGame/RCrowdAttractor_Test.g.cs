@@ -110,11 +110,8 @@ public partial class RCrowdAttractor_Test : BmSDK.BmGame.RCrowdAttractor, BmSDK.
     /// <summary>
     /// StructProperty: CenterPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CenterPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 CenterPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: Radius

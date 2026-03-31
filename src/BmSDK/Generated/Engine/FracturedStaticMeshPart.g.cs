@@ -260,11 +260,8 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// StructProperty: OldVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 608);
 
     /// <summary>
     /// FloatProperty: CurrentVibrationLevel
@@ -287,11 +284,8 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// StructProperty: OldLinearVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldLinearVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldLinearVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
 
     /// <summary>
     /// FloatProperty: CurrentLinearVibrationLevel

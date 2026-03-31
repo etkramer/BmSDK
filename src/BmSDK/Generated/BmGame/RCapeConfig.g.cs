@@ -256,11 +256,8 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UnusedCollisionShapeWorldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 UnusedCollisionShapeWorldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 UnusedCollisionShapeWorldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 
     /// <summary>
     /// BoolProperty: IsUseManualDamping
@@ -355,20 +352,14 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BoneLocalNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneLocalNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneLocalNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 272);
 
     /// <summary>
     /// StructProperty: BoneLocalDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneLocalDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneLocalDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 284);
 
     /// <summary>
     /// FloatProperty: MaxForwardWindComponent

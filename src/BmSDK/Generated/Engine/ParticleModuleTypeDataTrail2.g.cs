@@ -202,9 +202,6 @@ public partial class ParticleModuleTypeDataTrail2 : BmSDK.Engine.ParticleModuleT
     /// <summary>
     /// StructProperty: FixedAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 FixedAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref System.Numerics.Vector3 FixedAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 88);
 }

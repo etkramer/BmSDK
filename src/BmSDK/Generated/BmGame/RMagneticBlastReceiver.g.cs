@@ -807,11 +807,8 @@ public partial class RMagneticBlastReceiver : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe System.Numerics.Vector3 Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// BoolProperty: bDetonated
@@ -960,29 +957,20 @@ public partial class RMagneticBlastReceiver : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: LastHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// StructProperty: LastHitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastHitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastHitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// StructProperty: LaunchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// FloatProperty: ChargeTime
@@ -1050,11 +1038,8 @@ public partial class RMagneticBlastReceiver : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: PosNegLoopSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle PosNegLoopSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle PosNegLoopSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 636);
 
     /// <summary>
     /// ObjectProperty: MagnetLoopStartEvent
@@ -1230,20 +1215,14 @@ public partial class RMagneticBlastReceiver : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: MinBeamExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinBeamExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinBeamExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 
     /// <summary>
     /// StructProperty: MaxBeamExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxBeamExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxBeamExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 744);
 
     /// <summary>
     /// FloatProperty: MaxBeamPointDistance

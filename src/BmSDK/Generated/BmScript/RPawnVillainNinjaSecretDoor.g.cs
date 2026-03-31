@@ -264,11 +264,8 @@ public partial class RPawnVillainNinjaSecretDoor : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// StructProperty: SavedDireciton
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedDireciton
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3572); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedDireciton
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3572);
 
     /// <summary>
     /// ObjectProperty: DCBMCounterAnimset
@@ -291,27 +288,18 @@ public partial class RPawnVillainNinjaSecretDoor : BmSDK.BmGame.RPawnVillainThug
     /// <summary>
     /// StructProperty: SpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3592); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3592);
 
     /// <summary>
     /// StructProperty: SpawnRotation
     /// </summary>
-    public unsafe BmSDK.Rotator SpawnRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3604); }
-    }
+    public unsafe ref BmSDK.Rotator SpawnRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3604);
 
     /// <summary>
     /// StructProperty: FirstAnimTransId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FirstAnimTransId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3616); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FirstAnimTransId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3616);
 }

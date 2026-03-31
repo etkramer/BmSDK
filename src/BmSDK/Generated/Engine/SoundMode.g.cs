@@ -85,11 +85,8 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EQSettings
     /// </summary>
-    public unsafe BmSDK.Engine.SoundMode.FAudioEQEffect EQSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundMode.FAudioEQEffect>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.Engine.SoundMode.FAudioEQEffect EQSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SoundMode.FAudioEQEffect>(Ptr + 48);
 
     /// <summary>
     /// ArrayProperty: SoundClassEffects

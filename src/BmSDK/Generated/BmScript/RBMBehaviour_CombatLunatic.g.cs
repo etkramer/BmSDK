@@ -207,11 +207,8 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// StructProperty: JumpId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 764);
 
     /// <summary>
     /// FloatProperty: TauntTimer
@@ -279,11 +276,8 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// StructProperty: JumpDest
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpDest
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpDest
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 808);
 
     /// <summary>
     /// NameProperty: JumpAnim

@@ -778,11 +778,8 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StreamingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox StreamingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox StreamingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: MaxStreamingSize
@@ -796,20 +793,14 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StreamingSizeScaleHint
     /// </summary>
-    public unsafe System.Numerics.Vector3 StreamingSizeScaleHint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 StreamingSizeScaleHint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// ByteProperty: MapIconType

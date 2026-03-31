@@ -460,20 +460,14 @@ public partial class RBMDialogueCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentConversation
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance CurrentConversation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance CurrentConversation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: FollowupConversation
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance FollowupConversation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance FollowupConversation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 472);
 
     /// <summary>
     /// ArrayProperty: ScriptedConversationBehaviour

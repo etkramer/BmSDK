@@ -173,11 +173,8 @@ public partial class RSeqAct_CrocCatchBatarang : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: WallDistFromCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallDistFromCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallDistFromCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// ObjectProperty: IdealLandPoint
@@ -245,11 +242,8 @@ public partial class RSeqAct_CrocCatchBatarang : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: IdealCatchPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 IdealCatchPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref System.Numerics.Vector3 IdealCatchPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 280);
 
     /// <summary>
     /// FloatProperty: TimeTillCatch
@@ -326,9 +320,6 @@ public partial class RSeqAct_CrocCatchBatarang : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: CatchOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CatchOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref System.Numerics.Vector3 CatchOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 340);
 }

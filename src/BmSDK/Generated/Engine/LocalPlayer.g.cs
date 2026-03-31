@@ -526,20 +526,14 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe System.Numerics.Vector2 Origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref System.Numerics.Vector2 Origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 88);
 
     /// <summary>
     /// StructProperty: Size
     /// </summary>
-    public unsafe System.Numerics.Vector2 Size
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.Numerics.Vector2 Size
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: IsXrayEnabled
@@ -634,38 +628,26 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ActorVisibilityHistory
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory ActorVisibilityHistory
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory ActorVisibilityHistory
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: LastViewLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastViewLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastViewLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: CurrentPPInfo
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo CurrentPPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo CurrentPPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 148);
 
     /// <summary>
     /// StructProperty: LevelPPInfo
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo LevelPPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo LevelPPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 560);
 
     /// <summary>
     /// ArrayProperty: ActivePPOverrides

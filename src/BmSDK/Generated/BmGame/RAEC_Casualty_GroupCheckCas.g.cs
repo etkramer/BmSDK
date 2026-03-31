@@ -396,11 +396,8 @@ public partial class RAEC_Casualty_GroupCheckCas : BmSDK.BmGame.RAEC_SubGroup, B
     /// <summary>
     /// StructProperty: PostCutNotify_BrangLaunchPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 PostCutNotify_BrangLaunchPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 PostCutNotify_BrangLaunchPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// IntProperty: PostCutNotify_BRangLaunchId

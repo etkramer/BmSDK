@@ -76,11 +76,8 @@ public partial class SeqAct_GetVectorComponents : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: InVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 InVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 InVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// FloatProperty: X

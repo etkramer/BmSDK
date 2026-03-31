@@ -155,11 +155,8 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MousePosition
     /// </summary>
-    public unsafe BmSDK.GameObject.FIntPoint MousePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIntPoint>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.GameObject.FIntPoint MousePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIntPoint>(Ptr + 56);
 
     /// <summary>
     /// ObjectProperty: DataStoreManager
@@ -173,20 +170,14 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CanvasToScreen
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix CanvasToScreen
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix CanvasToScreen
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: InvCanvasToScreen
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix InvCanvasToScreen
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix InvCanvasToScreen
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 144);
 
     /// <summary>
     /// ObjectProperty: UIScenePostProcess

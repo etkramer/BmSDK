@@ -244,11 +244,8 @@ public partial class RNightwingSticks : BmSDK.BmGame.RSticksGadgetBase, BmSDK.IG
     /// <summary>
     /// StructProperty: LaunchVel
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchVel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 972);
 
     /// <summary>
     /// FloatProperty: LaunchGravity
@@ -271,20 +268,14 @@ public partial class RNightwingSticks : BmSDK.BmGame.RSticksGadgetBase, BmSDK.IG
     /// <summary>
     /// StructProperty: LaunchDestPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchDestPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchDestPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
 
     /// <summary>
     /// StructProperty: LaunchDestNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchDestNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchDestNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1004);
 
     /// <summary>
     /// ObjectProperty: LaunchDestEmitter

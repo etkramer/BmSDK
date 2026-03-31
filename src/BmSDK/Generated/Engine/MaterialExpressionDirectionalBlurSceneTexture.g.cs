@@ -76,20 +76,14 @@ public partial class MaterialExpressionDirectionalBlurSceneTexture : BmSDK.Engin
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: SampleDirection
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput SampleDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 
     /// <summary>
     /// BoolProperty: ScreenAlign

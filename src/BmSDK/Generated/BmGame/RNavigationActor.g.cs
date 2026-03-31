@@ -195,11 +195,8 @@ public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.Engine.Interfa
     /// <summary>
     /// StructProperty: SearchExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 SearchExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref System.Numerics.Vector3 SearchExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 436);
 
     /// <summary>
     /// ByteProperty: CurrState

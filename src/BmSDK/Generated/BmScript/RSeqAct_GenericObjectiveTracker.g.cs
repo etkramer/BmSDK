@@ -107,9 +107,6 @@ public partial class RSeqAct_GenericObjectiveTracker : BmSDK.Engine.SequenceActi
     /// <summary>
     /// StructProperty: ObjectiveVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 ObjectiveVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 ObjectiveVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 }

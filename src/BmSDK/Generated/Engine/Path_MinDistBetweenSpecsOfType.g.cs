@@ -96,11 +96,8 @@ public partial class Path_MinDistBetweenSpecsOfType : BmSDK.Engine.PathConstrain
     /// <summary>
     /// StructProperty: InitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 
     /// <summary>
     /// ClassProperty: ReachSpecClass

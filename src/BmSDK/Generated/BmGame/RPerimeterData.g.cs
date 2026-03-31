@@ -216,11 +216,8 @@ public partial class RPerimeterData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EventCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// ArrayProperty: StandPointList

@@ -319,11 +319,8 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// StructProperty: HoldOrientation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat HoldOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat HoldOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 992);
 
     /// <summary>
     /// BoolProperty: IsPhysActorHit
@@ -364,18 +361,12 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref System.Numerics.Vector3 PhysTestShapeBoundsCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1024);
 
     /// <summary>
     /// StructProperty: PhysTestShapeBoundsExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 PhysTestShapeBoundsExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 PhysTestShapeBoundsExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 }

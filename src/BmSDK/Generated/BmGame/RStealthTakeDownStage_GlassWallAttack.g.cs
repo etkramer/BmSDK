@@ -309,11 +309,8 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 1032);
 
     /// <summary>
     /// ObjectProperty: Player
@@ -372,29 +369,20 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: StartPlayerPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPlayerPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPlayerPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1160);
 
     /// <summary>
     /// StructProperty: StartVictimPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartVictimPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartVictimPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1172);
 
     /// <summary>
     /// StructProperty: CameraRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraRootLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraRootLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1184);
 
     /// <summary>
     /// IntProperty: CameraPhase
@@ -417,9 +405,6 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: WallAttackStage
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo WallAttackStage
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo WallAttackStage
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo>(Ptr + 1212);
 }

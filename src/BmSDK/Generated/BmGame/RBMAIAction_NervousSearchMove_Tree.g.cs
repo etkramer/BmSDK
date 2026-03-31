@@ -105,9 +105,6 @@ public partial class RBMAIAction_NervousSearchMove_Tree : BmSDK.BmGame.RBMAIActi
     /// <summary>
     /// StructProperty: MoveViaPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveViaPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveViaPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 }

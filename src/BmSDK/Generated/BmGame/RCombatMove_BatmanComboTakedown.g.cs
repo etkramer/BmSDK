@@ -355,38 +355,26 @@ public partial class RCombatMove_BatmanComboTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: TakedownInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo TakedownInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo TakedownInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: BatmanTakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 544);
 
     /// <summary>
     /// StructProperty: TargetTakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetTakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetTakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 548);
 
     /// <summary>
     /// StructProperty: IntoTakedownAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IntoTakedownAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IntoTakedownAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 552);
 
     /// <summary>
     /// FloatProperty: TakedownCollisionDist
@@ -445,11 +433,8 @@ public partial class RCombatMove_BatmanComboTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: TargetDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 
     /// <summary>
     /// FloatProperty: TargetDist
@@ -481,9 +466,6 @@ public partial class RCombatMove_BatmanComboTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 }

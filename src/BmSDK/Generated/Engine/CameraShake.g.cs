@@ -233,29 +233,20 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RotOscillation
     /// </summary>
-    public unsafe BmSDK.Engine.CameraShake.FROscillator RotOscillation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraShake.FROscillator>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.Engine.CameraShake.FROscillator RotOscillation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.CameraShake.FROscillator>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: LocOscillation
     /// </summary>
-    public unsafe BmSDK.Engine.CameraShake.FVOscillator LocOscillation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraShake.FVOscillator>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.CameraShake.FVOscillator LocOscillation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.CameraShake.FVOscillator>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: FOVOscillation
     /// </summary>
-    public unsafe BmSDK.Engine.CameraShake.FFOscillator FOVOscillation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraShake.FFOscillator>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.CameraShake.FFOscillator FOVOscillation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.CameraShake.FFOscillator>(Ptr + 132);
 
     /// <summary>
     /// ObjectProperty: Anim

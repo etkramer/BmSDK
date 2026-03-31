@@ -120,11 +120,8 @@ public partial class RStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// StructProperty: OriginalPlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalPlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalPlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// ObjectProperty: Grate

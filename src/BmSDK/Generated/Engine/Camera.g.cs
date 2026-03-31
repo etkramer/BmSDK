@@ -866,11 +866,8 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FadeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor FadeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor FadeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 468);
 
     /// <summary>
     /// FloatProperty: FadeAmount
@@ -893,38 +890,26 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CamPostProcessSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamPostProcessSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamPostProcessSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: ColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 ColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 ColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// StructProperty: DesiredColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 892);
 
     /// <summary>
     /// StructProperty: OriginalColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// FloatProperty: ColorScaleInterpDuration
@@ -974,38 +959,26 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraCache
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTCameraCache CameraCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTCameraCache CameraCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 936);
 
     /// <summary>
     /// StructProperty: LastFrameCameraCache
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTCameraCache LastFrameCameraCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTCameraCache LastFrameCameraCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: ViewTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTViewTarget ViewTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTViewTarget ViewTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1000);
 
     /// <summary>
     /// StructProperty: PendingViewTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTViewTarget PendingViewTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTViewTarget PendingViewTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1044);
 
     /// <summary>
     /// FloatProperty: BlendTimeToGo
@@ -1019,11 +992,8 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BlendParams
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FViewTargetTransitionParams BlendParams
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 1092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FViewTargetTransitionParams BlendParams
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 1092);
 
     /// <summary>
     /// ArrayProperty: ModifierList
@@ -1046,20 +1016,14 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FreeCamOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FreeCamOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
-    }
+    public unsafe ref System.Numerics.Vector3 FreeCamOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1124);
 
     /// <summary>
     /// StructProperty: FadeAlpha
     /// </summary>
-    public unsafe System.Numerics.Vector2 FadeAlpha
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 1136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
-    }
+    public unsafe ref System.Numerics.Vector2 FadeAlpha
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 1136);
 
     /// <summary>
     /// FloatProperty: FadeTime

@@ -269,9 +269,6 @@ public partial class RBMDeathCutscene_FinalCounterCam : BmSDK.BmGame.RBMDeathCut
     /// <summary>
     /// StructProperty: PreviousBaseLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousBaseLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousBaseLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 }

@@ -499,11 +499,8 @@ public partial class RCombatMove_BatmanBeatdown : BmSDK.BmGame.RCombatMove_Batma
     /// <summary>
     /// StructProperty: TargetStrikeID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetStrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1056); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetStrikeID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1056);
 
     /// <summary>
     /// ByteProperty: BeatdownTargetType
@@ -526,18 +523,12 @@ public partial class RCombatMove_BatmanBeatdown : BmSDK.BmGame.RCombatMove_Batma
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1068);
 
     /// <summary>
     /// StructProperty: AnimRot
     /// </summary>
-    public unsafe BmSDK.Rotator AnimRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref BmSDK.Rotator AnimRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1080);
 }

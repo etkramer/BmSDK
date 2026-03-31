@@ -525,20 +525,14 @@ public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.BmGame.RBatarangable
     /// <summary>
     /// StructProperty: LastUpdateLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastUpdateLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastUpdateLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// StructProperty: LastUpdateRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastUpdateRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.Rotator LastUpdateRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 468);
 
     /// <summary>
     /// ObjectProperty: RopeHighlight

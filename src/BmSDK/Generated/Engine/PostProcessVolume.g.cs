@@ -97,11 +97,8 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Settings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings Settings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings Settings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 476);
 
     /// <summary>
     /// ObjectProperty: NextLowerPriorityVolume

@@ -316,20 +316,14 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: VillainAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 488);
 
     /// <summary>
     /// FloatProperty: TimeTillStruggle
@@ -370,18 +364,12 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: AnimRot
     /// </summary>
-    public unsafe BmSDK.Rotator AnimRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.Rotator AnimRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 520);
 }

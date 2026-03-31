@@ -76,20 +76,14 @@ public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: COMNudge
     /// </summary>
-    public unsafe System.Numerics.Vector3 COMNudge
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 COMNudge
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: AggGeom
     /// </summary>
-    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom AggGeom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.Engine.KMeshProps.FKAggregateGeom AggGeom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 56);
 
     /// <summary>
     /// Struct: FKAggregateGeom

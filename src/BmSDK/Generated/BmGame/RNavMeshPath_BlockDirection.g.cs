@@ -141,29 +141,20 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// <summary>
     /// StructProperty: StartEdge
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FEdgePointer StartEdge
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FEdgePointer>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FEdgePointer StartEdge
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FEdgePointer>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: BlockPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 BlockPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 BlockPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: BlockDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 BlockDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 BlockDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 
     /// <summary>
     /// FloatProperty: BlockAngleHard
@@ -195,38 +186,26 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// <summary>
     /// StructProperty: HardAngleLine1
     /// </summary>
-    public unsafe System.Numerics.Vector3 HardAngleLine1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.Numerics.Vector3 HardAngleLine1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: HardAngleLine2
     /// </summary>
-    public unsafe System.Numerics.Vector3 HardAngleLine2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector3 HardAngleLine2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: SoftAngleLine1
     /// </summary>
-    public unsafe System.Numerics.Vector3 SoftAngleLine1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 SoftAngleLine1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: SoftAngleLine2
     /// </summary>
-    public unsafe System.Numerics.Vector3 SoftAngleLine2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 SoftAngleLine2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// ObjectProperty: NavHandle

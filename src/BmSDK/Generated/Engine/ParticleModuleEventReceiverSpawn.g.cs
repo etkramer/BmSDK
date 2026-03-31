@@ -76,11 +76,8 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: SpawnCount
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SpawnCount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SpawnCount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 68);
 
     /// <summary>
     /// BoolProperty: bUseParticleTime
@@ -112,9 +109,6 @@ public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: InheritVelocityScale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector InheritVelocityScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector InheritVelocityScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 100);
 }

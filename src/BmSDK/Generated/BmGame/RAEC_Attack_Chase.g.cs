@@ -705,11 +705,8 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// <summary>
     /// StructProperty: LastChaseStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastChaseStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastChaseStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ArrayProperty: ChaseRootRequest

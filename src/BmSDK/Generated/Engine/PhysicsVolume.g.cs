@@ -319,11 +319,8 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ZoneVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ZoneVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 ZoneVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// BoolProperty: bVelocityAffectsWalking
@@ -571,18 +568,12 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ZoneTorque
     /// </summary>
-    public unsafe System.Numerics.Vector3 ZoneTorque
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 ZoneTorque
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// StructProperty: BACKUP_ZoneVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 BACKUP_ZoneVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref System.Numerics.Vector3 BACKUP_ZoneVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 548);
 }

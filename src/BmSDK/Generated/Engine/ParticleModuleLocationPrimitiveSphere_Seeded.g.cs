@@ -76,9 +76,6 @@ public partial class ParticleModuleLocationPrimitiveSphere_Seeded : BmSDK.Engine
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 144);
 }

@@ -185,11 +185,8 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EmitterEditorColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor EmitterEditorColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor EmitterEditorColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 64);
 
     /// <summary>
     /// ArrayProperty: LODLevels

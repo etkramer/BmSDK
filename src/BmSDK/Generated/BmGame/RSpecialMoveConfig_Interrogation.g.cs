@@ -170,18 +170,12 @@ public partial class RSpecialMoveConfig_Interrogation : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// StructProperty: VictimHeadLocatorOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimHeadLocatorOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimHeadLocatorOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 368);
 
     /// <summary>
     /// StructProperty: VictimHeadOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimHeadOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimHeadOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 380);
 }

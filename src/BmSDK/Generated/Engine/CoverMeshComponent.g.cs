@@ -85,11 +85,8 @@ public partial class CoverMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSD
     /// <summary>
     /// StructProperty: LocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 
     /// <summary>
     /// ObjectProperty: AutoAdjustOn

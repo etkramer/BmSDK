@@ -402,11 +402,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: OctreeId
     /// </summary>
-    public unsafe BmSDK.GameObject.FOctreeElementId OctreeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FOctreeElementId>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.GameObject.FOctreeElementId OctreeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FOctreeElementId>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: OctreeIWasAddedTo
@@ -618,11 +615,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: ExpansionSphereCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExpansionSphereCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExpansionSphereCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 708);
 
     /// <summary>
     /// ComponentProperty: RenderingComp

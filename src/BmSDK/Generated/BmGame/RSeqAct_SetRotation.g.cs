@@ -96,9 +96,6 @@ public partial class RSeqAct_SetRotation : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// StructProperty: AimDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 }

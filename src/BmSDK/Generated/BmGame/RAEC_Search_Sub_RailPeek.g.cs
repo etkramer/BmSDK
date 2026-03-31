@@ -135,11 +135,8 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// StructProperty: SearchState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 476);
 
     /// <summary>
     /// ObjectProperty: DestFence
@@ -153,9 +150,6 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// StructProperty: AnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 }

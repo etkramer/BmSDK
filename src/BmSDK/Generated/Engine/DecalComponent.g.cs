@@ -277,56 +277,38 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// StructProperty: Orientation
     /// </summary>
-    public unsafe BmSDK.Rotator Orientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.Rotator Orientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 460);
 
     /// <summary>
     /// StructProperty: HitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// StructProperty: HitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: HitTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 496);
 
     /// <summary>
     /// StructProperty: HitBinormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitBinormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitBinormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// BoolProperty: bNoClip
@@ -556,11 +538,8 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: BlendRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 BlendRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector2 BlendRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 616);
 
     /// <summary>
     /// ByteProperty: DecalTransform
@@ -601,36 +580,24 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: ParentRelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParentRelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParentRelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
     /// StructProperty: ParentRelativeOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator ParentRelativeOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.Rotator ParentRelativeOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: OriginalParentRelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalParentRelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalParentRelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: OriginalParentRelativeOrientationVec
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalParentRelativeOrientationVec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalParentRelativeOrientationVec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 }

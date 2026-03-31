@@ -223,11 +223,8 @@ public partial class RAEC_Brang_Sub_WatchBatarang : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// StructProperty: WatchPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 WatchPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 WatchPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// FloatProperty: GlanceTime

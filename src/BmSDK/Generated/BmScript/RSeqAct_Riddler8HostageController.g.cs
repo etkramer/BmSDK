@@ -200,9 +200,6 @@ public partial class RSeqAct_Riddler8HostageController : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// StructProperty: ChainForwardDir
     /// </summary>
-    public unsafe BmSDK.Rotator ChainForwardDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.Rotator ChainForwardDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 292);
 }

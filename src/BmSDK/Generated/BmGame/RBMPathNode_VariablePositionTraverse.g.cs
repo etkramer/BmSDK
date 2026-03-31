@@ -337,11 +337,8 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// StructProperty: JumpNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// ArrayProperty: JumpLockList

@@ -152,38 +152,26 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// StructProperty: FootstepInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty.FMaterialFootstepInfo FootstepInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysicalMaterialProperty.FMaterialFootstepInfo>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysicalMaterialProperty.FMaterialFootstepInfo FootstepInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysicalMaterialProperty.FMaterialFootstepInfo>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: BatarangImpactInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo BatarangImpactInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo BatarangImpactInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: BulletImpactInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo BulletImpactInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo BulletImpactInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: GrappleImpactInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo GrappleImpactInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo GrappleImpactInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 88);
 
     /// <summary>
     /// BoolProperty: IsSurfaceWet

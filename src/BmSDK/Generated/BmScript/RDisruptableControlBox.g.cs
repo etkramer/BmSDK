@@ -480,20 +480,14 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// StructProperty: HumSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle HumSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle HumSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 652);
 
     /// <summary>
     /// StructProperty: AlarmSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle AlarmSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle AlarmSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 664);
 
     /// <summary>
     /// IntProperty: ScreenIndex

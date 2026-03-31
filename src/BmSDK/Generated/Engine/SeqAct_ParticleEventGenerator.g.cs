@@ -132,36 +132,24 @@ public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction
     /// <summary>
     /// StructProperty: EventLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: EventDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: EventVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 252);
 
     /// <summary>
     /// StructProperty: EventNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 }

@@ -242,29 +242,20 @@ public partial class RBMAIAction_RailShoot : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: FencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 FencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// StructProperty: PeekAngle
     /// </summary>
-    public unsafe BmSDK.Rotator PeekAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.Rotator PeekAngle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: PeekAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PeekAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PeekAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 604);
 
     /// <summary>
     /// BoolProperty: bDoingExit

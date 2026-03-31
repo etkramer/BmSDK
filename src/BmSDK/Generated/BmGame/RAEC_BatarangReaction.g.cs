@@ -396,29 +396,20 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// StructProperty: LastImpactPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastImpactPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastImpactPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: LastLaunchPointActual
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastLaunchPointActual
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastLaunchPointActual
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// StructProperty: LastLaunchPointAiming
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastLaunchPointAiming
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastLaunchPointAiming
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// IntProperty: CurrentBRangID

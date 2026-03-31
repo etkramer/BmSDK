@@ -358,11 +358,8 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: DirectPounceDetectShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirectPounceDetectShift
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4920); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirectPounceDetectShift
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4920);
 
     /// <summary>
     /// BoolProperty: bDebugDirectPounceFeatureDetection

@@ -1202,11 +1202,8 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SoundCharacterFilter
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 340);
 
     /// <summary>
     /// ArrayProperty: AlwaysOnPS

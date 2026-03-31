@@ -119,38 +119,26 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// <summary>
     /// StructProperty: PositionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions PositionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions PositionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: Position
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Position
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Position
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: TangentOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions TangentOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions TangentOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Tangent
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Tangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Tangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: bAbsoluteTangent
@@ -164,20 +152,14 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// <summary>
     /// StructProperty: StrengthOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions StrengthOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions StrengthOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 132);
 
     /// <summary>
     /// Enum: BeamModifierType

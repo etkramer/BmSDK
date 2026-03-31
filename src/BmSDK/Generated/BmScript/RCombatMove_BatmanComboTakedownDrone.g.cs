@@ -184,20 +184,14 @@ public partial class RCombatMove_BatmanComboTakedownDrone : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: InitialFacing
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialFacing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialFacing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 560);
 
     /// <summary>
     /// StructProperty: BatmanTakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 572);
 
     /// <summary>
     /// BoolProperty: bHitSomething

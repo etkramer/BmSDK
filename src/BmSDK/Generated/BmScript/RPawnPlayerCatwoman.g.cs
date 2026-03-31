@@ -1199,11 +1199,8 @@ public partial class RPawnPlayerCatwoman : BmSDK.BmGame.RPawnPlayerCatwomanBase,
     /// <summary>
     /// StructProperty: OldCeilingTracePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldCeilingTracePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6248); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldCeilingTracePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6248);
 
     /// <summary>
     /// ObjectProperty: PounceLandFX
@@ -1262,11 +1259,8 @@ public partial class RPawnPlayerCatwoman : BmSDK.BmGame.RPawnPlayerCatwomanBase,
     /// <summary>
     /// StructProperty: CoughTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CoughTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6272); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CoughTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6272);
 
     /// <summary>
     /// ArrayProperty: SkinMaterials

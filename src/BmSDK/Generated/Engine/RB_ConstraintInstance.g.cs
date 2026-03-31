@@ -677,20 +677,14 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinearPositionTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearPositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearPositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: LinearVelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearVelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearVelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 
     /// <summary>
     /// FloatProperty: LinearDriveSpring
@@ -722,20 +716,14 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AngularPositionTarget
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat AngularPositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat AngularPositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: AngularVelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 AngularVelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 AngularVelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// FloatProperty: AngularDriveSpring

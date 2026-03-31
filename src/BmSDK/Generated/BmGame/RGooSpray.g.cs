@@ -758,20 +758,14 @@ public partial class RGooSpray : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: SprayLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SprayLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 SprayLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
 
     /// <summary>
     /// StructProperty: SprayWallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 SprayWallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 SprayWallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
 
     /// <summary>
     /// ComponentProperty: NozzleParticles
@@ -848,11 +842,8 @@ public partial class RGooSpray : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DetonatorTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DetonatorTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DetonatorTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1076);
 
     /// <summary>
     /// ObjectProperty: ExplodeTarget
@@ -875,11 +866,8 @@ public partial class RGooSpray : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DetonatorSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle DetonatorSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle DetonatorSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1088);
 
     /// <summary>
     /// IntProperty: NumWallsKilledPeople

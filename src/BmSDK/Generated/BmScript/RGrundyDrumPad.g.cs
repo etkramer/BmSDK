@@ -380,44 +380,29 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColours_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightColours_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 544);
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColours_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightColours_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 560);
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColours_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightColours_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 576);
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColours_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightColours_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: currentLightColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor currentLightColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor currentLightColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 608);
 
     /// <summary>
     /// FloatProperty: ballGlowValues
@@ -515,27 +500,18 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: damageStateAnimNames
     /// </summary>
-    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 668);
     /// <summary>
     /// StructProperty: damageStateAnimNames
     /// </summary>
-    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 680);
     /// <summary>
     /// StructProperty: damageStateAnimNames
     /// </summary>
-    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
-    }
+    public unsafe ref BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 692);
 
     /// <summary>
     /// ObjectProperty: AnimNode

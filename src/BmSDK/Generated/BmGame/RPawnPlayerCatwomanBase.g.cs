@@ -830,11 +830,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: LastSwingSoundLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSwingSoundLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6028); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSwingSoundLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6028);
 
     /// <summary>
     /// FloatProperty: FallSoundStartSpeed
@@ -866,11 +863,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: BolasShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasShift
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6052); }
-    }
+    public unsafe ref System.Numerics.Vector3 BolasShift
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6052);
 
     /// <summary>
     /// FloatProperty: BolasRBSpeedFactor
@@ -893,11 +887,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: BolasAngularSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasAngularSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6072); }
-    }
+    public unsafe ref System.Numerics.Vector3 BolasAngularSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6072);
 
     /// <summary>
     /// FloatProperty: LastFlushPersistentLinesFrame
@@ -911,11 +902,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: CeilingNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6088); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6088);
 
     /// <summary>
     /// FloatProperty: GrateClimbUpStartCheckDistance
@@ -992,11 +980,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: PullFromCatwalkEdgeCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PullFromCatwalkEdgeCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6132); }
-    }
+    public unsafe ref System.Numerics.Vector3 PullFromCatwalkEdgeCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6132);
 
     /// <summary>
     /// FloatProperty: PullFromCatwalkEdgeCheckShift

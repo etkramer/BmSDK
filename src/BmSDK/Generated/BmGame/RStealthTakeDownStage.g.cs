@@ -949,11 +949,8 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: AttackLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ObjectProperty: ControlledBehaviour
@@ -967,29 +964,20 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: CameraDOFSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct CameraDOFSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct CameraDOFSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: StageAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet StageAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet StageAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 688);
 
     /// <summary>
     /// IntProperty: StageAnimId
@@ -1012,29 +1000,20 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TakeDownTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakeDownTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakeDownTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 828);
 
     /// <summary>
     /// StructProperty: VictimTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VictimTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VictimTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 832);
 
     /// <summary>
     /// StructProperty: CustomLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CustomLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CustomLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 836);
 
     /// <summary>
     /// IntProperty: MinVictims
@@ -1057,38 +1036,26 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 956);
 
     /// <summary>
     /// StructProperty: LastReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref BmSDK.Rotator LastReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: VictimReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// StructProperty: VictimReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator VictimReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref BmSDK.Rotator VictimReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 992);
 
     /// <summary>
     /// IntProperty: ChosenAnim

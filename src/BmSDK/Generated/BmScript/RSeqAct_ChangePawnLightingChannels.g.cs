@@ -96,9 +96,6 @@ public partial class RSeqAct_ChangePawnLightingChannels : BmSDK.Engine.SequenceA
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 208);
 }

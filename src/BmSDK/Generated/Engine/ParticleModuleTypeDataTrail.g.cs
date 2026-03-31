@@ -130,18 +130,12 @@ public partial class ParticleModuleTypeDataTrail : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// StructProperty: Tension
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Tension
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Tension
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: SpawnDistance
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpawnDistance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpawnDistance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 }

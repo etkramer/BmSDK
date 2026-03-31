@@ -680,20 +680,14 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: CurrentWinchUpPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentWinchUpPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentWinchUpPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1040);
 
     /// <summary>
     /// StructProperty: CurrentEndPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentEndPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentEndPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
 
     /// <summary>
     /// FloatProperty: CurrentZipSpeed
@@ -759,74 +753,50 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: EndRopePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndRopePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndRopePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1092);
 
     /// <summary>
     /// StructProperty: BackRopePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BackRopePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
-    }
+    public unsafe ref System.Numerics.Vector3 BackRopePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1104);
 
     /// <summary>
     /// StructProperty: BatmanStartPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanStartPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanStartPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1116);
 
     /// <summary>
     /// StructProperty: BatmanEndPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanEndPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanEndPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1128);
 
     /// <summary>
     /// StructProperty: EndRopePosAim
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndRopePosAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndRopePosAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1140);
 
     /// <summary>
     /// StructProperty: BackRopePosAim
     /// </summary>
-    public unsafe System.Numerics.Vector3 BackRopePosAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
-    }
+    public unsafe ref System.Numerics.Vector3 BackRopePosAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1152);
 
     /// <summary>
     /// StructProperty: BatmanStartPointAim
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanStartPointAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanStartPointAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1164);
 
     /// <summary>
     /// StructProperty: BatmanEndPointAim
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanEndPointAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanEndPointAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1176);
 
     /// <summary>
     /// IntProperty: RopeInitTimer

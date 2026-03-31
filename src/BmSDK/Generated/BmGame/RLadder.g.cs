@@ -334,11 +334,8 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// StructProperty: ShimmyEdgeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ShimmyEdgeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 ShimmyEdgeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// BoolProperty: bCanBeUsedByAI

@@ -210,11 +210,8 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// StructProperty: DestPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 DestPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref System.Numerics.Vector3 DestPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 76);
 
     /// <summary>
     /// NameProperty: ClaimName

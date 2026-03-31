@@ -165,11 +165,8 @@ public partial class RCombatMove_LieutenantWhipReaction : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: DmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 468);
 
     /// <summary>
     /// BoolProperty: bPlayerTriggered
@@ -210,18 +207,12 @@ public partial class RCombatMove_LieutenantWhipReaction : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 728);
 
     /// <summary>
     /// StructProperty: MoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 }

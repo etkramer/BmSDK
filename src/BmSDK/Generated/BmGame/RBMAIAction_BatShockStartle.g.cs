@@ -122,20 +122,14 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// StructProperty: StartleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// StructProperty: StartleAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartleAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartleAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 584);
 
     /// <summary>
     /// BoolProperty: bAnimStarted

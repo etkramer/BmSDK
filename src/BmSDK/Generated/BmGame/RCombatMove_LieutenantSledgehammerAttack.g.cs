@@ -282,9 +282,6 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// StructProperty: StrikeID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 516);
 }

@@ -76,11 +76,8 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// <summary>
     /// StructProperty: CollisionHeightData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CollisionHeightData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CollisionHeightData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 404);
 
     /// <summary>
     /// IntProperty: SectionBaseX
@@ -148,9 +145,6 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 492);
 }

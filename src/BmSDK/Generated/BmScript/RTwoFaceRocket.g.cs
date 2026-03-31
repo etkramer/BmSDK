@@ -321,11 +321,8 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: FlightDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlightDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlightDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// FloatProperty: FlightSpeed
@@ -357,11 +354,8 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DownSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 DownSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref System.Numerics.Vector3 DownSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 544);
 
     /// <summary>
     /// ArrayProperty: InfluencedThugs
@@ -384,11 +378,8 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: SpiralCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpiralCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpiralCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// FloatProperty: SpiralAngle

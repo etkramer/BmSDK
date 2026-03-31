@@ -151,11 +151,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Mips
     /// </summary>
-    public unsafe BmSDK.GameObject.FIndirectArray_Mirror Mips
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.GameObject.FIndirectArray_Mirror Mips
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 212);
 
     /// <summary>
     /// IntProperty: SizeX
@@ -313,11 +310,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TextureFileCacheGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid TextureFileCacheGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid TextureFileCacheGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 268);
 
     /// <summary>
     /// IntProperty: RequestedMips
@@ -340,11 +334,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PendingMipChangeRequestStatus
     /// </summary>
-    public unsafe BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 280);
 
     /// <summary>
     /// ArrayProperty: SystemMemoryData
@@ -358,11 +349,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StreamableTexturesLink
     /// </summary>
-    public unsafe BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 296);
 
     /// <summary>
     /// IntProperty: StreamingIndex

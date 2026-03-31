@@ -342,11 +342,8 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// StructProperty: CurrentAngleControl
     /// </summary>
-    public unsafe BmSDK.Rotator CurrentAngleControl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
+    public unsafe ref BmSDK.Rotator CurrentAngleControl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 948);
 
     /// <summary>
     /// FloatProperty: ZoomedInHeightSpeedScale

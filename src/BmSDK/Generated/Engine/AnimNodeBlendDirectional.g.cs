@@ -103,11 +103,8 @@ public partial class AnimNodeBlendDirectional : BmSDK.Engine.AnimNodeBlendBase, 
     /// <summary>
     /// StructProperty: RotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator RotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.Rotator RotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 240);
 
     /// <summary>
     /// BoolProperty: bDontUpdateBasedOnVelocity

@@ -95,20 +95,14 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: SampleRadius
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 124);
 
     /// <summary>
     /// ByteProperty: SampleBlurType

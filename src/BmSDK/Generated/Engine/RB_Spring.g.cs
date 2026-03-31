@@ -235,11 +235,8 @@ public partial class RB_Spring : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SpringMaxForceTimeScale
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SpringMaxForceTimeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SpringMaxForceTimeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 128);
 
     /// <summary>
     /// FloatProperty: DampSaturateVel

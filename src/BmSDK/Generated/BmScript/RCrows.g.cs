@@ -279,52 +279,34 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: startingLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 startingLoc_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 startingLoc_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
     /// <summary>
     /// StructProperty: startingLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 startingLoc_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 startingLoc_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
     /// <summary>
     /// StructProperty: startingLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 startingLoc_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 startingLoc_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// StructProperty: startingRot
     /// </summary>
-    public unsafe BmSDK.Rotator startingRot_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.Rotator startingRot_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 528);
     /// <summary>
     /// StructProperty: startingRot
     /// </summary>
-    public unsafe BmSDK.Rotator startingRot_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.Rotator startingRot_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 540);
     /// <summary>
     /// StructProperty: startingRot
     /// </summary>
-    public unsafe BmSDK.Rotator startingRot_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref BmSDK.Rotator startingRot_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 552);
 
     /// <summary>
     /// IntProperty: bReadyForTakeoff
@@ -379,11 +361,8 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: flyOffRot
     /// </summary>
-    public unsafe BmSDK.Rotator flyOffRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.Rotator flyOffRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 588);
 
     /// <summary>
     /// FloatProperty: startledTurnRate
@@ -397,45 +376,30 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: baseFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 baseFlightVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 baseFlightVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: trueFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 trueFlightVelocity_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 trueFlightVelocity_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
     /// <summary>
     /// StructProperty: trueFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 trueFlightVelocity_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 trueFlightVelocity_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
     /// <summary>
     /// StructProperty: trueFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 trueFlightVelocity_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 trueFlightVelocity_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
 
     /// <summary>
     /// StructProperty: baseToRootBone
     /// </summary>
-    public unsafe System.Numerics.Vector3 baseToRootBone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 baseToRootBone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
     /// ObjectProperty: MaterialConstants
@@ -474,11 +438,8 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: flyOffLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 flyOffLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 flyOffLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// BoolProperty: bOnlyStartlableByKismet

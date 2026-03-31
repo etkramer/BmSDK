@@ -269,11 +269,8 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LoadedBankData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror LoadedBankData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror LoadedBankData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 76);
 
     /// <summary>
     /// ArrayProperty: StoredBankData

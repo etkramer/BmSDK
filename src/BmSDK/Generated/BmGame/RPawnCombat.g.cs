@@ -2109,11 +2109,8 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1836); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1836);
 
     /// <summary>
     /// ObjectProperty: CombatManager

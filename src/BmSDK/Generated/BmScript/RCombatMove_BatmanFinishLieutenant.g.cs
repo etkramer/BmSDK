@@ -389,20 +389,14 @@ public partial class RCombatMove_BatmanFinishLieutenant : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: LieutenantAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LieutenantAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LieutenantAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: PlayerAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayerAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayerAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 496);
 
     /// <summary>
     /// ObjectProperty: Lieutenant
@@ -416,11 +410,8 @@ public partial class RCombatMove_BatmanFinishLieutenant : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: TargetDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// ComponentProperty: StrikeTrail
@@ -434,11 +425,8 @@ public partial class RCombatMove_BatmanFinishLieutenant : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 520);
 
     /// <summary>
     /// BoolProperty: bPlayedCameraAnim

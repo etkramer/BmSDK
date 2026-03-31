@@ -145,9 +145,6 @@ public partial class RBMVenomFinishMove_ShoulderCam : BmSDK.BmGame.RBMDeathCutsc
     /// <summary>
     /// StructProperty: CamStartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CamStartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector3 CamStartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 176);
 }

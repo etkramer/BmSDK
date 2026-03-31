@@ -76,29 +76,20 @@ public partial class RAnimNotify_AddForce : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// StructProperty: Parts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts Parts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts Parts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.Numerics.Vector3 Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 48);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// FloatProperty: Duration

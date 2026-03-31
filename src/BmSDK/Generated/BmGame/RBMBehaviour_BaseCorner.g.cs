@@ -91,11 +91,8 @@ public partial class RBMBehaviour_BaseCorner : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// StructProperty: TargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
 
     /// <summary>
     /// FloatProperty: PauseTime
@@ -136,9 +133,6 @@ public partial class RBMBehaviour_BaseCorner : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// StructProperty: InOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 InOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 }

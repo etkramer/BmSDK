@@ -164,29 +164,20 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: Green
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor Green
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor Green
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 752);
 
     /// <summary>
     /// StructProperty: Yellow
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor Yellow
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor Yellow
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 756);
 
     /// <summary>
     /// StructProperty: Red
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor Red
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor Red
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 760);
 
     /// <summary>
     /// ArrayProperty: SideOffsets
@@ -209,11 +200,8 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: TileCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 TileCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref System.Numerics.Vector3 TileCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 788);
 
     /// <summary>
     /// FloatProperty: TileHalfWidth

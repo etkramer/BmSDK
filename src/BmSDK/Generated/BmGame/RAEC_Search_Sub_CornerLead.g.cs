@@ -151,11 +151,8 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// StructProperty: SearchState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 472);
 
     /// <summary>
     /// ObjectProperty: StartCorner

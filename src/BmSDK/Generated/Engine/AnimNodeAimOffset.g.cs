@@ -238,20 +238,14 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// StructProperty: Aim
     /// </summary>
-    public unsafe System.Numerics.Vector2 Aim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector2 Aim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: AngleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 AngleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector2 AngleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 236);
 
     /// <summary>
     /// BoolProperty: bForceAimDir

@@ -391,11 +391,8 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ChaseStartPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ChaseStartPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 ChaseStartPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// IntProperty: NextDebugID

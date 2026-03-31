@@ -591,29 +591,20 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: CounterAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CounterAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CounterAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 648);
 
     /// <summary>
     /// StructProperty: TargetCounteredAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetCounteredAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetCounteredAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 652);
 
     /// <summary>
     /// ClassProperty: CounterDmgType
@@ -627,20 +618,14 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: CounterDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 CounterDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 CounterDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: CounterRot
     /// </summary>
-    public unsafe BmSDK.Rotator CounterRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.Rotator CounterRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 672);
 
     /// <summary>
     /// NameProperty: AnimName
@@ -852,11 +837,8 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: CounterInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 708);
 
     /// <summary>
     /// ObjectProperty: BatmanCounterAnimSequence
@@ -942,11 +924,8 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 824); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 824);
 
     /// <summary>
     /// ByteProperty: CounterWallDir
@@ -978,20 +957,14 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: EnvCounterLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvCounterLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvCounterLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 840);
 
     /// <summary>
     /// StructProperty: EnvCounterNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvCounterNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvCounterNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 852);
 
     /// <summary>
     /// IntProperty: OverrideComboInc

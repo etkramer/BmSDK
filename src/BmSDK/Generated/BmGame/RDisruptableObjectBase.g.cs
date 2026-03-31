@@ -515,11 +515,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 432);
 
     /// <summary>
     /// ComponentProperty: StaticMeshComponent
@@ -560,11 +557,8 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: DisruptableIconOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 DisruptableIconOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 DisruptableIconOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// BoolProperty: bDisrupted

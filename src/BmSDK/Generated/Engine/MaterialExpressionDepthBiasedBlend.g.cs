@@ -94,27 +94,18 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: RGB
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput RGB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput RGB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: Alpha
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Alpha
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Alpha
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: Bias
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Bias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Bias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 156);
 }

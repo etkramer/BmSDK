@@ -76,11 +76,8 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosD1_Colour_PP
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AtmosD1_Colour_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AtmosD1_Colour_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 180);
 
     /// <summary>
     /// FloatProperty: AtmosD1_Density_PP
@@ -112,11 +109,8 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosD2_Colour_PP
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AtmosD2_Colour_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AtmosD2_Colour_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 196);
 
     /// <summary>
     /// FloatProperty: AtmosD2_Density_PP
@@ -148,11 +142,8 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosH1_Colour_PP
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AtmosH1_Colour_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AtmosH1_Colour_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 212);
 
     /// <summary>
     /// FloatProperty: AtmosH1_Density_PP
@@ -184,11 +175,8 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosH2_Colour_PP
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AtmosH2_Colour_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AtmosH2_Colour_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 228);
 
     /// <summary>
     /// FloatProperty: AtmosH2_Density_PP
@@ -220,29 +208,20 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosNoiseWind_PP
     /// </summary>
-    public unsafe System.Numerics.Vector3 AtmosNoiseWind_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref System.Numerics.Vector3 AtmosNoiseWind_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 244);
 
     /// <summary>
     /// StructProperty: AtmosGlobal_Gradient_Colour_PP
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AtmosGlobal_Gradient_Colour_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AtmosGlobal_Gradient_Colour_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 256);
 
     /// <summary>
     /// StructProperty: AtmosGlobal_Gradient_Direction_PP
     /// </summary>
-    public unsafe System.Numerics.Vector3 AtmosGlobal_Gradient_Direction_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref System.Numerics.Vector3 AtmosGlobal_Gradient_Direction_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 260);
 
     /// <summary>
     /// FloatProperty: AtmosGlobal_Gradient_Density_PP
@@ -256,11 +235,8 @@ public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IG
     /// <summary>
     /// StructProperty: AtmosNoiseOffset_PP
     /// </summary>
-    public unsafe System.Numerics.Vector3 AtmosNoiseOffset_PP
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref System.Numerics.Vector3 AtmosNoiseOffset_PP
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 276);
 
     /// <summary>
     /// FloatProperty: AtmosNoiseFade_PP

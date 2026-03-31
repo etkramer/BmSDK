@@ -570,11 +570,8 @@ public partial class RPickupBase : BmSDK.Engine.Actor, BmSDK.BmGame.RSecretInter
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 432);
 
     /// <summary>
     /// ComponentProperty: PickupMesh
@@ -723,9 +720,6 @@ public partial class RPickupBase : BmSDK.Engine.Actor, BmSDK.BmGame.RSecretInter
     /// <summary>
     /// StructProperty: RotVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RotVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 RotVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 }

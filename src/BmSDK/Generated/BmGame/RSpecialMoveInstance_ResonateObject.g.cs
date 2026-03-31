@@ -485,11 +485,8 @@ public partial class RSpecialMoveInstance_ResonateObject : BmSDK.BmGame.RSpecial
     /// <summary>
     /// StructProperty: FinishLookAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 FinishLookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref System.Numerics.Vector3 FinishLookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 644);
 
     /// <summary>
     /// FloatProperty: LeftThumbPos

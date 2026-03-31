@@ -128,11 +128,8 @@ public partial class RBMBehaviour_PlayAnimFromAnimset : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 408);
 
     /// <summary>
     /// BoolProperty: bLoop

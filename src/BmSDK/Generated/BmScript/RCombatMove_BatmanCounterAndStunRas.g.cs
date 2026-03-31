@@ -246,20 +246,14 @@ public partial class RCombatMove_BatmanCounterAndStunRas : BmSDK.BmGame.RCombatM
     /// <summary>
     /// StructProperty: VillainAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484);
 
     /// <summary>
     /// FloatProperty: DazedTime

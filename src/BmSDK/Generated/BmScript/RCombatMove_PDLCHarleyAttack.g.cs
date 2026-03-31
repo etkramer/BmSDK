@@ -179,18 +179,12 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// StructProperty: refLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 refLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 refLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: RefRot
     /// </summary>
-    public unsafe BmSDK.Rotator RefRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Rotator RefRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 648);
 }

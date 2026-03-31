@@ -180,20 +180,14 @@ public partial class RStealthTakeDownStage_RailingAttack : BmSDK.BmGame.RStealth
     /// <summary>
     /// StructProperty: RopeAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
 
     /// <summary>
     /// StructProperty: RopeRenderAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeRenderAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeRenderAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1044);
 
     /// <summary>
     /// BoolProperty: AttachRope
@@ -252,11 +246,8 @@ public partial class RStealthTakeDownStage_RailingAttack : BmSDK.BmGame.RStealth
     /// <summary>
     /// StructProperty: RopePelvisAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePelvisAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePelvisAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1076);
 
     /// <summary>
     /// ArrayProperty: RopeExtraAttachConnections
@@ -270,20 +261,14 @@ public partial class RStealthTakeDownStage_RailingAttack : BmSDK.BmGame.RStealth
     /// <summary>
     /// StructProperty: RopeRenderStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeRenderStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeRenderStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1100);
 
     /// <summary>
     /// StructProperty: RopePhysStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePhysStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePhysStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1112);
 
     /// <summary>
     /// ObjectProperty: HangRope

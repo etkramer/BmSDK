@@ -76,18 +76,12 @@ public partial class RRotateActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BaseRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BaseRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.Rotator BaseRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 528);
 
     /// <summary>
     /// StructProperty: AccumulatedRotation
     /// </summary>
-    public unsafe BmSDK.Rotator AccumulatedRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.Rotator AccumulatedRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 540);
 }

@@ -167,11 +167,8 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// <summary>
     /// StructProperty: OppositeLightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor OppositeLightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor OppositeLightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 104);
 
     /// <summary>
     /// FloatProperty: LightInscatteringBrightness
@@ -185,9 +182,6 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// <summary>
     /// StructProperty: LightInscatteringColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightInscatteringColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightInscatteringColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 112);
 }

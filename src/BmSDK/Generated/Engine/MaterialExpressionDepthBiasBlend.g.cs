@@ -94,9 +94,6 @@ public partial class MaterialExpressionDepthBiasBlend : BmSDK.Engine.MaterialExp
     /// <summary>
     /// StructProperty: Bias
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Bias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Bias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 132);
 }

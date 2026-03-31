@@ -805,20 +805,14 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: CurrAimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrAimLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrAimLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: CurrRetreatPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrRetreatPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrRetreatPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ObjectProperty: CurrSniperPoint
@@ -1046,11 +1040,8 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: ReloadID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId ReloadID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId ReloadID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 524);
 
     /// <summary>
     /// FloatProperty: RetreatDist
@@ -1064,11 +1055,8 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: BatarangLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// ObjectProperty: BatarangPoint
@@ -1127,11 +1115,8 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: ViewConeColour
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewConeColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewConeColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// FloatProperty: CurrAimSpeed
@@ -1199,11 +1184,8 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: PickupAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 620);
 
     /// <summary>
     /// FloatProperty: SmokeTimer

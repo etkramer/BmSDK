@@ -202,11 +202,8 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ClearColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ClearColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 76);
 
     /// <summary>
     /// ByteProperty: ViewMode

@@ -106,11 +106,8 @@ public partial class RWindVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WindConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRBasicWindConfig WindConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRBasicWindConfig WindConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 472);
 
     /// <summary>
     /// ObjectProperty: WindRotationParentActor
@@ -124,20 +121,14 @@ public partial class RWindVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GeneratedWindConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindConfig GeneratedWindConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindConfig GeneratedWindConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 496);
 
     /// <summary>
     /// StructProperty: WindState
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindState WindState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindState WindState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 532);
 
     /// <summary>
     /// ComponentProperty: DirectionArrow

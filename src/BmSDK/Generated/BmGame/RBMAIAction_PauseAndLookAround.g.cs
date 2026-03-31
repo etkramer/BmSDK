@@ -131,9 +131,6 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// StructProperty: LookLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 }

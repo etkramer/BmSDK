@@ -147,9 +147,6 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGa
     /// <summary>
     /// StructProperty: StartlePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartlePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartlePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 }

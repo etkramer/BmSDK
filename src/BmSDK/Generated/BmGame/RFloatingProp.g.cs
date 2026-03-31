@@ -157,11 +157,8 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// StructProperty: PropCentreOfMassOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropCentreOfMassOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
+    public unsafe ref System.Numerics.Vector3 PropCentreOfMassOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 704);
 
     /// <summary>
     /// FloatProperty: PropRightingForceMultiplier
@@ -202,45 +199,30 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// StructProperty: CurrSurfacePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrSurfacePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrSurfacePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 
     /// <summary>
     /// StructProperty: CurrSurfaceNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrSurfaceNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrSurfaceNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 744);
 
     /// <summary>
     /// StructProperty: CurrPropDesiredFloatingUp
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrPropDesiredFloatingUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrPropDesiredFloatingUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 756);
 
     /// <summary>
     /// StructProperty: FloatingLiftForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloatingLiftForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloatingLiftForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 768);
 
     /// <summary>
     /// StructProperty: FloatingDragForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloatingDragForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloatingDragForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 780);
 }

@@ -76,20 +76,14 @@ public partial class ParticleModuleColor : BmSDK.Engine.ParticleModuleColorBase,
     /// <summary>
     /// StructProperty: StartColor
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector StartColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: StartAlpha
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartAlpha
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat StartAlpha
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84);
 
     /// <summary>
     /// BoolProperty: bClampAlpha

@@ -87,9 +87,6 @@ public partial class SeqAct_SetVector : BmSDK.Engine.SeqAct_SetSequenceVariable,
     /// <summary>
     /// StructProperty: DefaultValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 DefaultValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 DefaultValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 }

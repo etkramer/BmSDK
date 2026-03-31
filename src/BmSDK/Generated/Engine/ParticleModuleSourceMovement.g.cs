@@ -76,9 +76,6 @@ public partial class ParticleModuleSourceMovement : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: SourceMovementScale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SourceMovementScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SourceMovementScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 }

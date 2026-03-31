@@ -323,11 +323,8 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// StructProperty: SavedSearchState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SavedSearchState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SavedSearchState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 480);
 
     /// <summary>
     /// ObjectProperty: LeaderPath
@@ -350,11 +347,8 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// StructProperty: FollowOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FollowOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 FollowOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// BoolProperty: bHasBackwardsFollower

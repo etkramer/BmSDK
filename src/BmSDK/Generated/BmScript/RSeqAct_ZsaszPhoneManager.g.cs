@@ -775,67 +775,43 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 224);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 248);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 272);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 296);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 320);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 344);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 368);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 392);
 
     /// <summary>
     /// FloatProperty: timeBetweenRaces

@@ -508,11 +508,8 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3564);
 
     /// <summary>
     /// ObjectProperty: LieutenantCombatAnimset

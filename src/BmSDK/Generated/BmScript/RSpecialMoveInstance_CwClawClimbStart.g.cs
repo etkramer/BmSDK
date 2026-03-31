@@ -155,11 +155,8 @@ public partial class RSpecialMoveInstance_CwClawClimbStart : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: WallLocation
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator WallLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator WallLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 652);
 
     /// <summary>
     /// IntProperty: Phase
@@ -227,9 +224,6 @@ public partial class RSpecialMoveInstance_CwClawClimbStart : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: GroundLocation
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator GroundLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator GroundLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 776);
 }

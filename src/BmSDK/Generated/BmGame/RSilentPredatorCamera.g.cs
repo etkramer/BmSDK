@@ -191,20 +191,14 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// StructProperty: ExtraCameraRot
     /// </summary>
-    public unsafe BmSDK.Rotator ExtraCameraRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref BmSDK.Rotator ExtraCameraRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 872);
 
     /// <summary>
     /// StructProperty: DefaultCameraRot
     /// </summary>
-    public unsafe BmSDK.Rotator DefaultCameraRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref BmSDK.Rotator DefaultCameraRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 884);
 
     /// <summary>
     /// FloatProperty: LookModeScale

@@ -1317,11 +1317,8 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CircularOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 CircularOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref System.Numerics.Vector3 CircularOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 680);
 
     /// <summary>
     /// FloatProperty: CircularRadius
@@ -1371,29 +1368,20 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StandingLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandingLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandingLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 712);
 
     /// <summary>
     /// StructProperty: CrouchLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrouchLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrouchLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// StructProperty: PopupOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PopupOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 PopupOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 
     /// <summary>
     /// FloatProperty: SlipDist

@@ -307,11 +307,8 @@ public partial class RCombatMove_BatmanGroupFloorTakedown : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: BatmanTakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560);
 
     /// <summary>
     /// ArrayProperty: TargetList
@@ -370,11 +367,8 @@ public partial class RCombatMove_BatmanGroupFloorTakedown : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: StartCamRot
     /// </summary>
-    public unsafe BmSDK.Rotator StartCamRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref BmSDK.Rotator StartCamRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 584);
 
     /// <summary>
     /// FloatProperty: YawDiff

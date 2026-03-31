@@ -1242,11 +1242,8 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// StructProperty: LastExplosionCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastExplosionCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastExplosionCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// ObjectProperty: ClawAttachEffect

@@ -419,29 +419,20 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Anims
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2IdleConfig.FAnimationSets Anims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FAnimationSets>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FAnimationSets Anims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FAnimationSets>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: BMDialogueAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet BMDialogueAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet BMDialogueAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FBM2IdleSet>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: ConversationAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2IdleConfig.FDialogueAnimationSets ConversationAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FDialogueAnimationSets>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FDialogueAnimationSets ConversationAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FDialogueAnimationSets>(Ptr + 160);
 
     /// <summary>
     /// ByteProperty: IdleRelativeStyle
@@ -536,9 +527,6 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: InterrogationOverride
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2IdleConfig.FInterrogationAnimations InterrogationOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2IdleConfig.FInterrogationAnimations>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2IdleConfig.FInterrogationAnimations InterrogationOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2IdleConfig.FInterrogationAnimations>(Ptr + 244);
 }

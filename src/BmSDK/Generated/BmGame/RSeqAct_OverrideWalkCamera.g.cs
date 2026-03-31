@@ -134,11 +134,8 @@ public partial class RSeqAct_OverrideWalkCamera : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: CustomCameraConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CustomCameraConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig CustomCameraConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.R3rdPersonCamera.FFreeCameraConfig>(Ptr + 216);
 
     /// <summary>
     /// FloatProperty: CustomCameraFOV
@@ -170,18 +167,12 @@ public partial class RSeqAct_OverrideWalkCamera : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// StructProperty: CustomCameraExtraCameraRot
     /// </summary>
-    public unsafe BmSDK.Rotator CustomCameraExtraCameraRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.Rotator CustomCameraExtraCameraRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 352);
 
     /// <summary>
     /// StructProperty: CustomCameraRotationSpeed
     /// </summary>
-    public unsafe BmSDK.Rotator CustomCameraRotationSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref BmSDK.Rotator CustomCameraRotationSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 364);
 }

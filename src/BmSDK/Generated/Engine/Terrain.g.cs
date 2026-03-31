@@ -299,19 +299,13 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedTerrainMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 556);
     /// <summary>
     /// StructProperty: CachedTerrainMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 568);
 
     /// <summary>
     /// IntProperty: NumVerticesX
@@ -523,20 +517,14 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 612);
 
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
@@ -568,20 +556,14 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 668);
 
     /// <summary>
     /// Struct: FTerrainMaterialResource

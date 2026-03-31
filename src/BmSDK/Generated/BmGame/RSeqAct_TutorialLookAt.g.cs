@@ -150,11 +150,8 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector3 Offset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 Offset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 
     /// <summary>
     /// ByteProperty: LookAtType

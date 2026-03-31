@@ -76,11 +76,8 @@ public partial class ParticleModuleSizeScale : BmSDK.Engine.ParticleModuleSizeBa
     /// <summary>
     /// StructProperty: SizeScale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SizeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SizeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: EnableX

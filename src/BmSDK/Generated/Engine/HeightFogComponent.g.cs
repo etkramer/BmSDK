@@ -131,11 +131,8 @@ public partial class HeightFogComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 88);
 
     /// <summary>
     /// FloatProperty: ExtinctionDistance

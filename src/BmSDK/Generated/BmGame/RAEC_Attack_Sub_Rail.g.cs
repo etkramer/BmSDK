@@ -144,11 +144,8 @@ public partial class RAEC_Attack_Sub_Rail : BmSDK.BmGame.RAEC_Attack_Sub_Converg
     /// <summary>
     /// StructProperty: AnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// BoolProperty: bIsAtRail

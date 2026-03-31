@@ -2459,11 +2459,8 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// StructProperty: CachedBeatdownFacing
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedBeatdownFacing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3600); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedBeatdownFacing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3600);
 
     /// <summary>
     /// ObjectProperty: Batman
@@ -2477,20 +2474,14 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// StructProperty: magnetic_blast_origin
     /// </summary>
-    public unsafe System.Numerics.Vector3 magnetic_blast_origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3616); }
-    }
+    public unsafe ref System.Numerics.Vector3 magnetic_blast_origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3616);
 
     /// <summary>
     /// StructProperty: magnetic_blast_target
     /// </summary>
-    public unsafe System.Numerics.Vector3 magnetic_blast_target
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3628); }
-    }
+    public unsafe ref System.Numerics.Vector3 magnetic_blast_target
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3628);
 
     /// <summary>
     /// ByteProperty: magnetic_blast_phase
@@ -2684,11 +2675,8 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// StructProperty: MagBlastFacingVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 MagBlastFacingVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3648); }
-    }
+    public unsafe ref System.Numerics.Vector3 MagBlastFacingVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3648);
 
     /// <summary>
     /// FloatProperty: MagBlastFlightSpeed
@@ -2720,11 +2708,8 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// StructProperty: vRepelLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vRepelLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3672); }
-    }
+    public unsafe ref System.Numerics.Vector3 vRepelLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3672);
 
     /// <summary>
     /// FloatProperty: fRepelTimer
@@ -2891,11 +2876,8 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3756); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3756);
 
     /// <summary>
     /// ArrayProperty: SuitLasers

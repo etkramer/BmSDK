@@ -171,9 +171,6 @@ public partial class RFreezeClusterGrenadeBm : BmSDK.BmGame.RFreezeClusterGrenad
     /// <summary>
     /// StructProperty: HandDryIceOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 HandDryIceOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1388); }
-    }
+    public unsafe ref System.Numerics.Vector3 HandDryIceOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1388);
 }

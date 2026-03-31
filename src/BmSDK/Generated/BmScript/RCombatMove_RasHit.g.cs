@@ -134,9 +134,6 @@ public partial class RCombatMove_RasHit : BmSDK.BmGame.RCombatMove, BmSDK.IGameO
     /// <summary>
     /// StructProperty: HitAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HitAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HitAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 488);
 }

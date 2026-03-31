@@ -279,18 +279,12 @@ public partial class RRainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: RainSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RRainComponent.FRockRainSettings RainSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.RRainComponent.FRockRainSettings RainSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: VolumeSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RRainComponent.FRockRainVolumeSettings VolumeSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent.FRockRainVolumeSettings>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.Engine.RRainComponent.FRockRainVolumeSettings VolumeSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RRainComponent.FRockRainVolumeSettings>(Ptr + 484);
 }

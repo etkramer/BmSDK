@@ -175,11 +175,8 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 416);
 
     /// <summary>
     /// FloatProperty: ElapsedTime

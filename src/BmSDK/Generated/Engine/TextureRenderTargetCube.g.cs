@@ -85,11 +85,8 @@ public partial class TextureRenderTargetCube : BmSDK.Engine.TextureRenderTarget,
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ClearColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ClearColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 224);
 
     /// <summary>
     /// ByteProperty: Format

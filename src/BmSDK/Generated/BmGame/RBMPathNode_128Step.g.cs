@@ -109,9 +109,6 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// StructProperty: StepLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StepLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref System.Numerics.Vector3 StepLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 740);
 }

@@ -94,29 +94,20 @@ public partial class SkeletalMeshSocket : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 RelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: RelativeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RelativeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.Rotator RelativeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: RelativeScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 RelativeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector3 RelativeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 84);
 
     /// <summary>
     /// ObjectProperty: PreviewSkelMesh

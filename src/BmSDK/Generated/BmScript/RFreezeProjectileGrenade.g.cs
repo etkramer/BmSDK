@@ -153,11 +153,8 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// StructProperty: vInitialPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vInitialPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 vInitialPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// FloatProperty: fTimeUsed
@@ -171,20 +168,14 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// StructProperty: vInitialVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 vInitialVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 vInitialVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// StructProperty: vPreviousLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vPreviousLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 vPreviousLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// ComponentProperty: FreezeGrenadeTrail

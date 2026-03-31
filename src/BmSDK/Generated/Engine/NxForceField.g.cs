@@ -119,11 +119,8 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 436);
 
     /// <summary>
     /// ByteProperty: RBChannel

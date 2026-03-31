@@ -289,20 +289,14 @@ public partial class RCombatMove_BatmanBatclawSlam : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: SuperScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct SuperScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct SuperScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 636);
 
     /// <summary>
     /// ObjectProperty: TargetAnimSet
@@ -325,20 +319,14 @@ public partial class RCombatMove_BatmanBatclawSlam : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// StructProperty: TargetAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 788);
 
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 792);
 
     /// <summary>
     /// ClassProperty: dmgType
@@ -352,11 +340,8 @@ public partial class RCombatMove_BatmanBatclawSlam : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// StructProperty: MoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 800);
 
     /// <summary>
     /// BoolProperty: bIsSuperSlam

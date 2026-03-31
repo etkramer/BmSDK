@@ -130,9 +130,6 @@ public partial class RSpecialMoveConfig_RobinPlaceStickyBomb : BmSDK.BmGame.RSpe
     /// <summary>
     /// StructProperty: RotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator RotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.Rotator RotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 384);
 }

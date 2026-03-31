@@ -288,11 +288,8 @@ public partial class RAEC_Attack_Sub_Chase : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// StructProperty: LadderForward
     /// </summary>
-    public unsafe System.Numerics.Vector3 LadderForward
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 LadderForward
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// ObjectProperty: LadderLookNavHandle

@@ -291,11 +291,8 @@ public partial class RFakeLockedDoor : BmSDK.Engine.Actor, BmSDK.BmGame.RInterac
     /// <summary>
     /// StructProperty: LockedSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle LockedSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle LockedSound
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 428);
 
     /// <summary>
     /// BoolProperty: bActive

@@ -76,11 +76,8 @@ public partial class MaterialExpressionMagicUVs : BmSDK.Engine.MaterialExpressio
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Scale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Scale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// FloatProperty: DefaultScale

@@ -1047,11 +1047,8 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TitleSafeZone
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 156);
 
     /// <summary>
     /// StructProperty: CollisionLightSavedShowFlags

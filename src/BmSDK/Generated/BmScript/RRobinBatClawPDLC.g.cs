@@ -261,11 +261,8 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// StructProperty: TargetCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1244);
 
     /// <summary>
     /// FloatProperty: MinDummyTargetDistance

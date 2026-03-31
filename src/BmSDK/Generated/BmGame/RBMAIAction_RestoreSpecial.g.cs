@@ -125,11 +125,8 @@ public partial class RBMAIAction_RestoreSpecial : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: RestoreAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RestoreAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RestoreAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 580);
 
     /// <summary>
     /// BoolProperty: bStartedInTrans

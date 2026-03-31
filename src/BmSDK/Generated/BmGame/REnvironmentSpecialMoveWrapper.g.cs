@@ -85,11 +85,8 @@ public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IG
     /// <summary>
     /// StructProperty: NewEnvironmentTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer NewEnvironmentTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer NewEnvironmentTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 48);
 
     /// <summary>
     /// FloatProperty: MaxAngleToNormal

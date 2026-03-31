@@ -230,11 +230,8 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// StructProperty: FocusPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 FocusPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 
     /// <summary>
     /// BoolProperty: bImpact

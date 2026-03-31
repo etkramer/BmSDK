@@ -273,11 +273,8 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// StructProperty: LaunchLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// BoolProperty: bMoveFinished

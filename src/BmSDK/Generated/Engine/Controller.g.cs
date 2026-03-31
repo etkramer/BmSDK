@@ -1932,11 +1932,8 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: OverrideSearchStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 OverrideSearchStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 OverrideSearchStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// FloatProperty: MoveTimer
@@ -1959,20 +1956,14 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: DestinationPosition
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBasedPosition DestinationPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBasedPosition DestinationPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: FocalPosition
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBasedPosition FocalPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBasedPosition FocalPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 540);
 
     /// <summary>
     /// ObjectProperty: Focus
@@ -2019,11 +2010,8 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: AdjustPosition
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBasedPosition AdjustPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBasedPosition AdjustPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 612);
 
     /// <summary>
     /// ObjectProperty: StartSpot
@@ -2064,11 +2052,8 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: CurrentPathDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentPathDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentPathDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// ObjectProperty: RouteGoal
@@ -2136,29 +2121,20 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: ViewX
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 728);
 
     /// <summary>
     /// StructProperty: ViewY
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 740);
 
     /// <summary>
     /// StructProperty: ViewZ
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 752);
 
     /// <summary>
     /// ObjectProperty: ShotTarget
@@ -2190,11 +2166,8 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: FailedReachLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FailedReachLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref System.Numerics.Vector3 FailedReachLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 776);
 
     /// <summary>
     /// FloatProperty: SightCounter
@@ -2271,18 +2244,12 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// StructProperty: OldBasedRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OldBasedRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref BmSDK.Rotator OldBasedRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 828);
 
     /// <summary>
     /// StructProperty: NavMeshPath_SearchExtent_Modifier
     /// </summary>
-    public unsafe System.Numerics.Vector3 NavMeshPath_SearchExtent_Modifier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref System.Numerics.Vector3 NavMeshPath_SearchExtent_Modifier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 840);
 }

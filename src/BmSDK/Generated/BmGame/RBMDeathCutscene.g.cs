@@ -168,11 +168,8 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: StrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo StrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo StrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 896);
 
     /// <summary>
     /// FloatProperty: TimeUntilImpact

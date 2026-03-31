@@ -281,9 +281,6 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ModuleEditorColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ModuleEditorColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ModuleEditorColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 52);
 }

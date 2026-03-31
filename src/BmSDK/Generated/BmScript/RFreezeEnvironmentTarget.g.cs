@@ -447,20 +447,14 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: CachedImpactPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedImpactPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedImpactPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: CachedImpactVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedImpactVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedImpactVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// FloatProperty: RailFreezeSpeed

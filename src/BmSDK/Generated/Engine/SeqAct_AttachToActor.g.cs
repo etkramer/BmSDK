@@ -168,20 +168,14 @@ public partial class SeqAct_AttachToActor : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// StructProperty: RelativeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RelativeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref System.Numerics.Vector3 RelativeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: RelativeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RelativeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.Rotator RelativeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 228);
 
     /// <summary>
     /// ByteProperty: TickGroup

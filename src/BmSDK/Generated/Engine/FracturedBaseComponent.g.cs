@@ -220,11 +220,8 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 480);
 
     /// <summary>
     /// ArrayProperty: VisibleFragments

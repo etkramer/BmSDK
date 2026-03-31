@@ -386,11 +386,8 @@ public partial class RPawnVillainDoctorWithPipe : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// StructProperty: DodgeId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564);
 
     /// <summary>
     /// ObjectProperty: Bats
@@ -422,11 +419,8 @@ public partial class RPawnVillainDoctorWithPipe : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// StructProperty: SavedDireciton
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedDireciton
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3576); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedDireciton
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3576);
 
     /// <summary>
     /// ObjectProperty: DCBMCounterAnimset
@@ -449,18 +443,12 @@ public partial class RPawnVillainDoctorWithPipe : BmSDK.BmGame.RPawnVillainThug,
     /// <summary>
     /// StructProperty: SpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3596); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3596);
 
     /// <summary>
     /// StructProperty: SpawnRotation
     /// </summary>
-    public unsafe BmSDK.Rotator SpawnRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3608); }
-    }
+    public unsafe ref BmSDK.Rotator SpawnRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3608);
 }

@@ -340,20 +340,14 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DartInFlightStartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DartInFlightStartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref System.Numerics.Vector3 DartInFlightStartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 984);
 
     /// <summary>
     /// StructProperty: DartInFlightStartRot
     /// </summary>
-    public unsafe BmSDK.Rotator DartInFlightStartRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref BmSDK.Rotator DartInFlightStartRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 996);
 
     /// <summary>
     /// FloatProperty: DartSpeed
@@ -394,11 +388,8 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DartTrueLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DartTrueLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref System.Numerics.Vector3 DartTrueLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1024);
 
     /// <summary>
     /// ObjectProperty: WallImpactFX

@@ -254,20 +254,14 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: PrevFrameLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevFrameLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevFrameLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: OldLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// IntProperty: CurrentShakeId

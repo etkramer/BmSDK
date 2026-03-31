@@ -132,11 +132,8 @@ public partial class RSwordProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: SwordRot
     /// </summary>
-    public unsafe BmSDK.Rotator SwordRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.Rotator SwordRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 528);
 
     /// <summary>
     /// FloatProperty: PitchMeetingPoint
@@ -150,20 +147,14 @@ public partial class RSwordProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ToTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 ToTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref System.Numerics.Vector3 ToTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 544);
 
     /// <summary>
     /// StructProperty: SpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// FloatProperty: FlightTime

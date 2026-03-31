@@ -76,11 +76,8 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SourceElement
     /// </summary>
-    public unsafe BmSDK.Engine.LensFlare.FLensFlareElement SourceElement
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlare.FLensFlareElement>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.Engine.LensFlare.FLensFlareElement SourceElement
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LensFlare.FLensFlareElement>(Ptr + 44);
 
     /// <summary>
     /// ObjectProperty: SourceMesh
@@ -157,11 +154,8 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScreenPercentageMap
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ScreenPercentageMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ScreenPercentageMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 404);
 
     /// <summary>
     /// BoolProperty: bUseFixedRelativeBoundingBox
@@ -193,11 +187,8 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FixedRelativeBoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox FixedRelativeBoundingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox FixedRelativeBoundingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 436);
 
     /// <summary>
     /// ObjectProperty: CurveEdSetup
@@ -220,11 +211,8 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThumbnailAngle
     /// </summary>
-    public unsafe BmSDK.Rotator ThumbnailAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.Rotator ThumbnailAngle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 472);
 
     /// <summary>
     /// FloatProperty: ThumbnailDistance

@@ -293,11 +293,8 @@ public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: SourceColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SourceColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SourceColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 440);
 
     /// <summary>
     /// ArrayProperty: Materials

@@ -155,20 +155,14 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// StructProperty: TeamStates
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror TeamStates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror TeamStates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: PlayerStates
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror PlayerStates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror PlayerStates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 84);
 
     /// <summary>
     /// ByteProperty: SessionType

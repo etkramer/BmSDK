@@ -170,9 +170,6 @@ public partial class RFreezeSprayBm : BmSDK.BmGame.RFreezeSpray, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: HandDryIceOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 HandDryIceOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1376); }
-    }
+    public unsafe ref System.Numerics.Vector3 HandDryIceOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1376);
 }

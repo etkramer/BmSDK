@@ -76,9 +76,6 @@ public partial class RBMRagdollBoneFollower : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 }

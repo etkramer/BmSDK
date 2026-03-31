@@ -94,11 +94,8 @@ public partial class RSpecialMoveConfig_MagnetiseObject : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: FireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 312);
 
     /// <summary>
     /// ObjectProperty: FireControllerShake

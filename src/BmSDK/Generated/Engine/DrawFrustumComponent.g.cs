@@ -76,11 +76,8 @@ public partial class DrawFrustumComponent : BmSDK.Engine.PrimitiveComponent, BmS
     /// <summary>
     /// StructProperty: FrustumColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor FrustumColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor FrustumColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 404);
 
     /// <summary>
     /// FloatProperty: FrustumAngle

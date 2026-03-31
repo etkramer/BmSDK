@@ -538,9 +538,6 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// StructProperty: DestructibleParameters
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters DestructibleParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters DestructibleParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters>(Ptr + 140);
 }

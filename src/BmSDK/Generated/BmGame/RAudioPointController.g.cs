@@ -699,20 +699,14 @@ public partial class RAudioPointController : BmSDK.BmGame.RPawnCharacter, BmSDK.
     /// <summary>
     /// StructProperty: storedPlayerPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 storedPlayerPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1896); }
-    }
+    public unsafe ref System.Numerics.Vector3 storedPlayerPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1896);
 
     /// <summary>
     /// StructProperty: oldStoredPlayerPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 oldStoredPlayerPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1908); }
-    }
+    public unsafe ref System.Numerics.Vector3 oldStoredPlayerPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1908);
 
     /// <summary>
     /// FloatProperty: WorldPlayTime

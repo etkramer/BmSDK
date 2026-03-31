@@ -693,29 +693,20 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: PreviewCamPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviewCamPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviewCamPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 420);
 
     /// <summary>
     /// StructProperty: PreviewCamRot
     /// </summary>
-    public unsafe BmSDK.Rotator PreviewCamRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.Rotator PreviewCamRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 432);
 
     /// <summary>
     /// StructProperty: PreviewFloorPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviewFloorPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviewFloorPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// IntProperty: PreviewFloorYaw

@@ -76,18 +76,12 @@ public partial class MaterialExpressionNormalCombine : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: X
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput X
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput X
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Y
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Y
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Y
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 }

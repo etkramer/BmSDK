@@ -149,29 +149,20 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: WhipHipPhysData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData WhipHipPhysData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData WhipHipPhysData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData>(Ptr + 232);
 
     /// <summary>
     /// StructProperty: WhipTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 WhipTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 WhipTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// StructProperty: WhipTargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator WhipTargetRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref BmSDK.Rotator WhipTargetRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 360);
 
     /// <summary>
     /// BoolProperty: bDisableHandReparenting
@@ -266,11 +257,8 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: CachedWhipTargetingData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData CachedWhipTargetingData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData CachedWhipTargetingData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData>(Ptr + 416);
 
     /// <summary>
     /// ComponentProperty: CachedWhipTargetingDataValidSkelComp

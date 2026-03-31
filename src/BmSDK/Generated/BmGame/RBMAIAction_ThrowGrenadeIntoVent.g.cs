@@ -156,38 +156,26 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// StructProperty: VentPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 VentPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 VentPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// StructProperty: LandTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LandTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 LandTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// StructProperty: TargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator TargetRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.Rotator TargetRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: ThrowAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 608);
 
     /// <summary>
     /// BoolProperty: bStarted

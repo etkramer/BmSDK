@@ -4913,11 +4913,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TargetViewRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TargetViewRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.Rotator TargetViewRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 920);
 
     /// <summary>
     /// FloatProperty: TargetEyeHeight
@@ -4931,11 +4928,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: BlendedTargetViewRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BlendedTargetViewRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref BmSDK.Rotator BlendedTargetViewRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 936);
 
     /// <summary>
     /// ObjectProperty: myHUD
@@ -4985,11 +4979,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastAckedAccel
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastAckedAccel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastAckedAccel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// FloatProperty: CurrentTimeStamp
@@ -5093,11 +5084,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PendingAdjustment
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerController.FClientAdjustment PendingAdjustment
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController.FClientAdjustment>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref BmSDK.Engine.PlayerController.FClientAdjustment PendingAdjustment
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PlayerController.FClientAdjustment>(Ptr + 1024);
 
     /// <summary>
     /// IntProperty: GroundPitch
@@ -5147,11 +5135,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: FailedPathStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 FailedPathStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1096); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
-    }
+    public unsafe ref System.Numerics.Vector3 FailedPathStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1096);
 
     /// <summary>
     /// ComponentProperty: CylinderComponent

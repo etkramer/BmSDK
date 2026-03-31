@@ -279,29 +279,20 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OverridePrompt
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: MainLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: MainLineLast
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 92);
 
     /// <summary>
     /// ArrayProperty: Lines

@@ -233,11 +233,8 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: IdleAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596);
 
     /// <summary>
     /// NameProperty: GuardAimAtName

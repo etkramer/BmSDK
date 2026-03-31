@@ -385,9 +385,6 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     /// <summary>
     /// StructProperty: ParentLightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ParentLightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid ParentLightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 172);
 }

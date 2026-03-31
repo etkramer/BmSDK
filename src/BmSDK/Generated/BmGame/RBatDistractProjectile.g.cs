@@ -367,11 +367,8 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// StructProperty: ImpactedWallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactedWallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactedWallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 836);
 
     /// <summary>
     /// ObjectProperty: IndicatorLightMaterial

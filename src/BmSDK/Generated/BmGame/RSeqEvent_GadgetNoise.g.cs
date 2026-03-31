@@ -87,9 +87,6 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
     /// <summary>
     /// StructProperty: LocationOfNoise
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocationOfNoise
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocationOfNoise
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 }

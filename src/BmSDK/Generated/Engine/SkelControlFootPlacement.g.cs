@@ -94,11 +94,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// <summary>
     /// StructProperty: FootRotOffset
     /// </summary>
-    public unsafe BmSDK.Rotator FootRotOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.Rotator FootRotOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 244);
 
     /// <summary>
     /// BoolProperty: bInvertFootUpAxis

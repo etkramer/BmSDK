@@ -358,11 +358,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Query
     /// </summary>
-    public unsafe BmSDK.Engine.Settings.FLocalizedStringSetting Query
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.Settings.FLocalizedStringSetting Query
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: bIsLanQuery
@@ -412,11 +409,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ManualSkillOverride
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 128);
 
     /// <summary>
     /// ArrayProperty: NamedProperties
@@ -430,11 +424,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FilterQuery
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 180);
 
     /// <summary>
     /// StrProperty: AdditionalSearchCriteria

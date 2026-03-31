@@ -76,29 +76,20 @@ public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollis
     /// <summary>
     /// StructProperty: DampingFactor
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector DampingFactor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector DampingFactor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: DampingFactorRotation
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector DampingFactorRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector DampingFactorRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: MaxCollisions
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat MaxCollisions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat MaxCollisions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 112);
 
     /// <summary>
     /// ByteProperty: CollisionCompletionOption
@@ -166,11 +157,8 @@ public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollis
     /// <summary>
     /// StructProperty: ParticleMass
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ParticleMass
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ParticleMass
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 152);
 
     /// <summary>
     /// FloatProperty: DirScalar
@@ -193,9 +181,6 @@ public partial class ParticleModuleCollision : BmSDK.Engine.ParticleModuleCollis
     /// <summary>
     /// StructProperty: DelayAmount
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DelayAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat DelayAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 188);
 }

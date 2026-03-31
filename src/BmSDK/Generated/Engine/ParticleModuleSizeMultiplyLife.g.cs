@@ -76,11 +76,8 @@ public partial class ParticleModuleSizeMultiplyLife : BmSDK.Engine.ParticleModul
     /// <summary>
     /// StructProperty: LifeMultiplier
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector LifeMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector LifeMultiplier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: MultiplyX

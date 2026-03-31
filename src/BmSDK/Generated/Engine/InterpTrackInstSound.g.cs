@@ -85,11 +85,8 @@ public partial class InterpTrackInstSound : BmSDK.Engine.InterpTrackInst, BmSDK.
     /// <summary>
     /// StructProperty: WwiseMatineeSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle WwiseMatineeSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle WwiseMatineeSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 48);
 
     /// <summary>
     /// FloatProperty: fSeekPos

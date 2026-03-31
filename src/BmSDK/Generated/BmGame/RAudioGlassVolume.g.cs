@@ -132,11 +132,8 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Loc
     /// </summary>
-    public unsafe System.Numerics.Vector3 Loc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 Loc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// FloatProperty: Rad

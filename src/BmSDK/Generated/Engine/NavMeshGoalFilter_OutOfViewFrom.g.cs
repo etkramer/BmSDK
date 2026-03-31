@@ -85,9 +85,6 @@ public partial class NavMeshGoalFilter_OutOfViewFrom : BmSDK.Engine.NavMeshGoal_
     /// <summary>
     /// StructProperty: OutOfViewLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutOfViewLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutOfViewLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 }

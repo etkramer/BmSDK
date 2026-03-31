@@ -76,11 +76,8 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Data
     /// </summary>
-    public unsafe BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 44);
 
     /// <summary>
     /// Struct: FFontImportOptionsData

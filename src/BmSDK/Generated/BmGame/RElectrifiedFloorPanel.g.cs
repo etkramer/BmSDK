@@ -318,11 +318,8 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// FloatProperty: StateTimer
@@ -471,20 +468,14 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// StructProperty: SoundHandlePoweredUp
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandlePoweredUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandlePoweredUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 536);
 
     /// <summary>
     /// StructProperty: SoundHandleSparking
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandleSparking
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandleSparking
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 548);
 
     /// <summary>
     /// ObjectProperty: AudioParamPower

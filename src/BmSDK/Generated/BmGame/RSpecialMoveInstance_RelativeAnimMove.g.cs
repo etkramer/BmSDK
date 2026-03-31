@@ -423,29 +423,20 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: AnimEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// StructProperty: ReferencePointOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferencePointOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferencePointOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: Transition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 608);
 
     /// <summary>
     /// NameProperty: FinalMovementStance
@@ -477,18 +468,12 @@ public partial class RSpecialMoveInstance_RelativeAnimMove : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: ReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.Rotator ReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 628);
 
     /// <summary>
     /// StructProperty: ReferenceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferenceLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferenceLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
 }

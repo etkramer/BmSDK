@@ -98,11 +98,8 @@ public partial class RCharacter_CopBase : BmSDK.BmGame.RCharacter, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: BodyColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor BodyColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor BodyColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 432);
 
     /// <summary>
     /// ArrayProperty: ShirtPattern

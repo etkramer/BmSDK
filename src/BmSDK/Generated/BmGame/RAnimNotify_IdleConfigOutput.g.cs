@@ -76,11 +76,8 @@ public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Scri
     /// <summary>
     /// StructProperty: Gid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid Gid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid Gid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 68);
 
     /// <summary>
     /// NameProperty: KismetOutputName

@@ -76,9 +76,6 @@ public partial class ParticleModuleRotationRateMultiplyLife : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: LifeMultiplier
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat LifeMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat LifeMultiplier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 }

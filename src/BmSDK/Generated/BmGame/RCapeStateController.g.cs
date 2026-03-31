@@ -480,11 +480,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedSkinningLocalToWorlds
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 112);
 
     /// <summary>
     /// IntProperty: CachedCapeStateDataIndex
@@ -507,11 +504,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastUpdateCapeLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 336);
 
     /// <summary>
     /// FloatProperty: TimeSinceMovedBackwards

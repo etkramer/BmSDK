@@ -1790,11 +1790,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultPostProcessSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings DefaultPostProcessSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings DefaultPostProcessSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 444);
 
     /// <summary>
     /// ObjectProperty: WorldPostProcessChain
@@ -2753,11 +2750,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 DefaultColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1236); }
-    }
+    public unsafe ref System.Numerics.Vector3 DefaultColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1236);
 
     /// <summary>
     /// ArrayProperty: GameTypesSupportedOnThisMap
@@ -2951,11 +2945,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PhysicsProperties
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FPhysXSceneProperties PhysicsProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FPhysXSceneProperties>(Ptr + 1420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1420); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FPhysXSceneProperties PhysicsProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FPhysXSceneProperties>(Ptr + 1420);
 
     /// <summary>
     /// ArrayProperty: CompartmentRunFrames
@@ -2987,11 +2978,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DestructibleSettings
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings DestructibleSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings>(Ptr + 1520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1520); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings DestructibleSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings>(Ptr + 1520);
 
     /// <summary>
     /// ObjectProperty: EmitterVertical
@@ -3005,11 +2993,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VerticalProperties
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FPhysXVerticalProperties VerticalProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FPhysXVerticalProperties>(Ptr + 1540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1540); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FPhysXVerticalProperties VerticalProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FPhysXVerticalProperties>(Ptr + 1540);
 
     /// <summary>
     /// FloatProperty: ChanceOfPhysicsChunkOverride
@@ -3140,11 +3125,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImageReflectionEnvironmentColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ImageReflectionEnvironmentColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1620); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ImageReflectionEnvironmentColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1620);
 
     /// <summary>
     /// FloatProperty: ImageReflectionEnvironmentRotation
@@ -3158,11 +3140,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScreenMessages
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror ScreenMessages
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 1640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1640); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror ScreenMessages
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 1640);
 
     /// <summary>
     /// ArrayProperty: PriorityScreenMessages
@@ -3194,20 +3173,14 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1720);
 
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings>(Ptr + 1732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings>(Ptr + 1732);
 
     /// <summary>
     /// MapProperty: NavMeshPathConstraintCache
@@ -3230,11 +3203,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PeerHostMigration
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FHostMigrationState PeerHostMigration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FHostMigrationState>(Ptr + 1912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1912); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FHostMigrationState PeerHostMigration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FHostMigrationState>(Ptr + 1912);
 
     /// <summary>
     /// FloatProperty: HostMigrationTimeout

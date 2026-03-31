@@ -290,9 +290,6 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: OceanSettings
     /// </summary>
-    public unsafe BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 416);
 }

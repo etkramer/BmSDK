@@ -186,11 +186,8 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: WallPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// ObjectProperty: OwningCorner
@@ -222,11 +219,8 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: BatmanCoverPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanCoverPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanCoverPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// FloatProperty: BatmanLROffset

@@ -94,20 +94,14 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox BoundingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox BoundingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: BasePPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings BasePPSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings BasePPSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 80);
 
     /// <summary>
     /// FloatProperty: BasePPSettingsAlpha

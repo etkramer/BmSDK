@@ -196,11 +196,8 @@ public partial class RBMCombatThrownObject_HeavyObjectFireExtinguisher : BmSDK.B
     /// <summary>
     /// StructProperty: BatarangOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 
     /// <summary>
     /// BoolProperty: bFirstFireExCollision

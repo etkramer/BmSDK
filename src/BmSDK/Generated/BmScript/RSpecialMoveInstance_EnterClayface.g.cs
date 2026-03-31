@@ -269,20 +269,14 @@ public partial class RSpecialMoveInstance_EnterClayface : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: storedLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 storedLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 storedLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: StoredRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StoredRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref BmSDK.Rotator StoredRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 600);
 
     /// <summary>
     /// FloatProperty: TimeSinceDamage

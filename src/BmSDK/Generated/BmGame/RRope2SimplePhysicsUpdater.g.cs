@@ -267,11 +267,8 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// StructProperty: InitData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData InitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData InitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData>(Ptr + 184);
 
     /// <summary>
     /// FloatProperty: DesiredNodeLength

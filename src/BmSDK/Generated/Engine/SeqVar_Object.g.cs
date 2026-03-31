@@ -108,11 +108,8 @@ public partial class SeqVar_Object : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
     /// <summary>
     /// StructProperty: ActorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 132);
 
     /// <summary>
     /// ArrayProperty: SupportedClasses

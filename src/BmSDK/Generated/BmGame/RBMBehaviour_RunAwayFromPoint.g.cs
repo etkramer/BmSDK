@@ -132,11 +132,8 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// StructProperty: RunAwayPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RunAwayPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref System.Numerics.Vector3 RunAwayPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 396);
 
     /// <summary>
     /// BoolProperty: bRunAway

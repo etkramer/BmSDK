@@ -319,20 +319,14 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 1568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1568); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 1568);
 
     /// <summary>
     /// StructProperty: LastRemoteURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastRemoteURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 1636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastRemoteURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 1636);
 
     /// <summary>
     /// ArrayProperty: ServerActors

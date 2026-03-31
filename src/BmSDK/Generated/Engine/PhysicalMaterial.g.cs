@@ -254,11 +254,8 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AnisoFrictionDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnisoFrictionDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnisoFrictionDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// FloatProperty: FrictionV
@@ -569,11 +566,8 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FootstepSurfaceContinuousContactEnvelope
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkEnvelopeSettings FootstepSurfaceContinuousContactEnvelope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkEnvelopeSettings>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkEnvelopeSettings FootstepSurfaceContinuousContactEnvelope
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkEnvelopeSettings>(Ptr + 208);
 
     /// <summary>
     /// ObjectProperty: FractureSoundExplosion

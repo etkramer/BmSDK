@@ -200,17 +200,11 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 80);
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 132);
 }

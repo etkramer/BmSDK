@@ -271,11 +271,8 @@ public partial class RBMBehaviour_StationaryTutorialThug : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// StructProperty: AR_Reload
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId AR_Reload
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId AR_Reload
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 420);
 
     /// <summary>
     /// FloatProperty: OverlayTimer
@@ -298,29 +295,20 @@ public partial class RBMBehaviour_StationaryTutorialThug : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// StructProperty: OverlayAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OverlayAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OverlayAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: CurrentAimDir
     /// </summary>
-    public unsafe BmSDK.Rotator CurrentAimDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Rotator CurrentAimDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: AimDiffPerSec
     /// </summary>
-    public unsafe BmSDK.Rotator AimDiffPerSec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref BmSDK.Rotator AimDiffPerSec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 456);
 
     /// <summary>
     /// BoolProperty: bFiringStarted
@@ -334,18 +322,12 @@ public partial class RBMBehaviour_StationaryTutorialThug : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// StructProperty: StartleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// StructProperty: StartleAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartleAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StartleAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484);
 }

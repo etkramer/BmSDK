@@ -130,35 +130,23 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 108);
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 124);
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 140);
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 156);
 
     /// <summary>
     /// BoolProperty: bDirty

@@ -76,18 +76,12 @@ public partial class ParticleModuleVelocity : BmSDK.Engine.ParticleModuleVelocit
     /// <summary>
     /// StructProperty: StartVelocity
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector StartVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: StartVelocityRadial
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartVelocityRadial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat StartVelocityRadial
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88);
 }

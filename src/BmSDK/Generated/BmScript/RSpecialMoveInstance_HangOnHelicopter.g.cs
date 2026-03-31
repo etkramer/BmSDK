@@ -166,20 +166,14 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: CurrentTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrentTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrentTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 576);
 
     /// <summary>
     /// StructProperty: LastHeliAccel
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastHeliAccel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastHeliAccel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// IntProperty: screenShakeID
@@ -193,9 +187,6 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: ScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 596);
 }

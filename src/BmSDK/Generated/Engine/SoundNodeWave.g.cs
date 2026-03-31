@@ -301,11 +301,8 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RawData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror RawData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror RawData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 148);
 
     /// <summary>
     /// StructProperty: VorbisDecompressor
@@ -337,29 +334,20 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CompressedPCData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPCData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPCData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: CompressedXbox360Data
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedXbox360Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedXbox360Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 248);
 
     /// <summary>
     /// StructProperty: CompressedPS3Data
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPS3Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPS3Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 292);
 
     /// <summary>
     /// IntProperty: ResourceID

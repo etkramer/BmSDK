@@ -159,11 +159,8 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// StructProperty: AttackTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AttackTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AttackTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 484);
 
     /// <summary>
     /// ArrayProperty: HitTargets
@@ -177,11 +174,8 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// StructProperty: GroundImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GroundImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GroundImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 500);
 
     /// <summary>
     /// FloatProperty: MaxScreenShakeScale

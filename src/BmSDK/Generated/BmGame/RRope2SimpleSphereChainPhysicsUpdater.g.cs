@@ -76,11 +76,8 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// StructProperty: SphereChainInitData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData SphereChainInitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData SphereChainInitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2SimpleSphereChainPhysicsUpdater.FRRope2SimpleSphereChainPhysicsUpdaterInitData>(Ptr + 184);
 
     /// <summary>
     /// FloatProperty: DesiredNodeLength

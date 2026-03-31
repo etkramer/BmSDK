@@ -601,11 +601,8 @@ public partial class RBMBehaviour_CombatRas : BmSDK.BmGame.RBMBehaviour_CombatAI
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 780);
 
     /// <summary>
     /// FloatProperty: DemonBlastTimer

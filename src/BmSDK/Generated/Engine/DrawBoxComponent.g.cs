@@ -76,11 +76,8 @@ public partial class DrawBoxComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BoxColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BoxColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BoxColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 404);
 
     /// <summary>
     /// ObjectProperty: BoxMaterial
@@ -94,11 +91,8 @@ public partial class DrawBoxComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BoxExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoxExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoxExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 412);
 
     /// <summary>
     /// BoolProperty: bDrawWireBox

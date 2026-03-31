@@ -143,9 +143,6 @@ public partial class RSpecialMoveInstance_MagnetiseObject : BmSDK.BmGame.RSpecia
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 }

@@ -227,9 +227,6 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// StructProperty: InterruptLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 InterruptLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.Numerics.Vector3 InterruptLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 416);
 }

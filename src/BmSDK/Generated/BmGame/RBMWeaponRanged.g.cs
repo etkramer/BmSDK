@@ -574,11 +574,8 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AimLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
 
     /// <summary>
     /// FloatProperty: ShotDeviance
@@ -628,11 +625,8 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LaserEndPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaserEndPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaserEndPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
 
     /// <summary>
     /// ObjectProperty: WeaponFireEvent
@@ -673,9 +667,6 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WeaponFireSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle WeaponFireSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle WeaponFireSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1092);
 }

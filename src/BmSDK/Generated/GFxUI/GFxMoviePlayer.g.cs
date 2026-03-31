@@ -1978,11 +1978,8 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ViewMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 208);
 
     /// <summary>
     /// ObjectProperty: ExternalInterface

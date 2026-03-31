@@ -606,11 +606,8 @@ public partial class PlayerReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK
     /// <summary>
     /// StructProperty: UniqueId
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 532);
 
     /// <summary>
     /// NameProperty: SessionName
@@ -624,11 +621,8 @@ public partial class PlayerReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK
     /// <summary>
     /// StructProperty: AutomatedTestingData
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerReplicationInfo.FAutomatedTestingDatum AutomatedTestingData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerReplicationInfo.FAutomatedTestingDatum>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.Engine.PlayerReplicationInfo.FAutomatedTestingDatum AutomatedTestingData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PlayerReplicationInfo.FAutomatedTestingDatum>(Ptr + 548);
 
     /// <summary>
     /// IntProperty: StatConnectionCounts

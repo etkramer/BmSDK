@@ -166,20 +166,14 @@ public partial class SplineLoftActor : BmSDK.Engine.SplineActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: WorldXDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldXDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldXDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 548);
 
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector2 Offset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref System.Numerics.Vector2 Offset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 560);
 
     /// <summary>
     /// BoolProperty: bSmoothInterpRollAndScale

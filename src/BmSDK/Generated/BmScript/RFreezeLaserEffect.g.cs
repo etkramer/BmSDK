@@ -213,38 +213,26 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LaserOriginWorld
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaserOriginWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaserOriginWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: LaserRotationWorld
     /// </summary>
-    public unsafe BmSDK.Rotator LaserRotationWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Rotator LaserRotationWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: TipLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TipLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.Numerics.Vector3 TipLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: PreviousSocketRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PreviousSocketRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref BmSDK.Rotator PreviousSocketRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 116);
 
     /// <summary>
     /// FloatProperty: current_length

@@ -468,11 +468,8 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WritheDmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo WritheDmgInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FDamageInfo WritheDmgInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 56);
 
     /// <summary>
     /// NameProperty: Writhe_HitWorldAnimName
@@ -612,20 +609,14 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrWrithePhase
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc CurrWrithePhase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc CurrWrithePhase
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 384);
 
     /// <summary>
     /// StructProperty: HitWallWrithePhase
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc HitWallWrithePhase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc HitWallWrithePhase
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FWrithePhaseDesc>(Ptr + 408);
 
     /// <summary>
     /// FloatProperty: FacingOtherDirTimer

@@ -284,11 +284,8 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// StructProperty: StartleSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 400);
 
     /// <summary>
     /// ByteProperty: Speed

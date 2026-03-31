@@ -253,11 +253,8 @@ public partial class RCombatMove_VillainStunStickAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: FirstTransitionLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FirstTransitionLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 FirstTransitionLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// FloatProperty: FirstTransitionYaw
@@ -280,11 +277,8 @@ public partial class RCombatMove_VillainStunStickAttack : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// StructProperty: StrikeID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524);
 
     /// <summary>
     /// FloatProperty: WaitTimer

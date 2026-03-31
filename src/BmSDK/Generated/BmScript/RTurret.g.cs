@@ -734,11 +734,8 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// StructProperty: InitialRot
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public unsafe ref BmSDK.Rotator InitialRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 756);
 
     /// <summary>
     /// FloatProperty: jammedSpeed
@@ -788,11 +785,8 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// StructProperty: jerkRot
     /// </summary>
-    public unsafe BmSDK.Rotator jerkRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref BmSDK.Rotator jerkRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 788);
 
     /// <summary>
     /// FloatProperty: SpeedMultiplier

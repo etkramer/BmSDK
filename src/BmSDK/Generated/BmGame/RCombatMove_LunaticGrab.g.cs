@@ -348,20 +348,14 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// StructProperty: InitialMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: CurrentMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// FloatProperty: MoveYaw
@@ -375,11 +369,8 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// StructProperty: MoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// NameProperty: AnimName
@@ -589,29 +580,20 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// StructProperty: VillainGrabID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainGrabID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VillainGrabID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: TargetGrabID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetGrabID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetGrabID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: IdleOverlayID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleOverlayID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleOverlayID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596);
 
     /// <summary>
     /// FloatProperty: NoOverlayTimer
@@ -625,11 +607,8 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// StructProperty: ThrowDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// ObjectProperty: GrabCam
@@ -661,9 +640,6 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 628);
 }

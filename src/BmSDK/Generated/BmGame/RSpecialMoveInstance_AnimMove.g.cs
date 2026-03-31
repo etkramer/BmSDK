@@ -124,11 +124,8 @@ public partial class RSpecialMoveInstance_AnimMove : BmSDK.BmGame.RSpecialMoveIn
     /// <summary>
     /// StructProperty: Overlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId Overlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId Overlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 576);
 
     /// <summary>
     /// BoolProperty: bStage2

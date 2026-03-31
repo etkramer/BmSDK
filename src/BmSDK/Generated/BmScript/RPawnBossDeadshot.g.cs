@@ -517,11 +517,8 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// StructProperty: BatarangThrowPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangThrowPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3572); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangThrowPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3572);
 
     /// <summary>
     /// IntProperty: SavedBatarangId
@@ -535,11 +532,8 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// StructProperty: DodgeId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3588); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3588);
 
     /// <summary>
     /// IntProperty: DifficultyLevel
@@ -562,20 +556,14 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// StructProperty: StartPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3600); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3600);
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StartRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3612); }
-    }
+    public unsafe ref BmSDK.Rotator StartRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3612);
 
     /// <summary>
     /// ObjectProperty: AttackArea
@@ -733,11 +721,8 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// StructProperty: LastBmPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastBmPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3652); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastBmPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3652);
 
     /// <summary>
     /// FloatProperty: BeenDamagedTimer
@@ -796,20 +781,14 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// StructProperty: currentTurnTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId currentTurnTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3688); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId currentTurnTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3688);
 
     /// <summary>
     /// StructProperty: shotTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 shotTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3692); }
-    }
+    public unsafe ref System.Numerics.Vector3 shotTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3692);
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashPFX

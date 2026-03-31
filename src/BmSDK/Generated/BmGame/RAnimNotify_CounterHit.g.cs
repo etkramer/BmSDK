@@ -76,9 +76,6 @@ public partial class RAnimNotify_CounterHit : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// StructProperty: CounterInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 44);
 }

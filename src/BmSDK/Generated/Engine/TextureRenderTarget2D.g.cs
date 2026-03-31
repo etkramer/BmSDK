@@ -144,11 +144,8 @@ public partial class TextureRenderTarget2D : BmSDK.Engine.TextureRenderTarget, B
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ClearColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ClearColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 232);
 
     /// <summary>
     /// BoolProperty: bForceLinearGamma

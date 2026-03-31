@@ -849,20 +849,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: HeldByPlayer_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HeldByPlayer_Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 HeldByPlayer_Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// StructProperty: HeldByPlayer_Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator HeldByPlayer_Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.Rotator HeldByPlayer_Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 480);
 
     /// <summary>
     /// ObjectProperty: ImpactEvent
@@ -948,11 +942,8 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: MagneticForceLastFrame
     /// </summary>
-    public unsafe System.Numerics.Vector3 MagneticForceLastFrame
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.Numerics.Vector3 MagneticForceLastFrame
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 528);
 
     /// <summary>
     /// ObjectProperty: SmashFX
@@ -993,20 +984,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ThrowCollisionExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowCollisionExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowCollisionExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 568);
 
     /// <summary>
     /// StructProperty: ThrowCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// FloatProperty: IgnoreCollisionTimer
@@ -1029,20 +1014,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: BasePickupLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BasePickupLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 BasePickupLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 
     /// <summary>
     /// StructProperty: PickupLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PickupLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 PickupLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// ObjectProperty: MagBlastPlayer
@@ -1056,20 +1035,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: PrevLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
 
     /// <summary>
     /// StructProperty: PrevRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PrevRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref BmSDK.Rotator PrevRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 640);
 
     /// <summary>
     /// FloatProperty: DropVelMultiplier
@@ -1092,11 +1065,8 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// ArrayProperty: DetachableParts

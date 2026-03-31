@@ -304,11 +304,8 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Data
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: ReleaseCodecFence

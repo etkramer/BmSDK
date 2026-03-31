@@ -165,11 +165,8 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastParty
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineRecentPlayersList.FRecentParty LastParty
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineRecentPlayersList.FRecentParty>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineRecentPlayersList.FRecentParty LastParty
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineRecentPlayersList.FRecentParty>(Ptr + 68);
 
     /// <summary>
     /// IntProperty: MaxRecentPlayers

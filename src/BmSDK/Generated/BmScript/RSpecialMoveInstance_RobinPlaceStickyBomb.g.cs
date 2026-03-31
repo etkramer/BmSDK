@@ -156,11 +156,8 @@ public partial class RSpecialMoveInstance_RobinPlaceStickyBomb : BmSDK.BmGame.RS
     /// <summary>
     /// StructProperty: Loc
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656);
 
     /// <summary>
     /// ObjectProperty: Victim

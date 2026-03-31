@@ -584,11 +584,8 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
     /// <summary>
     /// StructProperty: PropImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 PropImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// NameProperty: BreakTimerName
@@ -611,11 +608,8 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
     /// <summary>
     /// StructProperty: PropBreakingImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropBreakingImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector3 PropBreakingImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 748);
 
     /// <summary>
     /// ObjectProperty: BreakCollideActor
@@ -629,11 +623,8 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
     /// <summary>
     /// StructProperty: AppliedImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 AppliedImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref System.Numerics.Vector3 AppliedImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 764);
 
     /// <summary>
     /// ArrayProperty: LinkedActors

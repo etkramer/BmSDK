@@ -662,11 +662,8 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LevelWind
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRBasicWindConfig LevelWind
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRBasicWindConfig LevelWind
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 628);
 
     /// <summary>
     /// FloatProperty: RainIntensity

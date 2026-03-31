@@ -204,11 +204,8 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// StructProperty: LevelActivationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LevelActivationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 LevelActivationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// ObjectProperty: SaveSide1AtPlayerStartInLevel

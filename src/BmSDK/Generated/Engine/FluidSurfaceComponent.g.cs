@@ -154,11 +154,8 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 412);
 
     /// <summary>
     /// BoolProperty: EnableSimulation
@@ -550,29 +547,20 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: SimulationPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SimulationPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 SimulationPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// StructProperty: DetailPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 DetailPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 DetailPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// StructProperty: EditorViewPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EditorViewPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 EditorViewPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// ArrayProperty: ClampMap
@@ -595,11 +583,8 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 632);
 
     /// <summary>
     /// StructProperty: FluidSimulation

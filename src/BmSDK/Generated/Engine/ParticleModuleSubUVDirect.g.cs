@@ -76,18 +76,12 @@ public partial class ParticleModuleSubUVDirect : BmSDK.Engine.ParticleModuleSubU
     /// <summary>
     /// StructProperty: SubUVPosition
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubUVPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SubUVPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: SubUVSize
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubUVSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SubUVSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84);
 }

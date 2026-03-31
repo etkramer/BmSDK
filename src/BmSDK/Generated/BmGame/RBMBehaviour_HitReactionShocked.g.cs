@@ -135,20 +135,14 @@ public partial class RBMBehaviour_HitReactionShocked : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: HitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
 
     /// <summary>
     /// StructProperty: HitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 412);
 
     /// <summary>
     /// ObjectProperty: HitActor

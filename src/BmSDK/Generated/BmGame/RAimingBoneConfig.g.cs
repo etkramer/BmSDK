@@ -76,92 +76,62 @@ public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Spine
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Spine1
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: Spine2
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: Spine3
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 152);
 
     /// <summary>
     /// StructProperty: Neck
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Neck
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Neck
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 188);
 
     /// <summary>
     /// StructProperty: Head
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Head
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Head
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 224);
 
     /// <summary>
     /// StructProperty: LeftClavicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftClavicle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftClavicle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: LeftUpperArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftUpperArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftUpperArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 296);
 
     /// <summary>
     /// StructProperty: RightClavicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightClavicle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightClavicle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 332);
 
     /// <summary>
     /// StructProperty: RightUpperArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightUpperArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightUpperArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 368);
 
     /// <summary>
     /// Struct: FAimingBoneValues

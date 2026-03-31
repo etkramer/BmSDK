@@ -245,9 +245,6 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// StructProperty: BombLocForAnimation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BombLocForAnimation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 BombLocForAnimation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 }

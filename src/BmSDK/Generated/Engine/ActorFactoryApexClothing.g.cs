@@ -94,9 +94,6 @@ public partial class ActorFactoryApexClothing : BmSDK.Engine.ActorFactorySkeleta
     /// <summary>
     /// StructProperty: ClothingRBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothingRBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothingRBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 124);
 }

@@ -132,38 +132,26 @@ public partial class InteractiveFoliageActor : BmSDK.Engine.StaticMeshActor, BmS
     /// <summary>
     /// StructProperty: TouchingActorEntryPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TouchingActorEntryPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 TouchingActorEntryPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: FoliageVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 FoliageVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 FoliageVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// StructProperty: FoliageForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 FoliageForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 FoliageForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// StructProperty: FoliagePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FoliagePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 FoliagePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// FloatProperty: FoliageDamageImpulseScale

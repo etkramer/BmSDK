@@ -321,11 +321,8 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: HitDmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo HitDmgInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FDamageInfo HitDmgInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 396);
 
     /// <summary>
     /// NameProperty: DestMoveStance
@@ -447,11 +444,8 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: MovementDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 MovementDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 MovementDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
 
     /// <summary>
     /// StrProperty: FaceFXRegister
@@ -465,11 +459,8 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: HitAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HitAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId HitAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 688);
 
     /// <summary>
     /// ComponentProperty: StunnedFX

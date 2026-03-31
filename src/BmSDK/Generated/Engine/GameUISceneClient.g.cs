@@ -213,20 +213,14 @@ public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGame
     /// <summary>
     /// StructProperty: DoubleClickStartPosition
     /// </summary>
-    public unsafe BmSDK.GameObject.FIntPoint DoubleClickStartPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIntPoint>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.GameObject.FIntPoint DoubleClickStartPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIntPoint>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: InitialPressedKeys
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror InitialPressedKeys
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror InitialPressedKeys
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 236);
 
     /// <summary>
     /// BoolProperty: bUpdateInputProcessingStatus

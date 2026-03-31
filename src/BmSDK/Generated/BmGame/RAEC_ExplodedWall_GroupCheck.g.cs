@@ -190,20 +190,14 @@ public partial class RAEC_ExplodedWall_GroupCheck : BmSDK.BmGame.RAEC_SubGroup, 
     /// <summary>
     /// StructProperty: ExplosionCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExplosionCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExplosionCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// StructProperty: WallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// BoolProperty: bIsHorizontal

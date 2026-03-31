@@ -1666,20 +1666,14 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vVirtualDisruptorTowerLocationStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 vVirtualDisruptorTowerLocationStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref System.Numerics.Vector3 vVirtualDisruptorTowerLocationStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 680);
 
     /// <summary>
     /// StructProperty: vVirtualDisruptorTowerLocationEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 vVirtualDisruptorTowerLocationEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
-    }
+    public unsafe ref System.Numerics.Vector3 vVirtualDisruptorTowerLocationEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 692);
 
     /// <summary>
     /// FloatProperty: fVirtualDisruptorTowerTimer
@@ -1720,9 +1714,6 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PostProcessOverride
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 720);
 }

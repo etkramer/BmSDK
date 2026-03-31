@@ -591,20 +591,14 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Velocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 Velocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 Velocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: PreviousVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// ByteProperty: SceneIndex
@@ -906,9 +900,6 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RBSyncOffet
     /// </summary>
-    public unsafe System.Numerics.Vector3 RBSyncOffet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 RBSyncOffet
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 }

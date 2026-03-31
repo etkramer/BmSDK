@@ -103,9 +103,6 @@ public partial class NxGenericForceFieldBox : BmSDK.Engine.NxGenericForceField, 
     /// <summary>
     /// StructProperty: BoxExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoxExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoxExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 }

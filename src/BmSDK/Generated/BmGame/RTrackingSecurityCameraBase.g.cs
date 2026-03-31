@@ -209,11 +209,8 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// StructProperty: InvestigateLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// ObjectProperty: SweepSound
@@ -281,11 +278,8 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// <summary>
     /// StructProperty: SweepHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SweepHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SweepHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 580);
 
     /// <summary>
     /// IntProperty: FOV

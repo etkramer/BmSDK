@@ -343,11 +343,8 @@ public partial class RBMBehaviour_Ragdoll : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// StructProperty: WritheDmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo WritheDmgInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FDamageInfo WritheDmgInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 428);
 
     /// <summary>
     /// FloatProperty: ARFMulti

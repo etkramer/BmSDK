@@ -3673,20 +3673,14 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentWindState
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindState CurrentWindState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindState CurrentWindState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 1064);
 
     /// <summary>
     /// StructProperty: CurrentWindConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindConfig CurrentWindConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindConfig CurrentWindConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 1132);
 
     /// <summary>
     /// FloatProperty: CurrentRainIntensity

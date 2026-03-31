@@ -2085,11 +2085,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinePackageCallbackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt LinePackageCallbackData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt LinePackageCallbackData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt>(Ptr + 612);
 
     /// <summary>
     /// StrProperty: FullTapeToLoad
@@ -2103,11 +2100,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TapeHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle TapeHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle TapeHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 648);
 
     /// <summary>
     /// IntProperty: TapeSubtitle

@@ -229,11 +229,8 @@ public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinat
     /// <summary>
     /// StructProperty: EventCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: AssignTime

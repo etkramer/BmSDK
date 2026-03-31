@@ -167,20 +167,14 @@ public partial class RSpecialMoveInstance_CwPounceOnThug : BmSDK.BmGame.RSpecial
     /// <summary>
     /// StructProperty: LandLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator LandLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator LandLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656);
 
     /// <summary>
     /// StructProperty: InitialLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator InitialLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator InitialLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 768);
 
     /// <summary>
     /// ObjectProperty: Victim

@@ -630,83 +630,53 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 992);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1004);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1016);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1028);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1040);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1052);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1064);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1076);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1088);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 1100);
 
     /// <summary>
     /// ByteProperty: LastMirrorChoice
@@ -720,11 +690,8 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: MineTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MineTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref System.Numerics.Vector3 MineTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1116);
 
     /// <summary>
     /// FloatProperty: PrimaryButtonChargeTime

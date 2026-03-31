@@ -204,11 +204,8 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: CurrentShowLevel
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentShowLevel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentShowLevel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// ObjectProperty: EvidenceInfo
@@ -267,11 +264,8 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: ParticleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// IntProperty: EvidenceIndex

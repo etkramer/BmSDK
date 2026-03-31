@@ -129,18 +129,12 @@ public partial class RCombatMove_VillainEvade : BmSDK.BmGame.RCombatMove, BmSDK.
     /// <summary>
     /// StructProperty: DangerOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 DangerOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 DangerOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// StructProperty: DangerDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 DangerDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 DangerDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 }

@@ -87,47 +87,32 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Spine
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig.FAimingPartConfig Spine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingConfig.FAimingPartConfig Spine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Head
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig.FAimingPartConfig Head
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingConfig.FAimingPartConfig Head
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: LeftArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig.FAimingPartConfig LeftArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingConfig.FAimingPartConfig LeftArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: RightArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig.FAimingPartConfig RightArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingConfig.FAimingPartConfig RightArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: LookAt
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig.FAimingPartConfig LookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingConfig.FAimingPartConfig LookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingConfig.FAimingPartConfig>(Ptr + 92);
 
     /// <summary>
     /// ByteProperty: Reference

@@ -76,9 +76,6 @@ public partial class ParticleModuleAccelerationOverLifetime : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: AccelOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector AccelOverLife
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector AccelOverLife
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60);
 }

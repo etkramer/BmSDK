@@ -324,11 +324,8 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedRootMotionDelta
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom CachedRootMotionDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom CachedRootMotionDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 144);
 
     /// <summary>
     /// IntProperty: bCachedHasRootMotion

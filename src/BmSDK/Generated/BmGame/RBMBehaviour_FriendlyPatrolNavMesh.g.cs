@@ -393,11 +393,8 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: StoredTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// ObjectProperty: ExitPoints
@@ -510,11 +507,8 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: ProximityAndSightOptions
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol ProximityAndSightOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol ProximityAndSightOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol>(Ptr + 532);
 
     /// <summary>
     /// ArrayProperty: WaitAtPointOverlays
@@ -555,9 +549,6 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: DirectionOfFocus
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirectionOfFocus
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirectionOfFocus
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 }

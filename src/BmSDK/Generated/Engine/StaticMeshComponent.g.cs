@@ -250,11 +250,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 420);
 
     /// <summary>
     /// IntProperty: OverriddenLightMapRes
@@ -340,11 +337,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LODData
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 444);
 
     /// <summary>
     /// IntProperty: VertexPositionVersionNumber

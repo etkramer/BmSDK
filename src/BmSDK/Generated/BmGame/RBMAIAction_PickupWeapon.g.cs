@@ -190,9 +190,6 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// StructProperty: PickupAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588);
 }

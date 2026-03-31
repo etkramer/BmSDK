@@ -132,9 +132,6 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: TurnID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TurnID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TurnID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 400);
 }

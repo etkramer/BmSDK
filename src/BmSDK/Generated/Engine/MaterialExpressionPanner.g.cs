@@ -76,20 +76,14 @@ public partial class MaterialExpressionPanner : BmSDK.Engine.MaterialExpression,
     /// <summary>
     /// StructProperty: Coordinate
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Coordinate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Time
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Time
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Time
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 
     /// <summary>
     /// FloatProperty: SpeedX

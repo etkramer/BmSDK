@@ -99,29 +99,20 @@ public partial class LadderVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: WallDir
     /// </summary>
-    public unsafe BmSDK.Rotator WallDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.Rotator WallDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 560);
 
     /// <summary>
     /// StructProperty: LookDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// StructProperty: ClimbDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClimbDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClimbDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// ObjectProperty: LadderList

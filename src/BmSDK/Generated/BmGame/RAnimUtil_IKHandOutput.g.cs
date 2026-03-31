@@ -76,11 +76,8 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_State State
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_State>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_State State
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_State>(Ptr + 44);
 
     /// <summary>
     /// Struct: FIKHand_State

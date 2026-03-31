@@ -348,20 +348,14 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 848);
 
     /// <summary>
     /// StructProperty: MoveForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 860);
 
     /// <summary>
     /// ObjectProperty: PushMoveMove

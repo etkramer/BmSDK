@@ -436,11 +436,8 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Bounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds Bounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 44);
 
     /// <summary>
     /// FloatProperty: ConservativeBounds
@@ -490,20 +487,14 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe System.Numerics.Vector3 Origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector3 Origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: RotOrigin
     /// </summary>
-    public unsafe BmSDK.Rotator RotOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.Rotator RotOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 136);
 
     /// <summary>
     /// ArrayProperty: RefSkeleton
@@ -535,11 +526,8 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LODModels
     /// </summary>
-    public unsafe BmSDK.GameObject.FIndirectArray_Mirror LODModels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FIndirectArray_Mirror LODModels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 224);
 
     /// <summary>
     /// ArrayProperty: RefBasesInvMatrix
@@ -1309,29 +1297,20 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ValidBoundsMin
     /// </summary>
-    public unsafe System.Numerics.Vector3 ValidBoundsMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 ValidBoundsMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: ValidBoundsMax
     /// </summary>
-    public unsafe System.Numerics.Vector3 ValidBoundsMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 ValidBoundsMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// StructProperty: ClothTornTriMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror ClothTornTriMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror ClothTornTriMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 700);
 
     /// <summary>
     /// StrProperty: SourceAuthor

@@ -164,11 +164,8 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// StructProperty: TargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: ConvergeNavReq

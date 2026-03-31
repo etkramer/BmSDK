@@ -106,9 +106,6 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// StructProperty: AttachOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 }

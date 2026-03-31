@@ -149,11 +149,8 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe System.Numerics.Vector3 Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.Numerics.Vector3 Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 52);
 
     /// <summary>
     /// ObjectProperty: Start
@@ -167,11 +164,8 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: End
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FActorReference End
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FActorReference>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FActorReference End
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FActorReference>(Ptr + 68);
 
     /// <summary>
     /// IntProperty: CollisionRadius

@@ -76,9 +76,6 @@ public partial class MaterialExpressionNormalize : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: VectorInput
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput VectorInput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput VectorInput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 }

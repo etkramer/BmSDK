@@ -387,11 +387,8 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: FlightDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlightDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlightDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: FlightSpeed
@@ -423,11 +420,8 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: DownSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 DownSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 DownSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// ArrayProperty: InfluencedThugs

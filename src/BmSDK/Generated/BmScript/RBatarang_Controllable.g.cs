@@ -416,9 +416,6 @@ public partial class RBatarang_Controllable : BmSDK.BmGame.RBatarang, BmSDK.IGam
     /// <summary>
     /// StructProperty: LockOnSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle LockOnSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle LockOnSound
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1340);
 }

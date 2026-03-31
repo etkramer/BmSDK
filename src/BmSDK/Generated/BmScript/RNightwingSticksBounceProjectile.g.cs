@@ -176,11 +176,8 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: NextTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 816);
 
     /// <summary>
     /// FloatProperty: TimeUntilCatch
@@ -194,11 +191,8 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: RicochetDelta
     /// </summary>
-    public unsafe System.Numerics.Vector3 RicochetDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
-    }
+    public unsafe ref System.Numerics.Vector3 RicochetDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 832);
 
     /// <summary>
     /// FloatProperty: CatchAnimDelay
@@ -230,11 +224,8 @@ public partial class RNightwingSticksBounceProjectile : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: ReturnPerp
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReturnPerp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReturnPerp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 856);
 
     /// <summary>
     /// ObjectProperty: TrackingCamHitActor

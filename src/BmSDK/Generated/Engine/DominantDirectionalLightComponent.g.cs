@@ -76,18 +76,12 @@ public partial class DominantDirectionalLightComponent : BmSDK.Engine.Directiona
     /// <summary>
     /// StructProperty: DominantLightShadowInfo
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FDominantShadowInfo DominantLightShadowInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FDominantShadowInfo>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FDominantShadowInfo DominantLightShadowInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FDominantShadowInfo>(Ptr + 432);
 
     /// <summary>
     /// StructProperty: DominantLightShadowMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror DominantLightShadowMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror DominantLightShadowMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 608);
 }

@@ -76,11 +76,8 @@ public partial class ParticleModuleSizeScaleByTime : BmSDK.Engine.ParticleModule
     /// <summary>
     /// StructProperty: SizeScaleByTime
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SizeScaleByTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SizeScaleByTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: bEnableX

@@ -108,11 +108,8 @@ public partial class RSeqAct_SlowBM : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ForcedLookDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForcedLookDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForcedLookDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 224);
 
     /// <summary>
     /// BoolProperty: bRunning

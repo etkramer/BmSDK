@@ -76,20 +76,14 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
     /// <summary>
     /// StructProperty: SplineParams
     /// </summary>
-    public unsafe BmSDK.Engine.SplineMeshComponent.FSplineMeshParams SplineParams
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SplineMeshComponent.FSplineMeshParams>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.Engine.SplineMeshComponent.FSplineMeshParams SplineParams
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SplineMeshComponent.FSplineMeshParams>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: SplineXDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SplineXDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 SplineXDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// BoolProperty: bSmoothInterpRollScale

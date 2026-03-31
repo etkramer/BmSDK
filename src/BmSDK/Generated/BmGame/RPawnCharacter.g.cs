@@ -3297,20 +3297,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PreviousPose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousPose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousPose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription>(Ptr + 1340);
 
     /// <summary>
     /// StructProperty: Pose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Pose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FPoseDescription>(Ptr + 1416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1416); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Pose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FPoseDescription>(Ptr + 1416);
 
     /// <summary>
     /// ObjectProperty: UnarmedWeaponConfig
@@ -3351,20 +3345,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GetUpTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1696); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1696);
 
     /// <summary>
     /// StructProperty: SoundCharacterFilter
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 1700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1700); }
-    }
+    public unsafe ref BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 1700);
 
     /// <summary>
     /// FloatProperty: TimeOfLastBodyFallParticle
@@ -3378,11 +3366,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RagdollTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RagdollTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1708); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RagdollTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1708);
 
     /// <summary>
     /// ComponentProperty: BodyConstrainingComponent
@@ -3414,20 +3399,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PrevSafePelvisLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevSafePelvisLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevSafePelvisLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1724);
 
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1736);
 
     /// <summary>
     /// IntProperty: NavMeshConstrainFrames
@@ -3459,11 +3438,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Tweak_LocationNudge
     /// </summary>
-    public unsafe System.Numerics.Vector3 Tweak_LocationNudge
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1768); }
-    }
+    public unsafe ref System.Numerics.Vector3 Tweak_LocationNudge
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1768);
 
     /// <summary>
     /// ArrayProperty: Tweak_FaceFXRegisters

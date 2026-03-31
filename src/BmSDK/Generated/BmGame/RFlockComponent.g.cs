@@ -185,20 +185,14 @@ public partial class RFlockComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameO
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: PreviousTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousTargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousTargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 116);
 
     /// <summary>
     /// ArrayProperty: Birds

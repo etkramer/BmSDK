@@ -153,11 +153,8 @@ public partial class RCombatMove_VillainPickupWeapon : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// StructProperty: TargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// ObjectProperty: HostController
@@ -207,20 +204,14 @@ public partial class RCombatMove_VillainPickupWeapon : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// StructProperty: PickupAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PickupAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: LastRoutePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastRoutePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastRoutePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// FloatProperty: RetryTimer
@@ -243,18 +234,12 @@ public partial class RCombatMove_VillainPickupWeapon : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// StructProperty: AnimRot
     /// </summary>
-    public unsafe BmSDK.Rotator AnimRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.Rotator AnimRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 544);
 }

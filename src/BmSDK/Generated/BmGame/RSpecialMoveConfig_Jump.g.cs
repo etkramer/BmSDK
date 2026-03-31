@@ -89,11 +89,8 @@ public partial class RSpecialMoveConfig_Jump : BmSDK.BmGame.RSpecialMoveConfig_R
     /// <summary>
     /// StructProperty: JumpVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 372);
 
     /// <summary>
     /// BoolProperty: bAlignWithFeature

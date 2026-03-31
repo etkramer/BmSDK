@@ -76,11 +76,8 @@ public partial class DrawCapsuleComponent : BmSDK.Engine.PrimitiveComponent, BmS
     /// <summary>
     /// StructProperty: CapsuleColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor CapsuleColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor CapsuleColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 404);
 
     /// <summary>
     /// ObjectProperty: CapsuleMaterial

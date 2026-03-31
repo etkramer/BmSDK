@@ -636,19 +636,13 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 404);
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 432);
 
     /// <summary>
     /// FloatProperty: RopeLength

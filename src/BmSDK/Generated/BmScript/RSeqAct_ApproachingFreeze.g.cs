@@ -176,11 +176,8 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: PathVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 PathVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref System.Numerics.Vector3 PathVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 232);
 
     /// <summary>
     /// FloatProperty: fTotalPathLength

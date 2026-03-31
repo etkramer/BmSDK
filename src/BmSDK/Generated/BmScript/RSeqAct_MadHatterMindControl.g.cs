@@ -915,11 +915,8 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// StructProperty: lookRot
     /// </summary>
-    public unsafe BmSDK.Rotator lookRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.Rotator lookRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 432);
 
     /// <summary>
     /// FloatProperty: timeSinceLook

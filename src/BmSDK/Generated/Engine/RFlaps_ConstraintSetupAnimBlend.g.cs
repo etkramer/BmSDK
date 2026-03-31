@@ -76,11 +76,8 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// StructProperty: ConstrainedParticle
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64);
 
     /// <summary>
     /// FloatProperty: ConstraintRadius
@@ -94,43 +91,28 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 84);
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 96);
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 108);
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 120);
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 132);
 
     /// <summary>
     /// Struct: FRBlendBoneData

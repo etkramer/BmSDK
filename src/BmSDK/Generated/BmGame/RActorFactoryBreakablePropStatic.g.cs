@@ -76,11 +76,8 @@ public partial class RActorFactoryBreakablePropStatic : BmSDK.Engine.ActorFactor
     /// <summary>
     /// StructProperty: BreakablePropDamage
     /// </summary>
-    public unsafe BmSDK.BmGame.RActorFactoryBreakablePropStatic.FDamageDef BreakablePropDamage
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RActorFactoryBreakablePropStatic.FDamageDef>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.BmGame.RActorFactoryBreakablePropStatic.FDamageDef BreakablePropDamage
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RActorFactoryBreakablePropStatic.FDamageDef>(Ptr + 152);
 
     /// <summary>
     /// ArrayProperty: RandomVariation

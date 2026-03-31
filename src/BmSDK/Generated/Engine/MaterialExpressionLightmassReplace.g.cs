@@ -76,18 +76,12 @@ public partial class MaterialExpressionLightmassReplace : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: Realtime
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Realtime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Realtime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Lightmass
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Lightmass
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Lightmass
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 }

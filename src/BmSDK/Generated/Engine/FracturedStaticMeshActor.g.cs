@@ -989,11 +989,8 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: FracturePartRBPartCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer FracturePartRBPartCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer FracturePartRBPartCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 496);
 
     /// <summary>
     /// ArrayProperty: DeferredPartsToSpawn
@@ -1007,20 +1004,14 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// StructProperty: PartImpactEffect
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FPhysEffectInfo PartImpactEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FPhysEffectInfo PartImpactEffect
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 524);
 
     /// <summary>
     /// ObjectProperty: ExplosionFractureSound
@@ -1070,11 +1061,8 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: FracturePartLightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer FracturePartLightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer FracturePartLightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 568);
 
     /// <summary>
     /// ObjectProperty: MI_LoseChunkPreviousMaterial

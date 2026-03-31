@@ -507,11 +507,8 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// StructProperty: TransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524);
 
     /// <summary>
     /// FloatProperty: StateTime

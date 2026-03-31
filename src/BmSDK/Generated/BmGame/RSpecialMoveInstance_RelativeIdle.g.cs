@@ -135,11 +135,8 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: TransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 576);
 
     /// <summary>
     /// IntProperty: TimeForYawUpdate
@@ -171,11 +168,8 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: LastLookAround
     /// </summary>
-    public unsafe BmSDK.Rotator LastLookAround
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.Rotator LastLookAround
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 592);
 
     /// <summary>
     /// FloatProperty: CurrentLookAroundBlendTime

@@ -85,20 +85,14 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: Base
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Base
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Base
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: Layer
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Layer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Layer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 124);
 
     /// <summary>
     /// NameProperty: ParameterName
@@ -121,9 +115,6 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid ExpressionGUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 164);
 }

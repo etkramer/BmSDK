@@ -76,29 +76,20 @@ public partial class RParticleAttractorComponent : BmSDK.Engine.ActorComponent, 
     /// <summary>
     /// StructProperty: AttractorChannel
     /// </summary>
-    public unsafe BmSDK.GameObject.FRChannel8 AttractorChannel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRChannel8>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.GameObject.FRChannel8 AttractorChannel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRChannel8>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Range
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Range
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 104);
 
     /// <summary>
     /// BoolProperty: StrengthByDistance

@@ -99,11 +99,8 @@ public partial class RBMBehaviour_BatShock : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// StructProperty: ThreatLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThreatLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThreatLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 396);
 
     /// <summary>
     /// FloatProperty: ThreatYaw

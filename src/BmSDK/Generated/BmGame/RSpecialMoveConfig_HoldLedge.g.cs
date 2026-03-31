@@ -100,9 +100,6 @@ public partial class RSpecialMoveConfig_HoldLedge : BmSDK.BmGame.RSpecialMoveCon
     /// <summary>
     /// StructProperty: LedgeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LedgeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref System.Numerics.Vector3 LedgeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 336);
 }

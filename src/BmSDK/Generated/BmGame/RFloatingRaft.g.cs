@@ -354,11 +354,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: RaftTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 804);
 
     /// <summary>
     /// ObjectProperty: DamageFX
@@ -399,11 +396,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 840);
 
     /// <summary>
     /// BoolProperty: InitiallyFrozen
@@ -453,11 +447,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastGrinderHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGrinderHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGrinderHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 856);
 
     /// <summary>
     /// FloatProperty: LastGrinderHitTime
@@ -570,11 +561,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Shaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 924);
 
     /// <summary>
     /// FloatProperty: DockingForce
@@ -588,11 +576,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: DockingPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 DockingPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
-    }
+    public unsafe ref System.Numerics.Vector3 DockingPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1072);
 
     /// <summary>
     /// ObjectProperty: FrontWakeFX
@@ -624,35 +609,23 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1096); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1096);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1108);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1120);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
 
     /// <summary>
     /// FloatProperty: WakeScales

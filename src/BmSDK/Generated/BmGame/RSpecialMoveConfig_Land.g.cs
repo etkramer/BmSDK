@@ -76,11 +76,8 @@ public partial class RSpecialMoveConfig_Land : BmSDK.BmGame.RSpecialMoveConfig_P
     /// <summary>
     /// StructProperty: ScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 332);
 
     /// <summary>
     /// BoolProperty: bShakeScreen

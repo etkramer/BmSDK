@@ -146,11 +146,8 @@ public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GroupColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor GroupColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor GroupColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 68);
 
     /// <summary>
     /// ArrayProperty: GroupAnimSets

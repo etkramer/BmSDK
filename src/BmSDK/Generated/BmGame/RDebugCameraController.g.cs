@@ -1044,20 +1044,14 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// StructProperty: LightContainer1
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightContainer1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 1488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1488); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightContainer1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 1488);
 
     /// <summary>
     /// StructProperty: LightContainer2
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightContainer2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 1492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1492); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightContainer2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 1492);
 
     /// <summary>
     /// BoolProperty: bUsingEnvironmentSphere
@@ -1269,11 +1263,8 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// StructProperty: DOFSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings DOFSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1540); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings DOFSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1540);
 
     /// <summary>
     /// IntProperty: iShotIndex
@@ -1323,47 +1314,32 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// StructProperty: OrbitPivot
     /// </summary>
-    public unsafe System.Numerics.Vector3 OrbitPivot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1960); }
-    }
+    public unsafe ref System.Numerics.Vector3 OrbitPivot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1960);
 
     /// <summary>
     /// StructProperty: OldCameraPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldCameraPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1972); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldCameraPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1972);
 
     /// <summary>
     /// StructProperty: OldCameraRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OldCameraRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1984); }
-    }
+    public unsafe ref BmSDK.Rotator OldCameraRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1984);
 
     /// <summary>
     /// StructProperty: TrackingOffset
     /// </summary>
-    public unsafe BmSDK.Rotator TrackingOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1996); }
-    }
+    public unsafe ref BmSDK.Rotator TrackingOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1996);
 
     /// <summary>
     /// StructProperty: OrbitOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 OrbitOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
-    }
+    public unsafe ref System.Numerics.Vector3 OrbitOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2008);
 
     /// <summary>
     /// ObjectProperty: TrackingPlayer

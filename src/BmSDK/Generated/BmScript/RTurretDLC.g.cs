@@ -190,11 +190,8 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScaleMask
     /// </summary>
-    public unsafe System.Numerics.Vector3 ScaleMask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 ScaleMask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// FloatProperty: lastlife
@@ -217,11 +214,8 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: lastscalev
     /// </summary>
-    public unsafe System.Numerics.Vector3 lastscalev
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref System.Numerics.Vector3 lastscalev
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 884);
 
     /// <summary>
     /// BoolProperty: bDebugPlayerAlwaysBlocks

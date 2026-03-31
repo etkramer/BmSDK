@@ -138,20 +138,14 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Emitters
     /// </summary>
-    public unsafe BmSDK.BmGame.RObjectPool.FREmitterPool Emitters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RObjectPool.FREmitterPool>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RObjectPool.FREmitterPool Emitters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RObjectPool.FREmitterPool>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: PhysXEmitters
     /// </summary>
-    public unsafe BmSDK.BmGame.RObjectPool.FREmitterPool PhysXEmitters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RObjectPool.FREmitterPool>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.BmGame.RObjectPool.FREmitterPool PhysXEmitters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RObjectPool.FREmitterPool>(Ptr + 168);
 
     /// <summary>
     /// Struct: FREmitterPool

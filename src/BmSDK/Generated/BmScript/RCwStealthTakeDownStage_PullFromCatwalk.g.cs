@@ -151,11 +151,8 @@ public partial class RCwStealthTakeDownStage_PullFromCatwalk : BmSDK.BmGame.RSte
     /// <summary>
     /// StructProperty: FeaturePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 FeaturePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 FeaturePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
 
     /// <summary>
     /// NameProperty: VictimRightAnimName

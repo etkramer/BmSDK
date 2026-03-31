@@ -258,11 +258,8 @@ public partial class RCombatMove_VillainSmokeBombReaction : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: LastHitDmgInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.FDamageInfo LastHitDmgInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCombat.FDamageInfo LastHitDmgInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCombat.FDamageInfo>(Ptr + 508);
 
     /// <summary>
     /// ArrayProperty: HitTargets

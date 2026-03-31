@@ -89,20 +89,14 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Header
     /// </summary>
-    public unsafe BmSDK.Engine.GameplayEvents.FGameplayEventsHeader Header
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEvents.FGameplayEventsHeader>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.Engine.GameplayEvents.FGameplayEventsHeader Header
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameplayEvents.FGameplayEventsHeader>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: CurrentSessionInfo
     /// </summary>
-    public unsafe BmSDK.Engine.GameplayEvents.FGameSessionInformation CurrentSessionInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEvents.FGameSessionInformation>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.Engine.GameplayEvents.FGameSessionInformation CurrentSessionInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameplayEvents.FGameSessionInformation>(Ptr + 104);
 
     /// <summary>
     /// ArrayProperty: PlayerList

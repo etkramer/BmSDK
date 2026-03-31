@@ -516,20 +516,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// StructProperty: Gravity
     /// </summary>
-    public unsafe System.Numerics.Vector3 Gravity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 Gravity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// StructProperty: SpringPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpringPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpringPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 544);
 
     /// <summary>
     /// FloatProperty: SpringLength
@@ -579,20 +573,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// StructProperty: ForwardMovementProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties ForwardMovementProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties ForwardMovementProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 576);
 
     /// <summary>
     /// StructProperty: BackwardMovementProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties BackwardMovementProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties BackwardMovementProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 588);
 
     /// <summary>
     /// NameProperty: InitialPositionMatineeEventName
@@ -651,11 +639,8 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// StructProperty: CurrentMagForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentMagForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentMagForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 644);
 
     /// <summary>
     /// FloatProperty: InitialMatineePosition
@@ -714,20 +699,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// StructProperty: LastSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// StructProperty: Speed
     /// </summary>
-    public unsafe System.Numerics.Vector3 Speed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref System.Numerics.Vector3 Speed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 708);
 
     /// <summary>
     /// FloatProperty: NormalisedSpeed
@@ -750,11 +729,8 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe System.Numerics.Vector3 Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 
     /// <summary>
     /// FloatProperty: MaxPosSpeed

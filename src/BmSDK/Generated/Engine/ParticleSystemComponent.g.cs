@@ -1692,11 +1692,8 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// StructProperty: DynamicLocalSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DynamicLocalSpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 DynamicLocalSpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// ArrayProperty: InstanceParameters
@@ -1710,20 +1707,14 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// StructProperty: OldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: PartSysVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 PartSysVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 PartSysVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// FloatProperty: WarmupTime
@@ -1836,11 +1827,8 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// StructProperty: IncomingLight
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor IncomingLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor IncomingLight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 584);
 
     /// <summary>
     /// ArrayProperty: ReplayClips

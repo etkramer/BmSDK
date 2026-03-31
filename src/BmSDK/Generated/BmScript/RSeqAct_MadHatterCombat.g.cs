@@ -786,20 +786,14 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: CamPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CamPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 CamPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// StructProperty: camTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 camTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref System.Numerics.Vector3 camTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 360);
 
     /// <summary>
     /// FloatProperty: hourHandRotation
@@ -1032,29 +1026,20 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: TeleportDestLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TeleportDestLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 TeleportDestLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: TeleportDestRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TeleportDestRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref BmSDK.Rotator TeleportDestRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: currentPPTransition
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_MadHatterCombat.FMadHatterPPTransition currentPPTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_MadHatterCombat.FMadHatterPPTransition>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_MadHatterCombat.FMadHatterPPTransition currentPPTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_MadHatterCombat.FMadHatterPPTransition>(Ptr + 516);
 
     /// <summary>
     /// FloatProperty: handSlowDownStartTime

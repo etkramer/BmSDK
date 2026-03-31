@@ -235,11 +235,8 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// StructProperty: StoredTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 424);
 
     /// <summary>
     /// BoolProperty: bUsePoints

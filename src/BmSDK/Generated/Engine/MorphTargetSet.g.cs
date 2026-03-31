@@ -113,9 +113,6 @@ public partial class MorphTargetSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RawWedgePointIndices
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror RawWedgePointIndices
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror RawWedgePointIndices
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 60);
 }

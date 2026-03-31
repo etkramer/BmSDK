@@ -119,56 +119,38 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
     /// <summary>
     /// StructProperty: OffsetAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector OffsetAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector OffsetAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: OffsetOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions OffsetOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions OffsetOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: RotationAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotationAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector RotationAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: RotationOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: RotationRateAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotationRateAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector RotationRateAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: RotationRateOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationRateOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationRateOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 156);
 
     /// <summary>
     /// Enum: EOrbitChainMode

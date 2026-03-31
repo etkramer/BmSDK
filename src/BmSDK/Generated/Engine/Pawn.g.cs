@@ -2921,11 +2921,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: PartialLedgeMoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 PartialLedgeMoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 PartialLedgeMoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// ObjectProperty: Controller
@@ -3839,11 +3836,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: SerpentineDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SerpentineDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 SerpentineDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// FloatProperty: SerpentineDist
@@ -4028,11 +4022,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: Floor
     /// </summary>
-    public unsafe System.Numerics.Vector3 Floor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 Floor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// FloatProperty: SplashTime
@@ -4109,20 +4100,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: RMVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RMVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 RMVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 
     /// <summary>
     /// StructProperty: noise1spot
     /// </summary>
-    public unsafe System.Numerics.Vector3 noise1spot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
+    public unsafe ref System.Numerics.Vector3 noise1spot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 744);
 
     /// <summary>
     /// FloatProperty: noise1time
@@ -4154,11 +4139,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: noise2spot
     /// </summary>
-    public unsafe System.Numerics.Vector3 noise2spot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref System.Numerics.Vector3 noise2spot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 768);
 
     /// <summary>
     /// FloatProperty: noise2time
@@ -4280,11 +4262,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: TakeHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TakeHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref System.Numerics.Vector3 TakeHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 848);
 
     /// <summary>
     /// ClassProperty: HitDamageType
@@ -4298,11 +4277,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: TearOffMomentum
     /// </summary>
-    public unsafe System.Numerics.Vector3 TearOffMomentum
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 TearOffMomentum
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// ComponentProperty: Mesh
@@ -4406,11 +4382,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: DesiredRotation
     /// </summary>
-    public unsafe BmSDK.Rotator DesiredRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.Rotator DesiredRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 920);
 
     /// <summary>
     /// ClassProperty: InventoryManagerClass
@@ -4442,20 +4415,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: FlashLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlashLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlashLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 944);
 
     /// <summary>
     /// StructProperty: LastFiringFlashLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastFiringFlashLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastFiringFlashLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 956);
 
     /// <summary>
     /// IntProperty: ShotCount
@@ -4496,11 +4463,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: walkFailPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 walkFailPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref System.Numerics.Vector3 walkFailPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 984);
 
     /// <summary>
     /// ObjectProperty: LinkedCullPawn
@@ -4559,11 +4523,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: RootMotionInterpCurve
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FRootMotionCurve RootMotionInterpCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FRootMotionCurve>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FRootMotionCurve RootMotionInterpCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FRootMotionCurve>(Ptr + 1044);
 
     /// <summary>
     /// FloatProperty: RootMotionInterpRate
@@ -4586,9 +4547,6 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// StructProperty: RootMotionInterpCurveLastValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionInterpCurveLastValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionInterpCurveLastValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1080);
 }

@@ -85,9 +85,6 @@ public partial class InterpTrackInstVectorProp : BmSDK.Engine.InterpTrackInstPro
     /// <summary>
     /// StructProperty: ResetVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResetVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 ResetVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 }

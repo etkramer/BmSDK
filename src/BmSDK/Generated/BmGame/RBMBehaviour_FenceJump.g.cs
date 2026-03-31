@@ -179,29 +179,20 @@ public partial class RBMBehaviour_FenceJump : BmSDK.BmGame.RBMBehaviour, BmSDK.I
     /// <summary>
     /// StructProperty: JumpDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
 
     /// <summary>
     /// StructProperty: JumpLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 412);
 
     /// <summary>
     /// StructProperty: JumpAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 424);
 
     /// <summary>
     /// BoolProperty: bCheckPawnsBelow

@@ -207,11 +207,8 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GameplaySessionID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid GameplaySessionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid GameplaySessionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 120);
 
     /// <summary>
     /// Struct: FPlayerInformation

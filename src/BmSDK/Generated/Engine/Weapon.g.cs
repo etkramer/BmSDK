@@ -1006,11 +1006,8 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FireOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FireOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 FireOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// BoolProperty: bWeaponPutDown

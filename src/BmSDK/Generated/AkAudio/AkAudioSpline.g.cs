@@ -151,20 +151,14 @@ public partial class AkAudioSpline : BmSDK.Engine.SplineActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AudioSplineSoundPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 AudioSplineSoundPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 AudioSplineSoundPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// StructProperty: AudioSplineSmoothingBuffer
     /// </summary>
-    public unsafe System.Numerics.Vector3 AudioSplineSmoothingBuffer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref System.Numerics.Vector3 AudioSplineSmoothingBuffer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 544);
 
     /// <summary>
     /// StructProperty: AudioSplineLastUpdateTime

@@ -123,11 +123,8 @@ public partial class RBMAIAction_LookAtHole : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// StructProperty: HoleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 HoleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 HoleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// BoolProperty: bIsHorizontal

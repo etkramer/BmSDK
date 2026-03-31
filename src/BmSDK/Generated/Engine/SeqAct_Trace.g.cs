@@ -105,29 +105,20 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TraceExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 TraceExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 TraceExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 
     /// <summary>
     /// StructProperty: StartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 220);
 
     /// <summary>
     /// StructProperty: EndOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 232);
 
     /// <summary>
     /// ObjectProperty: HitObject
@@ -150,9 +141,6 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: HitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 252);
 }

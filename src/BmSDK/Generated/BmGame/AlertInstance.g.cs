@@ -145,11 +145,8 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AlertLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AlertLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.Numerics.Vector3 AlertLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 48);
 
     /// <summary>
     /// ByteProperty: Type

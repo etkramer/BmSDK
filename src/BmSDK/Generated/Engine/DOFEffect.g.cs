@@ -126,11 +126,8 @@ public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ModulateBlurColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ModulateBlurColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ModulateBlurColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 104);
 
     /// <summary>
     /// ByteProperty: FocusType
@@ -162,9 +159,6 @@ public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: FocusPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref System.Numerics.Vector3 FocusPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 120);
 }

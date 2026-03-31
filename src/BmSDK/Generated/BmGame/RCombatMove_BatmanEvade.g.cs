@@ -199,20 +199,14 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: EvadeDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 EvadeDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 EvadeDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: EvadeAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EvadeAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EvadeAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 504);
 
     /// <summary>
     /// NameProperty: EvadeName
@@ -226,11 +220,8 @@ public partial class RCombatMove_BatmanEvade : BmSDK.BmGame.RCombatMove_BatmanAt
     /// <summary>
     /// StructProperty: PredictedEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PredictedEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 PredictedEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// BoolProperty: bDiveInAir

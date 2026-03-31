@@ -76,20 +76,14 @@ public partial class MaterialExpressionBumpOffset : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: Coordinate
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Coordinate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Height
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Height
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Height
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 
     /// <summary>
     /// FloatProperty: HeightRatio

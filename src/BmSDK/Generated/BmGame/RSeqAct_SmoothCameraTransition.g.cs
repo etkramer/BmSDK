@@ -146,20 +146,14 @@ public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// StructProperty: FinalLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FinalLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector3 FinalLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: FinalRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FinalRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.Rotator FinalRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 248);
 
     /// <summary>
     /// FloatProperty: FinalFov
@@ -173,20 +167,14 @@ public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StartRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref BmSDK.Rotator StartRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 276);
 
     /// <summary>
     /// FloatProperty: StartFov

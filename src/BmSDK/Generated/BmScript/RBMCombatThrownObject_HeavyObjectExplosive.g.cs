@@ -259,9 +259,6 @@ public partial class RBMCombatThrownObject_HeavyObjectExplosive : BmSDK.BmScript
     /// <summary>
     /// StructProperty: BatarangOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 }

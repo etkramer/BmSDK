@@ -94,11 +94,8 @@ public partial class FogVolumeSphericalDensityComponent : BmSDK.Engine.FogVolume
     /// <summary>
     /// StructProperty: SphereCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 SphereCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 SphereCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// FloatProperty: SphereRadius

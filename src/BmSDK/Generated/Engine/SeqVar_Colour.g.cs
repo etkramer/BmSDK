@@ -76,9 +76,6 @@ public partial class SeqVar_Colour : BmSDK.Engine.SequenceVariable, BmSDK.IGameO
     /// <summary>
     /// StructProperty: ColourValue
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ColourValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ColourValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 128);
 }

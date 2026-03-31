@@ -240,92 +240,62 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: StartRelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartRelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartRelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: StartVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 88);
 
     /// <summary>
     /// StructProperty: StartFloor
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartFloor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartFloor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: SavedLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: SavedVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: SavedRelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedRelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedRelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: RMVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RMVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref System.Numerics.Vector3 RMVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 148);
 
     /// <summary>
     /// StructProperty: Acceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 Acceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref System.Numerics.Vector3 Acceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 160);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 172);
 
     /// <summary>
     /// ObjectProperty: StartBase
@@ -375,9 +345,6 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RootMotionInterpCurveLastValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionInterpCurveLastValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionInterpCurveLastValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 }

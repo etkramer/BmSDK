@@ -225,29 +225,20 @@ public partial class RCombatMove_BatmanThrownObjectCounter : BmSDK.BmGame.RComba
     /// <summary>
     /// StructProperty: ThrownObjectDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrownObjectDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrownObjectDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: CatchAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CatchAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CatchAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 520);
 
     /// <summary>
     /// StructProperty: ThrowAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 524);
 
     /// <summary>
     /// BoolProperty: bLockedThrowDir
@@ -279,11 +270,8 @@ public partial class RCombatMove_BatmanThrownObjectCounter : BmSDK.BmGame.RComba
     /// <summary>
     /// StructProperty: ThrowDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: ControllerInputThreshold

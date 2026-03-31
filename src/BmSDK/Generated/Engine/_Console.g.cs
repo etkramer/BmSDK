@@ -688,11 +688,8 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AutoCompleteTree
     /// </summary>
-    public unsafe BmSDK.Engine._Console.FAutoCompleteNode AutoCompleteTree
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine._Console.FAutoCompleteNode>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.Engine._Console.FAutoCompleteNode AutoCompleteTree
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine._Console.FAutoCompleteNode>(Ptr + 400);
 
     /// <summary>
     /// ArrayProperty: AutoCompleteIndices

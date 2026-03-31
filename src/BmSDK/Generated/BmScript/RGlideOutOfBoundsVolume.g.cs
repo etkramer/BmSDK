@@ -196,20 +196,14 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.BmGame.RBlockingVolume, BmS
     /// <summary>
     /// StructProperty: ImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// StructProperty: ImpactRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ImpactRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref BmSDK.Rotator ImpactRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 512);
 
     /// <summary>
     /// ArrayProperty: GunFireEffects

@@ -152,20 +152,14 @@ public partial class RStealthTakeDownStage_GrabOnFloor : BmSDK.BmGame.RStealthTa
     /// <summary>
     /// StructProperty: SetReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SetReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 SetReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
 
     /// <summary>
     /// StructProperty: SetReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator SetReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.Rotator SetReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1044);
 
     /// <summary>
     /// ByteProperty: ChallengeGameAction

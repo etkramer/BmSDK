@@ -99,18 +99,12 @@ public partial class RSeqAct_ChangeCape : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: StateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData StateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData StateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: CapeChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeChangeData CapeChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeChangeData>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeChangeData CapeChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeChangeData>(Ptr + 264);
 }

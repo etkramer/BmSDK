@@ -3154,204 +3154,132 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: DoubleSwingData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3704); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3704);
     /// <summary>
     /// StructProperty: DoubleSwingData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3720);
     /// <summary>
     /// StructProperty: DoubleSwingData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3736); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3736);
 
     /// <summary>
     /// StructProperty: SwingAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 3752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3752); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 3752);
     /// <summary>
     /// StructProperty: SwingAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 3908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3908); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 3908);
     /// <summary>
     /// StructProperty: SwingAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 4064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4064); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 4064);
 
     /// <summary>
     /// StructProperty: SmashAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4220); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4220);
     /// <summary>
     /// StructProperty: SmashAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4260); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4260);
     /// <summary>
     /// StructProperty: SmashAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4300); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters SmashAttackData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters>(Ptr + 4300);
 
     /// <summary>
     /// StructProperty: ElectrifiedSmashAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters ElectrifiedSmashAttackData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters>(Ptr + 4340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4340); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters ElectrifiedSmashAttackData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters>(Ptr + 4340);
 
     /// <summary>
     /// StructProperty: StompAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4440);
     /// <summary>
     /// StructProperty: StompAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4464); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4464);
     /// <summary>
     /// StructProperty: StompAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4488); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4488);
 
     /// <summary>
     /// StructProperty: DecayingDeathData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4512); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4512);
     /// <summary>
     /// StructProperty: DecayingDeathData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4612); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4612);
     /// <summary>
     /// StructProperty: DecayingDeathData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4712); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4712);
 
     /// <summary>
     /// StructProperty: MeleeAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4812); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4812);
     /// <summary>
     /// StructProperty: MeleeAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4848); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4848);
     /// <summary>
     /// StructProperty: MeleeAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4884); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters MeleeAttackData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters>(Ptr + 4884);
 
     /// <summary>
     /// StructProperty: NoArmMaggotsData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters NoArmMaggotsData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters NoArmMaggotsData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4920);
 
     /// <summary>
     /// StructProperty: HealthReductionData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5020); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5020);
     /// <summary>
     /// StructProperty: HealthReductionData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5068); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5068);
     /// <summary>
     /// StructProperty: HealthReductionData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5116); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters HealthReductionData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters>(Ptr + 5116);
 
     /// <summary>
     /// StructProperty: LowSwingShaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct LowSwingShaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5164); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct LowSwingShaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5164);
 
     /// <summary>
     /// ObjectProperty: LowSwingRumble
@@ -3374,11 +3302,8 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: SmashShaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct SmashShaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5316); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct SmashShaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5316);
 
     /// <summary>
     /// ObjectProperty: HitBySmashRumble
@@ -3392,11 +3317,8 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: StompShaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct StompShaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5464); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct StompShaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5464);
 
     /// <summary>
     /// ObjectProperty: HitByStompRumble
@@ -3622,99 +3544,63 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5716); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5716);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5768); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5768);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5820); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5820);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5872); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5872);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5924); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5924);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5976); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 5976);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6028); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6028);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6080);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6132); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6132);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6184); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6184);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6236); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6236);
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6288); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6288);
 
     /// <summary>
     /// ComponentProperty: FloorSparks
@@ -3825,27 +3711,18 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: SmashFireData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6392); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6392);
     /// <summary>
     /// StructProperty: SmashFireData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6420); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6420);
     /// <summary>
     /// StructProperty: SmashFireData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6448); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6448);
 
     /// <summary>
     /// ComponentProperty: SmashFires
@@ -4122,19 +3999,13 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: CurrentWeightsData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData CurrentWeightsData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData>(Ptr + 6640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData CurrentWeightsData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData>(Ptr + 6640);
     /// <summary>
     /// StructProperty: CurrentWeightsData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData CurrentWeightsData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData>(Ptr + 6716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6716); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData CurrentWeightsData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData>(Ptr + 6716);
 
     /// <summary>
     /// FloatProperty: ExtendChainTime
@@ -4182,11 +4053,8 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: CurrentMovementDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentMovementDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6812); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentMovementDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6812);
 
     /// <summary>
     /// ObjectProperty: NavHandle
@@ -4323,11 +4191,8 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: SavedSmashAttackPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedSmashAttackPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6884); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedSmashAttackPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6884);
 
     /// <summary>
     /// IntProperty: NumRepeatSmashes
@@ -4404,20 +4269,14 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: MeleeStartRefLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MeleeStartRefLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6936); }
-    }
+    public unsafe ref System.Numerics.Vector3 MeleeStartRefLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6936);
 
     /// <summary>
     /// StructProperty: MeleeStartRefRot
     /// </summary>
-    public unsafe BmSDK.Rotator MeleeStartRefRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 6948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6948); }
-    }
+    public unsafe ref BmSDK.Rotator MeleeStartRefRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 6948);
 
     /// <summary>
     /// FloatProperty: TimeSinceLastBMPunch
@@ -4494,11 +4353,8 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: VeinGlowColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor VeinGlowColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 6992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6992); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor VeinGlowColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 6992);
 
     /// <summary>
     /// FloatProperty: PadBeatAnimThreshold
@@ -4580,20 +4436,14 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// StructProperty: leftRopeAttachData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData leftRopeAttachData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 7044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7044); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData leftRopeAttachData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 7044);
 
     /// <summary>
     /// StructProperty: rightRopeAttachData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData rightRopeAttachData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 7072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7072); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData rightRopeAttachData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 7072);
 
     /// <summary>
     /// FloatProperty: weightsMaxVel2d

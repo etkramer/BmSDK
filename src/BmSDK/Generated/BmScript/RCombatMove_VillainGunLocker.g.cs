@@ -238,11 +238,8 @@ public partial class RCombatMove_VillainGunLocker : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// StructProperty: TargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// BoolProperty: bOpenedLocker
@@ -301,11 +298,8 @@ public partial class RCombatMove_VillainGunLocker : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// StructProperty: OpenDoorID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OpenDoorID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OpenDoorID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 504);
 
     /// <summary>
     /// ObjectProperty: NavHandle

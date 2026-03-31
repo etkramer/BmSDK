@@ -103,11 +103,8 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
     /// <summary>
     /// StructProperty: SourceStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 68);
 
     /// <summary>
     /// BoolProperty: bLockSourceStength

@@ -76,20 +76,14 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: UV
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput UV
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput UV
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: HeightMul
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput HeightMul
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput HeightMul
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 
     /// <summary>
     /// ObjectProperty: HeightTexture

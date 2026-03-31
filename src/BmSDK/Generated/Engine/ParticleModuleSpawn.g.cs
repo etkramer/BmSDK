@@ -76,20 +76,14 @@ public partial class ParticleModuleSpawn : BmSDK.Engine.ParticleModuleSpawnBase,
     /// <summary>
     /// StructProperty: Rate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Rate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Rate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: RateScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RateScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat RateScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88);
 
     /// <summary>
     /// ByteProperty: ParticleBurstMethod

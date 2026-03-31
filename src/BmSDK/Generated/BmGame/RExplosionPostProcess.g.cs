@@ -174,11 +174,8 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector3 Offset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 Offset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 
     /// <summary>
     /// ObjectProperty: Spawner

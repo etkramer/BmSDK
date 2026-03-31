@@ -394,20 +394,14 @@ public partial class RSeqAct_HelpText : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// StructProperty: CrouchHelp
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine CrouchHelp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine CrouchHelp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 280);
 
     /// <summary>
     /// StructProperty: CoverHelp
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine CoverHelp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine CoverHelp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 300);
 
     /// <summary>
     /// FloatProperty: HideGelTimer

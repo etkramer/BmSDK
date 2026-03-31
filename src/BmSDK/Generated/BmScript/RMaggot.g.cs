@@ -368,11 +368,8 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// StructProperty: CurrentDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// FloatProperty: NextDirectionChangeRandom
@@ -647,11 +644,8 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// StructProperty: CurrentSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 544);
 
     /// <summary>
     /// FloatProperty: MaxSpeed
@@ -692,11 +686,8 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// StructProperty: DropPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 DropPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 DropPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// ObjectProperty: ExplodeEvent

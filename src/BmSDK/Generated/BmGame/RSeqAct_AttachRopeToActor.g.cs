@@ -114,11 +114,8 @@ public partial class RSeqAct_AttachRopeToActor : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// StructProperty: BoneOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 220);
 
     /// <summary>
     /// BoolProperty: bEndTwo

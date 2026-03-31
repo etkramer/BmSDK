@@ -247,9 +247,6 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: GelSpraySoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GelSpraySoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GelSpraySoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 696);
 }

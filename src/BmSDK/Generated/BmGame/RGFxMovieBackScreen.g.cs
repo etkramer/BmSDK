@@ -1892,11 +1892,8 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: RiddlerHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RiddlerHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RiddlerHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 736);
 
     /// <summary>
     /// Enum: RiddleLoadingStatus

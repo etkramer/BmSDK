@@ -143,18 +143,12 @@ public partial class RStealthTakeDownStage_FromAbove : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 1044);
 
     /// <summary>
     /// StructProperty: GrappleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1156);
 }

@@ -94,47 +94,32 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
     /// <summary>
     /// StructProperty: Aim
     /// </summary>
-    public unsafe System.Numerics.Vector2 Aim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref System.Numerics.Vector2 Aim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 312);
 
     /// <summary>
     /// StructProperty: PreviousAim
     /// </summary>
-    public unsafe System.Numerics.Vector2 PreviousAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector2 PreviousAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: HorizontalRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 HorizontalRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref System.Numerics.Vector2 HorizontalRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 328);
 
     /// <summary>
     /// StructProperty: VerticalRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 VerticalRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref System.Numerics.Vector2 VerticalRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 336);
 
     /// <summary>
     /// StructProperty: AngleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 AngleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref System.Numerics.Vector2 AngleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 344);
 
     /// <summary>
     /// NameProperty: AnimName_LU

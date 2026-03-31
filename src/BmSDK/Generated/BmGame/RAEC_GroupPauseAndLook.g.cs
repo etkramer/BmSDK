@@ -160,9 +160,6 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
     /// <summary>
     /// StructProperty: LookPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 }

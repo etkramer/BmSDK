@@ -413,29 +413,20 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// StructProperty: vCurrentPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vCurrentPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref System.Numerics.Vector3 vCurrentPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 256);
 
     /// <summary>
     /// StructProperty: vLastPingPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vLastPingPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref System.Numerics.Vector3 vLastPingPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 268);
 
     /// <summary>
     /// StructProperty: vScreenPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 vScreenPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref System.Numerics.Vector3 vScreenPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 280);
 
     /// <summary>
     /// FloatProperty: fProximityToBatman

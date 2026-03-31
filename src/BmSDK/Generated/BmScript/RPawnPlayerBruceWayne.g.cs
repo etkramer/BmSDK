@@ -395,11 +395,8 @@ public partial class RPawnPlayerBruceWayne : BmSDK.BmGame.RPawnPlayer, BmSDK.IGa
     /// <summary>
     /// StructProperty: OldLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5980); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5980);
 
     /// <summary>
     /// IntProperty: TeleportCount

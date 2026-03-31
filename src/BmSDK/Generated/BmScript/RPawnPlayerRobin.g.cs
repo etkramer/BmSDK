@@ -1025,11 +1025,8 @@ public partial class RPawnPlayerRobin : BmSDK.BmGame.RPawnPlayerBmBase, BmSDK.Bm
     /// <summary>
     /// StructProperty: PutAwayStaffId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PutAwayStaffId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6060); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PutAwayStaffId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 6060);
 
     /// <summary>
     /// ComponentProperty: LeftWeapon

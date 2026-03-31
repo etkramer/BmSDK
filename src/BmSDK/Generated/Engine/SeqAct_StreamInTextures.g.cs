@@ -141,11 +141,8 @@ public partial class SeqAct_StreamInTextures : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// StructProperty: CinematicTextureGroups
     /// </summary>
-    public unsafe BmSDK.Engine.Texture.FTextureGroupContainer CinematicTextureGroups
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.FTextureGroupContainer>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.Engine.Texture.FTextureGroupContainer CinematicTextureGroups
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Texture.FTextureGroupContainer>(Ptr + 256);
 
     /// <summary>
     /// IntProperty: SelectedCinematicTextureGroups

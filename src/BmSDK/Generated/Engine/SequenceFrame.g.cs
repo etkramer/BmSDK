@@ -130,20 +130,14 @@ public partial class SequenceFrame : BmSDK.Engine.SequenceObject, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: BorderColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BorderColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BorderColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: FillColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor FillColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor FillColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 140);
 
     /// <summary>
     /// ObjectProperty: FillTexture

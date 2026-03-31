@@ -373,11 +373,8 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// StructProperty: CurrentCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// ArrayProperty: OverLookFence

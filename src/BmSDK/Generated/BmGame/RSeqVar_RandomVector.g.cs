@@ -76,18 +76,12 @@ public partial class RSeqVar_RandomVector : BmSDK.Engine.SeqVar_Vector, BmSDK.IG
     /// <summary>
     /// StructProperty: Min
     /// </summary>
-    public unsafe System.Numerics.Vector3 Min
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 Min
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: Max
     /// </summary>
-    public unsafe System.Numerics.Vector3 Max
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 Max
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 }

@@ -198,56 +198,38 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
     /// <summary>
     /// StructProperty: StartPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 892);
 
     /// <summary>
     /// StructProperty: EndPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// StructProperty: ControlPoint1
     /// </summary>
-    public unsafe System.Numerics.Vector3 ControlPoint1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref System.Numerics.Vector3 ControlPoint1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 916);
 
     /// <summary>
     /// StructProperty: ControlPoint2
     /// </summary>
-    public unsafe System.Numerics.Vector3 ControlPoint2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
+    public unsafe ref System.Numerics.Vector3 ControlPoint2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 928);
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StartRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
-    }
+    public unsafe ref BmSDK.Rotator StartRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 940);
 
     /// <summary>
     /// StructProperty: EndRotation
     /// </summary>
-    public unsafe BmSDK.Rotator EndRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref BmSDK.Rotator EndRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 952);
 
     /// <summary>
     /// FloatProperty: CurrentTime

@@ -258,11 +258,8 @@ public partial class RSeqAct_ActivateElectrifiedFloorPanels : BmSDK.Engine.SeqAc
     /// <summary>
     /// StructProperty: BatsLocAtStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatsLocAtStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatsLocAtStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 256);
 
     /// <summary>
     /// IntProperty: NearestPanelIndex

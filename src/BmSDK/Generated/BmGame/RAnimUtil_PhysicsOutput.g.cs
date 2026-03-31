@@ -194,11 +194,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Stack
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack Stack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack Stack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack>(Ptr + 72);
 
     /// <summary>
     /// ArrayProperty: PreviousLocalAtoms
@@ -212,11 +209,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PreviousLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix PreviousLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix PreviousLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 176);
 
     /// <summary>
     /// FloatProperty: PreviousDeltaSeconds

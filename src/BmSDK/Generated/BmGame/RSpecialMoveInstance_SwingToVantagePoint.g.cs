@@ -251,11 +251,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: NextHidePointSwingPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextHidePointSwingPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextHidePointSwingPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// FloatProperty: TrajectoryDuration
@@ -278,29 +275,20 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: TrajectoryOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: TrajectoryDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: TrajectoryUp
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
 
     /// <summary>
     /// FloatProperty: TrajectoryStart
@@ -323,11 +311,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: SwingEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// FloatProperty: CurrentTrajectoryPosition
@@ -368,29 +353,20 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: LandTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LandTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LandTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 668);
 
     /// <summary>
     /// StructProperty: StoredVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: OutVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 684);
 
     /// <summary>
     /// FloatProperty: TimeScale
@@ -404,11 +380,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: GrappleFireLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleFireLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleFireLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 700);
 
     /// <summary>
     /// IntProperty: JumpLandAnimYawOffset

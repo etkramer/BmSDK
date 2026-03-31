@@ -76,18 +76,12 @@ public partial class RAnimNotify_MotionExtractionOffset : BmSDK.Engine.AnimNotif
     /// <summary>
     /// StructProperty: Localspace_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Localspace_Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 Localspace_Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Animspace_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Animspace_Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 Animspace_Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 }

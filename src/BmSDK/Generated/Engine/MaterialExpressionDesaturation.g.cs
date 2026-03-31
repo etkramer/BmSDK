@@ -76,27 +76,18 @@ public partial class MaterialExpressionDesaturation : BmSDK.Engine.MaterialExpre
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Percent
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Percent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Percent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120);
 
     /// <summary>
     /// StructProperty: LuminanceFactors
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LuminanceFactors
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LuminanceFactors
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 148);
 }

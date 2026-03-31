@@ -76,9 +76,6 @@ public partial class ParticleModuleVelocityInheritParent : BmSDK.Engine.Particle
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Scale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Scale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60);
 }

@@ -367,20 +367,14 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Sub_Formation, BmSDK.IG
     /// <summary>
     /// StructProperty: SearchState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState SearchState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 472);
 
     /// <summary>
     /// StructProperty: LastArriveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastArriveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastArriveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// ObjectProperty: SearchRouting

@@ -105,20 +105,14 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Distance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Distance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: EndPoint
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector EndPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 88);
 
     /// <summary>
     /// IntProperty: TessellationFactor
@@ -132,29 +126,20 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: EmitterStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat EmitterStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat EmitterStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 120);
 
     /// <summary>
     /// StructProperty: TargetStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 148);
 
     /// <summary>
     /// StructProperty: EndPointDirection
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPointDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector EndPointDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 176);
 
     /// <summary>
     /// IntProperty: TextureTile

@@ -340,9 +340,6 @@ public partial class RRobinStickyBombPDLC : BmSDK.BmScript.RRobinStickyBomb, BmS
     /// <summary>
     /// StructProperty: CombatCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 CombatCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 CombatCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
 }

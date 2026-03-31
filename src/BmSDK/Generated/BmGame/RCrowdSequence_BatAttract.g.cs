@@ -235,9 +235,6 @@ public partial class RCrowdSequence_BatAttract : BmSDK.BmGame.RCrowdSequence, Bm
     /// <summary>
     /// StructProperty: AttractorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttractorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttractorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 }

@@ -298,11 +298,8 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// StructProperty: FlightDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlightDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlightDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// FloatProperty: FlightSpeed

@@ -664,27 +664,18 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1024);
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
-    }
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1048);
 
     /// <summary>
     /// ObjectProperty: HarpoonYankMove

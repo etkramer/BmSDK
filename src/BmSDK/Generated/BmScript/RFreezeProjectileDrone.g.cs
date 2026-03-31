@@ -291,20 +291,14 @@ public partial class RFreezeProjectileDrone : BmSDK.BmScript.RFreezeProjectileEx
     /// <summary>
     /// StructProperty: vTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vTargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 vTargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// StructProperty: vInitialDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 vInitialDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref System.Numerics.Vector3 vInitialDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 548);
 
     /// <summary>
     /// ObjectProperty: DestinationActor
@@ -444,11 +438,8 @@ public partial class RFreezeProjectileDrone : BmSDK.BmScript.RFreezeProjectileEx
     /// <summary>
     /// StructProperty: FlightHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle FlightHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle FlightHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 616);
 
     /// <summary>
     /// ComponentProperty: FreezeDroneTrail

@@ -1690,11 +1690,8 @@ public partial class RSeqAct_PlaySpeechCombined : BmSDK.BmGame.RSeqAct_PlaySpeec
     /// <summary>
     /// StructProperty: NormalParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalParams NormalParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalParams>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalParams NormalParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalParams>(Ptr + 340);
 
     /// <summary>
     /// ArrayProperty: Talk_To_Pawns
@@ -1708,11 +1705,8 @@ public partial class RSeqAct_PlaySpeechCombined : BmSDK.BmGame.RSeqAct_PlaySpeec
     /// <summary>
     /// StructProperty: NormalConversationParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalConversationParams NormalConversationParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalConversationParams>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalConversationParams NormalConversationParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FNormalConversationParams>(Ptr + 356);
 
     /// <summary>
     /// IntProperty: IgnoreAborts
@@ -1753,11 +1747,8 @@ public partial class RSeqAct_PlaySpeechCombined : BmSDK.BmGame.RSeqAct_PlaySpeec
     /// <summary>
     /// StructProperty: CutsceneParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FCutsceneParams CutsceneParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FCutsceneParams>(Ptr + 376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FCutsceneParams CutsceneParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FCutsceneParams>(Ptr + 376);
 
     /// <summary>
     /// IntProperty: WaitForBeginFrames
@@ -1807,20 +1798,14 @@ public partial class RSeqAct_PlaySpeechCombined : BmSDK.BmGame.RSeqAct_PlaySpeec
     /// <summary>
     /// StructProperty: RadioParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FRadioParams RadioParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FRadioParams>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FRadioParams RadioParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FRadioParams>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: ThoughtParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FThoughtParams ThoughtParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FThoughtParams>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FThoughtParams ThoughtParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_PlaySpeechCombined.FThoughtParams>(Ptr + 472);
 
     /// <summary>
     /// Struct: FCameraLocation

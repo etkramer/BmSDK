@@ -183,38 +183,26 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// StructProperty: RedLight
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor RedLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor RedLight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 560);
 
     /// <summary>
     /// StructProperty: GreenLight
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor GreenLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor GreenLight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 564);
 
     /// <summary>
     /// StructProperty: AttachRot
     /// </summary>
-    public unsafe BmSDK.Rotator AttachRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref BmSDK.Rotator AttachRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 568);
 
     /// <summary>
     /// StructProperty: AttachVec
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachVec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachVec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// ObjectProperty: ExplodeRumble

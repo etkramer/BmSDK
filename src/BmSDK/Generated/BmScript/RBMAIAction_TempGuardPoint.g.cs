@@ -214,11 +214,8 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: IdleAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId IdleAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592);
 
     /// <summary>
     /// NameProperty: GuardAimAtName

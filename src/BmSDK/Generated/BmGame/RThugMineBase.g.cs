@@ -629,11 +629,8 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// ComponentProperty: RoomState

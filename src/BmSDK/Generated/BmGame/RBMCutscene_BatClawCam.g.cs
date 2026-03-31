@@ -257,11 +257,8 @@ public partial class RBMCutscene_BatClawCam : BmSDK.BmGame.RBMCutscene_Cam, BmSD
     /// <summary>
     /// StructProperty: FocusPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 FocusPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 
     /// <summary>
     /// BoolProperty: bImpact

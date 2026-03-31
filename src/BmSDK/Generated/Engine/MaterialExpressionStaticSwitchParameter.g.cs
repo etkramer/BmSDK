@@ -94,20 +94,14 @@ public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.Mate
     /// <summary>
     /// StructProperty: A
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput A
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput A
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: B
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput B
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput B
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: InstanceOverride

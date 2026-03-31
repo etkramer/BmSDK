@@ -22,6 +22,7 @@ class UProperty : public UField
 
 public:
     string GetInnerTypeNameManaged() const;
+    bool ShouldReturnByRef() const;
     STATIC_CLASS("Core.Property")
 };
 

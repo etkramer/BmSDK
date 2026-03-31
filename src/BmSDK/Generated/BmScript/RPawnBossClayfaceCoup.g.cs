@@ -1536,29 +1536,20 @@ public partial class RPawnBossClayfaceCoup : BmSDK.BmGame.RPawnBossClayfaceBase,
     /// <summary>
     /// StructProperty: DroneData
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossClayfaceCoup.FDroneParameters DroneData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossClayfaceCoup.FDroneParameters>(Ptr + 3848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3848); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossClayfaceCoup.FDroneParameters DroneData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossClayfaceCoup.FDroneParameters>(Ptr + 3848);
 
     /// <summary>
     /// StructProperty: VomitData
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossClayfaceCoup.FVomitParameters VomitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossClayfaceCoup.FVomitParameters>(Ptr + 3900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3900); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossClayfaceCoup.FVomitParameters VomitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossClayfaceCoup.FVomitParameters>(Ptr + 3900);
 
     /// <summary>
     /// StructProperty: SwipeData
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossClayfaceCoup.FSwipeParameters SwipeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossClayfaceCoup.FSwipeParameters>(Ptr + 3944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3944); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossClayfaceCoup.FSwipeParameters SwipeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossClayfaceCoup.FSwipeParameters>(Ptr + 3944);
 
     /// <summary>
     /// ArrayProperty: DroneSpawnWaitTimes
@@ -1680,11 +1671,8 @@ public partial class RPawnBossClayfaceCoup : BmSDK.BmGame.RPawnBossClayfaceBase,
     /// <summary>
     /// StructProperty: SavedTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4032); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedTargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4032);
 
     /// <summary>
     /// FloatProperty: AimingTimer

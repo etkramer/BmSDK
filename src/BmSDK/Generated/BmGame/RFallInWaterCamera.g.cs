@@ -159,27 +159,18 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: TrackingOffset
     /// </summary>
-    public unsafe BmSDK.Rotator TrackingOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref BmSDK.Rotator TrackingOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 872);
 
     /// <summary>
     /// StructProperty: TrackingLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrackingLocationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrackingLocationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 884);
 
     /// <summary>
     /// StructProperty: TrackingLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrackingLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrackingLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 896);
 }

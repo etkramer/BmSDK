@@ -219,11 +219,8 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// FloatProperty: AttackRadius

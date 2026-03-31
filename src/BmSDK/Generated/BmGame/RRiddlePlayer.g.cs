@@ -595,11 +595,8 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LineHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle LineHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle LineHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 492);
 
     /// <summary>
     /// StrProperty: LoadingRiddle

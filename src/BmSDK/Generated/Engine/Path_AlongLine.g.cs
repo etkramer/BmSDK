@@ -87,9 +87,6 @@ public partial class Path_AlongLine : BmSDK.Engine.PathConstraint, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe System.Numerics.Vector3 Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.Numerics.Vector3 Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 52);
 }

@@ -164,20 +164,14 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Dof
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct Dof
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct Dof
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: OldDof
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct OldDof
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct OldDof
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 120);
 
     /// <summary>
     /// BoolProperty: ChangedDof

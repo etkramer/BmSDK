@@ -232,11 +232,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: PatchBounds
@@ -268,11 +265,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BVTree
     /// </summary>
-    public unsafe BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 488);
 
     /// <summary>
     /// ArrayProperty: CollisionVertices

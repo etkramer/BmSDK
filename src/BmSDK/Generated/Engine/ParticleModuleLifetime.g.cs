@@ -76,9 +76,6 @@ public partial class ParticleModuleLifetime : BmSDK.Engine.ParticleModuleLifetim
     /// <summary>
     /// StructProperty: Lifetime
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Lifetime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Lifetime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 }

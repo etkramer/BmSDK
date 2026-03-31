@@ -76,9 +76,6 @@ public partial class RBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameO
     /// <summary>
     /// StructProperty: BlockedTypes
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBlockingVolumeTypesContainer BlockedTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBlockingVolumeTypesContainer>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBlockingVolumeTypesContainer BlockedTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBlockingVolumeTypesContainer>(Ptr + 480);
 }

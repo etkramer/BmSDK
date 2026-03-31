@@ -76,11 +76,8 @@ public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: M
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix M
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix M
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 48);
 
     /// <summary>
     /// StrProperty: Desc

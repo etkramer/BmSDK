@@ -347,56 +347,38 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: BranchLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef BranchLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef BranchLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 472);
 
     /// <summary>
     /// StructProperty: FrondLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef FrondLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef FrondLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: LeafMeshLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LeafMeshLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LeafMeshLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: LeafCardLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LeafCardLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LeafCardLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: BillboardLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef BillboardLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef BillboardLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: RotationOnlyMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix RotationOnlyMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix RotationOnlyMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 496);
 
     /// <summary>
     /// Enum: ESpeedTreeMeshType

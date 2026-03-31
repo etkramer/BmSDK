@@ -137,11 +137,8 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CellConvexElem
     /// </summary>
-    public unsafe BmSDK.Engine.KMeshProps.FKConvexElem CellConvexElem
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKConvexElem>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.Engine.KMeshProps.FKConvexElem CellConvexElem
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.KMeshProps.FKConvexElem>(Ptr + 508);
 
     /// <summary>
     /// Enum: LevelGridCellShape

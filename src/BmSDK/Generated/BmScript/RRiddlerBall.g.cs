@@ -459,11 +459,8 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// StructProperty: PickupRelativeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PickupRelativeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 PickupRelativeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// BoolProperty: bUsed

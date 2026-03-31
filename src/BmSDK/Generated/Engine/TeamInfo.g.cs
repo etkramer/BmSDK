@@ -176,9 +176,6 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TeamColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor TeamColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor TeamColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 452);
 }

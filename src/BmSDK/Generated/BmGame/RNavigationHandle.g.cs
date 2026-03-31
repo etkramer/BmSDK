@@ -1809,11 +1809,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PathToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 PathToPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 PathToPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: AvoidDoublingBackStrength
@@ -1845,20 +1842,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: TempMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TempMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 TempMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 496);
 
     /// <summary>
     /// ObjectProperty: LastSafeAnchorPylon
@@ -1890,20 +1881,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: LastMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// StructProperty: StuckTestLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StuckTestLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 StuckTestLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: StuckTestTime
@@ -1944,11 +1929,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StoredPathCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 584);
 
     /// <summary>
     /// ArrayProperty: AdditionalGoalList
@@ -1962,11 +1944,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PreviousPathLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousPathLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousPathLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 608);
 
     /// <summary>
     /// StructProperty: StoredAnchorPoly
@@ -1989,20 +1968,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: HardBlockedEdges
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore HardBlockedEdges
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore HardBlockedEdges
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: SoftBlockedEdges
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore SoftBlockedEdges
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore SoftBlockedEdges
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 648);
 
     /// <summary>
     /// ArrayProperty: BlockedPolyList
@@ -2016,11 +1989,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StartStateDebug
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 672);
 
     /// <summary>
     /// DelegateProperty: __PathSuccess__Delegate

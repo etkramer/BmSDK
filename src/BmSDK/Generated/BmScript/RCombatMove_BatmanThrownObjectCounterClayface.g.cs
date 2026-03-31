@@ -156,11 +156,8 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// StructProperty: FireLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 FireLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 FireLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// FloatProperty: FlightTime

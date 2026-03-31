@@ -107,9 +107,6 @@ public partial class RBulletProofGlass : BmSDK.BmGame.RBulletProofGlassBase, BmS
     /// <summary>
     /// StructProperty: DecalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 DecalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 DecalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 }

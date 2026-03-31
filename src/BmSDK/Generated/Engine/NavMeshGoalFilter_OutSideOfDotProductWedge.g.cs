@@ -76,20 +76,14 @@ public partial class NavMeshGoalFilter_OutSideOfDotProductWedge : BmSDK.Engine.N
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// FloatProperty: Epsilon

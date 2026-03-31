@@ -76,11 +76,8 @@ public partial class RNavMeshPath_AvoidDirection : BmSDK.Engine.NavMeshPathConst
     /// <summary>
     /// StructProperty: AvoidDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AvoidDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref System.Numerics.Vector3 AvoidDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 64);
 
     /// <summary>
     /// FloatProperty: AvoidStrength

@@ -791,9 +791,6 @@ public partial class RPlayerInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ControllerSpin
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerInput.FControllerSpinContainer ControllerSpin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerInput.FControllerSpinContainer>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.BmGame.RPlayerInput.FControllerSpinContainer ControllerSpin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPlayerInput.FControllerSpinContainer>(Ptr + 468);
 }

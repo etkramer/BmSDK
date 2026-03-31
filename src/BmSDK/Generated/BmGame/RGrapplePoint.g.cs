@@ -249,29 +249,20 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// StructProperty: OutwardNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutwardNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutwardNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: PointA
     /// </summary>
-    public unsafe System.Numerics.Vector3 PointA
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 PointA
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: PointB
     /// </summary>
-    public unsafe System.Numerics.Vector3 PointB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 PointB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// FloatProperty: ExtraCheckRadius
@@ -627,11 +618,8 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// StructProperty: OctTreeObject
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 540);
 
     /// <summary>
     /// ObjectProperty: ClimbLocators

@@ -76,36 +76,24 @@ public partial class ParticleModuleAttractorLine : BmSDK.Engine.ParticleModuleAt
     /// <summary>
     /// StructProperty: EndPoint0
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPoint0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPoint0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: EndPoint1
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPoint1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPoint1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Range
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Range
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 108);
 }

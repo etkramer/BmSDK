@@ -306,11 +306,8 @@ public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// StructProperty: VectorTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector VectorTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector VectorTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 112);
 
     /// <summary>
     /// FloatProperty: CurveTension
@@ -324,9 +321,6 @@ public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector Randomiser
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector Randomiser
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackVectorBase.FRandomGeneratorVector>(Ptr + 132);
 }

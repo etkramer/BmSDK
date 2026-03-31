@@ -76,11 +76,8 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ResolvedAABB
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB ResolvedAABB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB ResolvedAABB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB>(Ptr + 44);
 
     /// <summary>
     /// ObjectProperty: Grid
@@ -94,11 +91,8 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: BoneIndices
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices BoneIndices
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices BoneIndices
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices>(Ptr + 68);
 
     /// <summary>
     /// ArrayProperty: Transitions
@@ -112,20 +106,14 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: StepUp
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState StepUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState StepUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: Result
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult Result
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult Result
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult>(Ptr + 124);
 
     /// <summary>
     /// BoolProperty: EnableRailings
@@ -166,11 +154,8 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ResolvedConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig ResolvedConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig ResolvedConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig>(Ptr + 176);
 
     /// <summary>
     /// Struct: FFloorCorrectionResolvedConfig

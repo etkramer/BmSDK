@@ -555,11 +555,8 @@ public partial class RPawnVillainMadHatter : BmSDK.BmGame.RPawnVillainMadHatterB
     /// <summary>
     /// StructProperty: SoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 3608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3608); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 3608);
 
     /// <summary>
     /// FloatProperty: CurrMaxYawOffset

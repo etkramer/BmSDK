@@ -196,20 +196,14 @@ public partial class SequenceObject : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ObjColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ObjColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ObjColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 88);
 
     /// <summary>
     /// StructProperty: ObjTitleColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ObjTitleColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ObjTitleColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 92);
 
     /// <summary>
     /// StrProperty: ObjComment

@@ -127,9 +127,6 @@ public partial class RBMBehaviour_ThermalCheck : BmSDK.BmGame.RBMBehaviour_Actio
     /// <summary>
     /// StructProperty: VantageCheckStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 VantageCheckStandPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref System.Numerics.Vector3 VantageCheckStandPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 404);
 }

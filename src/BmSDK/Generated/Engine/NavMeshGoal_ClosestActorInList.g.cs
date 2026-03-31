@@ -114,11 +114,8 @@ public partial class NavMeshGoal_ClosestActorInList : BmSDK.Engine.NavMeshPathGo
     /// <summary>
     /// StructProperty: PolyToGoalActorMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMultiMap_Mirror PolyToGoalActorMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.GameObject.FMultiMap_Mirror PolyToGoalActorMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: CachedAnchorPoly

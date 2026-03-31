@@ -76,11 +76,8 @@ public partial class SkelControlLimb : BmSDK.Engine.SkelControlBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: EffectorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EffectorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 EffectorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// ByteProperty: EffectorLocationSpace
@@ -130,11 +127,8 @@ public partial class SkelControlLimb : BmSDK.Engine.SkelControlBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: JointTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 JointTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref System.Numerics.Vector3 JointTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 196);
 
     /// <summary>
     /// NameProperty: JointTargetSpaceBoneName
@@ -202,11 +196,8 @@ public partial class SkelControlLimb : BmSDK.Engine.SkelControlBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: StretchLimits
     /// </summary>
-    public unsafe System.Numerics.Vector2 StretchLimits
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref System.Numerics.Vector2 StretchLimits
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 220);
 
     /// <summary>
     /// NameProperty: StretchRollBoneName

@@ -148,11 +148,8 @@ public partial class SkelControlTrail : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: FakeVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 FakeVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 FakeVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// FloatProperty: ThisTimstep
@@ -175,9 +172,6 @@ public partial class SkelControlTrail : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: OldLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix OldLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix OldLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 224);
 }

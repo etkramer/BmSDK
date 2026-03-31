@@ -614,11 +614,8 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CameraAlignOffset
     /// </summary>
-    public unsafe BmSDK.Rotator CameraAlignOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Rotator CameraAlignOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 120);
 
     /// <summary>
     /// ByteProperty: CameraAlignSpeed
@@ -677,20 +674,14 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CapeStateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeStateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeStateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: CapeFinishStateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeFinishStateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeFinishStateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 204);
 
     /// <summary>
     /// FloatProperty: ReferenceOffset
@@ -713,11 +704,8 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: AnimatedCameraCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimatedCameraCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimatedCameraCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 272);
 
     /// <summary>
     /// ObjectProperty: HoldAOverrideMove

@@ -131,11 +131,8 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// StructProperty: HangTimeRotator
     /// </summary>
-    public unsafe BmSDK.Rotator HangTimeRotator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.Rotator HangTimeRotator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 316);
 
     /// <summary>
     /// FloatProperty: HangTimeDist

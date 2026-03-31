@@ -241,11 +241,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: WeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 WeightmapScaleBias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector4 WeightmapScaleBias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 480);
 
     /// <summary>
     /// FloatProperty: WeightmapSubsectionOffset
@@ -259,11 +256,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: HeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 HeightmapScaleBias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector4 HeightmapScaleBias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 512);
 
     /// <summary>
     /// FloatProperty: HeightmapSubsectionOffset
@@ -277,11 +271,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: LayerUVPan
     /// </summary>
-    public unsafe System.Numerics.Vector2 LayerUVPan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector2 LayerUVPan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 532);
 
     /// <summary>
     /// ObjectProperty: HeightmapTexture
@@ -295,11 +286,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 544);
 
     /// <summary>
     /// IntProperty: StaticLightingResolution
@@ -313,11 +301,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 576);
 
     /// <summary>
     /// ArrayProperty: ShadowMaps
@@ -340,11 +325,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: EditToolRenderData

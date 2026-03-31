@@ -379,11 +379,8 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// StructProperty: StoredTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ObjectProperty: ExitPoints
@@ -424,11 +421,8 @@ public partial class RBMBehaviour_MoveToNavMesh : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// StructProperty: RandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RandPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 RandPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// BoolProperty: bPathFound

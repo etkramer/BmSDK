@@ -76,18 +76,12 @@ public partial class BookMark : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 56);
 }

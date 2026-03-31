@@ -200,11 +200,8 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// StructProperty: ForwardDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForwardDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForwardDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 868);
 
     /// <summary>
     /// FloatProperty: CamDist
@@ -308,20 +305,14 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// StructProperty: CurrLookAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrLookAtPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrLookAtPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// StructProperty: DestLookAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 DestLookAtPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref System.Numerics.Vector3 DestLookAtPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 936);
 
     /// <summary>
     /// FloatProperty: Stage2HeightOffset
@@ -353,9 +344,6 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// StructProperty: CamShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct CamShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct CamShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 960);
 }

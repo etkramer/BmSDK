@@ -1033,11 +1033,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// FloatProperty: ReferencePointYaw
@@ -1051,11 +1048,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferenceOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 188);
 
     /// <summary>
     /// FloatProperty: ProportionalMotionDistanceCap
@@ -1069,11 +1063,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CollisionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 232);
 
     /// <summary>
     /// FloatProperty: BlendInDuration
@@ -1222,20 +1213,14 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AnimZip_LinearOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimZip_LinearOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimZip_LinearOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: AnimZip_LinearSpan
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimZip_LinearSpan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimZip_LinearSpan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 332);
 
     /// <summary>
     /// StructProperty: TranslationCodec

@@ -130,11 +130,8 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: UniversalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 UniversalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 UniversalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// ArrayProperty: SourceLocations

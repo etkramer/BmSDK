@@ -117,11 +117,8 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: ThreatLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThreatLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThreatLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 396);
 
     /// <summary>
     /// FloatProperty: ThreatYaw

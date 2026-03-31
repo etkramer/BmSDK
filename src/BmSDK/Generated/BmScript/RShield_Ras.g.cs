@@ -279,20 +279,14 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LevelCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 LevelCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 LevelCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: HeightOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 HeightOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 HeightOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 
     /// <summary>
     /// FloatProperty: TurnDir

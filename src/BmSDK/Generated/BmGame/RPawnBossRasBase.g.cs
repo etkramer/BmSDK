@@ -1161,11 +1161,8 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// <summary>
     /// StructProperty: HideLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HideLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3720); }
-    }
+    public unsafe ref System.Numerics.Vector3 HideLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3720);
 
     /// <summary>
     /// FloatProperty: LastFuryJumpInYaw
@@ -1188,9 +1185,6 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3740); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 3740);
 }

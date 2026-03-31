@@ -85,20 +85,14 @@ public partial class RSpecialMoveConfig_HarpoonThug : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// StructProperty: CornerAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug.FBatclawBatmanAnimConfig CornerAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug.FBatclawBatmanAnimConfig>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug.FBatclawBatmanAnimConfig CornerAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug.FBatclawBatmanAnimConfig>(Ptr + 308);
 
     /// <summary>
     /// StructProperty: FireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 340);
 
     /// <summary>
     /// ObjectProperty: FireControllerShake

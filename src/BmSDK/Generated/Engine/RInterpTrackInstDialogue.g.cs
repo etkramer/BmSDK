@@ -94,11 +94,8 @@ public partial class RInterpTrackInstDialogue : BmSDK.Engine.InterpTrackInst, Bm
     /// <summary>
     /// StructProperty: WwiseMatineeDialogueSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle WwiseMatineeDialogueSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle WwiseMatineeDialogueSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 52);
 
     /// <summary>
     /// FloatProperty: fSeekPos

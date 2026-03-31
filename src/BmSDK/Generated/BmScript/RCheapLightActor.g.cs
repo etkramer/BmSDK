@@ -131,11 +131,8 @@ public partial class RCheapLightActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 432);
 
     /// <summary>
     /// ComponentProperty: CheapLightComponent

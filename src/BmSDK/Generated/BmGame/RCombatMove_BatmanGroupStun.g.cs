@@ -311,11 +311,8 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// StructProperty: BatmanTakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanTakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560);
 
     /// <summary>
     /// ArrayProperty: TargetList
@@ -383,20 +380,14 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// StructProperty: AcquireLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AcquireLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 AcquireLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: InitialFacing
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialFacing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialFacing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 608);
 
     /// <summary>
     /// FloatProperty: InfluenceTime

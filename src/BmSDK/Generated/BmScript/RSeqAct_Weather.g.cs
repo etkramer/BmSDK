@@ -98,11 +98,8 @@ public partial class RSeqAct_Weather : BmSDK.Engine.SequenceAction, BmSDK.IGameO
     /// <summary>
     /// StructProperty: WeatherSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RRainComponent.FRockRainSettings WeatherSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.Engine.RRainComponent.FRockRainSettings WeatherSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 204);
 
     /// <summary>
     /// ObjectProperty: DistanceMesh

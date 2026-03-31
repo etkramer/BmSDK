@@ -76,11 +76,8 @@ public partial class ParticleModuleRotationOverLifetime : BmSDK.Engine.ParticleM
     /// <summary>
     /// StructProperty: RotationOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RotationOverLife
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat RotationOverLife
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: Scale

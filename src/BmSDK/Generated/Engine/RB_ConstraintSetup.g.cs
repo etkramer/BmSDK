@@ -138,74 +138,50 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Pos1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Pos1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 Pos1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: PriAxis1
     /// </summary>
-    public unsafe System.Numerics.Vector3 PriAxis1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 PriAxis1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: SecAxis1
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecAxis1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecAxis1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: Pos2
     /// </summary>
-    public unsafe System.Numerics.Vector3 Pos2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.Numerics.Vector3 Pos2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: PriAxis2
     /// </summary>
-    public unsafe System.Numerics.Vector3 PriAxis2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector3 PriAxis2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: SecAxis2
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecAxis2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecAxis2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: PulleyPivot1
     /// </summary>
-    public unsafe System.Numerics.Vector3 PulleyPivot1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 PulleyPivot1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: PulleyPivot2
     /// </summary>
-    public unsafe System.Numerics.Vector3 PulleyPivot2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 PulleyPivot2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 
     /// <summary>
     /// BoolProperty: bEnableProjection
@@ -345,29 +321,20 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinearXSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearXSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearXSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: LinearYSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearYSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearYSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 188);
 
     /// <summary>
     /// StructProperty: LinearZSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearZSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearZSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 196);
 
     /// <summary>
     /// FloatProperty: LinearLimitStiffness

@@ -85,9 +85,6 @@ public partial class MaterialExpressionParameter : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid ExpressionGUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 100);
 }

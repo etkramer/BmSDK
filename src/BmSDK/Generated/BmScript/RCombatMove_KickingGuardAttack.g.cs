@@ -154,11 +154,8 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// StructProperty: SavedTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// NameProperty: CurrentKickAnim

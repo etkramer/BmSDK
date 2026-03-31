@@ -562,9 +562,6 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastBarkPlayed
     /// </summary>
-    public unsafe BmSDK.BmGame.RBarkSet.FBarkDefinition LastBarkPlayed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkSet.FBarkDefinition>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RBarkSet.FBarkDefinition LastBarkPlayed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBarkSet.FBarkDefinition>(Ptr + 496);
 }

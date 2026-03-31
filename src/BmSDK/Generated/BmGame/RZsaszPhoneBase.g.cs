@@ -131,9 +131,6 @@ public partial class RZsaszPhoneBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGa
     /// <summary>
     /// StructProperty: ringingSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle ringingSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle ringingSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 576);
 }

@@ -160,11 +160,8 @@ public partial class RSeqAct_MovePlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// StructProperty: StoredLookAtDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredLookAtDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredLookAtDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 
     /// <summary>
     /// BoolProperty: bIsAtLocation

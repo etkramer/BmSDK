@@ -211,11 +211,8 @@ public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: TakedownAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 492);
 
     /// <summary>
     /// NameProperty: HitBone
@@ -328,11 +325,8 @@ public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: MoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// IntProperty: FinalAnimYaw
@@ -400,11 +394,8 @@ public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: LockedAnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LockedAnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 LockedAnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// ByteProperty: ChallengeActionToTriggerIfSuccessful
@@ -427,11 +418,8 @@ public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: DurationScale

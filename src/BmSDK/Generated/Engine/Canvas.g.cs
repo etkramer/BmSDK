@@ -822,11 +822,8 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DrawColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DrawColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 80);
 
     /// <summary>
     /// BoolProperty: bCenter
@@ -885,11 +882,8 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ColorModulate
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane ColorModulate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane ColorModulate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 112);
 
     /// <summary>
     /// ObjectProperty: DefaultTexture

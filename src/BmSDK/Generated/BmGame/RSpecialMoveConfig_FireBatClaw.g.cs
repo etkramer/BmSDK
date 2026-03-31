@@ -142,11 +142,8 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// StructProperty: FireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 360);
 
     /// <summary>
     /// ObjectProperty: FireControllerShake

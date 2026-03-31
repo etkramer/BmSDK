@@ -1248,11 +1248,8 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanA
     /// <summary>
     /// StructProperty: TargetDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 496);
 
     /// <summary>
     /// ObjectProperty: PrevTarget
@@ -1491,29 +1488,20 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanA
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 540);
 
     /// <summary>
     /// StructProperty: StrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo StrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo StrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 684);
 
     /// <summary>
     /// StructProperty: PrevStrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 808);
 
     /// <summary>
     /// FloatProperty: StrikeContactTime
@@ -1536,11 +1524,8 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanA
     /// <summary>
     /// StructProperty: BatmanStrikeID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanStrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanStrikeID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 940);
 
     /// <summary>
     /// ObjectProperty: StrikeAnimSequence
@@ -1581,11 +1566,8 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanA
     /// <summary>
     /// StructProperty: TargetHitReactionLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetHitReactionLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetHitReactionLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 960);
 
     /// <summary>
     /// NameProperty: ForceStrikeByName
@@ -1599,20 +1581,14 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanA
     /// <summary>
     /// StructProperty: EnvMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// StructProperty: EnvMoveNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvMoveNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvMoveNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
 
     /// <summary>
     /// IntProperty: CapeStateChangeIndex

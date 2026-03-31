@@ -312,11 +312,8 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// ObjectProperty: Ras
@@ -348,11 +345,8 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// StructProperty: WaitPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 WaitPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 WaitPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// FloatProperty: WaitTime
@@ -384,20 +378,14 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// StructProperty: LastVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 560);
 
     /// <summary>
     /// StructProperty: LastVelocityDelta
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastVelocityDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastVelocityDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: TurnSpeed
@@ -420,20 +408,14 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// StructProperty: MeshYaw
     /// </summary>
-    public unsafe BmSDK.Rotator MeshYaw
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.Rotator MeshYaw
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: MeshRoll
     /// </summary>
-    public unsafe BmSDK.Rotator MeshRoll
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.Rotator MeshRoll
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 604);
 
     /// <summary>
     /// ComponentProperty: ShurikanMeshComp

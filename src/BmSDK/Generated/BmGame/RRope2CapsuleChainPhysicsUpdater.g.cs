@@ -184,11 +184,8 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// <summary>
     /// StructProperty: CapsuleChainInitData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData CapsuleChainInitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData CapsuleChainInitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: RopeCapsuleChainPhysics

@@ -118,11 +118,8 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// StructProperty: Shake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 208);
 
     /// <summary>
     /// ObjectProperty: ShakeSource
@@ -145,11 +142,8 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// StructProperty: ShakeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ShakeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref System.Numerics.Vector3 ShakeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 360);
 
     /// <summary>
     /// ArrayProperty: PreMades

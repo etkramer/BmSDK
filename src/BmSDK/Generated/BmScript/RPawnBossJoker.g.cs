@@ -288,20 +288,14 @@ public partial class RPawnBossJoker : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3572); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3572);
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StartRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3584); }
-    }
+    public unsafe ref BmSDK.Rotator StartRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3584);
 
     /// <summary>
     /// BoolProperty: bInTransOut

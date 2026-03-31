@@ -393,20 +393,14 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UserPlaySpaceMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix UserPlaySpaceMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix UserPlaySpaceMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: LastPPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings LastPPSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings LastPPSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 176);
 
     /// <summary>
     /// FloatProperty: LastPPSettingsAlpha
@@ -420,9 +414,6 @@ public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastCameraLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastCameraLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastCameraLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 }

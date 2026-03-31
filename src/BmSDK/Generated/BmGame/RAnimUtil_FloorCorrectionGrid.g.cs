@@ -76,47 +76,32 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// StructProperty: Parameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters Parameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters Parameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: Constants
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants Constants
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants Constants
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState State
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState State
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: PreviousLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: PreviousGridLocation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector PreviousGridLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector PreviousGridLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector>(Ptr + 216);
 
     /// <summary>
     /// FloatProperty: RelativeZ
@@ -130,11 +115,8 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe System.Numerics.Vector3 Normal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref System.Numerics.Vector3 Normal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 232);
 
     /// <summary>
     /// BoolProperty: PendingReset

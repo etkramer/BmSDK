@@ -188,11 +188,8 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// StructProperty: CurrOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// Struct: FWeaponInfo
