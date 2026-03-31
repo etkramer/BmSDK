@@ -26,7 +26,7 @@ internal static class FindObjectsCache
 
         var nodes = new List<LinkedListNode<GameObject>>();
         for (
-            Type? type = obj.GetType();
+            var type = obj.GetType();
             type != null && typeof(GameObject).IsAssignableFrom(type);
             type = type.BaseType
         )
