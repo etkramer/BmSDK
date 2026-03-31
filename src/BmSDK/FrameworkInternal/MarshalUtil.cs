@@ -192,7 +192,6 @@ internal static unsafe class MarshalUtil
         // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
         {
-            FindObjectsCache.Register(existingObj);
             return existingObj;
         }
 
