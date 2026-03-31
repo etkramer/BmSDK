@@ -11,10 +11,13 @@ internal static class FindObjectsCache
     {
         if (!s_objectsByType.TryGetValue(typeof(T), out var objects))
         {
-            return [];
+            yield break;
         }
 
-        return EnumerateObjects<T>(objects);
+        for (var node = objects.First; node != null; node = node.Next)
+        {
+            yield return (T)node.Value;
+        }
     }
 
     public static void Register(GameObject obj)
@@ -53,15 +56,6 @@ internal static class FindObjectsCache
         foreach (var node in bucketNodes)
         {
             node.List?.Remove(node);
-        }
-    }
-
-    private static IEnumerable<T> EnumerateObjects<T>(LinkedList<GameObject> objects)
-        where T : GameObject
-    {
-        for (var node = objects.First; node != null; node = node.Next)
-        {
-            yield return (T)node.Value;
         }
     }
 }
