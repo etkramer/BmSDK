@@ -21,6 +21,11 @@ public partial class InterpTrackInstSlomo : BmSDK.Engine.InterpTrackInst, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstSlomo.
+    /// </summary>
+    public static InterpTrackInstSlomo DefaultObject => (InterpTrackInstSlomo)StaticClass().DefaultObject;
+
     internal InterpTrackInstSlomo() { }
 
     /// <summary>

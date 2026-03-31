@@ -21,6 +21,11 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RockOn.
+    /// </summary>
+    public static RockOn DefaultObject => (RockOn)StaticClass().DefaultObject;
+
     internal RockOn() { }
 
     /// <summary>

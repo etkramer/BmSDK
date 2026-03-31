@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_IvyVineAttack : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_IvyVineAttack.
+    /// </summary>
+    public static RSpecialMoveInstance_IvyVineAttack DefaultObject => (RSpecialMoveInstance_IvyVineAttack)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_IvyVineAttack() { }
 
     /// <summary>

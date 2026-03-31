@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_HoldPos : BmSDK.BmGame.RAEC_Attack_Sub_Conv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_HoldPos.
+    /// </summary>
+    public static RAEC_Attack_Sub_HoldPos DefaultObject => (RAEC_Attack_Sub_HoldPos)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_HoldPos() { }
 
     /// <summary>

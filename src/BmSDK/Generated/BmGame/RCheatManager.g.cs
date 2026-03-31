@@ -21,6 +21,11 @@ public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCheatManager.
+    /// </summary>
+    public static RCheatManager DefaultObject => (RCheatManager)StaticClass().DefaultObject;
+
     internal RCheatManager() { }
 
     /// <summary>

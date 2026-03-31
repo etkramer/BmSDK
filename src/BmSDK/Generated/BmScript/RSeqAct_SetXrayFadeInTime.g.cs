@@ -21,6 +21,11 @@ public partial class RSeqAct_SetXrayFadeInTime : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetXrayFadeInTime.
+    /// </summary>
+    public static RSeqAct_SetXrayFadeInTime DefaultObject => (RSeqAct_SetXrayFadeInTime)StaticClass().DefaultObject;
+
     internal RSeqAct_SetXrayFadeInTime() { }
 
     /// <summary>

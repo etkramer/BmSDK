@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainDodge : BmSDK.BmGame.RCombatMove, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainDodge.
+    /// </summary>
+    public static RCombatMove_VillainDodge DefaultObject => (RCombatMove_VillainDodge)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainDodge() { }
 
     /// <summary>

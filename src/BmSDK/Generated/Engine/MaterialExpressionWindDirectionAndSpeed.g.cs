@@ -21,6 +21,11 @@ public partial class MaterialExpressionWindDirectionAndSpeed : BmSDK.Engine.Mate
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionWindDirectionAndSpeed.
+    /// </summary>
+    public static MaterialExpressionWindDirectionAndSpeed DefaultObject => (MaterialExpressionWindDirectionAndSpeed)StaticClass().DefaultObject;
+
     internal MaterialExpressionWindDirectionAndSpeed() { }
 
     /// <summary>

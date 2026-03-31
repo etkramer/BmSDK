@@ -21,6 +21,11 @@ public partial class RHostageGrabPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHostageGrabPoint.
+    /// </summary>
+    public static RHostageGrabPoint DefaultObject => (RHostageGrabPoint)StaticClass().DefaultObject;
+
     internal RHostageGrabPoint() { }
 
     /// <summary>

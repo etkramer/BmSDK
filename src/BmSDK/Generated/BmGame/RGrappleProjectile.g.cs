@@ -21,6 +21,11 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrappleProjectile.
+    /// </summary>
+    public static RGrappleProjectile DefaultObject => (RGrappleProjectile)StaticClass().DefaultObject;
+
     internal RGrappleProjectile() { }
 
     /// <summary>

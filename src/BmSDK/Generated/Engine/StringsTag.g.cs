@@ -21,6 +21,11 @@ public partial class StringsTag : BmSDK.Engine.TranslatorTag, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StringsTag.
+    /// </summary>
+    public static StringsTag DefaultObject => (StringsTag)StaticClass().DefaultObject;
+
     internal StringsTag() { }
 
     /// <summary>

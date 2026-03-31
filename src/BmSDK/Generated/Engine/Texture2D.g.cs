@@ -21,6 +21,11 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Texture2D.
+    /// </summary>
+    public static Texture2D DefaultObject => (Texture2D)StaticClass().DefaultObject;
+
     internal Texture2D() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGuardPoint.
+    /// </summary>
+    public static RGuardPoint DefaultObject => (RGuardPoint)StaticClass().DefaultObject;
+
     internal RGuardPoint() { }
 
     /// <summary>

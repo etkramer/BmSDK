@@ -21,6 +21,11 @@ public partial class RAnimNode_AnimCapture : BmSDK.Engine.AnimNodeBlendBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_AnimCapture.
+    /// </summary>
+    public static RAnimNode_AnimCapture DefaultObject => (RAnimNode_AnimCapture)StaticClass().DefaultObject;
+
     internal RAnimNode_AnimCapture() { }
 
     /// <summary>

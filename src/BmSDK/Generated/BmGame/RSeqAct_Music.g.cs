@@ -21,6 +21,11 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Music.
+    /// </summary>
+    public static RSeqAct_Music DefaultObject => (RSeqAct_Music)StaticClass().DefaultObject;
+
     internal RSeqAct_Music() { }
 
     /// <summary>

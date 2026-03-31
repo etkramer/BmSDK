@@ -21,6 +21,11 @@ public partial class RCharacter_OutcastTwoFacePenguin2_Head3 : BmSDK.BmGame.RCha
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_OutcastTwoFacePenguin2_Head3.
+    /// </summary>
+    public static RCharacter_OutcastTwoFacePenguin2_Head3 DefaultObject => (RCharacter_OutcastTwoFacePenguin2_Head3)StaticClass().DefaultObject;
+
     internal RCharacter_OutcastTwoFacePenguin2_Head3() { }
 
     /// <summary>

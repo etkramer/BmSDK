@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_CatchLedge.
+    /// </summary>
+    public static RSpecialMoveConfig_CatchLedge DefaultObject => (RSpecialMoveConfig_CatchLedge)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_CatchLedge() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_RestoreMines : BmSDK.BmGame.RBMAIAction_Restore
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RestoreMines.
+    /// </summary>
+    public static RBMAIAction_RestoreMines DefaultObject => (RBMAIAction_RestoreMines)StaticClass().DefaultObject;
+
     internal RBMAIAction_RestoreMines() { }
 
     /// <summary>

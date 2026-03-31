@@ -21,6 +21,11 @@ public partial class RAEC_ExplodedWall_Sub_Investigate : BmSDK.BmGame.RAlertEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_ExplodedWall_Sub_Investigate.
+    /// </summary>
+    public static RAEC_ExplodedWall_Sub_Investigate DefaultObject => (RAEC_ExplodedWall_Sub_Investigate)StaticClass().DefaultObject;
+
     internal RAEC_ExplodedWall_Sub_Investigate() { }
 
     /// <summary>

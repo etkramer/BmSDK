@@ -21,6 +21,11 @@ public partial class SaveGameSummary : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SaveGameSummary.
+    /// </summary>
+    public static SaveGameSummary DefaultObject => (SaveGameSummary)StaticClass().DefaultObject;
+
     internal SaveGameSummary() { }
 
     /// <summary>

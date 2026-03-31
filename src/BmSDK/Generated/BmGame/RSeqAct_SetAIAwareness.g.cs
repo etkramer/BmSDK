@@ -21,6 +21,11 @@ public partial class RSeqAct_SetAIAwareness : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetAIAwareness.
+    /// </summary>
+    public static RSeqAct_SetAIAwareness DefaultObject => (RSeqAct_SetAIAwareness)StaticClass().DefaultObject;
+
     internal RSeqAct_SetAIAwareness() { }
 
     /// <summary>

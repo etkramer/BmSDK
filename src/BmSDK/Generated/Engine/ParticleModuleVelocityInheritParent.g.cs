@@ -21,6 +21,11 @@ public partial class ParticleModuleVelocityInheritParent : BmSDK.Engine.Particle
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleVelocityInheritParent.
+    /// </summary>
+    public static ParticleModuleVelocityInheritParent DefaultObject => (ParticleModuleVelocityInheritParent)StaticClass().DefaultObject;
+
     internal ParticleModuleVelocityInheritParent() { }
 
     /// <summary>

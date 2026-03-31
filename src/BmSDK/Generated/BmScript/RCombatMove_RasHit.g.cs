@@ -21,6 +21,11 @@ public partial class RCombatMove_RasHit : BmSDK.BmGame.RCombatMove, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasHit.
+    /// </summary>
+    public static RCombatMove_RasHit DefaultObject => (RCombatMove_RasHit)StaticClass().DefaultObject;
+
     internal RCombatMove_RasHit() { }
 
     /// <summary>

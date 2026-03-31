@@ -21,6 +21,11 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstFloatProp.
+    /// </summary>
+    public static InterpTrackInstFloatProp DefaultObject => (InterpTrackInstFloatProp)StaticClass().DefaultObject;
+
     internal InterpTrackInstFloatProp() { }
 
     /// <summary>

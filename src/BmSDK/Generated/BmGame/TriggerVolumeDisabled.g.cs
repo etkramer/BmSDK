@@ -21,6 +21,11 @@ public partial class TriggerVolumeDisabled : BmSDK.Engine.TriggerVolume, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TriggerVolumeDisabled.
+    /// </summary>
+    public static TriggerVolumeDisabled DefaultObject => (TriggerVolumeDisabled)StaticClass().DefaultObject;
+
     internal TriggerVolumeDisabled() { }
 
     /// <summary>

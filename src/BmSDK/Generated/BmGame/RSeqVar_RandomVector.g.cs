@@ -21,6 +21,11 @@ public partial class RSeqVar_RandomVector : BmSDK.Engine.SeqVar_Vector, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_RandomVector.
+    /// </summary>
+    public static RSeqVar_RandomVector DefaultObject => (RSeqVar_RandomVector)StaticClass().DefaultObject;
+
     internal RSeqVar_RandomVector() { }
 
     /// <summary>

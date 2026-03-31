@@ -21,6 +21,11 @@ public partial class ActorFactoryMover : BmSDK.Engine.ActorFactoryDynamicSM, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryMover.
+    /// </summary>
+    public static ActorFactoryMover DefaultObject => (ActorFactoryMover)StaticClass().DefaultObject;
+
     internal ActorFactoryMover() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCinematic_DirectionalLight : BmSDK.Engine.DirectionalLight
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematic_DirectionalLight.
+    /// </summary>
+    public static RCinematic_DirectionalLight DefaultObject => (RCinematic_DirectionalLight)StaticClass().DefaultObject;
+
     internal RCinematic_DirectionalLight() { }
 
     /// <summary>

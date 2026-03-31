@@ -21,6 +21,11 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoal_Filter.
+    /// </summary>
+    public static NavMeshGoal_Filter DefaultObject => (NavMeshGoal_Filter)StaticClass().DefaultObject;
+
     internal NavMeshGoal_Filter() { }
 
     /// <summary>

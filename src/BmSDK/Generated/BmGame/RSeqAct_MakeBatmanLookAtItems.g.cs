@@ -21,6 +21,11 @@ public partial class RSeqAct_MakeBatmanLookAtItems : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MakeBatmanLookAtItems.
+    /// </summary>
+    public static RSeqAct_MakeBatmanLookAtItems DefaultObject => (RSeqAct_MakeBatmanLookAtItems)StaticClass().DefaultObject;
+
     internal RSeqAct_MakeBatmanLookAtItems() { }
 
     /// <summary>

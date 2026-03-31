@@ -21,6 +21,11 @@ public partial class RDmgType_Piston : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Piston.
+    /// </summary>
+    public static RDmgType_Piston DefaultObject => (RDmgType_Piston)StaticClass().DefaultObject;
+
     internal RDmgType_Piston() { }
 
     /// <summary>

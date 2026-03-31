@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetupCone : BmSDK.Engine.RFlaps_Constraint
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetupCone.
+    /// </summary>
+    public static RFlaps_ConstraintSetupCone DefaultObject => (RFlaps_ConstraintSetupCone)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetupCone() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_CriticalStrike : BmSDK.BmGame.RDmgType_HeavyStrike
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CriticalStrike.
+    /// </summary>
+    public static RDmgType_CriticalStrike DefaultObject => (RDmgType_CriticalStrike)StaticClass().DefaultObject;
+
     internal RDmgType_CriticalStrike() { }
 
     /// <summary>

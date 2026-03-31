@@ -21,6 +21,11 @@ public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WaveFormBase.
+    /// </summary>
+    public static WaveFormBase DefaultObject => (WaveFormBase)StaticClass().DefaultObject;
+
     internal WaveFormBase() { }
 
     /// <summary>

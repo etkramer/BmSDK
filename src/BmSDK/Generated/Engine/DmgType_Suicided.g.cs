@@ -21,6 +21,11 @@ public partial class DmgType_Suicided : BmSDK.Engine.KillZDamageType, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DmgType_Suicided.
+    /// </summary>
+    public static DmgType_Suicided DefaultObject => (DmgType_Suicided)StaticClass().DefaultObject;
+
     internal DmgType_Suicided() { }
 
     /// <summary>

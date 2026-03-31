@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayerInFinalBlowCam : BmSDK.Engine.SeqAct_Latent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayerInFinalBlowCam.
+    /// </summary>
+    public static RSeqAct_PlayerInFinalBlowCam DefaultObject => (RSeqAct_PlayerInFinalBlowCam)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayerInFinalBlowCam() { }
 
     /// <summary>

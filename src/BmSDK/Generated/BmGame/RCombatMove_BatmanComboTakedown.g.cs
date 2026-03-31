@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanComboTakedown : BmSDK.BmGame.RCombatMove_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanComboTakedown.
+    /// </summary>
+    public static RCombatMove_BatmanComboTakedown DefaultObject => (RCombatMove_BatmanComboTakedown)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanComboTakedown() { }
 
     /// <summary>

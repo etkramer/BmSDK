@@ -21,6 +21,11 @@ public partial class RRobinXRayViewPostProcess : BmSDK.BmGame.RXRayViewPostProce
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinXRayViewPostProcess.
+    /// </summary>
+    public static RRobinXRayViewPostProcess DefaultObject => (RRobinXRayViewPostProcess)StaticClass().DefaultObject;
+
     internal RRobinXRayViewPostProcess() { }
 
     /// <summary>

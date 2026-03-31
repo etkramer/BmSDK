@@ -21,6 +21,11 @@ public partial class RDmgType_Challenge_TimeOut : BmSDK.BmGame.RDamageType, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Challenge_TimeOut.
+    /// </summary>
+    public static RDmgType_Challenge_TimeOut DefaultObject => (RDmgType_Challenge_TimeOut)StaticClass().DefaultObject;
+
     internal RDmgType_Challenge_TimeOut() { }
 
     /// <summary>

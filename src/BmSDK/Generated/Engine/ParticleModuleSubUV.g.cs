@@ -21,6 +21,11 @@ public partial class ParticleModuleSubUV : BmSDK.Engine.ParticleModuleSubUVBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSubUV.
+    /// </summary>
+    public static ParticleModuleSubUV DefaultObject => (ParticleModuleSubUV)StaticClass().DefaultObject;
+
     internal ParticleModuleSubUV() { }
 
     /// <summary>

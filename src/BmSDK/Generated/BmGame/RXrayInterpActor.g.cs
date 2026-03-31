@@ -21,6 +21,11 @@ public partial class RXrayInterpActor : BmSDK.Engine.InterpActor, BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXrayInterpActor.
+    /// </summary>
+    public static RXrayInterpActor DefaultObject => (RXrayInterpActor)StaticClass().DefaultObject;
+
     internal RXrayInterpActor() { }
 
     /// <summary>

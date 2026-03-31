@@ -21,6 +21,11 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavigationHandle.
+    /// </summary>
+    public static NavigationHandle DefaultObject => (NavigationHandle)StaticClass().DefaultObject;
+
     internal NavigationHandle() { }
 
     /// <summary>

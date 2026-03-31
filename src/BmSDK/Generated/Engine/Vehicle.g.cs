@@ -21,6 +21,11 @@ public partial class Vehicle : BmSDK.Engine.Pawn, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Vehicle.
+    /// </summary>
+    public static Vehicle DefaultObject => (Vehicle)StaticClass().DefaultObject;
+
     internal Vehicle() { }
 
     /// <summary>

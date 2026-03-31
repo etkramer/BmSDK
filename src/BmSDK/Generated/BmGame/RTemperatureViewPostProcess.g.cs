@@ -21,6 +21,11 @@ public partial class RTemperatureViewPostProcess : BmSDK.BmGame.RViewPostProcess
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTemperatureViewPostProcess.
+    /// </summary>
+    public static RTemperatureViewPostProcess DefaultObject => (RTemperatureViewPostProcess)StaticClass().DefaultObject;
+
     internal RTemperatureViewPostProcess() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStaffBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStaffBase.
+    /// </summary>
+    public static RStaffBase DefaultObject => (RStaffBase)StaticClass().DefaultObject;
+
     internal RStaffBase() { }
 
     /// <summary>

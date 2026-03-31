@@ -21,6 +21,11 @@ public partial class RPawnVillainThugTough : BmSDK.BmGame.RPawnVillainThug, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThugTough.
+    /// </summary>
+    public static RPawnVillainThugTough DefaultObject => (RPawnVillainThugTough)StaticClass().DefaultObject;
+
     internal RPawnVillainThugTough() { }
 
     /// <summary>

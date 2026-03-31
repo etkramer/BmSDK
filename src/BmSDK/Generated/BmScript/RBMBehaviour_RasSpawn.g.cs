@@ -21,6 +21,11 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_RasSpawn.
+    /// </summary>
+    public static RBMBehaviour_RasSpawn DefaultObject => (RBMBehaviour_RasSpawn)StaticClass().DefaultObject;
+
     internal RBMBehaviour_RasSpawn() { }
 
     /// <summary>

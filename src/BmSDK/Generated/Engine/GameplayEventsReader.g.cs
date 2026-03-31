@@ -21,6 +21,11 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameplayEventsReader.
+    /// </summary>
+    public static GameplayEventsReader DefaultObject => (GameplayEventsReader)StaticClass().DefaultObject;
+
     internal GameplayEventsReader() { }
 
     /// <summary>

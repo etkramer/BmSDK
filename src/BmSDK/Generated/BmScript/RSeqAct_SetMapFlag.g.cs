@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMapFlag : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMapFlag.
+    /// </summary>
+    public static RSeqAct_SetMapFlag DefaultObject => (RSeqAct_SetMapFlag)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMapFlag() { }
 
     /// <summary>

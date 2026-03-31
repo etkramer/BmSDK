@@ -21,6 +21,11 @@ public partial class RSeqEvent_InterrogationStarted : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_InterrogationStarted.
+    /// </summary>
+    public static RSeqEvent_InterrogationStarted DefaultObject => (RSeqEvent_InterrogationStarted)StaticClass().DefaultObject;
+
     internal RSeqEvent_InterrogationStarted() { }
 
     /// <summary>

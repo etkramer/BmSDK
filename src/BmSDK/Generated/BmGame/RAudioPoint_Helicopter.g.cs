@@ -21,6 +21,11 @@ public partial class RAudioPoint_Helicopter : BmSDK.BmGame.RAudioPointController
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioPoint_Helicopter.
+    /// </summary>
+    public static RAudioPoint_Helicopter DefaultObject => (RAudioPoint_Helicopter)StaticClass().DefaultObject;
+
     internal RAudioPoint_Helicopter() { }
 
     /// <summary>

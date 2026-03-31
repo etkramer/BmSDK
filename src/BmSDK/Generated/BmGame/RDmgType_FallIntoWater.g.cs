@@ -21,6 +21,11 @@ public partial class RDmgType_FallIntoWater : BmSDK.BmGame.RDamageType, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_FallIntoWater.
+    /// </summary>
+    public static RDmgType_FallIntoWater DefaultObject => (RDmgType_FallIntoWater)StaticClass().DefaultObject;
+
     internal RDmgType_FallIntoWater() { }
 
     /// <summary>

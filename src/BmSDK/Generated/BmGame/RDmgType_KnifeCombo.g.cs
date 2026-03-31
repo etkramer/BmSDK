@@ -21,6 +21,11 @@ public partial class RDmgType_KnifeCombo : BmSDK.BmGame.RDamageType, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_KnifeCombo.
+    /// </summary>
+    public static RDmgType_KnifeCombo DefaultObject => (RDmgType_KnifeCombo)StaticClass().DefaultObject;
+
     internal RDmgType_KnifeCombo() { }
 
     /// <summary>

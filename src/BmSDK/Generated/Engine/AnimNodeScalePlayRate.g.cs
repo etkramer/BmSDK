@@ -21,6 +21,11 @@ public partial class AnimNodeScalePlayRate : BmSDK.Engine.AnimNodeBlendBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeScalePlayRate.
+    /// </summary>
+    public static AnimNodeScalePlayRate DefaultObject => (AnimNodeScalePlayRate)StaticClass().DefaultObject;
+
     internal AnimNodeScalePlayRate() { }
 
     /// <summary>

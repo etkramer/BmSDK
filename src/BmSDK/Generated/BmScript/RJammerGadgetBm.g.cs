@@ -21,6 +21,11 @@ public partial class RJammerGadgetBm : BmSDK.BmGame.RJammerGadget, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJammerGadgetBm.
+    /// </summary>
+    public static RJammerGadgetBm DefaultObject => (RJammerGadgetBm)StaticClass().DefaultObject;
+
     internal RJammerGadgetBm() { }
 
     /// <summary>

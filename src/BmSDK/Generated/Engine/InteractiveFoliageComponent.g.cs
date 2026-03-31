@@ -21,6 +21,11 @@ public partial class InteractiveFoliageComponent : BmSDK.Engine.StaticMeshCompon
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InteractiveFoliageComponent.
+    /// </summary>
+    public static InteractiveFoliageComponent DefaultObject => (InteractiveFoliageComponent)StaticClass().DefaultObject;
+
     internal InteractiveFoliageComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedStaticMeshPart.
+    /// </summary>
+    public static FracturedStaticMeshPart DefaultObject => (FracturedStaticMeshPart)StaticClass().DefaultObject;
+
     internal FracturedStaticMeshPart() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AudioComponent.
+    /// </summary>
+    public static AudioComponent DefaultObject => (AudioComponent)StaticClass().DefaultObject;
+
     internal AudioComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_Redirect : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Redirect.
+    /// </summary>
+    public static RDmgType_Redirect DefaultObject => (RDmgType_Redirect)StaticClass().DefaultObject;
+
     internal RDmgType_Redirect() { }
 
     /// <summary>

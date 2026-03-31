@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Con
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BeingTakenDown.
+    /// </summary>
+    public static RBMBehaviour_BeingTakenDown DefaultObject => (RBMBehaviour_BeingTakenDown)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BeingTakenDown() { }
 
     /// <summary>

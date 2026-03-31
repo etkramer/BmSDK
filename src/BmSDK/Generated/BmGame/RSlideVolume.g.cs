@@ -21,6 +21,11 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSlideVolume.
+    /// </summary>
+    public static RSlideVolume DefaultObject => (RSlideVolume)StaticClass().DefaultObject;
+
     internal RSlideVolume() { }
 
     /// <summary>

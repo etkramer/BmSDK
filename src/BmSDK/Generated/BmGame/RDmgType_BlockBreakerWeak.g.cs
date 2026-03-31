@@ -21,6 +21,11 @@ public partial class RDmgType_BlockBreakerWeak : BmSDK.BmGame.RDmgType_BlockBrea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BlockBreakerWeak.
+    /// </summary>
+    public static RDmgType_BlockBreakerWeak DefaultObject => (RDmgType_BlockBreakerWeak)StaticClass().DefaultObject;
+
     internal RDmgType_BlockBreakerWeak() { }
 
     /// <summary>

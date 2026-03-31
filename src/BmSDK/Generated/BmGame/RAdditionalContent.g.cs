@@ -21,6 +21,11 @@ public partial class RAdditionalContent : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAdditionalContent.
+    /// </summary>
+    public static RAdditionalContent DefaultObject => (RAdditionalContent)StaticClass().DefaultObject;
+
     internal RAdditionalContent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavigationHandle.
+    /// </summary>
+    public static RNavigationHandle DefaultObject => (RNavigationHandle)StaticClass().DefaultObject;
+
     internal RNavigationHandle() { }
 
     /// <summary>

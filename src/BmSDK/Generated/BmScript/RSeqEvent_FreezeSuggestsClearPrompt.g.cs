@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeSuggestsClearPrompt : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeSuggestsClearPrompt.
+    /// </summary>
+    public static RSeqEvent_FreezeSuggestsClearPrompt DefaultObject => (RSeqEvent_FreezeSuggestsClearPrompt)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeSuggestsClearPrompt() { }
 
     /// <summary>

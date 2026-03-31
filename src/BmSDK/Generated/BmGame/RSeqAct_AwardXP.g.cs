@@ -21,6 +21,11 @@ public partial class RSeqAct_AwardXP : BmSDK.Engine.SequenceAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AwardXP.
+    /// </summary>
+    public static RSeqAct_AwardXP DefaultObject => (RSeqAct_AwardXP)StaticClass().DefaultObject;
+
     internal RSeqAct_AwardXP() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataTrail : BmSDK.Engine.ParticleModuleTy
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataTrail.
+    /// </summary>
+    public static ParticleModuleTypeDataTrail DefaultObject => (ParticleModuleTypeDataTrail)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataTrail() { }
 
     /// <summary>

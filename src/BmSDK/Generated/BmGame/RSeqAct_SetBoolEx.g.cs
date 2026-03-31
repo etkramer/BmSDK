@@ -21,6 +21,11 @@ public partial class RSeqAct_SetBoolEx : BmSDK.Engine.SeqAct_SetSequenceVariable
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetBoolEx.
+    /// </summary>
+    public static RSeqAct_SetBoolEx DefaultObject => (RSeqAct_SetBoolEx)StaticClass().DefaultObject;
+
     internal RSeqAct_SetBoolEx() { }
 
     /// <summary>

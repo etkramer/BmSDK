@@ -21,6 +21,11 @@ public partial class RSkeletalMeshActor : BmSDK.Engine.SkeletalMeshActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkeletalMeshActor.
+    /// </summary>
+    public static RSkeletalMeshActor DefaultObject => (RSkeletalMeshActor)StaticClass().DefaultObject;
+
     internal RSkeletalMeshActor() { }
 
     /// <summary>

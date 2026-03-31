@@ -21,6 +21,11 @@ public partial class AnimNotify_Kismet : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_Kismet.
+    /// </summary>
+    public static AnimNotify_Kismet DefaultObject => (AnimNotify_Kismet)StaticClass().DefaultObject;
+
     internal AnimNotify_Kismet() { }
 
     /// <summary>

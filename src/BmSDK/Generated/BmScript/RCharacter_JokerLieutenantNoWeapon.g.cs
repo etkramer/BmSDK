@@ -21,6 +21,11 @@ public partial class RCharacter_JokerLieutenantNoWeapon : BmSDK.BmScript.RCharac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_JokerLieutenantNoWeapon.
+    /// </summary>
+    public static RCharacter_JokerLieutenantNoWeapon DefaultObject => (RCharacter_JokerLieutenantNoWeapon)StaticClass().DefaultObject;
+
     internal RCharacter_JokerLieutenantNoWeapon() { }
 
     /// <summary>

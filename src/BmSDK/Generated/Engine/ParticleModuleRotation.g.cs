@@ -21,6 +21,11 @@ public partial class ParticleModuleRotation : BmSDK.Engine.ParticleModuleRotatio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleRotation.
+    /// </summary>
+    public static ParticleModuleRotation DefaultObject => (ParticleModuleRotation)StaticClass().DefaultObject;
+
     internal ParticleModuleRotation() { }
 
     /// <summary>

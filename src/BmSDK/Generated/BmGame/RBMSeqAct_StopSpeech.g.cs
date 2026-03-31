@@ -21,6 +21,11 @@ public partial class RBMSeqAct_StopSpeech : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqAct_StopSpeech.
+    /// </summary>
+    public static RBMSeqAct_StopSpeech DefaultObject => (RBMSeqAct_StopSpeech)StaticClass().DefaultObject;
+
     internal RBMSeqAct_StopSpeech() { }
 
     /// <summary>

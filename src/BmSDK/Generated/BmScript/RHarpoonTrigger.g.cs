@@ -21,6 +21,11 @@ public partial class RHarpoonTrigger : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonTrigger.
+    /// </summary>
+    public static RHarpoonTrigger DefaultObject => (RHarpoonTrigger)StaticClass().DefaultObject;
+
     internal RHarpoonTrigger() { }
 
     /// <summary>

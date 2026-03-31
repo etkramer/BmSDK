@@ -21,6 +21,11 @@ public partial class MaterialExpressionFoliageNormalizedRotationAxisAndAngle : B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFoliageNormalizedRotationAxisAndAngle.
+    /// </summary>
+    public static MaterialExpressionFoliageNormalizedRotationAxisAndAngle DefaultObject => (MaterialExpressionFoliageNormalizedRotationAxisAndAngle)StaticClass().DefaultObject;
+
     internal MaterialExpressionFoliageNormalizedRotationAxisAndAngle() { }
 
     /// <summary>

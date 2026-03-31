@@ -21,6 +21,11 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRepeatAnimManager.
+    /// </summary>
+    public static RRepeatAnimManager DefaultObject => (RRepeatAnimManager)StaticClass().DefaultObject;
+
     internal RRepeatAnimManager() { }
 
     /// <summary>

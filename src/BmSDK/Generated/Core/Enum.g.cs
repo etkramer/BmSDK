@@ -21,6 +21,11 @@ public partial class Enum : BmSDK.Field, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Enum.
+    /// </summary>
+    public static Enum DefaultObject => (Enum)StaticClass().DefaultObject;
+
     internal Enum() { }
 
     /// <summary>

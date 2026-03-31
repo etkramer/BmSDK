@@ -21,6 +21,11 @@ public partial class RDmgType_KillZone : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_KillZone.
+    /// </summary>
+    public static RDmgType_KillZone DefaultObject => (RDmgType_KillZone)StaticClass().DefaultObject;
+
     internal RDmgType_KillZone() { }
 
     /// <summary>

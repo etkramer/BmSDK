@@ -21,6 +21,11 @@ public partial class RSeqAct_SetBatmanUnderFire : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetBatmanUnderFire.
+    /// </summary>
+    public static RSeqAct_SetBatmanUnderFire DefaultObject => (RSeqAct_SetBatmanUnderFire)StaticClass().DefaultObject;
+
     internal RSeqAct_SetBatmanUnderFire() { }
 
     /// <summary>

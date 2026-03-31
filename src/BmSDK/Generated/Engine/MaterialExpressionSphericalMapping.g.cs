@@ -21,6 +21,11 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSphericalMapping.
+    /// </summary>
+    public static MaterialExpressionSphericalMapping DefaultObject => (MaterialExpressionSphericalMapping)StaticClass().DefaultObject;
+
     internal MaterialExpressionSphericalMapping() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_RemoveTrivialKeys : BmSDK.Eng
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_RemoveTrivialKeys.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_RemoveTrivialKeys DefaultObject => (AnimationCompressionAlgorithm_RemoveTrivialKeys)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_RemoveTrivialKeys() { }
 
     /// <summary>

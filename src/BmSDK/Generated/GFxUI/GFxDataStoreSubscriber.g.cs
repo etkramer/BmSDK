@@ -21,6 +21,11 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxDataStoreSubscriber.
+    /// </summary>
+    public static GFxDataStoreSubscriber DefaultObject => (GFxDataStoreSubscriber)StaticClass().DefaultObject;
+
     internal GFxDataStoreSubscriber() { }
 
     /// <summary>

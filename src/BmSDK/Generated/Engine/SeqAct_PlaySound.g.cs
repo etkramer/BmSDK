@@ -21,6 +21,11 @@ public partial class SeqAct_PlaySound : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_PlaySound.
+    /// </summary>
+    public static SeqAct_PlaySound DefaultObject => (SeqAct_PlaySound)StaticClass().DefaultObject;
+
     internal SeqAct_PlaySound() { }
 
     /// <summary>

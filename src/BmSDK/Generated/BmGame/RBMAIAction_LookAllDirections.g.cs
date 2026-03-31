@@ -21,6 +21,11 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_LookAllDirections.
+    /// </summary>
+    public static RBMAIAction_LookAllDirections DefaultObject => (RBMAIAction_LookAllDirections)StaticClass().DefaultObject;
+
     internal RBMAIAction_LookAllDirections() { }
 
     /// <summary>

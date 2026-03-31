@@ -21,6 +21,11 @@ public partial class RAnimNotify_WeaponDestroy : BmSDK.Engine.AnimNotify, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_WeaponDestroy.
+    /// </summary>
+    public static RAnimNotify_WeaponDestroy DefaultObject => (RAnimNotify_WeaponDestroy)StaticClass().DefaultObject;
+
     internal RAnimNotify_WeaponDestroy() { }
 
     /// <summary>

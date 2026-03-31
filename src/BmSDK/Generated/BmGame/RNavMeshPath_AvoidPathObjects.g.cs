@@ -21,6 +21,11 @@ public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathCon
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_AvoidPathObjects.
+    /// </summary>
+    public static RNavMeshPath_AvoidPathObjects DefaultObject => (RNavMeshPath_AvoidPathObjects)StaticClass().DefaultObject;
+
     internal RNavMeshPath_AvoidPathObjects() { }
 
     /// <summary>

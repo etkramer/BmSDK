@@ -21,6 +21,11 @@ public partial class RSeqAct_DrainJammerGadget : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DrainJammerGadget.
+    /// </summary>
+    public static RSeqAct_DrainJammerGadget DefaultObject => (RSeqAct_DrainJammerGadget)StaticClass().DefaultObject;
+
     internal RSeqAct_DrainJammerGadget() { }
 
     /// <summary>

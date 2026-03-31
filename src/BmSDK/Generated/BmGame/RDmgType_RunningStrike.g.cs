@@ -21,6 +21,11 @@ public partial class RDmgType_RunningStrike : BmSDK.BmGame.RDmgType_Strike, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RunningStrike.
+    /// </summary>
+    public static RDmgType_RunningStrike DefaultObject => (RDmgType_RunningStrike)StaticClass().DefaultObject;
+
     internal RDmgType_RunningStrike() { }
 
     /// <summary>

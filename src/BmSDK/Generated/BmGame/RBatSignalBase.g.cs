@@ -21,6 +21,11 @@ public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatSignalBase.
+    /// </summary>
+    public static RBatSignalBase DefaultObject => (RBatSignalBase)StaticClass().DefaultObject;
+
     internal RBatSignalBase() { }
 
     /// <summary>

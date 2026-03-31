@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceSubtitle : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceSubtitle.
+    /// </summary>
+    public static RSeqAct_ForceSubtitle DefaultObject => (RSeqAct_ForceSubtitle)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceSubtitle() { }
 
     /// <summary>

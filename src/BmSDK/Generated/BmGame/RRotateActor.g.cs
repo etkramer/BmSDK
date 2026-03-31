@@ -21,6 +21,11 @@ public partial class RRotateActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRotateActor.
+    /// </summary>
+    public static RRotateActor DefaultObject => (RRotateActor)StaticClass().DefaultObject;
+
     internal RRotateActor() { }
 
     /// <summary>

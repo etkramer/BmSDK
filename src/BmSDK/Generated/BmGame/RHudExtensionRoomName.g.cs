@@ -21,6 +21,11 @@ public partial class RHudExtensionRoomName : BmSDK.BmGame.RHudExtension, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionRoomName.
+    /// </summary>
+    public static RHudExtensionRoomName DefaultObject => (RHudExtensionRoomName)StaticClass().DefaultObject;
+
     internal RHudExtensionRoomName() { }
 
     /// <summary>

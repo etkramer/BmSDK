@@ -21,6 +21,11 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlerWall.
+    /// </summary>
+    public static RRiddlerWall DefaultObject => (RRiddlerWall)StaticClass().DefaultObject;
+
     internal RRiddlerWall() { }
 
     /// <summary>

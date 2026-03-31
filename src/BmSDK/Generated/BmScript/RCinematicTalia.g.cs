@@ -21,6 +21,11 @@ public partial class RCinematicTalia : BmSDK.BmGame.RCinematicActor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicTalia.
+    /// </summary>
+    public static RCinematicTalia DefaultObject => (RCinematicTalia)StaticClass().DefaultObject;
+
     internal RCinematicTalia() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AISwitchablePylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AISwitchablePylon.
+    /// </summary>
+    public static AISwitchablePylon DefaultObject => (AISwitchablePylon)StaticClass().DefaultObject;
+
     internal AISwitchablePylon() { }
 
     /// <summary>

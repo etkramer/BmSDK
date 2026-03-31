@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceNoStasis : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceNoStasis.
+    /// </summary>
+    public static RSeqAct_ForceNoStasis DefaultObject => (RSeqAct_ForceNoStasis)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceNoStasis() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNotify_PlayGadgetAnim : BmSDK.Engine.AnimNotify, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_PlayGadgetAnim.
+    /// </summary>
+    public static RAnimNotify_PlayGadgetAnim DefaultObject => (RAnimNotify_PlayGadgetAnim)StaticClass().DefaultObject;
+
     internal RAnimNotify_PlayGadgetAnim() { }
 
     /// <summary>

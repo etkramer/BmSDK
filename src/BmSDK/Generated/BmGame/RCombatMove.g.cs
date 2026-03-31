@@ -21,6 +21,11 @@ public partial class RCombatMove : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove.
+    /// </summary>
+    public static RCombatMove DefaultObject => (RCombatMove)StaticClass().DefaultObject;
+
     internal RCombatMove() { }
 
     /// <summary>

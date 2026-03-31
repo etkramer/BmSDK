@@ -21,6 +21,11 @@ public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WindDirectionalSourceComponent.
+    /// </summary>
+    public static WindDirectionalSourceComponent DefaultObject => (WindDirectionalSourceComponent)StaticClass().DefaultObject;
+
     internal WindDirectionalSourceComponent() { }
 
     /// <summary>

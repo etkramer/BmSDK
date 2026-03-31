@@ -21,6 +21,11 @@ public partial class AnimNotify_PawnMaterialParam : BmSDK.Engine.AnimNotify_Scri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_PawnMaterialParam.
+    /// </summary>
+    public static AnimNotify_PawnMaterialParam DefaultObject => (AnimNotify_PawnMaterialParam)StaticClass().DefaultObject;
+
     internal AnimNotify_PawnMaterialParam() { }
 
     /// <summary>

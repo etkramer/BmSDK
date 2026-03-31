@@ -21,6 +21,11 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineSubsystemCommonImpl.
+    /// </summary>
+    public static OnlineSubsystemCommonImpl DefaultObject => (OnlineSubsystemCommonImpl)StaticClass().DefaultObject;
+
     internal OnlineSubsystemCommonImpl() { }
 
     /// <summary>

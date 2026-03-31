@@ -21,6 +21,11 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexClothingAsset.
+    /// </summary>
+    public static ApexClothingAsset DefaultObject => (ApexClothingAsset)StaticClass().DefaultObject;
+
     internal ApexClothingAsset() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_ThrowGrenadeIntoVent : BmSDK.BmGame.RBMAIAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ThrowGrenadeIntoVent.
+    /// </summary>
+    public static RBMAIAction_ThrowGrenadeIntoVent DefaultObject => (RBMAIAction_ThrowGrenadeIntoVent)StaticClass().DefaultObject;
+
     internal RBMAIAction_ThrowGrenadeIntoVent() { }
 
     /// <summary>

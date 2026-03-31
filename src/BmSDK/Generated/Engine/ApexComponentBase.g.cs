@@ -21,6 +21,11 @@ public partial class ApexComponentBase : BmSDK.Engine.MeshComponent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexComponentBase.
+    /// </summary>
+    public static ApexComponentBase DefaultObject => (ApexComponentBase)StaticClass().DefaultObject;
+
     internal ApexComponentBase() { }
 
     /// <summary>

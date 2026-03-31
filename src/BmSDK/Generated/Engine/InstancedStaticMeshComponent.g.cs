@@ -21,6 +21,11 @@ public partial class InstancedStaticMeshComponent : BmSDK.Engine.StaticMeshCompo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InstancedStaticMeshComponent.
+    /// </summary>
+    public static InstancedStaticMeshComponent DefaultObject => (InstancedStaticMeshComponent)StaticClass().DefaultObject;
+
     internal InstancedStaticMeshComponent() { }
 
     /// <summary>

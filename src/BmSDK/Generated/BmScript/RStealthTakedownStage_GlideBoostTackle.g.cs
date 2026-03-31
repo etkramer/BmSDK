@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_GlideBoostTackle : BmSDK.BmGame.RStea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_GlideBoostTackle.
+    /// </summary>
+    public static RStealthTakedownStage_GlideBoostTackle DefaultObject => (RStealthTakedownStage_GlideBoostTackle)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_GlideBoostTackle() { }
 
     /// <summary>

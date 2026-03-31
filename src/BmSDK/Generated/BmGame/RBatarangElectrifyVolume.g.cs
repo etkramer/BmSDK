@@ -21,6 +21,11 @@ public partial class RBatarangElectrifyVolume : BmSDK.Engine.Volume, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangElectrifyVolume.
+    /// </summary>
+    public static RBatarangElectrifyVolume DefaultObject => (RBatarangElectrifyVolume)StaticClass().DefaultObject;
+
     internal RBatarangElectrifyVolume() { }
 
     /// <summary>

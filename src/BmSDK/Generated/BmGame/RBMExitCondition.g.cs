@@ -21,6 +21,11 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition.
+    /// </summary>
+    public static RBMExitCondition DefaultObject => (RBMExitCondition)StaticClass().DefaultObject;
+
     internal RBMExitCondition() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_PodExplosion : BmSDK.BmGame.RDmgType_NoXP, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_PodExplosion.
+    /// </summary>
+    public static RDmgType_PodExplosion DefaultObject => (RDmgType_PodExplosion)StaticClass().DefaultObject;
+
     internal RDmgType_PodExplosion() { }
 
     /// <summary>

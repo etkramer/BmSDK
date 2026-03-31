@@ -21,6 +21,11 @@ public partial class ExponentialHeightFog : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ExponentialHeightFog.
+    /// </summary>
+    public static ExponentialHeightFog DefaultObject => (ExponentialHeightFog)StaticClass().DefaultObject;
+
     internal ExponentialHeightFog() { }
 
     /// <summary>

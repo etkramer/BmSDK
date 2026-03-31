@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Interrogation : BmSDK.BmGame.RBMBehaviour, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Interrogation.
+    /// </summary>
+    public static RBMBehaviour_Interrogation DefaultObject => (RBMBehaviour_Interrogation)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Interrogation() { }
 
     /// <summary>

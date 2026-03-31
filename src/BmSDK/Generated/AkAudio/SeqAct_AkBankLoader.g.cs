@@ -21,6 +21,11 @@ public partial class SeqAct_AkBankLoader : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkBankLoader.
+    /// </summary>
+    public static SeqAct_AkBankLoader DefaultObject => (SeqAct_AkBankLoader)StaticClass().DefaultObject;
+
     internal SeqAct_AkBankLoader() { }
 
     /// <summary>

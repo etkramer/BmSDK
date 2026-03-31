@@ -21,6 +21,11 @@ public partial class RDmgType_Challenge_Seen : BmSDK.BmGame.RDamageType, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Challenge_Seen.
+    /// </summary>
+    public static RDmgType_Challenge_Seen DefaultObject => (RDmgType_Challenge_Seen)StaticClass().DefaultObject;
+
     internal RDmgType_Challenge_Seen() { }
 
     /// <summary>

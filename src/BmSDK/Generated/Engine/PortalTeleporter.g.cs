@@ -21,6 +21,11 @@ public partial class PortalTeleporter : BmSDK.Engine.SceneCapturePortalActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PortalTeleporter.
+    /// </summary>
+    public static PortalTeleporter DefaultObject => (PortalTeleporter)StaticClass().DefaultObject;
+
     internal PortalTeleporter() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_TriggerExecute : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TriggerExecute.
+    /// </summary>
+    public static RSeqAct_TriggerExecute DefaultObject => (RSeqAct_TriggerExecute)StaticClass().DefaultObject;
+
     internal RSeqAct_TriggerExecute() { }
 
     /// <summary>

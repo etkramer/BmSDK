@@ -21,6 +21,11 @@ public partial class RAnimNotify_CapeOpen : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CapeOpen.
+    /// </summary>
+    public static RAnimNotify_CapeOpen DefaultObject => (RAnimNotify_CapeOpen)StaticClass().DefaultObject;
+
     internal RAnimNotify_CapeOpen() { }
 
     /// <summary>

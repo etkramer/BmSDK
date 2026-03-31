@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleCinematicMode : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleCinematicMode.
+    /// </summary>
+    public static SeqAct_ToggleCinematicMode DefaultObject => (SeqAct_ToggleCinematicMode)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleCinematicMode() { }
 
     /// <summary>

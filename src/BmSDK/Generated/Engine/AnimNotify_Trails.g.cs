@@ -21,6 +21,11 @@ public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_Trails.
+    /// </summary>
+    public static AnimNotify_Trails DefaultObject => (AnimNotify_Trails)StaticClass().DefaultObject;
+
     internal AnimNotify_Trails() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ReplenishHealth : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ReplenishHealth.
+    /// </summary>
+    public static RSeqAct_ReplenishHealth DefaultObject => (RSeqAct_ReplenishHealth)StaticClass().DefaultObject;
+
     internal RSeqAct_ReplenishHealth() { }
 
     /// <summary>

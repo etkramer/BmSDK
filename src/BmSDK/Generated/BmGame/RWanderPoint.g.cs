@@ -21,6 +21,11 @@ public partial class RWanderPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWanderPoint.
+    /// </summary>
+    public static RWanderPoint DefaultObject => (RWanderPoint)StaticClass().DefaultObject;
+
     internal RWanderPoint() { }
 
     /// <summary>

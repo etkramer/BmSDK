@@ -21,6 +21,11 @@ public partial class RSeqEvent_BatmanVantageEscape : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BatmanVantageEscape.
+    /// </summary>
+    public static RSeqEvent_BatmanVantageEscape DefaultObject => (RSeqEvent_BatmanVantageEscape)StaticClass().DefaultObject;
+
     internal RSeqEvent_BatmanVantageEscape() { }
 
     /// <summary>

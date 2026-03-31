@@ -21,6 +21,11 @@ public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_WithinDistanceEnvelope.
+    /// </summary>
+    public static Path_WithinDistanceEnvelope DefaultObject => (Path_WithinDistanceEnvelope)StaticClass().DefaultObject;
+
     internal Path_WithinDistanceEnvelope() { }
 
     /// <summary>

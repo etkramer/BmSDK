@@ -21,6 +21,11 @@ public partial class RInterpTrackInstFaceFXLookAt : BmSDK.Engine.InterpTrackInst
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInterpTrackInstFaceFXLookAt.
+    /// </summary>
+    public static RInterpTrackInstFaceFXLookAt DefaultObject => (RInterpTrackInstFaceFXLookAt)StaticClass().DefaultObject;
+
     internal RInterpTrackInstFaceFXLookAt() { }
 
     /// <summary>

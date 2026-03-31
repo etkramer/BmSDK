@@ -21,6 +21,11 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlFootPlacement.
+    /// </summary>
+    public static SkelControlFootPlacement DefaultObject => (SkelControlFootPlacement)StaticClass().DefaultObject;
+
     internal SkelControlFootPlacement() { }
 
     /// <summary>

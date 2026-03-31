@@ -21,6 +21,11 @@ public partial class RSeqEvent_PlayerDied : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PlayerDied.
+    /// </summary>
+    public static RSeqEvent_PlayerDied DefaultObject => (RSeqEvent_PlayerDied)StaticClass().DefaultObject;
+
     internal RSeqEvent_PlayerDied() { }
 
     /// <summary>

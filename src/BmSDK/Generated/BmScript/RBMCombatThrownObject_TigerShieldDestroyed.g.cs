@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_TigerShieldDestroyed : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_TigerShieldDestroyed.
+    /// </summary>
+    public static RBMCombatThrownObject_TigerShieldDestroyed DefaultObject => (RBMCombatThrownObject_TigerShieldDestroyed)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_TigerShieldDestroyed() { }
 
     /// <summary>

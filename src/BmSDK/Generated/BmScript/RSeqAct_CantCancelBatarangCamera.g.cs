@@ -21,6 +21,11 @@ public partial class RSeqAct_CantCancelBatarangCamera : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CantCancelBatarangCamera.
+    /// </summary>
+    public static RSeqAct_CantCancelBatarangCamera DefaultObject => (RSeqAct_CantCancelBatarangCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_CantCancelBatarangCamera() { }
 
     /// <summary>

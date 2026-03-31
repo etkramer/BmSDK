@@ -21,6 +21,11 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2Component.
+    /// </summary>
+    public static RRope2Component DefaultObject => (RRope2Component)StaticClass().DefaultObject;
+
     internal RRope2Component() { }
 
     /// <summary>

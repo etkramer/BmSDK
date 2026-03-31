@@ -21,6 +21,11 @@ public partial class RSeqAct_SetCustomHangMove : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetCustomHangMove.
+    /// </summary>
+    public static RSeqAct_SetCustomHangMove DefaultObject => (RSeqAct_SetCustomHangMove)StaticClass().DefaultObject;
+
     internal RSeqAct_SetCustomHangMove() { }
 
     /// <summary>

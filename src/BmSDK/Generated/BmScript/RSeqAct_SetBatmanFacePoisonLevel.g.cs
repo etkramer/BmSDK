@@ -21,6 +21,11 @@ public partial class RSeqAct_SetBatmanFacePoisonLevel : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetBatmanFacePoisonLevel.
+    /// </summary>
+    public static RSeqAct_SetBatmanFacePoisonLevel DefaultObject => (RSeqAct_SetBatmanFacePoisonLevel)StaticClass().DefaultObject;
+
     internal RSeqAct_SetBatmanFacePoisonLevel() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_DoorReaction : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_DoorReaction.
+    /// </summary>
+    public static RDmgType_DoorReaction DefaultObject => (RDmgType_DoorReaction)StaticClass().DefaultObject;
+
     internal RDmgType_DoorReaction() { }
 
     /// <summary>

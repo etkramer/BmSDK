@@ -21,6 +21,11 @@ public partial class RGFxMovieScoreHUD : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieScoreHUD.
+    /// </summary>
+    public static RGFxMovieScoreHUD DefaultObject => (RGFxMovieScoreHUD)StaticClass().DefaultObject;
+
     internal RGFxMovieScoreHUD() { }
 
     /// <summary>

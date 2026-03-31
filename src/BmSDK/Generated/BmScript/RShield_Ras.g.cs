@@ -21,6 +21,11 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShield_Ras.
+    /// </summary>
+    public static RShield_Ras DefaultObject => (RShield_Ras)StaticClass().DefaultObject;
+
     internal RShield_Ras() { }
 
     /// <summary>

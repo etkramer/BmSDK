@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_CustomBackScreen : BmSDK.BmGame.RGFxMovieUI, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_CustomBackScreen.
+    /// </summary>
+    public static RGFxMovieUI_CustomBackScreen DefaultObject => (RGFxMovieUI_CustomBackScreen)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_CustomBackScreen() { }
 
     /// <summary>

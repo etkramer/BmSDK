@@ -21,6 +21,11 @@ public partial class RAnimNotify_MotionExtractionOffset : BmSDK.Engine.AnimNotif
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_MotionExtractionOffset.
+    /// </summary>
+    public static RAnimNotify_MotionExtractionOffset DefaultObject => (RAnimNotify_MotionExtractionOffset)StaticClass().DefaultObject;
+
     internal RAnimNotify_MotionExtractionOffset() { }
 
     /// <summary>

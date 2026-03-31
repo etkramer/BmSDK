@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject.
+    /// </summary>
+    public static RBMCombatThrownObject DefaultObject => (RBMCombatThrownObject)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAutoJezNode : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAutoJezNode.
+    /// </summary>
+    public static RAutoJezNode DefaultObject => (RAutoJezNode)StaticClass().DefaultObject;
+
     internal RAutoJezNode() { }
 
     /// <summary>

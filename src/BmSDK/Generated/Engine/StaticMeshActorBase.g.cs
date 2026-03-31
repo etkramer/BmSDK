@@ -21,6 +21,11 @@ public partial class StaticMeshActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StaticMeshActorBase.
+    /// </summary>
+    public static StaticMeshActorBase DefaultObject => (StaticMeshActorBase)StaticClass().DefaultObject;
+
     internal StaticMeshActorBase() { }
 
     /// <summary>

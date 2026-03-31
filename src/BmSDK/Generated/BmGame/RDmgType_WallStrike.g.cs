@@ -21,6 +21,11 @@ public partial class RDmgType_WallStrike : BmSDK.BmGame.RDmgType_HeavyStrike, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_WallStrike.
+    /// </summary>
+    public static RDmgType_WallStrike DefaultObject => (RDmgType_WallStrike)StaticClass().DefaultObject;
+
     internal RDmgType_WallStrike() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_SuperGlideTakedown : BmSDK.BmScript.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_SuperGlideTakedown.
+    /// </summary>
+    public static RStealthTakedownStage_SuperGlideTakedown DefaultObject => (RStealthTakedownStage_SuperGlideTakedown)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_SuperGlideTakedown() { }
 
     /// <summary>

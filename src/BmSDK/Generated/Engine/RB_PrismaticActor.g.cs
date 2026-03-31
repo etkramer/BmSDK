@@ -21,6 +21,11 @@ public partial class RB_PrismaticActor : BmSDK.Engine.RB_ConstraintActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_PrismaticActor.
+    /// </summary>
+    public static RB_PrismaticActor DefaultObject => (RB_PrismaticActor)StaticClass().DefaultObject;
+
     internal RB_PrismaticActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_Explosive.
+    /// </summary>
+    public static RBMCombatPoint_Explosive DefaultObject => (RBMCombatPoint_Explosive)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_Explosive() { }
 
     /// <summary>

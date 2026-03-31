@@ -21,6 +21,11 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProjectile_GrenadeBase.
+    /// </summary>
+    public static RProjectile_GrenadeBase DefaultObject => (RProjectile_GrenadeBase)StaticClass().DefaultObject;
+
     internal RProjectile_GrenadeBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ActivateElectrifiedFloorPanels : BmSDK.Engine.SeqAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ActivateElectrifiedFloorPanels.
+    /// </summary>
+    public static RSeqAct_ActivateElectrifiedFloorPanels DefaultObject => (RSeqAct_ActivateElectrifiedFloorPanels)StaticClass().DefaultObject;
+
     internal RSeqAct_ActivateElectrifiedFloorPanels() { }
 
     /// <summary>

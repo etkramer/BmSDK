@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceGlide : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceGlide.
+    /// </summary>
+    public static RSeqAct_ForceGlide DefaultObject => (RSeqAct_ForceGlide)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceGlide() { }
 
     /// <summary>

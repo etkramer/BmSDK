@@ -21,6 +21,11 @@ public partial class RSeqAct_AlertPredThugs : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AlertPredThugs.
+    /// </summary>
+    public static RSeqAct_AlertPredThugs DefaultObject => (RSeqAct_AlertPredThugs)StaticClass().DefaultObject;
+
     internal RSeqAct_AlertPredThugs() { }
 
     /// <summary>

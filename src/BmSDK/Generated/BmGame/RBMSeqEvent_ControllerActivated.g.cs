@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_ControllerActivated : BmSDK.BmGame.RBMSeqEvent_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_ControllerActivated.
+    /// </summary>
+    public static RBMSeqEvent_ControllerActivated DefaultObject => (RBMSeqEvent_ControllerActivated)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_ControllerActivated() { }
 
     /// <summary>

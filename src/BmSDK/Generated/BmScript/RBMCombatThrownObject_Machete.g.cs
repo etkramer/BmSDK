@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Machete : BmSDK.BmGame.RBMCombatThrow
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Machete.
+    /// </summary>
+    public static RBMCombatThrownObject_Machete DefaultObject => (RBMCombatThrownObject_Machete)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Machete() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRope2VantageWirePhysicsUpdater : BmSDK.BmGame.RRope2Simple
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2VantageWirePhysicsUpdater.
+    /// </summary>
+    public static RRope2VantageWirePhysicsUpdater DefaultObject => (RRope2VantageWirePhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2VantageWirePhysicsUpdater() { }
 
     /// <summary>

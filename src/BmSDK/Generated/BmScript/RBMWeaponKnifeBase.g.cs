@@ -21,6 +21,11 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponKnifeBase.
+    /// </summary>
+    public static RBMWeaponKnifeBase DefaultObject => (RBMWeaponKnifeBase)StaticClass().DefaultObject;
+
     internal RBMWeaponKnifeBase() { }
 
     /// <summary>

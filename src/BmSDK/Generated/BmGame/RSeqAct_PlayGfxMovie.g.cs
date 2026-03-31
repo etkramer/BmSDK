@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayGfxMovie : BmSDK.GFxUI.GFxAction_OpenMovie, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayGfxMovie.
+    /// </summary>
+    public static RSeqAct_PlayGfxMovie DefaultObject => (RSeqAct_PlayGfxMovie)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayGfxMovie() { }
 
     /// <summary>

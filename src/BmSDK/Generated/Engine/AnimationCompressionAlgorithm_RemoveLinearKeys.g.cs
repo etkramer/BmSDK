@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_RemoveLinearKeys : BmSDK.Engi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_RemoveLinearKeys.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_RemoveLinearKeys DefaultObject => (AnimationCompressionAlgorithm_RemoveLinearKeys)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_RemoveLinearKeys() { }
 
     /// <summary>

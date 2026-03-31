@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeCaughtByMagnet : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeCaughtByMagnet.
+    /// </summary>
+    public static RSeqEvent_FreezeCaughtByMagnet DefaultObject => (RSeqEvent_FreezeCaughtByMagnet)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeCaughtByMagnet() { }
 
     /// <summary>

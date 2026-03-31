@@ -21,6 +21,11 @@ public partial class DrawLightConeComponent : BmSDK.Engine.DrawConeComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawLightConeComponent.
+    /// </summary>
+    public static DrawLightConeComponent DefaultObject => (DrawLightConeComponent)StaticClass().DefaultObject;
+
     internal DrawLightConeComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDisruptableControlBox_HS : BmSDK.BmScript.RDisruptableCont
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableControlBox_HS.
+    /// </summary>
+    public static RDisruptableControlBox_HS DefaultObject => (RDisruptableControlBox_HS)StaticClass().DefaultObject;
+
     internal RDisruptableControlBox_HS() { }
 
     /// <summary>

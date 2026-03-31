@@ -21,6 +21,11 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameplayEventsHydra.
+    /// </summary>
+    public static RGameplayEventsHydra DefaultObject => (RGameplayEventsHydra)StaticClass().DefaultObject;
+
     internal RGameplayEventsHydra() { }
 
     /// <summary>

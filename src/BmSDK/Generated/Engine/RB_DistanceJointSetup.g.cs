@@ -21,6 +21,11 @@ public partial class RB_DistanceJointSetup : BmSDK.Engine.RB_ConstraintSetup, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_DistanceJointSetup.
+    /// </summary>
+    public static RB_DistanceJointSetup DefaultObject => (RB_DistanceJointSetup)StaticClass().DefaultObject;
+
     internal RB_DistanceJointSetup() { }
 
     /// <summary>

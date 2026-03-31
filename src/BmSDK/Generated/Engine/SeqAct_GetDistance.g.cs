@@ -21,6 +21,11 @@ public partial class SeqAct_GetDistance : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_GetDistance.
+    /// </summary>
+    public static SeqAct_GetDistance DefaultObject => (SeqAct_GetDistance)StaticClass().DefaultObject;
+
     internal SeqAct_GetDistance() { }
 
     /// <summary>

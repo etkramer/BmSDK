@@ -21,6 +21,11 @@ public partial class RCombatMove_RobinThrow : BmSDK.BmGame.RCombatMove_PlayerSpe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RobinThrow.
+    /// </summary>
+    public static RCombatMove_RobinThrow DefaultObject => (RCombatMove_RobinThrow)StaticClass().DefaultObject;
+
     internal RCombatMove_RobinThrow() { }
 
     /// <summary>

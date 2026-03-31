@@ -21,6 +21,11 @@ public partial class Surface : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Surface.
+    /// </summary>
+    public static Surface DefaultObject => (Surface)StaticClass().DefaultObject;
+
     internal Surface() { }
 
     /// <summary>

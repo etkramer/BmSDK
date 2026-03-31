@@ -21,6 +21,11 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPersistentDebugData.
+    /// </summary>
+    public static RPersistentDebugData DefaultObject => (RPersistentDebugData)StaticClass().DefaultObject;
+
     internal RPersistentDebugData() { }
 
     /// <summary>

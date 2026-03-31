@@ -21,6 +21,11 @@ public partial class RAnimNotify_ChangeCape : BmSDK.Engine.AnimNotify, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_ChangeCape.
+    /// </summary>
+    public static RAnimNotify_ChangeCape DefaultObject => (RAnimNotify_ChangeCape)StaticClass().DefaultObject;
+
     internal RAnimNotify_ChangeCape() { }
 
     /// <summary>

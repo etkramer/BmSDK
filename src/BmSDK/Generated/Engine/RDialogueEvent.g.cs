@@ -21,6 +21,11 @@ public partial class RDialogueEvent : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDialogueEvent.
+    /// </summary>
+    public static RDialogueEvent DefaultObject => (RDialogueEvent)StaticClass().DefaultObject;
+
     internal RDialogueEvent() { }
 
     /// <summary>

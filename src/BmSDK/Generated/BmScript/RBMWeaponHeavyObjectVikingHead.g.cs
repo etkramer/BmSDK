@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObjectVikingHead : BmSDK.BmScript.RBMWeaponHe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObjectVikingHead.
+    /// </summary>
+    public static RBMWeaponHeavyObjectVikingHead DefaultObject => (RBMWeaponHeavyObjectVikingHead)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObjectVikingHead() { }
 
     /// <summary>

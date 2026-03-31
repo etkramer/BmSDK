@@ -21,6 +21,11 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIController.
+    /// </summary>
+    public static RBMAIController DefaultObject => (RBMAIController)StaticClass().DefaultObject;
+
     internal RBMAIController() { }
 
     /// <summary>

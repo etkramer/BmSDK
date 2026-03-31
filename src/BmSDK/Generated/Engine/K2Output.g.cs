@@ -21,6 +21,11 @@ public partial class K2Output : BmSDK.Engine.K2Connector, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Output.
+    /// </summary>
+    public static K2Output DefaultObject => (K2Output)StaticClass().DefaultObject;
+
     internal K2Output() { }
 
     /// <summary>

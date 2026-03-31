@@ -21,6 +21,11 @@ public partial class InterpTrackInstSoundFade : BmSDK.Engine.InterpTrackInst, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstSoundFade.
+    /// </summary>
+    public static InterpTrackInstSoundFade DefaultObject => (InterpTrackInstSoundFade)StaticClass().DefaultObject;
+
     internal InterpTrackInstSoundFade() { }
 
     /// <summary>

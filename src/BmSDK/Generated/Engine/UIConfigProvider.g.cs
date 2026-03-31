@@ -21,6 +21,11 @@ public partial class UIConfigProvider : BmSDK.Engine.UIDataProvider, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIConfigProvider.
+    /// </summary>
+    public static UIConfigProvider DefaultObject => (UIConfigProvider)StaticClass().DefaultObject;
+
     internal UIConfigProvider() { }
 
     /// <summary>

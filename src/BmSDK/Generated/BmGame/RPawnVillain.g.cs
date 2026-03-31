@@ -21,6 +21,11 @@ public partial class RPawnVillain : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RSpotab
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillain.
+    /// </summary>
+    public static RPawnVillain DefaultObject => (RPawnVillain)StaticClass().DefaultObject;
+
     internal RPawnVillain() { }
 
     /// <summary>

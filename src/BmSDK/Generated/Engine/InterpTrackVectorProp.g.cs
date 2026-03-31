@@ -21,6 +21,11 @@ public partial class InterpTrackVectorProp : BmSDK.Engine.InterpTrackVectorBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackVectorProp.
+    /// </summary>
+    public static InterpTrackVectorProp DefaultObject => (InterpTrackVectorProp)StaticClass().DefaultObject;
+
     internal InterpTrackVectorProp() { }
 
     /// <summary>

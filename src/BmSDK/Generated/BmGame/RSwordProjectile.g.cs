@@ -21,6 +21,11 @@ public partial class RSwordProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSwordProjectile.
+    /// </summary>
+    public static RSwordProjectile DefaultObject => (RSwordProjectile)StaticClass().DefaultObject;
+
     internal RSwordProjectile() { }
 
     /// <summary>

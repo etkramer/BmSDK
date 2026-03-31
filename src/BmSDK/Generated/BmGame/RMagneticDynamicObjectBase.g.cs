@@ -21,6 +21,11 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticDynamicObjectBase.
+    /// </summary>
+    public static RMagneticDynamicObjectBase DefaultObject => (RMagneticDynamicObjectBase)StaticClass().DefaultObject;
+
     internal RMagneticDynamicObjectBase() { }
 
     /// <summary>

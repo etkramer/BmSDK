@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Chapter0KickingGuard : BmSDK.BmGame.RBMBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Chapter0KickingGuard.
+    /// </summary>
+    public static RBMBehaviour_Chapter0KickingGuard DefaultObject => (RBMBehaviour_Chapter0KickingGuard)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Chapter0KickingGuard() { }
 
     /// <summary>

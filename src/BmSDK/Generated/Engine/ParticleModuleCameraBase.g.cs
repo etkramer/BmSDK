@@ -21,6 +21,11 @@ public partial class ParticleModuleCameraBase : BmSDK.Engine.ParticleModule, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleCameraBase.
+    /// </summary>
+    public static ParticleModuleCameraBase DefaultObject => (ParticleModuleCameraBase)StaticClass().DefaultObject;
+
     internal ParticleModuleCameraBase() { }
 
     /// <summary>

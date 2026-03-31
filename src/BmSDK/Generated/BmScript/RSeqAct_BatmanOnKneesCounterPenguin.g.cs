@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanOnKneesCounterPenguin.
+    /// </summary>
+    public static RSeqAct_BatmanOnKneesCounterPenguin DefaultObject => (RSeqAct_BatmanOnKneesCounterPenguin)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanOnKneesCounterPenguin() { }
 
     /// <summary>

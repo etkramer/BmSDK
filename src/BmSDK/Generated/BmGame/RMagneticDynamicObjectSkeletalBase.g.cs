@@ -21,6 +21,11 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticDynamicObjectSkeletalBase.
+    /// </summary>
+    public static RMagneticDynamicObjectSkeletalBase DefaultObject => (RMagneticDynamicObjectSkeletalBase)StaticClass().DefaultObject;
+
     internal RMagneticDynamicObjectSkeletalBase() { }
 
     /// <summary>

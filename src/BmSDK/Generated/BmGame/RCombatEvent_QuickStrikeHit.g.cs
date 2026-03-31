@@ -21,6 +21,11 @@ public partial class RCombatEvent_QuickStrikeHit : BmSDK.BmGame.RCombatEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatEvent_QuickStrikeHit.
+    /// </summary>
+    public static RCombatEvent_QuickStrikeHit DefaultObject => (RCombatEvent_QuickStrikeHit)StaticClass().DefaultObject;
+
     internal RCombatEvent_QuickStrikeHit() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_VenomHenchman_Harleys : BmSDK.BmScript.RCharacte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_VenomHenchman_Harleys.
+    /// </summary>
+    public static RCharacter_VenomHenchman_Harleys DefaultObject => (RCharacter_VenomHenchman_Harleys)StaticClass().DefaultObject;
+
     internal RCharacter_VenomHenchman_Harleys() { }
 
     /// <summary>

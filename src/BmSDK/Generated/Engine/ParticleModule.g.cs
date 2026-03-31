@@ -21,6 +21,11 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModule.
+    /// </summary>
+    public static ParticleModule DefaultObject => (ParticleModule)StaticClass().DefaultObject;
+
     internal ParticleModule() { }
 
     /// <summary>

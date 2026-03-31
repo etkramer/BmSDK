@@ -21,6 +21,11 @@ public partial class RBM2IdleLookAtConfigs : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBM2IdleLookAtConfigs.
+    /// </summary>
+    public static RBM2IdleLookAtConfigs DefaultObject => (RBM2IdleLookAtConfigs)StaticClass().DefaultObject;
+
     internal RBM2IdleLookAtConfigs() { }
 
     /// <summary>

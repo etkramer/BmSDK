@@ -21,6 +21,11 @@ public partial class RCharacter_Penguin : BmSDK.BmGame.RCharacter, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Penguin.
+    /// </summary>
+    public static RCharacter_Penguin DefaultObject => (RCharacter_Penguin)StaticClass().DefaultObject;
+
     internal RCharacter_Penguin() { }
 
     /// <summary>

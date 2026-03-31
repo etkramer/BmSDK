@@ -21,6 +21,11 @@ public partial class RResolvedDirectionalAnimConfig : BmSDK.GameObject, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RResolvedDirectionalAnimConfig.
+    /// </summary>
+    public static RResolvedDirectionalAnimConfig DefaultObject => (RResolvedDirectionalAnimConfig)StaticClass().DefaultObject;
+
     internal RResolvedDirectionalAnimConfig() { }
 
     /// <summary>

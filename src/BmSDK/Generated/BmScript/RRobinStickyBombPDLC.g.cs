@@ -21,6 +21,11 @@ public partial class RRobinStickyBombPDLC : BmSDK.BmScript.RRobinStickyBomb, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinStickyBombPDLC.
+    /// </summary>
+    public static RRobinStickyBombPDLC DefaultObject => (RRobinStickyBombPDLC)StaticClass().DefaultObject;
+
     internal RRobinStickyBombPDLC() { }
 
     /// <summary>

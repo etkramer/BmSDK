@@ -21,6 +21,11 @@ public partial class SeqCond_IsInCombat : BmSDK.Engine.SequenceCondition, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IsInCombat.
+    /// </summary>
+    public static SeqCond_IsInCombat DefaultObject => (SeqCond_IsInCombat)StaticClass().DefaultObject;
+
     internal SeqCond_IsInCombat() { }
 
     /// <summary>

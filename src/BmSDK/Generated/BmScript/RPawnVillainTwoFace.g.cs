@@ -21,6 +21,11 @@ public partial class RPawnVillainTwoFace : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainTwoFace.
+    /// </summary>
+    public static RPawnVillainTwoFace DefaultObject => (RPawnVillainTwoFace)StaticClass().DefaultObject;
+
     internal RPawnVillainTwoFace() { }
 
     /// <summary>

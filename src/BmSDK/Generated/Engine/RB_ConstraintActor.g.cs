@@ -21,6 +21,11 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ConstraintActor.
+    /// </summary>
+    public static RB_ConstraintActor DefaultObject => (RB_ConstraintActor)StaticClass().DefaultObject;
+
     internal RB_ConstraintActor() { }
 
     /// <summary>

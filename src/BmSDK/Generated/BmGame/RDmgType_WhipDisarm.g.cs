@@ -21,6 +21,11 @@ public partial class RDmgType_WhipDisarm : BmSDK.BmGame.RDamageType, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_WhipDisarm.
+    /// </summary>
+    public static RDmgType_WhipDisarm DefaultObject => (RDmgType_WhipDisarm)StaticClass().DefaultObject;
+
     internal RDmgType_WhipDisarm() { }
 
     /// <summary>

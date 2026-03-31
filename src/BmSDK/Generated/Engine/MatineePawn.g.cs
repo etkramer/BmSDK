@@ -21,6 +21,11 @@ public partial class MatineePawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MatineePawn.
+    /// </summary>
+    public static MatineePawn DefaultObject => (MatineePawn)StaticClass().DefaultObject;
+
     internal MatineePawn() { }
 
     /// <summary>

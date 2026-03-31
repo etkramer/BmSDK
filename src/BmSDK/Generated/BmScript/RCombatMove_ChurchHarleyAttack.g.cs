@@ -21,6 +21,11 @@ public partial class RCombatMove_ChurchHarleyAttack : BmSDK.BmGame.RCombatMove_V
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_ChurchHarleyAttack.
+    /// </summary>
+    public static RCombatMove_ChurchHarleyAttack DefaultObject => (RCombatMove_ChurchHarleyAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_ChurchHarleyAttack() { }
 
     /// <summary>

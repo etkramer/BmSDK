@@ -21,6 +21,11 @@ public partial class RSeqAct_OverrideWalkCamera : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_OverrideWalkCamera.
+    /// </summary>
+    public static RSeqAct_OverrideWalkCamera DefaultObject => (RSeqAct_OverrideWalkCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_OverrideWalkCamera() { }
 
     /// <summary>

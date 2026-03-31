@@ -21,6 +21,11 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShieldRas_StatueEasy.
+    /// </summary>
+    public static RShieldRas_StatueEasy DefaultObject => (RShieldRas_StatueEasy)StaticClass().DefaultObject;
+
     internal RShieldRas_StatueEasy() { }
 
     /// <summary>

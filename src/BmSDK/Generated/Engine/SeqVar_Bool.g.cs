@@ -21,6 +21,11 @@ public partial class SeqVar_Bool : BmSDK.Engine.SequenceVariable, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_Bool.
+    /// </summary>
+    public static SeqVar_Bool DefaultObject => (SeqVar_Bool)StaticClass().DefaultObject;
+
     internal SeqVar_Bool() { }
 
     /// <summary>

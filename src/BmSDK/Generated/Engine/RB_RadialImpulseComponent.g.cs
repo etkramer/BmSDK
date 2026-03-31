@@ -21,6 +21,11 @@ public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_RadialImpulseComponent.
+    /// </summary>
+    public static RB_RadialImpulseComponent DefaultObject => (RB_RadialImpulseComponent)StaticClass().DefaultObject;
+
     internal RB_RadialImpulseComponent() { }
 
     /// <summary>

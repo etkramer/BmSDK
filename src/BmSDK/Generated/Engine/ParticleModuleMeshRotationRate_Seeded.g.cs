@@ -21,6 +21,11 @@ public partial class ParticleModuleMeshRotationRate_Seeded : BmSDK.Engine.Partic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleMeshRotationRate_Seeded.
+    /// </summary>
+    public static ParticleModuleMeshRotationRate_Seeded DefaultObject => (ParticleModuleMeshRotationRate_Seeded)StaticClass().DefaultObject;
+
     internal ParticleModuleMeshRotationRate_Seeded() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RJokerBalloonsBase : BmSDK.BmGame.RBreakablePickupBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerBalloonsBase.
+    /// </summary>
+    public static RJokerBalloonsBase DefaultObject => (RJokerBalloonsBase)StaticClass().DefaultObject;
+
     internal RJokerBalloonsBase() { }
 
     /// <summary>

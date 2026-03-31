@@ -21,6 +21,11 @@ public partial class RBMAIAction_RunToWithDecellerate : BmSDK.BmGame.RBMAIAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RunToWithDecellerate.
+    /// </summary>
+    public static RBMAIAction_RunToWithDecellerate DefaultObject => (RBMAIAction_RunToWithDecellerate)StaticClass().DefaultObject;
+
     internal RBMAIAction_RunToWithDecellerate() { }
 
     /// <summary>

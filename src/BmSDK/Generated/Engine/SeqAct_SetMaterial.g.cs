@@ -21,6 +21,11 @@ public partial class SeqAct_SetMaterial : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetMaterial.
+    /// </summary>
+    public static SeqAct_SetMaterial DefaultObject => (SeqAct_SetMaterial)StaticClass().DefaultObject;
+
     internal SeqAct_SetMaterial() { }
 
     /// <summary>

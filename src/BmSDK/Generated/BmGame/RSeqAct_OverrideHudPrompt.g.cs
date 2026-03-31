@@ -21,6 +21,11 @@ public partial class RSeqAct_OverrideHudPrompt : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_OverrideHudPrompt.
+    /// </summary>
+    public static RSeqAct_OverrideHudPrompt DefaultObject => (RSeqAct_OverrideHudPrompt)StaticClass().DefaultObject;
+
     internal RSeqAct_OverrideHudPrompt() { }
 
     /// <summary>

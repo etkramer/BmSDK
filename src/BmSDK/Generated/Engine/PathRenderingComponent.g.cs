@@ -21,6 +21,11 @@ public partial class PathRenderingComponent : BmSDK.Engine.PrimitiveComponent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathRenderingComponent.
+    /// </summary>
+    public static PathRenderingComponent DefaultObject => (PathRenderingComponent)StaticClass().DefaultObject;
+
     internal PathRenderingComponent() { }
 
     /// <summary>

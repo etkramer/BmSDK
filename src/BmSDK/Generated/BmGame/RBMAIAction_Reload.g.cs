@@ -21,6 +21,11 @@ public partial class RBMAIAction_Reload : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_Reload.
+    /// </summary>
+    public static RBMAIAction_Reload DefaultObject => (RBMAIAction_Reload)StaticClass().DefaultObject;
+
     internal RBMAIAction_Reload() { }
 
     /// <summary>

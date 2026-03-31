@@ -21,6 +21,11 @@ public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EmitterPool.
+    /// </summary>
+    public static EmitterPool DefaultObject => (EmitterPool)StaticClass().DefaultObject;
+
     internal EmitterPool() { }
 
     /// <summary>

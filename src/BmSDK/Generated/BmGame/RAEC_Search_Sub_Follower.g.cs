@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Follower.
+    /// </summary>
+    public static RAEC_Search_Sub_Follower DefaultObject => (RAEC_Search_Sub_Follower)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Follower() { }
 
     /// <summary>

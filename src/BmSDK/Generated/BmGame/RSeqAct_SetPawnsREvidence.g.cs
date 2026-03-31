@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPawnsREvidence : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPawnsREvidence.
+    /// </summary>
+    public static RSeqAct_SetPawnsREvidence DefaultObject => (RSeqAct_SetPawnsREvidence)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPawnsREvidence() { }
 
     /// <summary>

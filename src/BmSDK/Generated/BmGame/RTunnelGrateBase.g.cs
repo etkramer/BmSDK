@@ -21,6 +21,11 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelGrateBase.
+    /// </summary>
+    public static RTunnelGrateBase DefaultObject => (RTunnelGrateBase)StaticClass().DefaultObject;
+
     internal RTunnelGrateBase() { }
 
     /// <summary>

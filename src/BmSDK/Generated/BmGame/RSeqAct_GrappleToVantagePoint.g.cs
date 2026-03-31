@@ -21,6 +21,11 @@ public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GrappleToVantagePoint.
+    /// </summary>
+    public static RSeqAct_GrappleToVantagePoint DefaultObject => (RSeqAct_GrappleToVantagePoint)StaticClass().DefaultObject;
+
     internal RSeqAct_GrappleToVantagePoint() { }
 
     /// <summary>

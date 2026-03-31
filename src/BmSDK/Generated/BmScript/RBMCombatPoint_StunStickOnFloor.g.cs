@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_StunStickOnFloor : BmSDK.BmGame.RBMCombatPoi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_StunStickOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_StunStickOnFloor DefaultObject => (RBMCombatPoint_StunStickOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_StunStickOnFloor() { }
 
     /// <summary>

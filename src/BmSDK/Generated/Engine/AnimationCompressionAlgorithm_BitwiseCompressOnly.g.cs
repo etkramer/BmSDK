@@ -21,6 +21,11 @@ public partial class AnimationCompressionAlgorithm_BitwiseCompressOnly : BmSDK.E
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimationCompressionAlgorithm_BitwiseCompressOnly.
+    /// </summary>
+    public static AnimationCompressionAlgorithm_BitwiseCompressOnly DefaultObject => (AnimationCompressionAlgorithm_BitwiseCompressOnly)StaticClass().DefaultObject;
+
     internal AnimationCompressionAlgorithm_BitwiseCompressOnly() { }
 
     /// <summary>

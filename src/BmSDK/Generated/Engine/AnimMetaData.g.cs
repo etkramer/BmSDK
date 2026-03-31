@@ -21,6 +21,11 @@ public partial class AnimMetaData : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimMetaData.
+    /// </summary>
+    public static AnimMetaData DefaultObject => (AnimMetaData)StaticClass().DefaultObject;
+
     internal AnimMetaData() { }
 
     /// <summary>

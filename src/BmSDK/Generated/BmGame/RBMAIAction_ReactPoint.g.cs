@@ -21,6 +21,11 @@ public partial class RBMAIAction_ReactPoint : BmSDK.BmGame.RBMAIAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ReactPoint.
+    /// </summary>
+    public static RBMAIAction_ReactPoint DefaultObject => (RBMAIAction_ReactPoint)StaticClass().DefaultObject;
+
     internal RBMAIAction_ReactPoint() { }
 
     /// <summary>

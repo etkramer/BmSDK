@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectClayLump : BmSDK.BmScript.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectClayLump.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectClayLump DefaultObject => (RBMCombatThrownObject_HeavyObjectClayLump)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectClayLump() { }
 
     /// <summary>

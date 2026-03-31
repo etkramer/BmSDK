@@ -21,6 +21,11 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossGrundy.
+    /// </summary>
+    public static RPawnBossGrundy DefaultObject => (RPawnBossGrundy)StaticClass().DefaultObject;
+
     internal RPawnBossGrundy() { }
 
     /// <summary>

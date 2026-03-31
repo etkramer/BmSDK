@@ -21,6 +21,11 @@ public partial class RSeqActGFxPictureInPictureMovieControl : BmSDK.BmScript.RSe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqActGFxPictureInPictureMovieControl.
+    /// </summary>
+    public static RSeqActGFxPictureInPictureMovieControl DefaultObject => (RSeqActGFxPictureInPictureMovieControl)StaticClass().DefaultObject;
+
     internal RSeqActGFxPictureInPictureMovieControl() { }
 
     /// <summary>

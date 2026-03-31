@@ -21,6 +21,11 @@ public partial class MapInfo : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MapInfo.
+    /// </summary>
+    public static MapInfo DefaultObject => (MapInfo)StaticClass().DefaultObject;
+
     internal MapInfo() { }
 
     /// <summary>

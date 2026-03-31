@@ -21,6 +21,11 @@ public partial class FloatProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FloatProperty.
+    /// </summary>
+    public static FloatProperty DefaultObject => (FloatProperty)StaticClass().DefaultObject;
+
     internal FloatProperty() { }
 
     /// <summary>

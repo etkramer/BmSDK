@@ -21,6 +21,11 @@ public partial class RLineLauncherRescueVolume : BmSDK.Engine.Volume, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherRescueVolume.
+    /// </summary>
+    public static RLineLauncherRescueVolume DefaultObject => (RLineLauncherRescueVolume)StaticClass().DefaultObject;
+
     internal RLineLauncherRescueVolume() { }
 
     /// <summary>

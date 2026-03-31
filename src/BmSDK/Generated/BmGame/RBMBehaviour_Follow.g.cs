@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Follow.
+    /// </summary>
+    public static RBMBehaviour_Follow DefaultObject => (RBMBehaviour_Follow)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Follow() { }
 
     /// <summary>

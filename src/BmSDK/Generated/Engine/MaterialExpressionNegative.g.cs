@@ -21,6 +21,11 @@ public partial class MaterialExpressionNegative : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionNegative.
+    /// </summary>
+    public static MaterialExpressionNegative DefaultObject => (MaterialExpressionNegative)StaticClass().DefaultObject;
+
     internal MaterialExpressionNegative() { }
 
     /// <summary>

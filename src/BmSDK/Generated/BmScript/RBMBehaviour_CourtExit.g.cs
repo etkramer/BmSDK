@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CourtExit.
+    /// </summary>
+    public static RBMBehaviour_CourtExit DefaultObject => (RBMBehaviour_CourtExit)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CourtExit() { }
 
     /// <summary>

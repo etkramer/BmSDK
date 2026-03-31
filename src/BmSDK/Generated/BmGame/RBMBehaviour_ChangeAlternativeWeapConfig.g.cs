@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ChangeAlternativeWeapConfig : BmSDK.Engine.Seq
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ChangeAlternativeWeapConfig.
+    /// </summary>
+    public static RBMBehaviour_ChangeAlternativeWeapConfig DefaultObject => (RBMBehaviour_ChangeAlternativeWeapConfig)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ChangeAlternativeWeapConfig() { }
 
     /// <summary>

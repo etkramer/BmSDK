@@ -21,6 +21,11 @@ public partial class RCwBullwhipCombatDisarm : BmSDK.BmScript.RCwBullwhip, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwBullwhipCombatDisarm.
+    /// </summary>
+    public static RCwBullwhipCombatDisarm DefaultObject => (RCwBullwhipCombatDisarm)StaticClass().DefaultObject;
+
     internal RCwBullwhipCombatDisarm() { }
 
     /// <summary>

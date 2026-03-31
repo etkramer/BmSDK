@@ -21,6 +21,11 @@ public partial class RNavMeshPath_AvoidBlockedPolys : BmSDK.Engine.NavMeshPathCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_AvoidBlockedPolys.
+    /// </summary>
+    public static RNavMeshPath_AvoidBlockedPolys DefaultObject => (RNavMeshPath_AvoidBlockedPolys)StaticClass().DefaultObject;
+
     internal RNavMeshPath_AvoidBlockedPolys() { }
 
     /// <summary>

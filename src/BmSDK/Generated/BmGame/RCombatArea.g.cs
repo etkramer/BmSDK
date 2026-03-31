@@ -21,6 +21,11 @@ public partial class RCombatArea : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatArea.
+    /// </summary>
+    public static RCombatArea DefaultObject => (RCombatArea)StaticClass().DefaultObject;
+
     internal RCombatArea() { }
 
     /// <summary>

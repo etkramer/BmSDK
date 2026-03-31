@@ -21,6 +21,11 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FlashTextureMovieControl.
+    /// </summary>
+    public static RSeqAct_FlashTextureMovieControl DefaultObject => (RSeqAct_FlashTextureMovieControl)StaticClass().DefaultObject;
+
     internal RSeqAct_FlashTextureMovieControl() { }
 
     /// <summary>

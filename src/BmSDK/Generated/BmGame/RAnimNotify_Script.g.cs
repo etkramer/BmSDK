@@ -21,6 +21,11 @@ public partial class RAnimNotify_Script : BmSDK.Engine.AnimNotify_Script, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Script.
+    /// </summary>
+    public static RAnimNotify_Script DefaultObject => (RAnimNotify_Script)StaticClass().DefaultObject;
+
     internal RAnimNotify_Script() { }
 
     /// <summary>

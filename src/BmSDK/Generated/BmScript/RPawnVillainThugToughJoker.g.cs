@@ -21,6 +21,11 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThugToughJoker.
+    /// </summary>
+    public static RPawnVillainThugToughJoker DefaultObject => (RPawnVillainThugToughJoker)StaticClass().DefaultObject;
+
     internal RPawnVillainThugToughJoker() { }
 
     /// <summary>

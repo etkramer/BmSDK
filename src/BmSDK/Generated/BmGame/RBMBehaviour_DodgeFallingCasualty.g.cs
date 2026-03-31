@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DodgeFallingCasualty : BmSDK.BmGame.RBMBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DodgeFallingCasualty.
+    /// </summary>
+    public static RBMBehaviour_DodgeFallingCasualty DefaultObject => (RBMBehaviour_DodgeFallingCasualty)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DodgeFallingCasualty() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_TaliaWalkAroundBats : BmSDK.BmScript.RBMBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_TaliaWalkAroundBats.
+    /// </summary>
+    public static RBMBehaviour_TaliaWalkAroundBats DefaultObject => (RBMBehaviour_TaliaWalkAroundBats)StaticClass().DefaultObject;
+
     internal RBMBehaviour_TaliaWalkAroundBats() { }
 
     /// <summary>

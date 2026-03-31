@@ -21,6 +21,11 @@ public partial class RSeqAct_TygerGuardAmbush : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TygerGuardAmbush.
+    /// </summary>
+    public static RSeqAct_TygerGuardAmbush DefaultObject => (RSeqAct_TygerGuardAmbush)StaticClass().DefaultObject;
+
     internal RSeqAct_TygerGuardAmbush() { }
 
     /// <summary>

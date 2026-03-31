@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_VantageGrapple : BmSDK.BmGame.RSpecialMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_VantageGrapple.
+    /// </summary>
+    public static RSpecialMoveConfig_VantageGrapple DefaultObject => (RSpecialMoveConfig_VantageGrapple)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_VantageGrapple() { }
 
     /// <summary>

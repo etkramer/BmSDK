@@ -21,6 +21,11 @@ public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MorphNodeBase.
+    /// </summary>
+    public static MorphNodeBase DefaultObject => (MorphNodeBase)StaticClass().DefaultObject;
+
     internal MorphNodeBase() { }
 
     /// <summary>

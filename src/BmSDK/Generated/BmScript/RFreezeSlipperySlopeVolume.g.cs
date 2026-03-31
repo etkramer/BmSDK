@@ -21,6 +21,11 @@ public partial class RFreezeSlipperySlopeVolume : BmSDK.Engine.Volume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeSlipperySlopeVolume.
+    /// </summary>
+    public static RFreezeSlipperySlopeVolume DefaultObject => (RFreezeSlipperySlopeVolume)StaticClass().DefaultObject;
+
     internal RFreezeSlipperySlopeVolume() { }
 
     /// <summary>

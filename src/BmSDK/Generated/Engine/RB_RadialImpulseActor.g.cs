@@ -21,6 +21,11 @@ public partial class RB_RadialImpulseActor : BmSDK.Engine.RigidBodyBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_RadialImpulseActor.
+    /// </summary>
+    public static RB_RadialImpulseActor DefaultObject => (RB_RadialImpulseActor)StaticClass().DefaultObject;
+
     internal RB_RadialImpulseActor() { }
 
     /// <summary>

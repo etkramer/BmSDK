@@ -21,6 +21,11 @@ public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FaceFXAnimSet.
+    /// </summary>
+    public static FaceFXAnimSet DefaultObject => (FaceFXAnimSet)StaticClass().DefaultObject;
+
     internal FaceFXAnimSet() { }
 
     /// <summary>

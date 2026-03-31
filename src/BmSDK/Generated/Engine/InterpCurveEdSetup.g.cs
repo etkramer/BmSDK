@@ -21,6 +21,11 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpCurveEdSetup.
+    /// </summary>
+    public static InterpCurveEdSetup DefaultObject => (InterpCurveEdSetup)StaticClass().DefaultObject;
+
     internal InterpCurveEdSetup() { }
 
     /// <summary>

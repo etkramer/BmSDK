@@ -21,6 +21,11 @@ public partial class SeqEvent_HitWall : BmSDK.Engine.SequenceEvent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_HitWall.
+    /// </summary>
+    public static SeqEvent_HitWall DefaultObject => (SeqEvent_HitWall)StaticClass().DefaultObject;
+
     internal SeqEvent_HitWall() { }
 
     /// <summary>

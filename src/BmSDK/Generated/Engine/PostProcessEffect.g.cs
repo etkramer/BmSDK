@@ -21,6 +21,11 @@ public partial class PostProcessEffect : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PostProcessEffect.
+    /// </summary>
+    public static PostProcessEffect DefaultObject => (PostProcessEffect)StaticClass().DefaultObject;
+
     internal PostProcessEffect() { }
 
     /// <summary>

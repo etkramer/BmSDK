@@ -21,6 +21,11 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqAct_PlaySpeech.
+    /// </summary>
+    public static RBMSeqAct_PlaySpeech DefaultObject => (RBMSeqAct_PlaySpeech)StaticClass().DefaultObject;
+
     internal RBMSeqAct_PlaySpeech() { }
 
     /// <summary>

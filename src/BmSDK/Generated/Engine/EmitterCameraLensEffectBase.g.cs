@@ -21,6 +21,11 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EmitterCameraLensEffectBase.
+    /// </summary>
+    public static EmitterCameraLensEffectBase DefaultObject => (EmitterCameraLensEffectBase)StaticClass().DefaultObject;
+
     internal EmitterCameraLensEffectBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRobinForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinForensicsDevice.
+    /// </summary>
+    public static RRobinForensicsDevice DefaultObject => (RRobinForensicsDevice)StaticClass().DefaultObject;
+
     internal RRobinForensicsDevice() { }
 
     /// <summary>

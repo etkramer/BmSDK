@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableCombatBarksOnCurrentThugs : BmSDK.Engine.Seq
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableCombatBarksOnCurrentThugs.
+    /// </summary>
+    public static RSeqAct_DisableCombatBarksOnCurrentThugs DefaultObject => (RSeqAct_DisableCombatBarksOnCurrentThugs)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableCombatBarksOnCurrentThugs() { }
 
     /// <summary>

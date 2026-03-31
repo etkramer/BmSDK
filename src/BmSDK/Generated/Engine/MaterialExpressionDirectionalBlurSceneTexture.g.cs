@@ -21,6 +21,11 @@ public partial class MaterialExpressionDirectionalBlurSceneTexture : BmSDK.Engin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDirectionalBlurSceneTexture.
+    /// </summary>
+    public static MaterialExpressionDirectionalBlurSceneTexture DefaultObject => (MaterialExpressionDirectionalBlurSceneTexture)StaticClass().DefaultObject;
+
     internal MaterialExpressionDirectionalBlurSceneTexture() { }
 
     /// <summary>

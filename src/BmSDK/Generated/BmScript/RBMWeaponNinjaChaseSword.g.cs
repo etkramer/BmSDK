@@ -21,6 +21,11 @@ public partial class RBMWeaponNinjaChaseSword : BmSDK.BmScript.RBMWeaponNinjaSwo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponNinjaChaseSword.
+    /// </summary>
+    public static RBMWeaponNinjaChaseSword DefaultObject => (RBMWeaponNinjaChaseSword)StaticClass().DefaultObject;
+
     internal RBMWeaponNinjaChaseSword() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Ch0Penguin : BmSDK.BmGame.RBMBehaviour_Combat,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Ch0Penguin.
+    /// </summary>
+    public static RBMBehaviour_Ch0Penguin DefaultObject => (RBMBehaviour_Ch0Penguin)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Ch0Penguin() { }
 
     /// <summary>

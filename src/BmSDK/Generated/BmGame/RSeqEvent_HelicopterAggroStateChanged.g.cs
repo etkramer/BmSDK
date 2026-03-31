@@ -21,6 +21,11 @@ public partial class RSeqEvent_HelicopterAggroStateChanged : BmSDK.Engine.Sequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HelicopterAggroStateChanged.
+    /// </summary>
+    public static RSeqEvent_HelicopterAggroStateChanged DefaultObject => (RSeqEvent_HelicopterAggroStateChanged)StaticClass().DefaultObject;
+
     internal RSeqEvent_HelicopterAggroStateChanged() { }
 
     /// <summary>

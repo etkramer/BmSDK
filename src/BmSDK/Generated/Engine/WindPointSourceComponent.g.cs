@@ -21,6 +21,11 @@ public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WindPointSourceComponent.
+    /// </summary>
+    public static WindPointSourceComponent DefaultObject => (WindPointSourceComponent)StaticClass().DefaultObject;
+
     internal WindPointSourceComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_JammerSilentTakedown : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_JammerSilentTakedown.
+    /// </summary>
+    public static RStealthTakedownStage_JammerSilentTakedown DefaultObject => (RStealthTakedownStage_JammerSilentTakedown)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_JammerSilentTakedown() { }
 
     /// <summary>

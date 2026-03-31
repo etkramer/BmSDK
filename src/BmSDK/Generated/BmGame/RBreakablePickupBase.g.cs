@@ -21,6 +21,11 @@ public partial class RBreakablePickupBase : BmSDK.BmGame.RBreakableProp, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakablePickupBase.
+    /// </summary>
+    public static RBreakablePickupBase DefaultObject => (RBreakablePickupBase)StaticClass().DefaultObject;
+
     internal RBreakablePickupBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicDnaSplatStaticNonScan.
+    /// </summary>
+    public static RForensicDnaSplatStaticNonScan DefaultObject => (RForensicDnaSplatStaticNonScan)StaticClass().DefaultObject;
+
     internal RForensicDnaSplatStaticNonScan() { }
 
     /// <summary>

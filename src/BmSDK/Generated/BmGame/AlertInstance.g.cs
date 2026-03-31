@@ -21,6 +21,11 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AlertInstance.
+    /// </summary>
+    public static AlertInstance DefaultObject => (AlertInstance)StaticClass().DefaultObject;
+
     internal AlertInstance() { }
 
     /// <summary>

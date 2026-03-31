@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatHeavyObject.
+    /// </summary>
+    public static RBMBehaviour_CombatHeavyObject DefaultObject => (RBMBehaviour_CombatHeavyObject)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatHeavyObject() { }
 
     /// <summary>

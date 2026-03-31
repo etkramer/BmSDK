@@ -21,6 +21,11 @@ public partial class RSeqEvent_JammerTowerStatusChange : BmSDK.Engine.SequenceEv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_JammerTowerStatusChange.
+    /// </summary>
+    public static RSeqEvent_JammerTowerStatusChange DefaultObject => (RSeqEvent_JammerTowerStatusChange)StaticClass().DefaultObject;
+
     internal RSeqEvent_JammerTowerStatusChange() { }
 
     /// <summary>

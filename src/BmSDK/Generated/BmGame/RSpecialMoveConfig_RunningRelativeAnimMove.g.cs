@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RunningRelativeAnimMove : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RunningRelativeAnimMove.
+    /// </summary>
+    public static RSpecialMoveConfig_RunningRelativeAnimMove DefaultObject => (RSpecialMoveConfig_RunningRelativeAnimMove)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RunningRelativeAnimMove() { }
 
     /// <summary>

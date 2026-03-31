@@ -21,6 +21,11 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AmbientOcclusionEffect.
+    /// </summary>
+    public static AmbientOcclusionEffect DefaultObject => (AmbientOcclusionEffect)StaticClass().DefaultObject;
+
     internal AmbientOcclusionEffect() { }
 
     /// <summary>

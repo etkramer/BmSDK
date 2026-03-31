@@ -21,6 +21,11 @@ public partial class RPlantPodHomingSmallBase : BmSDK.Engine.SkeletalMeshActor, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlantPodHomingSmallBase.
+    /// </summary>
+    public static RPlantPodHomingSmallBase DefaultObject => (RPlantPodHomingSmallBase)StaticClass().DefaultObject;
+
     internal RPlantPodHomingSmallBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AITree_DMC_Base : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AITree_DMC_Base.
+    /// </summary>
+    public static AITree_DMC_Base DefaultObject => (AITree_DMC_Base)StaticClass().DefaultObject;
+
     internal AITree_DMC_Base() { }
 
     /// <summary>

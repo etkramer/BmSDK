@@ -21,6 +21,11 @@ public partial class RSeqAct_CombatThugTutorial : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CombatThugTutorial.
+    /// </summary>
+    public static RSeqAct_CombatThugTutorial DefaultObject => (RSeqAct_CombatThugTutorial)StaticClass().DefaultObject;
+
     internal RSeqAct_CombatThugTutorial() { }
 
     /// <summary>

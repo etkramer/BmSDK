@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanBeatdownJoker : BmSDK.BmGame.RCombatMove_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanBeatdownJoker.
+    /// </summary>
+    public static RCombatMove_BatmanBeatdownJoker DefaultObject => (RCombatMove_BatmanBeatdownJoker)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanBeatdownJoker() { }
 
     /// <summary>

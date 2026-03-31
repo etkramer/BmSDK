@@ -21,6 +21,11 @@ public partial class RSeqAct_MakeBMAvoidNpc : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MakeBMAvoidNpc.
+    /// </summary>
+    public static RSeqAct_MakeBMAvoidNpc DefaultObject => (RSeqAct_MakeBMAvoidNpc)StaticClass().DefaultObject;
+
     internal RSeqAct_MakeBMAvoidNpc() { }
 
     /// <summary>

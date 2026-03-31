@@ -21,6 +21,11 @@ public partial class RSeqAct_SetSimultaneousCounters : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetSimultaneousCounters.
+    /// </summary>
+    public static RSeqAct_SetSimultaneousCounters DefaultObject => (RSeqAct_SetSimultaneousCounters)StaticClass().DefaultObject;
+
     internal RSeqAct_SetSimultaneousCounters() { }
 
     /// <summary>

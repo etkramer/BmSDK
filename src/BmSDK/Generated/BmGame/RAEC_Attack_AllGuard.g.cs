@@ -21,6 +21,11 @@ public partial class RAEC_Attack_AllGuard : BmSDK.BmGame.RAEC_Attack_Base, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_AllGuard.
+    /// </summary>
+    public static RAEC_Attack_AllGuard DefaultObject => (RAEC_Attack_AllGuard)StaticClass().DefaultObject;
+
     internal RAEC_Attack_AllGuard() { }
 
     /// <summary>

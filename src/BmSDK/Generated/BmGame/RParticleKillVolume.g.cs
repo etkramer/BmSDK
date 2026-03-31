@@ -21,6 +21,11 @@ public partial class RParticleKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleKillVolume.
+    /// </summary>
+    public static RParticleKillVolume DefaultObject => (RParticleKillVolume)StaticClass().DefaultObject;
+
     internal RParticleKillVolume() { }
 
     /// <summary>

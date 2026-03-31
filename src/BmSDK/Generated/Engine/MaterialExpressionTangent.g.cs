@@ -21,6 +21,11 @@ public partial class MaterialExpressionTangent : BmSDK.Engine.MaterialExpression
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTangent.
+    /// </summary>
+    public static MaterialExpressionTangent DefaultObject => (MaterialExpressionTangent)StaticClass().DefaultObject;
+
     internal MaterialExpressionTangent() { }
 
     /// <summary>

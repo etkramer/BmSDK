@@ -21,6 +21,11 @@ public partial class RUberSimpleCrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RUberSimpleCrowdActorBase.
+    /// </summary>
+    public static RUberSimpleCrowdActorBase DefaultObject => (RUberSimpleCrowdActorBase)StaticClass().DefaultObject;
+
     internal RUberSimpleCrowdActorBase() { }
 
     /// <summary>

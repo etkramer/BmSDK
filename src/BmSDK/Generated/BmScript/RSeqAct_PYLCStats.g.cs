@@ -21,6 +21,11 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PYLCStats.
+    /// </summary>
+    public static RSeqAct_PYLCStats DefaultObject => (RSeqAct_PYLCStats)StaticClass().DefaultObject;
+
     internal RSeqAct_PYLCStats() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRasChopAttackBarrier : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRasChopAttackBarrier.
+    /// </summary>
+    public static RRasChopAttackBarrier DefaultObject => (RRasChopAttackBarrier)StaticClass().DefaultObject;
+
     internal RRasChopAttackBarrier() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RTapePlayer : BmSDK.BmGame.RRiddlePlayer, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTapePlayer.
+    /// </summary>
+    public static RTapePlayer DefaultObject => (RTapePlayer)StaticClass().DefaultObject;
+
     internal RTapePlayer() { }
 
     /// <summary>

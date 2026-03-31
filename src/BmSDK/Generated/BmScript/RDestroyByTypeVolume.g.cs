@@ -21,6 +21,11 @@ public partial class RDestroyByTypeVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDestroyByTypeVolume.
+    /// </summary>
+    public static RDestroyByTypeVolume DefaultObject => (RDestroyByTypeVolume)StaticClass().DefaultObject;
+
     internal RDestroyByTypeVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableCombatIfFarFromThugs : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableCombatIfFarFromThugs.
+    /// </summary>
+    public static RSeqAct_DisableCombatIfFarFromThugs DefaultObject => (RSeqAct_DisableCombatIfFarFromThugs)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableCombatIfFarFromThugs() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCinematic_PointLightMovable : BmSDK.Engine.PointLightMovab
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematic_PointLightMovable.
+    /// </summary>
+    public static RCinematic_PointLightMovable DefaultObject => (RCinematic_PointLightMovable)StaticClass().DefaultObject;
+
     internal RCinematic_PointLightMovable() { }
 
     /// <summary>

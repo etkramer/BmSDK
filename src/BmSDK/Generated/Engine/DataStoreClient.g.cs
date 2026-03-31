@@ -21,6 +21,11 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DataStoreClient.
+    /// </summary>
+    public static DataStoreClient DefaultObject => (DataStoreClient)StaticClass().DefaultObject;
+
     internal DataStoreClient() { }
 
     /// <summary>

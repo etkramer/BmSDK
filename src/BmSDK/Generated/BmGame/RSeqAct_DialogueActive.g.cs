@@ -21,6 +21,11 @@ public partial class RSeqAct_DialogueActive : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DialogueActive.
+    /// </summary>
+    public static RSeqAct_DialogueActive DefaultObject => (RSeqAct_DialogueActive)StaticClass().DefaultObject;
+
     internal RSeqAct_DialogueActive() { }
 
     /// <summary>

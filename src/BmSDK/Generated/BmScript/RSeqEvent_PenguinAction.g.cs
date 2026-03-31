@@ -21,6 +21,11 @@ public partial class RSeqEvent_PenguinAction : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PenguinAction.
+    /// </summary>
+    public static RSeqEvent_PenguinAction DefaultObject => (RSeqEvent_PenguinAction)StaticClass().DefaultObject;
+
     internal RSeqEvent_PenguinAction() { }
 
     /// <summary>

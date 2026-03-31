@@ -21,6 +21,11 @@ public partial class SeqAct_Switch : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Switch.
+    /// </summary>
+    public static SeqAct_Switch DefaultObject => (SeqAct_Switch)StaticClass().DefaultObject;
+
     internal SeqAct_Switch() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_CheckCas : BmSDK.BmGame.RAEC_Casualty_Sub
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_CheckCas.
+    /// </summary>
+    public static RAEC_Casualty_Sub_CheckCas DefaultObject => (RAEC_Casualty_Sub_CheckCas)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_CheckCas() { }
 
     /// <summary>

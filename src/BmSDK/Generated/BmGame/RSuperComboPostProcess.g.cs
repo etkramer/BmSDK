@@ -21,6 +21,11 @@ public partial class RSuperComboPostProcess : BmSDK.BmGame.RViewPostProcess, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSuperComboPostProcess.
+    /// </summary>
+    public static RSuperComboPostProcess DefaultObject => (RSuperComboPostProcess)StaticClass().DefaultObject;
+
     internal RSuperComboPostProcess() { }
 
     /// <summary>

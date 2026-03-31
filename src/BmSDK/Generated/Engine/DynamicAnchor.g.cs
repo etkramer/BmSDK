@@ -21,6 +21,11 @@ public partial class DynamicAnchor : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicAnchor.
+    /// </summary>
+    public static DynamicAnchor DefaultObject => (DynamicAnchor)StaticClass().DefaultObject;
+
     internal DynamicAnchor() { }
 
     /// <summary>

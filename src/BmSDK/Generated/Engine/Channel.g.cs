@@ -21,6 +21,11 @@ public partial class Channel : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Channel.
+    /// </summary>
+    public static Channel DefaultObject => (Channel)StaticClass().DefaultObject;
+
     internal Channel() { }
 
     /// <summary>

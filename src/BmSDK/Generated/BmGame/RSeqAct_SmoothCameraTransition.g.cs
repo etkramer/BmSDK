@@ -21,6 +21,11 @@ public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SmoothCameraTransition.
+    /// </summary>
+    public static RSeqAct_SmoothCameraTransition DefaultObject => (RSeqAct_SmoothCameraTransition)StaticClass().DefaultObject;
+
     internal RSeqAct_SmoothCameraTransition() { }
 
     /// <summary>

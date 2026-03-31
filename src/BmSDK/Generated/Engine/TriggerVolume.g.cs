@@ -21,6 +21,11 @@ public partial class TriggerVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TriggerVolume.
+    /// </summary>
+    public static TriggerVolume DefaultObject => (TriggerVolume)StaticClass().DefaultObject;
+
     internal TriggerVolume() { }
 
     /// <summary>

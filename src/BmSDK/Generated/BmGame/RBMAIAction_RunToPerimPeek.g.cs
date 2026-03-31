@@ -21,6 +21,11 @@ public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RunToPerimPeek.
+    /// </summary>
+    public static RBMAIAction_RunToPerimPeek DefaultObject => (RBMAIAction_RunToPerimPeek)StaticClass().DefaultObject;
+
     internal RBMAIAction_RunToPerimPeek() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InGameAdManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InGameAdManager.
+    /// </summary>
+    public static InGameAdManager DefaultObject => (InGameAdManager)StaticClass().DefaultObject;
+
     internal InGameAdManager() { }
 
     /// <summary>

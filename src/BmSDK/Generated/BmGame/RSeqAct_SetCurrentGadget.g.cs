@@ -21,6 +21,11 @@ public partial class RSeqAct_SetCurrentGadget : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetCurrentGadget.
+    /// </summary>
+    public static RSeqAct_SetCurrentGadget DefaultObject => (RSeqAct_SetCurrentGadget)StaticClass().DefaultObject;
+
     internal RSeqAct_SetCurrentGadget() { }
 
     /// <summary>

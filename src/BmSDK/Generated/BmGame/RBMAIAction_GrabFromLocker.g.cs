@@ -21,6 +21,11 @@ public partial class RBMAIAction_GrabFromLocker : BmSDK.BmGame.RBMAIAction_Weapo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_GrabFromLocker.
+    /// </summary>
+    public static RBMAIAction_GrabFromLocker DefaultObject => (RBMAIAction_GrabFromLocker)StaticClass().DefaultObject;
+
     internal RBMAIAction_GrabFromLocker() { }
 
     /// <summary>

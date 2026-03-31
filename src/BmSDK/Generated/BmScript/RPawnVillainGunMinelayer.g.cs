@@ -21,6 +21,11 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunMinelayer.
+    /// </summary>
+    public static RPawnVillainGunMinelayer DefaultObject => (RPawnVillainGunMinelayer)StaticClass().DefaultObject;
+
     internal RPawnVillainGunMinelayer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatterThug1 : BmSDK.BmScript.RCharacter_Outca
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatterThug1.
+    /// </summary>
+    public static RCharacter_MadHatterThug1 DefaultObject => (RCharacter_MadHatterThug1)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatterThug1() { }
 
     /// <summary>

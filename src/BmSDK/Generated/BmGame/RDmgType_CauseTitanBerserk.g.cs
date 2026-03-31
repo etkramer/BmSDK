@@ -21,6 +21,11 @@ public partial class RDmgType_CauseTitanBerserk : BmSDK.BmGame.RDamageType, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CauseTitanBerserk.
+    /// </summary>
+    public static RDmgType_CauseTitanBerserk DefaultObject => (RDmgType_CauseTitanBerserk)StaticClass().DefaultObject;
+
     internal RDmgType_CauseTitanBerserk() { }
 
     /// <summary>

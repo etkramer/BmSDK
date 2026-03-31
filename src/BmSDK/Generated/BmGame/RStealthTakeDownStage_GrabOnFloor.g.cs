@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_GrabOnFloor : BmSDK.BmGame.RStealthTa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_GrabOnFloor.
+    /// </summary>
+    public static RStealthTakeDownStage_GrabOnFloor DefaultObject => (RStealthTakeDownStage_GrabOnFloor)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_GrabOnFloor() { }
 
     /// <summary>

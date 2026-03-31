@@ -21,6 +21,11 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlSingleBone.
+    /// </summary>
+    public static SkelControlSingleBone DefaultObject => (SkelControlSingleBone)StaticClass().DefaultObject;
+
     internal SkelControlSingleBone() { }
 
     /// <summary>

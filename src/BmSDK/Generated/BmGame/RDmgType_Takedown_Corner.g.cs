@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_Corner : BmSDK.BmGame.RDmgType_Takedown, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_Corner.
+    /// </summary>
+    public static RDmgType_Takedown_Corner DefaultObject => (RDmgType_Takedown_Corner)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_Corner() { }
 
     /// <summary>

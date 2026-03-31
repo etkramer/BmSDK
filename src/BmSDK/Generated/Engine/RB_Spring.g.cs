@@ -21,6 +21,11 @@ public partial class RB_Spring : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_Spring.
+    /// </summary>
+    public static RB_Spring DefaultObject => (RB_Spring)StaticClass().DefaultObject;
+
     internal RB_Spring() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionCrossProduct : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionCrossProduct.
+    /// </summary>
+    public static MaterialExpressionCrossProduct DefaultObject => (MaterialExpressionCrossProduct)StaticClass().DefaultObject;
+
     internal MaterialExpressionCrossProduct() { }
 
     /// <summary>

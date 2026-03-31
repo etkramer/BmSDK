@@ -21,6 +21,11 @@ public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_SpawnParticleFX.
+    /// </summary>
+    public static RAnimNotify_SpawnParticleFX DefaultObject => (RAnimNotify_SpawnParticleFX)StaticClass().DefaultObject;
+
     internal RAnimNotify_SpawnParticleFX() { }
 
     /// <summary>

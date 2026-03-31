@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_BlowTorch : BmSDK.BmGame.RBMCombatThr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_BlowTorch.
+    /// </summary>
+    public static RBMCombatThrownObject_BlowTorch DefaultObject => (RBMCombatThrownObject_BlowTorch)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_BlowTorch() { }
 
     /// <summary>

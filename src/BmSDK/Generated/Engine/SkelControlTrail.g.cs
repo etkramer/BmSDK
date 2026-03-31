@@ -21,6 +21,11 @@ public partial class SkelControlTrail : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlTrail.
+    /// </summary>
+    public static SkelControlTrail DefaultObject => (SkelControlTrail)StaticClass().DefaultObject;
+
     internal SkelControlTrail() { }
 
     /// <summary>

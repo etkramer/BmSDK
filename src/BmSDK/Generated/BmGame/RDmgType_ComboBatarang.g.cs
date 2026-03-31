@@ -21,6 +21,11 @@ public partial class RDmgType_ComboBatarang : BmSDK.BmGame.RDmgType_Batarang, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ComboBatarang.
+    /// </summary>
+    public static RDmgType_ComboBatarang DefaultObject => (RDmgType_ComboBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_ComboBatarang() { }
 
     /// <summary>

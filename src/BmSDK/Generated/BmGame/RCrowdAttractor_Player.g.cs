@@ -21,6 +21,11 @@ public partial class RCrowdAttractor_Player : BmSDK.BmGame.RCrowdAttractor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdAttractor_Player.
+    /// </summary>
+    public static RCrowdAttractor_Player DefaultObject => (RCrowdAttractor_Player)StaticClass().DefaultObject;
+
     internal RCrowdAttractor_Player() { }
 
     /// <summary>

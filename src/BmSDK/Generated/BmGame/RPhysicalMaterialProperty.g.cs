@@ -21,6 +21,11 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysicalMaterialProperty.
+    /// </summary>
+    public static RPhysicalMaterialProperty DefaultObject => (RPhysicalMaterialProperty)StaticClass().DefaultObject;
+
     internal RPhysicalMaterialProperty() { }
 
     /// <summary>

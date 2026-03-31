@@ -21,6 +21,11 @@ public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleOrientationAxisLock.
+    /// </summary>
+    public static ParticleModuleOrientationAxisLock DefaultObject => (ParticleModuleOrientationAxisLock)StaticClass().DefaultObject;
+
     internal ParticleModuleOrientationAxisLock() { }
 
     /// <summary>

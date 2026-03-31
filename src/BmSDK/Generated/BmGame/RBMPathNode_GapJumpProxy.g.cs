@@ -21,6 +21,11 @@ public partial class RBMPathNode_GapJumpProxy : BmSDK.BmGame.RBMPathNode_Variabl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_GapJumpProxy.
+    /// </summary>
+    public static RBMPathNode_GapJumpProxy DefaultObject => (RBMPathNode_GapJumpProxy)StaticClass().DefaultObject;
+
     internal RBMPathNode_GapJumpProxy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_Pipe : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Pipe.
+    /// </summary>
+    public static RDmgType_Pipe DefaultObject => (RDmgType_Pipe)StaticClass().DefaultObject;
+
     internal RDmgType_Pipe() { }
 
     /// <summary>

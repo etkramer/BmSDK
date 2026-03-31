@@ -21,6 +21,11 @@ public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBlowDartBase.
+    /// </summary>
+    public static RBlowDartBase DefaultObject => (RBlowDartBase)StaticClass().DefaultObject;
+
     internal RBlowDartBase() { }
 
     /// <summary>

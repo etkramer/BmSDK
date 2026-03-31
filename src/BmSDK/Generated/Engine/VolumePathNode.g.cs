@@ -21,6 +21,11 @@ public partial class VolumePathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as VolumePathNode.
+    /// </summary>
+    public static VolumePathNode DefaultObject => (VolumePathNode)StaticClass().DefaultObject;
+
     internal VolumePathNode() { }
 
     /// <summary>

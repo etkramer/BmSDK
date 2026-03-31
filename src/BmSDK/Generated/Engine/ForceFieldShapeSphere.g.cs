@@ -21,6 +21,11 @@ public partial class ForceFieldShapeSphere : BmSDK.Engine.ForceFieldShape, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ForceFieldShapeSphere.
+    /// </summary>
+    public static ForceFieldShapeSphere DefaultObject => (ForceFieldShapeSphere)StaticClass().DefaultObject;
+
     internal ForceFieldShapeSphere() { }
 
     /// <summary>

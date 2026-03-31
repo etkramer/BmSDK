@@ -21,6 +21,11 @@ public partial class SeqAct_InterpolateFloat : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_InterpolateFloat.
+    /// </summary>
+    public static SeqAct_InterpolateFloat DefaultObject => (SeqAct_InterpolateFloat)StaticClass().DefaultObject;
+
     internal SeqAct_InterpolateFloat() { }
 
     /// <summary>

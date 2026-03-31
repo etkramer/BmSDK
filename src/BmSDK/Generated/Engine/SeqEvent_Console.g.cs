@@ -21,6 +21,11 @@ public partial class SeqEvent_Console : BmSDK.Engine.SequenceEvent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Console.
+    /// </summary>
+    public static SeqEvent_Console DefaultObject => (SeqEvent_Console)StaticClass().DefaultObject;
+
     internal SeqEvent_Console() { }
 
     /// <summary>

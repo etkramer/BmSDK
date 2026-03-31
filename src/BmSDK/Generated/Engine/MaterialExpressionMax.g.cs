@@ -21,6 +21,11 @@ public partial class MaterialExpressionMax : BmSDK.Engine.MaterialExpression, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMax.
+    /// </summary>
+    public static MaterialExpressionMax DefaultObject => (MaterialExpressionMax)StaticClass().DefaultObject;
+
     internal MaterialExpressionMax() { }
 
     /// <summary>

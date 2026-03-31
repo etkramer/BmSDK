@@ -21,6 +21,11 @@ public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvir
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentSpecialMoveWrapperFalling.
+    /// </summary>
+    public static REnvironmentSpecialMoveWrapperFalling DefaultObject => (REnvironmentSpecialMoveWrapperFalling)StaticClass().DefaultObject;
+
     internal REnvironmentSpecialMoveWrapperFalling() { }
 
     /// <summary>

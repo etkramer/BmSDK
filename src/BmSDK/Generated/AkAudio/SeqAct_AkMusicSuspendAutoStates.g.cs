@@ -21,6 +21,11 @@ public partial class SeqAct_AkMusicSuspendAutoStates : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkMusicSuspendAutoStates.
+    /// </summary>
+    public static SeqAct_AkMusicSuspendAutoStates DefaultObject => (SeqAct_AkMusicSuspendAutoStates)StaticClass().DefaultObject;
+
     internal SeqAct_AkMusicSuspendAutoStates() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RImpassableHazardBase : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RImpassableHazardBase.
+    /// </summary>
+    public static RImpassableHazardBase DefaultObject => (RImpassableHazardBase)StaticClass().DefaultObject;
+
     internal RImpassableHazardBase() { }
 
     /// <summary>

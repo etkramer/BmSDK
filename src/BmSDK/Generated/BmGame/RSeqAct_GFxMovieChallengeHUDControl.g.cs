@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieChallengeHUDControl : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieChallengeHUDControl.
+    /// </summary>
+    public static RSeqAct_GFxMovieChallengeHUDControl DefaultObject => (RSeqAct_GFxMovieChallengeHUDControl)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieChallengeHUDControl() { }
 
     /// <summary>

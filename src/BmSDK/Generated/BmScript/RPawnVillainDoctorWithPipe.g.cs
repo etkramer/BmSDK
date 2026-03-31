@@ -21,6 +21,11 @@ public partial class RPawnVillainDoctorWithPipe : BmSDK.BmGame.RPawnVillainThug,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainDoctorWithPipe.
+    /// </summary>
+    public static RPawnVillainDoctorWithPipe DefaultObject => (RPawnVillainDoctorWithPipe)StaticClass().DefaultObject;
+
     internal RPawnVillainDoctorWithPipe() { }
 
     /// <summary>

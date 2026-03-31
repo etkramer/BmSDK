@@ -21,6 +21,11 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_InputAlias.
+    /// </summary>
+    public static UIDataStore_InputAlias DefaultObject => (UIDataStore_InputAlias)StaticClass().DefaultObject;
+
     internal UIDataStore_InputAlias() { }
 
     /// <summary>

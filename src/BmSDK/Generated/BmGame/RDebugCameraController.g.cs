@@ -21,6 +21,11 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDebugCameraController.
+    /// </summary>
+    public static RDebugCameraController DefaultObject => (RDebugCameraController)StaticClass().DefaultObject;
+
     internal RDebugCameraController() { }
 
     /// <summary>

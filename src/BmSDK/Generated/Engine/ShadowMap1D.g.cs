@@ -21,6 +21,11 @@ public partial class ShadowMap1D : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ShadowMap1D.
+    /// </summary>
+    public static ShadowMap1D DefaultObject => (ShadowMap1D)StaticClass().DefaultObject;
+
     internal ShadowMap1D() { }
 
     /// <summary>

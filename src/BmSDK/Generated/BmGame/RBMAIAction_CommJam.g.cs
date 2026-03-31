@@ -21,6 +21,11 @@ public partial class RBMAIAction_CommJam : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_CommJam.
+    /// </summary>
+    public static RBMAIAction_CommJam DefaultObject => (RBMAIAction_CommJam)StaticClass().DefaultObject;
+
     internal RBMAIAction_CommJam() { }
 
     /// <summary>

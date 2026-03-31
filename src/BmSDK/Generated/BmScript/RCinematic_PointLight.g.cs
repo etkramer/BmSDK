@@ -21,6 +21,11 @@ public partial class RCinematic_PointLight : BmSDK.Engine.PointLight, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematic_PointLight.
+    /// </summary>
+    public static RCinematic_PointLight DefaultObject => (RCinematic_PointLight)StaticClass().DefaultObject;
+
     internal RCinematic_PointLight() { }
 
     /// <summary>

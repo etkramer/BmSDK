@@ -21,6 +21,11 @@ public partial class RDisruptableLaserGrid : BmSDK.BmGame.RDisruptableObjectDoor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableLaserGrid.
+    /// </summary>
+    public static RDisruptableLaserGrid DefaultObject => (RDisruptableLaserGrid)StaticClass().DefaultObject;
+
     internal RDisruptableLaserGrid() { }
 
     /// <summary>

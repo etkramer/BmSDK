@@ -21,6 +21,11 @@ public partial class RPlayerDamagedPostProcess : BmSDK.BmGame.RViewPostProcess, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerDamagedPostProcess.
+    /// </summary>
+    public static RPlayerDamagedPostProcess DefaultObject => (RPlayerDamagedPostProcess)StaticClass().DefaultObject;
+
     internal RPlayerDamagedPostProcess() { }
 
     /// <summary>

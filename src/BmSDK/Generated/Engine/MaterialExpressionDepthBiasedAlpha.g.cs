@@ -21,6 +21,11 @@ public partial class MaterialExpressionDepthBiasedAlpha : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDepthBiasedAlpha.
+    /// </summary>
+    public static MaterialExpressionDepthBiasedAlpha DefaultObject => (MaterialExpressionDepthBiasedAlpha)StaticClass().DefaultObject;
+
     internal MaterialExpressionDepthBiasedAlpha() { }
 
     /// <summary>

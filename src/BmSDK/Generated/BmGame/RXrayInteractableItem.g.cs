@@ -21,6 +21,11 @@ public partial class RXrayInteractableItem : BmSDK.BmGame.RInteractableItem, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXrayInteractableItem.
+    /// </summary>
+    public static RXrayInteractableItem DefaultObject => (RXrayInteractableItem)StaticClass().DefaultObject;
+
     internal RXrayInteractableItem() { }
 
     /// <summary>

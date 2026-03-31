@@ -21,6 +21,11 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REffectVolume.
+    /// </summary>
+    public static REffectVolume DefaultObject => (REffectVolume)StaticClass().DefaultObject;
+
     internal REffectVolume() { }
 
     /// <summary>

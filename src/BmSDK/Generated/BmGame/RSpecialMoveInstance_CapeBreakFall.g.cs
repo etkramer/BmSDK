@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_CapeBreakFall : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_CapeBreakFall.
+    /// </summary>
+    public static RSpecialMoveInstance_CapeBreakFall DefaultObject => (RSpecialMoveInstance_CapeBreakFall)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_CapeBreakFall() { }
 
     /// <summary>

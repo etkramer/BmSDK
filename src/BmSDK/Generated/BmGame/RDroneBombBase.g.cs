@@ -21,6 +21,11 @@ public partial class RDroneBombBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDroneBombBase.
+    /// </summary>
+    public static RDroneBombBase DefaultObject => (RDroneBombBase)StaticClass().DefaultObject;
+
     internal RDroneBombBase() { }
 
     /// <summary>

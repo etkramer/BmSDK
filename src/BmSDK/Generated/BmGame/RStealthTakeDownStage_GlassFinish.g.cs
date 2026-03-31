@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_GlassFinish : BmSDK.BmGame.RStealthTa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_GlassFinish.
+    /// </summary>
+    public static RStealthTakeDownStage_GlassFinish DefaultObject => (RStealthTakeDownStage_GlassFinish)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_GlassFinish() { }
 
     /// <summary>

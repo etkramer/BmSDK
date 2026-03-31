@@ -21,6 +21,11 @@ public partial class TextureFlipBook : BmSDK.Engine.Texture2D, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextureFlipBook.
+    /// </summary>
+    public static TextureFlipBook DefaultObject => (TextureFlipBook)StaticClass().DefaultObject;
+
     internal TextureFlipBook() { }
 
     /// <summary>

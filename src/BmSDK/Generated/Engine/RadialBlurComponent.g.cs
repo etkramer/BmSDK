@@ -21,6 +21,11 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RadialBlurComponent.
+    /// </summary>
+    public static RadialBlurComponent DefaultObject => (RadialBlurComponent)StaticClass().DefaultObject;
+
     internal RadialBlurComponent() { }
 
     /// <summary>

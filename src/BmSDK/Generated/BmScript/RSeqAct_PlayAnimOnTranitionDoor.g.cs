@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayAnimOnTranitionDoor : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayAnimOnTranitionDoor.
+    /// </summary>
+    public static RSeqAct_PlayAnimOnTranitionDoor DefaultObject => (RSeqAct_PlayAnimOnTranitionDoor)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayAnimOnTranitionDoor() { }
 
     /// <summary>

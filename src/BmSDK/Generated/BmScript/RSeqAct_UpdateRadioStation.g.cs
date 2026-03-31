@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateRadioStation : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateRadioStation.
+    /// </summary>
+    public static RSeqAct_UpdateRadioStation DefaultObject => (RSeqAct_UpdateRadioStation)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateRadioStation() { }
 
     /// <summary>

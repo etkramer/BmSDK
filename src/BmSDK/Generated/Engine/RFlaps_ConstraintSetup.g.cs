@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetup.
+    /// </summary>
+    public static RFlaps_ConstraintSetup DefaultObject => (RFlaps_ConstraintSetup)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetup() { }
 
     /// <summary>

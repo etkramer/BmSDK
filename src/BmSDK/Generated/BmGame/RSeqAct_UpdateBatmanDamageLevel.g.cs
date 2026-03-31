@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateBatmanDamageLevel : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateBatmanDamageLevel.
+    /// </summary>
+    public static RSeqAct_UpdateBatmanDamageLevel DefaultObject => (RSeqAct_UpdateBatmanDamageLevel)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateBatmanDamageLevel() { }
 
     /// <summary>

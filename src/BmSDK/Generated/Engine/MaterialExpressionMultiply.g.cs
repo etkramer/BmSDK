@@ -21,6 +21,11 @@ public partial class MaterialExpressionMultiply : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMultiply.
+    /// </summary>
+    public static MaterialExpressionMultiply DefaultObject => (MaterialExpressionMultiply)StaticClass().DefaultObject;
+
     internal MaterialExpressionMultiply() { }
 
     /// <summary>

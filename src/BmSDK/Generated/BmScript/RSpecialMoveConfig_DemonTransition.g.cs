@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_DemonTransition : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_DemonTransition.
+    /// </summary>
+    public static RSpecialMoveConfig_DemonTransition DefaultObject => (RSpecialMoveConfig_DemonTransition)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_DemonTransition() { }
 
     /// <summary>

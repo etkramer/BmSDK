@@ -21,6 +21,11 @@ public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_BodySetup.
+    /// </summary>
+    public static RB_BodySetup DefaultObject => (RB_BodySetup)StaticClass().DefaultObject;
+
     internal RB_BodySetup() { }
 
     /// <summary>

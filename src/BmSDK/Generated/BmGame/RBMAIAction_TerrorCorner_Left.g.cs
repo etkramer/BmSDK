@@ -21,6 +21,11 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_TerrorCorner_Left.
+    /// </summary>
+    public static RBMAIAction_TerrorCorner_Left DefaultObject => (RBMAIAction_TerrorCorner_Left)StaticClass().DefaultObject;
+
     internal RBMAIAction_TerrorCorner_Left() { }
 
     /// <summary>

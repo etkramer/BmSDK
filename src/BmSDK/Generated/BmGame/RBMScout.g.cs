@@ -21,6 +21,11 @@ public partial class RBMScout : BmSDK.Engine.Scout, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMScout.
+    /// </summary>
+    public static RBMScout DefaultObject => (RBMScout)StaticClass().DefaultObject;
+
     internal RBMScout() { }
 
     /// <summary>

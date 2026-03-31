@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObject.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObject DefaultObject => (RBMCombatThrownObject_HeavyObject)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObject() { }
 
     /// <summary>

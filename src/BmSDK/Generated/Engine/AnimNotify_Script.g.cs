@@ -21,6 +21,11 @@ public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_Script.
+    /// </summary>
+    public static AnimNotify_Script DefaultObject => (AnimNotify_Script)StaticClass().DefaultObject;
+
     internal AnimNotify_Script() { }
 
     /// <summary>

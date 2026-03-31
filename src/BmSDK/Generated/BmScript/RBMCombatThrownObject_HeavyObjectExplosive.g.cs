@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectExplosive : BmSDK.BmScript
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectExplosive.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectExplosive DefaultObject => (RBMCombatThrownObject_HeavyObjectExplosive)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectExplosive() { }
 
     /// <summary>

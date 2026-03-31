@@ -21,6 +21,11 @@ public partial class RBMWeaponMiniSledgeHammer : BmSDK.BmGame.RBMWeaponPipeBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponMiniSledgeHammer.
+    /// </summary>
+    public static RBMWeaponMiniSledgeHammer DefaultObject => (RBMWeaponMiniSledgeHammer)StaticClass().DefaultObject;
+
     internal RBMWeaponMiniSledgeHammer() { }
 
     /// <summary>

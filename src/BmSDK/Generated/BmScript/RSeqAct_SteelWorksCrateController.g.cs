@@ -21,6 +21,11 @@ public partial class RSeqAct_SteelWorksCrateController : BmSDK.Engine.SeqAct_Lat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SteelWorksCrateController.
+    /// </summary>
+    public static RSeqAct_SteelWorksCrateController DefaultObject => (RSeqAct_SteelWorksCrateController)StaticClass().DefaultObject;
+
     internal RSeqAct_SteelWorksCrateController() { }
 
     /// <summary>

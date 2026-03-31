@@ -21,6 +21,11 @@ public partial class ParticleModuleLocation_Seeded : BmSDK.Engine.ParticleModule
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocation_Seeded.
+    /// </summary>
+    public static ParticleModuleLocation_Seeded DefaultObject => (ParticleModuleLocation_Seeded)StaticClass().DefaultObject;
+
     internal ParticleModuleLocation_Seeded() { }
 
     /// <summary>

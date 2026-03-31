@@ -21,6 +21,11 @@ public partial class RSeqEvent_DeviceDisrupted : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_DeviceDisrupted.
+    /// </summary>
+    public static RSeqEvent_DeviceDisrupted DefaultObject => (RSeqEvent_DeviceDisrupted)StaticClass().DefaultObject;
+
     internal RSeqEvent_DeviceDisrupted() { }
 
     /// <summary>

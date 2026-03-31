@@ -21,6 +21,11 @@ public partial class SoundCue : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SoundCue.
+    /// </summary>
+    public static SoundCue DefaultObject => (SoundCue)StaticClass().DefaultObject;
+
     internal SoundCue() { }
 
     /// <summary>

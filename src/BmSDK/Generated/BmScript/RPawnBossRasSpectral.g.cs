@@ -21,6 +21,11 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossRasSpectral.
+    /// </summary>
+    public static RPawnBossRasSpectral DefaultObject => (RPawnBossRasSpectral)StaticClass().DefaultObject;
+
     internal RPawnBossRasSpectral() { }
 
     /// <summary>

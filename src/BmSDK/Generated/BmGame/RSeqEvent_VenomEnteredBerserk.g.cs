@@ -21,6 +21,11 @@ public partial class RSeqEvent_VenomEnteredBerserk : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_VenomEnteredBerserk.
+    /// </summary>
+    public static RSeqEvent_VenomEnteredBerserk DefaultObject => (RSeqEvent_VenomEnteredBerserk)StaticClass().DefaultObject;
+
     internal RSeqEvent_VenomEnteredBerserk() { }
 
     /// <summary>

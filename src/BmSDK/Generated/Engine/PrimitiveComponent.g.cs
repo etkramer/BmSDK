@@ -21,6 +21,11 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrimitiveComponent.
+    /// </summary>
+    public static PrimitiveComponent DefaultObject => (PrimitiveComponent)StaticClass().DefaultObject;
+
     internal PrimitiveComponent() { }
 
     /// <summary>

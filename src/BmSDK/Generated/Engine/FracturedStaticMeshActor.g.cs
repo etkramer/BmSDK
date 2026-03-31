@@ -21,6 +21,11 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedStaticMeshActor.
+    /// </summary>
+    public static FracturedStaticMeshActor DefaultObject => (FracturedStaticMeshActor)StaticClass().DefaultObject;
+
     internal FracturedStaticMeshActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_PenguinLieutenant : BmSDK.BmGame.RCharacter_Joke
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PenguinLieutenant.
+    /// </summary>
+    public static RCharacter_PenguinLieutenant DefaultObject => (RCharacter_PenguinLieutenant)StaticClass().DefaultObject;
+
     internal RCharacter_PenguinLieutenant() { }
 
     /// <summary>

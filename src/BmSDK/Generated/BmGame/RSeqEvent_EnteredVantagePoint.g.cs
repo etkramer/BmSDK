@@ -21,6 +21,11 @@ public partial class RSeqEvent_EnteredVantagePoint : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_EnteredVantagePoint.
+    /// </summary>
+    public static RSeqEvent_EnteredVantagePoint DefaultObject => (RSeqEvent_EnteredVantagePoint)StaticClass().DefaultObject;
+
     internal RSeqEvent_EnteredVantagePoint() { }
 
     /// <summary>

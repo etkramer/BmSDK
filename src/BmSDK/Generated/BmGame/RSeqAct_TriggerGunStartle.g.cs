@@ -21,6 +21,11 @@ public partial class RSeqAct_TriggerGunStartle : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TriggerGunStartle.
+    /// </summary>
+    public static RSeqAct_TriggerGunStartle DefaultObject => (RSeqAct_TriggerGunStartle)StaticClass().DefaultObject;
+
     internal RSeqAct_TriggerGunStartle() { }
 
     /// <summary>

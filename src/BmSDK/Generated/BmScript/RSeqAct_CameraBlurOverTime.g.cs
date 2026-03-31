@@ -21,6 +21,11 @@ public partial class RSeqAct_CameraBlurOverTime : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CameraBlurOverTime.
+    /// </summary>
+    public static RSeqAct_CameraBlurOverTime DefaultObject => (RSeqAct_CameraBlurOverTime)StaticClass().DefaultObject;
+
     internal RSeqAct_CameraBlurOverTime() { }
 
     /// <summary>

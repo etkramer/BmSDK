@@ -21,6 +21,11 @@ public partial class RDmgType_Poison : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Poison.
+    /// </summary>
+    public static RDmgType_Poison DefaultObject => (RDmgType_Poison)StaticClass().DefaultObject;
+
     internal RDmgType_Poison() { }
 
     /// <summary>

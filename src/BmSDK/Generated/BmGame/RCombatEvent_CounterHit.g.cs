@@ -21,6 +21,11 @@ public partial class RCombatEvent_CounterHit : BmSDK.BmGame.RCombatEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatEvent_CounterHit.
+    /// </summary>
+    public static RCombatEvent_CounterHit DefaultObject => (RCombatEvent_CounterHit)StaticClass().DefaultObject;
+
     internal RCombatEvent_CounterHit() { }
 
     /// <summary>

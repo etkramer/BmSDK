@@ -21,6 +21,11 @@ public partial class RDmgType_VenomNoRagdoll : BmSDK.BmGame.RDmgType_Venom, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_VenomNoRagdoll.
+    /// </summary>
+    public static RDmgType_VenomNoRagdoll DefaultObject => (RDmgType_VenomNoRagdoll)StaticClass().DefaultObject;
+
     internal RDmgType_VenomNoRagdoll() { }
 
     /// <summary>

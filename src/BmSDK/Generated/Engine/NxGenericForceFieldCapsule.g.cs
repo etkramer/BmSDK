@@ -21,6 +21,11 @@ public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceFie
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxGenericForceFieldCapsule.
+    /// </summary>
+    public static NxGenericForceFieldCapsule DefaultObject => (NxGenericForceFieldCapsule)StaticClass().DefaultObject;
+
     internal NxGenericForceFieldCapsule() { }
 
     /// <summary>

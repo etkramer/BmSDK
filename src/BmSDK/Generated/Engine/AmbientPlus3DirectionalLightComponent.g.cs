@@ -21,6 +21,11 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AmbientPlus3DirectionalLightComponent.
+    /// </summary>
+    public static AmbientPlus3DirectionalLightComponent DefaultObject => (AmbientPlus3DirectionalLightComponent)StaticClass().DefaultObject;
+
     internal AmbientPlus3DirectionalLightComponent() { }
 
     /// <summary>

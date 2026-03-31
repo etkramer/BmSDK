@@ -21,6 +21,11 @@ public partial class RActorFactoryRPathNode : BmSDK.Engine.ActorFactory, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RActorFactoryRPathNode.
+    /// </summary>
+    public static RActorFactoryRPathNode DefaultObject => (RActorFactoryRPathNode)StaticClass().DefaultObject;
+
     internal RActorFactoryRPathNode() { }
 
     /// <summary>

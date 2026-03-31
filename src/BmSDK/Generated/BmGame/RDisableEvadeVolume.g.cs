@@ -21,6 +21,11 @@ public partial class RDisableEvadeVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisableEvadeVolume.
+    /// </summary>
+    public static RDisableEvadeVolume DefaultObject => (RDisableEvadeVolume)StaticClass().DefaultObject;
+
     internal RDisableEvadeVolume() { }
 
     /// <summary>

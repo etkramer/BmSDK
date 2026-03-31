@@ -21,6 +21,11 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRECMotor.
+    /// </summary>
+    public static RRECMotor DefaultObject => (RRECMotor)StaticClass().DefaultObject;
+
     internal RRECMotor() { }
 
     /// <summary>

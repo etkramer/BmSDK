@@ -21,6 +21,11 @@ public partial class RSeqAct_DownloadProgressMovie : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DownloadProgressMovie.
+    /// </summary>
+    public static RSeqAct_DownloadProgressMovie DefaultObject => (RSeqAct_DownloadProgressMovie)StaticClass().DefaultObject;
+
     internal RSeqAct_DownloadProgressMovie() { }
 
     /// <summary>

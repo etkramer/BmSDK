@@ -21,6 +21,11 @@ public partial class RB_CylindricalForceActor : BmSDK.Engine.RigidBodyBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_CylindricalForceActor.
+    /// </summary>
+    public static RB_CylindricalForceActor DefaultObject => (RB_CylindricalForceActor)StaticClass().DefaultObject;
+
     internal RB_CylindricalForceActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionFoliageImpulseDirection : BmSDK.Engine.Ma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFoliageImpulseDirection.
+    /// </summary>
+    public static MaterialExpressionFoliageImpulseDirection DefaultObject => (MaterialExpressionFoliageImpulseDirection)StaticClass().DefaultObject;
+
     internal MaterialExpressionFoliageImpulseDirection() { }
 
     /// <summary>

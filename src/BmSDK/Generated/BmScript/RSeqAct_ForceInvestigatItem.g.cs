@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceInvestigatItem : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceInvestigatItem.
+    /// </summary>
+    public static RSeqAct_ForceInvestigatItem DefaultObject => (RSeqAct_ForceInvestigatItem)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceInvestigatItem() { }
 
     /// <summary>

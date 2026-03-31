@@ -21,6 +21,11 @@ public partial class RBMAIController_Lunatic : BmSDK.BmGame.RBMAIController, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIController_Lunatic.
+    /// </summary>
+    public static RBMAIController_Lunatic DefaultObject => (RBMAIController_Lunatic)StaticClass().DefaultObject;
+
     internal RBMAIController_Lunatic() { }
 
     /// <summary>

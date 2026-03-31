@@ -21,6 +21,11 @@ public partial class RDamageOverTimeVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDamageOverTimeVolume.
+    /// </summary>
+    public static RDamageOverTimeVolume DefaultObject => (RDamageOverTimeVolume)StaticClass().DefaultObject;
+
     internal RDamageOverTimeVolume() { }
 
     /// <summary>

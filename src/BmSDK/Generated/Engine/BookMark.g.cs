@@ -21,6 +21,11 @@ public partial class BookMark : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BookMark.
+    /// </summary>
+    public static BookMark DefaultObject => (BookMark)StaticClass().DefaultObject;
+
     internal BookMark() { }
 
     /// <summary>

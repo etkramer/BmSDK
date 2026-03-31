@@ -21,6 +21,11 @@ public partial class RFuseBoxSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFuseBoxSwitch.
+    /// </summary>
+    public static RFuseBoxSwitch DefaultObject => (RFuseBoxSwitch)StaticClass().DefaultObject;
+
     internal RFuseBoxSwitch() { }
 
     /// <summary>

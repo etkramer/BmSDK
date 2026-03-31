@@ -21,6 +21,11 @@ public partial class RSeqAct_RemovePlacedGoo : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RemovePlacedGoo.
+    /// </summary>
+    public static RSeqAct_RemovePlacedGoo DefaultObject => (RSeqAct_RemovePlacedGoo)StaticClass().DefaultObject;
+
     internal RSeqAct_RemovePlacedGoo() { }
 
     /// <summary>

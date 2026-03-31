@@ -21,6 +21,11 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Pawn.
+    /// </summary>
+    public static Pawn DefaultObject => (Pawn)StaticClass().DefaultObject;
+
     internal Pawn() { }
 
     /// <summary>

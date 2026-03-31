@@ -21,6 +21,11 @@ public partial class RDmgType_PounceAttack : BmSDK.BmGame.RDmgType_Strike, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_PounceAttack.
+    /// </summary>
+    public static RDmgType_PounceAttack DefaultObject => (RDmgType_PounceAttack)StaticClass().DefaultObject;
+
     internal RDmgType_PounceAttack() { }
 
     /// <summary>

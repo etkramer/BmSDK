@@ -21,6 +21,11 @@ public partial class SeqEvent_Death : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_Death.
+    /// </summary>
+    public static SeqEvent_Death DefaultObject => (SeqEvent_Death)StaticClass().DefaultObject;
+
     internal SeqEvent_Death() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqAct_Possess : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Possess.
+    /// </summary>
+    public static SeqAct_Possess DefaultObject => (SeqAct_Possess)StaticClass().DefaultObject;
+
     internal SeqAct_Possess() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqAct_DrawText : BmSDK.Engine.SequenceAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_DrawText.
+    /// </summary>
+    public static SeqAct_DrawText DefaultObject => (SeqAct_DrawText)StaticClass().DefaultObject;
+
     internal SeqAct_DrawText() { }
 
     /// <summary>

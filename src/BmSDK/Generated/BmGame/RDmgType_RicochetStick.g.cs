@@ -21,6 +21,11 @@ public partial class RDmgType_RicochetStick : BmSDK.BmGame.RDmgType_StealthBatar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RicochetStick.
+    /// </summary>
+    public static RDmgType_RicochetStick DefaultObject => (RDmgType_RicochetStick)StaticClass().DefaultObject;
+
     internal RDmgType_RicochetStick() { }
 
     /// <summary>

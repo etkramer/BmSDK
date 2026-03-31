@@ -21,6 +21,11 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PlayerController.
+    /// </summary>
+    public static PlayerController DefaultObject => (PlayerController)StaticClass().DefaultObject;
+
     internal PlayerController() { }
 
     /// <summary>

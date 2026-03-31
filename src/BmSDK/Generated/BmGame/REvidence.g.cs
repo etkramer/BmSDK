@@ -21,6 +21,11 @@ public partial class REvidence : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REvidence.
+    /// </summary>
+    public static REvidence DefaultObject => (REvidence)StaticClass().DefaultObject;
+
     internal REvidence() { }
 
     /// <summary>

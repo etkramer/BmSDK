@@ -21,6 +21,11 @@ public partial class MaterialExpressionCameraWorldPosition : BmSDK.Engine.Materi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionCameraWorldPosition.
+    /// </summary>
+    public static MaterialExpressionCameraWorldPosition DefaultObject => (MaterialExpressionCameraWorldPosition)StaticClass().DefaultObject;
+
     internal MaterialExpressionCameraWorldPosition() { }
 
     /// <summary>

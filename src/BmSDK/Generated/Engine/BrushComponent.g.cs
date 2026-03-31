@@ -21,6 +21,11 @@ public partial class BrushComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BrushComponent.
+    /// </summary>
+    public static BrushComponent DefaultObject => (BrushComponent)StaticClass().DefaultObject;
+
     internal BrushComponent() { }
 
     /// <summary>

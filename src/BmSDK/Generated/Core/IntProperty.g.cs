@@ -21,6 +21,11 @@ public partial class IntProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as IntProperty.
+    /// </summary>
+    public static IntProperty DefaultObject => (IntProperty)StaticClass().DefaultObject;
+
     internal IntProperty() { }
 
     /// <summary>

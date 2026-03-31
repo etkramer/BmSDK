@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BatShock : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BatShock.
+    /// </summary>
+    public static RBMBehaviour_BatShock DefaultObject => (RBMBehaviour_BatShock)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BatShock() { }
 
     /// <summary>

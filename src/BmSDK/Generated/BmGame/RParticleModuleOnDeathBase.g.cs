@@ -21,6 +21,11 @@ public partial class RParticleModuleOnDeathBase : BmSDK.Engine.ParticleModule, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleOnDeathBase.
+    /// </summary>
+    public static RParticleModuleOnDeathBase DefaultObject => (RParticleModuleOnDeathBase)StaticClass().DefaultObject;
+
     internal RParticleModuleOnDeathBase() { }
 
     /// <summary>

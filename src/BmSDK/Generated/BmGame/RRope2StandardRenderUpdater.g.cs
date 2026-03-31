@@ -21,6 +21,11 @@ public partial class RRope2StandardRenderUpdater : BmSDK.BmGame.RRope2RenderUpda
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2StandardRenderUpdater.
+    /// </summary>
+    public static RRope2StandardRenderUpdater DefaultObject => (RRope2StandardRenderUpdater)StaticClass().DefaultObject;
+
     internal RRope2StandardRenderUpdater() { }
 
     /// <summary>

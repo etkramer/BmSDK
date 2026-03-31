@@ -21,6 +21,11 @@ public partial class RSeqAct_WaitForBool : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_WaitForBool.
+    /// </summary>
+    public static RSeqAct_WaitForBool DefaultObject => (RSeqAct_WaitForBool)StaticClass().DefaultObject;
+
     internal RSeqAct_WaitForBool() { }
 
     /// <summary>

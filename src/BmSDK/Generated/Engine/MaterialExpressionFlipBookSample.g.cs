@@ -21,6 +21,11 @@ public partial class MaterialExpressionFlipBookSample : BmSDK.Engine.MaterialExp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFlipBookSample.
+    /// </summary>
+    public static MaterialExpressionFlipBookSample DefaultObject => (MaterialExpressionFlipBookSample)StaticClass().DefaultObject;
+
     internal MaterialExpressionFlipBookSample() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RNwStealthTakeDownStage_SilentCombatTakedown : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNwStealthTakeDownStage_SilentCombatTakedown.
+    /// </summary>
+    public static RNwStealthTakeDownStage_SilentCombatTakedown DefaultObject => (RNwStealthTakeDownStage_SilentCombatTakedown)StaticClass().DefaultObject;
+
     internal RNwStealthTakeDownStage_SilentCombatTakedown() { }
 
     /// <summary>

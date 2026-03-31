@@ -21,6 +21,11 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChatterTeeth.
+    /// </summary>
+    public static RChatterTeeth DefaultObject => (RChatterTeeth)StaticClass().DefaultObject;
+
     internal RChatterTeeth() { }
 
     /// <summary>

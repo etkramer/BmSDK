@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleStunStick : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleStunStick.
+    /// </summary>
+    public static RSeqAct_ToggleStunStick DefaultObject => (RSeqAct_ToggleStunStick)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleStunStick() { }
 
     /// <summary>

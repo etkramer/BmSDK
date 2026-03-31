@@ -21,6 +21,11 @@ public partial class InterpTrackInstAnimControl : BmSDK.Engine.InterpTrackInst, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstAnimControl.
+    /// </summary>
+    public static InterpTrackInstAnimControl DefaultObject => (InterpTrackInstAnimControl)StaticClass().DefaultObject;
+
     internal InterpTrackInstAnimControl() { }
 
     /// <summary>

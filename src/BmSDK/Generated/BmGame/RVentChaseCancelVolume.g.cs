@@ -21,6 +21,11 @@ public partial class RVentChaseCancelVolume : BmSDK.Engine.Volume, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVentChaseCancelVolume.
+    /// </summary>
+    public static RVentChaseCancelVolume DefaultObject => (RVentChaseCancelVolume)StaticClass().DefaultObject;
+
     internal RVentChaseCancelVolume() { }
 
     /// <summary>

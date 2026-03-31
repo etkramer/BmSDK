@@ -21,6 +21,11 @@ public partial class RCombatMove_PlayerSpecial : BmSDK.BmGame.RCombatMove_Batman
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_PlayerSpecial.
+    /// </summary>
+    public static RCombatMove_PlayerSpecial DefaultObject => (RCombatMove_PlayerSpecial)StaticClass().DefaultObject;
+
     internal RCombatMove_PlayerSpecial() { }
 
     /// <summary>

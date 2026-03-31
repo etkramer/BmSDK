@@ -21,6 +21,11 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlBase.
+    /// </summary>
+    public static SkelControlBase DefaultObject => (SkelControlBase)StaticClass().DefaultObject;
+
     internal SkelControlBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxInteraction.
+    /// </summary>
+    public static GFxInteraction DefaultObject => (GFxInteraction)StaticClass().DefaultObject;
+
     internal GFxInteraction() { }
 
     /// <summary>

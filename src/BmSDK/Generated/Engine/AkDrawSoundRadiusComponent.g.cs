@@ -21,6 +21,11 @@ public partial class AkDrawSoundRadiusComponent : BmSDK.Engine.DrawSphereCompone
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkDrawSoundRadiusComponent.
+    /// </summary>
+    public static AkDrawSoundRadiusComponent DefaultObject => (AkDrawSoundRadiusComponent)StaticClass().DefaultObject;
+
     internal AkDrawSoundRadiusComponent() { }
 
     /// <summary>

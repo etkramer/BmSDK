@@ -21,6 +21,11 @@ public partial class UIManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIManager.
+    /// </summary>
+    public static UIManager DefaultObject => (UIManager)StaticClass().DefaultObject;
+
     internal UIManager() { }
 
     /// <summary>

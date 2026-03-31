@@ -21,6 +21,11 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TerrainComponent.
+    /// </summary>
+    public static TerrainComponent DefaultObject => (TerrainComponent)StaticClass().DefaultObject;
+
     internal TerrainComponent() { }
 
     /// <summary>

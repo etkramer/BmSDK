@@ -21,6 +21,11 @@ public partial class RSeqEvent_TVBroken : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TVBroken.
+    /// </summary>
+    public static RSeqEvent_TVBroken DefaultObject => (RSeqEvent_TVBroken)StaticClass().DefaultObject;
+
     internal RSeqEvent_TVBroken() { }
 
     /// <summary>

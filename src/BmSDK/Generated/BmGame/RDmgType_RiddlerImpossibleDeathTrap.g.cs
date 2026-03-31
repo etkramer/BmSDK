@@ -21,6 +21,11 @@ public partial class RDmgType_RiddlerImpossibleDeathTrap : BmSDK.BmGame.RDmgType
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RiddlerImpossibleDeathTrap.
+    /// </summary>
+    public static RDmgType_RiddlerImpossibleDeathTrap DefaultObject => (RDmgType_RiddlerImpossibleDeathTrap)StaticClass().DefaultObject;
+
     internal RDmgType_RiddlerImpossibleDeathTrap() { }
 
     /// <summary>

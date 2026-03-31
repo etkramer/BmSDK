@@ -21,6 +21,11 @@ public partial class RGrappleGunBm : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrappleGunBm.
+    /// </summary>
+    public static RGrappleGunBm DefaultObject => (RGrappleGunBm)StaticClass().DefaultObject;
+
     internal RGrappleGunBm() { }
 
     /// <summary>

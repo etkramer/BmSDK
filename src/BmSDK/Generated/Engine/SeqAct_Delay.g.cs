@@ -21,6 +21,11 @@ public partial class SeqAct_Delay : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Delay.
+    /// </summary>
+    public static SeqAct_Delay DefaultObject => (SeqAct_Delay)StaticClass().DefaultObject;
+
     internal SeqAct_Delay() { }
 
     /// <summary>

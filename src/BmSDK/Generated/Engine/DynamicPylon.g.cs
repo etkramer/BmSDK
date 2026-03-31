@@ -21,6 +21,11 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicPylon.
+    /// </summary>
+    public static DynamicPylon DefaultObject => (DynamicPylon)StaticClass().DefaultObject;
+
     internal DynamicPylon() { }
 
     /// <summary>

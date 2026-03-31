@@ -21,6 +21,11 @@ public partial class ScriptStruct : BmSDK.Struct, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ScriptStruct.
+    /// </summary>
+    public static ScriptStruct DefaultObject => (ScriptStruct)StaticClass().DefaultObject;
+
     internal ScriptStruct() { }
 
     /// <summary>

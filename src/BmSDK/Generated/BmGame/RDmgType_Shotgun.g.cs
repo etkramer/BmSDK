@@ -21,6 +21,11 @@ public partial class RDmgType_Shotgun : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Shotgun.
+    /// </summary>
+    public static RDmgType_Shotgun DefaultObject => (RDmgType_Shotgun)StaticClass().DefaultObject;
+
     internal RDmgType_Shotgun() { }
 
     /// <summary>

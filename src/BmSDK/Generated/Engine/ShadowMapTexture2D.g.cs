@@ -21,6 +21,11 @@ public partial class ShadowMapTexture2D : BmSDK.Engine.Texture2D, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ShadowMapTexture2D.
+    /// </summary>
+    public static ShadowMapTexture2D DefaultObject => (ShadowMapTexture2D)StaticClass().DefaultObject;
+
     internal ShadowMapTexture2D() { }
 
     /// <summary>

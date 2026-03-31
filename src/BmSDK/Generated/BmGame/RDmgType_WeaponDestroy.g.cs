@@ -21,6 +21,11 @@ public partial class RDmgType_WeaponDestroy : BmSDK.BmGame.RDamageType, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_WeaponDestroy.
+    /// </summary>
+    public static RDmgType_WeaponDestroy DefaultObject => (RDmgType_WeaponDestroy)StaticClass().DefaultObject;
+
     internal RDmgType_WeaponDestroy() { }
 
     /// <summary>

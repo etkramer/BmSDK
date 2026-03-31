@@ -21,6 +21,11 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieCampaignProgress.
+    /// </summary>
+    public static RGFxMovieCampaignProgress DefaultObject => (RGFxMovieCampaignProgress)StaticClass().DefaultObject;
+
     internal RGFxMovieCampaignProgress() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_TauntingPlayer : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TauntingPlayer.
+    /// </summary>
+    public static RSeqEvent_TauntingPlayer DefaultObject => (RSeqEvent_TauntingPlayer)StaticClass().DefaultObject;
+
     internal RSeqEvent_TauntingPlayer() { }
 
     /// <summary>

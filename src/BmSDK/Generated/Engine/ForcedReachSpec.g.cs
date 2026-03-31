@@ -21,6 +21,11 @@ public partial class ForcedReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ForcedReachSpec.
+    /// </summary>
+    public static ForcedReachSpec DefaultObject => (ForcedReachSpec)StaticClass().DefaultObject;
+
     internal ForcedReachSpec() { }
 
     /// <summary>

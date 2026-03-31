@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockCatwomanEpisode : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockCatwomanEpisode.
+    /// </summary>
+    public static RSeqAct_UnlockCatwomanEpisode DefaultObject => (RSeqAct_UnlockCatwomanEpisode)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockCatwomanEpisode() { }
 
     /// <summary>

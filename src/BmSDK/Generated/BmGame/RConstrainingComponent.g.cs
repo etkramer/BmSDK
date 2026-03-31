@@ -21,6 +21,11 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RConstrainingComponent.
+    /// </summary>
+    public static RConstrainingComponent DefaultObject => (RConstrainingComponent)StaticClass().DefaultObject;
+
     internal RConstrainingComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSaveGameManager.
+    /// </summary>
+    public static RSaveGameManager DefaultObject => (RSaveGameManager)StaticClass().DefaultObject;
+
     internal RSaveGameManager() { }
 
     /// <summary>

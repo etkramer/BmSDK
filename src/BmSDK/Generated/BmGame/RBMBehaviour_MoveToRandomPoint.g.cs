@@ -21,6 +21,11 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_MoveToRandomPoint.
+    /// </summary>
+    public static RBMBehaviour_MoveToRandomPoint DefaultObject => (RBMBehaviour_MoveToRandomPoint)StaticClass().DefaultObject;
+
     internal RBMBehaviour_MoveToRandomPoint() { }
 
     /// <summary>

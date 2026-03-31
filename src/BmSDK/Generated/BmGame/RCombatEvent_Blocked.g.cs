@@ -21,6 +21,11 @@ public partial class RCombatEvent_Blocked : BmSDK.BmGame.RCombatEvent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatEvent_Blocked.
+    /// </summary>
+    public static RCombatEvent_Blocked DefaultObject => (RCombatEvent_Blocked)StaticClass().DefaultObject;
+
     internal RCombatEvent_Blocked() { }
 
     /// <summary>

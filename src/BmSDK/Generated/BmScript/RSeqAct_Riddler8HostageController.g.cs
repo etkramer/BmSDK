@@ -21,6 +21,11 @@ public partial class RSeqAct_Riddler8HostageController : BmSDK.Engine.SeqAct_Lat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Riddler8HostageController.
+    /// </summary>
+    public static RSeqAct_Riddler8HostageController DefaultObject => (RSeqAct_Riddler8HostageController)StaticClass().DefaultObject;
+
     internal RSeqAct_Riddler8HostageController() { }
 
     /// <summary>

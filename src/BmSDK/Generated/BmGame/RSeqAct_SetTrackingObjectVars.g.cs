@@ -21,6 +21,11 @@ public partial class RSeqAct_SetTrackingObjectVars : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetTrackingObjectVars.
+    /// </summary>
+    public static RSeqAct_SetTrackingObjectVars DefaultObject => (RSeqAct_SetTrackingObjectVars)StaticClass().DefaultObject;
+
     internal RSeqAct_SetTrackingObjectVars() { }
 
     /// <summary>

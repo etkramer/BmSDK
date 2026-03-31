@@ -21,6 +21,11 @@ public partial class RPawnBossRasScriptBase : BmSDK.BmGame.RPawnBossRasBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossRasScriptBase.
+    /// </summary>
+    public static RPawnBossRasScriptBase DefaultObject => (RPawnBossRasScriptBase)StaticClass().DefaultObject;
+
     internal RPawnBossRasScriptBase() { }
 
     /// <summary>

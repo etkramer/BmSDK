@@ -21,6 +21,11 @@ public partial class HeightFogComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HeightFogComponent.
+    /// </summary>
+    public static HeightFogComponent DefaultObject => (HeightFogComponent)StaticClass().DefaultObject;
+
     internal HeightFogComponent() { }
 
     /// <summary>

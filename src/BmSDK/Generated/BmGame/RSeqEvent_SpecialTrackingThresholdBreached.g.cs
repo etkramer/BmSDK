@@ -21,6 +21,11 @@ public partial class RSeqEvent_SpecialTrackingThresholdBreached : BmSDK.Engine.S
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SpecialTrackingThresholdBreached.
+    /// </summary>
+    public static RSeqEvent_SpecialTrackingThresholdBreached DefaultObject => (RSeqEvent_SpecialTrackingThresholdBreached)StaticClass().DefaultObject;
+
     internal RSeqEvent_SpecialTrackingThresholdBreached() { }
 
     /// <summary>

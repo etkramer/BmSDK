@@ -21,6 +21,11 @@ public partial class LevelStreamingPersistent : BmSDK.Engine.LevelStreaming, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreamingPersistent.
+    /// </summary>
+    public static LevelStreamingPersistent DefaultObject => (LevelStreamingPersistent)StaticClass().DefaultObject;
+
     internal LevelStreamingPersistent() { }
 
     /// <summary>

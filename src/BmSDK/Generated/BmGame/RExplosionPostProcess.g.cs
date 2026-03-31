@@ -21,6 +21,11 @@ public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RExplosionPostProcess.
+    /// </summary>
+    public static RExplosionPostProcess DefaultObject => (RExplosionPostProcess)StaticClass().DefaultObject;
+
     internal RExplosionPostProcess() { }
 
     /// <summary>

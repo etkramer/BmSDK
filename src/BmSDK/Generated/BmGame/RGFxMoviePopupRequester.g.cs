@@ -21,6 +21,11 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMoviePopupRequester.
+    /// </summary>
+    public static RGFxMoviePopupRequester DefaultObject => (RGFxMoviePopupRequester)StaticClass().DefaultObject;
+
     internal RGFxMoviePopupRequester() { }
 
     /// <summary>

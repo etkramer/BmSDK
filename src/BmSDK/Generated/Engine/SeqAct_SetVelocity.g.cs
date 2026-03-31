@@ -21,6 +21,11 @@ public partial class SeqAct_SetVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetVelocity.
+    /// </summary>
+    public static SeqAct_SetVelocity DefaultObject => (SeqAct_SetVelocity)StaticClass().DefaultObject;
+
     internal SeqAct_SetVelocity() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class DrawBoxComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawBoxComponent.
+    /// </summary>
+    public static DrawBoxComponent DefaultObject => (DrawBoxComponent)StaticClass().DefaultObject;
+
     internal DrawBoxComponent() { }
 
     /// <summary>

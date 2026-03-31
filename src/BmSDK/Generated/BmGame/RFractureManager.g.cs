@@ -21,6 +21,11 @@ public partial class RFractureManager : BmSDK.Engine.FractureManager, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFractureManager.
+    /// </summary>
+    public static RFractureManager DefaultObject => (RFractureManager)StaticClass().DefaultObject;
+
     internal RFractureManager() { }
 
     /// <summary>

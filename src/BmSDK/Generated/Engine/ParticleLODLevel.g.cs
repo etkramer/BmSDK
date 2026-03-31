@@ -21,6 +21,11 @@ public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleLODLevel.
+    /// </summary>
+    public static ParticleLODLevel DefaultObject => (ParticleLODLevel)StaticClass().DefaultObject;
+
     internal ParticleLODLevel() { }
 
     /// <summary>

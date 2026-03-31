@@ -21,6 +21,11 @@ public partial class RDisruptableControlBox_Invisible : BmSDK.BmScript.RDisrupta
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableControlBox_Invisible.
+    /// </summary>
+    public static RDisruptableControlBox_Invisible DefaultObject => (RDisruptableControlBox_Invisible)StaticClass().DefaultObject;
+
     internal RDisruptableControlBox_Invisible() { }
 
     /// <summary>

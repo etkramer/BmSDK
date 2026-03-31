@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_RestoreRECedGear : BmSDK.BmGame.RAlertEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_RestoreRECedGear.
+    /// </summary>
+    public static RAEC_Search_Sub_RestoreRECedGear DefaultObject => (RAEC_Search_Sub_RestoreRECedGear)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_RestoreRECedGear() { }
 
     /// <summary>

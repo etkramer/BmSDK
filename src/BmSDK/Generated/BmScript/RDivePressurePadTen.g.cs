@@ -21,6 +21,11 @@ public partial class RDivePressurePadTen : BmSDK.BmScript.RDivePressurePad, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDivePressurePadTen.
+    /// </summary>
+    public static RDivePressurePadTen DefaultObject => (RDivePressurePadTen)StaticClass().DefaultObject;
+
     internal RDivePressurePadTen() { }
 
     /// <summary>

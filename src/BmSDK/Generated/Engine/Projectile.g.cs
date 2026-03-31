@@ -21,6 +21,11 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Projectile.
+    /// </summary>
+    public static Projectile DefaultObject => (Projectile)StaticClass().DefaultObject;
+
     internal Projectile() { }
 
     /// <summary>

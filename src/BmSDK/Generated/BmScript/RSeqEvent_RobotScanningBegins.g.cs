@@ -21,6 +21,11 @@ public partial class RSeqEvent_RobotScanningBegins : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RobotScanningBegins.
+    /// </summary>
+    public static RSeqEvent_RobotScanningBegins DefaultObject => (RSeqEvent_RobotScanningBegins)StaticClass().DefaultObject;
+
     internal RSeqEvent_RobotScanningBegins() { }
 
     /// <summary>

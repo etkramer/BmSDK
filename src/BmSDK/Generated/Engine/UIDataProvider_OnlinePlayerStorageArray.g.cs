@@ -21,6 +21,11 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_OnlinePlayerStorageArray.
+    /// </summary>
+    public static UIDataProvider_OnlinePlayerStorageArray DefaultObject => (UIDataProvider_OnlinePlayerStorageArray)StaticClass().DefaultObject;
+
     internal UIDataProvider_OnlinePlayerStorageArray() { }
 
     /// <summary>

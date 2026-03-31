@@ -21,6 +21,11 @@ public partial class RSeqAct_HelicopterWatchPlayer : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelicopterWatchPlayer.
+    /// </summary>
+    public static RSeqAct_HelicopterWatchPlayer DefaultObject => (RSeqAct_HelicopterWatchPlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_HelicopterWatchPlayer() { }
 
     /// <summary>

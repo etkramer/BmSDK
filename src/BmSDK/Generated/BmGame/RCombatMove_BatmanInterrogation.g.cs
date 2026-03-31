@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanInterrogation : BmSDK.BmGame.RCombatMove_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanInterrogation.
+    /// </summary>
+    public static RCombatMove_BatmanInterrogation DefaultObject => (RCombatMove_BatmanInterrogation)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanInterrogation() { }
 
     /// <summary>

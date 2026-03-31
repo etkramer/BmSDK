@@ -21,6 +21,11 @@ public partial class RSeqAct_EndPredIdleConfigSpeech : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EndPredIdleConfigSpeech.
+    /// </summary>
+    public static RSeqAct_EndPredIdleConfigSpeech DefaultObject => (RSeqAct_EndPredIdleConfigSpeech)StaticClass().DefaultObject;
+
     internal RSeqAct_EndPredIdleConfigSpeech() { }
 
     /// <summary>

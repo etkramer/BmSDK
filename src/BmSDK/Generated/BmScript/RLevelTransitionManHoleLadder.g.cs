@@ -21,6 +21,11 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionManHoleLadder.
+    /// </summary>
+    public static RLevelTransitionManHoleLadder DefaultObject => (RLevelTransitionManHoleLadder)StaticClass().DefaultObject;
+
     internal RLevelTransitionManHoleLadder() { }
 
     /// <summary>

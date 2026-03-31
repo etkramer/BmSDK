@@ -21,6 +21,11 @@ public partial class MorphWeightSequence : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MorphWeightSequence.
+    /// </summary>
+    public static MorphWeightSequence DefaultObject => (MorphWeightSequence)StaticClass().DefaultObject;
+
     internal MorphWeightSequence() { }
 
     /// <summary>

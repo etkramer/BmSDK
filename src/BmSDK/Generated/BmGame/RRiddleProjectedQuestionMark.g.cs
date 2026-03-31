@@ -21,6 +21,11 @@ public partial class RRiddleProjectedQuestionMark : BmSDK.BmGame.RRiddleBase, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddleProjectedQuestionMark.
+    /// </summary>
+    public static RRiddleProjectedQuestionMark DefaultObject => (RRiddleProjectedQuestionMark)StaticClass().DefaultObject;
+
     internal RRiddleProjectedQuestionMark() { }
 
     /// <summary>

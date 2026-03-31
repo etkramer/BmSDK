@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectVase : BmSDK.BmScript.RBMC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectVase.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectVase DefaultObject => (RBMCombatThrownObject_HeavyObjectVase)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectVase() { }
 
     /// <summary>

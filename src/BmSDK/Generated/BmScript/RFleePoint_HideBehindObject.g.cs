@@ -21,6 +21,11 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint_HideBehindObject.
+    /// </summary>
+    public static RFleePoint_HideBehindObject DefaultObject => (RFleePoint_HideBehindObject)StaticClass().DefaultObject;
+
     internal RFleePoint_HideBehindObject() { }
 
     /// <summary>

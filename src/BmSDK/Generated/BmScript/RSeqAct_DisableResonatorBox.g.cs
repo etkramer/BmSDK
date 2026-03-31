@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableResonatorBox : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableResonatorBox.
+    /// </summary>
+    public static RSeqAct_DisableResonatorBox DefaultObject => (RSeqAct_DisableResonatorBox)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableResonatorBox() { }
 
     /// <summary>

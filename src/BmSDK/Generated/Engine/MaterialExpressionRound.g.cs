@@ -21,6 +21,11 @@ public partial class MaterialExpressionRound : BmSDK.Engine.MaterialExpression, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionRound.
+    /// </summary>
+    public static MaterialExpressionRound DefaultObject => (MaterialExpressionRound)StaticClass().DefaultObject;
+
     internal MaterialExpressionRound() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFractureWall : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFractureWall.
+    /// </summary>
+    public static RFractureWall DefaultObject => (RFractureWall)StaticClass().DefaultObject;
+
     internal RFractureWall() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_WaitForCutscenesToFinish : BmSDK.Engine.SeqAct_Late
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_WaitForCutscenesToFinish.
+    /// </summary>
+    public static RSeqAct_WaitForCutscenesToFinish DefaultObject => (RSeqAct_WaitForCutscenesToFinish)StaticClass().DefaultObject;
+
     internal RSeqAct_WaitForCutscenesToFinish() { }
 
     /// <summary>

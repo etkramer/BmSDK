@@ -21,6 +21,11 @@ public partial class RDmgType_GrundyCrush_NoArmour : BmSDK.BmGame.RDmgType_Grund
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GrundyCrush_NoArmour.
+    /// </summary>
+    public static RDmgType_GrundyCrush_NoArmour DefaultObject => (RDmgType_GrundyCrush_NoArmour)StaticClass().DefaultObject;
+
     internal RDmgType_GrundyCrush_NoArmour() { }
 
     /// <summary>

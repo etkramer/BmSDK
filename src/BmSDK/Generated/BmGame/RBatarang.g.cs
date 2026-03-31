@@ -21,6 +21,11 @@ public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarang.
+    /// </summary>
+    public static RBatarang DefaultObject => (RBatarang)StaticClass().DefaultObject;
+
     internal RBatarang() { }
 
     /// <summary>

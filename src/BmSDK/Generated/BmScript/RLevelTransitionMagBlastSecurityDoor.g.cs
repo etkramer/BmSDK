@@ -21,6 +21,11 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionMagBlastSecurityDoor.
+    /// </summary>
+    public static RLevelTransitionMagBlastSecurityDoor DefaultObject => (RLevelTransitionMagBlastSecurityDoor)StaticClass().DefaultObject;
+
     internal RLevelTransitionMagBlastSecurityDoor() { }
 
     /// <summary>

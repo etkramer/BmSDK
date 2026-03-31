@@ -21,6 +21,11 @@ public partial class MorphNodeWeight : BmSDK.Engine.MorphNodeWeightBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MorphNodeWeight.
+    /// </summary>
+    public static MorphNodeWeight DefaultObject => (MorphNodeWeight)StaticClass().DefaultObject;
+
     internal MorphNodeWeight() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPawnSpawnerController.
+    /// </summary>
+    public static RBMPawnSpawnerController DefaultObject => (RBMPawnSpawnerController)StaticClass().DefaultObject;
+
     internal RBMPawnSpawnerController() { }
 
     /// <summary>

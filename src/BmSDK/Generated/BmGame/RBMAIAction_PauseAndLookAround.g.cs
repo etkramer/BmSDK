@@ -21,6 +21,11 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PauseAndLookAround.
+    /// </summary>
+    public static RBMAIAction_PauseAndLookAround DefaultObject => (RBMAIAction_PauseAndLookAround)StaticClass().DefaultObject;
+
     internal RBMAIAction_PauseAndLookAround() { }
 
     /// <summary>

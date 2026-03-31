@@ -21,6 +21,11 @@ public partial class RockAO : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RockAO.
+    /// </summary>
+    public static RockAO DefaultObject => (RockAO)StaticClass().DefaultObject;
+
     internal RockAO() { }
 
     /// <summary>

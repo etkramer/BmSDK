@@ -21,6 +21,11 @@ public partial class RSeqAct_Weather : BmSDK.Engine.SequenceAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Weather.
+    /// </summary>
+    public static RSeqAct_Weather DefaultObject => (RSeqAct_Weather)StaticClass().DefaultObject;
+
     internal RSeqAct_Weather() { }
 
     /// <summary>

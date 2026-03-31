@@ -21,6 +21,11 @@ public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPatrolPoint.
+    /// </summary>
+    public static RPatrolPoint DefaultObject => (RPatrolPoint)StaticClass().DefaultObject;
+
     internal RPatrolPoint() { }
 
     /// <summary>

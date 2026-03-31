@@ -21,6 +21,11 @@ public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPred_MuseumBoothReactionPointBase.
+    /// </summary>
+    public static RPred_MuseumBoothReactionPointBase DefaultObject => (RPred_MuseumBoothReactionPointBase)StaticClass().DefaultObject;
+
     internal RPred_MuseumBoothReactionPointBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkDrawBoundsComponent : BmSDK.Engine.PrimitiveComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkDrawBoundsComponent.
+    /// </summary>
+    public static AkDrawBoundsComponent DefaultObject => (AkDrawBoundsComponent)StaticClass().DefaultObject;
+
     internal AkDrawBoundsComponent() { }
 
     /// <summary>

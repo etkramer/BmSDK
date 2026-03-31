@@ -21,6 +21,11 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_CatwomanCauseTitanBerserk.
+    /// </summary>
+    public static RCombatMove_CatwomanCauseTitanBerserk DefaultObject => (RCombatMove_CatwomanCauseTitanBerserk)StaticClass().DefaultObject;
+
     internal RCombatMove_CatwomanCauseTitanBerserk() { }
 
     /// <summary>

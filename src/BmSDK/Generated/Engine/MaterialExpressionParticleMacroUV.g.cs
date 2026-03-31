@@ -21,6 +21,11 @@ public partial class MaterialExpressionParticleMacroUV : BmSDK.Engine.MaterialEx
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionParticleMacroUV.
+    /// </summary>
+    public static MaterialExpressionParticleMacroUV DefaultObject => (MaterialExpressionParticleMacroUV)StaticClass().DefaultObject;
+
     internal MaterialExpressionParticleMacroUV() { }
 
     /// <summary>

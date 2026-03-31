@@ -21,6 +21,11 @@ public partial class RPawnBossJoker : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossJoker.
+    /// </summary>
+    public static RPawnBossJoker DefaultObject => (RPawnBossJoker)StaticClass().DefaultObject;
+
     internal RPawnBossJoker() { }
 
     /// <summary>

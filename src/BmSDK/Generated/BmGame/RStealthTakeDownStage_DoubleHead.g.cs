@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_DoubleHead.
+    /// </summary>
+    public static RStealthTakeDownStage_DoubleHead DefaultObject => (RStealthTakeDownStage_DoubleHead)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_DoubleHead() { }
 
     /// <summary>

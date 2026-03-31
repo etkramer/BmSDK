@@ -21,6 +21,11 @@ public partial class RB_FixedJointActor : BmSDK.Engine.RB_ConstraintActor, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_FixedJointActor.
+    /// </summary>
+    public static RB_FixedJointActor DefaultObject => (RB_FixedJointActor)StaticClass().DefaultObject;
+
     internal RB_FixedJointActor() { }
 
     /// <summary>

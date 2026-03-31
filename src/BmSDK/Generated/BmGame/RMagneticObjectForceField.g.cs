@@ -21,6 +21,11 @@ public partial class RMagneticObjectForceField : BmSDK.Engine.NxRadialForceField
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticObjectForceField.
+    /// </summary>
+    public static RMagneticObjectForceField DefaultObject => (RMagneticObjectForceField)StaticClass().DefaultObject;
+
     internal RMagneticObjectForceField() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class NxTornadoAngularForceField : BmSDK.Engine.NxForceField, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxTornadoAngularForceField.
+    /// </summary>
+    public static NxTornadoAngularForceField DefaultObject => (NxTornadoAngularForceField)StaticClass().DefaultObject;
+
     internal NxTornadoAngularForceField() { }
 
     /// <summary>

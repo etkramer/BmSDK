@@ -21,6 +21,11 @@ public partial class MaterialExpressionLensFlareRayDistance : BmSDK.Engine.Mater
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLensFlareRayDistance.
+    /// </summary>
+    public static MaterialExpressionLensFlareRayDistance DefaultObject => (MaterialExpressionLensFlareRayDistance)StaticClass().DefaultObject;
+
     internal MaterialExpressionLensFlareRayDistance() { }
 
     /// <summary>

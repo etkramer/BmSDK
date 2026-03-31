@@ -21,6 +21,11 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Weapon.
+    /// </summary>
+    public static Weapon DefaultObject => (Weapon)StaticClass().DefaultObject;
+
     internal Weapon() { }
 
     /// <summary>

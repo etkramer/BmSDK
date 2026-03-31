@@ -21,6 +21,11 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeSkeletalMeshComponent.
+    /// </summary>
+    public static RCapeSkeletalMeshComponent DefaultObject => (RCapeSkeletalMeshComponent)StaticClass().DefaultObject;
+
     internal RCapeSkeletalMeshComponent() { }
 
     /// <summary>

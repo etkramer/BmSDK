@@ -21,6 +21,11 @@ public partial class MaterialExpressionConstantClamp : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionConstantClamp.
+    /// </summary>
+    public static MaterialExpressionConstantClamp DefaultObject => (MaterialExpressionConstantClamp)StaticClass().DefaultObject;
+
     internal MaterialExpressionConstantClamp() { }
 
     /// <summary>

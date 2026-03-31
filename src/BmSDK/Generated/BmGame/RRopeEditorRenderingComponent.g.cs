@@ -21,6 +21,11 @@ public partial class RRopeEditorRenderingComponent : BmSDK.Engine.PrimitiveCompo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeEditorRenderingComponent.
+    /// </summary>
+    public static RRopeEditorRenderingComponent DefaultObject => (RRopeEditorRenderingComponent)StaticClass().DefaultObject;
+
     internal RRopeEditorRenderingComponent() { }
 
     /// <summary>

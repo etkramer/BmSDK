@@ -21,6 +21,11 @@ public partial class RBunkerDoorVillainBlocker : BmSDK.Engine.Actor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBunkerDoorVillainBlocker.
+    /// </summary>
+    public static RBunkerDoorVillainBlocker DefaultObject => (RBunkerDoorVillainBlocker)StaticClass().DefaultObject;
+
     internal RBunkerDoorVillainBlocker() { }
 
     /// <summary>

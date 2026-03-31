@@ -21,6 +21,11 @@ public partial class RSeqAct_FloatingRas2 : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FloatingRas2.
+    /// </summary>
+    public static RSeqAct_FloatingRas2 DefaultObject => (RSeqAct_FloatingRas2)StaticClass().DefaultObject;
+
     internal RSeqAct_FloatingRas2() { }
 
     /// <summary>

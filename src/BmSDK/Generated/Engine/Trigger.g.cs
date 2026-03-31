@@ -21,6 +21,11 @@ public partial class Trigger : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Trigger.
+    /// </summary>
+    public static Trigger DefaultObject => (Trigger)StaticClass().DefaultObject;
+
     internal Trigger() { }
 
     /// <summary>

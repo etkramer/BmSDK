@@ -21,6 +21,11 @@ public partial class InterpTrackInstAkRTPC : BmSDK.Engine.InterpTrackInst, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstAkRTPC.
+    /// </summary>
+    public static InterpTrackInstAkRTPC DefaultObject => (InterpTrackInstAkRTPC)StaticClass().DefaultObject;
+
     internal InterpTrackInstAkRTPC() { }
 
     /// <summary>

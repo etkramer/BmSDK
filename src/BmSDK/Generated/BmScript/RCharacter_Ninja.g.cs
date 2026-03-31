@@ -21,6 +21,11 @@ public partial class RCharacter_Ninja : BmSDK.BmGame.RCharacter_NinjaBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Ninja.
+    /// </summary>
+    public static RCharacter_Ninja DefaultObject => (RCharacter_Ninja)StaticClass().DefaultObject;
+
     internal RCharacter_Ninja() { }
 
     /// <summary>

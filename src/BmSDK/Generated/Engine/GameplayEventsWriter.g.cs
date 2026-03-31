@@ -21,6 +21,11 @@ public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEvents, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameplayEventsWriter.
+    /// </summary>
+    public static GameplayEventsWriter DefaultObject => (GameplayEventsWriter)StaticClass().DefaultObject;
+
     internal GameplayEventsWriter() { }
 
     /// <summary>

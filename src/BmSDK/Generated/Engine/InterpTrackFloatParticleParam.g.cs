@@ -21,6 +21,11 @@ public partial class InterpTrackFloatParticleParam : BmSDK.Engine.InterpTrackFlo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackFloatParticleParam.
+    /// </summary>
+    public static InterpTrackFloatParticleParam DefaultObject => (InterpTrackFloatParticleParam)StaticClass().DefaultObject;
+
     internal InterpTrackFloatParticleParam() { }
 
     /// <summary>

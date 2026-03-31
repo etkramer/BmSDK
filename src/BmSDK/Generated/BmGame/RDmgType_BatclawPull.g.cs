@@ -21,6 +21,11 @@ public partial class RDmgType_BatclawPull : BmSDK.BmGame.RDmgType_BatClaw, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BatclawPull.
+    /// </summary>
+    public static RDmgType_BatclawPull DefaultObject => (RDmgType_BatclawPull)StaticClass().DefaultObject;
+
     internal RDmgType_BatclawPull() { }
 
     /// <summary>

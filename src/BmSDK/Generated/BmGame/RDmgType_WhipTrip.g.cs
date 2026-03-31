@@ -21,6 +21,11 @@ public partial class RDmgType_WhipTrip : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_WhipTrip.
+    /// </summary>
+    public static RDmgType_WhipTrip DefaultObject => (RDmgType_WhipTrip)StaticClass().DefaultObject;
+
     internal RDmgType_WhipTrip() { }
 
     /// <summary>

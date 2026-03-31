@@ -21,6 +21,11 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerNightwing.
+    /// </summary>
+    public static RPawnPlayerNightwing DefaultObject => (RPawnPlayerNightwing)StaticClass().DefaultObject;
+
     internal RPawnPlayerNightwing() { }
 
     /// <summary>

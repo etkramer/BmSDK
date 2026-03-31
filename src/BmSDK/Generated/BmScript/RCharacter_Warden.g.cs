@@ -21,6 +21,11 @@ public partial class RCharacter_Warden : BmSDK.BmGame.RCharacter, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Warden.
+    /// </summary>
+    public static RCharacter_Warden DefaultObject => (RCharacter_Warden)StaticClass().DefaultObject;
+
     internal RCharacter_Warden() { }
 
     /// <summary>

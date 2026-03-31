@@ -21,6 +21,11 @@ public partial class RSeqAct_SetVisionCone : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetVisionCone.
+    /// </summary>
+    public static RSeqAct_SetVisionCone DefaultObject => (RSeqAct_SetVisionCone)StaticClass().DefaultObject;
+
     internal RSeqAct_SetVisionCone() { }
 
     /// <summary>

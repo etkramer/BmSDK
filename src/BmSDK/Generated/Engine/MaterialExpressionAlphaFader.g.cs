@@ -21,6 +21,11 @@ public partial class MaterialExpressionAlphaFader : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionAlphaFader.
+    /// </summary>
+    public static MaterialExpressionAlphaFader DefaultObject => (MaterialExpressionAlphaFader)StaticClass().DefaultObject;
+
     internal MaterialExpressionAlphaFader() { }
 
     /// <summary>

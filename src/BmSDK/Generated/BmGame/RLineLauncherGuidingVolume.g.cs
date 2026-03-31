@@ -21,6 +21,11 @@ public partial class RLineLauncherGuidingVolume : BmSDK.Engine.Volume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherGuidingVolume.
+    /// </summary>
+    public static RLineLauncherGuidingVolume DefaultObject => (RLineLauncherGuidingVolume)StaticClass().DefaultObject;
+
     internal RLineLauncherGuidingVolume() { }
 
     /// <summary>

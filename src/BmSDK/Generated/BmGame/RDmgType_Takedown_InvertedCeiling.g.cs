@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_InvertedCeiling : BmSDK.BmGame.RDmgType_T
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_InvertedCeiling.
+    /// </summary>
+    public static RDmgType_Takedown_InvertedCeiling DefaultObject => (RDmgType_Takedown_InvertedCeiling)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_InvertedCeiling() { }
 
     /// <summary>

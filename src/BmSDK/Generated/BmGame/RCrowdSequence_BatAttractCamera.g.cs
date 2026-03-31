@@ -21,6 +21,11 @@ public partial class RCrowdSequence_BatAttractCamera : BmSDK.BmGame.RCrowdSequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSequence_BatAttractCamera.
+    /// </summary>
+    public static RCrowdSequence_BatAttractCamera DefaultObject => (RCrowdSequence_BatAttractCamera)StaticClass().DefaultObject;
+
     internal RCrowdSequence_BatAttractCamera() { }
 
     /// <summary>

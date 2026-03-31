@@ -21,6 +21,11 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingWristDart.
+    /// </summary>
+    public static RNightwingWristDart DefaultObject => (RNightwingWristDart)StaticClass().DefaultObject;
+
     internal RNightwingWristDart() { }
 
     /// <summary>

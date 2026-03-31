@@ -21,6 +21,11 @@ public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StaticMeshCollectionActor.
+    /// </summary>
+    public static StaticMeshCollectionActor DefaultObject => (StaticMeshCollectionActor)StaticClass().DefaultObject;
+
     internal StaticMeshCollectionActor() { }
 
     /// <summary>

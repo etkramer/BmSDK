@@ -21,6 +21,11 @@ public partial class InterpTrackAnimControl : BmSDK.Engine.InterpTrackFloatBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackAnimControl.
+    /// </summary>
+    public static InterpTrackAnimControl DefaultObject => (InterpTrackAnimControl)StaticClass().DefaultObject;
+
     internal InterpTrackAnimControl() { }
 
     /// <summary>

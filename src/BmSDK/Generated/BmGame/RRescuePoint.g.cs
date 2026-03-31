@@ -21,6 +21,11 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRescuePoint.
+    /// </summary>
+    public static RRescuePoint DefaultObject => (RRescuePoint)StaticClass().DefaultObject;
+
     internal RRescuePoint() { }
 
     /// <summary>

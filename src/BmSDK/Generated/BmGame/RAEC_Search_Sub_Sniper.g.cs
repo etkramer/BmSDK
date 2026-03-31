@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_Sniper : BmSDK.BmGame.RAlertEventCoordinato
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Sniper.
+    /// </summary>
+    public static RAEC_Search_Sub_Sniper DefaultObject => (RAEC_Search_Sub_Sniper)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Sniper() { }
 
     /// <summary>

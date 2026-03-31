@@ -21,6 +21,11 @@ public partial class RBMWeaponBatmanSword : BmSDK.BmGame.RBMWeapon, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBatmanSword.
+    /// </summary>
+    public static RBMWeaponBatmanSword DefaultObject => (RBMWeaponBatmanSword)StaticClass().DefaultObject;
+
     internal RBMWeaponBatmanSword() { }
 
     /// <summary>

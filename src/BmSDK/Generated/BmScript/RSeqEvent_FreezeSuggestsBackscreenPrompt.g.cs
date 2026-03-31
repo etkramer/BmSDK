@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeSuggestsBackscreenPrompt : BmSDK.Engine.Seq
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeSuggestsBackscreenPrompt.
+    /// </summary>
+    public static RSeqEvent_FreezeSuggestsBackscreenPrompt DefaultObject => (RSeqEvent_FreezeSuggestsBackscreenPrompt)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeSuggestsBackscreenPrompt() { }
 
     /// <summary>

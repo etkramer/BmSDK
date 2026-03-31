@@ -21,6 +21,11 @@ public partial class RBMCameraEmitter : BmSDK.BmGame.REmitter, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCameraEmitter.
+    /// </summary>
+    public static RBMCameraEmitter DefaultObject => (RBMCameraEmitter)StaticClass().DefaultObject;
+
     internal RBMCameraEmitter() { }
 
     /// <summary>

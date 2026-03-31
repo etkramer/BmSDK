@@ -21,6 +21,11 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_TouchWire.
+    /// </summary>
+    public static RAnimNotify_TouchWire DefaultObject => (RAnimNotify_TouchWire)StaticClass().DefaultObject;
+
     internal RAnimNotify_TouchWire() { }
 
     /// <summary>

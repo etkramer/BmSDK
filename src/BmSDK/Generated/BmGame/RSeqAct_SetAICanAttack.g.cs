@@ -21,6 +21,11 @@ public partial class RSeqAct_SetAICanAttack : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetAICanAttack.
+    /// </summary>
+    public static RSeqAct_SetAICanAttack DefaultObject => (RSeqAct_SetAICanAttack)StaticClass().DefaultObject;
+
     internal RSeqAct_SetAICanAttack() { }
 
     /// <summary>

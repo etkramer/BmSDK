@@ -21,6 +21,11 @@ public partial class DirectionalLightComponent : BmSDK.Engine.LightComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DirectionalLightComponent.
+    /// </summary>
+    public static DirectionalLightComponent DefaultObject => (DirectionalLightComponent)StaticClass().DefaultObject;
+
     internal DirectionalLightComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InterpFilter : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpFilter.
+    /// </summary>
+    public static InterpFilter DefaultObject => (InterpFilter)StaticClass().DefaultObject;
+
     internal InterpFilter() { }
 
     /// <summary>

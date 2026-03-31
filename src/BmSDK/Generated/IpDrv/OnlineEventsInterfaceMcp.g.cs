@@ -21,6 +21,11 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineEventsInterfaceMcp.
+    /// </summary>
+    public static OnlineEventsInterfaceMcp DefaultObject => (OnlineEventsInterfaceMcp)StaticClass().DefaultObject;
+
     internal OnlineEventsInterfaceMcp() { }
 
     /// <summary>

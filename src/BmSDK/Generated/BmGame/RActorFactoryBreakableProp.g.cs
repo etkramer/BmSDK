@@ -21,6 +21,11 @@ public partial class RActorFactoryBreakableProp : BmSDK.BmGame.RActorFactoryBrea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RActorFactoryBreakableProp.
+    /// </summary>
+    public static RActorFactoryBreakableProp DefaultObject => (RActorFactoryBreakableProp)StaticClass().DefaultObject;
+
     internal RActorFactoryBreakableProp() { }
 
     /// <summary>

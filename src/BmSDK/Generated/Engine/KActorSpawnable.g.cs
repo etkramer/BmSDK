@@ -21,6 +21,11 @@ public partial class KActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KActorSpawnable.
+    /// </summary>
+    public static KActorSpawnable DefaultObject => (KActorSpawnable)StaticClass().DefaultObject;
+
     internal KActorSpawnable() { }
 
     /// <summary>

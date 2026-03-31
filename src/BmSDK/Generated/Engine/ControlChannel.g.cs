@@ -21,6 +21,11 @@ public partial class ControlChannel : BmSDK.Engine.Channel, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ControlChannel.
+    /// </summary>
+    public static ControlChannel DefaultObject => (ControlChannel)StaticClass().DefaultObject;
+
     internal ControlChannel() { }
 
     /// <summary>

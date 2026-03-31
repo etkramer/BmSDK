@@ -21,6 +21,11 @@ public partial class RCharacter_MarthaWayne : BmSDK.BmGame.RCharacter, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MarthaWayne.
+    /// </summary>
+    public static RCharacter_MarthaWayne DefaultObject => (RCharacter_MarthaWayne)StaticClass().DefaultObject;
+
     internal RCharacter_MarthaWayne() { }
 
     /// <summary>

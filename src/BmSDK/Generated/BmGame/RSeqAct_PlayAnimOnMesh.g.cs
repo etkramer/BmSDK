@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayAnimOnMesh : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayAnimOnMesh.
+    /// </summary>
+    public static RSeqAct_PlayAnimOnMesh DefaultObject => (RSeqAct_PlayAnimOnMesh)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayAnimOnMesh() { }
 
     /// <summary>

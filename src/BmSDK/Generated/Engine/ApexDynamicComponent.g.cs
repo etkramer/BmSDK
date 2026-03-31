@@ -21,6 +21,11 @@ public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDynamicComponent.
+    /// </summary>
+    public static ApexDynamicComponent DefaultObject => (ApexDynamicComponent)StaticClass().DefaultObject;
+
     internal ApexDynamicComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_CwPounceToTarget : BmSDK.BmGame.RSpecial
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_CwPounceToTarget.
+    /// </summary>
+    public static RSpecialMoveConfig_CwPounceToTarget DefaultObject => (RSpecialMoveConfig_CwPounceToTarget)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_CwPounceToTarget() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_RandomSwitchForGameOver : BmSDK.Engine.SeqAct_Switc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RandomSwitchForGameOver.
+    /// </summary>
+    public static RSeqAct_RandomSwitchForGameOver DefaultObject => (RSeqAct_RandomSwitchForGameOver)StaticClass().DefaultObject;
+
     internal RSeqAct_RandomSwitchForGameOver() { }
 
     /// <summary>

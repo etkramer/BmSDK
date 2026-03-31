@@ -21,6 +21,11 @@ public partial class SeqAct_SetApexClothingParam : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetApexClothingParam.
+    /// </summary>
+    public static SeqAct_SetApexClothingParam DefaultObject => (SeqAct_SetApexClothingParam)StaticClass().DefaultObject;
+
     internal SeqAct_SetApexClothingParam() { }
 
     /// <summary>

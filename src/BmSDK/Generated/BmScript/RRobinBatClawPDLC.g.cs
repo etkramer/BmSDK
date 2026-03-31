@@ -21,6 +21,11 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinBatClawPDLC.
+    /// </summary>
+    public static RRobinBatClawPDLC DefaultObject => (RRobinBatClawPDLC)StaticClass().DefaultObject;
+
     internal RRobinBatClawPDLC() { }
 
     /// <summary>

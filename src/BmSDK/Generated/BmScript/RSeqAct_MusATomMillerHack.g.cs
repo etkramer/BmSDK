@@ -21,6 +21,11 @@ public partial class RSeqAct_MusATomMillerHack : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MusATomMillerHack.
+    /// </summary>
+    public static RSeqAct_MusATomMillerHack DefaultObject => (RSeqAct_MusATomMillerHack)StaticClass().DefaultObject;
+
     internal RSeqAct_MusATomMillerHack() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_StorageSelect.
+    /// </summary>
+    public static RGFxMovieUI_StorageSelect DefaultObject => (RGFxMovieUI_StorageSelect)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_StorageSelect() { }
 
     /// <summary>

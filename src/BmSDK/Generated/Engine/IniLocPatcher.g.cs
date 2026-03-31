@@ -21,6 +21,11 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as IniLocPatcher.
+    /// </summary>
+    public static IniLocPatcher DefaultObject => (IniLocPatcher)StaticClass().DefaultObject;
+
     internal IniLocPatcher() { }
 
     /// <summary>

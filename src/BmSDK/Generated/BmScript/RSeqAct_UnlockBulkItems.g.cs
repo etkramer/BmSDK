@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockBulkItems : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockBulkItems.
+    /// </summary>
+    public static RSeqAct_UnlockBulkItems DefaultObject => (RSeqAct_UnlockBulkItems)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockBulkItems() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRope2 : BmSDK.BmGame.RRope2Base, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2.
+    /// </summary>
+    public static RRope2 DefaultObject => (RRope2)StaticClass().DefaultObject;
+
     internal RRope2() { }
 
     /// <summary>

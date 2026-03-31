@@ -21,6 +21,11 @@ public partial class RSeqAct_DestroyAllAIPawns : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DestroyAllAIPawns.
+    /// </summary>
+    public static RSeqAct_DestroyAllAIPawns DefaultObject => (RSeqAct_DestroyAllAIPawns)StaticClass().DefaultObject;
+
     internal RSeqAct_DestroyAllAIPawns() { }
 
     /// <summary>

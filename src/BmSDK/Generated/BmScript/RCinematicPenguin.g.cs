@@ -21,6 +21,11 @@ public partial class RCinematicPenguin : BmSDK.BmGame.RCinematicActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicPenguin.
+    /// </summary>
+    public static RCinematicPenguin DefaultObject => (RCinematicPenguin)StaticClass().DefaultObject;
+
     internal RCinematicPenguin() { }
 
     /// <summary>

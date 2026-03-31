@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FreezeBlastHit_Gun : BmSDK.BmGame.RBMBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FreezeBlastHit_Gun.
+    /// </summary>
+    public static RBMBehaviour_FreezeBlastHit_Gun DefaultObject => (RBMBehaviour_FreezeBlastHit_Gun)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FreezeBlastHit_Gun() { }
 
     /// <summary>

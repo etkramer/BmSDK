@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_RifleDestroyed_Harleyfied : BmSDK.BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_RifleDestroyed_Harleyfied.
+    /// </summary>
+    public static RBMCombatThrownObject_RifleDestroyed_Harleyfied DefaultObject => (RBMCombatThrownObject_RifleDestroyed_Harleyfied)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_RifleDestroyed_Harleyfied() { }
 
     /// <summary>

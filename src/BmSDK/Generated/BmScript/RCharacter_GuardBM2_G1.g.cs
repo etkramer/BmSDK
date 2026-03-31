@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_G1 : BmSDK.BmScript.RCharacter_GuardBM2
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_G1.
+    /// </summary>
+    public static RCharacter_GuardBM2_G1 DefaultObject => (RCharacter_GuardBM2_G1)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_G1() { }
 
     /// <summary>

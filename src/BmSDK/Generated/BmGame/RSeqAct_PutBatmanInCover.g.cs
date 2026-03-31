@@ -21,6 +21,11 @@ public partial class RSeqAct_PutBatmanInCover : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PutBatmanInCover.
+    /// </summary>
+    public static RSeqAct_PutBatmanInCover DefaultObject => (RSeqAct_PutBatmanInCover)StaticClass().DefaultObject;
+
     internal RSeqAct_PutBatmanInCover() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNode_ScalePlayRateToLength : BmSDK.Engine.AnimNodeBlen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_ScalePlayRateToLength.
+    /// </summary>
+    public static RAnimNode_ScalePlayRateToLength DefaultObject => (RAnimNode_ScalePlayRateToLength)StaticClass().DefaultObject;
+
     internal RAnimNode_ScalePlayRateToLength() { }
 
     /// <summary>

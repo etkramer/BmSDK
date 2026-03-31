@@ -21,6 +21,11 @@ public partial class RSeqAct_SetAIFullOnAttack : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetAIFullOnAttack.
+    /// </summary>
+    public static RSeqAct_SetAIFullOnAttack DefaultObject => (RSeqAct_SetAIFullOnAttack)StaticClass().DefaultObject;
+
     internal RSeqAct_SetAIFullOnAttack() { }
 
     /// <summary>

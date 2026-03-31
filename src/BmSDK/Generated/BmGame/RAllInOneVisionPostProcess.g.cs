@@ -21,6 +21,11 @@ public partial class RAllInOneVisionPostProcess : BmSDK.BmGame.RViewPostProcess,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAllInOneVisionPostProcess.
+    /// </summary>
+    public static RAllInOneVisionPostProcess DefaultObject => (RAllInOneVisionPostProcess)StaticClass().DefaultObject;
+
     internal RAllInOneVisionPostProcess() { }
 
     /// <summary>

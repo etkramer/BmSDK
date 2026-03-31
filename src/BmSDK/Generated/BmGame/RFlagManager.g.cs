@@ -21,6 +21,11 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlagManager.
+    /// </summary>
+    public static RFlagManager DefaultObject => (RFlagManager)StaticClass().DefaultObject;
+
     internal RFlagManager() { }
 
     /// <summary>

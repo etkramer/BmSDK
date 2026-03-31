@@ -21,6 +21,11 @@ public partial class RBMAIAction_PatrolWalk : BmSDK.BmGame.RBMAIAction_BaseMove,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PatrolWalk.
+    /// </summary>
+    public static RBMAIAction_PatrolWalk DefaultObject => (RBMAIAction_PatrolWalk)StaticClass().DefaultObject;
+
     internal RBMAIAction_PatrolWalk() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_AllowQuickRespawn : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AllowQuickRespawn.
+    /// </summary>
+    public static RSeqAct_AllowQuickRespawn DefaultObject => (RSeqAct_AllowQuickRespawn)StaticClass().DefaultObject;
+
     internal RSeqAct_AllowQuickRespawn() { }
 
     /// <summary>

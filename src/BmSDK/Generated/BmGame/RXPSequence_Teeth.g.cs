@@ -21,6 +21,11 @@ public partial class RXPSequence_Teeth : BmSDK.BmGame.RXPSequence, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXPSequence_Teeth.
+    /// </summary>
+    public static RXPSequence_Teeth DefaultObject => (RXPSequence_Teeth)StaticClass().DefaultObject;
+
     internal RXPSequence_Teeth() { }
 
     /// <summary>

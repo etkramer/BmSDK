@@ -21,6 +21,11 @@ public partial class Scene : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Scene.
+    /// </summary>
+    public static Scene DefaultObject => (Scene)StaticClass().DefaultObject;
+
     internal Scene() { }
 
     /// <summary>

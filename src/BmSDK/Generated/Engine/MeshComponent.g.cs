@@ -21,6 +21,11 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MeshComponent.
+    /// </summary>
+    public static MeshComponent DefaultObject => (MeshComponent)StaticClass().DefaultObject;
+
     internal MeshComponent() { }
 
     /// <summary>

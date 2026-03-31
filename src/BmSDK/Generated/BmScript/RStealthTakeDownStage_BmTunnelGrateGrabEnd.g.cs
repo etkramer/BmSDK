@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_BmTunnelGrateGrabEnd.
+    /// </summary>
+    public static RStealthTakeDownStage_BmTunnelGrateGrabEnd DefaultObject => (RStealthTakeDownStage_BmTunnelGrateGrabEnd)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_BmTunnelGrateGrabEnd() { }
 
     /// <summary>

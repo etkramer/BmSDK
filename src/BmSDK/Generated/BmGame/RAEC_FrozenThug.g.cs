@@ -21,6 +21,11 @@ public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_FrozenThug.
+    /// </summary>
+    public static RAEC_FrozenThug DefaultObject => (RAEC_FrozenThug)StaticClass().DefaultObject;
+
     internal RAEC_FrozenThug() { }
 
     /// <summary>

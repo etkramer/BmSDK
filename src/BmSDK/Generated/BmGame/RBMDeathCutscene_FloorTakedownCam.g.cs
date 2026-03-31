@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene_FloorTakedownCam : BmSDK.BmGame.RBMDeathCu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene_FloorTakedownCam.
+    /// </summary>
+    public static RBMDeathCutscene_FloorTakedownCam DefaultObject => (RBMDeathCutscene_FloorTakedownCam)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene_FloorTakedownCam() { }
 
     /// <summary>

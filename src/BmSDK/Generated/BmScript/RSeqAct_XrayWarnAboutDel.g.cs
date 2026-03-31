@@ -21,6 +21,11 @@ public partial class RSeqAct_XrayWarnAboutDel : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_XrayWarnAboutDel.
+    /// </summary>
+    public static RSeqAct_XrayWarnAboutDel DefaultObject => (RSeqAct_XrayWarnAboutDel)StaticClass().DefaultObject;
+
     internal RSeqAct_XrayWarnAboutDel() { }
 
     /// <summary>

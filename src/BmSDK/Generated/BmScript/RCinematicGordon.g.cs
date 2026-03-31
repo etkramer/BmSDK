@@ -21,6 +21,11 @@ public partial class RCinematicGordon : BmSDK.BmGame.RCinematicActor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicGordon.
+    /// </summary>
+    public static RCinematicGordon DefaultObject => (RCinematicGordon)StaticClass().DefaultObject;
+
     internal RCinematicGordon() { }
 
     /// <summary>

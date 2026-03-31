@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CoopPatrol.
+    /// </summary>
+    public static RBMBehaviour_CoopPatrol DefaultObject => (RBMBehaviour_CoopPatrol)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CoopPatrol() { }
 
     /// <summary>

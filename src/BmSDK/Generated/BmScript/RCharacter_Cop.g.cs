@@ -21,6 +21,11 @@ public partial class RCharacter_Cop : BmSDK.BmGame.RCharacter_CopBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Cop.
+    /// </summary>
+    public static RCharacter_Cop DefaultObject => (RCharacter_Cop)StaticClass().DefaultObject;
+
     internal RCharacter_Cop() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RLineList : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineList.
+    /// </summary>
+    public static RLineList DefaultObject => (RLineList)StaticClass().DefaultObject;
+
     internal RLineList() { }
 
     /// <summary>

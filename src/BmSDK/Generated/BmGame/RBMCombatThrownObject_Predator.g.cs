@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Predator : BmSDK.BmGame.RBMCombatThro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Predator.
+    /// </summary>
+    public static RBMCombatThrownObject_Predator DefaultObject => (RBMCombatThrownObject_Predator)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Predator() { }
 
     /// <summary>

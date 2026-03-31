@@ -21,6 +21,11 @@ public partial class NavMeshRenderingComponent : BmSDK.Engine.PrimitiveComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshRenderingComponent.
+    /// </summary>
+    public static NavMeshRenderingComponent DefaultObject => (NavMeshRenderingComponent)StaticClass().DefaultObject;
+
     internal NavMeshRenderingComponent() { }
 
     /// <summary>

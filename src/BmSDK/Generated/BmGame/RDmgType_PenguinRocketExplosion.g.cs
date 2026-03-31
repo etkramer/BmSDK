@@ -21,6 +21,11 @@ public partial class RDmgType_PenguinRocketExplosion : BmSDK.BmGame.RDmgType_Bom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_PenguinRocketExplosion.
+    /// </summary>
+    public static RDmgType_PenguinRocketExplosion DefaultObject => (RDmgType_PenguinRocketExplosion)StaticClass().DefaultObject;
+
     internal RDmgType_PenguinRocketExplosion() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AnimNodeMirror : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeMirror.
+    /// </summary>
+    public static AnimNodeMirror DefaultObject => (AnimNodeMirror)StaticClass().DefaultObject;
+
     internal AnimNodeMirror() { }
 
     /// <summary>

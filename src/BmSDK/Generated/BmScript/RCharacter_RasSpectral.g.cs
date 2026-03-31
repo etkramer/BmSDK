@@ -21,6 +21,11 @@ public partial class RCharacter_RasSpectral : BmSDK.BmScript.RCharacter_Ras, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_RasSpectral.
+    /// </summary>
+    public static RCharacter_RasSpectral DefaultObject => (RCharacter_RasSpectral)StaticClass().DefaultObject;
+
     internal RCharacter_RasSpectral() { }
 
     /// <summary>

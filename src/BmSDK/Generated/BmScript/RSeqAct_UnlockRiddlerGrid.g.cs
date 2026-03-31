@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockRiddlerGrid : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockRiddlerGrid.
+    /// </summary>
+    public static RSeqAct_UnlockRiddlerGrid DefaultObject => (RSeqAct_UnlockRiddlerGrid)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockRiddlerGrid() { }
 
     /// <summary>

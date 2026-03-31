@@ -21,6 +21,11 @@ public partial class MaterialExpressionDisplacementSampleLerp : BmSDK.Engine.Mat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDisplacementSampleLerp.
+    /// </summary>
+    public static MaterialExpressionDisplacementSampleLerp DefaultObject => (MaterialExpressionDisplacementSampleLerp)StaticClass().DefaultObject;
+
     internal MaterialExpressionDisplacementSampleLerp() { }
 
     /// <summary>

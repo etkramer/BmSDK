@@ -21,6 +21,11 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LunaticMusicManager.
+    /// </summary>
+    public static RSeqAct_LunaticMusicManager DefaultObject => (RSeqAct_LunaticMusicManager)StaticClass().DefaultObject;
+
     internal RSeqAct_LunaticMusicManager() { }
 
     /// <summary>

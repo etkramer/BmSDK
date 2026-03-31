@@ -21,6 +21,11 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RControllableChatteringTeethCamera.
+    /// </summary>
+    public static RControllableChatteringTeethCamera DefaultObject => (RControllableChatteringTeethCamera)StaticClass().DefaultObject;
+
     internal RControllableChatteringTeethCamera() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_HarleyRocket : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HarleyRocket.
+    /// </summary>
+    public static RDmgType_HarleyRocket DefaultObject => (RDmgType_HarleyRocket)StaticClass().DefaultObject;
+
     internal RDmgType_HarleyRocket() { }
 
     /// <summary>

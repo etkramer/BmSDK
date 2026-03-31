@@ -21,6 +21,11 @@ public partial class RBMBehaviour_TerrorDiscoverCasualty : BmSDK.BmGame.RBMBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_TerrorDiscoverCasualty.
+    /// </summary>
+    public static RBMBehaviour_TerrorDiscoverCasualty DefaultObject => (RBMBehaviour_TerrorDiscoverCasualty)StaticClass().DefaultObject;
+
     internal RBMBehaviour_TerrorDiscoverCasualty() { }
 
     /// <summary>

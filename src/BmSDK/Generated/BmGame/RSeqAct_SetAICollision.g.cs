@@ -21,6 +21,11 @@ public partial class RSeqAct_SetAICollision : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetAICollision.
+    /// </summary>
+    public static RSeqAct_SetAICollision DefaultObject => (RSeqAct_SetAICollision)StaticClass().DefaultObject;
+
     internal RSeqAct_SetAICollision() { }
 
     /// <summary>

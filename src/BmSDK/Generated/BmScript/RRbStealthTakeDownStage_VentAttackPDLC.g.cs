@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_VentAttackPDLC : BmSDK.BmScript.RRb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_VentAttackPDLC.
+    /// </summary>
+    public static RRbStealthTakeDownStage_VentAttackPDLC DefaultObject => (RRbStealthTakeDownStage_VentAttackPDLC)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_VentAttackPDLC() { }
 
     /// <summary>

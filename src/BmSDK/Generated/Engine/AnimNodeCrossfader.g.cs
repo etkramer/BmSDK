@@ -21,6 +21,11 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeCrossfader.
+    /// </summary>
+    public static AnimNodeCrossfader DefaultObject => (AnimNodeCrossfader)StaticClass().DefaultObject;
+
     internal AnimNodeCrossfader() { }
 
     /// <summary>

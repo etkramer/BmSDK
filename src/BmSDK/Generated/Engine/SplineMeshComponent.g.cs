@@ -21,6 +21,11 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SplineMeshComponent.
+    /// </summary>
+    public static SplineMeshComponent DefaultObject => (SplineMeshComponent)StaticClass().DefaultObject;
+
     internal SplineMeshComponent() { }
 
     /// <summary>

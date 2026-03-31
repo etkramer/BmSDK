@@ -21,6 +21,11 @@ public partial class NavMeshPath_MinDistBetweenSpecsOfType : BmSDK.Engine.NavMes
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_MinDistBetweenSpecsOfType.
+    /// </summary>
+    public static NavMeshPath_MinDistBetweenSpecsOfType DefaultObject => (NavMeshPath_MinDistBetweenSpecsOfType)StaticClass().DefaultObject;
+
     internal NavMeshPath_MinDistBetweenSpecsOfType() { }
 
     /// <summary>

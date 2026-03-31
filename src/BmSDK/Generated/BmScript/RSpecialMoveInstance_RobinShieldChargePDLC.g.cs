@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_RobinShieldChargePDLC : BmSDK.BmScript
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_RobinShieldChargePDLC.
+    /// </summary>
+    public static RSpecialMoveInstance_RobinShieldChargePDLC DefaultObject => (RSpecialMoveInstance_RobinShieldChargePDLC)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_RobinShieldChargePDLC() { }
 
     /// <summary>

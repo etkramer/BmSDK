@@ -21,6 +21,11 @@ public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLiftBrakeSwitch.
+    /// </summary>
+    public static RLiftBrakeSwitch DefaultObject => (RLiftBrakeSwitch)StaticClass().DefaultObject;
+
     internal RLiftBrakeSwitch() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RelativeIdle : BmSDK.BmGame.RSpecialMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RelativeIdle.
+    /// </summary>
+    public static RSpecialMoveConfig_RelativeIdle DefaultObject => (RSpecialMoveConfig_RelativeIdle)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RelativeIdle() { }
 
     /// <summary>

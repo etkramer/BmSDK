@@ -21,6 +21,11 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_Cower.
+    /// </summary>
+    public static RBMAIAction_Cower DefaultObject => (RBMAIAction_Cower)StaticClass().DefaultObject;
+
     internal RBMAIAction_Cower() { }
 
     /// <summary>

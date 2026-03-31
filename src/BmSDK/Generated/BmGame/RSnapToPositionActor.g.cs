@@ -21,6 +21,11 @@ public partial class RSnapToPositionActor : BmSDK.Engine.Actor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSnapToPositionActor.
+    /// </summary>
+    public static RSnapToPositionActor DefaultObject => (RSnapToPositionActor)StaticClass().DefaultObject;
+
     internal RSnapToPositionActor() { }
 
     /// <summary>

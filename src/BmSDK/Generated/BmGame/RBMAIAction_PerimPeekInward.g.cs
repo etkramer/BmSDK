@@ -21,6 +21,11 @@ public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PerimPeekInward.
+    /// </summary>
+    public static RBMAIAction_PerimPeekInward DefaultObject => (RBMAIAction_PerimPeekInward)StaticClass().DefaultObject;
+
     internal RBMAIAction_PerimPeekInward() { }
 
     /// <summary>

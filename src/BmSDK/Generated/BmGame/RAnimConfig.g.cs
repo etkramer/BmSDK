@@ -21,6 +21,11 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimConfig.
+    /// </summary>
+    public static RAnimConfig DefaultObject => (RAnimConfig)StaticClass().DefaultObject;
+
     internal RAnimConfig() { }
 
     /// <summary>

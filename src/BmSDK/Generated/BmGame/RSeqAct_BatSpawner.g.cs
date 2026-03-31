@@ -21,6 +21,11 @@ public partial class RSeqAct_BatSpawner : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatSpawner.
+    /// </summary>
+    public static RSeqAct_BatSpawner DefaultObject => (RSeqAct_BatSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_BatSpawner() { }
 
     /// <summary>

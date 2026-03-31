@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_SBrangCas : BmSDK.BmGame.RAEC_SubGroup, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_SBrangCas.
+    /// </summary>
+    public static RAEC_Casualty_SBrangCas DefaultObject => (RAEC_Casualty_SBrangCas)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_SBrangCas() { }
 
     /// <summary>

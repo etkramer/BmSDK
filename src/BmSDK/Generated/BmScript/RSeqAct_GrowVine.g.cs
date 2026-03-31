@@ -21,6 +21,11 @@ public partial class RSeqAct_GrowVine : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GrowVine.
+    /// </summary>
+    public static RSeqAct_GrowVine DefaultObject => (RSeqAct_GrowVine)StaticClass().DefaultObject;
+
     internal RSeqAct_GrowVine() { }
 
     /// <summary>

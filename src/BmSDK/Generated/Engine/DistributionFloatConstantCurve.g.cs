@@ -21,6 +21,11 @@ public partial class DistributionFloatConstantCurve : BmSDK.DistributionFloat, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionFloatConstantCurve.
+    /// </summary>
+    public static DistributionFloatConstantCurve DefaultObject => (DistributionFloatConstantCurve)StaticClass().DefaultObject;
+
     internal DistributionFloatConstantCurve() { }
 
     /// <summary>

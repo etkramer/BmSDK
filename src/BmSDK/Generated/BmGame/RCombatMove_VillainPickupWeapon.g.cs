@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainPickupWeapon : BmSDK.BmGame.RCombatMove,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainPickupWeapon.
+    /// </summary>
+    public static RCombatMove_VillainPickupWeapon DefaultObject => (RCombatMove_VillainPickupWeapon)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainPickupWeapon() { }
 
     /// <summary>

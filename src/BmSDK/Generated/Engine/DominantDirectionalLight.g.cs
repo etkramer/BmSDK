@@ -21,6 +21,11 @@ public partial class DominantDirectionalLight : BmSDK.Engine.DirectionalLight, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DominantDirectionalLight.
+    /// </summary>
+    public static DominantDirectionalLight DefaultObject => (DominantDirectionalLight)StaticClass().DefaultObject;
+
     internal DominantDirectionalLight() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RNightwingSticks : BmSDK.BmGame.RSticksGadgetBase, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingSticks.
+    /// </summary>
+    public static RNightwingSticks DefaultObject => (RNightwingSticks)StaticClass().DefaultObject;
+
     internal RNightwingSticks() { }
 
     /// <summary>

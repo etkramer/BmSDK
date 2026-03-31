@@ -21,6 +21,11 @@ public partial class SplineLoftActor : BmSDK.Engine.SplineActor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SplineLoftActor.
+    /// </summary>
+    public static SplineLoftActor DefaultObject => (SplineLoftActor)StaticClass().DefaultObject;
+
     internal SplineLoftActor() { }
 
     /// <summary>

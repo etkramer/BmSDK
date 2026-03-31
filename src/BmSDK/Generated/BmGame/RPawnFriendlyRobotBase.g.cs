@@ -21,6 +21,11 @@ public partial class RPawnFriendlyRobotBase : BmSDK.BmGame.RPawnFriendly, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyRobotBase.
+    /// </summary>
+    public static RPawnFriendlyRobotBase DefaultObject => (RPawnFriendlyRobotBase)StaticClass().DefaultObject;
+
     internal RPawnFriendlyRobotBase() { }
 
     /// <summary>

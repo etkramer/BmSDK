@@ -21,6 +21,11 @@ public partial class RSeqAct_WaitForAllInputs : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_WaitForAllInputs.
+    /// </summary>
+    public static RSeqAct_WaitForAllInputs DefaultObject => (RSeqAct_WaitForAllInputs)StaticClass().DefaultObject;
+
     internal RSeqAct_WaitForAllInputs() { }
 
     /// <summary>

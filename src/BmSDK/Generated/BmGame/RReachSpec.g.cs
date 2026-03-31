@@ -21,6 +21,11 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RReachSpec.
+    /// </summary>
+    public static RReachSpec DefaultObject => (RReachSpec)StaticClass().DefaultObject;
+
     internal RReachSpec() { }
 
     /// <summary>

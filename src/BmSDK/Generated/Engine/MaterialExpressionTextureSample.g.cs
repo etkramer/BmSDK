@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureSample : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureSample.
+    /// </summary>
+    public static MaterialExpressionTextureSample DefaultObject => (MaterialExpressionTextureSample)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureSample() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAttackPointSearch.
+    /// </summary>
+    public static RAttackPointSearch DefaultObject => (RAttackPointSearch)StaticClass().DefaultObject;
+
     internal RAttackPointSearch() { }
 
     /// <summary>

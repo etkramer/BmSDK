@@ -21,6 +21,11 @@ public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFallInWaterCamera.
+    /// </summary>
+    public static RFallInWaterCamera DefaultObject => (RFallInWaterCamera)StaticClass().DefaultObject;
+
     internal RFallInWaterCamera() { }
 
     /// <summary>

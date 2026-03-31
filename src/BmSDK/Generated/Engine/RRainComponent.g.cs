@@ -21,6 +21,11 @@ public partial class RRainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRainComponent.
+    /// </summary>
+    public static RRainComponent DefaultObject => (RRainComponent)StaticClass().DefaultObject;
+
     internal RRainComponent() { }
 
     /// <summary>

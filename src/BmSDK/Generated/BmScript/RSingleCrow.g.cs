@@ -21,6 +21,11 @@ public partial class RSingleCrow : BmSDK.BmScript.RCrows, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSingleCrow.
+    /// </summary>
+    public static RSingleCrow DefaultObject => (RSingleCrow)StaticClass().DefaultObject;
+
     internal RSingleCrow() { }
 
     /// <summary>

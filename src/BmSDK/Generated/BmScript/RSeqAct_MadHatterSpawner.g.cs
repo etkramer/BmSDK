@@ -21,6 +21,11 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MadHatterSpawner.
+    /// </summary>
+    public static RSeqAct_MadHatterSpawner DefaultObject => (RSeqAct_MadHatterSpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_MadHatterSpawner() { }
 
     /// <summary>

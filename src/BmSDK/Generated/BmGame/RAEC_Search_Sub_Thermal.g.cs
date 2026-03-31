@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Thermal.
+    /// </summary>
+    public static RAEC_Search_Sub_Thermal DefaultObject => (RAEC_Search_Sub_Thermal)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Thermal() { }
 
     /// <summary>

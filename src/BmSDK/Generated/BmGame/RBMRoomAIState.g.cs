@@ -21,6 +21,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMRoomAIState.
+    /// </summary>
+    public static RBMRoomAIState DefaultObject => (RBMRoomAIState)StaticClass().DefaultObject;
+
     internal RBMRoomAIState() { }
 
     /// <summary>

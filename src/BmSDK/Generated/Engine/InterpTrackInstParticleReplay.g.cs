@@ -21,6 +21,11 @@ public partial class InterpTrackInstParticleReplay : BmSDK.Engine.InterpTrackIns
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstParticleReplay.
+    /// </summary>
+    public static InterpTrackInstParticleReplay DefaultObject => (InterpTrackInstParticleReplay)StaticClass().DefaultObject;
+
     internal InterpTrackInstParticleReplay() { }
 
     /// <summary>

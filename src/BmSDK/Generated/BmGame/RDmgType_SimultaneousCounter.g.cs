@@ -21,6 +21,11 @@ public partial class RDmgType_SimultaneousCounter : BmSDK.BmGame.RDmgType_Strike
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SimultaneousCounter.
+    /// </summary>
+    public static RDmgType_SimultaneousCounter DefaultObject => (RDmgType_SimultaneousCounter)StaticClass().DefaultObject;
+
     internal RDmgType_SimultaneousCounter() { }
 
     /// <summary>

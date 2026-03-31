@@ -21,6 +21,11 @@ public partial class AnimNodeSlot : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeSlot.
+    /// </summary>
+    public static AnimNodeSlot DefaultObject => (AnimNodeSlot)StaticClass().DefaultObject;
+
     internal AnimNodeSlot() { }
 
     /// <summary>

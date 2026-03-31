@@ -21,6 +21,11 @@ public partial class RBMAIAction_Glance : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_Glance.
+    /// </summary>
+    public static RBMAIAction_Glance DefaultObject => (RBMAIAction_Glance)StaticClass().DefaultObject;
+
     internal RBMAIAction_Glance() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InterpTrackInstDirector : BmSDK.Engine.InterpTrackInst, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstDirector.
+    /// </summary>
+    public static InterpTrackInstDirector DefaultObject => (InterpTrackInstDirector)StaticClass().DefaultObject;
+
     internal InterpTrackInstDirector() { }
 
     /// <summary>

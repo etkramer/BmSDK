@@ -21,6 +21,11 @@ public partial class RJammerTowerWaypointVolume : BmSDK.Engine.Volume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJammerTowerWaypointVolume.
+    /// </summary>
+    public static RJammerTowerWaypointVolume DefaultObject => (RJammerTowerWaypointVolume)StaticClass().DefaultObject;
+
     internal RJammerTowerWaypointVolume() { }
 
     /// <summary>

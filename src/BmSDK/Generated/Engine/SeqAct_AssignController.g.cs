@@ -21,6 +21,11 @@ public partial class SeqAct_AssignController : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AssignController.
+    /// </summary>
+    public static SeqAct_AssignController DefaultObject => (SeqAct_AssignController)StaticClass().DefaultObject;
+
     internal SeqAct_AssignController() { }
 
     /// <summary>

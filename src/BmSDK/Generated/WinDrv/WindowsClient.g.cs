@@ -21,6 +21,11 @@ public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WindowsClient.
+    /// </summary>
+    public static WindowsClient DefaultObject => (WindowsClient)StaticClass().DefaultObject;
+
     internal WindowsClient() { }
 
     /// <summary>

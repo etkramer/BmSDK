@@ -21,6 +21,11 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NinjaDodgeStrike.
+    /// </summary>
+    public static RCombatMove_NinjaDodgeStrike DefaultObject => (RCombatMove_NinjaDodgeStrike)StaticClass().DefaultObject;
+
     internal RCombatMove_NinjaDodgeStrike() { }
 
     /// <summary>

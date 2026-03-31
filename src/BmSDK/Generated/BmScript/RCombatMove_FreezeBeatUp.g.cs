@@ -21,6 +21,11 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_FreezeBeatUp.
+    /// </summary>
+    public static RCombatMove_FreezeBeatUp DefaultObject => (RCombatMove_FreezeBeatUp)StaticClass().DefaultObject;
+
     internal RCombatMove_FreezeBeatUp() { }
 
     /// <summary>

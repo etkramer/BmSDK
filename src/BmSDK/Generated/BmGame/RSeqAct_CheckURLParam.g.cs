@@ -21,6 +21,11 @@ public partial class RSeqAct_CheckURLParam : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CheckURLParam.
+    /// </summary>
+    public static RSeqAct_CheckURLParam DefaultObject => (RSeqAct_CheckURLParam)StaticClass().DefaultObject;
+
     internal RSeqAct_CheckURLParam() { }
 
     /// <summary>

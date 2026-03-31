@@ -21,6 +21,11 @@ public partial class RCombatEvent_HeavyStrikeHit : BmSDK.BmGame.RCombatEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatEvent_HeavyStrikeHit.
+    /// </summary>
+    public static RCombatEvent_HeavyStrikeHit DefaultObject => (RCombatEvent_HeavyStrikeHit)StaticClass().DefaultObject;
+
     internal RCombatEvent_HeavyStrikeHit() { }
 
     /// <summary>

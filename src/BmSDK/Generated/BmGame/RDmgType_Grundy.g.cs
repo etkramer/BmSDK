@@ -21,6 +21,11 @@ public partial class RDmgType_Grundy : BmSDK.BmGame.RDmgType_NoXP, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Grundy.
+    /// </summary>
+    public static RDmgType_Grundy DefaultObject => (RDmgType_Grundy)StaticClass().DefaultObject;
+
     internal RDmgType_Grundy() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHarpoonTriggerMoveable : BmSDK.BmScript.RHarpoonTrigger, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonTriggerMoveable.
+    /// </summary>
+    public static RHarpoonTriggerMoveable DefaultObject => (RHarpoonTriggerMoveable)StaticClass().DefaultObject;
+
     internal RHarpoonTriggerMoveable() { }
 
     /// <summary>

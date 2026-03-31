@@ -21,6 +21,11 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossRasBase.
+    /// </summary>
+    public static RPawnBossRasBase DefaultObject => (RPawnBossRasBase)StaticClass().DefaultObject;
+
     internal RPawnBossRasBase() { }
 
     /// <summary>

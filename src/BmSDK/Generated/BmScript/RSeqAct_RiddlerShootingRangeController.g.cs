@@ -21,6 +21,11 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RiddlerShootingRangeController.
+    /// </summary>
+    public static RSeqAct_RiddlerShootingRangeController DefaultObject => (RSeqAct_RiddlerShootingRangeController)StaticClass().DefaultObject;
+
     internal RSeqAct_RiddlerShootingRangeController() { }
 
     /// <summary>

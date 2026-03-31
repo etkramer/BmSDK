@@ -21,6 +21,11 @@ public partial class AkTriggerName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkTriggerName.
+    /// </summary>
+    public static AkTriggerName DefaultObject => (AkTriggerName)StaticClass().DefaultObject;
+
     internal AkTriggerName() { }
 
     /// <summary>

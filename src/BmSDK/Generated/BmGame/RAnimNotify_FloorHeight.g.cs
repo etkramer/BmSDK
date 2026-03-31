@@ -21,6 +21,11 @@ public partial class RAnimNotify_FloorHeight : BmSDK.BmGame.RAnimNotify_BeginEnd
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_FloorHeight.
+    /// </summary>
+    public static RAnimNotify_FloorHeight DefaultObject => (RAnimNotify_FloorHeight)StaticClass().DefaultObject;
+
     internal RAnimNotify_FloorHeight() { }
 
     /// <summary>

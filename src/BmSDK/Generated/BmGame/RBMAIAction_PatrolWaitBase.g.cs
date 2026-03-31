@@ -21,6 +21,11 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PatrolWaitBase.
+    /// </summary>
+    public static RBMAIAction_PatrolWaitBase DefaultObject => (RBMAIAction_PatrolWaitBase)StaticClass().DefaultObject;
+
     internal RBMAIAction_PatrolWaitBase() { }
 
     /// <summary>

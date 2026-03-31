@@ -21,6 +21,11 @@ public partial class MaterialExpressionTime : BmSDK.Engine.MaterialExpression, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTime.
+    /// </summary>
+    public static MaterialExpressionTime DefaultObject => (MaterialExpressionTime)StaticClass().DefaultObject;
+
     internal MaterialExpressionTime() { }
 
     /// <summary>

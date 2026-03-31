@@ -21,6 +21,11 @@ public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HUDTimer.
+    /// </summary>
+    public static RSeqAct_HUDTimer DefaultObject => (RSeqAct_HUDTimer)StaticClass().DefaultObject;
+
     internal RSeqAct_HUDTimer() { }
 
     /// <summary>

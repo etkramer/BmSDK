@@ -21,6 +21,11 @@ public partial class RB_LineImpulseActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_LineImpulseActor.
+    /// </summary>
+    public static RB_LineImpulseActor DefaultObject => (RB_LineImpulseActor)StaticClass().DefaultObject;
+
     internal RB_LineImpulseActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnCrowd.
+    /// </summary>
+    public static RPawnCrowd DefaultObject => (RPawnCrowd)StaticClass().DefaultObject;
+
     internal RPawnCrowd() { }
 
     /// <summary>

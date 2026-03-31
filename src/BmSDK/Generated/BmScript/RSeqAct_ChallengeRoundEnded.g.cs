@@ -21,6 +21,11 @@ public partial class RSeqAct_ChallengeRoundEnded : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChallengeRoundEnded.
+    /// </summary>
+    public static RSeqAct_ChallengeRoundEnded DefaultObject => (RSeqAct_ChallengeRoundEnded)StaticClass().DefaultObject;
+
     internal RSeqAct_ChallengeRoundEnded() { }
 
     /// <summary>

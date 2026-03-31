@@ -21,6 +21,11 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeEnvironmentTarget.
+    /// </summary>
+    public static RFreezeEnvironmentTarget DefaultObject => (RFreezeEnvironmentTarget)StaticClass().DefaultObject;
+
     internal RFreezeEnvironmentTarget() { }
 
     /// <summary>

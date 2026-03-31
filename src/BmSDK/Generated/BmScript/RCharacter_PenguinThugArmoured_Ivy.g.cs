@@ -21,6 +21,11 @@ public partial class RCharacter_PenguinThugArmoured_Ivy : BmSDK.BmScript.RCharac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_PenguinThugArmoured_Ivy.
+    /// </summary>
+    public static RCharacter_PenguinThugArmoured_Ivy DefaultObject => (RCharacter_PenguinThugArmoured_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_PenguinThugArmoured_Ivy() { }
 
     /// <summary>

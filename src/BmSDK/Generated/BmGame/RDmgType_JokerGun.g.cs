@@ -21,6 +21,11 @@ public partial class RDmgType_JokerGun : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_JokerGun.
+    /// </summary>
+    public static RDmgType_JokerGun DefaultObject => (RDmgType_JokerGun)StaticClass().DefaultObject;
+
     internal RDmgType_JokerGun() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterHangPoint.
+    /// </summary>
+    public static RHelicopterHangPoint DefaultObject => (RHelicopterHangPoint)StaticClass().DefaultObject;
+
     internal RHelicopterHangPoint() { }
 
     /// <summary>

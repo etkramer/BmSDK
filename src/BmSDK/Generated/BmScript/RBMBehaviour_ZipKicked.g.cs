@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ZipKicked : BmSDK.BmGame.RBMBehaviour_BatClawe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ZipKicked.
+    /// </summary>
+    public static RBMBehaviour_ZipKicked DefaultObject => (RBMBehaviour_ZipKicked)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ZipKicked() { }
 
     /// <summary>

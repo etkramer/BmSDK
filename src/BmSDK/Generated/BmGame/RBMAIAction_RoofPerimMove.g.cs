@@ -21,6 +21,11 @@ public partial class RBMAIAction_RoofPerimMove : BmSDK.BmGame.RBMAIAction_BaseMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RoofPerimMove.
+    /// </summary>
+    public static RBMAIAction_RoofPerimMove DefaultObject => (RBMAIAction_RoofPerimMove)StaticClass().DefaultObject;
+
     internal RBMAIAction_RoofPerimMove() { }
 
     /// <summary>

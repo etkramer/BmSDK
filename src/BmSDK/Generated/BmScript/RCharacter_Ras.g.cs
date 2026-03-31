@@ -21,6 +21,11 @@ public partial class RCharacter_Ras : BmSDK.BmScript.RCharacter_Ninja, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Ras.
+    /// </summary>
+    public static RCharacter_Ras DefaultObject => (RCharacter_Ras)StaticClass().DefaultObject;
+
     internal RCharacter_Ras() { }
 
     /// <summary>

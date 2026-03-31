@@ -21,6 +21,11 @@ public partial class RHidePoint_RopePDLC : BmSDK.BmScript.RHidePoint_Rope, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_RopePDLC.
+    /// </summary>
+    public static RHidePoint_RopePDLC DefaultObject => (RHidePoint_RopePDLC)StaticClass().DefaultObject;
+
     internal RHidePoint_RopePDLC() { }
 
     /// <summary>

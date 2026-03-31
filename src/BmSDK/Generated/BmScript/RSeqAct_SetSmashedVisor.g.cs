@@ -21,6 +21,11 @@ public partial class RSeqAct_SetSmashedVisor : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetSmashedVisor.
+    /// </summary>
+    public static RSeqAct_SetSmashedVisor DefaultObject => (RSeqAct_SetSmashedVisor)StaticClass().DefaultObject;
+
     internal RSeqAct_SetSmashedVisor() { }
 
     /// <summary>

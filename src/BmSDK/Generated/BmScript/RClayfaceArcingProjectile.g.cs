@@ -21,6 +21,11 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceArcingProjectile.
+    /// </summary>
+    public static RClayfaceArcingProjectile DefaultObject => (RClayfaceArcingProjectile)StaticClass().DefaultObject;
+
     internal RClayfaceArcingProjectile() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_LineLauncherFlipAndAim : BmSDK.BmGame.RS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_LineLauncherFlipAndAim.
+    /// </summary>
+    public static RSpecialMoveConfig_LineLauncherFlipAndAim DefaultObject => (RSpecialMoveConfig_LineLauncherFlipAndAim)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_LineLauncherFlipAndAim() { }
 
     /// <summary>

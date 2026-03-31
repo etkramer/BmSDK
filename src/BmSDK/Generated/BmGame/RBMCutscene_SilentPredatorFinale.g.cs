@@ -21,6 +21,11 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCutscene_SilentPredatorFinale.
+    /// </summary>
+    public static RBMCutscene_SilentPredatorFinale DefaultObject => (RBMCutscene_SilentPredatorFinale)StaticClass().DefaultObject;
+
     internal RBMCutscene_SilentPredatorFinale() { }
 
     /// <summary>

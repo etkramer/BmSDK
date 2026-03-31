@@ -21,6 +21,11 @@ public partial class RDialogueLine : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDialogueLine.
+    /// </summary>
+    public static RDialogueLine DefaultObject => (RDialogueLine)StaticClass().DefaultObject;
+
     internal RDialogueLine() { }
 
     /// <summary>

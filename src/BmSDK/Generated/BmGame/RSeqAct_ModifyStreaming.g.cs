@@ -21,6 +21,11 @@ public partial class RSeqAct_ModifyStreaming : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ModifyStreaming.
+    /// </summary>
+    public static RSeqAct_ModifyStreaming DefaultObject => (RSeqAct_ModifyStreaming)StaticClass().DefaultObject;
+
     internal RSeqAct_ModifyStreaming() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_ZipKickNear : BmSDK.BmGame.RDamageType, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ZipKickNear.
+    /// </summary>
+    public static RDmgType_ZipKickNear DefaultObject => (RDmgType_ZipKickNear)StaticClass().DefaultObject;
+
     internal RDmgType_ZipKickNear() { }
 
     /// <summary>

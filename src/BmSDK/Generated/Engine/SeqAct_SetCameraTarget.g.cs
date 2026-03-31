@@ -21,6 +21,11 @@ public partial class SeqAct_SetCameraTarget : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetCameraTarget.
+    /// </summary>
+    public static SeqAct_SetCameraTarget DefaultObject => (SeqAct_SetCameraTarget)StaticClass().DefaultObject;
+
     internal SeqAct_SetCameraTarget() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage.
+    /// </summary>
+    public static RFreezeTakeDownStage DefaultObject => (RFreezeTakeDownStage)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage() { }
 
     /// <summary>

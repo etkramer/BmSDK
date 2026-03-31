@@ -21,6 +21,11 @@ public partial class DirectionalLight : BmSDK.Engine.Light, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DirectionalLight.
+    /// </summary>
+    public static DirectionalLight DefaultObject => (DirectionalLight)StaticClass().DefaultObject;
+
     internal DirectionalLight() { }
 
     /// <summary>

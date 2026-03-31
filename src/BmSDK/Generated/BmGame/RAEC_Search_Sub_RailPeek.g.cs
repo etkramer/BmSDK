@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_RailPeek.
+    /// </summary>
+    public static RAEC_Search_Sub_RailPeek DefaultObject => (RAEC_Search_Sub_RailPeek)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_RailPeek() { }
 
     /// <summary>

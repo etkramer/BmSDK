@@ -21,6 +21,11 @@ public partial class RSeqAct_Riddler8MakeBMWalkSlowly : BmSDK.Engine.SeqAct_Late
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Riddler8MakeBMWalkSlowly.
+    /// </summary>
+    public static RSeqAct_Riddler8MakeBMWalkSlowly DefaultObject => (RSeqAct_Riddler8MakeBMWalkSlowly)StaticClass().DefaultObject;
+
     internal RSeqAct_Riddler8MakeBMWalkSlowly() { }
 
     /// <summary>

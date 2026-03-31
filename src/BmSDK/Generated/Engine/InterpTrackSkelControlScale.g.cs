@@ -21,6 +21,11 @@ public partial class InterpTrackSkelControlScale : BmSDK.Engine.InterpTrackFloat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackSkelControlScale.
+    /// </summary>
+    public static InterpTrackSkelControlScale DefaultObject => (InterpTrackSkelControlScale)StaticClass().DefaultObject;
+
     internal InterpTrackSkelControlScale() { }
 
     /// <summary>

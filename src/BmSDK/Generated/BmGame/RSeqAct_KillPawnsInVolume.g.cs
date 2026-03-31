@@ -21,6 +21,11 @@ public partial class RSeqAct_KillPawnsInVolume : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_KillPawnsInVolume.
+    /// </summary>
+    public static RSeqAct_KillPawnsInVolume DefaultObject => (RSeqAct_KillPawnsInVolume)StaticClass().DefaultObject;
+
     internal RSeqAct_KillPawnsInVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMPawnAIAnim : BmSDK.BmGame.RPawnCombat, BmSDK.BmGame.RXra
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPawnAIAnim.
+    /// </summary>
+    public static RBMPawnAIAnim DefaultObject => (RBMPawnAIAnim)StaticClass().DefaultObject;
+
     internal RBMPawnAIAnim() { }
 
     /// <summary>

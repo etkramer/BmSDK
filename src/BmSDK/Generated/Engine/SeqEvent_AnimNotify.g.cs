@@ -21,6 +21,11 @@ public partial class SeqEvent_AnimNotify : BmSDK.Engine.SequenceEvent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_AnimNotify.
+    /// </summary>
+    public static SeqEvent_AnimNotify DefaultObject => (SeqEvent_AnimNotify)StaticClass().DefaultObject;
+
     internal SeqEvent_AnimNotify() { }
 
     /// <summary>

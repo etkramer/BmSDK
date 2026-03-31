@@ -21,6 +21,11 @@ public partial class RSeqEvent_MagneticSurfacePlayerTooClose : BmSDK.Engine.Sequ
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MagneticSurfacePlayerTooClose.
+    /// </summary>
+    public static RSeqEvent_MagneticSurfacePlayerTooClose DefaultObject => (RSeqEvent_MagneticSurfacePlayerTooClose)StaticClass().DefaultObject;
+
     internal RSeqEvent_MagneticSurfacePlayerTooClose() { }
 
     /// <summary>

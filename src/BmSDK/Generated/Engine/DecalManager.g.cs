@@ -21,6 +21,11 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DecalManager.
+    /// </summary>
+    public static DecalManager DefaultObject => (DecalManager)StaticClass().DefaultObject;
+
     internal DecalManager() { }
 
     /// <summary>

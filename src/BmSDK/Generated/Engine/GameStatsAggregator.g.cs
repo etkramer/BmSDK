@@ -21,6 +21,11 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameStatsAggregator.
+    /// </summary>
+    public static GameStatsAggregator DefaultObject => (GameStatsAggregator)StaticClass().DefaultObject;
+
     internal GameStatsAggregator() { }
 
     /// <summary>

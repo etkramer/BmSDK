@@ -21,6 +21,11 @@ public partial class RSeqEvent_ShotAt : BmSDK.Engine.SequenceEvent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_ShotAt.
+    /// </summary>
+    public static RSeqEvent_ShotAt DefaultObject => (RSeqEvent_ShotAt)StaticClass().DefaultObject;
+
     internal RSeqEvent_ShotAt() { }
 
     /// <summary>

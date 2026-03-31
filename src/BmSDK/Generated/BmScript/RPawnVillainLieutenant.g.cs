@@ -21,6 +21,11 @@ public partial class RPawnVillainLieutenant : BmSDK.BmGame.RPawnVillainCombat, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainLieutenant.
+    /// </summary>
+    public static RPawnVillainLieutenant DefaultObject => (RPawnVillainLieutenant)StaticClass().DefaultObject;
+
     internal RPawnVillainLieutenant() { }
 
     /// <summary>

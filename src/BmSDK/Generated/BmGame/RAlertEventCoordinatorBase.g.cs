@@ -21,6 +21,11 @@ public partial class RAlertEventCoordinatorBase : BmSDK.Engine.Actor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAlertEventCoordinatorBase.
+    /// </summary>
+    public static RAlertEventCoordinatorBase DefaultObject => (RAlertEventCoordinatorBase)StaticClass().DefaultObject;
+
     internal RAlertEventCoordinatorBase() { }
 
     /// <summary>

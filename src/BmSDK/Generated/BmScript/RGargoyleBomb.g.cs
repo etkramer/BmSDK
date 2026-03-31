@@ -21,6 +21,11 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGargoyleBomb.
+    /// </summary>
+    public static RGargoyleBomb DefaultObject => (RGargoyleBomb)StaticClass().DefaultObject;
+
     internal RGargoyleBomb() { }
 
     /// <summary>

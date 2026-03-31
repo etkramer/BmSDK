@@ -21,6 +21,11 @@ public partial class RSeqEvent_VineDeath : BmSDK.Engine.SequenceEvent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_VineDeath.
+    /// </summary>
+    public static RSeqEvent_VineDeath DefaultObject => (RSeqEvent_VineDeath)StaticClass().DefaultObject;
+
     internal RSeqEvent_VineDeath() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkProximityTracker : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkProximityTracker.
+    /// </summary>
+    public static AkProximityTracker DefaultObject => (AkProximityTracker)StaticClass().DefaultObject;
+
     internal AkProximityTracker() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_Mesh.
+    /// </summary>
+    public static RHidePoint_Mesh DefaultObject => (RHidePoint_Mesh)StaticClass().DefaultObject;
+
     internal RHidePoint_Mesh() { }
 
     /// <summary>

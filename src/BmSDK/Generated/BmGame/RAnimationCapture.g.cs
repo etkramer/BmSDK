@@ -21,6 +21,11 @@ public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimationCapture.
+    /// </summary>
+    public static RAnimationCapture DefaultObject => (RAnimationCapture)StaticClass().DefaultObject;
+
     internal RAnimationCapture() { }
 
     /// <summary>

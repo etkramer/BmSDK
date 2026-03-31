@@ -21,6 +21,11 @@ public partial class TextureCube : BmSDK.Engine.Texture, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextureCube.
+    /// </summary>
+    public static TextureCube DefaultObject => (TextureCube)StaticClass().DefaultObject;
+
     internal TextureCube() { }
 
     /// <summary>

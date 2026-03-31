@@ -21,6 +21,11 @@ public partial class RDroneTrackingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDroneTrackingVolume.
+    /// </summary>
+    public static RDroneTrackingVolume DefaultObject => (RDroneTrackingVolume)StaticClass().DefaultObject;
+
     internal RDroneTrackingVolume() { }
 
     /// <summary>

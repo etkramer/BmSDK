@@ -21,6 +21,11 @@ public partial class RSeqAct_FixBrokenLaserGate : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FixBrokenLaserGate.
+    /// </summary>
+    public static RSeqAct_FixBrokenLaserGate DefaultObject => (RSeqAct_FixBrokenLaserGate)StaticClass().DefaultObject;
+
     internal RSeqAct_FixBrokenLaserGate() { }
 
     /// <summary>

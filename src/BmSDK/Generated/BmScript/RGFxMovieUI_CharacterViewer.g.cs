@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_CharacterViewer : BmSDK.BmGame.RGFxMovieUI, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_CharacterViewer.
+    /// </summary>
+    public static RGFxMovieUI_CharacterViewer DefaultObject => (RGFxMovieUI_CharacterViewer)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_CharacterViewer() { }
 
     /// <summary>

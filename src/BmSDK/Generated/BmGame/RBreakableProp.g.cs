@@ -21,6 +21,11 @@ public partial class RBreakableProp : BmSDK.BmGame.RBreakablePropStatic, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableProp.
+    /// </summary>
+    public static RBreakableProp DefaultObject => (RBreakableProp)StaticClass().DefaultObject;
+
     internal RBreakableProp() { }
 
     /// <summary>

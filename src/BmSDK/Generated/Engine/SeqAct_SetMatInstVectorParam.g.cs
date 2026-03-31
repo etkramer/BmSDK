@@ -21,6 +21,11 @@ public partial class SeqAct_SetMatInstVectorParam : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetMatInstVectorParam.
+    /// </summary>
+    public static SeqAct_SetMatInstVectorParam DefaultObject => (SeqAct_SetMatInstVectorParam)StaticClass().DefaultObject;
+
     internal SeqAct_SetMatInstVectorParam() { }
 
     /// <summary>

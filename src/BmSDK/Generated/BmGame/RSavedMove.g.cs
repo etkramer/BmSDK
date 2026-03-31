@@ -21,6 +21,11 @@ public partial class RSavedMove : BmSDK.Engine.SavedMove, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSavedMove.
+    /// </summary>
+    public static RSavedMove DefaultObject => (RSavedMove)StaticClass().DefaultObject;
+
     internal RSavedMove() { }
 
     /// <summary>

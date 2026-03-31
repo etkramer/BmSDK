@@ -21,6 +21,11 @@ public partial class RDmgType_HarleyLedgeKick : BmSDK.BmGame.RDmgType_Strike, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_HarleyLedgeKick.
+    /// </summary>
+    public static RDmgType_HarleyLedgeKick DefaultObject => (RDmgType_HarleyLedgeKick)StaticClass().DefaultObject;
+
     internal RDmgType_HarleyLedgeKick() { }
 
     /// <summary>

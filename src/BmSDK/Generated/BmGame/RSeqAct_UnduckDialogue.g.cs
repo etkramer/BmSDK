@@ -21,6 +21,11 @@ public partial class RSeqAct_UnduckDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnduckDialogue.
+    /// </summary>
+    public static RSeqAct_UnduckDialogue DefaultObject => (RSeqAct_UnduckDialogue)StaticClass().DefaultObject;
+
     internal RSeqAct_UnduckDialogue() { }
 
     /// <summary>

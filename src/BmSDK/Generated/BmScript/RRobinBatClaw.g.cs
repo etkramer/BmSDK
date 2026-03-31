@@ -21,6 +21,11 @@ public partial class RRobinBatClaw : BmSDK.BmGame.RHarpoonGun, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinBatClaw.
+    /// </summary>
+    public static RRobinBatClaw DefaultObject => (RRobinBatClaw)StaticClass().DefaultObject;
+
     internal RRobinBatClaw() { }
 
     /// <summary>

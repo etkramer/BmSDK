@@ -21,6 +21,11 @@ public partial class RSeqEvent_BeginGooing : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BeginGooing.
+    /// </summary>
+    public static RSeqEvent_BeginGooing DefaultObject => (RSeqEvent_BeginGooing)StaticClass().DefaultObject;
+
     internal RSeqEvent_BeginGooing() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RMagneticDynamicDanglingObject : BmSDK.BmGame.RMagneticDyna
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticDynamicDanglingObject.
+    /// </summary>
+    public static RMagneticDynamicDanglingObject DefaultObject => (RMagneticDynamicDanglingObject)StaticClass().DefaultObject;
+
     internal RMagneticDynamicDanglingObject() { }
 
     /// <summary>

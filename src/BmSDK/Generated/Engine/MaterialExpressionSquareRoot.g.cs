@@ -21,6 +21,11 @@ public partial class MaterialExpressionSquareRoot : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSquareRoot.
+    /// </summary>
+    public static MaterialExpressionSquareRoot DefaultObject => (MaterialExpressionSquareRoot)StaticClass().DefaultObject;
+
     internal MaterialExpressionSquareRoot() { }
 
     /// <summary>

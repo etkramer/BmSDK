@@ -21,6 +21,11 @@ public partial class SeqAct_LevelVisibility : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_LevelVisibility.
+    /// </summary>
+    public static SeqAct_LevelVisibility DefaultObject => (SeqAct_LevelVisibility)StaticClass().DefaultObject;
+
     internal SeqAct_LevelVisibility() { }
 
     /// <summary>

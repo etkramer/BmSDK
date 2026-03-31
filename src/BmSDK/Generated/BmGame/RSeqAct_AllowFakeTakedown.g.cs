@@ -21,6 +21,11 @@ public partial class RSeqAct_AllowFakeTakedown : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AllowFakeTakedown.
+    /// </summary>
+    public static RSeqAct_AllowFakeTakedown DefaultObject => (RSeqAct_AllowFakeTakedown)StaticClass().DefaultObject;
+
     internal RSeqAct_AllowFakeTakedown() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeaponConfig.
+    /// </summary>
+    public static RWeaponConfig DefaultObject => (RWeaponConfig)StaticClass().DefaultObject;
+
     internal RWeaponConfig() { }
 
     /// <summary>

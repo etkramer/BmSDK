@@ -21,6 +21,11 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_BlockDirection.
+    /// </summary>
+    public static RNavMeshPath_BlockDirection DefaultObject => (RNavMeshPath_BlockDirection)StaticClass().DefaultObject;
+
     internal RNavMeshPath_BlockDirection() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ForceComponent.
+    /// </summary>
+    public static RB_ForceComponent DefaultObject => (RB_ForceComponent)StaticClass().DefaultObject;
+
     internal RB_ForceComponent() { }
 
     /// <summary>

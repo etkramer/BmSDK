@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_GunDispenser.
+    /// </summary>
+    public static RBMCombatPoint_GunDispenser DefaultObject => (RBMCombatPoint_GunDispenser)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_GunDispenser() { }
 
     /// <summary>

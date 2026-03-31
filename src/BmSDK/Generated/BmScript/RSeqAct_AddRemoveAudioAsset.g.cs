@@ -21,6 +21,11 @@ public partial class RSeqAct_AddRemoveAudioAsset : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AddRemoveAudioAsset.
+    /// </summary>
+    public static RSeqAct_AddRemoveAudioAsset DefaultObject => (RSeqAct_AddRemoveAudioAsset)StaticClass().DefaultObject;
+
     internal RSeqAct_AddRemoveAudioAsset() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_DuckDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DuckDialogue.
+    /// </summary>
+    public static RSeqAct_DuckDialogue DefaultObject => (RSeqAct_DuckDialogue)StaticClass().DefaultObject;
+
     internal RSeqAct_DuckDialogue() { }
 
     /// <summary>

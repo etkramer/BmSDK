@@ -21,6 +21,11 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_ExitPoints.
+    /// </summary>
+    public static RNavMeshPath_ExitPoints DefaultObject => (RNavMeshPath_ExitPoints)StaticClass().DefaultObject;
+
     internal RNavMeshPath_ExitPoints() { }
 
     /// <summary>

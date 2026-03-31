@@ -21,6 +21,11 @@ public partial class RSnowVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSnowVolume.
+    /// </summary>
+    public static RSnowVolume DefaultObject => (RSnowVolume)StaticClass().DefaultObject;
+
     internal RSnowVolume() { }
 
     /// <summary>

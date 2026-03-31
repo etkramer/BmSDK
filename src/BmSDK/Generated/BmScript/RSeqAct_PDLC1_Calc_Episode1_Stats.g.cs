@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC1_Calc_Episode1_Stats : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC1_Calc_Episode1_Stats.
+    /// </summary>
+    public static RSeqAct_PDLC1_Calc_Episode1_Stats DefaultObject => (RSeqAct_PDLC1_Calc_Episode1_Stats)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC1_Calc_Episode1_Stats() { }
 
     /// <summary>

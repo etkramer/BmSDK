@@ -21,6 +21,11 @@ public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWallClimbCamera.
+    /// </summary>
+    public static RWallClimbCamera DefaultObject => (RWallClimbCamera)StaticClass().DefaultObject;
+
     internal RWallClimbCamera() { }
 
     /// <summary>

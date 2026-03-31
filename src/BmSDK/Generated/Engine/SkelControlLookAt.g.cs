@@ -21,6 +21,11 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlLookAt.
+    /// </summary>
+    public static SkelControlLookAt DefaultObject => (SkelControlLookAt)StaticClass().DefaultObject;
+
     internal SkelControlLookAt() { }
 
     /// <summary>

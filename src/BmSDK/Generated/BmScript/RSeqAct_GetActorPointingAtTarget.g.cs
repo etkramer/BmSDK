@@ -21,6 +21,11 @@ public partial class RSeqAct_GetActorPointingAtTarget : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GetActorPointingAtTarget.
+    /// </summary>
+    public static RSeqAct_GetActorPointingAtTarget DefaultObject => (RSeqAct_GetActorPointingAtTarget)StaticClass().DefaultObject;
+
     internal RSeqAct_GetActorPointingAtTarget() { }
 
     /// <summary>

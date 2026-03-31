@@ -21,6 +21,11 @@ public partial class RSeqAct_JamDetectiveMode : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_JamDetectiveMode.
+    /// </summary>
+    public static RSeqAct_JamDetectiveMode DefaultObject => (RSeqAct_JamDetectiveMode)StaticClass().DefaultObject;
+
     internal RSeqAct_JamDetectiveMode() { }
 
     /// <summary>

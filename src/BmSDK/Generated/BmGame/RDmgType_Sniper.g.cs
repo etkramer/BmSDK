@@ -21,6 +21,11 @@ public partial class RDmgType_Sniper : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Sniper.
+    /// </summary>
+    public static RDmgType_Sniper DefaultObject => (RDmgType_Sniper)StaticClass().DefaultObject;
+
     internal RDmgType_Sniper() { }
 
     /// <summary>

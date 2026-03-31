@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CheckOutcastFlag : BmSDK.BmGame.RBMBehaviour, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CheckOutcastFlag.
+    /// </summary>
+    public static RBMBehaviour_CheckOutcastFlag DefaultObject => (RBMBehaviour_CheckOutcastFlag)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CheckOutcastFlag() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossClayfaceBase.
+    /// </summary>
+    public static RPawnBossClayfaceBase DefaultObject => (RPawnBossClayfaceBase)StaticClass().DefaultObject;
+
     internal RPawnBossClayfaceBase() { }
 
     /// <summary>

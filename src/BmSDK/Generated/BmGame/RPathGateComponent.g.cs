@@ -21,6 +21,11 @@ public partial class RPathGateComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPathGateComponent.
+    /// </summary>
+    public static RPathGateComponent DefaultObject => (RPathGateComponent)StaticClass().DefaultObject;
+
     internal RPathGateComponent() { }
 
     /// <summary>

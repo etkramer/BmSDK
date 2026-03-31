@@ -21,6 +21,11 @@ public partial class InterpTrackInstVectorMaterialParam : BmSDK.Engine.InterpTra
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstVectorMaterialParam.
+    /// </summary>
+    public static InterpTrackInstVectorMaterialParam DefaultObject => (InterpTrackInstVectorMaterialParam)StaticClass().DefaultObject;
+
     internal InterpTrackInstVectorMaterialParam() { }
 
     /// <summary>

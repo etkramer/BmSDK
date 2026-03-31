@@ -21,6 +21,11 @@ public partial class NavMeshGoal_GenericFilterContainer : BmSDK.Engine.NavMeshPa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoal_GenericFilterContainer.
+    /// </summary>
+    public static NavMeshGoal_GenericFilterContainer DefaultObject => (NavMeshGoal_GenericFilterContainer)StaticClass().DefaultObject;
+
     internal NavMeshGoal_GenericFilterContainer() { }
 
     /// <summary>

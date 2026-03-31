@@ -21,6 +21,11 @@ public partial class RDummyTarget_Spawnable : BmSDK.BmGame.RDummyTarget, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDummyTarget_Spawnable.
+    /// </summary>
+    public static RDummyTarget_Spawnable DefaultObject => (RDummyTarget_Spawnable)StaticClass().DefaultObject;
+
     internal RDummyTarget_Spawnable() { }
 
     /// <summary>

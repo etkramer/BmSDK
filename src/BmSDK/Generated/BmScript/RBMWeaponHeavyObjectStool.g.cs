@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObjectStool : BmSDK.BmScript.RBMWeaponHeavyOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObjectStool.
+    /// </summary>
+    public static RBMWeaponHeavyObjectStool DefaultObject => (RBMWeaponHeavyObjectStool)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObjectStool() { }
 
     /// <summary>

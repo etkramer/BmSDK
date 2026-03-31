@@ -21,6 +21,11 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RiddlerProgressionAdvanced.
+    /// </summary>
+    public static RSeqEvent_RiddlerProgressionAdvanced DefaultObject => (RSeqEvent_RiddlerProgressionAdvanced)StaticClass().DefaultObject;
+
     internal RSeqEvent_RiddlerProgressionAdvanced() { }
 
     /// <summary>

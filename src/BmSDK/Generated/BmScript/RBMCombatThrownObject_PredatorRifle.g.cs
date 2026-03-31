@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_PredatorRifle : BmSDK.BmGame.RBMComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_PredatorRifle.
+    /// </summary>
+    public static RBMCombatThrownObject_PredatorRifle DefaultObject => (RBMCombatThrownObject_PredatorRifle)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_PredatorRifle() { }
 
     /// <summary>

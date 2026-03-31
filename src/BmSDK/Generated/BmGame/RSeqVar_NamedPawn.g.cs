@@ -21,6 +21,11 @@ public partial class RSeqVar_NamedPawn : BmSDK.Engine.SeqVar_Object, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_NamedPawn.
+    /// </summary>
+    public static RSeqVar_NamedPawn DefaultObject => (RSeqVar_NamedPawn)StaticClass().DefaultObject;
+
     internal RSeqVar_NamedPawn() { }
 
     /// <summary>

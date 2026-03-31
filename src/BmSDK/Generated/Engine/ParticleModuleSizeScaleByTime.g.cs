@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeScaleByTime : BmSDK.Engine.ParticleModule
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeScaleByTime.
+    /// </summary>
+    public static ParticleModuleSizeScaleByTime DefaultObject => (ParticleModuleSizeScaleByTime)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeScaleByTime() { }
 
     /// <summary>

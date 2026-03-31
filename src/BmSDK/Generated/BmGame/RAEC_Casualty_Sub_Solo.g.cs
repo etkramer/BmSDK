@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_Solo : BmSDK.BmGame.RAlertEventCoordinato
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_Solo.
+    /// </summary>
+    public static RAEC_Casualty_Sub_Solo DefaultObject => (RAEC_Casualty_Sub_Solo)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_Solo() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MadHatterMindControl.
+    /// </summary>
+    public static RSeqAct_MadHatterMindControl DefaultObject => (RSeqAct_MadHatterMindControl)StaticClass().DefaultObject;
+
     internal RSeqAct_MadHatterMindControl() { }
 
     /// <summary>

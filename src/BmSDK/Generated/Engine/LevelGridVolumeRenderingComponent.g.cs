@@ -21,6 +21,11 @@ public partial class LevelGridVolumeRenderingComponent : BmSDK.Engine.PrimitiveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelGridVolumeRenderingComponent.
+    /// </summary>
+    public static LevelGridVolumeRenderingComponent DefaultObject => (LevelGridVolumeRenderingComponent)StaticClass().DefaultObject;
+
     internal LevelGridVolumeRenderingComponent() { }
 
     /// <summary>

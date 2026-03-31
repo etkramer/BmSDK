@@ -21,6 +21,11 @@ public partial class RBreakableDemonSealBase : BmSDK.BmGame.RHarpoonTriggerBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBreakableDemonSealBase.
+    /// </summary>
+    public static RBreakableDemonSealBase DefaultObject => (RBreakableDemonSealBase)StaticClass().DefaultObject;
+
     internal RBreakableDemonSealBase() { }
 
     /// <summary>

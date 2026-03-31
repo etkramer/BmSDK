@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounterAndGrabRasSword.
+    /// </summary>
+    public static RCombatMove_BatmanCounterAndGrabRasSword DefaultObject => (RCombatMove_BatmanCounterAndGrabRasSword)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounterAndGrabRasSword() { }
 
     /// <summary>

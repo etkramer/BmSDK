@@ -21,6 +21,11 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeLaserEffect.
+    /// </summary>
+    public static RFreezeLaserEffect DefaultObject => (RFreezeLaserEffect)StaticClass().DefaultObject;
+
     internal RFreezeLaserEffect() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetupCollision.
+    /// </summary>
+    public static RFlaps_ConstraintSetupCollision DefaultObject => (RFlaps_ConstraintSetupCollision)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetupCollision() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Path_AvoidInEscapableNodes : BmSDK.Engine.PathConstraint, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_AvoidInEscapableNodes.
+    /// </summary>
+    public static Path_AvoidInEscapableNodes DefaultObject => (Path_AvoidInEscapableNodes)StaticClass().DefaultObject;
+
     internal Path_AvoidInEscapableNodes() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnFriendlyHostage_Guard : BmSDK.BmGame.RPawnFriendly, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyHostage_Guard.
+    /// </summary>
+    public static RPawnFriendlyHostage_Guard DefaultObject => (RPawnFriendlyHostage_Guard)StaticClass().DefaultObject;
+
     internal RPawnFriendlyHostage_Guard() { }
 
     /// <summary>

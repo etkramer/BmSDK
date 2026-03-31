@@ -21,6 +21,11 @@ public partial class ParticleLightEnvironmentComponent : BmSDK.Engine.DynamicLig
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleLightEnvironmentComponent.
+    /// </summary>
+    public static ParticleLightEnvironmentComponent DefaultObject => (ParticleLightEnvironmentComponent)StaticClass().DefaultObject;
+
     internal ParticleLightEnvironmentComponent() { }
 
     /// <summary>

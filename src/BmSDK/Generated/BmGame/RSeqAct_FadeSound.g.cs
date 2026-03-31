@@ -21,6 +21,11 @@ public partial class RSeqAct_FadeSound : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FadeSound.
+    /// </summary>
+    public static RSeqAct_FadeSound DefaultObject => (RSeqAct_FadeSound)StaticClass().DefaultObject;
+
     internal RSeqAct_FadeSound() { }
 
     /// <summary>

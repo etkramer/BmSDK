@@ -21,6 +21,11 @@ public partial class _System : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _System.
+    /// </summary>
+    public static _System DefaultObject => (_System)StaticClass().DefaultObject;
+
     internal _System() { }
 
     /// <summary>

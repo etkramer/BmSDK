@@ -21,6 +21,11 @@ public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDens
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeBlastIceSphere.
+    /// </summary>
+    public static RFreezeBlastIceSphere DefaultObject => (RFreezeBlastIceSphere)StaticClass().DefaultObject;
+
     internal RFreezeBlastIceSphere() { }
 
     /// <summary>

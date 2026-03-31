@@ -21,6 +21,11 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInteractableItem.
+    /// </summary>
+    public static RInteractableItem DefaultObject => (RInteractableItem)StaticClass().DefaultObject;
+
     internal RInteractableItem() { }
 
     /// <summary>

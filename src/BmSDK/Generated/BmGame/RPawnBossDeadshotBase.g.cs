@@ -21,6 +21,11 @@ public partial class RPawnBossDeadshotBase : BmSDK.BmGame.RPawnVillainThug, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossDeadshotBase.
+    /// </summary>
+    public static RPawnBossDeadshotBase DefaultObject => (RPawnBossDeadshotBase)StaticClass().DefaultObject;
+
     internal RPawnBossDeadshotBase() { }
 
     /// <summary>

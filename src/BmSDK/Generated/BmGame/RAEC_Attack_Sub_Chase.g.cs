@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_Chase : BmSDK.BmGame.RAlertEventCoordinator
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_Chase.
+    /// </summary>
+    public static RAEC_Attack_Sub_Chase DefaultObject => (RAEC_Attack_Sub_Chase)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_Chase() { }
 
     /// <summary>

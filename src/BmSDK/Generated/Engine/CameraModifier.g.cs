@@ -21,6 +21,11 @@ public partial class CameraModifier : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CameraModifier.
+    /// </summary>
+    public static CameraModifier DefaultObject => (CameraModifier)StaticClass().DefaultObject;
+
     internal CameraModifier() { }
 
     /// <summary>

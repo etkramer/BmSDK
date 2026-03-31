@@ -21,6 +21,11 @@ public partial class RPlayerInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerInput.
+    /// </summary>
+    public static RPlayerInput DefaultObject => (RPlayerInput)StaticClass().DefaultObject;
+
     internal RPlayerInput() { }
 
     /// <summary>

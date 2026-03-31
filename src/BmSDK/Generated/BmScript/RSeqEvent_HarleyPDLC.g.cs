@@ -21,6 +21,11 @@ public partial class RSeqEvent_HarleyPDLC : BmSDK.Engine.SequenceEvent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HarleyPDLC.
+    /// </summary>
+    public static RSeqEvent_HarleyPDLC DefaultObject => (RSeqEvent_HarleyPDLC)StaticClass().DefaultObject;
+
     internal RSeqEvent_HarleyPDLC() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StaticLightCollectionActor.
+    /// </summary>
+    public static StaticLightCollectionActor DefaultObject => (StaticLightCollectionActor)StaticClass().DefaultObject;
+
     internal StaticLightCollectionActor() { }
 
     /// <summary>

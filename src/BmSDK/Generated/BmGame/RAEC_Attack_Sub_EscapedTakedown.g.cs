@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_EscapedTakedown : BmSDK.BmGame.RAlertEventC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_EscapedTakedown.
+    /// </summary>
+    public static RAEC_Attack_Sub_EscapedTakedown DefaultObject => (RAEC_Attack_Sub_EscapedTakedown)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_EscapedTakedown() { }
 
     /// <summary>

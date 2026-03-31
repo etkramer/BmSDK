@@ -21,6 +21,11 @@ public partial class MaterialExpressionObjectOrientation : BmSDK.Engine.Material
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionObjectOrientation.
+    /// </summary>
+    public static MaterialExpressionObjectOrientation DefaultObject => (MaterialExpressionObjectOrientation)StaticClass().DefaultObject;
+
     internal MaterialExpressionObjectOrientation() { }
 
     /// <summary>

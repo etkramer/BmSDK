@@ -21,6 +21,11 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_LastPredToInterrogate.
+    /// </summary>
+    public static RBMBehaviour_LastPredToInterrogate DefaultObject => (RBMBehaviour_LastPredToInterrogate)StaticClass().DefaultObject;
+
     internal RBMBehaviour_LastPredToInterrogate() { }
 
     /// <summary>

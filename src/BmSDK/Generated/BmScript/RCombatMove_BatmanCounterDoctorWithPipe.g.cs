@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanCounterDoctorWithPipe : BmSDK.BmGame.RCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounterDoctorWithPipe.
+    /// </summary>
+    public static RCombatMove_BatmanCounterDoctorWithPipe DefaultObject => (RCombatMove_BatmanCounterDoctorWithPipe)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounterDoctorWithPipe() { }
 
     /// <summary>

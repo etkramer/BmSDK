@@ -21,6 +21,11 @@ public partial class OnlineGameSettings : BmSDK.Engine.Settings, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineGameSettings.
+    /// </summary>
+    public static OnlineGameSettings DefaultObject => (OnlineGameSettings)StaticClass().DefaultObject;
+
     internal OnlineGameSettings() { }
 
     /// <summary>

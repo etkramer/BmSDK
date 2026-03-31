@@ -21,6 +21,11 @@ public partial class NxForceFieldRadialComponent : BmSDK.Engine.NxForceFieldComp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxForceFieldRadialComponent.
+    /// </summary>
+    public static NxForceFieldRadialComponent DefaultObject => (NxForceFieldRadialComponent)StaticClass().DefaultObject;
+
     internal NxForceFieldRadialComponent() { }
 
     /// <summary>

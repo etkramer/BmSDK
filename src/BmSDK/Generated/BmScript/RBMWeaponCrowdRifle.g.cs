@@ -21,6 +21,11 @@ public partial class RBMWeaponCrowdRifle : BmSDK.BmGame.RBMWeapon, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponCrowdRifle.
+    /// </summary>
+    public static RBMWeaponCrowdRifle DefaultObject => (RBMWeaponCrowdRifle)StaticClass().DefaultObject;
+
     internal RBMWeaponCrowdRifle() { }
 
     /// <summary>

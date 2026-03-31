@@ -21,6 +21,11 @@ public partial class RSeqEvent_DroneGrapplePointFound : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_DroneGrapplePointFound.
+    /// </summary>
+    public static RSeqEvent_DroneGrapplePointFound DefaultObject => (RSeqEvent_DroneGrapplePointFound)StaticClass().DefaultObject;
+
     internal RSeqEvent_DroneGrapplePointFound() { }
 
     /// <summary>

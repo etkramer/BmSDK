@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeIceMeshActivated : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeIceMeshActivated.
+    /// </summary>
+    public static RSeqEvent_FreezeIceMeshActivated DefaultObject => (RSeqEvent_FreezeIceMeshActivated)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeIceMeshActivated() { }
 
     /// <summary>

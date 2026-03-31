@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HarleyDodgeProjectile_PDLC : BmSDK.BmScript.RB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HarleyDodgeProjectile_PDLC.
+    /// </summary>
+    public static RBMBehaviour_HarleyDodgeProjectile_PDLC DefaultObject => (RBMBehaviour_HarleyDodgeProjectile_PDLC)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HarleyDodgeProjectile_PDLC() { }
 
     /// <summary>

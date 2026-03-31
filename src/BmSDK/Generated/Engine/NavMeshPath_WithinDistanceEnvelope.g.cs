@@ -21,6 +21,11 @@ public partial class NavMeshPath_WithinDistanceEnvelope : BmSDK.Engine.NavMeshPa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_WithinDistanceEnvelope.
+    /// </summary>
+    public static NavMeshPath_WithinDistanceEnvelope DefaultObject => (NavMeshPath_WithinDistanceEnvelope)StaticClass().DefaultObject;
+
     internal NavMeshPath_WithinDistanceEnvelope() { }
 
     /// <summary>

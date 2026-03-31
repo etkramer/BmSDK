@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_ActivePoseTransitionWithOffset.
+    /// </summary>
+    public static RSpecialMoveConfig_ActivePoseTransitionWithOffset DefaultObject => (RSpecialMoveConfig_ActivePoseTransitionWithOffset)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_ActivePoseTransitionWithOffset() { }
 
     /// <summary>

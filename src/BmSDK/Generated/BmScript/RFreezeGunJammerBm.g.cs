@@ -21,6 +21,11 @@ public partial class RFreezeGunJammerBm : BmSDK.BmGame.RFreezeGunJammer, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeGunJammerBm.
+    /// </summary>
+    public static RFreezeGunJammerBm DefaultObject => (RFreezeGunJammerBm)StaticClass().DefaultObject;
+
     internal RFreezeGunJammerBm() { }
 
     /// <summary>

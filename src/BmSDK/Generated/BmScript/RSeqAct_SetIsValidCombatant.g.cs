@@ -21,6 +21,11 @@ public partial class RSeqAct_SetIsValidCombatant : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetIsValidCombatant.
+    /// </summary>
+    public static RSeqAct_SetIsValidCombatant DefaultObject => (RSeqAct_SetIsValidCombatant)StaticClass().DefaultObject;
+
     internal RSeqAct_SetIsValidCombatant() { }
 
     /// <summary>

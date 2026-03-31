@@ -21,6 +21,11 @@ public partial class RDmgType_BlockBreaker : BmSDK.BmGame.RDmgType_Strike, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BlockBreaker.
+    /// </summary>
+    public static RDmgType_BlockBreaker DefaultObject => (RDmgType_BlockBreaker)StaticClass().DefaultObject;
+
     internal RDmgType_BlockBreaker() { }
 
     /// <summary>

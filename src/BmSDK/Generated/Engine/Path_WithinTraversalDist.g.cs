@@ -21,6 +21,11 @@ public partial class Path_WithinTraversalDist : BmSDK.Engine.PathConstraint, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_WithinTraversalDist.
+    /// </summary>
+    public static Path_WithinTraversalDist DefaultObject => (Path_WithinTraversalDist)StaticClass().DefaultObject;
+
     internal Path_WithinTraversalDist() { }
 
     /// <summary>

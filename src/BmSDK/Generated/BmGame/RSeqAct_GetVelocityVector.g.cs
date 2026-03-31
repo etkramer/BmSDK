@@ -21,6 +21,11 @@ public partial class RSeqAct_GetVelocityVector : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GetVelocityVector.
+    /// </summary>
+    public static RSeqAct_GetVelocityVector DefaultObject => (RSeqAct_GetVelocityVector)StaticClass().DefaultObject;
+
     internal RSeqAct_GetVelocityVector() { }
 
     /// <summary>

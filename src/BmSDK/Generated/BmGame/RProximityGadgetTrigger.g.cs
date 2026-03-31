@@ -21,6 +21,11 @@ public partial class RProximityGadgetTrigger : BmSDK.BmGame.RThugTrap, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProximityGadgetTrigger.
+    /// </summary>
+    public static RProximityGadgetTrigger DefaultObject => (RProximityGadgetTrigger)StaticClass().DefaultObject;
+
     internal RProximityGadgetTrigger() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RMagneticShutterDoor : BmSDK.BmScript.RMagneticDoor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticShutterDoor.
+    /// </summary>
+    public static RMagneticShutterDoor DefaultObject => (RMagneticShutterDoor)StaticClass().DefaultObject;
+
     internal RMagneticShutterDoor() { }
 
     /// <summary>

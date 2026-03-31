@@ -21,6 +21,11 @@ public partial class RBMWeaponBlowTorch : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBlowTorch.
+    /// </summary>
+    public static RBMWeaponBlowTorch DefaultObject => (RBMWeaponBlowTorch)StaticClass().DefaultObject;
+
     internal RBMWeaponBlowTorch() { }
 
     /// <summary>

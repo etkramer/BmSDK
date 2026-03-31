@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_HostageSeePlayer_Left : BmSDK.BmGame.RBMSeqEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_HostageSeePlayer_Left.
+    /// </summary>
+    public static RBMSeqEvent_HostageSeePlayer_Left DefaultObject => (RBMSeqEvent_HostageSeePlayer_Left)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_HostageSeePlayer_Left() { }
 
     /// <summary>

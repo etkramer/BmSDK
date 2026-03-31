@@ -21,6 +21,11 @@ public partial class RCharacter_RasEtheral : BmSDK.BmScript.RCharacter_Ras, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_RasEtheral.
+    /// </summary>
+    public static RCharacter_RasEtheral DefaultObject => (RCharacter_RasEtheral)StaticClass().DefaultObject;
+
     internal RCharacter_RasEtheral() { }
 
     /// <summary>

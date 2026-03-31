@@ -21,6 +21,11 @@ public partial class RPawnVillainThug_MadHatter : BmSDK.BmGame.RPawnFriendly, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainThug_MadHatter.
+    /// </summary>
+    public static RPawnVillainThug_MadHatter DefaultObject => (RPawnVillainThug_MadHatter)StaticClass().DefaultObject;
+
     internal RPawnVillainThug_MadHatter() { }
 
     /// <summary>

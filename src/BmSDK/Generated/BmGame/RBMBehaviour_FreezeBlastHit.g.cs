@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FreezeBlastHit : BmSDK.BmGame.RBMBehaviour, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FreezeBlastHit.
+    /// </summary>
+    public static RBMBehaviour_FreezeBlastHit DefaultObject => (RBMBehaviour_FreezeBlastHit)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FreezeBlastHit() { }
 
     /// <summary>

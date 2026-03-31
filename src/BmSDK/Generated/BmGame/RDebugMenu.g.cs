@@ -21,6 +21,11 @@ public partial class RDebugMenu : BmSDK.BmGame.RDynamicMenu, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDebugMenu.
+    /// </summary>
+    public static RDebugMenu DefaultObject => (RDebugMenu)StaticClass().DefaultObject;
+
     internal RDebugMenu() { }
 
     /// <summary>

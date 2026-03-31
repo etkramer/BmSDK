@@ -21,6 +21,11 @@ public partial class RSeqVar_Joker : BmSDK.BmGame.RSeqVar_NamedPawn, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqVar_Joker.
+    /// </summary>
+    public static RSeqVar_Joker DefaultObject => (RSeqVar_Joker)StaticClass().DefaultObject;
+
     internal RSeqVar_Joker() { }
 
     /// <summary>

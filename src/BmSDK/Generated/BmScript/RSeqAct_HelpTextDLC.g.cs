@@ -21,6 +21,11 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelpTextDLC.
+    /// </summary>
+    public static RSeqAct_HelpTextDLC DefaultObject => (RSeqAct_HelpTextDLC)StaticClass().DefaultObject;
+
     internal RSeqAct_HelpTextDLC() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_DoctorInChurchFix : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DoctorInChurchFix.
+    /// </summary>
+    public static RSeqAct_DoctorInChurchFix DefaultObject => (RSeqAct_DoctorInChurchFix)StaticClass().DefaultObject;
+
     internal RSeqAct_DoctorInChurchFix() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_RespawnPlayer : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RespawnPlayer.
+    /// </summary>
+    public static RSeqAct_RespawnPlayer DefaultObject => (RSeqAct_RespawnPlayer)StaticClass().DefaultObject;
+
     internal RSeqAct_RespawnPlayer() { }
 
     /// <summary>

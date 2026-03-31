@@ -21,6 +21,11 @@ public partial class KillZDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KillZDamageType.
+    /// </summary>
+    public static KillZDamageType DefaultObject => (KillZDamageType)StaticClass().DefaultObject;
+
     internal KillZDamageType() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSharkPoolRescueVolume : BmSDK.BmGame.RSharkPoolRescueVolum
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSharkPoolRescueVolume.
+    /// </summary>
+    public static RSharkPoolRescueVolume DefaultObject => (RSharkPoolRescueVolume)StaticClass().DefaultObject;
+
     internal RSharkPoolRescueVolume() { }
 
     /// <summary>

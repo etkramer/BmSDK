@@ -21,6 +21,11 @@ public partial class RPawnFriendlyTalia : BmSDK.BmGame.RPawnFriendly, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyTalia.
+    /// </summary>
+    public static RPawnFriendlyTalia DefaultObject => (RPawnFriendlyTalia)StaticClass().DefaultObject;
+
     internal RPawnFriendlyTalia() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCrimeSceneAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrimeSceneAsset.
+    /// </summary>
+    public static RCrimeSceneAsset DefaultObject => (RCrimeSceneAsset)StaticClass().DefaultObject;
+
     internal RCrimeSceneAsset() { }
 
     /// <summary>

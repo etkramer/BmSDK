@@ -21,6 +21,11 @@ public partial class RBMBehaviour_OnGhostTrain : BmSDK.BmGame.RBMBehaviour, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_OnGhostTrain.
+    /// </summary>
+    public static RBMBehaviour_OnGhostTrain DefaultObject => (RBMBehaviour_OnGhostTrain)StaticClass().DefaultObject;
+
     internal RBMBehaviour_OnGhostTrain() { }
 
     /// <summary>

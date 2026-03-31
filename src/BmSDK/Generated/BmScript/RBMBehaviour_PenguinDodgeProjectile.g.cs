@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PenguinDodgeProjectile : BmSDK.BmGame.RBMBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PenguinDodgeProjectile.
+    /// </summary>
+    public static RBMBehaviour_PenguinDodgeProjectile DefaultObject => (RBMBehaviour_PenguinDodgeProjectile)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PenguinDodgeProjectile() { }
 
     /// <summary>

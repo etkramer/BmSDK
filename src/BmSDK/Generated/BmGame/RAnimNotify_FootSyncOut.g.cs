@@ -21,6 +21,11 @@ public partial class RAnimNotify_FootSyncOut : BmSDK.Engine.AnimNotify, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_FootSyncOut.
+    /// </summary>
+    public static RAnimNotify_FootSyncOut DefaultObject => (RAnimNotify_FootSyncOut)StaticClass().DefaultObject;
+
     internal RAnimNotify_FootSyncOut() { }
 
     /// <summary>

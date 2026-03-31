@@ -21,6 +21,11 @@ public partial class RBMWeaponTigerShield : BmSDK.BmScript.RBMWeaponShield, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponTigerShield.
+    /// </summary>
+    public static RBMWeaponTigerShield DefaultObject => (RBMWeaponTigerShield)StaticClass().DefaultObject;
+
     internal RBMWeaponTigerShield() { }
 
     /// <summary>

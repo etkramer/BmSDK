@@ -21,6 +21,11 @@ public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ProcBuildingRuleset.
+    /// </summary>
+    public static ProcBuildingRuleset DefaultObject => (ProcBuildingRuleset)StaticClass().DefaultObject;
+
     internal ProcBuildingRuleset() { }
 
     /// <summary>

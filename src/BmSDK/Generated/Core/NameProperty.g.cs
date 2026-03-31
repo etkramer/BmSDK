@@ -21,6 +21,11 @@ public partial class NameProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NameProperty.
+    /// </summary>
+    public static NameProperty DefaultObject => (NameProperty)StaticClass().DefaultObject;
+
     internal NameProperty() { }
 
     /// <summary>

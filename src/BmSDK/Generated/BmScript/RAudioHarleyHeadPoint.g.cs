@@ -21,6 +21,11 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioHarleyHeadPoint.
+    /// </summary>
+    public static RAudioHarleyHeadPoint DefaultObject => (RAudioHarleyHeadPoint)StaticClass().DefaultObject;
+
     internal RAudioHarleyHeadPoint() { }
 
     /// <summary>

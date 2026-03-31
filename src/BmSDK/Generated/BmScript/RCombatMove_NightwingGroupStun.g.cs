@@ -21,6 +21,11 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NightwingGroupStun.
+    /// </summary>
+    public static RCombatMove_NightwingGroupStun DefaultObject => (RCombatMove_NightwingGroupStun)StaticClass().DefaultObject;
+
     internal RCombatMove_NightwingGroupStun() { }
 
     /// <summary>

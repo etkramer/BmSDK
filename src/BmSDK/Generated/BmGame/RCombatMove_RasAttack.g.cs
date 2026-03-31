@@ -21,6 +21,11 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasAttack.
+    /// </summary>
+    public static RCombatMove_RasAttack DefaultObject => (RCombatMove_RasAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_RasAttack() { }
 
     /// <summary>

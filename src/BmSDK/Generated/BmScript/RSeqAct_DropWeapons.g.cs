@@ -21,6 +21,11 @@ public partial class RSeqAct_DropWeapons : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DropWeapons.
+    /// </summary>
+    public static RSeqAct_DropWeapons DefaultObject => (RSeqAct_DropWeapons)StaticClass().DefaultObject;
+
     internal RSeqAct_DropWeapons() { }
 
     /// <summary>

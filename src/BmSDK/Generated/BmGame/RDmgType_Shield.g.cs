@@ -21,6 +21,11 @@ public partial class RDmgType_Shield : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Shield.
+    /// </summary>
+    public static RDmgType_Shield DefaultObject => (RDmgType_Shield)StaticClass().DefaultObject;
+
     internal RDmgType_Shield() { }
 
     /// <summary>

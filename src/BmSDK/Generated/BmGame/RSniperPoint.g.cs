@@ -21,6 +21,11 @@ public partial class RSniperPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSniperPoint.
+    /// </summary>
+    public static RSniperPoint DefaultObject => (RSniperPoint)StaticClass().DefaultObject;
+
     internal RSniperPoint() { }
 
     /// <summary>

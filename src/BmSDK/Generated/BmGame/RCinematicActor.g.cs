@@ -21,6 +21,11 @@ public partial class RCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicActor.
+    /// </summary>
+    public static RCinematicActor DefaultObject => (RCinematicActor)StaticClass().DefaultObject;
+
     internal RCinematicActor() { }
 
     /// <summary>

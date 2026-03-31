@@ -21,6 +21,11 @@ public partial class RSeqAct_TriggerSpecialMove : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TriggerSpecialMove.
+    /// </summary>
+    public static RSeqAct_TriggerSpecialMove DefaultObject => (RSeqAct_TriggerSpecialMove)StaticClass().DefaultObject;
+
     internal RSeqAct_TriggerSpecialMove() { }
 
     /// <summary>

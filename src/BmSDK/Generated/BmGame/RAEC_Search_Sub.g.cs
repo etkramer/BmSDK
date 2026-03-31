@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Sub_Formation, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub.
+    /// </summary>
+    public static RAEC_Search_Sub DefaultObject => (RAEC_Search_Sub)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub() { }
 
     /// <summary>

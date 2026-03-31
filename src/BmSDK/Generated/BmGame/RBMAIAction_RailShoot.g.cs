@@ -21,6 +21,11 @@ public partial class RBMAIAction_RailShoot : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RailShoot.
+    /// </summary>
+    public static RBMAIAction_RailShoot DefaultObject => (RBMAIAction_RailShoot)StaticClass().DefaultObject;
+
     internal RBMAIAction_RailShoot() { }
 
     /// <summary>

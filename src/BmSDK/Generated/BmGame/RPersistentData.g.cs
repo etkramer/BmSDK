@@ -21,6 +21,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPersistentData.
+    /// </summary>
+    public static RPersistentData DefaultObject => (RPersistentData)StaticClass().DefaultObject;
+
     internal RPersistentData() { }
 
     /// <summary>

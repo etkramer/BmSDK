@@ -21,6 +21,11 @@ public partial class ActorFactoryFogVolumeSphericalDensityInfo : BmSDK.Engine.Ac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryFogVolumeSphericalDensityInfo.
+    /// </summary>
+    public static ActorFactoryFogVolumeSphericalDensityInfo DefaultObject => (ActorFactoryFogVolumeSphericalDensityInfo)StaticClass().DefaultObject;
+
     internal ActorFactoryFogVolumeSphericalDensityInfo() { }
 
     /// <summary>

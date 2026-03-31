@@ -21,6 +21,11 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeAimOffset.
+    /// </summary>
+    public static AnimNodeAimOffset DefaultObject => (AnimNodeAimOffset)StaticClass().DefaultObject;
+
     internal AnimNodeAimOffset() { }
 
     /// <summary>

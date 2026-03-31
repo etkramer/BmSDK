@@ -21,6 +21,11 @@ public partial class RSmokeScreenFireEx : BmSDK.BmGame.RSmokeScreen, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmokeScreenFireEx.
+    /// </summary>
+    public static RSmokeScreenFireEx DefaultObject => (RSmokeScreenFireEx)StaticClass().DefaultObject;
+
     internal RSmokeScreenFireEx() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqAct_AttachToActor : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AttachToActor.
+    /// </summary>
+    public static SeqAct_AttachToActor DefaultObject => (SeqAct_AttachToActor)StaticClass().DefaultObject;
+
     internal SeqAct_AttachToActor() { }
 
     /// <summary>

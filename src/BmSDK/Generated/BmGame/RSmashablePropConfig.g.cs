@@ -21,6 +21,11 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmashablePropConfig.
+    /// </summary>
+    public static RSmashablePropConfig DefaultObject => (RSmashablePropConfig)StaticClass().DefaultObject;
+
     internal RSmashablePropConfig() { }
 
     /// <summary>

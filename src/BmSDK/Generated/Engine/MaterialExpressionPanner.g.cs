@@ -21,6 +21,11 @@ public partial class MaterialExpressionPanner : BmSDK.Engine.MaterialExpression,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionPanner.
+    /// </summary>
+    public static MaterialExpressionPanner DefaultObject => (MaterialExpressionPanner)StaticClass().DefaultObject;
+
     internal MaterialExpressionPanner() { }
 
     /// <summary>

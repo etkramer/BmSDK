@@ -21,6 +21,11 @@ public partial class LevelStreamingAlwaysLoaded : BmSDK.Engine.LevelStreaming, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreamingAlwaysLoaded.
+    /// </summary>
+    public static LevelStreamingAlwaysLoaded DefaultObject => (LevelStreamingAlwaysLoaded)StaticClass().DefaultObject;
+
     internal LevelStreamingAlwaysLoaded() { }
 
     /// <summary>

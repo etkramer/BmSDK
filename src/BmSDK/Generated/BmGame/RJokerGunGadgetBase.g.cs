@@ -21,6 +21,11 @@ public partial class RJokerGunGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerGunGadgetBase.
+    /// </summary>
+    public static RJokerGunGadgetBase DefaultObject => (RJokerGunGadgetBase)StaticClass().DefaultObject;
+
     internal RJokerGunGadgetBase() { }
 
     /// <summary>

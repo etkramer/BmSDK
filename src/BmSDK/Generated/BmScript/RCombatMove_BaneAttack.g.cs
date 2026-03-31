@@ -21,6 +21,11 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BaneAttack.
+    /// </summary>
+    public static RCombatMove_BaneAttack DefaultObject => (RCombatMove_BaneAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_BaneAttack() { }
 
     /// <summary>

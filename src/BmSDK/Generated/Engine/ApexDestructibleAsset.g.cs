@@ -21,6 +21,11 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDestructibleAsset.
+    /// </summary>
+    public static ApexDestructibleAsset DefaultObject => (ApexDestructibleAsset)StaticClass().DefaultObject;
+
     internal ApexDestructibleAsset() { }
 
     /// <summary>

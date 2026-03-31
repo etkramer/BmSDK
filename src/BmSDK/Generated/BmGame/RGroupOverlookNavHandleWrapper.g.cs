@@ -21,6 +21,11 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGroupOverlookNavHandleWrapper.
+    /// </summary>
+    public static RGroupOverlookNavHandleWrapper DefaultObject => (RGroupOverlookNavHandleWrapper)StaticClass().DefaultObject;
+
     internal RGroupOverlookNavHandleWrapper() { }
 
     /// <summary>

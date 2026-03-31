@@ -21,6 +21,11 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CombatChallengeWave.
+    /// </summary>
+    public static RSeqAct_CombatChallengeWave DefaultObject => (RSeqAct_CombatChallengeWave)StaticClass().DefaultObject;
+
     internal RSeqAct_CombatChallengeWave() { }
 
     /// <summary>

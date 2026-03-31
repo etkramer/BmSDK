@@ -21,6 +21,11 @@ public partial class RGFxMovieCustom_DeathMovie : BmSDK.BmGame.RGFxMovieCustom, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieCustom_DeathMovie.
+    /// </summary>
+    public static RGFxMovieCustom_DeathMovie DefaultObject => (RGFxMovieCustom_DeathMovie)StaticClass().DefaultObject;
+
     internal RGFxMovieCustom_DeathMovie() { }
 
     /// <summary>

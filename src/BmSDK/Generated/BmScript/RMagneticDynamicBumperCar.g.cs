@@ -21,6 +21,11 @@ public partial class RMagneticDynamicBumperCar : BmSDK.BmGame.RMagneticDynamicOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticDynamicBumperCar.
+    /// </summary>
+    public static RMagneticDynamicBumperCar DefaultObject => (RMagneticDynamicBumperCar)StaticClass().DefaultObject;
+
     internal RMagneticDynamicBumperCar() { }
 
     /// <summary>

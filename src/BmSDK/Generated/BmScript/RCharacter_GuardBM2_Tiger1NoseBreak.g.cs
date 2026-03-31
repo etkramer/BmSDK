@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_Tiger1NoseBreak : BmSDK.BmScript.RChara
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_Tiger1NoseBreak.
+    /// </summary>
+    public static RCharacter_GuardBM2_Tiger1NoseBreak DefaultObject => (RCharacter_GuardBM2_Tiger1NoseBreak)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_Tiger1NoseBreak() { }
 
     /// <summary>

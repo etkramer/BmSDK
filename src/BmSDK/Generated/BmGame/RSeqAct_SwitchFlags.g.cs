@@ -21,6 +21,11 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SwitchFlags.
+    /// </summary>
+    public static RSeqAct_SwitchFlags DefaultObject => (RSeqAct_SwitchFlags)StaticClass().DefaultObject;
+
     internal RSeqAct_SwitchFlags() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InterpTrackInstHeadTracking : BmSDK.Engine.InterpTrackInst,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstHeadTracking.
+    /// </summary>
+    public static InterpTrackInstHeadTracking DefaultObject => (InterpTrackInstHeadTracking)StaticClass().DefaultObject;
+
     internal InterpTrackInstHeadTracking() { }
 
     /// <summary>

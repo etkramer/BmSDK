@@ -21,6 +21,11 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProjectileGadgetBase.
+    /// </summary>
+    public static RProjectileGadgetBase DefaultObject => (RProjectileGadgetBase)StaticClass().DefaultObject;
+
     internal RProjectileGadgetBase() { }
 
     /// <summary>

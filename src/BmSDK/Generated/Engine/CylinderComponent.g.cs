@@ -21,6 +21,11 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CylinderComponent.
+    /// </summary>
+    public static CylinderComponent DefaultObject => (CylinderComponent)StaticClass().DefaultObject;
+
     internal CylinderComponent() { }
 
     /// <summary>

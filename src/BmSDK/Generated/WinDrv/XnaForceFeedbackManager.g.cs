@@ -21,6 +21,11 @@ public partial class XnaForceFeedbackManager : BmSDK.Engine.ForceFeedbackManager
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as XnaForceFeedbackManager.
+    /// </summary>
+    public static XnaForceFeedbackManager DefaultObject => (XnaForceFeedbackManager)StaticClass().DefaultObject;
+
     internal XnaForceFeedbackManager() { }
 
     /// <summary>

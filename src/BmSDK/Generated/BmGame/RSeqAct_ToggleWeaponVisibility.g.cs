@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleWeaponVisibility : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleWeaponVisibility.
+    /// </summary>
+    public static RSeqAct_ToggleWeaponVisibility DefaultObject => (RSeqAct_ToggleWeaponVisibility)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleWeaponVisibility() { }
 
     /// <summary>

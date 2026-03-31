@@ -21,6 +21,11 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Objective.
+    /// </summary>
+    public static RSeqAct_Objective DefaultObject => (RSeqAct_Objective)StaticClass().DefaultObject;
+
     internal RSeqAct_Objective() { }
 
     /// <summary>

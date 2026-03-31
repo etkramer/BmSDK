@@ -21,6 +21,11 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeSequenceBlendByAim.
+    /// </summary>
+    public static AnimNodeSequenceBlendByAim DefaultObject => (AnimNodeSequenceBlendByAim)StaticClass().DefaultObject;
+
     internal AnimNodeSequenceBlendByAim() { }
 
     /// <summary>

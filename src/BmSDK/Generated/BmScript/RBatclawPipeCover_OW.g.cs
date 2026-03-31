@@ -21,6 +21,11 @@ public partial class RBatclawPipeCover_OW : BmSDK.BmScript.RBatclawPipeCover, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatclawPipeCover_OW.
+    /// </summary>
+    public static RBatclawPipeCover_OW DefaultObject => (RBatclawPipeCover_OW)StaticClass().DefaultObject;
+
     internal RBatclawPipeCover_OW() { }
 
     /// <summary>

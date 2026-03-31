@@ -21,6 +21,11 @@ public partial class ApexGenericAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexGenericAsset.
+    /// </summary>
+    public static ApexGenericAsset DefaultObject => (ApexGenericAsset)StaticClass().DefaultObject;
+
     internal ApexGenericAsset() { }
 
     /// <summary>

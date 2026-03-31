@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_PredatorRifleLite_Harleyfied : BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_PredatorRifleLite_Harleyfied.
+    /// </summary>
+    public static RBMCombatThrownObject_PredatorRifleLite_Harleyfied DefaultObject => (RBMCombatThrownObject_PredatorRifleLite_Harleyfied)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_PredatorRifleLite_Harleyfied() { }
 
     /// <summary>

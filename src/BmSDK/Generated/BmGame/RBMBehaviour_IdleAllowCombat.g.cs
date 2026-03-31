@@ -21,6 +21,11 @@ public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Id
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_IdleAllowCombat.
+    /// </summary>
+    public static RBMBehaviour_IdleAllowCombat DefaultObject => (RBMBehaviour_IdleAllowCombat)StaticClass().DefaultObject;
+
     internal RBMBehaviour_IdleAllowCombat() { }
 
     /// <summary>

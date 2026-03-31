@@ -21,6 +21,11 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavigationPoint.
+    /// </summary>
+    public static NavigationPoint DefaultObject => (NavigationPoint)StaticClass().DefaultObject;
+
     internal NavigationPoint() { }
 
     /// <summary>

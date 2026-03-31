@@ -21,6 +21,11 @@ public partial class NavMeshPath_SameCoverLink : BmSDK.Engine.NavMeshPathConstra
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_SameCoverLink.
+    /// </summary>
+    public static NavMeshPath_SameCoverLink DefaultObject => (NavMeshPath_SameCoverLink)StaticClass().DefaultObject;
+
     internal NavMeshPath_SameCoverLink() { }
 
     /// <summary>

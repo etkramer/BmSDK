@@ -21,6 +21,11 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineStatsRead.
+    /// </summary>
+    public static OnlineStatsRead DefaultObject => (OnlineStatsRead)StaticClass().DefaultObject;
+
     internal OnlineStatsRead() { }
 
     /// <summary>

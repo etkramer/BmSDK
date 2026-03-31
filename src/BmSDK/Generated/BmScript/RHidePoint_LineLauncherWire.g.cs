@@ -21,6 +21,11 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_LineLauncherWire.
+    /// </summary>
+    public static RHidePoint_LineLauncherWire DefaultObject => (RHidePoint_LineLauncherWire)StaticClass().DefaultObject;
+
     internal RHidePoint_LineLauncherWire() { }
 
     /// <summary>

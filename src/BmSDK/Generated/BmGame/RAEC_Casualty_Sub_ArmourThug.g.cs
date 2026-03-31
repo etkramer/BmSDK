@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_ArmourThug.
+    /// </summary>
+    public static RAEC_Casualty_Sub_ArmourThug DefaultObject => (RAEC_Casualty_Sub_ArmourThug)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_ArmourThug() { }
 
     /// <summary>

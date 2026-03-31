@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieOutroMovie : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieOutroMovie.
+    /// </summary>
+    public static RSeqAct_GFxMovieOutroMovie DefaultObject => (RSeqAct_GFxMovieOutroMovie)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieOutroMovie() { }
 
     /// <summary>

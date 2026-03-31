@@ -21,6 +21,11 @@ public partial class K2Input_Vector : BmSDK.Engine.K2Input, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Input_Vector.
+    /// </summary>
+    public static K2Input_Vector DefaultObject => (K2Input_Vector)StaticClass().DefaultObject;
+
     internal K2Input_Vector() { }
 
     /// <summary>

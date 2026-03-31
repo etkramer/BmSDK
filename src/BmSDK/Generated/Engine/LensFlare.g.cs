@@ -21,6 +21,11 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LensFlare.
+    /// </summary>
+    public static LensFlare DefaultObject => (LensFlare)StaticClass().DefaultObject;
+
     internal LensFlare() { }
 
     /// <summary>

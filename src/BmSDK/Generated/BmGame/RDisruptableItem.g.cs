@@ -21,6 +21,11 @@ public partial class RDisruptableItem : BmSDK.BmGame.RDisruptableObjectBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableItem.
+    /// </summary>
+    public static RDisruptableItem DefaultObject => (RDisruptableItem)StaticClass().DefaultObject;
+
     internal RDisruptableItem() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Converge.
+    /// </summary>
+    public static RAEC_Attack_Converge DefaultObject => (RAEC_Attack_Converge)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Converge() { }
 
     /// <summary>

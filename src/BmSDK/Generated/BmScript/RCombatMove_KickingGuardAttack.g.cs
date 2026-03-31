@@ -21,6 +21,11 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_KickingGuardAttack.
+    /// </summary>
+    public static RCombatMove_KickingGuardAttack DefaultObject => (RCombatMove_KickingGuardAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_KickingGuardAttack() { }
 
     /// <summary>

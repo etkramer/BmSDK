@@ -21,6 +21,11 @@ public partial class AnimNotify_CameraEffect : BmSDK.Engine.AnimNotify, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_CameraEffect.
+    /// </summary>
+    public static AnimNotify_CameraEffect DefaultObject => (AnimNotify_CameraEffect)StaticClass().DefaultObject;
+
     internal AnimNotify_CameraEffect() { }
 
     /// <summary>

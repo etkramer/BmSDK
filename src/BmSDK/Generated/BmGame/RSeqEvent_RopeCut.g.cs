@@ -21,6 +21,11 @@ public partial class RSeqEvent_RopeCut : BmSDK.Engine.SequenceEvent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RopeCut.
+    /// </summary>
+    public static RSeqEvent_RopeCut DefaultObject => (RSeqEvent_RopeCut)StaticClass().DefaultObject;
+
     internal RSeqEvent_RopeCut() { }
 
     /// <summary>

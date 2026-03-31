@@ -21,6 +21,11 @@ public partial class SkelControl_TwistBone : BmSDK.Engine.SkelControlBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControl_TwistBone.
+    /// </summary>
+    public static SkelControl_TwistBone DefaultObject => (SkelControl_TwistBone)StaticClass().DefaultObject;
+
     internal SkelControl_TwistBone() { }
 
     /// <summary>

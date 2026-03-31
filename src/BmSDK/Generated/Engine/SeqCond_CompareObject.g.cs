@@ -21,6 +21,11 @@ public partial class SeqCond_CompareObject : BmSDK.Engine.SequenceCondition, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_CompareObject.
+    /// </summary>
+    public static SeqCond_CompareObject DefaultObject => (SeqCond_CompareObject)StaticClass().DefaultObject;
+
     internal SeqCond_CompareObject() { }
 
     /// <summary>

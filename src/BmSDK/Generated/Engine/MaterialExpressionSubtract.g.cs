@@ -21,6 +21,11 @@ public partial class MaterialExpressionSubtract : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSubtract.
+    /// </summary>
+    public static MaterialExpressionSubtract DefaultObject => (MaterialExpressionSubtract)StaticClass().DefaultObject;
+
     internal MaterialExpressionSubtract() { }
 
     /// <summary>

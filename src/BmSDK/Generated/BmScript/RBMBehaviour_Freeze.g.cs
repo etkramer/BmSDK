@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Freeze.
+    /// </summary>
+    public static RBMBehaviour_Freeze DefaultObject => (RBMBehaviour_Freeze)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Freeze() { }
 
     /// <summary>

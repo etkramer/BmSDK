@@ -21,6 +21,11 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingProp.
+    /// </summary>
+    public static RFloatingProp DefaultObject => (RFloatingProp)StaticClass().DefaultObject;
+
     internal RFloatingProp() { }
 
     /// <summary>

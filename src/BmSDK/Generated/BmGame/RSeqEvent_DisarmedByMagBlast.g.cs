@@ -21,6 +21,11 @@ public partial class RSeqEvent_DisarmedByMagBlast : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_DisarmedByMagBlast.
+    /// </summary>
+    public static RSeqEvent_DisarmedByMagBlast DefaultObject => (RSeqEvent_DisarmedByMagBlast)StaticClass().DefaultObject;
+
     internal RSeqEvent_DisarmedByMagBlast() { }
 
     /// <summary>

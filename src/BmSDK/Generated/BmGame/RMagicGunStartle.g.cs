@@ -21,6 +21,11 @@ public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagicGunStartle.
+    /// </summary>
+    public static RMagicGunStartle DefaultObject => (RMagicGunStartle)StaticClass().DefaultObject;
+
     internal RMagicGunStartle() { }
 
     /// <summary>

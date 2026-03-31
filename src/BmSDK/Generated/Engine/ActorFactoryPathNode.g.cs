@@ -21,6 +21,11 @@ public partial class ActorFactoryPathNode : BmSDK.Engine.ActorFactory, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryPathNode.
+    /// </summary>
+    public static ActorFactoryPathNode DefaultObject => (ActorFactoryPathNode)StaticClass().DefaultObject;
+
     internal ActorFactoryPathNode() { }
 
     /// <summary>

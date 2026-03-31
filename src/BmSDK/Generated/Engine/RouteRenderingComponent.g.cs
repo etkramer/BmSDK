@@ -21,6 +21,11 @@ public partial class RouteRenderingComponent : BmSDK.Engine.PrimitiveComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RouteRenderingComponent.
+    /// </summary>
+    public static RouteRenderingComponent DefaultObject => (RouteRenderingComponent)StaticClass().DefaultObject;
+
     internal RouteRenderingComponent() { }
 
     /// <summary>

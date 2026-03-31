@@ -21,6 +21,11 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrapplePoint.
+    /// </summary>
+    public static RGrapplePoint DefaultObject => (RGrapplePoint)StaticClass().DefaultObject;
+
     internal RGrapplePoint() { }
 
     /// <summary>

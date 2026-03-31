@@ -21,6 +21,11 @@ public partial class RInvestigationActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInvestigationActor.
+    /// </summary>
+    public static RInvestigationActor DefaultObject => (RInvestigationActor)StaticClass().DefaultObject;
+
     internal RInvestigationActor() { }
 
     /// <summary>

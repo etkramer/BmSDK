@@ -21,6 +21,11 @@ public partial class RCharacter_Ivy : BmSDK.BmGame.RCharacter, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Ivy.
+    /// </summary>
+    public static RCharacter_Ivy DefaultObject => (RCharacter_Ivy)StaticClass().DefaultObject;
+
     internal RCharacter_Ivy() { }
 
     /// <summary>

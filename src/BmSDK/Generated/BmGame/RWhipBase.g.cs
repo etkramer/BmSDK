@@ -21,6 +21,11 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWhipBase.
+    /// </summary>
+    public static RWhipBase DefaultObject => (RWhipBase)StaticClass().DefaultObject;
+
     internal RWhipBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqAct_RandomSwitch : BmSDK.Engine.SeqAct_Switch, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_RandomSwitch.
+    /// </summary>
+    public static SeqAct_RandomSwitch DefaultObject => (SeqAct_RandomSwitch)StaticClass().DefaultObject;
+
     internal SeqAct_RandomSwitch() { }
 
     /// <summary>

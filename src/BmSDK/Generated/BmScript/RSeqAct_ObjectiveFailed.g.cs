@@ -21,6 +21,11 @@ public partial class RSeqAct_ObjectiveFailed : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ObjectiveFailed.
+    /// </summary>
+    public static RSeqAct_ObjectiveFailed DefaultObject => (RSeqAct_ObjectiveFailed)StaticClass().DefaultObject;
+
     internal RSeqAct_ObjectiveFailed() { }
 
     /// <summary>

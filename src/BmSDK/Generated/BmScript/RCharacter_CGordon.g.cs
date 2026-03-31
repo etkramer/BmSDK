@@ -21,6 +21,11 @@ public partial class RCharacter_CGordon : BmSDK.BmGame.RCharacter, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_CGordon.
+    /// </summary>
+    public static RCharacter_CGordon DefaultObject => (RCharacter_CGordon)StaticClass().DefaultObject;
+
     internal RCharacter_CGordon() { }
 
     /// <summary>

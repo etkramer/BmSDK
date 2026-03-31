@@ -21,6 +21,11 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint.
+    /// </summary>
+    public static RHidePoint DefaultObject => (RHidePoint)StaticClass().DefaultObject;
+
     internal RHidePoint() { }
 
     /// <summary>

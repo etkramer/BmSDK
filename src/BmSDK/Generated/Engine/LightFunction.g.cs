@@ -21,6 +21,11 @@ public partial class LightFunction : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightFunction.
+    /// </summary>
+    public static LightFunction DefaultObject => (LightFunction)StaticClass().DefaultObject;
+
     internal LightFunction() { }
 
     /// <summary>

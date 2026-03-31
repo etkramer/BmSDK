@@ -21,6 +21,11 @@ public partial class RCapeCollisionConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeCollisionConfig.
+    /// </summary>
+    public static RCapeCollisionConfig DefaultObject => (RCapeCollisionConfig)StaticClass().DefaultObject;
+
     internal RCapeCollisionConfig() { }
 
     /// <summary>

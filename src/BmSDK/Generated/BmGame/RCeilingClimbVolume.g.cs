@@ -21,6 +21,11 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCeilingClimbVolume.
+    /// </summary>
+    public static RCeilingClimbVolume DefaultObject => (RCeilingClimbVolume)StaticClass().DefaultObject;
+
     internal RCeilingClimbVolume() { }
 
     /// <summary>

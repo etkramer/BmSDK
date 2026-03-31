@@ -21,6 +21,11 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTurretDLC.
+    /// </summary>
+    public static RTurretDLC DefaultObject => (RTurretDLC)StaticClass().DefaultObject;
+
     internal RTurretDLC() { }
 
     /// <summary>

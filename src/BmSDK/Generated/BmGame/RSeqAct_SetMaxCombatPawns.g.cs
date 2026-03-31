@@ -21,6 +21,11 @@ public partial class RSeqAct_SetMaxCombatPawns : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetMaxCombatPawns.
+    /// </summary>
+    public static RSeqAct_SetMaxCombatPawns DefaultObject => (RSeqAct_SetMaxCombatPawns)StaticClass().DefaultObject;
+
     internal RSeqAct_SetMaxCombatPawns() { }
 
     /// <summary>

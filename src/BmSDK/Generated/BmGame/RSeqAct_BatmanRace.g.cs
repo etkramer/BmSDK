@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanRace.
+    /// </summary>
+    public static RSeqAct_BatmanRace DefaultObject => (RSeqAct_BatmanRace)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanRace() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnPlayerBruceWayne : BmSDK.BmGame.RPawnPlayer, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerBruceWayne.
+    /// </summary>
+    public static RPawnPlayerBruceWayne DefaultObject => (RPawnPlayerBruceWayne)StaticClass().DefaultObject;
+
     internal RPawnPlayerBruceWayne() { }
 
     /// <summary>

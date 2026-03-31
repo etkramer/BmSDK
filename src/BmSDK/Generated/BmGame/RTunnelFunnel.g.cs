@@ -21,6 +21,11 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelFunnel.
+    /// </summary>
+    public static RTunnelFunnel DefaultObject => (RTunnelFunnel)StaticClass().DefaultObject;
+
     internal RTunnelFunnel() { }
 
     /// <summary>

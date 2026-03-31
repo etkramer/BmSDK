@@ -21,6 +21,11 @@ public partial class RSeqAct_CrackIce : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CrackIce.
+    /// </summary>
+    public static RSeqAct_CrackIce DefaultObject => (RSeqAct_CrackIce)StaticClass().DefaultObject;
+
     internal RSeqAct_CrackIce() { }
 
     /// <summary>

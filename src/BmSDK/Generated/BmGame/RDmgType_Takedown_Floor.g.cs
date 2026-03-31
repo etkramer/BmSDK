@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_Floor : BmSDK.BmGame.RDmgType_Takedown, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_Floor.
+    /// </summary>
+    public static RDmgType_Takedown_Floor DefaultObject => (RDmgType_Takedown_Floor)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_Floor() { }
 
     /// <summary>

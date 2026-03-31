@@ -21,6 +21,11 @@ public partial class RAEC_Parent : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Parent.
+    /// </summary>
+    public static RAEC_Parent DefaultObject => (RAEC_Parent)StaticClass().DefaultObject;
+
     internal RAEC_Parent() { }
 
     /// <summary>

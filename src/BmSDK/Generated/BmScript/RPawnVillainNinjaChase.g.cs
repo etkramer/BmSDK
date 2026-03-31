@@ -21,6 +21,11 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainNinjaChase.
+    /// </summary>
+    public static RPawnVillainNinjaChase DefaultObject => (RPawnVillainNinjaChase)StaticClass().DefaultObject;
+
     internal RPawnVillainNinjaChase() { }
 
     /// <summary>

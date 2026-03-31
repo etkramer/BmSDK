@@ -21,6 +21,11 @@ public partial class RSeqAct_OneCounterToKill : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_OneCounterToKill.
+    /// </summary>
+    public static RSeqAct_OneCounterToKill DefaultObject => (RSeqAct_OneCounterToKill)StaticClass().DefaultObject;
+
     internal RSeqAct_OneCounterToKill() { }
 
     /// <summary>

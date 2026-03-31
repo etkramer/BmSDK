@@ -21,6 +21,11 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatDestructibleDamageProxy.
+    /// </summary>
+    public static RBMCombatDestructibleDamageProxy DefaultObject => (RBMCombatDestructibleDamageProxy)StaticClass().DefaultObject;
+
     internal RBMCombatDestructibleDamageProxy() { }
 
     /// <summary>

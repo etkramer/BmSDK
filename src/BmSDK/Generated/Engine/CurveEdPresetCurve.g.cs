@@ -21,6 +21,11 @@ public partial class CurveEdPresetCurve : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CurveEdPresetCurve.
+    /// </summary>
+    public static CurveEdPresetCurve DefaultObject => (CurveEdPresetCurve)StaticClass().DefaultObject;
+
     internal CurveEdPresetCurve() { }
 
     /// <summary>

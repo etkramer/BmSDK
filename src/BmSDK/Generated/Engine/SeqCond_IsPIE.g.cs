@@ -21,6 +21,11 @@ public partial class SeqCond_IsPIE : BmSDK.Engine.SequenceCondition, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IsPIE.
+    /// </summary>
+    public static SeqCond_IsPIE DefaultObject => (SeqCond_IsPIE)StaticClass().DefaultObject;
+
     internal SeqCond_IsPIE() { }
 
     /// <summary>

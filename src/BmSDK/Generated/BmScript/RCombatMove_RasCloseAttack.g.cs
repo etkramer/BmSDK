@@ -21,6 +21,11 @@ public partial class RCombatMove_RasCloseAttack : BmSDK.BmGame.RCombatMove_Villa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasCloseAttack.
+    /// </summary>
+    public static RCombatMove_RasCloseAttack DefaultObject => (RCombatMove_RasCloseAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_RasCloseAttack() { }
 
     /// <summary>

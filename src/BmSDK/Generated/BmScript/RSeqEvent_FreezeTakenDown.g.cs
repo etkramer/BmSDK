@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeTakenDown : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeTakenDown.
+    /// </summary>
+    public static RSeqEvent_FreezeTakenDown DefaultObject => (RSeqEvent_FreezeTakenDown)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeTakenDown() { }
 
     /// <summary>

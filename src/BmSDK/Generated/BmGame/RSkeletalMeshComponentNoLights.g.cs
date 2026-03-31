@@ -21,6 +21,11 @@ public partial class RSkeletalMeshComponentNoLights : BmSDK.Engine.SkeletalMeshC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkeletalMeshComponentNoLights.
+    /// </summary>
+    public static RSkeletalMeshComponentNoLights DefaultObject => (RSkeletalMeshComponentNoLights)StaticClass().DefaultObject;
+
     internal RSkeletalMeshComponentNoLights() { }
 
     /// <summary>

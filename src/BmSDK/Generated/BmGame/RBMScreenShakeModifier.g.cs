@@ -21,6 +21,11 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMScreenShakeModifier.
+    /// </summary>
+    public static RBMScreenShakeModifier DefaultObject => (RBMScreenShakeModifier)StaticClass().DefaultObject;
+
     internal RBMScreenShakeModifier() { }
 
     /// <summary>

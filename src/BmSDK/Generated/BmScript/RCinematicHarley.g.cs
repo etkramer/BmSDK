@@ -21,6 +21,11 @@ public partial class RCinematicHarley : BmSDK.BmGame.RCinematicActor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicHarley.
+    /// </summary>
+    public static RCinematicHarley DefaultObject => (RCinematicHarley)StaticClass().DefaultObject;
+
     internal RCinematicHarley() { }
 
     /// <summary>

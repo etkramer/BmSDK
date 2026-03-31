@@ -21,6 +21,11 @@ public partial class NavMeshGoalFilter_NotNearOtherAI : BmSDK.Engine.NavMeshGoal
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoalFilter_NotNearOtherAI.
+    /// </summary>
+    public static NavMeshGoalFilter_NotNearOtherAI DefaultObject => (NavMeshGoalFilter_NotNearOtherAI)StaticClass().DefaultObject;
+
     internal NavMeshGoalFilter_NotNearOtherAI() { }
 
     /// <summary>

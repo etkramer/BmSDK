@@ -21,6 +21,11 @@ public partial class RAEC_ExplodedWall_GroupCheck : BmSDK.BmGame.RAEC_SubGroup, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_ExplodedWall_GroupCheck.
+    /// </summary>
+    public static RAEC_ExplodedWall_GroupCheck DefaultObject => (RAEC_ExplodedWall_GroupCheck)StaticClass().DefaultObject;
+
     internal RAEC_ExplodedWall_GroupCheck() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_Land : BmSDK.BmGame.RSpecialMoveConfig_P
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_Land.
+    /// </summary>
+    public static RSpecialMoveConfig_Land DefaultObject => (RSpecialMoveConfig_Land)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_Land() { }
 
     /// <summary>

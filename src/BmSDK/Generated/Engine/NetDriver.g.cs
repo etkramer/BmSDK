@@ -21,6 +21,11 @@ public partial class NetDriver : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NetDriver.
+    /// </summary>
+    public static NetDriver DefaultObject => (NetDriver)StaticClass().DefaultObject;
+
     internal NetDriver() { }
 
     /// <summary>

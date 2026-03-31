@@ -21,6 +21,11 @@ public partial class K2Node_MemberVar : BmSDK.Engine.K2Node_Code, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2Node_MemberVar.
+    /// </summary>
+    public static K2Node_MemberVar DefaultObject => (K2Node_MemberVar)StaticClass().DefaultObject;
+
     internal K2Node_MemberVar() { }
 
     /// <summary>

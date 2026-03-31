@@ -21,6 +21,11 @@ public partial class MaterialExpressionDistance : BmSDK.Engine.MaterialExpressio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDistance.
+    /// </summary>
+    public static MaterialExpressionDistance DefaultObject => (MaterialExpressionDistance)StaticClass().DefaultObject;
+
     internal MaterialExpressionDistance() { }
 
     /// <summary>

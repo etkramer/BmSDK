@@ -21,6 +21,11 @@ public partial class NetConnection : BmSDK.Engine.Player, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NetConnection.
+    /// </summary>
+    public static NetConnection DefaultObject => (NetConnection)StaticClass().DefaultObject;
+
     internal NetConnection() { }
 
     /// <summary>

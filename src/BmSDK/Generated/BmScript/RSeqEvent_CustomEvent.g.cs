@@ -21,6 +21,11 @@ public partial class RSeqEvent_CustomEvent : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CustomEvent.
+    /// </summary>
+    public static RSeqEvent_CustomEvent DefaultObject => (RSeqEvent_CustomEvent)StaticClass().DefaultObject;
+
     internal RSeqEvent_CustomEvent() { }
 
     /// <summary>

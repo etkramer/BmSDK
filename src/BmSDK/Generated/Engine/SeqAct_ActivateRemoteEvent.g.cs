@@ -21,6 +21,11 @@ public partial class SeqAct_ActivateRemoteEvent : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ActivateRemoteEvent.
+    /// </summary>
+    public static SeqAct_ActivateRemoteEvent DefaultObject => (SeqAct_ActivateRemoteEvent)StaticClass().DefaultObject;
+
     internal SeqAct_ActivateRemoteEvent() { }
 
     /// <summary>

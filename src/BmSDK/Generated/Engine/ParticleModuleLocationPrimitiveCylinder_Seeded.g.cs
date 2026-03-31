@@ -21,6 +21,11 @@ public partial class ParticleModuleLocationPrimitiveCylinder_Seeded : BmSDK.Engi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocationPrimitiveCylinder_Seeded.
+    /// </summary>
+    public static ParticleModuleLocationPrimitiveCylinder_Seeded DefaultObject => (ParticleModuleLocationPrimitiveCylinder_Seeded)StaticClass().DefaultObject;
+
     internal ParticleModuleLocationPrimitiveCylinder_Seeded() { }
 
     /// <summary>

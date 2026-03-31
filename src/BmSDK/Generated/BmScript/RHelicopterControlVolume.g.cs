@@ -21,6 +21,11 @@ public partial class RHelicopterControlVolume : BmSDK.Engine.Volume, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterControlVolume.
+    /// </summary>
+    public static RHelicopterControlVolume DefaultObject => (RHelicopterControlVolume)StaticClass().DefaultObject;
+
     internal RHelicopterControlVolume() { }
 
     /// <summary>

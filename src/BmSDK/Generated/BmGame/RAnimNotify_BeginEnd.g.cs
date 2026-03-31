@@ -21,6 +21,11 @@ public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_BeginEnd.
+    /// </summary>
+    public static RAnimNotify_BeginEnd DefaultObject => (RAnimNotify_BeginEnd)StaticClass().DefaultObject;
+
     internal RAnimNotify_BeginEnd() { }
 
     /// <summary>

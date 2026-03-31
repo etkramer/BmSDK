@@ -21,6 +21,11 @@ public partial class RGrapplePoint_Unusable : BmSDK.BmGame.RGrapplePoint, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrapplePoint_Unusable.
+    /// </summary>
+    public static RGrapplePoint_Unusable DefaultObject => (RGrapplePoint_Unusable)StaticClass().DefaultObject;
+
     internal RGrapplePoint_Unusable() { }
 
     /// <summary>

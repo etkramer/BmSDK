@@ -21,6 +21,11 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CameraShake.
+    /// </summary>
+    public static CameraShake DefaultObject => (CameraShake)StaticClass().DefaultObject;
+
     internal CameraShake() { }
 
     /// <summary>

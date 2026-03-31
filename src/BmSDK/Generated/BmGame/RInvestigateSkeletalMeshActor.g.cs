@@ -21,6 +21,11 @@ public partial class RInvestigateSkeletalMeshActor : BmSDK.BmGame.RSkeletalMeshA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInvestigateSkeletalMeshActor.
+    /// </summary>
+    public static RInvestigateSkeletalMeshActor DefaultObject => (RInvestigateSkeletalMeshActor)StaticClass().DefaultObject;
+
     internal RInvestigateSkeletalMeshActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ShowObjectiveStyleMessage : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ShowObjectiveStyleMessage.
+    /// </summary>
+    public static RSeqAct_ShowObjectiveStyleMessage DefaultObject => (RSeqAct_ShowObjectiveStyleMessage)StaticClass().DefaultObject;
+
     internal RSeqAct_ShowObjectiveStyleMessage() { }
 
     /// <summary>

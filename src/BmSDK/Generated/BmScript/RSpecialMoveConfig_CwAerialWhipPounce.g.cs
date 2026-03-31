@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_CwAerialWhipPounce : BmSDK.BmGame.RSpeci
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_CwAerialWhipPounce.
+    /// </summary>
+    public static RSpecialMoveConfig_CwAerialWhipPounce DefaultObject => (RSpecialMoveConfig_CwAerialWhipPounce)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_CwAerialWhipPounce() { }
 
     /// <summary>

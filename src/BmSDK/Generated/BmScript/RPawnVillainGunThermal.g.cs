@@ -21,6 +21,11 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainGunThermal.
+    /// </summary>
+    public static RPawnVillainGunThermal DefaultObject => (RPawnVillainGunThermal)StaticClass().DefaultObject;
+
     internal RPawnVillainGunThermal() { }
 
     /// <summary>

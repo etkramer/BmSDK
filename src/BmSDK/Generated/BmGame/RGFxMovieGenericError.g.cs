@@ -21,6 +21,11 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieGenericError.
+    /// </summary>
+    public static RGFxMovieGenericError DefaultObject => (RGFxMovieGenericError)StaticClass().DefaultObject;
+
     internal RGFxMovieGenericError() { }
 
     /// <summary>

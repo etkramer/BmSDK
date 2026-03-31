@@ -21,6 +21,11 @@ public partial class RActorFactoryMoverNoCL : BmSDK.Engine.ActorFactoryMover, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RActorFactoryMoverNoCL.
+    /// </summary>
+    public static RActorFactoryMoverNoCL DefaultObject => (RActorFactoryMoverNoCL)StaticClass().DefaultObject;
+
     internal RActorFactoryMoverNoCL() { }
 
     /// <summary>

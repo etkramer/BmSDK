@@ -21,6 +21,11 @@ public partial class AkAudioSpline : BmSDK.Engine.SplineActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioSpline.
+    /// </summary>
+    public static AkAudioSpline DefaultObject => (AkAudioSpline)StaticClass().DefaultObject;
+
     internal AkAudioSpline() { }
 
     /// <summary>

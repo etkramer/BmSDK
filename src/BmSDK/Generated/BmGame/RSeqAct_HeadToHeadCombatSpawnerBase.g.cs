@@ -21,6 +21,11 @@ public partial class RSeqAct_HeadToHeadCombatSpawnerBase : BmSDK.BmGame.RSeqAct_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HeadToHeadCombatSpawnerBase.
+    /// </summary>
+    public static RSeqAct_HeadToHeadCombatSpawnerBase DefaultObject => (RSeqAct_HeadToHeadCombatSpawnerBase)StaticClass().DefaultObject;
+
     internal RSeqAct_HeadToHeadCombatSpawnerBase() { }
 
     /// <summary>

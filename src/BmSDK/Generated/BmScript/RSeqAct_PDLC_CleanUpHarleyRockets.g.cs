@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC_CleanUpHarleyRockets : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC_CleanUpHarleyRockets.
+    /// </summary>
+    public static RSeqAct_PDLC_CleanUpHarleyRockets DefaultObject => (RSeqAct_PDLC_CleanUpHarleyRockets)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC_CleanUpHarleyRockets() { }
 
     /// <summary>

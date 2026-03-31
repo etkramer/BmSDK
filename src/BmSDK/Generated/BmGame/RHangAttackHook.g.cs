@@ -21,6 +21,11 @@ public partial class RHangAttackHook : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHangAttackHook.
+    /// </summary>
+    public static RHangAttackHook DefaultObject => (RHangAttackHook)StaticClass().DefaultObject;
+
     internal RHangAttackHook() { }
 
     /// <summary>

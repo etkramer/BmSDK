@@ -21,6 +21,11 @@ public partial class ParticleModuleUberBase : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleUberBase.
+    /// </summary>
+    public static ParticleModuleUberBase DefaultObject => (ParticleModuleUberBase)StaticClass().DefaultObject;
+
     internal ParticleModuleUberBase() { }
 
     /// <summary>

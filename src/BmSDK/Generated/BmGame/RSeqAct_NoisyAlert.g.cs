@@ -21,6 +21,11 @@ public partial class RSeqAct_NoisyAlert : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NoisyAlert.
+    /// </summary>
+    public static RSeqAct_NoisyAlert DefaultObject => (RSeqAct_NoisyAlert)StaticClass().DefaultObject;
+
     internal RSeqAct_NoisyAlert() { }
 
     /// <summary>

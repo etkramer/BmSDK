@@ -21,6 +21,11 @@ public partial class RBMBehaviour_SniperPDLC : BmSDK.BmGame.RBMBehaviour_Sniper,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_SniperPDLC.
+    /// </summary>
+    public static RBMBehaviour_SniperPDLC DefaultObject => (RBMBehaviour_SniperPDLC)StaticClass().DefaultObject;
+
     internal RBMBehaviour_SniperPDLC() { }
 
     /// <summary>

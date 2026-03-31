@@ -21,6 +21,11 @@ public partial class RNoDroneBombingVolume : BmSDK.Engine.Volume, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNoDroneBombingVolume.
+    /// </summary>
+    public static RNoDroneBombingVolume DefaultObject => (RNoDroneBombingVolume)StaticClass().DefaultObject;
+
     internal RNoDroneBombingVolume() { }
 
     /// <summary>

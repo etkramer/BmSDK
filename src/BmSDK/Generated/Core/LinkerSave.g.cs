@@ -21,6 +21,11 @@ public partial class LinkerSave : BmSDK.Linker, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LinkerSave.
+    /// </summary>
+    public static LinkerSave DefaultObject => (LinkerSave)StaticClass().DefaultObject;
+
     internal LinkerSave() { }
 
     /// <summary>

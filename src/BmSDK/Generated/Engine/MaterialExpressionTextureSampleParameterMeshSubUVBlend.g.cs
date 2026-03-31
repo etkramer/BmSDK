@@ -21,6 +21,11 @@ public partial class MaterialExpressionTextureSampleParameterMeshSubUVBlend : Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTextureSampleParameterMeshSubUVBlend.
+    /// </summary>
+    public static MaterialExpressionTextureSampleParameterMeshSubUVBlend DefaultObject => (MaterialExpressionTextureSampleParameterMeshSubUVBlend)StaticClass().DefaultObject;
+
     internal MaterialExpressionTextureSampleParameterMeshSubUVBlend() { }
 
     /// <summary>

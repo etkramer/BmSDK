@@ -21,6 +21,11 @@ public partial class RCharacter_DeadShot : BmSDK.BmGame.RCharacter, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_DeadShot.
+    /// </summary>
+    public static RCharacter_DeadShot DefaultObject => (RCharacter_DeadShot)StaticClass().DefaultObject;
+
     internal RCharacter_DeadShot() { }
 
     /// <summary>

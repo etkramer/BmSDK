@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableAutoJump : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableAutoJump.
+    /// </summary>
+    public static RSeqAct_DisableAutoJump DefaultObject => (RSeqAct_DisableAutoJump)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableAutoJump() { }
 
     /// <summary>

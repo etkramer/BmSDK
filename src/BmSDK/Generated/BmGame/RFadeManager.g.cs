@@ -21,6 +21,11 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFadeManager.
+    /// </summary>
+    public static RFadeManager DefaultObject => (RFadeManager)StaticClass().DefaultObject;
+
     internal RFadeManager() { }
 
     /// <summary>

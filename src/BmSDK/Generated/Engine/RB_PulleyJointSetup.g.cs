@@ -21,6 +21,11 @@ public partial class RB_PulleyJointSetup : BmSDK.Engine.RB_ConstraintSetup, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_PulleyJointSetup.
+    /// </summary>
+    public static RB_PulleyJointSetup DefaultObject => (RB_PulleyJointSetup)StaticClass().DefaultObject;
+
     internal RB_PulleyJointSetup() { }
 
     /// <summary>

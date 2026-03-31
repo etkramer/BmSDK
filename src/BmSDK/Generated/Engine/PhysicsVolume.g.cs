@@ -21,6 +21,11 @@ public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PhysicsVolume.
+    /// </summary>
+    public static PhysicsVolume DefaultObject => (PhysicsVolume)StaticClass().DefaultObject;
+
     internal PhysicsVolume() { }
 
     /// <summary>

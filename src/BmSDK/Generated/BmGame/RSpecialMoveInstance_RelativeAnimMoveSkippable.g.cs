@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_RelativeAnimMoveSkippable : BmSDK.BmGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_RelativeAnimMoveSkippable.
+    /// </summary>
+    public static RSpecialMoveInstance_RelativeAnimMoveSkippable DefaultObject => (RSpecialMoveInstance_RelativeAnimMoveSkippable)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_RelativeAnimMoveSkippable() { }
 
     /// <summary>

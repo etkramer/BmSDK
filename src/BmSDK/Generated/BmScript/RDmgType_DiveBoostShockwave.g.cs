@@ -21,6 +21,11 @@ public partial class RDmgType_DiveBoostShockwave : BmSDK.BmGame.RDmgType_HeavySt
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_DiveBoostShockwave.
+    /// </summary>
+    public static RDmgType_DiveBoostShockwave DefaultObject => (RDmgType_DiveBoostShockwave)StaticClass().DefaultObject;
+
     internal RDmgType_DiveBoostShockwave() { }
 
     /// <summary>

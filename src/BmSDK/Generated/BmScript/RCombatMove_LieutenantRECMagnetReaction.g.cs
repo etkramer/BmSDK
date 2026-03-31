@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantRECMagnetReaction : BmSDK.BmGame.RCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantRECMagnetReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantRECMagnetReaction DefaultObject => (RCombatMove_LieutenantRECMagnetReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantRECMagnetReaction() { }
 
     /// <summary>

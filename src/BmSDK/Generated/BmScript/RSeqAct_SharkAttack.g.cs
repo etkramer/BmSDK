@@ -21,6 +21,11 @@ public partial class RSeqAct_SharkAttack : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SharkAttack.
+    /// </summary>
+    public static RSeqAct_SharkAttack DefaultObject => (RSeqAct_SharkAttack)StaticClass().DefaultObject;
+
     internal RSeqAct_SharkAttack() { }
 
     /// <summary>

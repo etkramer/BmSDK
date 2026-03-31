@@ -21,6 +21,11 @@ public partial class RAnimNotify_WeaponSwitch : BmSDK.Engine.AnimNotify, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_WeaponSwitch.
+    /// </summary>
+    public static RAnimNotify_WeaponSwitch DefaultObject => (RAnimNotify_WeaponSwitch)StaticClass().DefaultObject;
+
     internal RAnimNotify_WeaponSwitch() { }
 
     /// <summary>

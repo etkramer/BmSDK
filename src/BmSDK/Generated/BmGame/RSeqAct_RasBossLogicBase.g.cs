@@ -21,6 +21,11 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RasBossLogicBase.
+    /// </summary>
+    public static RSeqAct_RasBossLogicBase DefaultObject => (RSeqAct_RasBossLogicBase)StaticClass().DefaultObject;
+
     internal RSeqAct_RasBossLogicBase() { }
 
     /// <summary>

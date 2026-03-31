@@ -21,6 +21,11 @@ public partial class RSeqEvent_CreatedRaft : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CreatedRaft.
+    /// </summary>
+    public static RSeqEvent_CreatedRaft DefaultObject => (RSeqEvent_CreatedRaft)StaticClass().DefaultObject;
+
     internal RSeqEvent_CreatedRaft() { }
 
     /// <summary>

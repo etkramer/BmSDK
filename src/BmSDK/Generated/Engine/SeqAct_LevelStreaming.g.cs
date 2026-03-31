@@ -21,6 +21,11 @@ public partial class SeqAct_LevelStreaming : BmSDK.Engine.SeqAct_LevelStreamingB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_LevelStreaming.
+    /// </summary>
+    public static SeqAct_LevelStreaming DefaultObject => (SeqAct_LevelStreaming)StaticClass().DefaultObject;
+
     internal SeqAct_LevelStreaming() { }
 
     /// <summary>

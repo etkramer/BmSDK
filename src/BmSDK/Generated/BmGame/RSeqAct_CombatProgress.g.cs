@@ -21,6 +21,11 @@ public partial class RSeqAct_CombatProgress : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CombatProgress.
+    /// </summary>
+    public static RSeqAct_CombatProgress DefaultObject => (RSeqAct_CombatProgress)StaticClass().DefaultObject;
+
     internal RSeqAct_CombatProgress() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMSeqAct_AttachPawnToBehaviour : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqAct_AttachPawnToBehaviour.
+    /// </summary>
+    public static RBMSeqAct_AttachPawnToBehaviour DefaultObject => (RBMSeqAct_AttachPawnToBehaviour)StaticClass().DefaultObject;
+
     internal RBMSeqAct_AttachPawnToBehaviour() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrefabSequence.
+    /// </summary>
+    public static PrefabSequence DefaultObject => (PrefabSequence)StaticClass().DefaultObject;
+
     internal PrefabSequence() { }
 
     /// <summary>

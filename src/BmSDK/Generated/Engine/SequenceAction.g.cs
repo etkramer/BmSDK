@@ -21,6 +21,11 @@ public partial class SequenceAction : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SequenceAction.
+    /// </summary>
+    public static SequenceAction DefaultObject => (SequenceAction)StaticClass().DefaultObject;
+
     internal SequenceAction() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_BodySetup.
+    /// </summary>
+    public static RFlaps_BodySetup DefaultObject => (RFlaps_BodySetup)StaticClass().DefaultObject;
+
     internal RFlaps_BodySetup() { }
 
     /// <summary>

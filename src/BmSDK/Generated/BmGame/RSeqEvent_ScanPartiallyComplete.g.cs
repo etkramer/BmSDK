@@ -21,6 +21,11 @@ public partial class RSeqEvent_ScanPartiallyComplete : BmSDK.Engine.SequenceEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_ScanPartiallyComplete.
+    /// </summary>
+    public static RSeqEvent_ScanPartiallyComplete DefaultObject => (RSeqEvent_ScanPartiallyComplete)StaticClass().DefaultObject;
+
     internal RSeqEvent_ScanPartiallyComplete() { }
 
     /// <summary>

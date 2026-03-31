@@ -21,6 +21,11 @@ public partial class Model : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Model.
+    /// </summary>
+    public static Model DefaultObject => (Model)StaticClass().DefaultObject;
+
     internal Model() { }
 
     /// <summary>

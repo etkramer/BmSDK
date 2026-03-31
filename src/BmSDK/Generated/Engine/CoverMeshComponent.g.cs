@@ -21,6 +21,11 @@ public partial class CoverMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CoverMeshComponent.
+    /// </summary>
+    public static CoverMeshComponent DefaultObject => (CoverMeshComponent)StaticClass().DefaultObject;
+
     internal CoverMeshComponent() { }
 
     /// <summary>

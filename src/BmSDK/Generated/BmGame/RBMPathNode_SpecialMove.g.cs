@@ -21,6 +21,11 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_SpecialMove.
+    /// </summary>
+    public static RBMPathNode_SpecialMove DefaultObject => (RBMPathNode_SpecialMove)StaticClass().DefaultObject;
+
     internal RBMPathNode_SpecialMove() { }
 
     /// <summary>

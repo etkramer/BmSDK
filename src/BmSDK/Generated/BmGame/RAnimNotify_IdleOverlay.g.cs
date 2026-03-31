@@ -21,6 +21,11 @@ public partial class RAnimNotify_IdleOverlay : BmSDK.BmGame.RAnimNotify_Script, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_IdleOverlay.
+    /// </summary>
+    public static RAnimNotify_IdleOverlay DefaultObject => (RAnimNotify_IdleOverlay)StaticClass().DefaultObject;
+
     internal RAnimNotify_IdleOverlay() { }
 
     /// <summary>

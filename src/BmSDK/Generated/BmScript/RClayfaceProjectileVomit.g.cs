@@ -21,6 +21,11 @@ public partial class RClayfaceProjectileVomit : BmSDK.BmScript.RClayfaceProjecti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceProjectileVomit.
+    /// </summary>
+    public static RClayfaceProjectileVomit DefaultObject => (RClayfaceProjectileVomit)StaticClass().DefaultObject;
+
     internal RClayfaceProjectileVomit() { }
 
     /// <summary>

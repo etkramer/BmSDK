@@ -21,6 +21,11 @@ public partial class RBulletProofGlass : BmSDK.BmGame.RBulletProofGlassBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBulletProofGlass.
+    /// </summary>
+    public static RBulletProofGlass DefaultObject => (RBulletProofGlass)StaticClass().DefaultObject;
+
     internal RBulletProofGlass() { }
 
     /// <summary>

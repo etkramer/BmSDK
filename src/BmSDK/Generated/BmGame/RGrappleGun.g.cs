@@ -21,6 +21,11 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrappleGun.
+    /// </summary>
+    public static RGrappleGun DefaultObject => (RGrappleGun)StaticClass().DefaultObject;
+
     internal RGrappleGun() { }
 
     /// <summary>

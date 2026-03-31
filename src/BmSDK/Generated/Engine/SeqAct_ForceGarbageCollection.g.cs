@@ -21,6 +21,11 @@ public partial class SeqAct_ForceGarbageCollection : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ForceGarbageCollection.
+    /// </summary>
+    public static SeqAct_ForceGarbageCollection DefaultObject => (SeqAct_ForceGarbageCollection)StaticClass().DefaultObject;
+
     internal SeqAct_ForceGarbageCollection() { }
 
     /// <summary>

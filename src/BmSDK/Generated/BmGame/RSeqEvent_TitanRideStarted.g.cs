@@ -21,6 +21,11 @@ public partial class RSeqEvent_TitanRideStarted : BmSDK.Engine.SequenceEvent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_TitanRideStarted.
+    /// </summary>
+    public static RSeqEvent_TitanRideStarted DefaultObject => (RSeqEvent_TitanRideStarted)StaticClass().DefaultObject;
+
     internal RSeqEvent_TitanRideStarted() { }
 
     /// <summary>

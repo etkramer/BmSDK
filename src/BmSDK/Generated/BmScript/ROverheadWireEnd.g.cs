@@ -21,6 +21,11 @@ public partial class ROverheadWireEnd : BmSDK.BmGame.ROverheadWireEndBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROverheadWireEnd.
+    /// </summary>
+    public static ROverheadWireEnd DefaultObject => (ROverheadWireEnd)StaticClass().DefaultObject;
+
     internal ROverheadWireEnd() { }
 
     /// <summary>

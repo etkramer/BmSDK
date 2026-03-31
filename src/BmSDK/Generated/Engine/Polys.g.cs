@@ -21,6 +21,11 @@ public partial class Polys : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Polys.
+    /// </summary>
+    public static Polys DefaultObject => (Polys)StaticClass().DefaultObject;
+
     internal Polys() { }
 
     /// <summary>

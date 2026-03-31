@@ -21,6 +21,11 @@ public partial class RSeqAct_ReduceCombatBarkFrequency : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ReduceCombatBarkFrequency.
+    /// </summary>
+    public static RSeqAct_ReduceCombatBarkFrequency DefaultObject => (RSeqAct_ReduceCombatBarkFrequency)StaticClass().DefaultObject;
+
     internal RSeqAct_ReduceCombatBarkFrequency() { }
 
     /// <summary>

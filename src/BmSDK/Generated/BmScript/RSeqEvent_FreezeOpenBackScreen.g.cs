@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeOpenBackScreen : BmSDK.BmGame.RSeqEvent_Cus
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeOpenBackScreen.
+    /// </summary>
+    public static RSeqEvent_FreezeOpenBackScreen DefaultObject => (RSeqEvent_FreezeOpenBackScreen)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeOpenBackScreen() { }
 
     /// <summary>

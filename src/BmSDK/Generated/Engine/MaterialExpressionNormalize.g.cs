@@ -21,6 +21,11 @@ public partial class MaterialExpressionNormalize : BmSDK.Engine.MaterialExpressi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionNormalize.
+    /// </summary>
+    public static MaterialExpressionNormalize DefaultObject => (MaterialExpressionNormalize)StaticClass().DefaultObject;
+
     internal MaterialExpressionNormalize() { }
 
     /// <summary>

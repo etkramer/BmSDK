@@ -21,6 +21,11 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMultiNavHandleWrapper.
+    /// </summary>
+    public static RMultiNavHandleWrapper DefaultObject => (RMultiNavHandleWrapper)StaticClass().DefaultObject;
+
     internal RMultiNavHandleWrapper() { }
 
     /// <summary>

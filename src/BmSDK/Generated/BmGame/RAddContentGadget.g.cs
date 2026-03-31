@@ -21,6 +21,11 @@ public partial class RAddContentGadget : BmSDK.BmGame.RAdditionalContent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentGadget.
+    /// </summary>
+    public static RAddContentGadget DefaultObject => (RAddContentGadget)StaticClass().DefaultObject;
+
     internal RAddContentGadget() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCharacter_BlackMask : BmSDK.BmGame.RCharacter, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_BlackMask.
+    /// </summary>
+    public static RCharacter_BlackMask DefaultObject => (RCharacter_BlackMask)StaticClass().DefaultObject;
+
     internal RCharacter_BlackMask() { }
 
     /// <summary>

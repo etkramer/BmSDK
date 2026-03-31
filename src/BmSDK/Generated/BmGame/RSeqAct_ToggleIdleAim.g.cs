@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleIdleAim : BmSDK.Engine.SequenceAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleIdleAim.
+    /// </summary>
+    public static RSeqAct_ToggleIdleAim DefaultObject => (RSeqAct_ToggleIdleAim)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleIdleAim() { }
 
     /// <summary>

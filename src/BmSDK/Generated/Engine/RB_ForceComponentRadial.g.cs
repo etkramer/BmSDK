@@ -21,6 +21,11 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ForceComponentRadial.
+    /// </summary>
+    public static RB_ForceComponentRadial DefaultObject => (RB_ForceComponentRadial)StaticClass().DefaultObject;
+
     internal RB_ForceComponentRadial() { }
 
     /// <summary>

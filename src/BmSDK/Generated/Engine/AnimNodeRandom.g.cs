@@ -21,6 +21,11 @@ public partial class AnimNodeRandom : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeRandom.
+    /// </summary>
+    public static AnimNodeRandom DefaultObject => (AnimNodeRandom)StaticClass().DefaultObject;
+
     internal AnimNodeRandom() { }
 
     /// <summary>

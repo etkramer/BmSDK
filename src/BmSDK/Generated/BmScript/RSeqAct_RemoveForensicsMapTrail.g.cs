@@ -21,6 +21,11 @@ public partial class RSeqAct_RemoveForensicsMapTrail : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RemoveForensicsMapTrail.
+    /// </summary>
+    public static RSeqAct_RemoveForensicsMapTrail DefaultObject => (RSeqAct_RemoveForensicsMapTrail)StaticClass().DefaultObject;
+
     internal RSeqAct_RemoveForensicsMapTrail() { }
 
     /// <summary>

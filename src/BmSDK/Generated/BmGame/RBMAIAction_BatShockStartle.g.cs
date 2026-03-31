@@ -21,6 +21,11 @@ public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_BatShockStartle.
+    /// </summary>
+    public static RBMAIAction_BatShockStartle DefaultObject => (RBMAIAction_BatShockStartle)StaticClass().DefaultObject;
+
     internal RBMAIAction_BatShockStartle() { }
 
     /// <summary>

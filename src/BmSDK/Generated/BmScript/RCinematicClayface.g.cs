@@ -21,6 +21,11 @@ public partial class RCinematicClayface : BmSDK.BmGame.RCinematicActor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicClayface.
+    /// </summary>
+    public static RCinematicClayface DefaultObject => (RCinematicClayface)StaticClass().DefaultObject;
+
     internal RCinematicClayface() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNotify_EndFixGroup : BmSDK.Engine.AnimNotify, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_EndFixGroup.
+    /// </summary>
+    public static RAnimNotify_EndFixGroup DefaultObject => (RAnimNotify_EndFixGroup)StaticClass().DefaultObject;
+
     internal RAnimNotify_EndFixGroup() { }
 
     /// <summary>

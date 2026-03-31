@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_WatchAndWait.
+    /// </summary>
+    public static RAEC_Attack_Sub_WatchAndWait DefaultObject => (RAEC_Attack_Sub_WatchAndWait)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_WatchAndWait() { }
 
     /// <summary>

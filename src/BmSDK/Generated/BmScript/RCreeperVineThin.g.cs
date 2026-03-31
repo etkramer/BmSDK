@@ -21,6 +21,11 @@ public partial class RCreeperVineThin : BmSDK.BmScript.RCreeperVine, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCreeperVineThin.
+    /// </summary>
+    public static RCreeperVineThin DefaultObject => (RCreeperVineThin)StaticClass().DefaultObject;
+
     internal RCreeperVineThin() { }
 
     /// <summary>

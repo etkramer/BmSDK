@@ -21,6 +21,11 @@ public partial class AkStateName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkStateName.
+    /// </summary>
+    public static AkStateName DefaultObject => (AkStateName)StaticClass().DefaultObject;
+
     internal AkStateName() { }
 
     /// <summary>

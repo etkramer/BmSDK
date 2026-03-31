@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_StunStickDestroyed : BmSDK.BmGame.RBM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_StunStickDestroyed.
+    /// </summary>
+    public static RBMCombatThrownObject_StunStickDestroyed DefaultObject => (RBMCombatThrownObject_StunStickDestroyed)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_StunStickDestroyed() { }
 
     /// <summary>

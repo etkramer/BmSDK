@@ -21,6 +21,11 @@ public partial class KAssetSpawnable : BmSDK.Engine.KAsset, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KAssetSpawnable.
+    /// </summary>
+    public static KAssetSpawnable DefaultObject => (KAssetSpawnable)StaticClass().DefaultObject;
+
     internal KAssetSpawnable() { }
 
     /// <summary>

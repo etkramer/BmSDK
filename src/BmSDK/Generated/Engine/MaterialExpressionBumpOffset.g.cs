@@ -21,6 +21,11 @@ public partial class MaterialExpressionBumpOffset : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionBumpOffset.
+    /// </summary>
+    public static MaterialExpressionBumpOffset DefaultObject => (MaterialExpressionBumpOffset)StaticClass().DefaultObject;
+
     internal MaterialExpressionBumpOffset() { }
 
     /// <summary>

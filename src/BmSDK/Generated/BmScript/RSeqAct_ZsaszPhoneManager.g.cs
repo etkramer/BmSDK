@@ -21,6 +21,11 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ZsaszPhoneManager.
+    /// </summary>
+    public static RSeqAct_ZsaszPhoneManager DefaultObject => (RSeqAct_ZsaszPhoneManager)StaticClass().DefaultObject;
+
     internal RSeqAct_ZsaszPhoneManager() { }
 
     /// <summary>

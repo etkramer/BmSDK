@@ -21,6 +21,11 @@ public partial class REvadeOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REvadeOverrideVolume.
+    /// </summary>
+    public static REvadeOverrideVolume DefaultObject => (REvadeOverrideVolume)StaticClass().DefaultObject;
+
     internal REvadeOverrideVolume() { }
 
     /// <summary>

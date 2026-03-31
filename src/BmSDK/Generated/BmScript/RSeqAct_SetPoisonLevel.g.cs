@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPoisonLevel : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPoisonLevel.
+    /// </summary>
+    public static RSeqAct_SetPoisonLevel DefaultObject => (RSeqAct_SetPoisonLevel)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPoisonLevel() { }
 
     /// <summary>

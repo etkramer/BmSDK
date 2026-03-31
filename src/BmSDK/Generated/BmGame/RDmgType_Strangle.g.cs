@@ -21,6 +21,11 @@ public partial class RDmgType_Strangle : BmSDK.BmGame.RDamageType, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Strangle.
+    /// </summary>
+    public static RDmgType_Strangle DefaultObject => (RDmgType_Strangle)StaticClass().DefaultObject;
+
     internal RDmgType_Strangle() { }
 
     /// <summary>

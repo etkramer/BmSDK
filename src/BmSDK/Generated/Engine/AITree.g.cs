@@ -21,6 +21,11 @@ public partial class AITree : BmSDK.Engine.K2GraphBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AITree.
+    /// </summary>
+    public static AITree DefaultObject => (AITree)StaticClass().DefaultObject;
+
     internal AITree() { }
 
     /// <summary>

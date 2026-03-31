@@ -21,6 +21,11 @@ public partial class RMoveableCinematicCameraActor : BmSDK.BmGame.RCinematicCame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMoveableCinematicCameraActor.
+    /// </summary>
+    public static RMoveableCinematicCameraActor DefaultObject => (RMoveableCinematicCameraActor)StaticClass().DefaultObject;
+
     internal RMoveableCinematicCameraActor() { }
 
     /// <summary>

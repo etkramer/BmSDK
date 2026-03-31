@@ -21,6 +21,11 @@ public partial class RSeqAct_ResonatorControl : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ResonatorControl.
+    /// </summary>
+    public static RSeqAct_ResonatorControl DefaultObject => (RSeqAct_ResonatorControl)StaticClass().DefaultObject;
+
     internal RSeqAct_ResonatorControl() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_GeneratorSmash : BmSDK.BmGame.RAEC_Search_S
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_GeneratorSmash.
+    /// </summary>
+    public static RAEC_Search_Sub_GeneratorSmash DefaultObject => (RAEC_Search_Sub_GeneratorSmash)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_GeneratorSmash() { }
 
     /// <summary>

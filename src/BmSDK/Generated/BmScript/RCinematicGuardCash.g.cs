@@ -21,6 +21,11 @@ public partial class RCinematicGuardCash : BmSDK.BmScript.RCinematicGuard, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicGuardCash.
+    /// </summary>
+    public static RCinematicGuardCash DefaultObject => (RCinematicGuardCash)StaticClass().DefaultObject;
+
     internal RCinematicGuardCash() { }
 
     /// <summary>

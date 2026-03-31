@@ -21,6 +21,11 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterSelect.
+    /// </summary>
+    public static RCharacterSelect DefaultObject => (RCharacterSelect)StaticClass().DefaultObject;
+
     internal RCharacterSelect() { }
 
     /// <summary>

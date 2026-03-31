@@ -21,6 +21,11 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeTest.
+    /// </summary>
+    public static RRopeTest DefaultObject => (RRopeTest)StaticClass().DefaultObject;
+
     internal RRopeTest() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_JammedGun : BmSDK.BmGame.RAlertEventCoordinatorBase, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_JammedGun.
+    /// </summary>
+    public static RAEC_JammedGun DefaultObject => (RAEC_JammedGun)StaticClass().DefaultObject;
+
     internal RAEC_JammedGun() { }
 
     /// <summary>

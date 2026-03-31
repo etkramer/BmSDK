@@ -21,6 +21,11 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceBomb.
+    /// </summary>
+    public static RClayfaceBomb DefaultObject => (RClayfaceBomb)StaticClass().DefaultObject;
+
     internal RClayfaceBomb() { }
 
     /// <summary>

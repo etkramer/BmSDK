@@ -21,6 +21,11 @@ public partial class RCombatMove_VenomChargeAttack : BmSDK.BmGame.RCombatMove_Vi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VenomChargeAttack.
+    /// </summary>
+    public static RCombatMove_VenomChargeAttack DefaultObject => (RCombatMove_VenomChargeAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VenomChargeAttack() { }
 
     /// <summary>

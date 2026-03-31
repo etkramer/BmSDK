@@ -21,6 +21,11 @@ public partial class RSeqAct_ActivateTunnelGrate : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ActivateTunnelGrate.
+    /// </summary>
+    public static RSeqAct_ActivateTunnelGrate DefaultObject => (RSeqAct_ActivateTunnelGrate)StaticClass().DefaultObject;
+
     internal RSeqAct_ActivateTunnelGrate() { }
 
     /// <summary>

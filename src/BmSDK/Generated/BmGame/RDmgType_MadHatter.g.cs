@@ -21,6 +21,11 @@ public partial class RDmgType_MadHatter : BmSDK.BmGame.RDmgType_NoXP, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_MadHatter.
+    /// </summary>
+    public static RDmgType_MadHatter DefaultObject => (RDmgType_MadHatter)StaticClass().DefaultObject;
+
     internal RDmgType_MadHatter() { }
 
     /// <summary>

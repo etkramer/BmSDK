@@ -21,6 +21,11 @@ public partial class RLineLauncherProjectile : BmSDK.BmGame.RProjectileWithRope,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherProjectile.
+    /// </summary>
+    public static RLineLauncherProjectile DefaultObject => (RLineLauncherProjectile)StaticClass().DefaultObject;
+
     internal RLineLauncherProjectile() { }
 
     /// <summary>

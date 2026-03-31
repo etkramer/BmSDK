@@ -21,6 +21,11 @@ public partial class RSeqAct_StartleCrows : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartleCrows.
+    /// </summary>
+    public static RSeqAct_StartleCrows DefaultObject => (RSeqAct_StartleCrows)StaticClass().DefaultObject;
+
     internal RSeqAct_StartleCrows() { }
 
     /// <summary>

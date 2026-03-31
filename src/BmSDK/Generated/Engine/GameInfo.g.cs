@@ -21,6 +21,11 @@ public partial class GameInfo : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameInfo.
+    /// </summary>
+    public static GameInfo DefaultObject => (GameInfo)StaticClass().DefaultObject;
+
     internal GameInfo() { }
 
     /// <summary>

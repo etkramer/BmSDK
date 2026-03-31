@@ -21,6 +21,11 @@ public partial class PendingLevel : BmSDK.Engine.LevelBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PendingLevel.
+    /// </summary>
+    public static PendingLevel DefaultObject => (PendingLevel)StaticClass().DefaultObject;
+
     internal PendingLevel() { }
 
     /// <summary>

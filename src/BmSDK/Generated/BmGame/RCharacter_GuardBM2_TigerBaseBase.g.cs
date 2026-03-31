@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_TigerBaseBase : BmSDK.BmGame.RCharacter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_TigerBaseBase.
+    /// </summary>
+    public static RCharacter_GuardBM2_TigerBaseBase DefaultObject => (RCharacter_GuardBM2_TigerBaseBase)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_TigerBaseBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNotify_ForceField.
+    /// </summary>
+    public static AnimNotify_ForceField DefaultObject => (AnimNotify_ForceField)StaticClass().DefaultObject;
+
     internal AnimNotify_ForceField() { }
 
     /// <summary>

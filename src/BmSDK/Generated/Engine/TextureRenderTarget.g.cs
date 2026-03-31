@@ -21,6 +21,11 @@ public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TextureRenderTarget.
+    /// </summary>
+    public static TextureRenderTarget DefaultObject => (TextureRenderTarget)StaticClass().DefaultObject;
+
     internal TextureRenderTarget() { }
 
     /// <summary>

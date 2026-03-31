@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_MagnetiseObject : BmSDK.BmGame.RSpecia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_MagnetiseObject.
+    /// </summary>
+    public static RSpecialMoveInstance_MagnetiseObject DefaultObject => (RSpecialMoveInstance_MagnetiseObject)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_MagnetiseObject() { }
 
     /// <summary>

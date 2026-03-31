@@ -21,6 +21,11 @@ public partial class NavMeshGoalFilter_MinPathDistance : BmSDK.Engine.NavMeshGoa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshGoalFilter_MinPathDistance.
+    /// </summary>
+    public static NavMeshGoalFilter_MinPathDistance DefaultObject => (NavMeshGoalFilter_MinPathDistance)StaticClass().DefaultObject;
+
     internal NavMeshGoalFilter_MinPathDistance() { }
 
     /// <summary>

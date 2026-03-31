@@ -21,6 +21,11 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_PhysicsOutput.
+    /// </summary>
+    public static RAnimUtil_PhysicsOutput DefaultObject => (RAnimUtil_PhysicsOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_PhysicsOutput() { }
 
     /// <summary>

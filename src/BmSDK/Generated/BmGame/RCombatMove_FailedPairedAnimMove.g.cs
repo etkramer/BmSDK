@@ -21,6 +21,11 @@ public partial class RCombatMove_FailedPairedAnimMove : BmSDK.BmGame.RCombatMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_FailedPairedAnimMove.
+    /// </summary>
+    public static RCombatMove_FailedPairedAnimMove DefaultObject => (RCombatMove_FailedPairedAnimMove)StaticClass().DefaultObject;
+
     internal RCombatMove_FailedPairedAnimMove() { }
 
     /// <summary>

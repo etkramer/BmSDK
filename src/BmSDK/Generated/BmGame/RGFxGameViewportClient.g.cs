@@ -21,6 +21,11 @@ public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxGameViewportClient.
+    /// </summary>
+    public static RGFxGameViewportClient DefaultObject => (RGFxGameViewportClient)StaticClass().DefaultObject;
+
     internal RGFxGameViewportClient() { }
 
     /// <summary>

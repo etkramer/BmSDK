@@ -21,6 +21,11 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LunaticGrab_Cam.
+    /// </summary>
+    public static RCombatMove_LunaticGrab_Cam DefaultObject => (RCombatMove_LunaticGrab_Cam)StaticClass().DefaultObject;
+
     internal RCombatMove_LunaticGrab_Cam() { }
 
     /// <summary>

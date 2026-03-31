@@ -21,6 +21,11 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_SmashIcedThug.
+    /// </summary>
+    public static RBMAIAction_SmashIcedThug DefaultObject => (RBMAIAction_SmashIcedThug)StaticClass().DefaultObject;
+
     internal RBMAIAction_SmashIcedThug() { }
 
     /// <summary>

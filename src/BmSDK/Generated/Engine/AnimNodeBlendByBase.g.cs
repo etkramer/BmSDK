@@ -21,6 +21,11 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeBlendByBase.
+    /// </summary>
+    public static AnimNodeBlendByBase DefaultObject => (AnimNodeBlendByBase)StaticClass().DefaultObject;
+
     internal AnimNodeBlendByBase() { }
 
     /// <summary>

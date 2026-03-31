@@ -21,6 +21,11 @@ public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.Engine.Interfa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavigationActor.
+    /// </summary>
+    public static RNavigationActor DefaultObject => (RNavigationActor)StaticClass().DefaultObject;
+
     internal RNavigationActor() { }
 
     /// <summary>

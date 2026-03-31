@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_BehaviourRoot : BmSDK.Engine.SequenceEvent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_BehaviourRoot.
+    /// </summary>
+    public static RBMSeqEvent_BehaviourRoot DefaultObject => (RBMSeqEvent_BehaviourRoot)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_BehaviourRoot() { }
 
     /// <summary>

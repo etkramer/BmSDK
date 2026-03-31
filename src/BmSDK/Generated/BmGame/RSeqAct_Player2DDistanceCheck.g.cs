@@ -21,6 +21,11 @@ public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Player2DDistanceCheck.
+    /// </summary>
+    public static RSeqAct_Player2DDistanceCheck DefaultObject => (RSeqAct_Player2DDistanceCheck)StaticClass().DefaultObject;
+
     internal RSeqAct_Player2DDistanceCheck() { }
 
     /// <summary>

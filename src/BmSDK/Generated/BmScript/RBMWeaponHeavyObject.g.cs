@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObject.
+    /// </summary>
+    public static RBMWeaponHeavyObject DefaultObject => (RBMWeaponHeavyObject)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObject() { }
 
     /// <summary>

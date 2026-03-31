@@ -21,6 +21,11 @@ public partial class RBMWeaponBat_Harleyfied : BmSDK.BmScript.RBMWeaponBat, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBat_Harleyfied.
+    /// </summary>
+    public static RBMWeaponBat_Harleyfied DefaultObject => (RBMWeaponBat_Harleyfied)StaticClass().DefaultObject;
+
     internal RBMWeaponBat_Harleyfied() { }
 
     /// <summary>

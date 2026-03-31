@@ -21,6 +21,11 @@ public partial class RSeqEvent_AllCrowdPawnsHavePaths : BmSDK.Engine.SequenceEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_AllCrowdPawnsHavePaths.
+    /// </summary>
+    public static RSeqEvent_AllCrowdPawnsHavePaths DefaultObject => (RSeqEvent_AllCrowdPawnsHavePaths)StaticClass().DefaultObject;
+
     internal RSeqEvent_AllCrowdPawnsHavePaths() { }
 
     /// <summary>

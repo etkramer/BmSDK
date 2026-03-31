@@ -21,6 +21,11 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkHash.
+    /// </summary>
+    public static AkHash DefaultObject => (AkHash)StaticClass().DefaultObject;
+
     internal AkHash() { }
 
     /// <summary>

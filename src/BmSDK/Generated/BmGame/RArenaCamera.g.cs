@@ -21,6 +21,11 @@ public partial class RArenaCamera : BmSDK.BmGame.RMultiTargetCamera, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RArenaCamera.
+    /// </summary>
+    public static RArenaCamera DefaultObject => (RArenaCamera)StaticClass().DefaultObject;
+
     internal RArenaCamera() { }
 
     /// <summary>

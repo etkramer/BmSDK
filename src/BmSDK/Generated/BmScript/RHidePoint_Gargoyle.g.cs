@@ -21,6 +21,11 @@ public partial class RHidePoint_Gargoyle : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_Gargoyle.
+    /// </summary>
+    public static RHidePoint_Gargoyle DefaultObject => (RHidePoint_Gargoyle)StaticClass().DefaultObject;
+
     internal RHidePoint_Gargoyle() { }
 
     /// <summary>

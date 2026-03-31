@@ -21,6 +21,11 @@ public partial class RNavMeshGoal_SafeCombat : BmSDK.Engine.NavMeshPathGoalEvalu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshGoal_SafeCombat.
+    /// </summary>
+    public static RNavMeshGoal_SafeCombat DefaultObject => (RNavMeshGoal_SafeCombat)StaticClass().DefaultObject;
+
     internal RNavMeshGoal_SafeCombat() { }
 
     /// <summary>

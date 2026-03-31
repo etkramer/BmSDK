@@ -21,6 +21,11 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_JokerTauntAndTrack.
+    /// </summary>
+    public static RBMBehaviour_JokerTauntAndTrack DefaultObject => (RBMBehaviour_JokerTauntAndTrack)StaticClass().DefaultObject;
+
     internal RBMBehaviour_JokerTauntAndTrack() { }
 
     /// <summary>

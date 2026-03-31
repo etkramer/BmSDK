@@ -21,6 +21,11 @@ public partial class RDisruptableLaserGridRiddler : BmSDK.BmScript.RDisruptableL
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableLaserGridRiddler.
+    /// </summary>
+    public static RDisruptableLaserGridRiddler DefaultObject => (RDisruptableLaserGridRiddler)StaticClass().DefaultObject;
+
     internal RDisruptableLaserGridRiddler() { }
 
     /// <summary>

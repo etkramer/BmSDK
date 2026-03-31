@@ -21,6 +21,11 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LandscapeComponent.
+    /// </summary>
+    public static LandscapeComponent DefaultObject => (LandscapeComponent)StaticClass().DefaultObject;
+
     internal LandscapeComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_Brang_Sub_WatchBatarang : BmSDK.BmGame.RAlertEventCoor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Brang_Sub_WatchBatarang.
+    /// </summary>
+    public static RAEC_Brang_Sub_WatchBatarang DefaultObject => (RAEC_Brang_Sub_WatchBatarang)StaticClass().DefaultObject;
+
     internal RAEC_Brang_Sub_WatchBatarang() { }
 
     /// <summary>

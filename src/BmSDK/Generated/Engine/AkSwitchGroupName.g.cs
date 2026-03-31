@@ -21,6 +21,11 @@ public partial class AkSwitchGroupName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkSwitchGroupName.
+    /// </summary>
+    public static AkSwitchGroupName DefaultObject => (AkSwitchGroupName)StaticClass().DefaultObject;
+
     internal AkSwitchGroupName() { }
 
     /// <summary>

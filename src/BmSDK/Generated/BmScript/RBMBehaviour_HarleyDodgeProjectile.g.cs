@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HarleyDodgeProjectile : BmSDK.BmGame.RBMBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HarleyDodgeProjectile.
+    /// </summary>
+    public static RBMBehaviour_HarleyDodgeProjectile DefaultObject => (RBMBehaviour_HarleyDodgeProjectile)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HarleyDodgeProjectile() { }
 
     /// <summary>

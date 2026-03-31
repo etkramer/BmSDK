@@ -21,6 +21,11 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDeathCamera.
+    /// </summary>
+    public static RDeathCamera DefaultObject => (RDeathCamera)StaticClass().DefaultObject;
+
     internal RDeathCamera() { }
 
     /// <summary>

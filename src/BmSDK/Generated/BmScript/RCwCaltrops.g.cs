@@ -21,6 +21,11 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwCaltrops.
+    /// </summary>
+    public static RCwCaltrops DefaultObject => (RCwCaltrops)StaticClass().DefaultObject;
+
     internal RCwCaltrops() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ForceCombatCamera : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ForceCombatCamera.
+    /// </summary>
+    public static RSeqAct_ForceCombatCamera DefaultObject => (RSeqAct_ForceCombatCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_ForceCombatCamera() { }
 
     /// <summary>

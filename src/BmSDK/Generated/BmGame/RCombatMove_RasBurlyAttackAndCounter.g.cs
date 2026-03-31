@@ -21,6 +21,11 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasBurlyAttackAndCounter.
+    /// </summary>
+    public static RCombatMove_RasBurlyAttackAndCounter DefaultObject => (RCombatMove_RasBurlyAttackAndCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_RasBurlyAttackAndCounter() { }
 
     /// <summary>

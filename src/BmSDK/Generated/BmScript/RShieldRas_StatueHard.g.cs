@@ -21,6 +21,11 @@ public partial class RShieldRas_StatueHard : BmSDK.BmScript.RShieldRas_StatueEas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShieldRas_StatueHard.
+    /// </summary>
+    public static RShieldRas_StatueHard DefaultObject => (RShieldRas_StatueHard)StaticClass().DefaultObject;
+
     internal RShieldRas_StatueHard() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionLODFade : BmSDK.Engine.MaterialExpression
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionLODFade.
+    /// </summary>
+    public static MaterialExpressionLODFade DefaultObject => (MaterialExpressionLODFade)StaticClass().DefaultObject;
+
     internal MaterialExpressionLODFade() { }
 
     /// <summary>

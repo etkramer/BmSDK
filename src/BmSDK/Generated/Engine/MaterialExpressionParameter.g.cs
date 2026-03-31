@@ -21,6 +21,11 @@ public partial class MaterialExpressionParameter : BmSDK.Engine.MaterialExpressi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionParameter.
+    /// </summary>
+    public static MaterialExpressionParameter DefaultObject => (MaterialExpressionParameter)StaticClass().DefaultObject;
+
     internal MaterialExpressionParameter() { }
 
     /// <summary>

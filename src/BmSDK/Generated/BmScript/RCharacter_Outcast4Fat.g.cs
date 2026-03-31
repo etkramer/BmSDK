@@ -21,6 +21,11 @@ public partial class RCharacter_Outcast4Fat : BmSDK.BmScript.RCharacter_OutcastB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Outcast4Fat.
+    /// </summary>
+    public static RCharacter_Outcast4Fat DefaultObject => (RCharacter_Outcast4Fat)StaticClass().DefaultObject;
+
     internal RCharacter_Outcast4Fat() { }
 
     /// <summary>

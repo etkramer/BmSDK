@@ -21,6 +21,11 @@ public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreamingVolume.
+    /// </summary>
+    public static LevelStreamingVolume DefaultObject => (LevelStreamingVolume)StaticClass().DefaultObject;
+
     internal LevelStreamingVolume() { }
 
     /// <summary>

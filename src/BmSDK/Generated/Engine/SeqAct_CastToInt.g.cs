@@ -21,6 +21,11 @@ public partial class SeqAct_CastToInt : BmSDK.Engine.SeqAct_SetSequenceVariable,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_CastToInt.
+    /// </summary>
+    public static SeqAct_CastToInt DefaultObject => (SeqAct_CastToInt)StaticClass().DefaultObject;
+
     internal SeqAct_CastToInt() { }
 
     /// <summary>

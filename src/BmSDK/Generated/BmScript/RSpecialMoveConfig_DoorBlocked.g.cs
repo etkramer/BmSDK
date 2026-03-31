@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_DoorBlocked : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_DoorBlocked.
+    /// </summary>
+    public static RSpecialMoveConfig_DoorBlocked DefaultObject => (RSpecialMoveConfig_DoorBlocked)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_DoorBlocked() { }
 
     /// <summary>

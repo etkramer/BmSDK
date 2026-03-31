@@ -21,6 +21,11 @@ public partial class ParticleEventManager : BmSDK.Engine.Actor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleEventManager.
+    /// </summary>
+    public static ParticleEventManager DefaultObject => (ParticleEventManager)StaticClass().DefaultObject;
+
     internal ParticleEventManager() { }
 
     /// <summary>

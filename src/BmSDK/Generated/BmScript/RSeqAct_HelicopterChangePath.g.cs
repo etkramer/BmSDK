@@ -21,6 +21,11 @@ public partial class RSeqAct_HelicopterChangePath : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelicopterChangePath.
+    /// </summary>
+    public static RSeqAct_HelicopterChangePath DefaultObject => (RSeqAct_HelicopterChangePath)StaticClass().DefaultObject;
+
     internal RSeqAct_HelicopterChangePath() { }
 
     /// <summary>

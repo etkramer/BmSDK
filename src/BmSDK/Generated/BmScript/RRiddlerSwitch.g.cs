@@ -21,6 +21,11 @@ public partial class RRiddlerSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlerSwitch.
+    /// </summary>
+    public static RRiddlerSwitch DefaultObject => (RRiddlerSwitch)StaticClass().DefaultObject;
+
     internal RRiddlerSwitch() { }
 
     /// <summary>

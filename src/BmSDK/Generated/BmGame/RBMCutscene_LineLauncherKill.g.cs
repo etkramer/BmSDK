@@ -21,6 +21,11 @@ public partial class RBMCutscene_LineLauncherKill : BmSDK.BmGame.RBMCutscene_Cam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCutscene_LineLauncherKill.
+    /// </summary>
+    public static RBMCutscene_LineLauncherKill DefaultObject => (RBMCutscene_LineLauncherKill)StaticClass().DefaultObject;
+
     internal RBMCutscene_LineLauncherKill() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeLosesHealth : BmSDK.Engine.SequenceEvent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeLosesHealth.
+    /// </summary>
+    public static RSeqEvent_FreezeLosesHealth DefaultObject => (RSeqEvent_FreezeLosesHealth)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeLosesHealth() { }
 
     /// <summary>

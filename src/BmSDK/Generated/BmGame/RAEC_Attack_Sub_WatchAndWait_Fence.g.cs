@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_WatchAndWait_Fence.
+    /// </summary>
+    public static RAEC_Attack_Sub_WatchAndWait_Fence DefaultObject => (RAEC_Attack_Sub_WatchAndWait_Fence)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_WatchAndWait_Fence() { }
 
     /// <summary>

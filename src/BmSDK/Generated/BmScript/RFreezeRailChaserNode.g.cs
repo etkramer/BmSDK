@@ -21,6 +21,11 @@ public partial class RFreezeRailChaserNode : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeRailChaserNode.
+    /// </summary>
+    public static RFreezeRailChaserNode DefaultObject => (RFreezeRailChaserNode)StaticClass().DefaultObject;
+
     internal RFreezeRailChaserNode() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBatarangProjectileRb_RoundTheBackarang : BmSDK.BmScript.RB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangProjectileRb_RoundTheBackarang.
+    /// </summary>
+    public static RBatarangProjectileRb_RoundTheBackarang DefaultObject => (RBatarangProjectileRb_RoundTheBackarang)StaticClass().DefaultObject;
+
     internal RBatarangProjectileRb_RoundTheBackarang() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAnimNotify_WhipTarget : BmSDK.Engine.AnimNotify, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_WhipTarget.
+    /// </summary>
+    public static RAnimNotify_WhipTarget DefaultObject => (RAnimNotify_WhipTarget)StaticClass().DefaultObject;
+
     internal RAnimNotify_WhipTarget() { }
 
     /// <summary>

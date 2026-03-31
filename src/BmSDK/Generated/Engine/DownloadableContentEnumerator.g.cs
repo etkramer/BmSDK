@@ -21,6 +21,11 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DownloadableContentEnumerator.
+    /// </summary>
+    public static DownloadableContentEnumerator DefaultObject => (DownloadableContentEnumerator)StaticClass().DefaultObject;
+
     internal DownloadableContentEnumerator() { }
 
     /// <summary>

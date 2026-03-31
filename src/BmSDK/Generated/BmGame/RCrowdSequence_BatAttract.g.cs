@@ -21,6 +21,11 @@ public partial class RCrowdSequence_BatAttract : BmSDK.BmGame.RCrowdSequence, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSequence_BatAttract.
+    /// </summary>
+    public static RCrowdSequence_BatAttract DefaultObject => (RCrowdSequence_BatAttract)StaticClass().DefaultObject;
+
     internal RCrowdSequence_BatAttract() { }
 
     /// <summary>

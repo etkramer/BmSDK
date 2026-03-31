@@ -21,6 +21,11 @@ public partial class RBMSpeechManager : BmSDK.Engine.ActorComponent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSpeechManager.
+    /// </summary>
+    public static RBMSpeechManager DefaultObject => (RBMSpeechManager)StaticClass().DefaultObject;
+
     internal RBMSpeechManager() { }
 
     /// <summary>

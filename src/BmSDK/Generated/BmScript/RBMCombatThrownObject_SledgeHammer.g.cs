@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_SledgeHammer : BmSDK.BmGame.RBMCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_SledgeHammer.
+    /// </summary>
+    public static RBMCombatThrownObject_SledgeHammer DefaultObject => (RBMCombatThrownObject_SledgeHammer)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_SledgeHammer() { }
 
     /// <summary>

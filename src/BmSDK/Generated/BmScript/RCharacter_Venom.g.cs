@@ -21,6 +21,11 @@ public partial class RCharacter_Venom : BmSDK.BmGame.RCharacter, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Venom.
+    /// </summary>
+    public static RCharacter_Venom DefaultObject => (RCharacter_Venom)StaticClass().DefaultObject;
+
     internal RCharacter_Venom() { }
 
     /// <summary>

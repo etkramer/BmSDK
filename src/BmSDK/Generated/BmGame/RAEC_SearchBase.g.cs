@@ -21,6 +21,11 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SearchBase.
+    /// </summary>
+    public static RAEC_SearchBase DefaultObject => (RAEC_SearchBase)StaticClass().DefaultObject;
+
     internal RAEC_SearchBase() { }
 
     /// <summary>

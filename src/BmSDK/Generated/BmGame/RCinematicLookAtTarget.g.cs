@@ -21,6 +21,11 @@ public partial class RCinematicLookAtTarget : BmSDK.Engine.Actor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicLookAtTarget.
+    /// </summary>
+    public static RCinematicLookAtTarget DefaultObject => (RCinematicLookAtTarget)StaticClass().DefaultObject;
+
     internal RCinematicLookAtTarget() { }
 
     /// <summary>

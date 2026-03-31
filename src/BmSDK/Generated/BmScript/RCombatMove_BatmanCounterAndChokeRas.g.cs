@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounterAndChokeRas.
+    /// </summary>
+    public static RCombatMove_BatmanCounterAndChokeRas DefaultObject => (RCombatMove_BatmanCounterAndChokeRas)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounterAndChokeRas() { }
 
     /// <summary>

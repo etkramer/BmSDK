@@ -21,6 +21,11 @@ public partial class KismetBookMark : BmSDK.Engine.BookMark2D, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as KismetBookMark.
+    /// </summary>
+    public static KismetBookMark DefaultObject => (KismetBookMark)StaticClass().DefaultObject;
+
     internal KismetBookMark() { }
 
     /// <summary>

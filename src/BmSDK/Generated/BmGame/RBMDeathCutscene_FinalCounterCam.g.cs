@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene_FinalCounterCam : BmSDK.BmGame.RBMDeathCut
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene_FinalCounterCam.
+    /// </summary>
+    public static RBMDeathCutscene_FinalCounterCam DefaultObject => (RBMDeathCutscene_FinalCounterCam)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene_FinalCounterCam() { }
 
     /// <summary>

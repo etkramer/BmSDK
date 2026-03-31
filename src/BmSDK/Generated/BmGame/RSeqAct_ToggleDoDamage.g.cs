@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleDoDamage : BmSDK.Engine.SeqAct_Toggle, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleDoDamage.
+    /// </summary>
+    public static RSeqAct_ToggleDoDamage DefaultObject => (RSeqAct_ToggleDoDamage)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleDoDamage() { }
 
     /// <summary>

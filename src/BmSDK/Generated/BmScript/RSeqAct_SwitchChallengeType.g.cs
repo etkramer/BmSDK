@@ -21,6 +21,11 @@ public partial class RSeqAct_SwitchChallengeType : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SwitchChallengeType.
+    /// </summary>
+    public static RSeqAct_SwitchChallengeType DefaultObject => (RSeqAct_SwitchChallengeType)StaticClass().DefaultObject;
+
     internal RSeqAct_SwitchChallengeType() { }
 
     /// <summary>

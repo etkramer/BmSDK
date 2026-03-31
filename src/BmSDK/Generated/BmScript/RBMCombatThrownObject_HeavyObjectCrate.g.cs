@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_HeavyObjectCrate : BmSDK.BmScript.RBM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_HeavyObjectCrate.
+    /// </summary>
+    public static RBMCombatThrownObject_HeavyObjectCrate DefaultObject => (RBMCombatThrownObject_HeavyObjectCrate)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_HeavyObjectCrate() { }
 
     /// <summary>

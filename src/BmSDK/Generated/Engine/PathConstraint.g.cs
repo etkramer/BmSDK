@@ -21,6 +21,11 @@ public partial class PathConstraint : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathConstraint.
+    /// </summary>
+    public static PathConstraint DefaultObject => (PathConstraint)StaticClass().DefaultObject;
+
     internal PathConstraint() { }
 
     /// <summary>

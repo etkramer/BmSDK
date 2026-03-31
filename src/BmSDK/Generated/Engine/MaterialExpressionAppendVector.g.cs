@@ -21,6 +21,11 @@ public partial class MaterialExpressionAppendVector : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionAppendVector.
+    /// </summary>
+    public static MaterialExpressionAppendVector DefaultObject => (MaterialExpressionAppendVector)StaticClass().DefaultObject;
+
     internal MaterialExpressionAppendVector() { }
 
     /// <summary>

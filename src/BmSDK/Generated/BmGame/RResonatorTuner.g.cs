@@ -21,6 +21,11 @@ public partial class RResonatorTuner : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RResonatorTuner.
+    /// </summary>
+    public static RResonatorTuner DefaultObject => (RResonatorTuner)StaticClass().DefaultObject;
+
     internal RResonatorTuner() { }
 
     /// <summary>

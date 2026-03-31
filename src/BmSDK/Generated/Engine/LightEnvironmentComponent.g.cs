@@ -21,6 +21,11 @@ public partial class LightEnvironmentComponent : BmSDK.Engine.ActorComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightEnvironmentComponent.
+    /// </summary>
+    public static LightEnvironmentComponent DefaultObject => (LightEnvironmentComponent)StaticClass().DefaultObject;
+
     internal LightEnvironmentComponent() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Brush : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Brush.
+    /// </summary>
+    public static Brush DefaultObject => (Brush)StaticClass().DefaultObject;
+
     internal Brush() { }
 
     /// <summary>

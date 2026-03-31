@@ -21,6 +21,11 @@ public partial class DynamicBlockingVolume : BmSDK.Engine.BlockingVolume, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicBlockingVolume.
+    /// </summary>
+    public static DynamicBlockingVolume DefaultObject => (DynamicBlockingVolume)StaticClass().DefaultObject;
+
     internal DynamicBlockingVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPickup_RiddlerCatwoman : BmSDK.BmGame.RPickupBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPickup_RiddlerCatwoman.
+    /// </summary>
+    public static RPickup_RiddlerCatwoman DefaultObject => (RPickup_RiddlerCatwoman)StaticClass().DefaultObject;
+
     internal RPickup_RiddlerCatwoman() { }
 
     /// <summary>

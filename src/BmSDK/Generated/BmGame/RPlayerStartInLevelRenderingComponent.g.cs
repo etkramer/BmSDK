@@ -21,6 +21,11 @@ public partial class RPlayerStartInLevelRenderingComponent : BmSDK.Engine.Primit
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerStartInLevelRenderingComponent.
+    /// </summary>
+    public static RPlayerStartInLevelRenderingComponent DefaultObject => (RPlayerStartInLevelRenderingComponent)StaticClass().DefaultObject;
+
     internal RPlayerStartInLevelRenderingComponent() { }
 
     /// <summary>

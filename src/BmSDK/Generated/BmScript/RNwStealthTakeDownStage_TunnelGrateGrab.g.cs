@@ -21,6 +21,11 @@ public partial class RNwStealthTakeDownStage_TunnelGrateGrab : BmSDK.BmGame.RSte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNwStealthTakeDownStage_TunnelGrateGrab.
+    /// </summary>
+    public static RNwStealthTakeDownStage_TunnelGrateGrab DefaultObject => (RNwStealthTakeDownStage_TunnelGrateGrab)StaticClass().DefaultObject;
+
     internal RNwStealthTakeDownStage_TunnelGrateGrab() { }
 
     /// <summary>

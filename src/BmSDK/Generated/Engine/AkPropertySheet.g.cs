@@ -21,6 +21,11 @@ public partial class AkPropertySheet : BmSDK.Engine.ActorComponent, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkPropertySheet.
+    /// </summary>
+    public static AkPropertySheet DefaultObject => (AkPropertySheet)StaticClass().DefaultObject;
+
     internal AkPropertySheet() { }
 
     /// <summary>

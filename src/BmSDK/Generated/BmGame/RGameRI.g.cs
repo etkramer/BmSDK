@@ -21,6 +21,11 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameRI.
+    /// </summary>
+    public static RGameRI DefaultObject => (RGameRI)StaticClass().DefaultObject;
+
     internal RGameRI() { }
 
     /// <summary>

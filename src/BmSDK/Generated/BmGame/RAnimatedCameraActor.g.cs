@@ -21,6 +21,11 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimatedCameraActor.
+    /// </summary>
+    public static RAnimatedCameraActor DefaultObject => (RAnimatedCameraActor)StaticClass().DefaultObject;
+
     internal RAnimatedCameraActor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_HoldGuardPoint.
+    /// </summary>
+    public static RBMAIAction_HoldGuardPoint DefaultObject => (RBMAIAction_HoldGuardPoint)StaticClass().DefaultObject;
+
     internal RBMAIAction_HoldGuardPoint() { }
 
     /// <summary>

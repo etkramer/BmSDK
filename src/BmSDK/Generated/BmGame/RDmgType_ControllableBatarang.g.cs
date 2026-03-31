@@ -21,6 +21,11 @@ public partial class RDmgType_ControllableBatarang : BmSDK.BmGame.RDmgType_Batar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ControllableBatarang.
+    /// </summary>
+    public static RDmgType_ControllableBatarang DefaultObject => (RDmgType_ControllableBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_ControllableBatarang() { }
 
     /// <summary>

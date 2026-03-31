@@ -21,6 +21,11 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RZsaszPhoneMesh.
+    /// </summary>
+    public static RZsaszPhoneMesh DefaultObject => (RZsaszPhoneMesh)StaticClass().DefaultObject;
+
     internal RZsaszPhoneMesh() { }
 
     /// <summary>

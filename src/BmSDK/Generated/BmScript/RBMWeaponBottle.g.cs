@@ -21,6 +21,11 @@ public partial class RBMWeaponBottle : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponBottle.
+    /// </summary>
+    public static RBMWeaponBottle DefaultObject => (RBMWeaponBottle)StaticClass().DefaultObject;
+
     internal RBMWeaponBottle() { }
 
     /// <summary>

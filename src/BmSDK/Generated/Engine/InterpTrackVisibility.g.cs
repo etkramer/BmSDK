@@ -21,6 +21,11 @@ public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackVisibility.
+    /// </summary>
+    public static InterpTrackVisibility DefaultObject => (InterpTrackVisibility)StaticClass().DefaultObject;
+
     internal InterpTrackVisibility() { }
 
     /// <summary>

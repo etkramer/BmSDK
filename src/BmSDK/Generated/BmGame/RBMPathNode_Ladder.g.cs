@@ -21,6 +21,11 @@ public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_Ladder.
+    /// </summary>
+    public static RBMPathNode_Ladder DefaultObject => (RBMPathNode_Ladder)StaticClass().DefaultObject;
+
     internal RBMPathNode_Ladder() { }
 
     /// <summary>

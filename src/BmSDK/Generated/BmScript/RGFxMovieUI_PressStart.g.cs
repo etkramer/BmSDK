@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_PressStart : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_PressStart.
+    /// </summary>
+    public static RGFxMovieUI_PressStart DefaultObject => (RGFxMovieUI_PressStart)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_PressStart() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class SeqEvent_LOS : BmSDK.Engine.SequenceEvent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqEvent_LOS.
+    /// </summary>
+    public static SeqEvent_LOS DefaultObject => (SeqEvent_LOS)StaticClass().DefaultObject;
+
     internal SeqEvent_LOS() { }
 
     /// <summary>

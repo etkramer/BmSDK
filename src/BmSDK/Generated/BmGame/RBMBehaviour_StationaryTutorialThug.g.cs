@@ -21,6 +21,11 @@ public partial class RBMBehaviour_StationaryTutorialThug : BmSDK.BmGame.RBMBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_StationaryTutorialThug.
+    /// </summary>
+    public static RBMBehaviour_StationaryTutorialThug DefaultObject => (RBMBehaviour_StationaryTutorialThug)StaticClass().DefaultObject;
+
     internal RBMBehaviour_StationaryTutorialThug() { }
 
     /// <summary>

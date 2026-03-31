@@ -21,6 +21,11 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTakeDownStage_TunnelGrateGrab.
+    /// </summary>
+    public static RFreezeTakeDownStage_TunnelGrateGrab DefaultObject => (RFreezeTakeDownStage_TunnelGrateGrab)StaticClass().DefaultObject;
+
     internal RFreezeTakeDownStage_TunnelGrateGrab() { }
 
     /// <summary>

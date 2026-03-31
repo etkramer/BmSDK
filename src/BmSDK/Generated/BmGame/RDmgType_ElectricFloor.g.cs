@@ -21,6 +21,11 @@ public partial class RDmgType_ElectricFloor : BmSDK.BmGame.RDmgType_Electricity,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ElectricFloor.
+    /// </summary>
+    public static RDmgType_ElectricFloor DefaultObject => (RDmgType_ElectricFloor)StaticClass().DefaultObject;
+
     internal RDmgType_ElectricFloor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_VenomWalkingCloseAttack : BmSDK.BmGame.RCombatM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VenomWalkingCloseAttack.
+    /// </summary>
+    public static RCombatMove_VenomWalkingCloseAttack DefaultObject => (RCombatMove_VenomWalkingCloseAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_VenomWalkingCloseAttack() { }
 
     /// <summary>

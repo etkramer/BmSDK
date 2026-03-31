@@ -21,6 +21,11 @@ public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMulti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMultiNavHandleWrapper_DisarmedSearch.
+    /// </summary>
+    public static RMultiNavHandleWrapper_DisarmedSearch DefaultObject => (RMultiNavHandleWrapper_DisarmedSearch)StaticClass().DefaultObject;
+
     internal RMultiNavHandleWrapper_DisarmedSearch() { }
 
     /// <summary>

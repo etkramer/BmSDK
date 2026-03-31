@@ -21,6 +21,11 @@ public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_S
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty_Sub_PointAtCas.
+    /// </summary>
+    public static RAEC_Casualty_Sub_PointAtCas DefaultObject => (RAEC_Casualty_Sub_PointAtCas)StaticClass().DefaultObject;
+
     internal RAEC_Casualty_Sub_PointAtCas() { }
 
     /// <summary>

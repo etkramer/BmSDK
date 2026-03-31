@@ -21,6 +21,11 @@ public partial class RDmgType_Counter : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Counter.
+    /// </summary>
+    public static RDmgType_Counter DefaultObject => (RDmgType_Counter)StaticClass().DefaultObject;
+
     internal RDmgType_Counter() { }
 
     /// <summary>

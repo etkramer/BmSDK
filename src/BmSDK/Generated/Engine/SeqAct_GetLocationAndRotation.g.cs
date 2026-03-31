@@ -21,6 +21,11 @@ public partial class SeqAct_GetLocationAndRotation : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_GetLocationAndRotation.
+    /// </summary>
+    public static SeqAct_GetLocationAndRotation DefaultObject => (SeqAct_GetLocationAndRotation)StaticClass().DefaultObject;
+
     internal SeqAct_GetLocationAndRotation() { }
 
     /// <summary>

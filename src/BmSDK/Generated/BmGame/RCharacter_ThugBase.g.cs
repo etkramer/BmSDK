@@ -21,6 +21,11 @@ public partial class RCharacter_ThugBase : BmSDK.BmGame.RCharacter, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_ThugBase.
+    /// </summary>
+    public static RCharacter_ThugBase DefaultObject => (RCharacter_ThugBase)StaticClass().DefaultObject;
+
     internal RCharacter_ThugBase() { }
 
     /// <summary>

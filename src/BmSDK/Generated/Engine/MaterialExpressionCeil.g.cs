@@ -21,6 +21,11 @@ public partial class MaterialExpressionCeil : BmSDK.Engine.MaterialExpression, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionCeil.
+    /// </summary>
+    public static MaterialExpressionCeil DefaultObject => (MaterialExpressionCeil)StaticClass().DefaultObject;
+
     internal MaterialExpressionCeil() { }
 
     /// <summary>

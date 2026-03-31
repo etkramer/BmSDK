@@ -21,6 +21,11 @@ public partial class RBMAIAction_RestoreJammer : BmSDK.BmGame.RBMAIAction_Restor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RestoreJammer.
+    /// </summary>
+    public static RBMAIAction_RestoreJammer DefaultObject => (RBMAIAction_RestoreJammer)StaticClass().DefaultObject;
+
     internal RBMAIAction_RestoreJammer() { }
 
     /// <summary>

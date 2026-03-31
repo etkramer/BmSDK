@@ -21,6 +21,11 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_Cape.
+    /// </summary>
+    public static RAnimNode_Cape DefaultObject => (RAnimNode_Cape)StaticClass().DefaultObject;
+
     internal RAnimNode_Cape() { }
 
     /// <summary>

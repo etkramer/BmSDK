@@ -21,6 +21,11 @@ public partial class Path_MinDistBetweenSpecsOfType : BmSDK.Engine.PathConstrain
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Path_MinDistBetweenSpecsOfType.
+    /// </summary>
+    public static Path_MinDistBetweenSpecsOfType DefaultObject => (Path_MinDistBetweenSpecsOfType)StaticClass().DefaultObject;
+
     internal Path_MinDistBetweenSpecsOfType() { }
 
     /// <summary>

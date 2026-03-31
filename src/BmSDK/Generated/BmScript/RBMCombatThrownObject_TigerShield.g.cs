@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_TigerShield : BmSDK.BmScript.RBMComba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_TigerShield.
+    /// </summary>
+    public static RBMCombatThrownObject_TigerShield DefaultObject => (RBMCombatThrownObject_TigerShield)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_TigerShield() { }
 
     /// <summary>

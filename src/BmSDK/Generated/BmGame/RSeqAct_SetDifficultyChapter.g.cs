@@ -21,6 +21,11 @@ public partial class RSeqAct_SetDifficultyChapter : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetDifficultyChapter.
+    /// </summary>
+    public static RSeqAct_SetDifficultyChapter DefaultObject => (RSeqAct_SetDifficultyChapter)StaticClass().DefaultObject;
+
     internal RSeqAct_SetDifficultyChapter() { }
 
     /// <summary>

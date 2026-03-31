@@ -21,6 +21,11 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDialogueCamera.
+    /// </summary>
+    public static RDialogueCamera DefaultObject => (RDialogueCamera)StaticClass().DefaultObject;
+
     internal RDialogueCamera() { }
 
     /// <summary>

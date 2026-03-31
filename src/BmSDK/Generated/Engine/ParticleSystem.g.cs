@@ -21,6 +21,11 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleSystem.
+    /// </summary>
+    public static ParticleSystem DefaultObject => (ParticleSystem)StaticClass().DefaultObject;
+
     internal ParticleSystem() { }
 
     /// <summary>

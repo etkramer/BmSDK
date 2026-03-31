@@ -21,6 +21,11 @@ public partial class RCharacter_FakeJoker : BmSDK.BmScript.RCharacter_Joker, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_FakeJoker.
+    /// </summary>
+    public static RCharacter_FakeJoker DefaultObject => (RCharacter_FakeJoker)StaticClass().DefaultObject;
+
     internal RCharacter_FakeJoker() { }
 
     /// <summary>

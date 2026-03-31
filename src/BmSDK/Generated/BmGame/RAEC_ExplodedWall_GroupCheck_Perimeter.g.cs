@@ -21,6 +21,11 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_ExplodedWall_GroupCheck_Perimeter.
+    /// </summary>
+    public static RAEC_ExplodedWall_GroupCheck_Perimeter DefaultObject => (RAEC_ExplodedWall_GroupCheck_Perimeter)StaticClass().DefaultObject;
+
     internal RAEC_ExplodedWall_GroupCheck_Perimeter() { }
 
     /// <summary>

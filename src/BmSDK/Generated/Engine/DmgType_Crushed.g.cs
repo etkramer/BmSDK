@@ -21,6 +21,11 @@ public partial class DmgType_Crushed : BmSDK.Engine.DamageType, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DmgType_Crushed.
+    /// </summary>
+    public static DmgType_Crushed DefaultObject => (DmgType_Crushed)StaticClass().DefaultObject;
+
     internal DmgType_Crushed() { }
 
     /// <summary>

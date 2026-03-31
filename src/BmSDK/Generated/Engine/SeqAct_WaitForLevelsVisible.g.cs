@@ -21,6 +21,11 @@ public partial class SeqAct_WaitForLevelsVisible : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_WaitForLevelsVisible.
+    /// </summary>
+    public static SeqAct_WaitForLevelsVisible DefaultObject => (SeqAct_WaitForLevelsVisible)StaticClass().DefaultObject;
+
     internal SeqAct_WaitForLevelsVisible() { }
 
     /// <summary>

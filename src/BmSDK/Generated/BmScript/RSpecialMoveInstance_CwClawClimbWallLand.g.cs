@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_CwClawClimbWallLand.
+    /// </summary>
+    public static RSpecialMoveInstance_CwClawClimbWallLand DefaultObject => (RSpecialMoveInstance_CwClawClimbWallLand)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_CwClawClimbWallLand() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanFinishLieutenant : BmSDK.BmGame.RCombatMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanFinishLieutenant.
+    /// </summary>
+    public static RCombatMove_BatmanFinishLieutenant DefaultObject => (RCombatMove_BatmanFinishLieutenant)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanFinishLieutenant() { }
 
     /// <summary>

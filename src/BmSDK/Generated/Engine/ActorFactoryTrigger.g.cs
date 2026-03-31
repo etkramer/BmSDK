@@ -21,6 +21,11 @@ public partial class ActorFactoryTrigger : BmSDK.Engine.ActorFactory, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryTrigger.
+    /// </summary>
+    public static ActorFactoryTrigger DefaultObject => (ActorFactoryTrigger)StaticClass().DefaultObject;
+
     internal ActorFactoryTrigger() { }
 
     /// <summary>

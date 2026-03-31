@@ -21,6 +21,11 @@ public partial class RSeqAct_SetBatarangParams : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetBatarangParams.
+    /// </summary>
+    public static RSeqAct_SetBatarangParams DefaultObject => (RSeqAct_SetBatarangParams)StaticClass().DefaultObject;
+
     internal RSeqAct_SetBatarangParams() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RXrayWaypointMarker : BmSDK.BmGame.RXrayInterpActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXrayWaypointMarker.
+    /// </summary>
+    public static RXrayWaypointMarker DefaultObject => (RXrayWaypointMarker)StaticClass().DefaultObject;
+
     internal RXrayWaypointMarker() { }
 
     /// <summary>

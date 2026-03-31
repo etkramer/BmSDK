@@ -21,6 +21,11 @@ public partial class ROutOfBoundsRescueVolume : BmSDK.BmGame.RWaterRescueVolumeB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROutOfBoundsRescueVolume.
+    /// </summary>
+    public static ROutOfBoundsRescueVolume DefaultObject => (ROutOfBoundsRescueVolume)StaticClass().DefaultObject;
+
     internal ROutOfBoundsRescueVolume() { }
 
     /// <summary>

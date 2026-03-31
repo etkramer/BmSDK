@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPredatorChallengeVIP : BmSDK.Engine.SequenceActi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPredatorChallengeVIP.
+    /// </summary>
+    public static RSeqAct_SetPredatorChallengeVIP DefaultObject => (RSeqAct_SetPredatorChallengeVIP)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPredatorChallengeVIP() { }
 
     /// <summary>

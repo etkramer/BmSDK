@@ -21,6 +21,11 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HUD.
+    /// </summary>
+    public static HUD DefaultObject => (HUD)StaticClass().DefaultObject;
+
     internal HUD() { }
 
     /// <summary>

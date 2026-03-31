@@ -21,6 +21,11 @@ public partial class RDmgType_SledgeHammer : BmSDK.BmGame.RDamageType, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SledgeHammer.
+    /// </summary>
+    public static RDmgType_SledgeHammer DefaultObject => (RDmgType_SledgeHammer)StaticClass().DefaultObject;
+
     internal RDmgType_SledgeHammer() { }
 
     /// <summary>

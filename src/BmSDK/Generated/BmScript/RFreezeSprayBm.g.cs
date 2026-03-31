@@ -21,6 +21,11 @@ public partial class RFreezeSprayBm : BmSDK.BmGame.RFreezeSpray, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeSprayBm.
+    /// </summary>
+    public static RFreezeSprayBm DefaultObject => (RFreezeSprayBm)StaticClass().DefaultObject;
+
     internal RFreezeSprayBm() { }
 
     /// <summary>

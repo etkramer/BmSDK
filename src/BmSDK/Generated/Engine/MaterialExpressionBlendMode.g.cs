@@ -21,6 +21,11 @@ public partial class MaterialExpressionBlendMode : BmSDK.Engine.MaterialExpressi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionBlendMode.
+    /// </summary>
+    public static MaterialExpressionBlendMode DefaultObject => (MaterialExpressionBlendMode)StaticClass().DefaultObject;
+
     internal MaterialExpressionBlendMode() { }
 
     /// <summary>

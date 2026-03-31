@@ -21,6 +21,11 @@ public partial class RDmgType_BombExplosion : BmSDK.BmGame.RDmgType_Venom, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BombExplosion.
+    /// </summary>
+    public static RDmgType_BombExplosion DefaultObject => (RDmgType_BombExplosion)StaticClass().DefaultObject;
+
     internal RDmgType_BombExplosion() { }
 
     /// <summary>

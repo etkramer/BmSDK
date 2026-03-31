@@ -21,6 +21,11 @@ public partial class RBMAIAction_ShootGen : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ShootGen.
+    /// </summary>
+    public static RBMAIAction_ShootGen DefaultObject => (RBMAIAction_ShootGen)StaticClass().DefaultObject;
+
     internal RBMAIAction_ShootGen() { }
 
     /// <summary>

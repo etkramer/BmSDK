@@ -21,6 +21,11 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as R3rdPersonCamera.
+    /// </summary>
+    public static R3rdPersonCamera DefaultObject => (R3rdPersonCamera)StaticClass().DefaultObject;
+
     internal R3rdPersonCamera() { }
 
     /// <summary>

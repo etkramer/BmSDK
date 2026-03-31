@@ -21,6 +21,11 @@ public partial class RLevelTransitionDoorMedical : BmSDK.BmGame.RLevelTransition
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelTransitionDoorMedical.
+    /// </summary>
+    public static RLevelTransitionDoorMedical DefaultObject => (RLevelTransitionDoorMedical)StaticClass().DefaultObject;
+
     internal RLevelTransitionDoorMedical() { }
 
     /// <summary>

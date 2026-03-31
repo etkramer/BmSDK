@@ -21,6 +21,11 @@ public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInterpTrackRumble.
+    /// </summary>
+    public static RInterpTrackRumble DefaultObject => (RInterpTrackRumble)StaticClass().DefaultObject;
+
     internal RInterpTrackRumble() { }
 
     /// <summary>

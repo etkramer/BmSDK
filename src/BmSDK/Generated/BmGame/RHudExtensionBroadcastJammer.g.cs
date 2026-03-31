@@ -21,6 +21,11 @@ public partial class RHudExtensionBroadcastJammer : BmSDK.BmGame.RHudExtension, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionBroadcastJammer.
+    /// </summary>
+    public static RHudExtensionBroadcastJammer DefaultObject => (RHudExtensionBroadcastJammer)StaticClass().DefaultObject;
+
     internal RHudExtensionBroadcastJammer() { }
 
     /// <summary>

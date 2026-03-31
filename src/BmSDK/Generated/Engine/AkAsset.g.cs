@@ -21,6 +21,11 @@ public partial class AkAsset : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAsset.
+    /// </summary>
+    public static AkAsset DefaultObject => (AkAsset)StaticClass().DefaultObject;
+
     internal AkAsset() { }
 
     /// <summary>

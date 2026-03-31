@@ -21,6 +21,11 @@ public partial class RClayfaceProjectileBase : BmSDK.Engine.DynamicSMActor, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RClayfaceProjectileBase.
+    /// </summary>
+    public static RClayfaceProjectileBase DefaultObject => (RClayfaceProjectileBase)StaticClass().DefaultObject;
+
     internal RClayfaceProjectileBase() { }
 
     /// <summary>

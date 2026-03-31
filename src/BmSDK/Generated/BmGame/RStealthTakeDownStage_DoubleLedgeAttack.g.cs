@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_DoubleLedgeAttack.
+    /// </summary>
+    public static RStealthTakeDownStage_DoubleLedgeAttack DefaultObject => (RStealthTakeDownStage_DoubleLedgeAttack)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_DoubleLedgeAttack() { }
 
     /// <summary>

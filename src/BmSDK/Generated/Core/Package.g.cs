@@ -21,6 +21,11 @@ public partial class Package : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Package.
+    /// </summary>
+    public static Package DefaultObject => (Package)StaticClass().DefaultObject;
+
     internal Package() { }
 
     /// <summary>

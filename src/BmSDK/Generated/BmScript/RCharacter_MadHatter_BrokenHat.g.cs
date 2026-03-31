@@ -21,6 +21,11 @@ public partial class RCharacter_MadHatter_BrokenHat : BmSDK.BmScript.RCharacter_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_MadHatter_BrokenHat.
+    /// </summary>
+    public static RCharacter_MadHatter_BrokenHat DefaultObject => (RCharacter_MadHatter_BrokenHat)StaticClass().DefaultObject;
+
     internal RCharacter_MadHatter_BrokenHat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _Console.
+    /// </summary>
+    public static _Console DefaultObject => (_Console)StaticClass().DefaultObject;
+
     internal _Console() { }
 
     /// <summary>

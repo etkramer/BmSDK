@@ -21,6 +21,11 @@ public partial class RSeqAct_AimPawn : BmSDK.Engine.SequenceAction, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AimPawn.
+    /// </summary>
+    public static RSeqAct_AimPawn DefaultObject => (RSeqAct_AimPawn)StaticClass().DefaultObject;
+
     internal RSeqAct_AimPawn() { }
 
     /// <summary>

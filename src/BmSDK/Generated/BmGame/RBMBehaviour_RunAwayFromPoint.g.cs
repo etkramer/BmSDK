@@ -21,6 +21,11 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_RunAwayFromPoint.
+    /// </summary>
+    public static RBMBehaviour_RunAwayFromPoint DefaultObject => (RBMBehaviour_RunAwayFromPoint)StaticClass().DefaultObject;
+
     internal RBMBehaviour_RunAwayFromPoint() { }
 
     /// <summary>

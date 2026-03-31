@@ -21,6 +21,11 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_MovementOutput.
+    /// </summary>
+    public static RAnimUtil_MovementOutput DefaultObject => (RAnimUtil_MovementOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_MovementOutput() { }
 
     /// <summary>

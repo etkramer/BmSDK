@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_HazardStumble : BmSDK.BmGame.RSpecialMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_HazardStumble.
+    /// </summary>
+    public static RSpecialMoveConfig_HazardStumble DefaultObject => (RSpecialMoveConfig_HazardStumble)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_HazardStumble() { }
 
     /// <summary>

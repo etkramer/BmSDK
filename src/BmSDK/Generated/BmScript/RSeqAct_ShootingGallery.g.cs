@@ -21,6 +21,11 @@ public partial class RSeqAct_ShootingGallery : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ShootingGallery.
+    /// </summary>
+    public static RSeqAct_ShootingGallery DefaultObject => (RSeqAct_ShootingGallery)StaticClass().DefaultObject;
+
     internal RSeqAct_ShootingGallery() { }
 
     /// <summary>

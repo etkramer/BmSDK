@@ -21,6 +21,11 @@ public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DOFEffect.
+    /// </summary>
+    public static DOFEffect DefaultObject => (DOFEffect)StaticClass().DefaultObject;
+
     internal DOFEffect() { }
 
     /// <summary>

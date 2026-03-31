@@ -21,6 +21,11 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrimeSceneBase.
+    /// </summary>
+    public static RCrimeSceneBase DefaultObject => (RCrimeSceneBase)StaticClass().DefaultObject;
+
     internal RCrimeSceneBase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_NewOneShotWalkCycle : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NewOneShotWalkCycle.
+    /// </summary>
+    public static RSeqAct_NewOneShotWalkCycle DefaultObject => (RSeqAct_NewOneShotWalkCycle)StaticClass().DefaultObject;
+
     internal RSeqAct_NewOneShotWalkCycle() { }
 
     /// <summary>

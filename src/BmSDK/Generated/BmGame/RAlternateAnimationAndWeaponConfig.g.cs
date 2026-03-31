@@ -21,6 +21,11 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAlternateAnimationAndWeaponConfig.
+    /// </summary>
+    public static RAlternateAnimationAndWeaponConfig DefaultObject => (RAlternateAnimationAndWeaponConfig)StaticClass().DefaultObject;
+
     internal RAlternateAnimationAndWeaponConfig() { }
 
     /// <summary>

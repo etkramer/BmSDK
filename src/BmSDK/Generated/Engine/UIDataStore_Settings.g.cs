@@ -21,6 +21,11 @@ public partial class UIDataStore_Settings : BmSDK.Engine.UIDataStore, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_Settings.
+    /// </summary>
+    public static UIDataStore_Settings DefaultObject => (UIDataStore_Settings)StaticClass().DefaultObject;
+
     internal UIDataStore_Settings() { }
 
     /// <summary>

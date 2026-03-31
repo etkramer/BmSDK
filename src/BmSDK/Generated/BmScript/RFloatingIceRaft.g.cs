@@ -21,6 +21,11 @@ public partial class RFloatingIceRaft : BmSDK.BmGame.RFloatingRaft, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingIceRaft.
+    /// </summary>
+    public static RFloatingIceRaft DefaultObject => (RFloatingIceRaft)StaticClass().DefaultObject;
+
     internal RFloatingIceRaft() { }
 
     /// <summary>

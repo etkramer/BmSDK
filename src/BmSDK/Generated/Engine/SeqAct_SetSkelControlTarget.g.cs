@@ -21,6 +21,11 @@ public partial class SeqAct_SetSkelControlTarget : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetSkelControlTarget.
+    /// </summary>
+    public static SeqAct_SetSkelControlTarget DefaultObject => (SeqAct_SetSkelControlTarget)StaticClass().DefaultObject;
+
     internal SeqAct_SetSkelControlTarget() { }
 
     /// <summary>

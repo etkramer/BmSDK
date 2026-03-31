@@ -21,6 +21,11 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieBackScreen.
+    /// </summary>
+    public static RGFxMovieBackScreen DefaultObject => (RGFxMovieBackScreen)StaticClass().DefaultObject;
+
     internal RGFxMovieBackScreen() { }
 
     /// <summary>

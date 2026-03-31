@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPhysicsVelocity : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPhysicsVelocity.
+    /// </summary>
+    public static RSeqAct_SetPhysicsVelocity DefaultObject => (RSeqAct_SetPhysicsVelocity)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPhysicsVelocity() { }
 
     /// <summary>

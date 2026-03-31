@@ -21,6 +21,11 @@ public partial class RSeqEvent_JokerBoxBataranged : BmSDK.Engine.SequenceEvent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_JokerBoxBataranged.
+    /// </summary>
+    public static RSeqEvent_JokerBoxBataranged DefaultObject => (RSeqEvent_JokerBoxBataranged)StaticClass().DefaultObject;
+
     internal RSeqEvent_JokerBoxBataranged() { }
 
     /// <summary>

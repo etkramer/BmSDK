@@ -21,6 +21,11 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMissingHostageAIMarker.
+    /// </summary>
+    public static RMissingHostageAIMarker DefaultObject => (RMissingHostageAIMarker)StaticClass().DefaultObject;
+
     internal RMissingHostageAIMarker() { }
 
     /// <summary>

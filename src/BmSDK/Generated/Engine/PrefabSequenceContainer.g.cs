@@ -21,6 +21,11 @@ public partial class PrefabSequenceContainer : BmSDK.Engine.Sequence, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrefabSequenceContainer.
+    /// </summary>
+    public static PrefabSequenceContainer DefaultObject => (PrefabSequenceContainer)StaticClass().DefaultObject;
+
     internal PrefabSequenceContainer() { }
 
     /// <summary>

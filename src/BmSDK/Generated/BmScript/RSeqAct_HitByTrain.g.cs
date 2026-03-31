@@ -21,6 +21,11 @@ public partial class RSeqAct_HitByTrain : BmSDK.Engine.SequenceAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HitByTrain.
+    /// </summary>
+    public static RSeqAct_HitByTrain DefaultObject => (RSeqAct_HitByTrain)StaticClass().DefaultObject;
+
     internal RSeqAct_HitByTrain() { }
 
     /// <summary>

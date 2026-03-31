@@ -21,6 +21,11 @@ public partial class SpotLightMovable : BmSDK.Engine.SpotLight, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpotLightMovable.
+    /// </summary>
+    public static SpotLightMovable DefaultObject => (SpotLightMovable)StaticClass().DefaultObject;
+
     internal SpotLightMovable() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpressionCosine : BmSDK.Engine.MaterialExpression,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionCosine.
+    /// </summary>
+    public static MaterialExpressionCosine DefaultObject => (MaterialExpressionCosine)StaticClass().DefaultObject;
+
     internal MaterialExpressionCosine() { }
 
     /// <summary>

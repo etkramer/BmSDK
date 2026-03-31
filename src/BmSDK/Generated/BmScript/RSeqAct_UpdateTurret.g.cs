@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateTurret : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateTurret.
+    /// </summary>
+    public static RSeqAct_UpdateTurret DefaultObject => (RSeqAct_UpdateTurret)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateTurret() { }
 
     /// <summary>

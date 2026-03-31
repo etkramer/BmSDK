@@ -21,6 +21,11 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIRoot.
+    /// </summary>
+    public static UIRoot DefaultObject => (UIRoot)StaticClass().DefaultObject;
+
     internal UIRoot() { }
 
     /// <summary>

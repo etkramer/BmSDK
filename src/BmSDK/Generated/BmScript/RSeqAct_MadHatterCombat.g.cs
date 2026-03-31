@@ -21,6 +21,11 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MadHatterCombat.
+    /// </summary>
+    public static RSeqAct_MadHatterCombat DefaultObject => (RSeqAct_MadHatterCombat)StaticClass().DefaultObject;
+
     internal RSeqAct_MadHatterCombat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPresetAimingConfigs : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPresetAimingConfigs.
+    /// </summary>
+    public static RPresetAimingConfigs DefaultObject => (RPresetAimingConfigs)StaticClass().DefaultObject;
+
     internal RPresetAimingConfigs() { }
 
     /// <summary>

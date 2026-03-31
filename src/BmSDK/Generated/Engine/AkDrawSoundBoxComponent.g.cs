@@ -21,6 +21,11 @@ public partial class AkDrawSoundBoxComponent : BmSDK.Engine.DrawBoxComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkDrawSoundBoxComponent.
+    /// </summary>
+    public static AkDrawSoundBoxComponent DefaultObject => (AkDrawSoundBoxComponent)StaticClass().DefaultObject;
+
     internal AkDrawSoundBoxComponent() { }
 
     /// <summary>

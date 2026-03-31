@@ -21,6 +21,11 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhotoScanner.
+    /// </summary>
+    public static RPhotoScanner DefaultObject => (RPhotoScanner)StaticClass().DefaultObject;
+
     internal RPhotoScanner() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_KillHostage.
+    /// </summary>
+    public static RBMAIAction_KillHostage DefaultObject => (RBMAIAction_KillHostage)StaticClass().DefaultObject;
+
     internal RBMAIAction_KillHostage() { }
 
     /// <summary>

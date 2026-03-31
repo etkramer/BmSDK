@@ -21,6 +21,11 @@ public partial class DistributionVectorParticleParameter : BmSDK.Engine.Distribu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorParticleParameter.
+    /// </summary>
+    public static DistributionVectorParticleParameter DefaultObject => (DistributionVectorParticleParameter)StaticClass().DefaultObject;
+
     internal DistributionVectorParticleParameter() { }
 
     /// <summary>

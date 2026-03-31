@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GlassWallAttack.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GlassWallAttack DefaultObject => (RRbStealthTakeDownStage_GlassWallAttack)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GlassWallAttack() { }
 
     /// <summary>

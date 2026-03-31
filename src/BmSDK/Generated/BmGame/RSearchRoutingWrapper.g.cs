@@ -21,6 +21,11 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSearchRoutingWrapper.
+    /// </summary>
+    public static RSearchRoutingWrapper DefaultObject => (RSearchRoutingWrapper)StaticClass().DefaultObject;
+
     internal RSearchRoutingWrapper() { }
 
     /// <summary>

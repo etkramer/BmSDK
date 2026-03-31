@@ -21,6 +21,11 @@ public partial class SceneCapturePortalActor : BmSDK.Engine.SceneCaptureReflectA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCapturePortalActor.
+    /// </summary>
+    public static SceneCapturePortalActor DefaultObject => (SceneCapturePortalActor)StaticClass().DefaultObject;
+
     internal SceneCapturePortalActor() { }
 
     /// <summary>

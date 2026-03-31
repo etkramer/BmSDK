@@ -21,6 +21,11 @@ public partial class RCartoonViewPostProcess : BmSDK.BmGame.RViewPostProcess, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCartoonViewPostProcess.
+    /// </summary>
+    public static RCartoonViewPostProcess DefaultObject => (RCartoonViewPostProcess)StaticClass().DefaultObject;
+
     internal RCartoonViewPostProcess() { }
 
     /// <summary>

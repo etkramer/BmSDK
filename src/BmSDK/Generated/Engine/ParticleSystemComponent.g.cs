@@ -21,6 +21,11 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleSystemComponent.
+    /// </summary>
+    public static ParticleSystemComponent DefaultObject => (ParticleSystemComponent)StaticClass().DefaultObject;
+
     internal ParticleSystemComponent() { }
 
     /// <summary>

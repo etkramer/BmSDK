@@ -21,6 +21,11 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTerrainLayerWeight.
+    /// </summary>
+    public static MaterialExpressionTerrainLayerWeight DefaultObject => (MaterialExpressionTerrainLayerWeight)StaticClass().DefaultObject;
+
     internal MaterialExpressionTerrainLayerWeight() { }
 
     /// <summary>

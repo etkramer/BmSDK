@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_WanderPointActivated : BmSDK.BmGame.RBMSeqEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_WanderPointActivated.
+    /// </summary>
+    public static RBMSeqEvent_WanderPointActivated DefaultObject => (RBMSeqEvent_WanderPointActivated)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_WanderPointActivated() { }
 
     /// <summary>

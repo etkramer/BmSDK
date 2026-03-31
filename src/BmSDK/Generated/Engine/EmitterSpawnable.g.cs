@@ -21,6 +21,11 @@ public partial class EmitterSpawnable : BmSDK.Engine.Emitter, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EmitterSpawnable.
+    /// </summary>
+    public static EmitterSpawnable DefaultObject => (EmitterSpawnable)StaticClass().DefaultObject;
+
     internal EmitterSpawnable() { }
 
     /// <summary>

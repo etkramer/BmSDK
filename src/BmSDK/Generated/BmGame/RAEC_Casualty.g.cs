@@ -21,6 +21,11 @@ public partial class RAEC_Casualty : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Casualty.
+    /// </summary>
+    public static RAEC_Casualty DefaultObject => (RAEC_Casualty)StaticClass().DefaultObject;
+
     internal RAEC_Casualty() { }
 
     /// <summary>

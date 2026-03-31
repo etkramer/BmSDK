@@ -21,6 +21,11 @@ public partial class RSeqAct_ComboValueReached : BmSDK.Engine.SeqAct_Latent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ComboValueReached.
+    /// </summary>
+    public static RSeqAct_ComboValueReached DefaultObject => (RSeqAct_ComboValueReached)StaticClass().DefaultObject;
+
     internal RSeqAct_ComboValueReached() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHidePointRenderingComponent : BmSDK.Engine.PrimitiveCompon
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePointRenderingComponent.
+    /// </summary>
+    public static RHidePointRenderingComponent DefaultObject => (RHidePointRenderingComponent)StaticClass().DefaultObject;
+
     internal RHidePointRenderingComponent() { }
 
     /// <summary>

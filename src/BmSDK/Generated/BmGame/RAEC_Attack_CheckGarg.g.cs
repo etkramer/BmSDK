@@ -21,6 +21,11 @@ public partial class RAEC_Attack_CheckGarg : BmSDK.BmGame.RAEC_SubGroup, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_CheckGarg.
+    /// </summary>
+    public static RAEC_Attack_CheckGarg DefaultObject => (RAEC_Attack_CheckGarg)StaticClass().DefaultObject;
+
     internal RAEC_Attack_CheckGarg() { }
 
     /// <summary>

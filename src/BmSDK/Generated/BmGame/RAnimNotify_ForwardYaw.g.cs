@@ -21,6 +21,11 @@ public partial class RAnimNotify_ForwardYaw : BmSDK.BmGame.RAnimNotify_BeginEnd,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_ForwardYaw.
+    /// </summary>
+    public static RAnimNotify_ForwardYaw DefaultObject => (RAnimNotify_ForwardYaw)StaticClass().DefaultObject;
+
     internal RAnimNotify_ForwardYaw() { }
 
     /// <summary>

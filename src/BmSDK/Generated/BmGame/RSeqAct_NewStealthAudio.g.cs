@@ -21,6 +21,11 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_NewStealthAudio.
+    /// </summary>
+    public static RSeqAct_NewStealthAudio DefaultObject => (RSeqAct_NewStealthAudio)StaticClass().DefaultObject;
+
     internal RSeqAct_NewStealthAudio() { }
 
     /// <summary>

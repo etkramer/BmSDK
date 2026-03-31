@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_RailingAttack_Harley : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_RailingAttack_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_RailingAttack_Harley DefaultObject => (RRbStealthTakeDownStage_RailingAttack_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_RailingAttack_Harley() { }
 
     /// <summary>

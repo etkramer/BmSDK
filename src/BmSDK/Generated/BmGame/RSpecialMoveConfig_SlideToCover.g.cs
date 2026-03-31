@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_SlideToCover : BmSDK.BmGame.RSpecialMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_SlideToCover.
+    /// </summary>
+    public static RSpecialMoveConfig_SlideToCover DefaultObject => (RSpecialMoveConfig_SlideToCover)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_SlideToCover() { }
 
     /// <summary>

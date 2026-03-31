@@ -21,6 +21,11 @@ public partial class InterpActor_ForCinematic : BmSDK.Engine.InterpActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpActor_ForCinematic.
+    /// </summary>
+    public static InterpActor_ForCinematic DefaultObject => (InterpActor_ForCinematic)StaticClass().DefaultObject;
+
     internal InterpActor_ForCinematic() { }
 
     /// <summary>

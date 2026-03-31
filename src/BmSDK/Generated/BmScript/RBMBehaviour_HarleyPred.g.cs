@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HarleyPred.
+    /// </summary>
+    public static RBMBehaviour_HarleyPred DefaultObject => (RBMBehaviour_HarleyPred)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HarleyPred() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Volume.
+    /// </summary>
+    public static Volume DefaultObject => (Volume)StaticClass().DefaultObject;
+
     internal Volume() { }
 
     /// <summary>

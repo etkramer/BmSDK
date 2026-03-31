@@ -21,6 +21,11 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinStaff.
+    /// </summary>
+    public static RRobinStaff DefaultObject => (RRobinStaff)StaticClass().DefaultObject;
+
     internal RRobinStaff() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_PDLC1_SetStoryModeBool : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PDLC1_SetStoryModeBool.
+    /// </summary>
+    public static RSeqAct_PDLC1_SetStoryModeBool DefaultObject => (RSeqAct_PDLC1_SetStoryModeBool)StaticClass().DefaultObject;
+
     internal RSeqAct_PDLC1_SetStoryModeBool() { }
 
     /// <summary>

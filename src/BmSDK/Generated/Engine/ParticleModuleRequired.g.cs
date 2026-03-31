@@ -21,6 +21,11 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleRequired.
+    /// </summary>
+    public static ParticleModuleRequired DefaultObject => (ParticleModuleRequired)StaticClass().DefaultObject;
+
     internal ParticleModuleRequired() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAudioPointController : BmSDK.BmGame.RPawnCharacter, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAudioPointController.
+    /// </summary>
+    public static RAudioPointController DefaultObject => (RAudioPointController)StaticClass().DefaultObject;
+
     internal RAudioPointController() { }
 
     /// <summary>

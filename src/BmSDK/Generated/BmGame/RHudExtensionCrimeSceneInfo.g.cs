@@ -21,6 +21,11 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionCrimeSceneInfo.
+    /// </summary>
+    public static RHudExtensionCrimeSceneInfo DefaultObject => (RHudExtensionCrimeSceneInfo)StaticClass().DefaultObject;
+
     internal RHudExtensionCrimeSceneInfo() { }
 
     /// <summary>

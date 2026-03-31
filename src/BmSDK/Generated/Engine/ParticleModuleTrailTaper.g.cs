@@ -21,6 +21,11 @@ public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrail
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTrailTaper.
+    /// </summary>
+    public static ParticleModuleTrailTaper DefaultObject => (ParticleModuleTrailTaper)StaticClass().DefaultObject;
+
     internal ParticleModuleTrailTaper() { }
 
     /// <summary>

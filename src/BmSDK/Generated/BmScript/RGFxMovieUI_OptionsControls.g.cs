@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_OptionsControls : BmSDK.BmGame.RGFxMovieUI, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_OptionsControls.
+    /// </summary>
+    public static RGFxMovieUI_OptionsControls DefaultObject => (RGFxMovieUI_OptionsControls)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_OptionsControls() { }
 
     /// <summary>

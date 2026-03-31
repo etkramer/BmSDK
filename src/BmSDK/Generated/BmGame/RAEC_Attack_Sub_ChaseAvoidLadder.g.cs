@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_ChaseAvoidLadder : BmSDK.BmGame.RAlertEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_ChaseAvoidLadder.
+    /// </summary>
+    public static RAEC_Attack_Sub_ChaseAvoidLadder DefaultObject => (RAEC_Attack_Sub_ChaseAvoidLadder)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_ChaseAvoidLadder() { }
 
     /// <summary>

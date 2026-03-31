@@ -21,6 +21,11 @@ public partial class NxForceFieldSpawnable : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxForceFieldSpawnable.
+    /// </summary>
+    public static NxForceFieldSpawnable DefaultObject => (NxForceFieldSpawnable)StaticClass().DefaultObject;
+
     internal NxForceFieldSpawnable() { }
 
     /// <summary>

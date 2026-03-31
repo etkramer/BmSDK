@@ -21,6 +21,11 @@ public partial class RPickup_Tape : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPickup_Tape.
+    /// </summary>
+    public static RPickup_Tape DefaultObject => (RPickup_Tape)StaticClass().DefaultObject;
+
     internal RPickup_Tape() { }
 
     /// <summary>

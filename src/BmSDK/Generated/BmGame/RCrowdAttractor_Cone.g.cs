@@ -21,6 +21,11 @@ public partial class RCrowdAttractor_Cone : BmSDK.BmGame.RCrowdAttractor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdAttractor_Cone.
+    /// </summary>
+    public static RCrowdAttractor_Cone DefaultObject => (RCrowdAttractor_Cone)StaticClass().DefaultObject;
+
     internal RCrowdAttractor_Cone() { }
 
     /// <summary>

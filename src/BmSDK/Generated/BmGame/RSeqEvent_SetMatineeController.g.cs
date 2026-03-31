@@ -21,6 +21,11 @@ public partial class RSeqEvent_SetMatineeController : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SetMatineeController.
+    /// </summary>
+    public static RSeqEvent_SetMatineeController DefaultObject => (RSeqEvent_SetMatineeController)StaticClass().DefaultObject;
+
     internal RSeqEvent_SetMatineeController() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterGCPD.
+    /// </summary>
+    public static RHelicopterGCPD DefaultObject => (RHelicopterGCPD)StaticClass().DefaultObject;
+
     internal RHelicopterGCPD() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class LightMapTexture2D : BmSDK.Engine.Texture2D, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightMapTexture2D.
+    /// </summary>
+    public static LightMapTexture2D DefaultObject => (LightMapTexture2D)StaticClass().DefaultObject;
+
     internal LightMapTexture2D() { }
 
     /// <summary>

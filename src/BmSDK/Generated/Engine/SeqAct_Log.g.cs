@@ -21,6 +21,11 @@ public partial class SeqAct_Log : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Log.
+    /// </summary>
+    public static SeqAct_Log DefaultObject => (SeqAct_Log)StaticClass().DefaultObject;
+
     internal SeqAct_Log() { }
 
     /// <summary>

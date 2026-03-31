@@ -21,6 +21,11 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChatteringTeeth.
+    /// </summary>
+    public static RChatteringTeeth DefaultObject => (RChatteringTeeth)StaticClass().DefaultObject;
+
     internal RChatteringTeeth() { }
 
     /// <summary>

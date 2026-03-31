@@ -21,6 +21,11 @@ public partial class PackageMapSeekFree : BmSDK.Engine.PackageMapLevel, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PackageMapSeekFree.
+    /// </summary>
+    public static PackageMapSeekFree DefaultObject => (PackageMapSeekFree)StaticClass().DefaultObject;
+
     internal PackageMapSeekFree() { }
 
     /// <summary>

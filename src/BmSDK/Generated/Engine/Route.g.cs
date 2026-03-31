@@ -21,6 +21,11 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Route.
+    /// </summary>
+    public static Route DefaultObject => (Route)StaticClass().DefaultObject;
+
     internal Route() { }
 
     /// <summary>

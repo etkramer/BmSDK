@@ -21,6 +21,11 @@ public partial class RBMBehaviour_SetNoVantageEscapeTutorial : BmSDK.BmGame.RBMB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_SetNoVantageEscapeTutorial.
+    /// </summary>
+    public static RBMBehaviour_SetNoVantageEscapeTutorial DefaultObject => (RBMBehaviour_SetNoVantageEscapeTutorial)StaticClass().DefaultObject;
+
     internal RBMBehaviour_SetNoVantageEscapeTutorial() { }
 
     /// <summary>

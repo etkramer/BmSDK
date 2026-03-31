@@ -21,6 +21,11 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerBatmanWithSword.
+    /// </summary>
+    public static RPawnPlayerBatmanWithSword DefaultObject => (RPawnPlayerBatmanWithSword)StaticClass().DefaultObject;
+
     internal RPawnPlayerBatmanWithSword() { }
 
     /// <summary>

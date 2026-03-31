@@ -21,6 +21,11 @@ public partial class RCombatMove_BaneSwing : BmSDK.BmScript.RCombatMove_BaneAtta
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BaneSwing.
+    /// </summary>
+    public static RCombatMove_BaneSwing DefaultObject => (RCombatMove_BaneSwing)StaticClass().DefaultObject;
+
     internal RCombatMove_BaneSwing() { }
 
     /// <summary>

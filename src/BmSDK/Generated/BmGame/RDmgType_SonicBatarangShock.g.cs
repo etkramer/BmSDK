@@ -21,6 +21,11 @@ public partial class RDmgType_SonicBatarangShock : BmSDK.BmGame.RDamageType, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SonicBatarangShock.
+    /// </summary>
+    public static RDmgType_SonicBatarangShock DefaultObject => (RDmgType_SonicBatarangShock)StaticClass().DefaultObject;
+
     internal RDmgType_SonicBatarangShock() { }
 
     /// <summary>

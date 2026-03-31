@@ -21,6 +21,11 @@ public partial class RAnimNode_Additive : BmSDK.Engine.AnimNodeBlendBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_Additive.
+    /// </summary>
+    public static RAnimNode_Additive DefaultObject => (RAnimNode_Additive)StaticClass().DefaultObject;
+
     internal RAnimNode_Additive() { }
 
     /// <summary>

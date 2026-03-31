@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene.
+    /// </summary>
+    public static RBMDeathCutscene DefaultObject => (RBMDeathCutscene)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene() { }
 
     /// <summary>

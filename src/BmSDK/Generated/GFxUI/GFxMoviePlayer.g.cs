@@ -21,6 +21,11 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxMoviePlayer.
+    /// </summary>
+    public static GFxMoviePlayer DefaultObject => (GFxMoviePlayer)StaticClass().DefaultObject;
+
     internal GFxMoviePlayer() { }
 
     /// <summary>

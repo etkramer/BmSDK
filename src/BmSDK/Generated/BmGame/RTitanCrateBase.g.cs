@@ -21,6 +21,11 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTitanCrateBase.
+    /// </summary>
+    public static RTitanCrateBase DefaultObject => (RTitanCrateBase)StaticClass().DefaultObject;
+
     internal RTitanCrateBase() { }
 
     /// <summary>

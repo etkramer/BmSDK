@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Pipe : BmSDK.BmGame.RBMCombatThrownOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Pipe.
+    /// </summary>
+    public static RBMCombatThrownObject_Pipe DefaultObject => (RBMCombatThrownObject_Pipe)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Pipe() { }
 
     /// <summary>

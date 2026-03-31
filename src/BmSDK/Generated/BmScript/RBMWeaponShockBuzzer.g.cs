@@ -21,6 +21,11 @@ public partial class RBMWeaponShockBuzzer : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponShockBuzzer.
+    /// </summary>
+    public static RBMWeaponShockBuzzer DefaultObject => (RBMWeaponShockBuzzer)StaticClass().DefaultObject;
+
     internal RBMWeaponShockBuzzer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_PlaceMine : BmSDK.BmGame.RBMBehaviour_ActionQu
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_PlaceMine.
+    /// </summary>
+    public static RBMBehaviour_PlaceMine DefaultObject => (RBMBehaviour_PlaceMine)StaticClass().DefaultObject;
+
     internal RBMBehaviour_PlaceMine() { }
 
     /// <summary>

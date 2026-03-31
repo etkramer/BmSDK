@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_GlideKick.
+    /// </summary>
+    public static RSpecialMoveInstance_GlideKick DefaultObject => (RSpecialMoveInstance_GlideKick)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_GlideKick() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_EscapeStumble : BmSDK.BmGame.RBMAIAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_EscapeStumble.
+    /// </summary>
+    public static RBMAIAction_EscapeStumble DefaultObject => (RBMAIAction_EscapeStumble)StaticClass().DefaultObject;
+
     internal RBMAIAction_EscapeStumble() { }
 
     /// <summary>

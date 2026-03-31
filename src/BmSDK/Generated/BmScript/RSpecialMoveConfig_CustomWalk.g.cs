@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_CustomWalk : BmSDK.BmGame.RSpecialMoveCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_CustomWalk.
+    /// </summary>
+    public static RSpecialMoveConfig_CustomWalk DefaultObject => (RSpecialMoveConfig_CustomWalk)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_CustomWalk() { }
 
     /// <summary>

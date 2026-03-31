@@ -21,6 +21,11 @@ public partial class DOFBloomMotionBlurEffect : BmSDK.Engine.DOFAndBloomEffect, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DOFBloomMotionBlurEffect.
+    /// </summary>
+    public static DOFBloomMotionBlurEffect DefaultObject => (DOFBloomMotionBlurEffect)StaticClass().DefaultObject;
+
     internal DOFBloomMotionBlurEffect() { }
 
     /// <summary>

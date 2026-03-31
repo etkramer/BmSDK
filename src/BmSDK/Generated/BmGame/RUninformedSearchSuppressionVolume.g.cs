@@ -21,6 +21,11 @@ public partial class RUninformedSearchSuppressionVolume : BmSDK.Engine.Volume, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RUninformedSearchSuppressionVolume.
+    /// </summary>
+    public static RUninformedSearchSuppressionVolume DefaultObject => (RUninformedSearchSuppressionVolume)StaticClass().DefaultObject;
+
     internal RUninformedSearchSuppressionVolume() { }
 
     /// <summary>

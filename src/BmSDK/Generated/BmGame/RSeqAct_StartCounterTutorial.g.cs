@@ -21,6 +21,11 @@ public partial class RSeqAct_StartCounterTutorial : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartCounterTutorial.
+    /// </summary>
+    public static RSeqAct_StartCounterTutorial DefaultObject => (RSeqAct_StartCounterTutorial)StaticClass().DefaultObject;
+
     internal RSeqAct_StartCounterTutorial() { }
 
     /// <summary>

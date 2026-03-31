@@ -21,6 +21,11 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTwoFaceRocket.
+    /// </summary>
+    public static RTwoFaceRocket DefaultObject => (RTwoFaceRocket)StaticClass().DefaultObject;
+
     internal RTwoFaceRocket() { }
 
     /// <summary>

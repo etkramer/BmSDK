@@ -21,6 +21,11 @@ public partial class RSeqAct_MagneticDoor : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_MagneticDoor.
+    /// </summary>
+    public static RSeqAct_MagneticDoor DefaultObject => (RSeqAct_MagneticDoor)StaticClass().DefaultObject;
+
     internal RSeqAct_MagneticDoor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorGunLockerBase.
+    /// </summary>
+    public static RPredatorGunLockerBase DefaultObject => (RPredatorGunLockerBase)StaticClass().DefaultObject;
+
     internal RPredatorGunLockerBase() { }
 
     /// <summary>

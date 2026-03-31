@@ -21,6 +21,11 @@ public partial class RTunnelGrate_NonInteractive : BmSDK.BmScript.RTunnelGrate, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelGrate_NonInteractive.
+    /// </summary>
+    public static RTunnelGrate_NonInteractive DefaultObject => (RTunnelGrate_NonInteractive)StaticClass().DefaultObject;
+
     internal RTunnelGrate_NonInteractive() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_GrundyBeatUp : BmSDK.BmGame.RCombatMove_BatmanS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GrundyBeatUp.
+    /// </summary>
+    public static RCombatMove_GrundyBeatUp DefaultObject => (RCombatMove_GrundyBeatUp)StaticClass().DefaultObject;
+
     internal RCombatMove_GrundyBeatUp() { }
 
     /// <summary>

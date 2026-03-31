@@ -21,6 +21,11 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDialogueManager.
+    /// </summary>
+    public static RDialogueManager DefaultObject => (RDialogueManager)StaticClass().DefaultObject;
+
     internal RDialogueManager() { }
 
     /// <summary>

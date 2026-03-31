@@ -21,6 +21,11 @@ public partial class SeqAct_SetPhysics : BmSDK.Engine.SequenceAction, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetPhysics.
+    /// </summary>
+    public static SeqAct_SetPhysics DefaultObject => (SeqAct_SetPhysics)StaticClass().DefaultObject;
+
     internal SeqAct_SetPhysics() { }
 
     /// <summary>

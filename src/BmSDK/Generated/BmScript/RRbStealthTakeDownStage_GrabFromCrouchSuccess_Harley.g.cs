@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley : BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley DefaultObject => (RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley() { }
 
     /// <summary>

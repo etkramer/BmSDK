@@ -21,6 +21,11 @@ public partial class MaterialExpressionSign : BmSDK.Engine.MaterialExpression, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSign.
+    /// </summary>
+    public static MaterialExpressionSign DefaultObject => (MaterialExpressionSign)StaticClass().DefaultObject;
+
     internal MaterialExpressionSign() { }
 
     /// <summary>

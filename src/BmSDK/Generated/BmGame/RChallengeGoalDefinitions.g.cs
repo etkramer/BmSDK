@@ -21,6 +21,11 @@ public partial class RChallengeGoalDefinitions : BmSDK.Engine.Actor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChallengeGoalDefinitions.
+    /// </summary>
+    public static RChallengeGoalDefinitions DefaultObject => (RChallengeGoalDefinitions)StaticClass().DefaultObject;
+
     internal RChallengeGoalDefinitions() { }
 
     /// <summary>

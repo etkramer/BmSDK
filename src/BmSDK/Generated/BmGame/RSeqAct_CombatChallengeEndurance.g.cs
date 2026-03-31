@@ -21,6 +21,11 @@ public partial class RSeqAct_CombatChallengeEndurance : BmSDK.Engine.SeqAct_Late
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CombatChallengeEndurance.
+    /// </summary>
+    public static RSeqAct_CombatChallengeEndurance DefaultObject => (RSeqAct_CombatChallengeEndurance)StaticClass().DefaultObject;
+
     internal RSeqAct_CombatChallengeEndurance() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_RobinThrownObjectCounter : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RobinThrownObjectCounter.
+    /// </summary>
+    public static RCombatMove_RobinThrownObjectCounter DefaultObject => (RCombatMove_RobinThrownObjectCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_RobinThrownObjectCounter() { }
 
     /// <summary>

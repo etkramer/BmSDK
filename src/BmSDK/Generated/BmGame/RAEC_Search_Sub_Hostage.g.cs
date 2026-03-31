@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Hostage.
+    /// </summary>
+    public static RAEC_Search_Sub_Hostage DefaultObject => (RAEC_Search_Sub_Hostage)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Hostage() { }
 
     /// <summary>

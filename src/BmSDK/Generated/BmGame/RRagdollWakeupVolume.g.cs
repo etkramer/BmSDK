@@ -21,6 +21,11 @@ public partial class RRagdollWakeupVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRagdollWakeupVolume.
+    /// </summary>
+    public static RRagdollWakeupVolume DefaultObject => (RRagdollWakeupVolume)StaticClass().DefaultObject;
+
     internal RRagdollWakeupVolume() { }
 
     /// <summary>

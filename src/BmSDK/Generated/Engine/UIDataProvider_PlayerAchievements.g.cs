@@ -21,6 +21,11 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_PlayerAchievements.
+    /// </summary>
+    public static UIDataProvider_PlayerAchievements DefaultObject => (UIDataProvider_PlayerAchievements)StaticClass().DefaultObject;
+
     internal UIDataProvider_PlayerAchievements() { }
 
     /// <summary>

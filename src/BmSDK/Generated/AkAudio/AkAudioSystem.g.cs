@@ -21,6 +21,11 @@ public partial class AkAudioSystem : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioSystem.
+    /// </summary>
+    public static AkAudioSystem DefaultObject => (AkAudioSystem)StaticClass().DefaultObject;
+
     internal AkAudioSystem() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetREC : BmSDK.BmGame.RCombatMove_BatmanAtta
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetREC.
+    /// </summary>
+    public static RCombatMove_GadgetREC DefaultObject => (RCombatMove_GadgetREC)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetREC() { }
 
     /// <summary>

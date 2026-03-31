@@ -21,6 +21,11 @@ public partial class RCharacter_VenomHenchman_Penguins : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_VenomHenchman_Penguins.
+    /// </summary>
+    public static RCharacter_VenomHenchman_Penguins DefaultObject => (RCharacter_VenomHenchman_Penguins)StaticClass().DefaultObject;
+
     internal RCharacter_VenomHenchman_Penguins() { }
 
     /// <summary>

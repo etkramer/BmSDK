@@ -21,6 +21,11 @@ public partial class RDmgType_BurlyBrawl : BmSDK.BmGame.RDmgType_Knife, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_BurlyBrawl.
+    /// </summary>
+    public static RDmgType_BurlyBrawl DefaultObject => (RDmgType_BurlyBrawl)StaticClass().DefaultObject;
+
     internal RDmgType_BurlyBrawl() { }
 
     /// <summary>

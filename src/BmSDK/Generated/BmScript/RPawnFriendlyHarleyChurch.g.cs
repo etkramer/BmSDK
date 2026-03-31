@@ -21,6 +21,11 @@ public partial class RPawnFriendlyHarleyChurch : BmSDK.BmGame.RPawnVillainThug, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyHarleyChurch.
+    /// </summary>
+    public static RPawnFriendlyHarleyChurch DefaultObject => (RPawnFriendlyHarleyChurch)StaticClass().DefaultObject;
+
     internal RPawnFriendlyHarleyChurch() { }
 
     /// <summary>

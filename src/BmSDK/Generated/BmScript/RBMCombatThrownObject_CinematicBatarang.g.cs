@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_CinematicBatarang : BmSDK.BmScript.RS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_CinematicBatarang.
+    /// </summary>
+    public static RBMCombatThrownObject_CinematicBatarang DefaultObject => (RBMCombatThrownObject_CinematicBatarang)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_CinematicBatarang() { }
 
     /// <summary>

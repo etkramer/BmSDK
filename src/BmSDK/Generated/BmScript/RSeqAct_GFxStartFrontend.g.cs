@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxStartFrontend : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxStartFrontend.
+    /// </summary>
+    public static RSeqAct_GFxStartFrontend DefaultObject => (RSeqAct_GFxStartFrontend)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxStartFrontend() { }
 
     /// <summary>

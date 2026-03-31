@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_OptionsAudio : BmSDK.BmGame.RGFxMovieUI, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_OptionsAudio.
+    /// </summary>
+    public static RGFxMovieUI_OptionsAudio DefaultObject => (RGFxMovieUI_OptionsAudio)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_OptionsAudio() { }
 
     /// <summary>

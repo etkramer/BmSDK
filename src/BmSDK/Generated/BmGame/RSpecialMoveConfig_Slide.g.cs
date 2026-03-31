@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_Slide : BmSDK.BmGame.RSpecialMoveConfig,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_Slide.
+    /// </summary>
+    public static RSpecialMoveConfig_Slide DefaultObject => (RSpecialMoveConfig_Slide)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_Slide() { }
 
     /// <summary>

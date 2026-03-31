@@ -21,6 +21,11 @@ public partial class PointLightToggleable : BmSDK.Engine.PointLight, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PointLightToggleable.
+    /// </summary>
+    public static PointLightToggleable DefaultObject => (PointLightToggleable)StaticClass().DefaultObject;
+
     internal PointLightToggleable() { }
 
     /// <summary>

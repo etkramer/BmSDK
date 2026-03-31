@@ -21,6 +21,11 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleSystemReplay.
+    /// </summary>
+    public static ParticleSystemReplay DefaultObject => (ParticleSystemReplay)StaticClass().DefaultObject;
+
     internal ParticleSystemReplay() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class EnvironmentVolume : BmSDK.Engine.Volume, BmSDK.Engine.Inter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EnvironmentVolume.
+    /// </summary>
+    public static EnvironmentVolume DefaultObject => (EnvironmentVolume)StaticClass().DefaultObject;
+
     internal EnvironmentVolume() { }
 
     /// <summary>

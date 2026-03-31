@@ -21,6 +21,11 @@ public partial class MaterialExpressionDestColor : BmSDK.Engine.MaterialExpressi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDestColor.
+    /// </summary>
+    public static MaterialExpressionDestColor DefaultObject => (MaterialExpressionDestColor)StaticClass().DefaultObject;
+
     internal MaterialExpressionDestColor() { }
 
     /// <summary>

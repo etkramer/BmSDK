@@ -21,6 +21,11 @@ public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_BodyInstance.
+    /// </summary>
+    public static RB_BodyInstance DefaultObject => (RB_BodyInstance)StaticClass().DefaultObject;
+
     internal RB_BodyInstance() { }
 
     /// <summary>

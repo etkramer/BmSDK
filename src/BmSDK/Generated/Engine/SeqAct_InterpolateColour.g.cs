@@ -21,6 +21,11 @@ public partial class SeqAct_InterpolateColour : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_InterpolateColour.
+    /// </summary>
+    public static SeqAct_InterpolateColour DefaultObject => (SeqAct_InterpolateColour)StaticClass().DefaultObject;
+
     internal SeqAct_InterpolateColour() { }
 
     /// <summary>

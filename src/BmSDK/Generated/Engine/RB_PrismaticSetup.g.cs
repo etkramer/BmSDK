@@ -21,6 +21,11 @@ public partial class RB_PrismaticSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_PrismaticSetup.
+    /// </summary>
+    public static RB_PrismaticSetup DefaultObject => (RB_PrismaticSetup)StaticClass().DefaultObject;
+
     internal RB_PrismaticSetup() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFocusCameraVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFocusCameraVolume.
+    /// </summary>
+    public static RFocusCameraVolume DefaultObject => (RFocusCameraVolume)StaticClass().DefaultObject;
+
     internal RFocusCameraVolume() { }
 
     /// <summary>

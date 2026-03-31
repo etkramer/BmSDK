@@ -21,6 +21,11 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatmanRaceWaypoint.
+    /// </summary>
+    public static RBatmanRaceWaypoint DefaultObject => (RBatmanRaceWaypoint)StaticClass().DefaultObject;
+
     internal RBatmanRaceWaypoint() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RFreezeHighBoxVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeHighBoxVolume.
+    /// </summary>
+    public static RFreezeHighBoxVolume DefaultObject => (RFreezeHighBoxVolume)StaticClass().DefaultObject;
+
     internal RFreezeHighBoxVolume() { }
 
     /// <summary>

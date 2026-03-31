@@ -21,6 +21,11 @@ public partial class RFleePoint_HideBehindWall_Left : BmSDK.BmScript.RFleePoint_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint_HideBehindWall_Left.
+    /// </summary>
+    public static RFleePoint_HideBehindWall_Left DefaultObject => (RFleePoint_HideBehindWall_Left)StaticClass().DefaultObject;
+
     internal RFleePoint_HideBehindWall_Left() { }
 
     /// <summary>

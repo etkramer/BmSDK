@@ -21,6 +21,11 @@ public partial class RRemoveableGrate_GroundLevel : BmSDK.BmGame.RRemoveableGrat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRemoveableGrate_GroundLevel.
+    /// </summary>
+    public static RRemoveableGrate_GroundLevel DefaultObject => (RRemoveableGrate_GroundLevel)StaticClass().DefaultObject;
+
     internal RRemoveableGrate_GroundLevel() { }
 
     /// <summary>

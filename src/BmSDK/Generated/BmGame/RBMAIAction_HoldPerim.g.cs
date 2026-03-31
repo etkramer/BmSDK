@@ -21,6 +21,11 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_HoldPerim.
+    /// </summary>
+    public static RBMAIAction_HoldPerim DefaultObject => (RBMAIAction_HoldPerim)StaticClass().DefaultObject;
+
     internal RBMAIAction_HoldPerim() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMDialogueCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDialogueCoordinator.
+    /// </summary>
+    public static RBMDialogueCoordinator DefaultObject => (RBMDialogueCoordinator)StaticClass().DefaultObject;
+
     internal RBMDialogueCoordinator() { }
 
     /// <summary>

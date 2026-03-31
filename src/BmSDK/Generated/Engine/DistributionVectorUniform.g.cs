@@ -21,6 +21,11 @@ public partial class DistributionVectorUniform : BmSDK.DistributionVector, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorUniform.
+    /// </summary>
+    public static DistributionVectorUniform DefaultObject => (DistributionVectorUniform)StaticClass().DefaultObject;
+
     internal DistributionVectorUniform() { }
 
     /// <summary>

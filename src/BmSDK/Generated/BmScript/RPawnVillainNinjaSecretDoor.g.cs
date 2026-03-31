@@ -21,6 +21,11 @@ public partial class RPawnVillainNinjaSecretDoor : BmSDK.BmGame.RPawnVillainThug
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainNinjaSecretDoor.
+    /// </summary>
+    public static RPawnVillainNinjaSecretDoor DefaultObject => (RPawnVillainNinjaSecretDoor)StaticClass().DefaultObject;
+
     internal RPawnVillainNinjaSecretDoor() { }
 
     /// <summary>

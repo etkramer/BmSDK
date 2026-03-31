@@ -21,6 +21,11 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPresurePad.
+    /// </summary>
+    public static RPresurePad DefaultObject => (RPresurePad)StaticClass().DefaultObject;
+
     internal RPresurePad() { }
 
     /// <summary>

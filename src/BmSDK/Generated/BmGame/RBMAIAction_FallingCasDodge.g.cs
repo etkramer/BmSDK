@@ -21,6 +21,11 @@ public partial class RBMAIAction_FallingCasDodge : BmSDK.BmGame.RBMAIAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_FallingCasDodge.
+    /// </summary>
+    public static RBMAIAction_FallingCasDodge DefaultObject => (RBMAIAction_FallingCasDodge)StaticClass().DefaultObject;
+
     internal RBMAIAction_FallingCasDodge() { }
 
     /// <summary>

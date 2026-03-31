@@ -21,6 +21,11 @@ public partial class NavMeshPath_WithinTraversalDist : BmSDK.Engine.NavMeshPathC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshPath_WithinTraversalDist.
+    /// </summary>
+    public static NavMeshPath_WithinTraversalDist DefaultObject => (NavMeshPath_WithinTraversalDist)StaticClass().DefaultObject;
+
     internal NavMeshPath_WithinTraversalDist() { }
 
     /// <summary>

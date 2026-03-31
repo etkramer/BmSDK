@@ -21,6 +21,11 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBarkFlagBase.
+    /// </summary>
+    public static RBarkFlagBase DefaultObject => (RBarkFlagBase)StaticClass().DefaultObject;
+
     internal RBarkFlagBase() { }
 
     /// <summary>

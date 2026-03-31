@@ -21,6 +21,11 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Actor.
+    /// </summary>
+    public static Actor DefaultObject => (Actor)StaticClass().DefaultObject;
+
     internal Actor() { }
 
     /// <summary>

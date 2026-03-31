@@ -21,6 +21,11 @@ public partial class RSeqAct_AttachPawnToAudioPointController : BmSDK.Engine.Seq
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AttachPawnToAudioPointController.
+    /// </summary>
+    public static RSeqAct_AttachPawnToAudioPointController DefaultObject => (RSeqAct_AttachPawnToAudioPointController)StaticClass().DefaultObject;
+
     internal RSeqAct_AttachPawnToAudioPointController() { }
 
     /// <summary>

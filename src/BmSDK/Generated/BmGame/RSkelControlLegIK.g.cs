@@ -21,6 +21,11 @@ public partial class RSkelControlLegIK : BmSDK.Engine.SkelControlBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControlLegIK.
+    /// </summary>
+    public static RSkelControlLegIK DefaultObject => (RSkelControlLegIK)StaticClass().DefaultObject;
+
     internal RSkelControlLegIK() { }
 
     /// <summary>

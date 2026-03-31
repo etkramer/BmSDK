@@ -21,6 +21,11 @@ public partial class RRescuePoint_Temporary : BmSDK.BmGame.RRescuePoint, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRescuePoint_Temporary.
+    /// </summary>
+    public static RRescuePoint_Temporary DefaultObject => (RRescuePoint_Temporary)StaticClass().DefaultObject;
+
     internal RRescuePoint_Temporary() { }
 
     /// <summary>

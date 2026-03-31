@@ -21,6 +21,11 @@ public partial class RSeqAct_DynamicPostProcess : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DynamicPostProcess.
+    /// </summary>
+    public static RSeqAct_DynamicPostProcess DefaultObject => (RSeqAct_DynamicPostProcess)StaticClass().DefaultObject;
+
     internal RSeqAct_DynamicPostProcess() { }
 
     /// <summary>

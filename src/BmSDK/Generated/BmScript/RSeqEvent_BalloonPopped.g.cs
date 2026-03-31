@@ -21,6 +21,11 @@ public partial class RSeqEvent_BalloonPopped : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BalloonPopped.
+    /// </summary>
+    public static RSeqEvent_BalloonPopped DefaultObject => (RSeqEvent_BalloonPopped)StaticClass().DefaultObject;
+
     internal RSeqEvent_BalloonPopped() { }
 
     /// <summary>

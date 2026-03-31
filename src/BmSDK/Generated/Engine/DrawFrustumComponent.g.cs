@@ -21,6 +21,11 @@ public partial class DrawFrustumComponent : BmSDK.Engine.PrimitiveComponent, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawFrustumComponent.
+    /// </summary>
+    public static DrawFrustumComponent DefaultObject => (DrawFrustumComponent)StaticClass().DefaultObject;
+
     internal DrawFrustumComponent() { }
 
     /// <summary>

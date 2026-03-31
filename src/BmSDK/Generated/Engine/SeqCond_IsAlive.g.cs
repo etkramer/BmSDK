@@ -21,6 +21,11 @@ public partial class SeqCond_IsAlive : BmSDK.Engine.SequenceCondition, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_IsAlive.
+    /// </summary>
+    public static SeqCond_IsAlive DefaultObject => (SeqCond_IsAlive)StaticClass().DefaultObject;
+
     internal SeqCond_IsAlive() { }
 
     /// <summary>

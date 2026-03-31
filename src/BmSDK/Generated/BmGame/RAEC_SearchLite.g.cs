@@ -21,6 +21,11 @@ public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SearchLite.
+    /// </summary>
+    public static RAEC_SearchLite DefaultObject => (RAEC_SearchLite)StaticClass().DefaultObject;
+
     internal RAEC_SearchLite() { }
 
     /// <summary>

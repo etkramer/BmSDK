@@ -21,6 +21,11 @@ public partial class StaticMesh : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StaticMesh.
+    /// </summary>
+    public static StaticMesh DefaultObject => (StaticMesh)StaticClass().DefaultObject;
+
     internal StaticMesh() { }
 
     /// <summary>

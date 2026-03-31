@@ -21,6 +21,11 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_EnvironmentStartle.
+    /// </summary>
+    public static RAEC_EnvironmentStartle DefaultObject => (RAEC_EnvironmentStartle)StaticClass().DefaultObject;
+
     internal RAEC_EnvironmentStartle() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleMagneticMatineeBrakes : BmSDK.Engine.Sequence
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleMagneticMatineeBrakes.
+    /// </summary>
+    public static RSeqAct_ToggleMagneticMatineeBrakes DefaultObject => (RSeqAct_ToggleMagneticMatineeBrakes)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleMagneticMatineeBrakes() { }
 
     /// <summary>

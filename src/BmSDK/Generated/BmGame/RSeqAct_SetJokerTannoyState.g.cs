@@ -21,6 +21,11 @@ public partial class RSeqAct_SetJokerTannoyState : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetJokerTannoyState.
+    /// </summary>
+    public static RSeqAct_SetJokerTannoyState DefaultObject => (RSeqAct_SetJokerTannoyState)StaticClass().DefaultObject;
+
     internal RSeqAct_SetJokerTannoyState() { }
 
     /// <summary>

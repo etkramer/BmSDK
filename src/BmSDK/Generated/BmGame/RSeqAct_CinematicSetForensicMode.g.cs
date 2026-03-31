@@ -21,6 +21,11 @@ public partial class RSeqAct_CinematicSetForensicMode : BmSDK.Engine.SequenceAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_CinematicSetForensicMode.
+    /// </summary>
+    public static RSeqAct_CinematicSetForensicMode DefaultObject => (RSeqAct_CinematicSetForensicMode)StaticClass().DefaultObject;
+
     internal RSeqAct_CinematicSetForensicMode() { }
 
     /// <summary>

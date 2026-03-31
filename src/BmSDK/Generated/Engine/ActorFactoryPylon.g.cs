@@ -21,6 +21,11 @@ public partial class ActorFactoryPylon : BmSDK.Engine.ActorFactory, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryPylon.
+    /// </summary>
+    public static ActorFactoryPylon DefaultObject => (ActorFactoryPylon)StaticClass().DefaultObject;
+
     internal ActorFactoryPylon() { }
 
     /// <summary>

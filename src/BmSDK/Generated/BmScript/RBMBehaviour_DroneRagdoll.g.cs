@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DroneRagdoll : BmSDK.BmGame.RBMBehaviour_Ragdo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DroneRagdoll.
+    /// </summary>
+    public static RBMBehaviour_DroneRagdoll DefaultObject => (RBMBehaviour_DroneRagdoll)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DroneRagdoll() { }
 
     /// <summary>

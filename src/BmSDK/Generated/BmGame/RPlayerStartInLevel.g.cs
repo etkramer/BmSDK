@@ -21,6 +21,11 @@ public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerStartInLevel.
+    /// </summary>
+    public static RPlayerStartInLevel DefaultObject => (RPlayerStartInLevel)StaticClass().DefaultObject;
+
     internal RPlayerStartInLevel() { }
 
     /// <summary>

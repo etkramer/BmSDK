@@ -21,6 +21,11 @@ public partial class RNightwingXRayViewPostProcess : BmSDK.BmGame.RXRayViewPostP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNightwingXRayViewPostProcess.
+    /// </summary>
+    public static RNightwingXRayViewPostProcess DefaultObject => (RNightwingXRayViewPostProcess)StaticClass().DefaultObject;
+
     internal RNightwingXRayViewPostProcess() { }
 
     /// <summary>

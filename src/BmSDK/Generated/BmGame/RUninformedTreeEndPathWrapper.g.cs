@@ -21,6 +21,11 @@ public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RUninformedTreeEndPathWrapper.
+    /// </summary>
+    public static RUninformedTreeEndPathWrapper DefaultObject => (RUninformedTreeEndPathWrapper)StaticClass().DefaultObject;
+
     internal RUninformedTreeEndPathWrapper() { }
 
     /// <summary>

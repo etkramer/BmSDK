@@ -21,6 +21,11 @@ public partial class RSeqAct_PauseGameOnLoad : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PauseGameOnLoad.
+    /// </summary>
+    public static RSeqAct_PauseGameOnLoad DefaultObject => (RSeqAct_PauseGameOnLoad)StaticClass().DefaultObject;
+
     internal RSeqAct_PauseGameOnLoad() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RInvestigateStaticMeshActor : BmSDK.Engine.StaticMeshActor,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInvestigateStaticMeshActor.
+    /// </summary>
+    public static RInvestigateStaticMeshActor DefaultObject => (RInvestigateStaticMeshActor)StaticClass().DefaultObject;
+
     internal RInvestigateStaticMeshActor() { }
 
     /// <summary>

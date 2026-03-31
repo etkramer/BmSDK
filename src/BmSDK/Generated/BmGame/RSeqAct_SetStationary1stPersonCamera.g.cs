@@ -21,6 +21,11 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetStationary1stPersonCamera.
+    /// </summary>
+    public static RSeqAct_SetStationary1stPersonCamera DefaultObject => (RSeqAct_SetStationary1stPersonCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_SetStationary1stPersonCamera() { }
 
     /// <summary>

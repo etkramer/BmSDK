@@ -21,6 +21,11 @@ public partial class RSeqAct_RemoveGrate : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_RemoveGrate.
+    /// </summary>
+    public static RSeqAct_RemoveGrate DefaultObject => (RSeqAct_RemoveGrate)StaticClass().DefaultObject;
+
     internal RSeqAct_RemoveGrate() { }
 
     /// <summary>

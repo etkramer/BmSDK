@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_SmokeBombGrapple : BmSDK.BmGame.RSpeci
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_SmokeBombGrapple.
+    /// </summary>
+    public static RSpecialMoveInstance_SmokeBombGrapple DefaultObject => (RSpecialMoveInstance_SmokeBombGrapple)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_SmokeBombGrapple() { }
 
     /// <summary>

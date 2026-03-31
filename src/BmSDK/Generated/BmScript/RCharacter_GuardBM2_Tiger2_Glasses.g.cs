@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_Tiger2_Glasses : BmSDK.BmScript.RCharac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_Tiger2_Glasses.
+    /// </summary>
+    public static RCharacter_GuardBM2_Tiger2_Glasses DefaultObject => (RCharacter_GuardBM2_Tiger2_Glasses)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_Tiger2_Glasses() { }
 
     /// <summary>

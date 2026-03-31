@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Rifle_Harleyfied : BmSDK.BmScript.RBM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Rifle_Harleyfied.
+    /// </summary>
+    public static RBMCombatThrownObject_Rifle_Harleyfied DefaultObject => (RBMCombatThrownObject_Rifle_Harleyfied)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Rifle_Harleyfied() { }
 
     /// <summary>

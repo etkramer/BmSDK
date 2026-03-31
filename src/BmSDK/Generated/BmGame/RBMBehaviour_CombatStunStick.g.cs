@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatStunStick : BmSDK.BmGame.RBMBehaviour_Co
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatStunStick.
+    /// </summary>
+    public static RBMBehaviour_CombatStunStick DefaultObject => (RBMBehaviour_CombatStunStick)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatStunStick() { }
 
     /// <summary>

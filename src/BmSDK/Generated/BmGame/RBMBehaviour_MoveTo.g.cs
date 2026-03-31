@@ -21,6 +21,11 @@ public partial class RBMBehaviour_MoveTo : BmSDK.BmGame.RBMBehaviour_MoveToBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_MoveTo.
+    /// </summary>
+    public static RBMBehaviour_MoveTo DefaultObject => (RBMBehaviour_MoveTo)StaticClass().DefaultObject;
+
     internal RBMBehaviour_MoveTo() { }
 
     /// <summary>

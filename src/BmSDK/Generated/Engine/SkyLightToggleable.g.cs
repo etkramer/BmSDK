@@ -21,6 +21,11 @@ public partial class SkyLightToggleable : BmSDK.Engine.SkyLight, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkyLightToggleable.
+    /// </summary>
+    public static SkyLightToggleable DefaultObject => (SkyLightToggleable)StaticClass().DefaultObject;
+
     internal SkyLightToggleable() { }
 
     /// <summary>

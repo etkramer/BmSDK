@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_KnifeOnFloor : BmSDK.BmGame.RBMCombatPoint_E
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_KnifeOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_KnifeOnFloor DefaultObject => (RBMCombatPoint_KnifeOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_KnifeOnFloor() { }
 
     /// <summary>

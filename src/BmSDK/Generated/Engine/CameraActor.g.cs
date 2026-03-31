@@ -21,6 +21,11 @@ public partial class CameraActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CameraActor.
+    /// </summary>
+    public static CameraActor DefaultObject => (CameraActor)StaticClass().DefaultObject;
+
     internal CameraActor() { }
 
     /// <summary>

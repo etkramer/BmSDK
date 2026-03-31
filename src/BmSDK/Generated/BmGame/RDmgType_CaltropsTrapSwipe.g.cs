@@ -21,6 +21,11 @@ public partial class RDmgType_CaltropsTrapSwipe : BmSDK.BmGame.RDamageType, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_CaltropsTrapSwipe.
+    /// </summary>
+    public static RDmgType_CaltropsTrapSwipe DefaultObject => (RDmgType_CaltropsTrapSwipe)StaticClass().DefaultObject;
+
     internal RDmgType_CaltropsTrapSwipe() { }
 
     /// <summary>

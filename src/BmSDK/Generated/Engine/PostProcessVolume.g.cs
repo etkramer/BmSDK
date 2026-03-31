@@ -21,6 +21,11 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PostProcessVolume.
+    /// </summary>
+    public static PostProcessVolume DefaultObject => (PostProcessVolume)StaticClass().DefaultObject;
+
     internal PostProcessVolume() { }
 
     /// <summary>

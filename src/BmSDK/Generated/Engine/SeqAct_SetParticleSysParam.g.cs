@@ -21,6 +21,11 @@ public partial class SeqAct_SetParticleSysParam : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetParticleSysParam.
+    /// </summary>
+    public static SeqAct_SetParticleSysParam DefaultObject => (SeqAct_SetParticleSysParam)StaticClass().DefaultObject;
+
     internal SeqAct_SetParticleSysParam() { }
 
     /// <summary>

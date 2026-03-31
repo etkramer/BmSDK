@@ -21,6 +21,11 @@ public partial class MassiveLODOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MassiveLODOverrideVolume.
+    /// </summary>
+    public static MassiveLODOverrideVolume DefaultObject => (MassiveLODOverrideVolume)StaticClass().DefaultObject;
+
     internal MassiveLODOverrideVolume() { }
 
     /// <summary>

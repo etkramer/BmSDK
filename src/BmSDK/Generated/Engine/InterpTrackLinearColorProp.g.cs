@@ -21,6 +21,11 @@ public partial class InterpTrackLinearColorProp : BmSDK.Engine.InterpTrackLinear
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackLinearColorProp.
+    /// </summary>
+    public static InterpTrackLinearColorProp DefaultObject => (InterpTrackLinearColorProp)StaticClass().DefaultObject;
+
     internal InterpTrackLinearColorProp() { }
 
     /// <summary>

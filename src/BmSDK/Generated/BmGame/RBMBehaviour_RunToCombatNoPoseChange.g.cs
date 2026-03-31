@@ -21,6 +21,11 @@ public partial class RBMBehaviour_RunToCombatNoPoseChange : BmSDK.BmGame.RBMBeha
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_RunToCombatNoPoseChange.
+    /// </summary>
+    public static RBMBehaviour_RunToCombatNoPoseChange DefaultObject => (RBMBehaviour_RunToCombatNoPoseChange)StaticClass().DefaultObject;
+
     internal RBMBehaviour_RunToCombatNoPoseChange() { }
 
     /// <summary>

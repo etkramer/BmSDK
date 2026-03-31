@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_RiddlerMapSelectBase.
+    /// </summary>
+    public static RGFxMovieUI_RiddlerMapSelectBase DefaultObject => (RGFxMovieUI_RiddlerMapSelectBase)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_RiddlerMapSelectBase() { }
 
     /// <summary>

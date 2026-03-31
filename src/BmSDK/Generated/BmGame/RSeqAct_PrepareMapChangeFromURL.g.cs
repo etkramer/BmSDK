@@ -21,6 +21,11 @@ public partial class RSeqAct_PrepareMapChangeFromURL : BmSDK.Engine.SeqAct_Laten
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PrepareMapChangeFromURL.
+    /// </summary>
+    public static RSeqAct_PrepareMapChangeFromURL DefaultObject => (RSeqAct_PrepareMapChangeFromURL)StaticClass().DefaultObject;
+
     internal RSeqAct_PrepareMapChangeFromURL() { }
 
     /// <summary>

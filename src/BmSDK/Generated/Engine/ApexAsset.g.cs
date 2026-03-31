@@ -21,6 +21,11 @@ public partial class ApexAsset : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexAsset.
+    /// </summary>
+    public static ApexAsset DefaultObject => (ApexAsset)StaticClass().DefaultObject;
+
     internal ApexAsset() { }
 
     /// <summary>

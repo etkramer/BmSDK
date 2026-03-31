@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_HoldLedge : BmSDK.BmGame.RSpecialMoveCon
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_HoldLedge.
+    /// </summary>
+    public static RSpecialMoveConfig_HoldLedge DefaultObject => (RSpecialMoveConfig_HoldLedge)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_HoldLedge() { }
 
     /// <summary>

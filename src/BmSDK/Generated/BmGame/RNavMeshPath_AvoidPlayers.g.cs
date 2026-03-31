@@ -21,6 +21,11 @@ public partial class RNavMeshPath_AvoidPlayers : BmSDK.Engine.NavMeshPathConstra
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshPath_AvoidPlayers.
+    /// </summary>
+    public static RNavMeshPath_AvoidPlayers DefaultObject => (RNavMeshPath_AvoidPlayers)StaticClass().DefaultObject;
+
     internal RNavMeshPath_AvoidPlayers() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PickupWeapon.
+    /// </summary>
+    public static RBMAIAction_PickupWeapon DefaultObject => (RBMAIAction_PickupWeapon)StaticClass().DefaultObject;
+
     internal RBMAIAction_PickupWeapon() { }
 
     /// <summary>

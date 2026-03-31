@@ -21,6 +21,11 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqCond_SwitchClass.
+    /// </summary>
+    public static SeqCond_SwitchClass DefaultObject => (SeqCond_SwitchClass)StaticClass().DefaultObject;
+
     internal SeqCond_SwitchClass() { }
 
     /// <summary>

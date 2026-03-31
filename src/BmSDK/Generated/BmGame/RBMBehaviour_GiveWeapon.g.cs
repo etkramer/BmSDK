@@ -21,6 +21,11 @@ public partial class RBMBehaviour_GiveWeapon : BmSDK.BmGame.RBMBehaviour, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_GiveWeapon.
+    /// </summary>
+    public static RBMBehaviour_GiveWeapon DefaultObject => (RBMBehaviour_GiveWeapon)StaticClass().DefaultObject;
+
     internal RBMBehaviour_GiveWeapon() { }
 
     /// <summary>

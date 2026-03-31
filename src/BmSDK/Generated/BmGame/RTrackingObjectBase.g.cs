@@ -21,6 +21,11 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTrackingObjectBase.
+    /// </summary>
+    public static RTrackingObjectBase DefaultObject => (RTrackingObjectBase)StaticClass().DefaultObject;
+
     internal RTrackingObjectBase() { }
 
     /// <summary>

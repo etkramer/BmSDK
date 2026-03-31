@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_FireBatClaw : BmSDK.BmGame.RSpecialMov
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_FireBatClaw.
+    /// </summary>
+    public static RSpecialMoveInstance_FireBatClaw DefaultObject => (RSpecialMoveInstance_FireBatClaw)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_FireBatClaw() { }
 
     /// <summary>

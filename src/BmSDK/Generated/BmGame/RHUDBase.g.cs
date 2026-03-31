@@ -21,6 +21,11 @@ public partial class RHUDBase : BmSDK.Engine.HUD, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHUDBase.
+    /// </summary>
+    public static RHUDBase DefaultObject => (RHUDBase)StaticClass().DefaultObject;
+
     internal RHUDBase() { }
 
     /// <summary>

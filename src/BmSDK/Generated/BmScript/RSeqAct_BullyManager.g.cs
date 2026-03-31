@@ -21,6 +21,11 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BullyManager.
+    /// </summary>
+    public static RSeqAct_BullyManager DefaultObject => (RSeqAct_BullyManager)StaticClass().DefaultObject;
+
     internal RSeqAct_BullyManager() { }
 
     /// <summary>

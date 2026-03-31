@@ -21,6 +21,11 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossPenguinIceberg.
+    /// </summary>
+    public static RPawnBossPenguinIceberg DefaultObject => (RPawnBossPenguinIceberg)StaticClass().DefaultObject;
+
     internal RPawnBossPenguinIceberg() { }
 
     /// <summary>

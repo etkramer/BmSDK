@@ -21,6 +21,11 @@ public partial class RBMAIAction_SearchLightCower : BmSDK.BmGame.RBMAIAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_SearchLightCower.
+    /// </summary>
+    public static RBMAIAction_SearchLightCower DefaultObject => (RBMAIAction_SearchLightCower)StaticClass().DefaultObject;
+
     internal RBMAIAction_SearchLightCower() { }
 
     /// <summary>

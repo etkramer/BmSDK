@@ -21,6 +21,11 @@ public partial class RSeqAct_InfiniteCombatStats : BmSDK.BmScript.RSeqAct_StartC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InfiniteCombatStats.
+    /// </summary>
+    public static RSeqAct_InfiniteCombatStats DefaultObject => (RSeqAct_InfiniteCombatStats)StaticClass().DefaultObject;
+
     internal RSeqAct_InfiniteCombatStats() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InterpGroupInst : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpGroupInst.
+    /// </summary>
+    public static InterpGroupInst DefaultObject => (InterpGroupInst)StaticClass().DefaultObject;
+
     internal InterpGroupInst() { }
 
     /// <summary>

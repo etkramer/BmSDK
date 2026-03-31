@@ -21,6 +21,11 @@ public partial class RAEC_LiteCas : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_LiteCas.
+    /// </summary>
+    public static RAEC_LiteCas DefaultObject => (RAEC_LiteCas)StaticClass().DefaultObject;
+
     internal RAEC_LiteCas() { }
 
     /// <summary>

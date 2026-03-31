@@ -21,6 +21,11 @@ public partial class RAEC_SonicBrangTakedownStartle : BmSDK.BmGame.RAlertEventCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SonicBrangTakedownStartle.
+    /// </summary>
+    public static RAEC_SonicBrangTakedownStartle DefaultObject => (RAEC_SonicBrangTakedownStartle)StaticClass().DefaultObject;
+
     internal RAEC_SonicBrangTakedownStartle() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialExpression : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpression.
+    /// </summary>
+    public static MaterialExpression DefaultObject => (MaterialExpression)StaticClass().DefaultObject;
+
     internal MaterialExpression() { }
 
     /// <summary>

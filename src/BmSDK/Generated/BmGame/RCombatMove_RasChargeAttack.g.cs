@@ -21,6 +21,11 @@ public partial class RCombatMove_RasChargeAttack : BmSDK.BmGame.RCombatMove_RasA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_RasChargeAttack.
+    /// </summary>
+    public static RCombatMove_RasChargeAttack DefaultObject => (RCombatMove_RasChargeAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_RasChargeAttack() { }
 
     /// <summary>

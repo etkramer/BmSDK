@@ -21,6 +21,11 @@ public partial class UIDataStore_Strings : BmSDK.Engine.UIDataStore_StringBase, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_Strings.
+    /// </summary>
+    public static UIDataStore_Strings DefaultObject => (UIDataStore_Strings)StaticClass().DefaultObject;
+
     internal UIDataStore_Strings() { }
 
     /// <summary>

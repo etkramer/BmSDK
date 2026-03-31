@@ -21,6 +21,11 @@ public partial class RSeqAct_SetPlayerInvisibleToHelicopters : BmSDK.Engine.Sequ
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetPlayerInvisibleToHelicopters.
+    /// </summary>
+    public static RSeqAct_SetPlayerInvisibleToHelicopters DefaultObject => (RSeqAct_SetPlayerInvisibleToHelicopters)StaticClass().DefaultObject;
+
     internal RSeqAct_SetPlayerInvisibleToHelicopters() { }
 
     /// <summary>

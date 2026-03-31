@@ -21,6 +21,11 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RViewPostProcess.
+    /// </summary>
+    public static RViewPostProcess DefaultObject => (RViewPostProcess)StaticClass().DefaultObject;
+
     internal RViewPostProcess() { }
 
     /// <summary>

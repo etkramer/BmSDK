@@ -21,6 +21,11 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviourAutoStringUp.
+    /// </summary>
+    public static RBMBehaviourAutoStringUp DefaultObject => (RBMBehaviourAutoStringUp)StaticClass().DefaultObject;
+
     internal RBMBehaviourAutoStringUp() { }
 
     /// <summary>

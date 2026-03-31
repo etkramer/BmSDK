@@ -21,6 +21,11 @@ public partial class RSeqAct_BatmanOpenSecretDoor : BmSDK.Engine.SeqAct_Latent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BatmanOpenSecretDoor.
+    /// </summary>
+    public static RSeqAct_BatmanOpenSecretDoor DefaultObject => (RSeqAct_BatmanOpenSecretDoor)StaticClass().DefaultObject;
+
     internal RSeqAct_BatmanOpenSecretDoor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RRobinStickyBombTarget : BmSDK.Engine.Actor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinStickyBombTarget.
+    /// </summary>
+    public static RRobinStickyBombTarget DefaultObject => (RRobinStickyBombTarget)StaticClass().DefaultObject;
+
     internal RRobinStickyBombTarget() { }
 
     /// <summary>

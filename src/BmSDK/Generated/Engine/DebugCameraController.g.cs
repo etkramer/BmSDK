@@ -21,6 +21,11 @@ public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DebugCameraController.
+    /// </summary>
+    public static DebugCameraController DefaultObject => (DebugCameraController)StaticClass().DefaultObject;
+
     internal DebugCameraController() { }
 
     /// <summary>

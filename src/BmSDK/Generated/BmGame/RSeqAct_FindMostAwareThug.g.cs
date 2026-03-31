@@ -21,6 +21,11 @@ public partial class RSeqAct_FindMostAwareThug : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FindMostAwareThug.
+    /// </summary>
+    public static RSeqAct_FindMostAwareThug DefaultObject => (RSeqAct_FindMostAwareThug)StaticClass().DefaultObject;
+
     internal RSeqAct_FindMostAwareThug() { }
 
     /// <summary>

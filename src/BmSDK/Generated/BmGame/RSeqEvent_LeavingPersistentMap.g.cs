@@ -21,6 +21,11 @@ public partial class RSeqEvent_LeavingPersistentMap : BmSDK.Engine.SequenceEvent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_LeavingPersistentMap.
+    /// </summary>
+    public static RSeqEvent_LeavingPersistentMap DefaultObject => (RSeqEvent_LeavingPersistentMap)StaticClass().DefaultObject;
+
     internal RSeqEvent_LeavingPersistentMap() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_CasualtyBase : BmSDK.BmGame.RAlertEventCoordinatorBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_CasualtyBase.
+    /// </summary>
+    public static RAEC_CasualtyBase DefaultObject => (RAEC_CasualtyBase)StaticClass().DefaultObject;
+
     internal RAEC_CasualtyBase() { }
 
     /// <summary>

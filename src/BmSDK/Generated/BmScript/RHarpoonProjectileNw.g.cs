@@ -21,6 +21,11 @@ public partial class RHarpoonProjectileNw : BmSDK.BmScript.RHarpoonProjectileBm,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonProjectileNw.
+    /// </summary>
+    public static RHarpoonProjectileNw DefaultObject => (RHarpoonProjectileNw)StaticClass().DefaultObject;
+
     internal RHarpoonProjectileNw() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class ActorFactoryArchetype : BmSDK.Engine.ActorFactory, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryArchetype.
+    /// </summary>
+    public static ActorFactoryArchetype DefaultObject => (ActorFactoryArchetype)StaticClass().DefaultObject;
+
     internal ActorFactoryArchetype() { }
 
     /// <summary>

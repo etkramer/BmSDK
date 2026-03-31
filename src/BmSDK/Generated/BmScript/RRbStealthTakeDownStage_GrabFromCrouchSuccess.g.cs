@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GrabFromCrouchSuccess : BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GrabFromCrouchSuccess.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GrabFromCrouchSuccess DefaultObject => (RRbStealthTakeDownStage_GrabFromCrouchSuccess)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GrabFromCrouchSuccess() { }
 
     /// <summary>

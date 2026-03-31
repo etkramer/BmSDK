@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableAllMines : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableAllMines.
+    /// </summary>
+    public static RSeqAct_DisableAllMines DefaultObject => (RSeqAct_DisableAllMines)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableAllMines() { }
 
     /// <summary>

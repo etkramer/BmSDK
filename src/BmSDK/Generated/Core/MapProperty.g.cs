@@ -21,6 +21,11 @@ public partial class MapProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MapProperty.
+    /// </summary>
+    public static MapProperty DefaultObject => (MapProperty)StaticClass().DefaultObject;
+
     internal MapProperty() { }
 
     /// <summary>

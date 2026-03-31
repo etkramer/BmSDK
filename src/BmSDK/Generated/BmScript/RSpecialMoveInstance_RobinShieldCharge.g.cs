@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_RobinShieldCharge.
+    /// </summary>
+    public static RSpecialMoveInstance_RobinShieldCharge DefaultObject => (RSpecialMoveInstance_RobinShieldCharge)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_RobinShieldCharge() { }
 
     /// <summary>

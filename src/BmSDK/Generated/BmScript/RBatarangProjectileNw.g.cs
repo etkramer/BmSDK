@@ -21,6 +21,11 @@ public partial class RBatarangProjectileNw : BmSDK.BmScript.RBatarangProjectileB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangProjectileNw.
+    /// </summary>
+    public static RBatarangProjectileNw DefaultObject => (RBatarangProjectileNw)StaticClass().DefaultObject;
+
     internal RBatarangProjectileNw() { }
 
     /// <summary>

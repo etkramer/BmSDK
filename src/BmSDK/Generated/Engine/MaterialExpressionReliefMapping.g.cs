@@ -21,6 +21,11 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionReliefMapping.
+    /// </summary>
+    public static MaterialExpressionReliefMapping DefaultObject => (MaterialExpressionReliefMapping)StaticClass().DefaultObject;
+
     internal MaterialExpressionReliefMapping() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMWaveController : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWaveController.
+    /// </summary>
+    public static RBMWaveController DefaultObject => (RBMWaveController)StaticClass().DefaultObject;
+
     internal RBMWaveController() { }
 
     /// <summary>

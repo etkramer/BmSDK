@@ -21,6 +21,11 @@ public partial class RSeqEvent_Rescued : BmSDK.Engine.SequenceEvent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_Rescued.
+    /// </summary>
+    public static RSeqEvent_Rescued DefaultObject => (RSeqEvent_Rescued)StaticClass().DefaultObject;
+
     internal RSeqEvent_Rescued() { }
 
     /// <summary>

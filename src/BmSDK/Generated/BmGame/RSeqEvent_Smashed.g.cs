@@ -21,6 +21,11 @@ public partial class RSeqEvent_Smashed : BmSDK.Engine.SequenceEvent, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_Smashed.
+    /// </summary>
+    public static RSeqEvent_Smashed DefaultObject => (RSeqEvent_Smashed)StaticClass().DefaultObject;
+
     internal RSeqEvent_Smashed() { }
 
     /// <summary>

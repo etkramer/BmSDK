@@ -21,6 +21,11 @@ public partial class RSeqEvent_PredatorTarget : BmSDK.Engine.SequenceEvent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_PredatorTarget.
+    /// </summary>
+    public static RSeqEvent_PredatorTarget DefaultObject => (RSeqEvent_PredatorTarget)StaticClass().DefaultObject;
+
     internal RSeqEvent_PredatorTarget() { }
 
     /// <summary>

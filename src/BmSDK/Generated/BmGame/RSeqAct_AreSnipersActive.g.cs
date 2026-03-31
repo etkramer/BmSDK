@@ -21,6 +21,11 @@ public partial class RSeqAct_AreSnipersActive : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AreSnipersActive.
+    /// </summary>
+    public static RSeqAct_AreSnipersActive DefaultObject => (RSeqAct_AreSnipersActive)StaticClass().DefaultObject;
+
     internal RSeqAct_AreSnipersActive() { }
 
     /// <summary>

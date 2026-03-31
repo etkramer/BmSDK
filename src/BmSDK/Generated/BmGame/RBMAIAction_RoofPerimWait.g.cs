@@ -21,6 +21,11 @@ public partial class RBMAIAction_RoofPerimWait : BmSDK.BmGame.RBMAIAction_Patrol
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RoofPerimWait.
+    /// </summary>
+    public static RBMAIAction_RoofPerimWait DefaultObject => (RBMAIAction_RoofPerimWait)StaticClass().DefaultObject;
+
     internal RBMAIAction_RoofPerimWait() { }
 
     /// <summary>

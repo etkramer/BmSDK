@@ -21,6 +21,11 @@ public partial class RRbStealthTakedownStage_GrabFromCrouch_Harley : BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakedownStage_GrabFromCrouch_Harley.
+    /// </summary>
+    public static RRbStealthTakedownStage_GrabFromCrouch_Harley DefaultObject => (RRbStealthTakedownStage_GrabFromCrouch_Harley)StaticClass().DefaultObject;
+
     internal RRbStealthTakedownStage_GrabFromCrouch_Harley() { }
 
     /// <summary>

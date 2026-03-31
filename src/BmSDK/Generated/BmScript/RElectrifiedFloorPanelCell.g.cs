@@ -21,6 +21,11 @@ public partial class RElectrifiedFloorPanelCell : BmSDK.BmGame.RElectrifiedFloor
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RElectrifiedFloorPanelCell.
+    /// </summary>
+    public static RElectrifiedFloorPanelCell DefaultObject => (RElectrifiedFloorPanelCell)StaticClass().DefaultObject;
+
     internal RElectrifiedFloorPanelCell() { }
 
     /// <summary>

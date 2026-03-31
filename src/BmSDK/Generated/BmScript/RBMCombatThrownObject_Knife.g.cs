@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Knife : BmSDK.BmGame.RBMCombatThrownO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Knife.
+    /// </summary>
+    public static RBMCombatThrownObject_Knife DefaultObject => (RBMCombatThrownObject_Knife)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Knife() { }
 
     /// <summary>

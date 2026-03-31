@@ -21,6 +21,11 @@ public partial class RBMAIAction_WaitForWeaponToSettle : BmSDK.BmGame.RBMAIActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_WaitForWeaponToSettle.
+    /// </summary>
+    public static RBMAIAction_WaitForWeaponToSettle DefaultObject => (RBMAIAction_WaitForWeaponToSettle)StaticClass().DefaultObject;
+
     internal RBMAIAction_WaitForWeaponToSettle() { }
 
     /// <summary>

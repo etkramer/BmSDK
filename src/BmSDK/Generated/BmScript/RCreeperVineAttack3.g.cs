@@ -21,6 +21,11 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCreeperVineAttack3.
+    /// </summary>
+    public static RCreeperVineAttack3 DefaultObject => (RCreeperVineAttack3)StaticClass().DefaultObject;
+
     internal RCreeperVineAttack3() { }
 
     /// <summary>

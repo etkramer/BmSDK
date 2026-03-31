@@ -21,6 +21,11 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataProvider_OnlineFriends.
+    /// </summary>
+    public static UIDataProvider_OnlineFriends DefaultObject => (UIDataProvider_OnlineFriends)StaticClass().DefaultObject;
+
     internal UIDataProvider_OnlineFriends() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlayRandomLine.
+    /// </summary>
+    public static RSeqAct_PlayRandomLine DefaultObject => (RSeqAct_PlayRandomLine)StaticClass().DefaultObject;
+
     internal RSeqAct_PlayRandomLine() { }
 
     /// <summary>

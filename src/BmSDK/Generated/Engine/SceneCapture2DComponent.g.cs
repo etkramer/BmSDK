@@ -21,6 +21,11 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SceneCapture2DComponent.
+    /// </summary>
+    public static SceneCapture2DComponent DefaultObject => (SceneCapture2DComponent)StaticClass().DefaultObject;
+
     internal SceneCapture2DComponent() { }
 
     /// <summary>

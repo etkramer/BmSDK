@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_CornerLead.
+    /// </summary>
+    public static RAEC_Search_Sub_CornerLead DefaultObject => (RAEC_Search_Sub_CornerLead)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_CornerLead() { }
 
     /// <summary>

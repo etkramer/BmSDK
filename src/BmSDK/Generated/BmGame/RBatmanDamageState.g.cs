@@ -21,6 +21,11 @@ public partial class RBatmanDamageState : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatmanDamageState.
+    /// </summary>
+    public static RBatmanDamageState DefaultObject => (RBatmanDamageState)StaticClass().DefaultObject;
+
     internal RBatmanDamageState() { }
 
     /// <summary>

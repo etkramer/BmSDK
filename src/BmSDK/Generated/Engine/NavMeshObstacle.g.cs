@@ -21,6 +21,11 @@ public partial class NavMeshObstacle : BmSDK.Engine.Actor, BmSDK.Engine.Interfac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshObstacle.
+    /// </summary>
+    public static NavMeshObstacle DefaultObject => (NavMeshObstacle)StaticClass().DefaultObject;
+
     internal NavMeshObstacle() { }
 
     /// <summary>

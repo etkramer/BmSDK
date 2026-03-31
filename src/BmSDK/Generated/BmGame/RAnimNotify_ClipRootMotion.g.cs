@@ -21,6 +21,11 @@ public partial class RAnimNotify_ClipRootMotion : BmSDK.BmGame.RAnimNotify_Begin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_ClipRootMotion.
+    /// </summary>
+    public static RAnimNotify_ClipRootMotion DefaultObject => (RAnimNotify_ClipRootMotion)StaticClass().DefaultObject;
+
     internal RAnimNotify_ClipRootMotion() { }
 
     /// <summary>

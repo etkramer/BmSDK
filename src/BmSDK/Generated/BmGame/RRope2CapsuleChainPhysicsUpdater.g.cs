@@ -21,6 +21,11 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2CapsuleChainPhysicsUpdater.
+    /// </summary>
+    public static RRope2CapsuleChainPhysicsUpdater DefaultObject => (RRope2CapsuleChainPhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2CapsuleChainPhysicsUpdater() { }
 
     /// <summary>

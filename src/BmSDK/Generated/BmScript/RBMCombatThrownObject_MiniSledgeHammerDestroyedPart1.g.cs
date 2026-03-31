@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1 : BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1.
+    /// </summary>
+    public static RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1 DefaultObject => (RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1() { }
 
     /// <summary>

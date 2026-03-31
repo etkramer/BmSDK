@@ -21,6 +21,11 @@ public partial class RFleePoint_Box : BmSDK.BmGame.RFleePoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint_Box.
+    /// </summary>
+    public static RFleePoint_Box DefaultObject => (RFleePoint_Box)StaticClass().DefaultObject;
+
     internal RFleePoint_Box() { }
 
     /// <summary>

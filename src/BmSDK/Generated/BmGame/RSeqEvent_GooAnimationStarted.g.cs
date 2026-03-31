@@ -21,6 +21,11 @@ public partial class RSeqEvent_GooAnimationStarted : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GooAnimationStarted.
+    /// </summary>
+    public static RSeqEvent_GooAnimationStarted DefaultObject => (RSeqEvent_GooAnimationStarted)StaticClass().DefaultObject;
+
     internal RSeqEvent_GooAnimationStarted() { }
 
     /// <summary>

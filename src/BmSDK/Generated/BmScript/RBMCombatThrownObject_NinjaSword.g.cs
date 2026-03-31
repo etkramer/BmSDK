@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_NinjaSword : BmSDK.BmGame.RBMCombatTh
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_NinjaSword.
+    /// </summary>
+    public static RBMCombatThrownObject_NinjaSword DefaultObject => (RBMCombatThrownObject_NinjaSword)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_NinjaSword() { }
 
     /// <summary>

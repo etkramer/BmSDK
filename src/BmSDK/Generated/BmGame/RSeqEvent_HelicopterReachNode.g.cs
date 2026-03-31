@@ -21,6 +21,11 @@ public partial class RSeqEvent_HelicopterReachNode : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HelicopterReachNode.
+    /// </summary>
+    public static RSeqEvent_HelicopterReachNode DefaultObject => (RSeqEvent_HelicopterReachNode)StaticClass().DefaultObject;
+
     internal RSeqEvent_HelicopterReachNode() { }
 
     /// <summary>

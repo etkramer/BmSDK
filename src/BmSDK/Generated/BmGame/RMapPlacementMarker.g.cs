@@ -21,6 +21,11 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMapPlacementMarker.
+    /// </summary>
+    public static RMapPlacementMarker DefaultObject => (RMapPlacementMarker)StaticClass().DefaultObject;
+
     internal RMapPlacementMarker() { }
 
     /// <summary>

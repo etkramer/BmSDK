@@ -21,6 +21,11 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_GroupPauseAndLook.
+    /// </summary>
+    public static RAEC_GroupPauseAndLook DefaultObject => (RAEC_GroupPauseAndLook)StaticClass().DefaultObject;
+
     internal RAEC_GroupPauseAndLook() { }
 
     /// <summary>

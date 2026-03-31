@@ -21,6 +21,11 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCornerPointBase.
+    /// </summary>
+    public static RCornerPointBase DefaultObject => (RCornerPointBase)StaticClass().DefaultObject;
+
     internal RCornerPointBase() { }
 
     /// <summary>

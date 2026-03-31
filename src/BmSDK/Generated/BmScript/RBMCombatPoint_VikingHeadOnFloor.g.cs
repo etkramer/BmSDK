@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_VikingHeadOnFloor : BmSDK.BmGame.RBMCombatPo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_VikingHeadOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_VikingHeadOnFloor DefaultObject => (RBMCombatPoint_VikingHeadOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_VikingHeadOnFloor() { }
 
     /// <summary>

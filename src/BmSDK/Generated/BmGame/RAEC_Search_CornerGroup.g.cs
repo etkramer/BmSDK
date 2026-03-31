@@ -21,6 +21,11 @@ public partial class RAEC_Search_CornerGroup : BmSDK.BmGame.RAEC_SubGroup, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_CornerGroup.
+    /// </summary>
+    public static RAEC_Search_CornerGroup DefaultObject => (RAEC_Search_CornerGroup)StaticClass().DefaultObject;
+
     internal RAEC_Search_CornerGroup() { }
 
     /// <summary>

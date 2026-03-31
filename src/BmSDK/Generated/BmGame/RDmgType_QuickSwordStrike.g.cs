@@ -21,6 +21,11 @@ public partial class RDmgType_QuickSwordStrike : BmSDK.BmGame.RDmgType_QuickStri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_QuickSwordStrike.
+    /// </summary>
+    public static RDmgType_QuickSwordStrike DefaultObject => (RDmgType_QuickSwordStrike)StaticClass().DefaultObject;
+
     internal RDmgType_QuickSwordStrike() { }
 
     /// <summary>

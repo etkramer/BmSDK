@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_BottleOnFloor : BmSDK.BmGame.RBMCombatPoint_
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_BottleOnFloor.
+    /// </summary>
+    public static RBMCombatPoint_BottleOnFloor DefaultObject => (RBMCombatPoint_BottleOnFloor)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_BottleOnFloor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_GiveTopHealthForDemo : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GiveTopHealthForDemo.
+    /// </summary>
+    public static RSeqAct_GiveTopHealthForDemo DefaultObject => (RSeqAct_GiveTopHealthForDemo)StaticClass().DefaultObject;
+
     internal RSeqAct_GiveTopHealthForDemo() { }
 
     /// <summary>

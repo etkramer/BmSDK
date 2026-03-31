@@ -21,6 +21,11 @@ public partial class RScriptConversation : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RScriptConversation.
+    /// </summary>
+    public static RScriptConversation DefaultObject => (RScriptConversation)StaticClass().DefaultObject;
+
     internal RScriptConversation() { }
 
     /// <summary>

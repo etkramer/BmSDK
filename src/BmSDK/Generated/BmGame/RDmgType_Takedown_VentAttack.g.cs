@@ -21,6 +21,11 @@ public partial class RDmgType_Takedown_VentAttack : BmSDK.BmGame.RDmgType_Takedo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Takedown_VentAttack.
+    /// </summary>
+    public static RDmgType_Takedown_VentAttack DefaultObject => (RDmgType_Takedown_VentAttack)StaticClass().DefaultObject;
+
     internal RDmgType_Takedown_VentAttack() { }
 
     /// <summary>

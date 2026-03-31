@@ -21,6 +21,11 @@ public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ShowLevelIntroText.
+    /// </summary>
+    public static RSeqAct_ShowLevelIntroText DefaultObject => (RSeqAct_ShowLevelIntroText)StaticClass().DefaultObject;
+
     internal RSeqAct_ShowLevelIntroText() { }
 
     /// <summary>

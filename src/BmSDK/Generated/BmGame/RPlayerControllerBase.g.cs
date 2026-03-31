@@ -21,6 +21,11 @@ public partial class RPlayerControllerBase : BmSDK.Engine.PlayerController, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerControllerBase.
+    /// </summary>
+    public static RPlayerControllerBase DefaultObject => (RPlayerControllerBase)StaticClass().DefaultObject;
+
     internal RPlayerControllerBase() { }
 
     /// <summary>

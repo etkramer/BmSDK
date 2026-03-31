@@ -21,6 +21,11 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSecurityLaserDoor.
+    /// </summary>
+    public static RSecurityLaserDoor DefaultObject => (RSecurityLaserDoor)StaticClass().DefaultObject;
+
     internal RSecurityLaserDoor() { }
 
     /// <summary>

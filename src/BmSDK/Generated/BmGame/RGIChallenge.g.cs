@@ -21,6 +21,11 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGIChallenge.
+    /// </summary>
+    public static RGIChallenge DefaultObject => (RGIChallenge)StaticClass().DefaultObject;
+
     internal RGIChallenge() { }
 
     /// <summary>

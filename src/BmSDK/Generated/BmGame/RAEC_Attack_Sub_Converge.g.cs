@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_Converge : BmSDK.BmGame.RAlertEventCoordina
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_Converge.
+    /// </summary>
+    public static RAEC_Attack_Sub_Converge DefaultObject => (RAEC_Attack_Sub_Converge)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_Converge() { }
 
     /// <summary>

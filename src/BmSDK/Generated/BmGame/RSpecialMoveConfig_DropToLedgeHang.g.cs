@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_DropToLedgeHang : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_DropToLedgeHang.
+    /// </summary>
+    public static RSpecialMoveConfig_DropToLedgeHang DefaultObject => (RSpecialMoveConfig_DropToLedgeHang)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_DropToLedgeHang() { }
 
     /// <summary>

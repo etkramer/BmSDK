@@ -21,6 +21,11 @@ public partial class MaterialExpressionMeshEmitterVertexColor : BmSDK.Engine.Mat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionMeshEmitterVertexColor.
+    /// </summary>
+    public static MaterialExpressionMeshEmitterVertexColor DefaultObject => (MaterialExpressionMeshEmitterVertexColor)StaticClass().DefaultObject;
+
     internal MaterialExpressionMeshEmitterVertexColor() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTripMineBase.
+    /// </summary>
+    public static RTripMineBase DefaultObject => (RTripMineBase)StaticClass().DefaultObject;
+
     internal RTripMineBase() { }
 
     /// <summary>

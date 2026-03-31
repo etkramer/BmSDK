@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_HangOnHelicopter.
+    /// </summary>
+    public static RSpecialMoveInstance_HangOnHelicopter DefaultObject => (RSpecialMoveInstance_HangOnHelicopter)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_HangOnHelicopter() { }
 
     /// <summary>

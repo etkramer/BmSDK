@@ -21,6 +21,11 @@ public partial class RAnimUtil_Layers : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_Layers.
+    /// </summary>
+    public static RAnimUtil_Layers DefaultObject => (RAnimUtil_Layers)StaticClass().DefaultObject;
+
     internal RAnimUtil_Layers() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_LookAtHole : BmSDK.BmGame.RBMAIAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_LookAtHole.
+    /// </summary>
+    public static RBMAIAction_LookAtHole DefaultObject => (RBMAIAction_LookAtHole)StaticClass().DefaultObject;
+
     internal RBMAIAction_LookAtHole() { }
 
     /// <summary>

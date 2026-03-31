@@ -21,6 +21,11 @@ public partial class RHidePoint_Rope : BmSDK.BmGame.RHidePoint_RopeBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_Rope.
+    /// </summary>
+    public static RHidePoint_Rope DefaultObject => (RHidePoint_Rope)StaticClass().DefaultObject;
+
     internal RHidePoint_Rope() { }
 
     /// <summary>

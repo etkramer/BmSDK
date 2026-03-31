@@ -21,6 +21,11 @@ public partial class RDmgType_Smilex : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Smilex.
+    /// </summary>
+    public static RDmgType_Smilex DefaultObject => (RDmgType_Smilex)StaticClass().DefaultObject;
+
     internal RDmgType_Smilex() { }
 
     /// <summary>

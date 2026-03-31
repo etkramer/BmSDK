@@ -21,6 +21,11 @@ public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVantagePointMovementCamera.
+    /// </summary>
+    public static RVantagePointMovementCamera DefaultObject => (RVantagePointMovementCamera)StaticClass().DefaultObject;
+
     internal RVantagePointMovementCamera() { }
 
     /// <summary>

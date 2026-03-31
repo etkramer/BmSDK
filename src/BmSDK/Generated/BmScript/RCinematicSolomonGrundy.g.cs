@@ -21,6 +21,11 @@ public partial class RCinematicSolomonGrundy : BmSDK.BmGame.RCinematicActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicSolomonGrundy.
+    /// </summary>
+    public static RCinematicSolomonGrundy DefaultObject => (RCinematicSolomonGrundy)StaticClass().DefaultObject;
+
     internal RCinematicSolomonGrundy() { }
 
     /// <summary>

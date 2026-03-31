@@ -21,6 +21,11 @@ public partial class RSeqAct_AutoInitialiseHelicopters : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AutoInitialiseHelicopters.
+    /// </summary>
+    public static RSeqAct_AutoInitialiseHelicopters DefaultObject => (RSeqAct_AutoInitialiseHelicopters)StaticClass().DefaultObject;
+
     internal RSeqAct_AutoInitialiseHelicopters() { }
 
     /// <summary>

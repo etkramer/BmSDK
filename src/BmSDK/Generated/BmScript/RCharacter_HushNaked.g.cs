@@ -21,6 +21,11 @@ public partial class RCharacter_HushNaked : BmSDK.BmGame.RCharacter, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_HushNaked.
+    /// </summary>
+    public static RCharacter_HushNaked DefaultObject => (RCharacter_HushNaked)StaticClass().DefaultObject;
+
     internal RCharacter_HushNaked() { }
 
     /// <summary>

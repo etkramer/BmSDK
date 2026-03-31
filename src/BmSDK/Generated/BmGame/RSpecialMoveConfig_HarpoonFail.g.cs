@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_HarpoonFail : BmSDK.BmGame.RSpecialMoveC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_HarpoonFail.
+    /// </summary>
+    public static RSpecialMoveConfig_HarpoonFail DefaultObject => (RSpecialMoveConfig_HarpoonFail)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_HarpoonFail() { }
 
     /// <summary>

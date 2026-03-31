@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_TinCan : BmSDK.BmGame.RBMCombatThrown
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_TinCan.
+    /// </summary>
+    public static RBMCombatThrownObject_TinCan DefaultObject => (RBMCombatThrownObject_TinCan)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_TinCan() { }
 
     /// <summary>

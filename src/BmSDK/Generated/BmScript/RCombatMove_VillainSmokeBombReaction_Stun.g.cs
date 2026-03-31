@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainSmokeBombReaction_Stun : BmSDK.BmGame.RC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainSmokeBombReaction_Stun.
+    /// </summary>
+    public static RCombatMove_VillainSmokeBombReaction_Stun DefaultObject => (RCombatMove_VillainSmokeBombReaction_Stun)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainSmokeBombReaction_Stun() { }
 
     /// <summary>

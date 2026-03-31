@@ -21,6 +21,11 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonDragPhysicsBase.
+    /// </summary>
+    public static RHarpoonDragPhysicsBase DefaultObject => (RHarpoonDragPhysicsBase)StaticClass().DefaultObject;
+
     internal RHarpoonDragPhysicsBase() { }
 
     /// <summary>

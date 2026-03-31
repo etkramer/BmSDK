@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainThrowBrick : BmSDK.BmGame.RCombatMove, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainThrowBrick.
+    /// </summary>
+    public static RCombatMove_VillainThrowBrick DefaultObject => (RCombatMove_VillainThrowBrick)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainThrowBrick() { }
 
     /// <summary>

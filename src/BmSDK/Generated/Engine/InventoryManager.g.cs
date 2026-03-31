@@ -21,6 +21,11 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InventoryManager.
+    /// </summary>
+    public static InventoryManager DefaultObject => (InventoryManager)StaticClass().DefaultObject;
+
     internal InventoryManager() { }
 
     /// <summary>

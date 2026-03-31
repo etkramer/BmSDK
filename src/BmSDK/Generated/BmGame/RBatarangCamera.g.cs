@@ -21,6 +21,11 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangCamera.
+    /// </summary>
+    public static RBatarangCamera DefaultObject => (RBatarangCamera)StaticClass().DefaultObject;
+
     internal RBatarangCamera() { }
 
     /// <summary>

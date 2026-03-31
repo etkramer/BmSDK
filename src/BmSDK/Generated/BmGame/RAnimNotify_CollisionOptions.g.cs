@@ -21,6 +21,11 @@ public partial class RAnimNotify_CollisionOptions : BmSDK.BmGame.RAnimNotify_Beg
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CollisionOptions.
+    /// </summary>
+    public static RAnimNotify_CollisionOptions DefaultObject => (RAnimNotify_CollisionOptions)StaticClass().DefaultObject;
+
     internal RAnimNotify_CollisionOptions() { }
 
     /// <summary>

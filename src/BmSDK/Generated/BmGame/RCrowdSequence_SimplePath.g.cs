@@ -21,6 +21,11 @@ public partial class RCrowdSequence_SimplePath : BmSDK.BmGame.RCrowdSequence, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSequence_SimplePath.
+    /// </summary>
+    public static RCrowdSequence_SimplePath DefaultObject => (RCrowdSequence_SimplePath)StaticClass().DefaultObject;
+
     internal RCrowdSequence_SimplePath() { }
 
     /// <summary>

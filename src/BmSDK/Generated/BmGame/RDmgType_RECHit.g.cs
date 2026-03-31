@@ -21,6 +21,11 @@ public partial class RDmgType_RECHit : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_RECHit.
+    /// </summary>
+    public static RDmgType_RECHit DefaultObject => (RDmgType_RECHit)StaticClass().DefaultObject;
+
     internal RDmgType_RECHit() { }
 
     /// <summary>

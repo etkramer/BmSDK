@@ -21,6 +21,11 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimZip_Settings.
+    /// </summary>
+    public static RAnimZip_Settings DefaultObject => (RAnimZip_Settings)StaticClass().DefaultObject;
+
     internal RAnimZip_Settings() { }
 
     /// <summary>

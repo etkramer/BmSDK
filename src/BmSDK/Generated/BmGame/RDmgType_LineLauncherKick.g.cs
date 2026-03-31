@@ -21,6 +21,11 @@ public partial class RDmgType_LineLauncherKick : BmSDK.BmGame.RDmgType_HeavyStri
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_LineLauncherKick.
+    /// </summary>
+    public static RDmgType_LineLauncherKick DefaultObject => (RDmgType_LineLauncherKick)StaticClass().DefaultObject;
+
     internal RDmgType_LineLauncherKick() { }
 
     /// <summary>

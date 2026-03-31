@@ -21,6 +21,11 @@ public partial class RDmgType_GlideKick : BmSDK.BmGame.RDmgType_HeavyStrike, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GlideKick.
+    /// </summary>
+    public static RDmgType_GlideKick DefaultObject => (RDmgType_GlideKick)StaticClass().DefaultObject;
+
     internal RDmgType_GlideKick() { }
 
     /// <summary>

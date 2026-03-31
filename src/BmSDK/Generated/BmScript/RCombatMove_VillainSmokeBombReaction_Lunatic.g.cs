@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainSmokeBombReaction_Lunatic : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainSmokeBombReaction_Lunatic.
+    /// </summary>
+    public static RCombatMove_VillainSmokeBombReaction_Lunatic DefaultObject => (RCombatMove_VillainSmokeBombReaction_Lunatic)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainSmokeBombReaction_Lunatic() { }
 
     /// <summary>

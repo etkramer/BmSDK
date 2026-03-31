@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_Crate : BmSDK.BmGame.RBMCombatPoint_Environm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_Crate.
+    /// </summary>
+    public static RBMCombatPoint_Crate DefaultObject => (RBMCombatPoint_Crate)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_Crate() { }
 
     /// <summary>

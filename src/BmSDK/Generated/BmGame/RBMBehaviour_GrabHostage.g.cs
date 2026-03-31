@@ -21,6 +21,11 @@ public partial class RBMBehaviour_GrabHostage : BmSDK.BmGame.RBMBehaviour_Action
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_GrabHostage.
+    /// </summary>
+    public static RBMBehaviour_GrabHostage DefaultObject => (RBMBehaviour_GrabHostage)StaticClass().DefaultObject;
+
     internal RBMBehaviour_GrabHostage() { }
 
     /// <summary>

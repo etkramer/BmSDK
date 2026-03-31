@@ -21,6 +21,11 @@ public partial class RCinematicFreezeWithSuit : BmSDK.BmGame.RCinematicActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicFreezeWithSuit.
+    /// </summary>
+    public static RCinematicFreezeWithSuit DefaultObject => (RCinematicFreezeWithSuit)StaticClass().DefaultObject;
+
     internal RCinematicFreezeWithSuit() { }
 
     /// <summary>

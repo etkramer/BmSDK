@@ -21,6 +21,11 @@ public partial class AnimNodeBlendByPhysics : BmSDK.Engine.AnimNodeBlendList, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeBlendByPhysics.
+    /// </summary>
+    public static AnimNodeBlendByPhysics DefaultObject => (AnimNodeBlendByPhysics)StaticClass().DefaultObject;
+
     internal AnimNodeBlendByPhysics() { }
 
     /// <summary>

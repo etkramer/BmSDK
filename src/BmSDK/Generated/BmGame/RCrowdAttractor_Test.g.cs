@@ -21,6 +21,11 @@ public partial class RCrowdAttractor_Test : BmSDK.BmGame.RCrowdAttractor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdAttractor_Test.
+    /// </summary>
+    public static RCrowdAttractor_Test DefaultObject => (RCrowdAttractor_Test)StaticClass().DefaultObject;
+
     internal RCrowdAttractor_Test() { }
 
     /// <summary>

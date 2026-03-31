@@ -21,6 +21,11 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlantPodHomingSmall.
+    /// </summary>
+    public static RPlantPodHomingSmall DefaultObject => (RPlantPodHomingSmall)StaticClass().DefaultObject;
+
     internal RPlantPodHomingSmall() { }
 
     /// <summary>

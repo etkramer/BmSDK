@@ -21,6 +21,11 @@ public partial class RFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFleePoint.
+    /// </summary>
+    public static RFleePoint DefaultObject => (RFleePoint)StaticClass().DefaultObject;
+
     internal RFleePoint() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RDmgType_Cower : BmSDK.BmGame.RDamageType, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_Cower.
+    /// </summary>
+    public static RDmgType_Cower DefaultObject => (RDmgType_Cower)StaticClass().DefaultObject;
+
     internal RDmgType_Cower() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTrackingSecurityCameraBase.
+    /// </summary>
+    public static RTrackingSecurityCameraBase DefaultObject => (RTrackingSecurityCameraBase)StaticClass().DefaultObject;
+
     internal RTrackingSecurityCameraBase() { }
 
     /// <summary>

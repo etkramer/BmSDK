@@ -21,6 +21,11 @@ public partial class FluidInfluenceActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FluidInfluenceActor.
+    /// </summary>
+    public static FluidInfluenceActor DefaultObject => (FluidInfluenceActor)StaticClass().DefaultObject;
+
     internal FluidInfluenceActor() { }
 
     /// <summary>

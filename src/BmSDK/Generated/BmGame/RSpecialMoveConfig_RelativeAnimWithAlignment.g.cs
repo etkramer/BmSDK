@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RelativeAnimWithAlignment : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RelativeAnimWithAlignment.
+    /// </summary>
+    public static RSpecialMoveConfig_RelativeAnimWithAlignment DefaultObject => (RSpecialMoveConfig_RelativeAnimWithAlignment)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RelativeAnimWithAlignment() { }
 
     /// <summary>

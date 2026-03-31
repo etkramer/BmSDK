@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_MultiWeaponRackBase.
+    /// </summary>
+    public static RBMCombatPoint_MultiWeaponRackBase DefaultObject => (RBMCombatPoint_MultiWeaponRackBase)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_MultiWeaponRackBase() { }
 
     /// <summary>

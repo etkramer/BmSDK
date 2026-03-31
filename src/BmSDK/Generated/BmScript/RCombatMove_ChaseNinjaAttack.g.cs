@@ -21,6 +21,11 @@ public partial class RCombatMove_ChaseNinjaAttack : BmSDK.BmGame.RCombatMove_Nin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_ChaseNinjaAttack.
+    /// </summary>
+    public static RCombatMove_ChaseNinjaAttack DefaultObject => (RCombatMove_ChaseNinjaAttack)StaticClass().DefaultObject;
+
     internal RCombatMove_ChaseNinjaAttack() { }
 
     /// <summary>

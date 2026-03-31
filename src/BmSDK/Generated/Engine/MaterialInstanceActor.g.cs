@@ -21,6 +21,11 @@ public partial class MaterialInstanceActor : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialInstanceActor.
+    /// </summary>
+    public static MaterialInstanceActor DefaultObject => (MaterialInstanceActor)StaticClass().DefaultObject;
+
     internal MaterialInstanceActor() { }
 
     /// <summary>

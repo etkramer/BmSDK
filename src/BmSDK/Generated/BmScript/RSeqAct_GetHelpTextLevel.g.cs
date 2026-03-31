@@ -21,6 +21,11 @@ public partial class RSeqAct_GetHelpTextLevel : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GetHelpTextLevel.
+    /// </summary>
+    public static RSeqAct_GetHelpTextLevel DefaultObject => (RSeqAct_GetHelpTextLevel)StaticClass().DefaultObject;
+
     internal RSeqAct_GetHelpTextLevel() { }
 
     /// <summary>

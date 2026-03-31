@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetRicochetSticks : BmSDK.BmGame.RCombatMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetRicochetSticks.
+    /// </summary>
+    public static RCombatMove_GadgetRicochetSticks DefaultObject => (RCombatMove_GadgetRicochetSticks)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetRicochetSticks() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class MaterialEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialEffect.
+    /// </summary>
+    public static MaterialEffect DefaultObject => (MaterialEffect)StaticClass().DefaultObject;
+
     internal MaterialEffect() { }
 
     /// <summary>

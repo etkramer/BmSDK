@@ -21,6 +21,11 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDataStore_GameState.
+    /// </summary>
+    public static UIDataStore_GameState DefaultObject => (UIDataStore_GameState)StaticClass().DefaultObject;
+
     internal UIDataStore_GameState() { }
 
     /// <summary>

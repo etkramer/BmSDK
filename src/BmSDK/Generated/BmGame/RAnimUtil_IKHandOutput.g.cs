@@ -21,6 +21,11 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_IKHandOutput.
+    /// </summary>
+    public static RAnimUtil_IKHandOutput DefaultObject => (RAnimUtil_IKHandOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_IKHandOutput() { }
 
     /// <summary>

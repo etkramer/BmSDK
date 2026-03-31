@@ -21,6 +21,11 @@ public partial class RSeqAct_ChangeDebugLabelText : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ChangeDebugLabelText.
+    /// </summary>
+    public static RSeqAct_ChangeDebugLabelText DefaultObject => (RSeqAct_ChangeDebugLabelText)StaticClass().DefaultObject;
+
     internal RSeqAct_ChangeDebugLabelText() { }
 
     /// <summary>

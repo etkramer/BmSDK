@@ -21,6 +21,11 @@ public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSilentPredatorCamera.
+    /// </summary>
+    public static RSilentPredatorCamera DefaultObject => (RSilentPredatorCamera)StaticClass().DefaultObject;
+
     internal RSilentPredatorCamera() { }
 
     /// <summary>

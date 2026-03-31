@@ -21,6 +21,11 @@ public partial class RSeqAct_EnableFreezeTelemetry : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EnableFreezeTelemetry.
+    /// </summary>
+    public static RSeqAct_EnableFreezeTelemetry DefaultObject => (RSeqAct_EnableFreezeTelemetry)StaticClass().DefaultObject;
+
     internal RSeqAct_EnableFreezeTelemetry() { }
 
     /// <summary>

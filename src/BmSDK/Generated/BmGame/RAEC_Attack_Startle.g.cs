@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Startle.
+    /// </summary>
+    public static RAEC_Attack_Startle DefaultObject => (RAEC_Attack_Startle)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Startle() { }
 
     /// <summary>

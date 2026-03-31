@@ -21,6 +21,11 @@ public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRifle, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponShotgun.
+    /// </summary>
+    public static RBMWeaponShotgun DefaultObject => (RBMWeaponShotgun)StaticClass().DefaultObject;
+
     internal RBMWeaponShotgun() { }
 
     /// <summary>

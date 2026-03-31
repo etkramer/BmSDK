@@ -21,6 +21,11 @@ public partial class MaterialExpressionFontSample : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFontSample.
+    /// </summary>
+    public static MaterialExpressionFontSample DefaultObject => (MaterialExpressionFontSample)StaticClass().DefaultObject;
+
     internal MaterialExpressionFontSample() { }
 
     /// <summary>

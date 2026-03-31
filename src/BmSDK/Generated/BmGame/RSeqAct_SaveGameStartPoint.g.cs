@@ -21,6 +21,11 @@ public partial class RSeqAct_SaveGameStartPoint : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SaveGameStartPoint.
+    /// </summary>
+    public static RSeqAct_SaveGameStartPoint DefaultObject => (RSeqAct_SaveGameStartPoint)StaticClass().DefaultObject;
+
     internal RSeqAct_SaveGameStartPoint() { }
 
     /// <summary>

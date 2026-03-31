@@ -21,6 +21,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartPredatorChallenge.
+    /// </summary>
+    public static RSeqAct_StartPredatorChallenge DefaultObject => (RSeqAct_StartPredatorChallenge)StaticClass().DefaultObject;
+
     internal RSeqAct_StartPredatorChallenge() { }
 
     /// <summary>

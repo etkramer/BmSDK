@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanThrownObjectCounterClayface.
+    /// </summary>
+    public static RCombatMove_BatmanThrownObjectCounterClayface DefaultObject => (RCombatMove_BatmanThrownObjectCounterClayface)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanThrownObjectCounterClayface() { }
 
     /// <summary>

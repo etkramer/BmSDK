@@ -21,6 +21,11 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendlyHarleyPDLC.
+    /// </summary>
+    public static RPawnFriendlyHarleyPDLC DefaultObject => (RPawnFriendlyHarleyPDLC)StaticClass().DefaultObject;
+
     internal RPawnFriendlyHarleyPDLC() { }
 
     /// <summary>

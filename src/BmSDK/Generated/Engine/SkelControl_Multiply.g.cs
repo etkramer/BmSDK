@@ -21,6 +21,11 @@ public partial class SkelControl_Multiply : BmSDK.Engine.SkelControlBase, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControl_Multiply.
+    /// </summary>
+    public static SkelControl_Multiply DefaultObject => (SkelControl_Multiply)StaticClass().DefaultObject;
+
     internal SkelControl_Multiply() { }
 
     /// <summary>

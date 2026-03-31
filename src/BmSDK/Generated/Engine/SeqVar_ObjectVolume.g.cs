@@ -21,6 +21,11 @@ public partial class SeqVar_ObjectVolume : BmSDK.Engine.SeqVar_Object, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_ObjectVolume.
+    /// </summary>
+    public static SeqVar_ObjectVolume DefaultObject => (SeqVar_ObjectVolume)StaticClass().DefaultObject;
+
     internal SeqVar_ObjectVolume() { }
 
     /// <summary>

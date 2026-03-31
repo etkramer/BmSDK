@@ -21,6 +21,11 @@ public partial class RCinematicIvy : BmSDK.BmGame.RCinematicActor, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicIvy.
+    /// </summary>
+    public static RCinematicIvy DefaultObject => (RCinematicIvy)StaticClass().DefaultObject;
+
     internal RCinematicIvy() { }
 
     /// <summary>

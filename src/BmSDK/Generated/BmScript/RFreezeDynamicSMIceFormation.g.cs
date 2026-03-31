@@ -21,6 +21,11 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeDynamicSMIceFormation.
+    /// </summary>
+    public static RFreezeDynamicSMIceFormation DefaultObject => (RFreezeDynamicSMIceFormation)StaticClass().DefaultObject;
+
     internal RFreezeDynamicSMIceFormation() { }
 
     /// <summary>

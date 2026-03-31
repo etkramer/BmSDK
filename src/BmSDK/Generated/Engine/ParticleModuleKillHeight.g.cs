@@ -21,6 +21,11 @@ public partial class ParticleModuleKillHeight : BmSDK.Engine.ParticleModuleKillB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleKillHeight.
+    /// </summary>
+    public static ParticleModuleKillHeight DefaultObject => (ParticleModuleKillHeight)StaticClass().DefaultObject;
+
     internal ParticleModuleKillHeight() { }
 
     /// <summary>

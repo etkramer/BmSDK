@@ -21,6 +21,11 @@ public partial class RForensicsInvestigator : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicsInvestigator.
+    /// </summary>
+    public static RForensicsInvestigator DefaultObject => (RForensicsInvestigator)StaticClass().DefaultObject;
+
     internal RForensicsInvestigator() { }
 
     /// <summary>

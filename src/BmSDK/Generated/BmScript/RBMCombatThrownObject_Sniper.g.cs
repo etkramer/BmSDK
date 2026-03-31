@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_Sniper : BmSDK.BmGame.RBMCombatThrown
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_Sniper.
+    /// </summary>
+    public static RBMCombatThrownObject_Sniper DefaultObject => (RBMCombatThrownObject_Sniper)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_Sniper() { }
 
     /// <summary>

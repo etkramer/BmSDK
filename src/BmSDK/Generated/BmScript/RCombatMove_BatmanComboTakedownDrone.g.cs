@@ -21,6 +21,11 @@ public partial class RCombatMove_BatmanComboTakedownDrone : BmSDK.BmGame.RCombat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanComboTakedownDrone.
+    /// </summary>
+    public static RCombatMove_BatmanComboTakedownDrone DefaultObject => (RCombatMove_BatmanComboTakedownDrone)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanComboTakedownDrone() { }
 
     /// <summary>

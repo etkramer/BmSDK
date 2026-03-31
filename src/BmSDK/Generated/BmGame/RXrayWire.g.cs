@@ -21,6 +21,11 @@ public partial class RXrayWire : BmSDK.BmGame.RXrayInterpActor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RXrayWire.
+    /// </summary>
+    public static RXrayWire DefaultObject => (RXrayWire)StaticClass().DefaultObject;
+
     internal RXrayWire() { }
 
     /// <summary>

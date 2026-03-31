@@ -21,6 +21,11 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_StrangeInControlRoom.
+    /// </summary>
+    public static RBMBehaviour_StrangeInControlRoom DefaultObject => (RBMBehaviour_StrangeInControlRoom)StaticClass().DefaultObject;
+
     internal RBMBehaviour_StrangeInControlRoom() { }
 
     /// <summary>

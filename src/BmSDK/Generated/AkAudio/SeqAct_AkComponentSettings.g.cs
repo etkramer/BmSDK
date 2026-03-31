@@ -21,6 +21,11 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_AkComponentSettings.
+    /// </summary>
+    public static SeqAct_AkComponentSettings DefaultObject => (SeqAct_AkComponentSettings)StaticClass().DefaultObject;
+
     internal SeqAct_AkComponentSettings() { }
 
     /// <summary>

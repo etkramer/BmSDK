@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_EnterClayface : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_EnterClayface.
+    /// </summary>
+    public static RSpecialMoveInstance_EnterClayface DefaultObject => (RSpecialMoveInstance_EnterClayface)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_EnterClayface() { }
 
     /// <summary>

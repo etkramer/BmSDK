@@ -21,6 +21,11 @@ public partial class RDisruptableSecurityLaserBox : BmSDK.BmScript.RDisruptableC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptableSecurityLaserBox.
+    /// </summary>
+    public static RDisruptableSecurityLaserBox DefaultObject => (RDisruptableSecurityLaserBox)StaticClass().DefaultObject;
+
     internal RDisruptableSecurityLaserBox() { }
 
     /// <summary>

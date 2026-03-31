@@ -21,6 +21,11 @@ public partial class RPawnFriendly : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnFriendly.
+    /// </summary>
+    public static RPawnFriendly DefaultObject => (RPawnFriendly)StaticClass().DefaultObject;
+
     internal RPawnFriendly() { }
 
     /// <summary>

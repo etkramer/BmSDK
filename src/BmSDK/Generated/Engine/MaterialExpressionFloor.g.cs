@@ -21,6 +21,11 @@ public partial class MaterialExpressionFloor : BmSDK.Engine.MaterialExpression, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFloor.
+    /// </summary>
+    public static MaterialExpressionFloor DefaultObject => (MaterialExpressionFloor)StaticClass().DefaultObject;
+
     internal MaterialExpressionFloor() { }
 
     /// <summary>

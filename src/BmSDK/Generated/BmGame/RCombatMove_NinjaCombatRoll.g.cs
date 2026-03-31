@@ -21,6 +21,11 @@ public partial class RCombatMove_NinjaCombatRoll : BmSDK.BmGame.RCombatMove, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NinjaCombatRoll.
+    /// </summary>
+    public static RCombatMove_NinjaCombatRoll DefaultObject => (RCombatMove_NinjaCombatRoll)StaticClass().DefaultObject;
+
     internal RCombatMove_NinjaCombatRoll() { }
 
     /// <summary>

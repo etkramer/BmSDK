@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockConceptArt : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockConceptArt.
+    /// </summary>
+    public static RSeqAct_UnlockConceptArt DefaultObject => (RSeqAct_UnlockConceptArt)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockConceptArt() { }
 
     /// <summary>

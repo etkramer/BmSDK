@@ -21,6 +21,11 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMaggot.
+    /// </summary>
+    public static RMaggot DefaultObject => (RMaggot)StaticClass().DefaultObject;
+
     internal RMaggot() { }
 
     /// <summary>

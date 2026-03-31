@@ -21,6 +21,11 @@ public partial class DistributionVectorConstant : BmSDK.DistributionVector, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorConstant.
+    /// </summary>
+    public static DistributionVectorConstant DefaultObject => (DistributionVectorConstant)StaticClass().DefaultObject;
+
     internal DistributionVectorConstant() { }
 
     /// <summary>

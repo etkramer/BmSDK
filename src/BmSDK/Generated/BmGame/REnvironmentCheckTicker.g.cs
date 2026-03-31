@@ -21,6 +21,11 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentCheckTicker.
+    /// </summary>
+    public static REnvironmentCheckTicker DefaultObject => (REnvironmentCheckTicker)StaticClass().DefaultObject;
+
     internal REnvironmentCheckTicker() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RAEC_SubGroup : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_SubGroup.
+    /// </summary>
+    public static RAEC_SubGroup DefaultObject => (RAEC_SubGroup)StaticClass().DefaultObject;
+
     internal RAEC_SubGroup() { }
 
     /// <summary>

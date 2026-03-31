@@ -21,6 +21,11 @@ public partial class RCombatMove_VillainSmokeBombReaction_Ninja : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_VillainSmokeBombReaction_Ninja.
+    /// </summary>
+    public static RCombatMove_VillainSmokeBombReaction_Ninja DefaultObject => (RCombatMove_VillainSmokeBombReaction_Ninja)StaticClass().DefaultObject;
+
     internal RCombatMove_VillainSmokeBombReaction_Ninja() { }
 
     /// <summary>

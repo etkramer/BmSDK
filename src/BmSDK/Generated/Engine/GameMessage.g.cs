@@ -21,6 +21,11 @@ public partial class GameMessage : BmSDK.Engine.LocalMessage, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameMessage.
+    /// </summary>
+    public static GameMessage DefaultObject => (GameMessage)StaticClass().DefaultObject;
+
     internal GameMessage() { }
 
     /// <summary>

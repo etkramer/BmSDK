@@ -21,6 +21,11 @@ public partial class RBMSeqEvent_PredEnd_HostageStillBound : BmSDK.BmGame.RBMSeq
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMSeqEvent_PredEnd_HostageStillBound.
+    /// </summary>
+    public static RBMSeqEvent_PredEnd_HostageStillBound DefaultObject => (RBMSeqEvent_PredEnd_HostageStillBound)StaticClass().DefaultObject;
+
     internal RBMSeqEvent_PredEnd_HostageStillBound() { }
 
     /// <summary>

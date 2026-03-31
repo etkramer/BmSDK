@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_HangingFearFinish : BmSDK.BmGame.RSte
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_HangingFearFinish.
+    /// </summary>
+    public static RStealthTakeDownStage_HangingFearFinish DefaultObject => (RStealthTakeDownStage_HangingFearFinish)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_HangingFearFinish() { }
 
     /// <summary>

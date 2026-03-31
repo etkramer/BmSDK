@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetupAnimBlend.
+    /// </summary>
+    public static RFlaps_ConstraintSetupAnimBlend DefaultObject => (RFlaps_ConstraintSetupAnimBlend)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetupAnimBlend() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_NervousSearchMove.
+    /// </summary>
+    public static RBMAIAction_NervousSearchMove DefaultObject => (RBMAIAction_NervousSearchMove)StaticClass().DefaultObject;
+
     internal RBMAIAction_NervousSearchMove() { }
 
     /// <summary>

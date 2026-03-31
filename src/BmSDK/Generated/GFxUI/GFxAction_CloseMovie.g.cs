@@ -21,6 +21,11 @@ public partial class GFxAction_CloseMovie : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxAction_CloseMovie.
+    /// </summary>
+    public static GFxAction_CloseMovie DefaultObject => (GFxAction_CloseMovie)StaticClass().DefaultObject;
+
     internal GFxAction_CloseMovie() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxGenericForceFieldBrush.
+    /// </summary>
+    public static NxGenericForceFieldBrush DefaultObject => (NxGenericForceFieldBrush)StaticClass().DefaultObject;
+
     internal NxGenericForceFieldBrush() { }
 
     /// <summary>

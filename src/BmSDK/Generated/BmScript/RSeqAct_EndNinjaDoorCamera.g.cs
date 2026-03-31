@@ -21,6 +21,11 @@ public partial class RSeqAct_EndNinjaDoorCamera : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EndNinjaDoorCamera.
+    /// </summary>
+    public static RSeqAct_EndNinjaDoorCamera DefaultObject => (RSeqAct_EndNinjaDoorCamera)StaticClass().DefaultObject;
+
     internal RSeqAct_EndNinjaDoorCamera() { }
 
     /// <summary>

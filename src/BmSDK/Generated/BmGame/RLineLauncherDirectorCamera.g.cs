@@ -21,6 +21,11 @@ public partial class RLineLauncherDirectorCamera : BmSDK.BmGame.RCameraActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLineLauncherDirectorCamera.
+    /// </summary>
+    public static RLineLauncherDirectorCamera DefaultObject => (RLineLauncherDirectorCamera)StaticClass().DefaultObject;
+
     internal RLineLauncherDirectorCamera() { }
 
     /// <summary>

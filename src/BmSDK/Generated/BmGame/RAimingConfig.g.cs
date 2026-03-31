@@ -21,6 +21,11 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAimingConfig.
+    /// </summary>
+    public static RAimingConfig DefaultObject => (RAimingConfig)StaticClass().DefaultObject;
+
     internal RAimingConfig() { }
 
     /// <summary>

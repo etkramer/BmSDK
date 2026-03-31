@@ -21,6 +21,11 @@ public partial class RSeqAct_HelicopterSwitchLight : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelicopterSwitchLight.
+    /// </summary>
+    public static RSeqAct_HelicopterSwitchLight DefaultObject => (RSeqAct_HelicopterSwitchLight)StaticClass().DefaultObject;
+
     internal RSeqAct_HelicopterSwitchLight() { }
 
     /// <summary>

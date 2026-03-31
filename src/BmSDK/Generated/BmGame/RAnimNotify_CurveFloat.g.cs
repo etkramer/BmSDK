@@ -21,6 +21,11 @@ public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CurveFloat.
+    /// </summary>
+    public static RAnimNotify_CurveFloat DefaultObject => (RAnimNotify_CurveFloat)StaticClass().DefaultObject;
+
     internal RAnimNotify_CurveFloat() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_PauseBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_PauseBase.
+    /// </summary>
+    public static RGFxMovieUI_PauseBase DefaultObject => (RGFxMovieUI_PauseBase)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_PauseBase() { }
 
     /// <summary>

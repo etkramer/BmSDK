@@ -21,6 +21,11 @@ public partial class RFlashNightWingViewPostProcess : BmSDK.BmGame.RViewPostProc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlashNightWingViewPostProcess.
+    /// </summary>
+    public static RFlashNightWingViewPostProcess DefaultObject => (RFlashNightWingViewPostProcess)StaticClass().DefaultObject;
+
     internal RFlashNightWingViewPostProcess() { }
 
     /// <summary>

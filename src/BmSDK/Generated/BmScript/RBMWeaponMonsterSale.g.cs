@@ -21,6 +21,11 @@ public partial class RBMWeaponMonsterSale : BmSDK.BmGame.RBMWeaponPipeBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponMonsterSale.
+    /// </summary>
+    public static RBMWeaponMonsterSale DefaultObject => (RBMWeaponMonsterSale)StaticClass().DefaultObject;
+
     internal RBMWeaponMonsterSale() { }
 
     /// <summary>

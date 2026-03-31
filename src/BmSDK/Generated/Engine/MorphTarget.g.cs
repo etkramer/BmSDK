@@ -21,6 +21,11 @@ public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MorphTarget.
+    /// </summary>
+    public static MorphTarget DefaultObject => (MorphTarget)StaticClass().DefaultObject;
+
     internal MorphTarget() { }
 
     /// <summary>

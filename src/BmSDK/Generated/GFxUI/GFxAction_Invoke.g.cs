@@ -21,6 +21,11 @@ public partial class GFxAction_Invoke : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxAction_Invoke.
+    /// </summary>
+    public static GFxAction_Invoke DefaultObject => (GFxAction_Invoke)StaticClass().DefaultObject;
+
     internal GFxAction_Invoke() { }
 
     /// <summary>

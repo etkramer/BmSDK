@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Azriel : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Azriel.
+    /// </summary>
+    public static RBMBehaviour_Azriel DefaultObject => (RBMBehaviour_Azriel)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Azriel() { }
 
     /// <summary>

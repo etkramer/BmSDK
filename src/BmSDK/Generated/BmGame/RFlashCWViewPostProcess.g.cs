@@ -21,6 +21,11 @@ public partial class RFlashCWViewPostProcess : BmSDK.BmGame.RViewPostProcess, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlashCWViewPostProcess.
+    /// </summary>
+    public static RFlashCWViewPostProcess DefaultObject => (RFlashCWViewPostProcess)StaticClass().DefaultObject;
+
     internal RFlashCWViewPostProcess() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RLevelVolumeOverride : BmSDK.Engine.Volume, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLevelVolumeOverride.
+    /// </summary>
+    public static RLevelVolumeOverride DefaultObject => (RLevelVolumeOverride)StaticClass().DefaultObject;
+
     internal RLevelVolumeOverride() { }
 
     /// <summary>

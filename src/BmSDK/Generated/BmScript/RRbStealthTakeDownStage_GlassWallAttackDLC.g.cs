@@ -21,6 +21,11 @@ public partial class RRbStealthTakeDownStage_GlassWallAttackDLC : BmSDK.BmScript
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRbStealthTakeDownStage_GlassWallAttackDLC.
+    /// </summary>
+    public static RRbStealthTakeDownStage_GlassWallAttackDLC DefaultObject => (RRbStealthTakeDownStage_GlassWallAttackDLC)StaticClass().DefaultObject;
+
     internal RRbStealthTakeDownStage_GlassWallAttackDLC() { }
 
     /// <summary>

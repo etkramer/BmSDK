@@ -21,6 +21,11 @@ public partial class RDmgType_NoXP : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_NoXP.
+    /// </summary>
+    public static RDmgType_NoXP DefaultObject => (RDmgType_NoXP)StaticClass().DefaultObject;
+
     internal RDmgType_NoXP() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerRobinStoryDLC.
+    /// </summary>
+    public static RPawnPlayerRobinStoryDLC DefaultObject => (RPawnPlayerRobinStoryDLC)StaticClass().DefaultObject;
+
     internal RPawnPlayerRobinStoryDLC() { }
 
     /// <summary>

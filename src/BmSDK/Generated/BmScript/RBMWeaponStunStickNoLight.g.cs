@@ -21,6 +21,11 @@ public partial class RBMWeaponStunStickNoLight : BmSDK.BmScript.RBMWeaponStunSti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponStunStickNoLight.
+    /// </summary>
+    public static RBMWeaponStunStickNoLight DefaultObject => (RBMWeaponStunStickNoLight)StaticClass().DefaultObject;
+
     internal RBMWeaponStunStickNoLight() { }
 
     /// <summary>

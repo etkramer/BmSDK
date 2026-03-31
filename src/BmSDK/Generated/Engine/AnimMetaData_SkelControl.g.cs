@@ -21,6 +21,11 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimMetaData_SkelControl.
+    /// </summary>
+    public static AnimMetaData_SkelControl DefaultObject => (AnimMetaData_SkelControl)StaticClass().DefaultObject;
+
     internal AnimMetaData_SkelControl() { }
 
     /// <summary>

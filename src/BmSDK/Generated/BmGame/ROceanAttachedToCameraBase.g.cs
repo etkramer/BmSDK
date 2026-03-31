@@ -21,6 +21,11 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROceanAttachedToCameraBase.
+    /// </summary>
+    public static ROceanAttachedToCameraBase DefaultObject => (ROceanAttachedToCameraBase)StaticClass().DefaultObject;
+
     internal ROceanAttachedToCameraBase() { }
 
     /// <summary>

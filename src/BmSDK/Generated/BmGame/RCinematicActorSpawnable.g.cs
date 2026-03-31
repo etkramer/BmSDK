@@ -21,6 +21,11 @@ public partial class RCinematicActorSpawnable : BmSDK.BmGame.RCinematicActor, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCinematicActorSpawnable.
+    /// </summary>
+    public static RCinematicActorSpawnable DefaultObject => (RCinematicActorSpawnable)StaticClass().DefaultObject;
+
     internal RCinematicActorSpawnable() { }
 
     /// <summary>

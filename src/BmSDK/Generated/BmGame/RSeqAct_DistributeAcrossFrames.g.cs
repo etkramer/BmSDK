@@ -21,6 +21,11 @@ public partial class RSeqAct_DistributeAcrossFrames : BmSDK.Engine.SeqAct_Latent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DistributeAcrossFrames.
+    /// </summary>
+    public static RSeqAct_DistributeAcrossFrames DefaultObject => (RSeqAct_DistributeAcrossFrames)StaticClass().DefaultObject;
+
     internal RSeqAct_DistributeAcrossFrames() { }
 
     /// <summary>

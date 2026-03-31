@@ -21,6 +21,11 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Sub_Forma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_PredatorPoint.
+    /// </summary>
+    public static RAEC_Search_Sub_PredatorPoint DefaultObject => (RAEC_Search_Sub_PredatorPoint)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_PredatorPoint() { }
 
     /// <summary>

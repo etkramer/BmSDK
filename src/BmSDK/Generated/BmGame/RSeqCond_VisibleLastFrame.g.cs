@@ -21,6 +21,11 @@ public partial class RSeqCond_VisibleLastFrame : BmSDK.Engine.SequenceCondition,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqCond_VisibleLastFrame.
+    /// </summary>
+    public static RSeqCond_VisibleLastFrame DefaultObject => (RSeqCond_VisibleLastFrame)StaticClass().DefaultObject;
+
     internal RSeqCond_VisibleLastFrame() { }
 
     /// <summary>

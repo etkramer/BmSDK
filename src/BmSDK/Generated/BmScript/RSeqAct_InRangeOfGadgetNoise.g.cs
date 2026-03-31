@@ -21,6 +21,11 @@ public partial class RSeqAct_InRangeOfGadgetNoise : BmSDK.Engine.SequenceAction,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_InRangeOfGadgetNoise.
+    /// </summary>
+    public static RSeqAct_InRangeOfGadgetNoise DefaultObject => (RSeqAct_InRangeOfGadgetNoise)StaticClass().DefaultObject;
+
     internal RSeqAct_InRangeOfGadgetNoise() { }
 
     /// <summary>

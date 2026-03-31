@@ -21,6 +21,11 @@ public partial class LevelStreamingDistance : BmSDK.Engine.LevelStreaming, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreamingDistance.
+    /// </summary>
+    public static LevelStreamingDistance DefaultObject => (LevelStreamingDistance)StaticClass().DefaultObject;
+
     internal LevelStreamingDistance() { }
 
     /// <summary>

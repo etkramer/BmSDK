@@ -21,6 +21,11 @@ public partial class RDummyResonator : BmSDK.BmGame.RResonatorTuner, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDummyResonator.
+    /// </summary>
+    public static RDummyResonator DefaultObject => (RDummyResonator)StaticClass().DefaultObject;
+
     internal RDummyResonator() { }
 
     /// <summary>

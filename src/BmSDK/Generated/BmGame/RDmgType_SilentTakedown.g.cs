@@ -21,6 +21,11 @@ public partial class RDmgType_SilentTakedown : BmSDK.BmGame.RDmgType_Takedown, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_SilentTakedown.
+    /// </summary>
+    public static RDmgType_SilentTakedown DefaultObject => (RDmgType_SilentTakedown)StaticClass().DefaultObject;
+
     internal RDmgType_SilentTakedown() { }
 
     /// <summary>

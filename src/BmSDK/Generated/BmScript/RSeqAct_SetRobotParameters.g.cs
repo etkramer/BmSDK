@@ -21,6 +21,11 @@ public partial class RSeqAct_SetRobotParameters : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetRobotParameters.
+    /// </summary>
+    public static RSeqAct_SetRobotParameters DefaultObject => (RSeqAct_SetRobotParameters)StaticClass().DefaultObject;
+
     internal RSeqAct_SetRobotParameters() { }
 
     /// <summary>

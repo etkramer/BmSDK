@@ -21,6 +21,11 @@ public partial class RCharacterViewerConfig : BmSDK.BmGame.RConfig, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterViewerConfig.
+    /// </summary>
+    public static RCharacterViewerConfig DefaultObject => (RCharacterViewerConfig)StaticClass().DefaultObject;
+
     internal RCharacterViewerConfig() { }
 
     /// <summary>

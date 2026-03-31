@@ -21,6 +21,11 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint_LampPostTop.
+    /// </summary>
+    public static RHidePoint_LampPostTop DefaultObject => (RHidePoint_LampPostTop)StaticClass().DefaultObject;
+
     internal RHidePoint_LampPostTop() { }
 
     /// <summary>

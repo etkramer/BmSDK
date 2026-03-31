@@ -21,6 +21,11 @@ public partial class K2GraphBase : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as K2GraphBase.
+    /// </summary>
+    public static K2GraphBase DefaultObject => (K2GraphBase)StaticClass().DefaultObject;
+
     internal K2GraphBase() { }
 
     /// <summary>

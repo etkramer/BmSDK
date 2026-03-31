@@ -21,6 +21,11 @@ public partial class RBMCutscene_FallingFinale : BmSDK.BmGame.RBMCutscene_Silent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCutscene_FallingFinale.
+    /// </summary>
+    public static RBMCutscene_FallingFinale DefaultObject => (RBMCutscene_FallingFinale)StaticClass().DefaultObject;
+
     internal RBMCutscene_FallingFinale() { }
 
     /// <summary>

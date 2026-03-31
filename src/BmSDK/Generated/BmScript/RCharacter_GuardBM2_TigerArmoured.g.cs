@@ -21,6 +21,11 @@ public partial class RCharacter_GuardBM2_TigerArmoured : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_GuardBM2_TigerArmoured.
+    /// </summary>
+    public static RCharacter_GuardBM2_TigerArmoured DefaultObject => (RCharacter_GuardBM2_TigerArmoured)StaticClass().DefaultObject;
+
     internal RCharacter_GuardBM2_TigerArmoured() { }
 
     /// <summary>

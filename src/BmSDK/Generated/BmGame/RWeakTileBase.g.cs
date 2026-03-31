@@ -21,6 +21,11 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RWeakTileBase.
+    /// </summary>
+    public static RWeakTileBase DefaultObject => (RWeakTileBase)StaticClass().DefaultObject;
+
     internal RWeakTileBase() { }
 
     /// <summary>

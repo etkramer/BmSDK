@@ -21,6 +21,11 @@ public partial class RB_ForceFieldExcludeVolume : BmSDK.Engine.Volume, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ForceFieldExcludeVolume.
+    /// </summary>
+    public static RB_ForceFieldExcludeVolume DefaultObject => (RB_ForceFieldExcludeVolume)StaticClass().DefaultObject;
+
     internal RB_ForceFieldExcludeVolume() { }
 
     /// <summary>

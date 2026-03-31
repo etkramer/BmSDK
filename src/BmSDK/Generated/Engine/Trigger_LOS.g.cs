@@ -21,6 +21,11 @@ public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Trigger_LOS.
+    /// </summary>
+    public static Trigger_LOS DefaultObject => (Trigger_LOS)StaticClass().DefaultObject;
+
     internal Trigger_LOS() { }
 
     /// <summary>

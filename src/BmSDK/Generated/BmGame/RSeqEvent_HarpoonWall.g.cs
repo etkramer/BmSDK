@@ -21,6 +21,11 @@ public partial class RSeqEvent_HarpoonWall : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HarpoonWall.
+    /// </summary>
+    public static RSeqEvent_HarpoonWall DefaultObject => (RSeqEvent_HarpoonWall)StaticClass().DefaultObject;
+
     internal RSeqEvent_HarpoonWall() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class CodecMovieBink : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CodecMovieBink.
+    /// </summary>
+    public static CodecMovieBink DefaultObject => (CodecMovieBink)StaticClass().DefaultObject;
+
     internal CodecMovieBink() { }
 
     /// <summary>

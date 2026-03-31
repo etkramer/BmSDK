@@ -21,6 +21,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayer.
+    /// </summary>
+    public static RPawnPlayer DefaultObject => (RPawnPlayer)StaticClass().DefaultObject;
+
     internal RPawnPlayer() { }
 
     /// <summary>

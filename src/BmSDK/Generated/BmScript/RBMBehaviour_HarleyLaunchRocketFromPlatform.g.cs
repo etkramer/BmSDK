@@ -21,6 +21,11 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_HarleyLaunchRocketFromPlatform.
+    /// </summary>
+    public static RBMBehaviour_HarleyLaunchRocketFromPlatform DefaultObject => (RBMBehaviour_HarleyLaunchRocketFromPlatform)StaticClass().DefaultObject;
+
     internal RBMBehaviour_HarleyLaunchRocketFromPlatform() { }
 
     /// <summary>

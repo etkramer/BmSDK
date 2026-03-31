@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_PlaceActor : BmSDK.BmGame.RSpecialMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_PlaceActor.
+    /// </summary>
+    public static RSpecialMoveInstance_PlaceActor DefaultObject => (RSpecialMoveInstance_PlaceActor)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_PlaceActor() { }
 
     /// <summary>

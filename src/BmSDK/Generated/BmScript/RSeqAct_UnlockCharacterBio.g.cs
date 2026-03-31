@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockCharacterBio : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockCharacterBio.
+    /// </summary>
+    public static RSeqAct_UnlockCharacterBio DefaultObject => (RSeqAct_UnlockCharacterBio)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockCharacterBio() { }
 
     /// <summary>

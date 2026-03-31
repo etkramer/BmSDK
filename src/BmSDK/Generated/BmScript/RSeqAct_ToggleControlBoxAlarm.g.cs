@@ -21,6 +21,11 @@ public partial class RSeqAct_ToggleControlBoxAlarm : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_ToggleControlBoxAlarm.
+    /// </summary>
+    public static RSeqAct_ToggleControlBoxAlarm DefaultObject => (RSeqAct_ToggleControlBoxAlarm)StaticClass().DefaultObject;
+
     internal RSeqAct_ToggleControlBoxAlarm() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqEvent_FiredGun : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FiredGun.
+    /// </summary>
+    public static RSeqEvent_FiredGun DefaultObject => (RSeqEvent_FiredGun)StaticClass().DefaultObject;
+
     internal RSeqEvent_FiredGun() { }
 
     /// <summary>

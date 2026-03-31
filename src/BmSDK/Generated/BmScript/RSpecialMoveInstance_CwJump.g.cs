@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_CwJump : BmSDK.BmGame.RSpecialMoveInst
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_CwJump.
+    /// </summary>
+    public static RSpecialMoveInstance_CwJump DefaultObject => (RSpecialMoveInstance_CwJump)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_CwJump() { }
 
     /// <summary>

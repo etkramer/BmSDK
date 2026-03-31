@@ -21,6 +21,11 @@ public partial class RSeqAct_SuppressLevelUpInPDLC : BmSDK.Engine.SeqAct_Latent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SuppressLevelUpInPDLC.
+    /// </summary>
+    public static RSeqAct_SuppressLevelUpInPDLC DefaultObject => (RSeqAct_SuppressLevelUpInPDLC)StaticClass().DefaultObject;
+
     internal RSeqAct_SuppressLevelUpInPDLC() { }
 
     /// <summary>

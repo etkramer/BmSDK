@@ -21,6 +21,11 @@ public partial class RSeqAct_SetDialogueMaxLines : BmSDK.Engine.SeqAct_Latent, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetDialogueMaxLines.
+    /// </summary>
+    public static RSeqAct_SetDialogueMaxLines DefaultObject => (RSeqAct_SetDialogueMaxLines)StaticClass().DefaultObject;
+
     internal RSeqAct_SetDialogueMaxLines() { }
 
     /// <summary>

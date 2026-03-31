@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_RifleDestroyed : BmSDK.BmGame.RBMComb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_RifleDestroyed.
+    /// </summary>
+    public static RBMCombatThrownObject_RifleDestroyed DefaultObject => (RBMCombatThrownObject_RifleDestroyed)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_RifleDestroyed() { }
 
     /// <summary>

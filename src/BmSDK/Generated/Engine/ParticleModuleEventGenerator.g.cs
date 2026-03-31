@@ -21,6 +21,11 @@ public partial class ParticleModuleEventGenerator : BmSDK.Engine.ParticleModuleE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleEventGenerator.
+    /// </summary>
+    public static ParticleModuleEventGenerator DefaultObject => (ParticleModuleEventGenerator)StaticClass().DefaultObject;
+
     internal ParticleModuleEventGenerator() { }
 
     /// <summary>

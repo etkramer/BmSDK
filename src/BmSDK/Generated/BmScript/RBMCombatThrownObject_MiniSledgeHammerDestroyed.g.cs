@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_MiniSledgeHammerDestroyed : BmSDK.BmG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_MiniSledgeHammerDestroyed.
+    /// </summary>
+    public static RBMCombatThrownObject_MiniSledgeHammerDestroyed DefaultObject => (RBMCombatThrownObject_MiniSledgeHammerDestroyed)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_MiniSledgeHammerDestroyed() { }
 
     /// <summary>

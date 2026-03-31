@@ -21,6 +21,11 @@ public partial class RCombatMove_NinjaSecretDoor : BmSDK.BmGame.RCombatMove_Vill
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_NinjaSecretDoor.
+    /// </summary>
+    public static RCombatMove_NinjaSecretDoor DefaultObject => (RCombatMove_NinjaSecretDoor)StaticClass().DefaultObject;
+
     internal RCombatMove_NinjaSecretDoor() { }
 
     /// <summary>

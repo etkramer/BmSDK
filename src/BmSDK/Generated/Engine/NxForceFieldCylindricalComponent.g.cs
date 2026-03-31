@@ -21,6 +21,11 @@ public partial class NxForceFieldCylindricalComponent : BmSDK.Engine.NxForceFiel
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxForceFieldCylindricalComponent.
+    /// </summary>
+    public static NxForceFieldCylindricalComponent DefaultObject => (NxForceFieldCylindricalComponent)StaticClass().DefaultObject;
+
     internal NxForceFieldCylindricalComponent() { }
 
     /// <summary>

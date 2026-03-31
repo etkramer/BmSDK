@@ -21,6 +21,11 @@ public partial class RCharacterBioCue : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterBioCue.
+    /// </summary>
+    public static RCharacterBioCue DefaultObject => (RCharacterBioCue)StaticClass().DefaultObject;
+
     internal RCharacterBioCue() { }
 
     /// <summary>

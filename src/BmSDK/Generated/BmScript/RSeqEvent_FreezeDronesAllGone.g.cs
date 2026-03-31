@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeDronesAllGone : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeDronesAllGone.
+    /// </summary>
+    public static RSeqEvent_FreezeDronesAllGone DefaultObject => (RSeqEvent_FreezeDronesAllGone)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeDronesAllGone() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_DebugGrenadeTrial : BmSDK.BmGame.RBMBehaviour,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_DebugGrenadeTrial.
+    /// </summary>
+    public static RBMBehaviour_DebugGrenadeTrial DefaultObject => (RBMBehaviour_DebugGrenadeTrial)StaticClass().DefaultObject;
+
     internal RBMBehaviour_DebugGrenadeTrial() { }
 
     /// <summary>

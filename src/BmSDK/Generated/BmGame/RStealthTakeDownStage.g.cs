@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage.
+    /// </summary>
+    public static RStealthTakeDownStage DefaultObject => (RStealthTakeDownStage)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage() { }
 
     /// <summary>

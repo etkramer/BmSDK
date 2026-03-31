@@ -21,6 +21,11 @@ public partial class RCombatMove_LieutenantWhipReaction : BmSDK.BmGame.RCombatMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_LieutenantWhipReaction.
+    /// </summary>
+    public static RCombatMove_LieutenantWhipReaction DefaultObject => (RCombatMove_LieutenantWhipReaction)StaticClass().DefaultObject;
+
     internal RCombatMove_LieutenantWhipReaction() { }
 
     /// <summary>

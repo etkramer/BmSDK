@@ -21,6 +21,11 @@ public partial class RSeqAct_SuppressFinalBlow : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SuppressFinalBlow.
+    /// </summary>
+    public static RSeqAct_SuppressFinalBlow DefaultObject => (RSeqAct_SuppressFinalBlow)StaticClass().DefaultObject;
+
     internal RSeqAct_SuppressFinalBlow() { }
 
     /// <summary>

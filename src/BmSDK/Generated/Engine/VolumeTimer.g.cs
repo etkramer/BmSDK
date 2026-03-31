@@ -21,6 +21,11 @@ public partial class VolumeTimer : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as VolumeTimer.
+    /// </summary>
+    public static VolumeTimer DefaultObject => (VolumeTimer)StaticClass().DefaultObject;
+
     internal VolumeTimer() { }
 
     /// <summary>

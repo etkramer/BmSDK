@@ -21,6 +21,11 @@ public partial class RPredatorGunLockerLite : BmSDK.BmScript.RPredatorGunLockerM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorGunLockerLite.
+    /// </summary>
+    public static RPredatorGunLockerLite DefaultObject => (RPredatorGunLockerLite)StaticClass().DefaultObject;
+
     internal RPredatorGunLockerLite() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshCollisionSettingsVolume.
+    /// </summary>
+    public static RNavMeshCollisionSettingsVolume DefaultObject => (RNavMeshCollisionSettingsVolume)StaticClass().DefaultObject;
+
     internal RNavMeshCollisionSettingsVolume() { }
 
     /// <summary>

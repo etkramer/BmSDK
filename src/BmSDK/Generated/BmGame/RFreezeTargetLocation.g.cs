@@ -21,6 +21,11 @@ public partial class RFreezeTargetLocation : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeTargetLocation.
+    /// </summary>
+    public static RFreezeTargetLocation DefaultObject => (RFreezeTargetLocation)StaticClass().DefaultObject;
+
     internal RFreezeTargetLocation() { }
 
     /// <summary>

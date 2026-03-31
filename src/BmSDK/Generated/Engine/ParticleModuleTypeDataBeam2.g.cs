@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataBeam2.
+    /// </summary>
+    public static ParticleModuleTypeDataBeam2 DefaultObject => (ParticleModuleTypeDataBeam2)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataBeam2() { }
 
     /// <summary>

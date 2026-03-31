@@ -21,6 +21,11 @@ public partial class RPatrolPoint_LitePred : BmSDK.BmGame.RPatrolPoint, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPatrolPoint_LitePred.
+    /// </summary>
+    public static RPatrolPoint_LitePred DefaultObject => (RPatrolPoint_LitePred)StaticClass().DefaultObject;
+
     internal RPatrolPoint_LitePred() { }
 
     /// <summary>

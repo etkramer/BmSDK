@@ -21,6 +21,11 @@ public partial class SeqAct_ActorFactoryEx : BmSDK.Engine.SeqAct_ActorFactory, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ActorFactoryEx.
+    /// </summary>
+    public static SeqAct_ActorFactoryEx DefaultObject => (SeqAct_ActorFactoryEx)StaticClass().DefaultObject;
+
     internal SeqAct_ActorFactoryEx() { }
 
     /// <summary>

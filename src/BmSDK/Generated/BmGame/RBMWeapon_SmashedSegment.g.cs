@@ -21,6 +21,11 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeapon_SmashedSegment.
+    /// </summary>
+    public static RBMWeapon_SmashedSegment DefaultObject => (RBMWeapon_SmashedSegment)StaticClass().DefaultObject;
+
     internal RBMWeapon_SmashedSegment() { }
 
     /// <summary>

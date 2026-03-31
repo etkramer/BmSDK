@@ -21,6 +21,11 @@ public partial class RAnimNotify_CanCorrectAfterHere : BmSDK.Engine.AnimNotify, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_CanCorrectAfterHere.
+    /// </summary>
+    public static RAnimNotify_CanCorrectAfterHere DefaultObject => (RAnimNotify_CanCorrectAfterHere)StaticClass().DefaultObject;
+
     internal RAnimNotify_CanCorrectAfterHere() { }
 
     /// <summary>

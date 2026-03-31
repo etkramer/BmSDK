@@ -21,6 +21,11 @@ public partial class UIConfigSectionProvider : BmSDK.Engine.UIConfigProvider, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIConfigSectionProvider.
+    /// </summary>
+    public static UIConfigSectionProvider DefaultObject => (UIConfigSectionProvider)StaticClass().DefaultObject;
+
     internal UIConfigSectionProvider() { }
 
     /// <summary>

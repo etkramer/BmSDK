@@ -21,6 +21,11 @@ public partial class NavMeshBoundsVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavMeshBoundsVolume.
+    /// </summary>
+    public static NavMeshBoundsVolume DefaultObject => (NavMeshBoundsVolume)StaticClass().DefaultObject;
+
     internal NavMeshBoundsVolume() { }
 
     /// <summary>

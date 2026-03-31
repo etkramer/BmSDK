@@ -21,6 +21,11 @@ public partial class RSeqEvent_HelicopterDownloadBegins : BmSDK.Engine.SequenceE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HelicopterDownloadBegins.
+    /// </summary>
+    public static RSeqEvent_HelicopterDownloadBegins DefaultObject => (RSeqEvent_HelicopterDownloadBegins)StaticClass().DefaultObject;
+
     internal RSeqEvent_HelicopterDownloadBegins() { }
 
     /// <summary>

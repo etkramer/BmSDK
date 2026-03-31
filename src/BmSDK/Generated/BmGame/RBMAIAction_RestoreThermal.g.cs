@@ -21,6 +21,11 @@ public partial class RBMAIAction_RestoreThermal : BmSDK.BmGame.RBMAIAction_Resto
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_RestoreThermal.
+    /// </summary>
+    public static RBMAIAction_RestoreThermal DefaultObject => (RBMAIAction_RestoreThermal)StaticClass().DefaultObject;
+
     internal RBMAIAction_RestoreThermal() { }
 
     /// <summary>

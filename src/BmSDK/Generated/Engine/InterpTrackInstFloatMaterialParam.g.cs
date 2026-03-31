@@ -21,6 +21,11 @@ public partial class InterpTrackInstFloatMaterialParam : BmSDK.Engine.InterpTrac
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackInstFloatMaterialParam.
+    /// </summary>
+    public static InterpTrackInstFloatMaterialParam DefaultObject => (InterpTrackInstFloatMaterialParam)StaticClass().DefaultObject;
+
     internal InterpTrackInstFloatMaterialParam() { }
 
     /// <summary>

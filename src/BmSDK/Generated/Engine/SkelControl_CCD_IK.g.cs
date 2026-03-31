@@ -21,6 +21,11 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControl_CCD_IK.
+    /// </summary>
+    public static SkelControl_CCD_IK DefaultObject => (SkelControl_CCD_IK)StaticClass().DefaultObject;
+
     internal SkelControl_CCD_IK() { }
 
     /// <summary>

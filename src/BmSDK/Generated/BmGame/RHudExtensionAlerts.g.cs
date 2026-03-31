@@ -21,6 +21,11 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudExtensionAlerts.
+    /// </summary>
+    public static RHudExtensionAlerts DefaultObject => (RHudExtensionAlerts)StaticClass().DefaultObject;
+
     internal RHudExtensionAlerts() { }
 
     /// <summary>

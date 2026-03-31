@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_AerialWhipPounceBase : BmSDK.BmGame.RS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_AerialWhipPounceBase.
+    /// </summary>
+    public static RSpecialMoveInstance_AerialWhipPounceBase DefaultObject => (RSpecialMoveInstance_AerialWhipPounceBase)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_AerialWhipPounceBase() { }
 
     /// <summary>

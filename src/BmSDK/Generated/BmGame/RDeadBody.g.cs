@@ -21,6 +21,11 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDeadBody.
+    /// </summary>
+    public static RDeadBody DefaultObject => (RDeadBody)StaticClass().DefaultObject;
+
     internal RDeadBody() { }
 
     /// <summary>

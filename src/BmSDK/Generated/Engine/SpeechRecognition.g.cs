@@ -21,6 +21,11 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpeechRecognition.
+    /// </summary>
+    public static SpeechRecognition DefaultObject => (SpeechRecognition)StaticClass().DefaultObject;
+
     internal SpeechRecognition() { }
 
     /// <summary>

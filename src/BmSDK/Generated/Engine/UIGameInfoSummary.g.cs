@@ -21,6 +21,11 @@ public partial class UIGameInfoSummary : BmSDK.Engine.UIResourceDataProvider, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIGameInfoSummary.
+    /// </summary>
+    public static UIGameInfoSummary DefaultObject => (UIGameInfoSummary)StaticClass().DefaultObject;
+
     internal UIGameInfoSummary() { }
 
     /// <summary>

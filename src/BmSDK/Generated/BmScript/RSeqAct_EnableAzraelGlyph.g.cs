@@ -21,6 +21,11 @@ public partial class RSeqAct_EnableAzraelGlyph : BmSDK.Engine.SequenceAction, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_EnableAzraelGlyph.
+    /// </summary>
+    public static RSeqAct_EnableAzraelGlyph DefaultObject => (RSeqAct_EnableAzraelGlyph)StaticClass().DefaultObject;
+
     internal RSeqAct_EnableAzraelGlyph() { }
 
     /// <summary>

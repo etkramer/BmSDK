@@ -21,6 +21,11 @@ public partial class RSeqAct_SwitchGameType : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SwitchGameType.
+    /// </summary>
+    public static RSeqAct_SwitchGameType DefaultObject => (RSeqAct_SwitchGameType)StaticClass().DefaultObject;
+
     internal RSeqAct_SwitchGameType() { }
 
     /// <summary>

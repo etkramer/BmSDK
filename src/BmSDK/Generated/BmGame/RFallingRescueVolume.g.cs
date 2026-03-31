@@ -21,6 +21,11 @@ public partial class RFallingRescueVolume : BmSDK.BmGame.RKillVolume, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFallingRescueVolume.
+    /// </summary>
+    public static RFallingRescueVolume DefaultObject => (RFallingRescueVolume)StaticClass().DefaultObject;
+
     internal RFallingRescueVolume() { }
 
     /// <summary>

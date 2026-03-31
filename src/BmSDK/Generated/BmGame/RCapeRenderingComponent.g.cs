@@ -21,6 +21,11 @@ public partial class RCapeRenderingComponent : BmSDK.Engine.ActorComponent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeRenderingComponent.
+    /// </summary>
+    public static RCapeRenderingComponent DefaultObject => (RCapeRenderingComponent)StaticClass().DefaultObject;
+
     internal RCapeRenderingComponent() { }
 
     /// <summary>

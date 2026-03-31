@@ -21,6 +21,11 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FloorCorrection.
+    /// </summary>
+    public static RAnimUtil_FloorCorrection DefaultObject => (RAnimUtil_FloorCorrection)StaticClass().DefaultObject;
+
     internal RAnimUtil_FloorCorrection() { }
 
     /// <summary>

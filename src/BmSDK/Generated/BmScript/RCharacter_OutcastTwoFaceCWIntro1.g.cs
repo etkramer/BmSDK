@@ -21,6 +21,11 @@ public partial class RCharacter_OutcastTwoFaceCWIntro1 : BmSDK.BmScript.RCharact
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_OutcastTwoFaceCWIntro1.
+    /// </summary>
+    public static RCharacter_OutcastTwoFaceCWIntro1 DefaultObject => (RCharacter_OutcastTwoFaceCWIntro1)StaticClass().DefaultObject;
+
     internal RCharacter_OutcastTwoFaceCWIntro1() { }
 
     /// <summary>

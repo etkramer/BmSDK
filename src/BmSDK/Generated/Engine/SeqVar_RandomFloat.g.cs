@@ -21,6 +21,11 @@ public partial class SeqVar_RandomFloat : BmSDK.Engine.SeqVar_Float, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqVar_RandomFloat.
+    /// </summary>
+    public static SeqVar_RandomFloat DefaultObject => (SeqVar_RandomFloat)StaticClass().DefaultObject;
+
     internal SeqVar_RandomFloat() { }
 
     /// <summary>

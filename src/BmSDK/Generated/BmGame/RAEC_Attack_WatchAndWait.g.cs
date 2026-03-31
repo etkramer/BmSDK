@@ -21,6 +21,11 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAEC_SubGroup, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_WatchAndWait.
+    /// </summary>
+    public static RAEC_Attack_WatchAndWait DefaultObject => (RAEC_Attack_WatchAndWait)StaticClass().DefaultObject;
+
     internal RAEC_Attack_WatchAndWait() { }
 
     /// <summary>

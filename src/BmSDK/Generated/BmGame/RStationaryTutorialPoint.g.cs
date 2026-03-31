@@ -21,6 +21,11 @@ public partial class RStationaryTutorialPoint : BmSDK.Engine.Actor, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStationaryTutorialPoint.
+    /// </summary>
+    public static RStationaryTutorialPoint DefaultObject => (RStationaryTutorialPoint)StaticClass().DefaultObject;
+
     internal RStationaryTutorialPoint() { }
 
     /// <summary>

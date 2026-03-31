@@ -21,6 +21,11 @@ public partial class SeqAct_SetMesh : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_SetMesh.
+    /// </summary>
+    public static SeqAct_SetMesh DefaultObject => (SeqAct_SetMesh)StaticClass().DefaultObject;
+
     internal SeqAct_SetMesh() { }
 
     /// <summary>

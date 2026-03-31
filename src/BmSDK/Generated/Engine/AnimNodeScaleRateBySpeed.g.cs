@@ -21,6 +21,11 @@ public partial class AnimNodeScaleRateBySpeed : BmSDK.Engine.AnimNodeScalePlayRa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeScaleRateBySpeed.
+    /// </summary>
+    public static AnimNodeScaleRateBySpeed DefaultObject => (AnimNodeScaleRateBySpeed)StaticClass().DefaultObject;
+
     internal AnimNodeScaleRateBySpeed() { }
 
     /// <summary>

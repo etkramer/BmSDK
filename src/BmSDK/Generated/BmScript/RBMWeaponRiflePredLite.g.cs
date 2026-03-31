@@ -21,6 +21,11 @@ public partial class RBMWeaponRiflePredLite : BmSDK.BmGame.RBMWeaponRiflePredBas
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponRiflePredLite.
+    /// </summary>
+    public static RBMWeaponRiflePredLite DefaultObject => (RBMWeaponRiflePredLite)StaticClass().DefaultObject;
+
     internal RBMWeaponRiflePredLite() { }
 
     /// <summary>

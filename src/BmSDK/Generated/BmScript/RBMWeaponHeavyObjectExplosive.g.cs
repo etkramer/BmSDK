@@ -21,6 +21,11 @@ public partial class RBMWeaponHeavyObjectExplosive : BmSDK.BmScript.RBMWeaponHea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponHeavyObjectExplosive.
+    /// </summary>
+    public static RBMWeaponHeavyObjectExplosive DefaultObject => (RBMWeaponHeavyObjectExplosive)StaticClass().DefaultObject;
+
     internal RBMWeaponHeavyObjectExplosive() { }
 
     /// <summary>

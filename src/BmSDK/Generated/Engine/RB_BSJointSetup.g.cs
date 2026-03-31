@@ -21,6 +21,11 @@ public partial class RB_BSJointSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_BSJointSetup.
+    /// </summary>
+    public static RB_BSJointSetup DefaultObject => (RB_BSJointSetup)StaticClass().DefaultObject;
+
     internal RB_BSJointSetup() { }
 
     /// <summary>

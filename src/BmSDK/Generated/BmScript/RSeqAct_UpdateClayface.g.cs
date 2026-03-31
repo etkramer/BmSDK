@@ -21,6 +21,11 @@ public partial class RSeqAct_UpdateClayface : BmSDK.Engine.SequenceAction, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UpdateClayface.
+    /// </summary>
+    public static RSeqAct_UpdateClayface DefaultObject => (RSeqAct_UpdateClayface)StaticClass().DefaultObject;
+
     internal RSeqAct_UpdateClayface() { }
 
     /// <summary>

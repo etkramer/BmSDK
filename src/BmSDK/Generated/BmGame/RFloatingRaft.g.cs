@@ -21,6 +21,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingRaft.
+    /// </summary>
+    public static RFloatingRaft DefaultObject => (RFloatingRaft)StaticClass().DefaultObject;
+
     internal RFloatingRaft() { }
 
     /// <summary>

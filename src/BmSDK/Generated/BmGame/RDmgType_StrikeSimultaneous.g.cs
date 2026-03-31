@@ -21,6 +21,11 @@ public partial class RDmgType_StrikeSimultaneous : BmSDK.BmGame.RDmgType_Strike,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_StrikeSimultaneous.
+    /// </summary>
+    public static RDmgType_StrikeSimultaneous DefaultObject => (RDmgType_StrikeSimultaneous)StaticClass().DefaultObject;
+
     internal RDmgType_StrikeSimultaneous() { }
 
     /// <summary>

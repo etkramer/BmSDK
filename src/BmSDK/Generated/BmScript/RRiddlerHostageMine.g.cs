@@ -21,6 +21,11 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlerHostageMine.
+    /// </summary>
+    public static RRiddlerHostageMine DefaultObject => (RRiddlerHostageMine)StaticClass().DefaultObject;
+
     internal RRiddlerHostageMine() { }
 
     /// <summary>

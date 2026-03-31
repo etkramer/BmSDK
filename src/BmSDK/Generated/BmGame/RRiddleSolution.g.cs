@@ -21,6 +21,11 @@ public partial class RRiddleSolution : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddleSolution.
+    /// </summary>
+    public static RRiddleSolution DefaultObject => (RRiddleSolution)StaticClass().DefaultObject;
+
     internal RRiddleSolution() { }
 
     /// <summary>

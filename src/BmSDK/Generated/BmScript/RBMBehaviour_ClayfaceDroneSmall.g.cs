@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ClayfaceDroneSmall.
+    /// </summary>
+    public static RBMBehaviour_ClayfaceDroneSmall DefaultObject => (RBMBehaviour_ClayfaceDroneSmall)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ClayfaceDroneSmall() { }
 
     /// <summary>

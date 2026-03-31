@@ -21,6 +21,11 @@ public partial class RSeqAct_SetRotation : BmSDK.Engine.SequenceAction, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetRotation.
+    /// </summary>
+    public static RSeqAct_SetRotation DefaultObject => (RSeqAct_SetRotation)StaticClass().DefaultObject;
+
     internal RSeqAct_SetRotation() { }
 
     /// <summary>

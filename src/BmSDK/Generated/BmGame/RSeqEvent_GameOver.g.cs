@@ -21,6 +21,11 @@ public partial class RSeqEvent_GameOver : BmSDK.Engine.SequenceEvent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GameOver.
+    /// </summary>
+    public static RSeqEvent_GameOver DefaultObject => (RSeqEvent_GameOver)StaticClass().DefaultObject;
+
     internal RSeqEvent_GameOver() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackMoveAxis.
+    /// </summary>
+    public static InterpTrackMoveAxis DefaultObject => (InterpTrackMoveAxis)StaticClass().DefaultObject;
+
     internal InterpTrackMoveAxis() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject_StunStickNoLight : BmSDK.BmScript.RBM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject_StunStickNoLight.
+    /// </summary>
+    public static RBMCombatThrownObject_StunStickNoLight DefaultObject => (RBMCombatThrownObject_StunStickNoLight)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject_StunStickNoLight() { }
 
     /// <summary>

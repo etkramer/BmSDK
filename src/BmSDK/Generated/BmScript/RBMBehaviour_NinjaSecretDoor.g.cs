@@ -21,6 +21,11 @@ public partial class RBMBehaviour_NinjaSecretDoor : BmSDK.BmGame.RBMBehaviour_Co
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_NinjaSecretDoor.
+    /// </summary>
+    public static RBMBehaviour_NinjaSecretDoor DefaultObject => (RBMBehaviour_NinjaSecretDoor)StaticClass().DefaultObject;
+
     internal RBMBehaviour_NinjaSecretDoor() { }
 
     /// <summary>

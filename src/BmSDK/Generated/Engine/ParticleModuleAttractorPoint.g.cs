@@ -21,6 +21,11 @@ public partial class ParticleModuleAttractorPoint : BmSDK.Engine.ParticleModuleA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleAttractorPoint.
+    /// </summary>
+    public static ParticleModuleAttractorPoint DefaultObject => (ParticleModuleAttractorPoint)StaticClass().DefaultObject;
+
     internal ParticleModuleAttractorPoint() { }
 
     /// <summary>

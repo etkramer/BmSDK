@@ -21,6 +21,11 @@ public partial class RSeqEvent_DoorHitByREC : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_DoorHitByREC.
+    /// </summary>
+    public static RSeqEvent_DoorHitByREC DefaultObject => (RSeqEvent_DoorHitByREC)StaticClass().DefaultObject;
+
     internal RSeqEvent_DoorHitByREC() { }
 
     /// <summary>

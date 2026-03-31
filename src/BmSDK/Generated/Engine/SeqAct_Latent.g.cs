@@ -21,6 +21,11 @@ public partial class SeqAct_Latent : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Latent.
+    /// </summary>
+    public static SeqAct_Latent DefaultObject => (SeqAct_Latent)StaticClass().DefaultObject;
+
     internal SeqAct_Latent() { }
 
     /// <summary>

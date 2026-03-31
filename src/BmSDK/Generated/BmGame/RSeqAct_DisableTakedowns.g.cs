@@ -21,6 +21,11 @@ public partial class RSeqAct_DisableTakedowns : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DisableTakedowns.
+    /// </summary>
+    public static RSeqAct_DisableTakedowns DefaultObject => (RSeqAct_DisableTakedowns)StaticClass().DefaultObject;
+
     internal RSeqAct_DisableTakedowns() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_LoadConversation : BmSDK.Engine.SeqAct_Latent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_LoadConversation.
+    /// </summary>
+    public static RSeqAct_LoadConversation DefaultObject => (RSeqAct_LoadConversation)StaticClass().DefaultObject;
+
     internal RSeqAct_LoadConversation() { }
 
     /// <summary>

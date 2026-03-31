@@ -21,6 +21,11 @@ public partial class RSeqAct_UnlockAchievementByNumber : BmSDK.Engine.SequenceAc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_UnlockAchievementByNumber.
+    /// </summary>
+    public static RSeqAct_UnlockAchievementByNumber DefaultObject => (RSeqAct_UnlockAchievementByNumber)StaticClass().DefaultObject;
+
     internal RSeqAct_UnlockAchievementByNumber() { }
 
     /// <summary>

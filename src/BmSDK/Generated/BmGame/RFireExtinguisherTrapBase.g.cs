@@ -21,6 +21,11 @@ public partial class RFireExtinguisherTrapBase : BmSDK.Engine.Actor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFireExtinguisherTrapBase.
+    /// </summary>
+    public static RFireExtinguisherTrapBase DefaultObject => (RFireExtinguisherTrapBase)StaticClass().DefaultObject;
+
     internal RFireExtinguisherTrapBase() { }
 
     /// <summary>

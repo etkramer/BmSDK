@@ -21,6 +21,11 @@ public partial class RSeqAct_GivenPlayerUpgrade : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GivenPlayerUpgrade.
+    /// </summary>
+    public static RSeqAct_GivenPlayerUpgrade DefaultObject => (RSeqAct_GivenPlayerUpgrade)StaticClass().DefaultObject;
+
     internal RSeqAct_GivenPlayerUpgrade() { }
 
     /// <summary>

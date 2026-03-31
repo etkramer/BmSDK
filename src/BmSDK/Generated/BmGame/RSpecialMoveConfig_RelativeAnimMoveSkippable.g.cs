@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RelativeAnimMoveSkippable : BmSDK.BmGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RelativeAnimMoveSkippable.
+    /// </summary>
+    public static RSpecialMoveConfig_RelativeAnimMoveSkippable DefaultObject => (RSpecialMoveConfig_RelativeAnimMoveSkippable)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RelativeAnimMoveSkippable() { }
 
     /// <summary>

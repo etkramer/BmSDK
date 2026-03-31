@@ -21,6 +21,11 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StartCombatChallengeBase.
+    /// </summary>
+    public static RSeqAct_StartCombatChallengeBase DefaultObject => (RSeqAct_StartCombatChallengeBase)StaticClass().DefaultObject;
+
     internal RSeqAct_StartCombatChallengeBase() { }
 
     /// <summary>

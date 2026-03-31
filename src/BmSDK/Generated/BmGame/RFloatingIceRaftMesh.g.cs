@@ -21,6 +21,11 @@ public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingIceRaftMesh.
+    /// </summary>
+    public static RFloatingIceRaftMesh DefaultObject => (RFloatingIceRaftMesh)StaticClass().DefaultObject;
+
     internal RFloatingIceRaftMesh() { }
 
     /// <summary>

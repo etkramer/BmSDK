@@ -21,6 +21,11 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_LadderChase.
+    /// </summary>
+    public static RAEC_Attack_LadderChase DefaultObject => (RAEC_Attack_LadderChase)StaticClass().DefaultObject;
+
     internal RAEC_Attack_LadderChase() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_GFxMovieScoreHUD : BmSDK.Engine.SequenceAction, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_GFxMovieScoreHUD.
+    /// </summary>
+    public static RSeqAct_GFxMovieScoreHUD DefaultObject => (RSeqAct_GFxMovieScoreHUD)StaticClass().DefaultObject;
+
     internal RSeqAct_GFxMovieScoreHUD() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_NeedsRescue : BmSDK.BmGame.RBMBehaviour, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_NeedsRescue.
+    /// </summary>
+    public static RBMBehaviour_NeedsRescue DefaultObject => (RBMBehaviour_NeedsRescue)StaticClass().DefaultObject;
+
     internal RBMBehaviour_NeedsRescue() { }
 
     /// <summary>

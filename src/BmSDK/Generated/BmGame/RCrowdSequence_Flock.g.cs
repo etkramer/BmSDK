@@ -21,6 +21,11 @@ public partial class RCrowdSequence_Flock : BmSDK.BmGame.RCrowdSequence, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCrowdSequence_Flock.
+    /// </summary>
+    public static RCrowdSequence_Flock DefaultObject => (RCrowdSequence_Flock)StaticClass().DefaultObject;
+
     internal RCrowdSequence_Flock() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_AnimatedRopeHang.
+    /// </summary>
+    public static RBMBehaviour_AnimatedRopeHang DefaultObject => (RBMBehaviour_AnimatedRopeHang)StaticClass().DefaultObject;
+
     internal RBMBehaviour_AnimatedRopeHang() { }
 
     /// <summary>

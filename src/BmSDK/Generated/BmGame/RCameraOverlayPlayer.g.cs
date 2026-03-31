@@ -21,6 +21,11 @@ public partial class RCameraOverlayPlayer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCameraOverlayPlayer.
+    /// </summary>
+    public static RCameraOverlayPlayer DefaultObject => (RCameraOverlayPlayer)StaticClass().DefaultObject;
+
     internal RCameraOverlayPlayer() { }
 
     /// <summary>

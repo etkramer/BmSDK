@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_ResonateObject : BmSDK.BmGame.RSpecial
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_ResonateObject.
+    /// </summary>
+    public static RSpecialMoveInstance_ResonateObject DefaultObject => (RSpecialMoveInstance_ResonateObject)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_ResonateObject() { }
 
     /// <summary>

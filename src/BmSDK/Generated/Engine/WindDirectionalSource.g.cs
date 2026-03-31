@@ -21,6 +21,11 @@ public partial class WindDirectionalSource : BmSDK.Engine.Info, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WindDirectionalSource.
+    /// </summary>
+    public static WindDirectionalSource DefaultObject => (WindDirectionalSource)StaticClass().DefaultObject;
+
     internal WindDirectionalSource() { }
 
     /// <summary>

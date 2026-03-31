@@ -21,6 +21,11 @@ public partial class RSeqEvent_ResonatorFailedJammed : BmSDK.Engine.SequenceEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_ResonatorFailedJammed.
+    /// </summary>
+    public static RSeqEvent_ResonatorFailedJammed DefaultObject => (RSeqEvent_ResonatorFailedJammed)StaticClass().DefaultObject;
+
     internal RSeqEvent_ResonatorFailedJammed() { }
 
     /// <summary>

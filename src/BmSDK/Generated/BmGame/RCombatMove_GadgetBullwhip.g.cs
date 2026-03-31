@@ -21,6 +21,11 @@ public partial class RCombatMove_GadgetBullwhip : BmSDK.BmGame.RCombatMove_Batma
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_GadgetBullwhip.
+    /// </summary>
+    public static RCombatMove_GadgetBullwhip DefaultObject => (RCombatMove_GadgetBullwhip)StaticClass().DefaultObject;
+
     internal RCombatMove_GadgetBullwhip() { }
 
     /// <summary>

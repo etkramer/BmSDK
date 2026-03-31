@@ -21,6 +21,11 @@ public partial class RPounceBlockingVolumeContainer : BmSDK.GameObject, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPounceBlockingVolumeContainer.
+    /// </summary>
+    public static RPounceBlockingVolumeContainer DefaultObject => (RPounceBlockingVolumeContainer)StaticClass().DefaultObject;
+
     internal RPounceBlockingVolumeContainer() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveInstance_RobinAreaStun : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_RobinAreaStun.
+    /// </summary>
+    public static RSpecialMoveInstance_RobinAreaStun DefaultObject => (RSpecialMoveInstance_RobinAreaStun)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_RobinAreaStun() { }
 
     /// <summary>

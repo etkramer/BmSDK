@@ -21,6 +21,11 @@ public partial class PathNode_Dynamic : BmSDK.Engine.PathNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PathNode_Dynamic.
+    /// </summary>
+    public static PathNode_Dynamic DefaultObject => (PathNode_Dynamic)StaticClass().DefaultObject;
+
     internal PathNode_Dynamic() { }
 
     /// <summary>

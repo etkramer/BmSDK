@@ -21,6 +21,11 @@ public partial class RCharacter_Doctor_F4 : BmSDK.BmGame.RCharacter, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacter_Doctor_F4.
+    /// </summary>
+    public static RCharacter_Doctor_F4 DefaultObject => (RCharacter_Doctor_F4)StaticClass().DefaultObject;
+
     internal RCharacter_Doctor_F4() { }
 
     /// <summary>

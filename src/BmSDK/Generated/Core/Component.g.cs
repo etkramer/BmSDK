@@ -21,6 +21,11 @@ public partial class Component : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Component.
+    /// </summary>
+    public static Component DefaultObject => (Component)StaticClass().DefaultObject;
+
     internal Component() { }
 
     /// <summary>

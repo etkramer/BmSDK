@@ -21,6 +21,11 @@ public partial class LineBatchComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LineBatchComponent.
+    /// </summary>
+    public static LineBatchComponent DefaultObject => (LineBatchComponent)StaticClass().DefaultObject;
+
     internal LineBatchComponent() { }
 
     /// <summary>

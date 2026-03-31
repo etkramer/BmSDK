@@ -21,6 +21,11 @@ public partial class RSeqEvent_FreezeBeatdownStarted : BmSDK.Engine.SequenceEven
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_FreezeBeatdownStarted.
+    /// </summary>
+    public static RSeqEvent_FreezeBeatdownStarted DefaultObject => (RSeqEvent_FreezeBeatdownStarted)StaticClass().DefaultObject;
+
     internal RSeqEvent_FreezeBeatdownStarted() { }
 
     /// <summary>

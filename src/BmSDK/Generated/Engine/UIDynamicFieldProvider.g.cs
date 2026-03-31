@@ -21,6 +21,11 @@ public partial class UIDynamicFieldProvider : BmSDK.Engine.UIDataProvider, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIDynamicFieldProvider.
+    /// </summary>
+    public static UIDynamicFieldProvider DefaultObject => (UIDynamicFieldProvider)StaticClass().DefaultObject;
+
     internal UIDynamicFieldProvider() { }
 
     /// <summary>

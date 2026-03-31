@@ -21,6 +21,11 @@ public partial class RControllableChatteringTeethBase : BmSDK.Engine.Pawn, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RControllableChatteringTeethBase.
+    /// </summary>
+    public static RControllableChatteringTeethBase DefaultObject => (RControllableChatteringTeethBase)StaticClass().DefaultObject;
+
     internal RControllableChatteringTeethBase() { }
 
     /// <summary>

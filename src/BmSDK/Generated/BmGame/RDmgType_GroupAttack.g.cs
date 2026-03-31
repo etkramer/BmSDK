@@ -21,6 +21,11 @@ public partial class RDmgType_GroupAttack : BmSDK.BmGame.RDmgType_Strike, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_GroupAttack.
+    /// </summary>
+    public static RDmgType_GroupAttack DefaultObject => (RDmgType_GroupAttack)StaticClass().DefaultObject;
+
     internal RDmgType_GroupAttack() { }
 
     /// <summary>

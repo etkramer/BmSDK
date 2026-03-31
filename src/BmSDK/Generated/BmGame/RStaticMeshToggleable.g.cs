@@ -21,6 +21,11 @@ public partial class RStaticMeshToggleable : BmSDK.Engine.StaticMeshActor, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStaticMeshToggleable.
+    /// </summary>
+    public static RStaticMeshToggleable DefaultObject => (RStaticMeshToggleable)StaticClass().DefaultObject;
+
     internal RStaticMeshToggleable() { }
 
     /// <summary>

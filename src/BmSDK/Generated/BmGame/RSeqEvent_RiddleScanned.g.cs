@@ -21,6 +21,11 @@ public partial class RSeqEvent_RiddleScanned : BmSDK.Engine.SequenceEvent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_RiddleScanned.
+    /// </summary>
+    public static RSeqEvent_RiddleScanned DefaultObject => (RSeqEvent_RiddleScanned)StaticClass().DefaultObject;
+
     internal RSeqEvent_RiddleScanned() { }
 
     /// <summary>

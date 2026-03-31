@@ -21,6 +21,11 @@ public partial class RLedgeSetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLedgeSetup.
+    /// </summary>
+    public static RLedgeSetup DefaultObject => (RLedgeSetup)StaticClass().DefaultObject;
+
     internal RLedgeSetup() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_ActivePoseTransition.
+    /// </summary>
+    public static RSpecialMoveConfig_ActivePoseTransition DefaultObject => (RSpecialMoveConfig_ActivePoseTransition)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_ActivePoseTransition() { }
 
     /// <summary>

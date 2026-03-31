@@ -21,6 +21,11 @@ public partial class RStealthTakedownStage_ArmouredFail : BmSDK.BmGame.RStealthT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakedownStage_ArmouredFail.
+    /// </summary>
+    public static RStealthTakedownStage_ArmouredFail DefaultObject => (RStealthTakedownStage_ArmouredFail)StaticClass().DefaultObject;
+
     internal RStealthTakedownStage_ArmouredFail() { }
 
     /// <summary>

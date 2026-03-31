@@ -21,6 +21,11 @@ public partial class RBMWeaponSniperDLC : BmSDK.BmScript.RBMWeaponSniper, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponSniperDLC.
+    /// </summary>
+    public static RBMWeaponSniperDLC DefaultObject => (RBMWeaponSniperDLC)StaticClass().DefaultObject;
+
     internal RBMWeaponSniperDLC() { }
 
     /// <summary>

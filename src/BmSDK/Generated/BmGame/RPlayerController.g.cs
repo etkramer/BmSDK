@@ -21,6 +21,11 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerController.
+    /// </summary>
+    public static RPlayerController DefaultObject => (RPlayerController)StaticClass().DefaultObject;
+
     internal RPlayerController() { }
 
     /// <summary>

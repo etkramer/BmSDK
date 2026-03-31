@@ -21,6 +21,11 @@ public partial class SeqAct_ToggleGodMode : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ToggleGodMode.
+    /// </summary>
+    public static SeqAct_ToggleGodMode DefaultObject => (SeqAct_ToggleGodMode)StaticClass().DefaultObject;
+
     internal SeqAct_ToggleGodMode() { }
 
     /// <summary>

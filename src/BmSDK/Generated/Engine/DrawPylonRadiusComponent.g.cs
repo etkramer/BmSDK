@@ -21,6 +21,11 @@ public partial class DrawPylonRadiusComponent : BmSDK.Engine.DrawSphereComponent
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawPylonRadiusComponent.
+    /// </summary>
+    public static DrawPylonRadiusComponent DefaultObject => (DrawPylonRadiusComponent)StaticClass().DefaultObject;
+
     internal DrawPylonRadiusComponent() { }
 
     /// <summary>

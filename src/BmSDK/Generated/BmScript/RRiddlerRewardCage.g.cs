@@ -21,6 +21,11 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRiddlerRewardCage.
+    /// </summary>
+    public static RRiddlerRewardCage DefaultObject => (RRiddlerRewardCage)StaticClass().DefaultObject;
+
     internal RRiddlerRewardCage() { }
 
     /// <summary>

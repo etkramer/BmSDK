@@ -21,6 +21,11 @@ public partial class RSeqEvent_BatarangElectrified : BmSDK.Engine.SequenceEvent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_BatarangElectrified.
+    /// </summary>
+    public static RSeqEvent_BatarangElectrified DefaultObject => (RSeqEvent_BatarangElectrified)StaticClass().DefaultObject;
+
     internal RSeqEvent_BatarangElectrified() { }
 
     /// <summary>

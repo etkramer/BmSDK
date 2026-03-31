@@ -21,6 +21,11 @@ public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysicsGrabber.
+    /// </summary>
+    public static RPhysicsGrabber DefaultObject => (RPhysicsGrabber)StaticClass().DefaultObject;
+
     internal RPhysicsGrabber() { }
 
     /// <summary>

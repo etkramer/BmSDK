@@ -21,6 +21,11 @@ public partial class DownloadableContentManager : BmSDK.GameObject, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DownloadableContentManager.
+    /// </summary>
+    public static DownloadableContentManager DefaultObject => (DownloadableContentManager)StaticClass().DefaultObject;
+
     internal DownloadableContentManager() { }
 
     /// <summary>

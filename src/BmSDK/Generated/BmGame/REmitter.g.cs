@@ -21,6 +21,11 @@ public partial class REmitter : BmSDK.Engine.Emitter, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REmitter.
+    /// </summary>
+    public static REmitter DefaultObject => (REmitter)StaticClass().DefaultObject;
+
     internal REmitter() { }
 
     /// <summary>

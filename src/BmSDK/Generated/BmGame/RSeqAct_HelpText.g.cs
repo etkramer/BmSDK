@@ -21,6 +21,11 @@ public partial class RSeqAct_HelpText : BmSDK.Engine.SequenceAction, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_HelpText.
+    /// </summary>
+    public static RSeqAct_HelpText DefaultObject => (RSeqAct_HelpText)StaticClass().DefaultObject;
+
     internal RSeqAct_HelpText() { }
 
     /// <summary>

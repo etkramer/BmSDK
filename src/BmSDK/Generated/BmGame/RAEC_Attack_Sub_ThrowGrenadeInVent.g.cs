@@ -21,6 +21,11 @@ public partial class RAEC_Attack_Sub_ThrowGrenadeInVent : BmSDK.BmGame.RAlertEve
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Attack_Sub_ThrowGrenadeInVent.
+    /// </summary>
+    public static RAEC_Attack_Sub_ThrowGrenadeInVent DefaultObject => (RAEC_Attack_Sub_ThrowGrenadeInVent)StaticClass().DefaultObject;
+
     internal RAEC_Attack_Sub_ThrowGrenadeInVent() { }
 
     /// <summary>

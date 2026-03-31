@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataApex.
+    /// </summary>
+    public static ParticleModuleTypeDataApex DefaultObject => (ParticleModuleTypeDataApex)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataApex() { }
 
     /// <summary>

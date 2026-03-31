@@ -21,6 +21,11 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPathNode_VariablePositionTraverse.
+    /// </summary>
+    public static RBMPathNode_VariablePositionTraverse DefaultObject => (RBMPathNode_VariablePositionTraverse)StaticClass().DefaultObject;
+
     internal RBMPathNode_VariablePositionTraverse() { }
 
     /// <summary>

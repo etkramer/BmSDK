@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage_FromAbove : BmSDK.BmGame.RStealthTake
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_FromAbove.
+    /// </summary>
+    public static RStealthTakeDownStage_FromAbove DefaultObject => (RStealthTakeDownStage_FromAbove)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_FromAbove() { }
 
     /// <summary>

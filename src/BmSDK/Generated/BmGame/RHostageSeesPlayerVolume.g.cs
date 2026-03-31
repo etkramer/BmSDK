@@ -21,6 +21,11 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHostageSeesPlayerVolume.
+    /// </summary>
+    public static RHostageSeesPlayerVolume DefaultObject => (RHostageSeesPlayerVolume)StaticClass().DefaultObject;
+
     internal RHostageSeesPlayerVolume() { }
 
     /// <summary>

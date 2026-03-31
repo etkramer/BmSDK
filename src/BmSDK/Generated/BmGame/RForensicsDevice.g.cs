@@ -21,6 +21,11 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicsDevice.
+    /// </summary>
+    public static RForensicsDevice DefaultObject => (RForensicsDevice)StaticClass().DefaultObject;
+
     internal RForensicsDevice() { }
 
     /// <summary>

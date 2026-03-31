@@ -21,6 +21,11 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMWeaponPredatorSniperRifle.
+    /// </summary>
+    public static RBMWeaponPredatorSniperRifle DefaultObject => (RBMWeaponPredatorSniperRifle)StaticClass().DefaultObject;
+
     internal RBMWeaponPredatorSniperRifle() { }
 
     /// <summary>

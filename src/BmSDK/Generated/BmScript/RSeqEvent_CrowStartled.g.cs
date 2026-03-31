@@ -21,6 +21,11 @@ public partial class RSeqEvent_CrowStartled : BmSDK.Engine.SequenceEvent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CrowStartled.
+    /// </summary>
+    public static RSeqEvent_CrowStartled DefaultObject => (RSeqEvent_CrowStartled)StaticClass().DefaultObject;
+
     internal RSeqEvent_CrowStartled() { }
 
     /// <summary>

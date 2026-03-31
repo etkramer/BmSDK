@@ -21,6 +21,11 @@ public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROnlineStatsWrite.
+    /// </summary>
+    public static ROnlineStatsWrite DefaultObject => (ROnlineStatsWrite)StaticClass().DefaultObject;
+
     internal ROnlineStatsWrite() { }
 
     /// <summary>

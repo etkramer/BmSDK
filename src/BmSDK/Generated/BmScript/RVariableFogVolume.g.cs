@@ -21,6 +21,11 @@ public partial class RVariableFogVolume : BmSDK.Engine.PostProcessVolume, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVariableFogVolume.
+    /// </summary>
+    public static RVariableFogVolume DefaultObject => (RVariableFogVolume)StaticClass().DefaultObject;
+
     internal RVariableFogVolume() { }
 
     /// <summary>

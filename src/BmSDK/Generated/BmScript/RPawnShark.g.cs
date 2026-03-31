@@ -21,6 +21,11 @@ public partial class RPawnShark : BmSDK.BmGame.RPawnVillainThug, BmSDK.BmGame.RI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnShark.
+    /// </summary>
+    public static RPawnShark DefaultObject => (RPawnShark)StaticClass().DefaultObject;
+
     internal RPawnShark() { }
 
     /// <summary>

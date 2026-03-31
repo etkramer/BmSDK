@@ -21,6 +21,11 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMultiTargetCamera.
+    /// </summary>
+    public static RMultiTargetCamera DefaultObject => (RMultiTargetCamera)StaticClass().DefaultObject;
+
     internal RMultiTargetCamera() { }
 
     /// <summary>

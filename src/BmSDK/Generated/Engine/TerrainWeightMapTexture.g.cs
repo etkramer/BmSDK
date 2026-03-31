@@ -21,6 +21,11 @@ public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TerrainWeightMapTexture.
+    /// </summary>
+    public static TerrainWeightMapTexture DefaultObject => (TerrainWeightMapTexture)StaticClass().DefaultObject;
+
     internal TerrainWeightMapTexture() { }
 
     /// <summary>

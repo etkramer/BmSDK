@@ -21,6 +21,11 @@ public partial class SequenceCondition : BmSDK.Engine.SequenceOp, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SequenceCondition.
+    /// </summary>
+    public static SequenceCondition DefaultObject => (SequenceCondition)StaticClass().DefaultObject;
+
     internal SequenceCondition() { }
 
     /// <summary>

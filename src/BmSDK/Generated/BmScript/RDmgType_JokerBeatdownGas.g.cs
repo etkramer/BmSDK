@@ -21,6 +21,11 @@ public partial class RDmgType_JokerBeatdownGas : BmSDK.BmGame.RDamageType, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_JokerBeatdownGas.
+    /// </summary>
+    public static RDmgType_JokerBeatdownGas DefaultObject => (RDmgType_JokerBeatdownGas)StaticClass().DefaultObject;
+
     internal RDmgType_JokerBeatdownGas() { }
 
     /// <summary>

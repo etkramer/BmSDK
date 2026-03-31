@@ -21,6 +21,11 @@ public partial class RJammerTowerLocation : BmSDK.Engine.Actor, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJammerTowerLocation.
+    /// </summary>
+    public static RJammerTowerLocation DefaultObject => (RJammerTowerLocation)StaticClass().DefaultObject;
+
     internal RJammerTowerLocation() { }
 
     /// <summary>

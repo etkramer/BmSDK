@@ -21,6 +21,11 @@ public partial class RMagneticBlastLv2 : BmSDK.BmScript.RMagneticBlastBm, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticBlastLv2.
+    /// </summary>
+    public static RMagneticBlastLv2 DefaultObject => (RMagneticBlastLv2)StaticClass().DefaultObject;
+
     internal RMagneticBlastLv2() { }
 
     /// <summary>

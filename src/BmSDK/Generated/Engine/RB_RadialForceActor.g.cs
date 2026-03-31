@@ -21,6 +21,11 @@ public partial class RB_RadialForceActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_RadialForceActor.
+    /// </summary>
+    public static RB_RadialForceActor DefaultObject => (RB_RadialForceActor)StaticClass().DefaultObject;
+
     internal RB_RadialForceActor() { }
 
     /// <summary>

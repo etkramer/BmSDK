@@ -21,6 +21,11 @@ public partial class RBMCombatPoint_VikingHeadOnPlinth : BmSDK.BmGame.RBMCombatP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatPoint_VikingHeadOnPlinth.
+    /// </summary>
+    public static RBMCombatPoint_VikingHeadOnPlinth DefaultObject => (RBMCombatPoint_VikingHeadOnPlinth)StaticClass().DefaultObject;
+
     internal RBMCombatPoint_VikingHeadOnPlinth() { }
 
     /// <summary>

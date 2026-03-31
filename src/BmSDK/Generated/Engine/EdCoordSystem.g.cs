@@ -21,6 +21,11 @@ public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EdCoordSystem.
+    /// </summary>
+    public static EdCoordSystem DefaultObject => (EdCoordSystem)StaticClass().DefaultObject;
+
     internal EdCoordSystem() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkAudioActionSwitch : BmSDK.Engine.AkAudioAction, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioActionSwitch.
+    /// </summary>
+    public static AkAudioActionSwitch DefaultObject => (AkAudioActionSwitch)StaticClass().DefaultObject;
+
     internal AkAudioActionSwitch() { }
 
     /// <summary>

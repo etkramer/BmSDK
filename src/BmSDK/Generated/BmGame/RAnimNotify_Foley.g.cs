@@ -21,6 +21,11 @@ public partial class RAnimNotify_Foley : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Foley.
+    /// </summary>
+    public static RAnimNotify_Foley DefaultObject => (RAnimNotify_Foley)StaticClass().DefaultObject;
+
     internal RAnimNotify_Foley() { }
 
     /// <summary>

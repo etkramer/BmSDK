@@ -21,6 +21,11 @@ public partial class RBMCutscene_JokerGunCam : BmSDK.BmGame.RBMCutscene_BatClawC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCutscene_JokerGunCam.
+    /// </summary>
+    public static RBMCutscene_JokerGunCam DefaultObject => (RBMCutscene_JokerGunCam)StaticClass().DefaultObject;
+
     internal RBMCutscene_JokerGunCam() { }
 
     /// <summary>

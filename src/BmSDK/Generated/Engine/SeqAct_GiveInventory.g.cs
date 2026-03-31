@@ -21,6 +21,11 @@ public partial class SeqAct_GiveInventory : BmSDK.Engine.SequenceAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_GiveInventory.
+    /// </summary>
+    public static SeqAct_GiveInventory DefaultObject => (SeqAct_GiveInventory)StaticClass().DefaultObject;
+
     internal SeqAct_GiveInventory() { }
 
     /// <summary>

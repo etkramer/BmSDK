@@ -21,6 +21,11 @@ public partial class RDeadShotSubstationDoor : BmSDK.BmGame.RRemoveableGrate, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDeadShotSubstationDoor.
+    /// </summary>
+    public static RDeadShotSubstationDoor DefaultObject => (RDeadShotSubstationDoor)StaticClass().DefaultObject;
+
     internal RDeadShotSubstationDoor() { }
 
     /// <summary>

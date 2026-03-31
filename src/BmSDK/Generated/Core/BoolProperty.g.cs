@@ -21,6 +21,11 @@ public partial class BoolProperty : BmSDK.Property, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as BoolProperty.
+    /// </summary>
+    public static BoolProperty DefaultObject => (BoolProperty)StaticClass().DefaultObject;
+
     internal BoolProperty() { }
 
     /// <summary>

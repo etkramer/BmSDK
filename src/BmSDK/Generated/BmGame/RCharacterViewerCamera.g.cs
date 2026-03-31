@@ -21,6 +21,11 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterViewerCamera.
+    /// </summary>
+    public static RCharacterViewerCamera DefaultObject => (RCharacterViewerCamera)StaticClass().DefaultObject;
+
     internal RCharacterViewerCamera() { }
 
     /// <summary>

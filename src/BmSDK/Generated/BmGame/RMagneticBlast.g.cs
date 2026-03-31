@@ -21,6 +21,11 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticBlast.
+    /// </summary>
+    public static RMagneticBlast DefaultObject => (RMagneticBlast)StaticClass().DefaultObject;
+
     internal RMagneticBlast() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RSeqAct_DestroyCombatWeaponPickups : BmSDK.Engine.SequenceA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_DestroyCombatWeaponPickups.
+    /// </summary>
+    public static RSeqAct_DestroyCombatWeaponPickups DefaultObject => (RSeqAct_DestroyCombatWeaponPickups)StaticClass().DefaultObject;
+
     internal RSeqAct_DestroyCombatWeaponPickups() { }
 
     /// <summary>

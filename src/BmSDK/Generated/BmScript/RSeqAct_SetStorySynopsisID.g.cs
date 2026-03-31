@@ -21,6 +21,11 @@ public partial class RSeqAct_SetStorySynopsisID : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SetStorySynopsisID.
+    /// </summary>
+    public static RSeqAct_SetStorySynopsisID DefaultObject => (RSeqAct_SetStorySynopsisID)StaticClass().DefaultObject;
+
     internal RSeqAct_SetStorySynopsisID() { }
 
     /// <summary>

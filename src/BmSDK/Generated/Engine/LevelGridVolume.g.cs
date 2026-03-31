@@ -21,6 +21,11 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelGridVolume.
+    /// </summary>
+    public static LevelGridVolume DefaultObject => (LevelGridVolume)StaticClass().DefaultObject;
+
     internal LevelGridVolume() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class AkAudioActionAltitude : BmSDK.Engine.AkAudioAction, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioActionAltitude.
+    /// </summary>
+    public static AkAudioActionAltitude DefaultObject => (AkAudioActionAltitude)StaticClass().DefaultObject;
+
     internal AkAudioActionAltitude() { }
 
     /// <summary>

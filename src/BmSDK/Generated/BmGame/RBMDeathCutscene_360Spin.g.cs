@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene_360Spin.
+    /// </summary>
+    public static RBMDeathCutscene_360Spin DefaultObject => (RBMDeathCutscene_360Spin)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene_360Spin() { }
 
     /// <summary>

@@ -21,6 +21,11 @@ public partial class RPredHostageFleePoint_Cower : BmSDK.BmGame.RPredHostageFlee
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredHostageFleePoint_Cower.
+    /// </summary>
+    public static RPredHostageFleePoint_Cower DefaultObject => (RPredHostageFleePoint_Cower)StaticClass().DefaultObject;
+
     internal RPredHostageFleePoint_Cower() { }
 
     /// <summary>

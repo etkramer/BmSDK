@@ -21,6 +21,11 @@ public partial class RCheapLightActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCheapLightActor.
+    /// </summary>
+    public static RCheapLightActor DefaultObject => (RCheapLightActor)StaticClass().DefaultObject;
+
     internal RCheapLightActor() { }
 
     /// <summary>
