@@ -22,7 +22,13 @@ internal static class FindObjectsCache
 
     public static void Register(GameObject obj)
     {
-        if (!obj.IsValid || s_removalCache.ContainsKey(obj))
+        // Omit CDOs, invalid objects from type cache
+        if (!obj.IsValid || obj.IsClassDefaultObject)
+        {
+            return;
+        }
+
+        if (s_removalCache.ContainsKey(obj))
         {
             return;
         }
