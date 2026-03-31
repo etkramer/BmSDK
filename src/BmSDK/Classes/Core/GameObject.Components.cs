@@ -16,9 +16,10 @@ public partial class GameObject
     /// <summary>
     /// Collection of all ScriptComponent instances attached to this object.
     /// </summary>
-    public IReadOnlyCollection<IScriptComponent> ScriptComponents => _scriptComponents.Values;
+    public IReadOnlyCollection<IScriptComponent> ScriptComponents =>
+        _scriptComponents.Values.SelectMany(x => x).ToList();
 
-    private readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
+    private readonly Dictionary<Type, List<IScriptComponent>> _scriptComponents = [];
 
     /// <summary>
     /// Attaches an existing script component instance to this object.
@@ -30,13 +31,14 @@ public partial class GameObject
         Guard.Require(!component.HasOwner(), "Component is already attached to an object");
 
         // Store new component
-        if (!_scriptComponents.TryAdd(component.GetType(), component))
+        var componentType = component.GetType();
+        if (!_scriptComponents.TryGetValue(componentType, out var list))
         {
-            throw new ArgumentException(
-                "This object already contains a script component of this type"
-            );
+            list = [];
+            _scriptComponents[componentType] = list;
         }
 
+        list.Add(component);
         s_scriptComponents.Add(component);
 
         component.Owner = this;
@@ -97,18 +99,31 @@ public partial class GameObject
     internal bool HasScriptComponent(Type type) => _scriptComponents.ContainsKey(type);
 
     /// <summary>
-    /// Gets an attached script component by its type.
+    /// Gets the first attached script component of the given type.
     /// </summary>
     /// <exception cref="KeyNotFoundException">Thrown if the component type
     /// has not been attached</exception>
     internal IScriptComponent GetScriptComponent(Type type)
     {
-        if (_scriptComponents.TryGetValue(type, out var result))
+        if (_scriptComponents.TryGetValue(type, out var list) && list.Count > 0)
         {
-            return result;
+            return list[0];
         }
 
         throw new KeyNotFoundException($"No script component of {type} is attached to this object");
+    }
+
+    /// <summary>
+    /// Gets all attached script components of the given type.
+    /// </summary>
+    internal IReadOnlyList<IScriptComponent> GetScriptComponents(Type type)
+    {
+        if (_scriptComponents.TryGetValue(type, out var list))
+        {
+            return list;
+        }
+
+        return [];
     }
 
     /// <summary>
@@ -126,23 +141,35 @@ public partial class GameObject
         RedirectManager.Local.UnregisterComponentRedirectors(component);
 
         // Remove from storage
-        _scriptComponents.Remove(component.GetType());
+        var componentType = component.GetType();
+        if (_scriptComponents.TryGetValue(componentType, out var list))
+        {
+            list.Remove(component);
+            if (list.Count == 0)
+            {
+                _scriptComponents.Remove(componentType);
+            }
+        }
+
         s_scriptComponents.Remove(component);
         component.RemoveOwnership();
     }
 
     /// <summary>
-    /// Detaches a script component by its type from this object.
+    /// Detaches all script components of the given type from this object.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown if the component isn't attached to the object</exception>
-    internal void DetachScriptComponent(Type type)
+    /// <exception cref="ArgumentException">Thrown if no component of the type is attached</exception>
+    internal void DetachScriptComponents(Type type)
     {
-        if (!_scriptComponents.TryGetValue(type, out var component))
+        if (!_scriptComponents.TryGetValue(type, out var list) || list.Count == 0)
         {
             throw new ArgumentException($"No instance of {type} is attached to this object");
         }
 
-        DetachScriptComponent(component);
+        foreach (var component in list.ToArray())
+        {
+            DetachScriptComponent(component);
+        }
     }
 
     /// <summary>
