@@ -8,6 +8,7 @@
 		},
 	],
 	"settings": {
+		"dotnet.defaultSolution": "./ScriptsDev.slnx",
 		"files.exclude": {
 			// VCS excludes
 			"**/.git": true,
