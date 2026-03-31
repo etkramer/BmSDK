@@ -33,7 +33,7 @@ public partial class GameObject
         if (!_scriptComponents.TryAdd(component.GetType(), component))
         {
             throw new ArgumentException(
-                "This object already contains a ScriptComponent of this type"
+                "This object already contains a script component of this type"
             );
         }
 
@@ -92,12 +92,12 @@ public partial class GameObject
     internal bool HasScriptComponent(IScriptComponent component) => component.Owner == this;
 
     /// <summary>
-    /// Checks if the object has a ScriptComponent of the given type.
+    /// Checks if the object has a script component of the given type.
     /// </summary>
     internal bool HasScriptComponent(Type type) => _scriptComponents.ContainsKey(type);
 
     /// <summary>
-    /// Gets an attached ScriptComponent instance by its type.
+    /// Gets an attached script component by its type.
     /// </summary>
     /// <exception cref="KeyNotFoundException">Thrown if the component type
     /// has not been attached</exception>
@@ -132,7 +132,7 @@ public partial class GameObject
     }
 
     /// <summary>
-    /// Detaches a ScriptComponent by its type from this object.
+    /// Detaches a script component by its type from this object.
     /// </summary>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the object</exception>
     internal void DetachScriptComponent(Type type)
