@@ -71,11 +71,8 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Archive
     /// </summary>
-    public unsafe System.IntPtr Archive
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr Archive
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 
     /// <summary>
     /// StrProperty: StatsFileName
@@ -89,20 +86,14 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Header
     /// </summary>
-    public unsafe BmSDK.Engine.GameplayEvents.FGameplayEventsHeader Header
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEvents.FGameplayEventsHeader>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.Engine.GameplayEvents.FGameplayEventsHeader Header
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameplayEvents.FGameplayEventsHeader>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: CurrentSessionInfo
     /// </summary>
-    public unsafe BmSDK.Engine.GameplayEvents.FGameSessionInformation CurrentSessionInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEvents.FGameSessionInformation>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.Engine.GameplayEvents.FGameSessionInformation CurrentSessionInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameplayEvents.FGameSessionInformation>(Ptr + 104);
 
     /// <summary>
     /// ArrayProperty: PlayerList
@@ -276,10 +267,9 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: StatGroup
         /// </summary>
-        public unsafe BmSDK.Engine.GameplayEvents.FGameStatGroup StatGroup
+        public unsafe ref BmSDK.Engine.GameplayEvents.FGameStatGroup StatGroup
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameplayEvents.FGameStatGroup>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameplayEvents.FGameStatGroup>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -319,10 +309,9 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
@@ -362,10 +351,9 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TeamColor
         /// </summary>
-        public unsafe BmSDK.GameObject.FColor TeamColor
+        public unsafe ref BmSDK.GameObject.FColor TeamColor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -504,10 +492,9 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: OwningNetId
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId OwningNetId
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId OwningNetId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 100); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 100); } }
         }
     }
 

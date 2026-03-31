@@ -85,11 +85,8 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
     /// <summary>
     /// StructProperty: LookupTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 188);
 
     /// <summary>
     /// Enum: EInterpMoveAxis

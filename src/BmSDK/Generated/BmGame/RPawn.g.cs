@@ -1331,20 +1331,14 @@ public partial class RPawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1232);
 
     /// <summary>
     /// StructProperty: LastReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
-    }
+    public unsafe ref BmSDK.Rotator LastReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1244);
 
     /// <summary>
     /// IntProperty: IsInConversationCount

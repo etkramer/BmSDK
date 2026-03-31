@@ -687,11 +687,8 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// StructProperty: MissilePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissilePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissilePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 340);
 
     /// <summary>
     /// IntProperty: MaxTargetCursorIndex

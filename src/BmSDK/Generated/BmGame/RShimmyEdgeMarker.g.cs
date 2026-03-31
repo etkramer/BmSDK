@@ -135,29 +135,20 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
     /// <summary>
     /// StructProperty: OutwardNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutwardNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutwardNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: PointA
     /// </summary>
-    public unsafe System.Numerics.Vector3 PointA
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 PointA
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: PointB
     /// </summary>
-    public unsafe System.Numerics.Vector3 PointB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 PointB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// FloatProperty: ExtraCheckRadius

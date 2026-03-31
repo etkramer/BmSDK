@@ -506,11 +506,8 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
     /// <summary>
     /// StructProperty: DodgeId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564);
 
     /// <summary>
     /// ObjectProperty: Bats
@@ -524,11 +521,8 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
     /// <summary>
     /// StructProperty: SavedDireciton
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedDireciton
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3572); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedDireciton
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3572);
 
     /// <summary>
     /// ObjectProperty: HQBMCounterAnimset
@@ -668,11 +662,8 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
     /// <summary>
     /// StructProperty: LaserOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaserOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3632); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaserOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3632);
 
     /// <summary>
     /// ComponentProperty: TargettingLaserPFX
@@ -704,20 +695,14 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
     /// <summary>
     /// StructProperty: laserScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 laserScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3656); }
-    }
+    public unsafe ref System.Numerics.Vector3 laserScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3656);
 
     /// <summary>
     /// StructProperty: cachedInitialRotation
     /// </summary>
-    public unsafe BmSDK.Rotator cachedInitialRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3668); }
-    }
+    public unsafe ref BmSDK.Rotator cachedInitialRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3668);
 
     /// <summary>
     /// ObjectProperty: lastRocketFired
@@ -731,9 +716,6 @@ public partial class RPawnFriendlyHarleyPDLC : BmSDK.BmGame.RPawnVillainThug, Bm
     /// <summary>
     /// StructProperty: AttackRefLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackRefLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3684); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackRefLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3684);
 }

@@ -375,19 +375,17 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: EdgeStart
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeStart
+        public unsafe ref System.Numerics.Vector2 EdgeStart
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
         /// StructProperty: EdgeEnd
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeEnd
+        public unsafe ref System.Numerics.Vector2 EdgeEnd
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 32); } }
         }
     }
 
@@ -400,19 +398,17 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: EdgeStart
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeStart
+        public unsafe ref System.Numerics.Vector2 EdgeStart
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: EdgeEnd
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeEnd
+        public unsafe ref System.Numerics.Vector2 EdgeEnd
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -662,11 +658,8 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LevelWind
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRBasicWindConfig LevelWind
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRBasicWindConfig LevelWind
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRBasicWindConfig>(Ptr + 628);
 
     /// <summary>
     /// FloatProperty: RainIntensity

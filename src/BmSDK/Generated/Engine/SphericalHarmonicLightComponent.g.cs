@@ -76,11 +76,8 @@ public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightCompone
     /// <summary>
     /// StructProperty: WorldSpaceIncidentLighting
     /// </summary>
-    public unsafe BmSDK.GameObject.FSHVectorRGB WorldSpaceIncidentLighting
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSHVectorRGB>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.GameObject.FSHVectorRGB WorldSpaceIncidentLighting
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSHVectorRGB>(Ptr + 416);
 
     /// <summary>
     /// BoolProperty: bRenderBeforeModShadows

@@ -166,11 +166,8 @@ public partial class RBMAIAction_AimGunAt : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// StructProperty: AimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 
     /// <summary>
     /// FloatProperty: AimTime

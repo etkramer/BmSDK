@@ -192,10 +192,9 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
         /// <summary>
         /// StructProperty: FixedTargetPosition
         /// </summary>
-        public unsafe System.Numerics.Vector3 FixedTargetPosition
+        public unsafe ref System.Numerics.Vector3 FixedTargetPosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -247,11 +246,8 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: FixedRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FixedRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref BmSDK.Rotator FixedRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 868);
 
     /// <summary>
     /// ArrayProperty: Targets
@@ -301,9 +297,6 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: Smoother
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
-    }
+    public unsafe ref BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 908);
 }

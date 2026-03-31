@@ -363,11 +363,8 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: EndPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 
     /// <summary>
     /// IntProperty: EndYaw
@@ -444,38 +441,26 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: TransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: CameraLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: CameraRotation
     /// </summary>
-    public unsafe BmSDK.Rotator CameraRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref BmSDK.Rotator CameraRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: ChosenSequence
     /// </summary>
-    public unsafe BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence ChosenSequence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence ChosenSequence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence>(Ptr + 688);
 
     /// <summary>
     /// ObjectProperty: CurrentWaveForm
@@ -525,18 +510,12 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: GrateTensionSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GrateTensionSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GrateTensionSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 768);
 
     /// <summary>
     /// StructProperty: RopeTensionSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 780);
 }

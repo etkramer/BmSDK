@@ -154,11 +154,8 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// <summary>
     /// StructProperty: ChasePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ChasePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 ChasePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: NavRequest

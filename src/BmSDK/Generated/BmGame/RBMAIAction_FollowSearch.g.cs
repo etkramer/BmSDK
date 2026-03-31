@@ -223,11 +223,8 @@ public partial class RBMAIAction_FollowSearch : BmSDK.BmGame.RBMAIAction_BaseMov
     /// <summary>
     /// StructProperty: FollowOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FollowOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 FollowOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 
     /// <summary>
     /// BoolProperty: bHasBeenInFormation
@@ -268,9 +265,6 @@ public partial class RBMAIAction_FollowSearch : BmSDK.BmGame.RBMAIAction_BaseMov
     /// <summary>
     /// StructProperty: PathDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 PathDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref System.Numerics.Vector3 PathDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 608);
 }

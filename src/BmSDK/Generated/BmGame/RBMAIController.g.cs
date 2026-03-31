@@ -2836,11 +2836,8 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CachedAnimatedAimDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedAnimatedAimDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedAnimatedAimDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// FloatProperty: LastCheckUnconsciousThugTime

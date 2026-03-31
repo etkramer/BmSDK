@@ -737,11 +737,8 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: LaunchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 620);
 
     /// <summary>
     /// BoolProperty: bLaunchedFromGarg
@@ -935,29 +932,20 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: LaunchTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: ImpactTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// StructProperty: CurrentImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// FloatProperty: OneOverFlightTime
@@ -989,20 +977,14 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: NewTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 NewTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref System.Numerics.Vector3 NewTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 684);
 
     /// <summary>
     /// StructProperty: PreviousLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// ObjectProperty: TrackingCam
@@ -1079,20 +1061,14 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: MeshYaw
     /// </summary>
-    public unsafe BmSDK.Rotator MeshYaw
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.Rotator MeshYaw
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 740);
 
     /// <summary>
     /// StructProperty: MeshPitch
     /// </summary>
-    public unsafe BmSDK.Rotator MeshPitch
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref BmSDK.Rotator MeshPitch
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 752);
 
     /// <summary>
     /// IntProperty: DamageGiven

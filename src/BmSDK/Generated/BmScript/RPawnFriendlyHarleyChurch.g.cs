@@ -361,11 +361,8 @@ public partial class RPawnFriendlyHarleyChurch : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// StructProperty: DodgeId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3564);
 
     /// <summary>
     /// ObjectProperty: Bats
@@ -397,11 +394,8 @@ public partial class RPawnFriendlyHarleyChurch : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// StructProperty: SavedDireciton
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedDireciton
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3576); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedDireciton
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3576);
 
     /// <summary>
     /// ObjectProperty: HQBMCounterAnimset

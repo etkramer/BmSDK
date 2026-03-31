@@ -76,9 +76,6 @@ public partial class RParticleModuleAttractorComponent : BmSDK.Engine.ParticleMo
     /// <summary>
     /// StructProperty: AttractorChannel
     /// </summary>
-    public unsafe BmSDK.GameObject.FRChannel8 AttractorChannel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRChannel8>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.GameObject.FRChannel8 AttractorChannel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRChannel8>(Ptr + 56);
 }

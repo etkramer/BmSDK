@@ -121,11 +121,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// <summary>
     /// StructProperty: BoneTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 176);
 
     /// <summary>
     /// ByteProperty: BoneTranslationSpace
@@ -157,11 +154,8 @@ public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// <summary>
     /// StructProperty: BoneRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BoneRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref BmSDK.Rotator BoneRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 200);
 
     /// <summary>
     /// NameProperty: RotationSpaceBoneName

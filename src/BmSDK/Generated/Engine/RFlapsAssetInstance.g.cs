@@ -139,20 +139,14 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FlapsParticleSystem
     /// </summary>
-    public unsafe System.IntPtr FlapsParticleSystem
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.IntPtr FlapsParticleSystem
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: OwnerScene
     /// </summary>
-    public unsafe System.IntPtr OwnerScene
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.IntPtr OwnerScene
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
 
     /// <summary>
     /// FloatProperty: BlendWeight
@@ -172,10 +166,9 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe System.Numerics.Vector3 Position
+        public unsafe ref System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -305,42 +298,37 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BlendBoneDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_0
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_0
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>((IntPtr)thisPtr + 0); } }
         }
         /// <summary>
         /// StructProperty: BlendBoneDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_1
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>((IntPtr)thisPtr + 20); } }
         }
         /// <summary>
         /// StructProperty: BlendBoneDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_2
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>((IntPtr)thisPtr + 40); } }
         }
         /// <summary>
         /// StructProperty: BlendBoneDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_3
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_3
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>(Ptr + 60); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>((IntPtr)thisPtr + 60); } }
         }
         /// <summary>
         /// StructProperty: BlendBoneDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_4
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry BlendBoneDatas_4
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>(Ptr + 80); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRAnimBlendConstraintBoneFrameDataEntry>((IntPtr)thisPtr + 80); } }
         }
 
         /// <summary>
@@ -362,10 +350,9 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PositionInFrame
         /// </summary>
-        public unsafe System.Numerics.Vector3 PositionInFrame
+        public unsafe ref System.Numerics.Vector3 PositionInFrame
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -396,19 +383,17 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PositionInFrame
         /// </summary>
-        public unsafe System.Numerics.Vector3 PositionInFrame
+        public unsafe ref System.Numerics.Vector3 PositionInFrame
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: SpringPositionInFrame
         /// </summary>
-        public unsafe System.Numerics.Vector3 SpringPositionInFrame
+        public unsafe ref System.Numerics.Vector3 SpringPositionInFrame
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -439,26 +424,23 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FrameControlParticleDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_0
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_0
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>((IntPtr)thisPtr + 0); } }
         }
         /// <summary>
         /// StructProperty: FrameControlParticleDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_1
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>((IntPtr)thisPtr + 16); } }
         }
         /// <summary>
         /// StructProperty: FrameControlParticleDatas
         /// </summary>
-        public unsafe BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_2
+        public unsafe ref BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData FrameControlParticleDatas_2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlapsAssetInstance.FRWriteBackParticleData>((IntPtr)thisPtr + 32); } }
         }
 
         /// <summary>
@@ -507,10 +489,9 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe System.Numerics.Vector3 Position
+        public unsafe ref System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
     }
 

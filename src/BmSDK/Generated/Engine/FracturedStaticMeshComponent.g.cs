@@ -317,11 +317,8 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
     /// <summary>
     /// StructProperty: VisibleBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox VisibleBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox VisibleBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 524);
 
     /// <summary>
     /// BoolProperty: bUseSkinnedRendering

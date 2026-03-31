@@ -191,11 +191,8 @@ public partial class RCreeperVineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HumpRotation
     /// </summary>
-    public unsafe BmSDK.Rotator HumpRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.Rotator HumpRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 476);
 
     /// <summary>
     /// BoolProperty: bTestAttack

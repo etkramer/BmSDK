@@ -269,11 +269,8 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CylinderProjection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CylinderProjection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 CylinderProjection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: ActiveTime

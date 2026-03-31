@@ -161,9 +161,6 @@ public partial class NxCylindricalForceField : BmSDK.Engine.NxForceField, BmSDK.
     /// <summary>
     /// StructProperty: Kernel
     /// </summary>
-    public unsafe System.IntPtr Kernel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.IntPtr Kernel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 532);
 }

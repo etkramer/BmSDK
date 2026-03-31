@@ -130,45 +130,30 @@ public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CameraPivotOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraPivotOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraPivotOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 868);
 
     /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// StructProperty: LookRotatorOffset
     /// </summary>
-    public unsafe BmSDK.Rotator LookRotatorOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref BmSDK.Rotator LookRotatorOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 892);
 
     /// <summary>
     /// StructProperty: LookPositionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookPositionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookPositionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// StructProperty: Smoother
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 916);
 }

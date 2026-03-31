@@ -231,20 +231,14 @@ public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: FinalCameraDirection
     /// </summary>
-    public unsafe BmSDK.Rotator FinalCameraDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref BmSDK.Rotator FinalCameraDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 640);
 
     /// <summary>
     /// StructProperty: GrappleUpVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleUpVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleUpVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
     /// FloatProperty: GrappleAccel

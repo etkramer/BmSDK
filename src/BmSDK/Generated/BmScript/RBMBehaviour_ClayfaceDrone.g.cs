@@ -201,20 +201,14 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// StructProperty: CurrentTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentTargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// StructProperty: SavedStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 524);
 
     /// <summary>
     /// BoolProperty: bMoving

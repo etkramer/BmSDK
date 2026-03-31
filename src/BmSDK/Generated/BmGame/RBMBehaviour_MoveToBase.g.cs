@@ -188,10 +188,9 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour, BmSDK.
         /// <summary>
         /// StructProperty: StartledAnimations
         /// </summary>
-        public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToStartledAnimationData StartledAnimations
+        public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToStartledAnimationData StartledAnimations
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToStartledAnimationData>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToStartledAnimationData>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
@@ -231,19 +230,17 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour, BmSDK.
         /// <summary>
         /// StructProperty: FrontStartle
         /// </summary>
-        public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation FrontStartle
+        public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation FrontStartle
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: BackStartle
         /// </summary>
-        public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation BackStartle
+        public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation BackStartle
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FMoveToRandomAnimation>((IntPtr)thisPtr + 12); } }
         }
     }
 
@@ -284,11 +281,8 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// StructProperty: StartleSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 400);
 
     /// <summary>
     /// ByteProperty: Speed

@@ -201,11 +201,8 @@ public partial class RForensicDnaSplatStatic : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// StructProperty: VfTable_IREvidenceInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IREvidenceInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr VfTable_IREvidenceInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// ObjectProperty: Material
@@ -228,11 +225,8 @@ public partial class RForensicDnaSplatStatic : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// StructProperty: CurrentShowLevel
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentShowLevel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentShowLevel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// ObjectProperty: EvidenceInfo
@@ -291,11 +285,8 @@ public partial class RForensicDnaSplatStatic : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// StructProperty: ParticleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// ComponentProperty: StaticMeshComponent

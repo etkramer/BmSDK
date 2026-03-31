@@ -164,20 +164,14 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Dof
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct Dof
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct Dof
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: OldDof
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct OldDof
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct OldDof
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 120);
 
     /// <summary>
     /// BoolProperty: ChangedDof
@@ -260,10 +254,9 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ModulateBlurColor
         /// </summary>
-        public unsafe BmSDK.GameObject.FColor ModulateBlurColor
+        public unsafe ref BmSDK.GameObject.FColor ModulateBlurColor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -287,10 +280,9 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FocusPosition
         /// </summary>
-        public unsafe System.Numerics.Vector3 FocusPosition
+        public unsafe ref System.Numerics.Vector3 FocusPosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
@@ -332,10 +324,9 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BloomTint
         /// </summary>
-        public unsafe BmSDK.GameObject.FColor BloomTint
+        public unsafe ref BmSDK.GameObject.FColor BloomTint
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 56); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 56); } }
         }
 
         /// <summary>

@@ -112,11 +112,8 @@ public partial class OnlineGameSettings : BmSDK.Engine.Settings, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ServerNonce
     /// </summary>
-    public unsafe ulong ServerNonce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref ulong ServerNonce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 108);
 
     /// <summary>
     /// BoolProperty: bShouldAdvertise
@@ -256,11 +253,8 @@ public partial class OnlineGameSettings : BmSDK.Engine.Settings, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: OwningPlayerId
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId OwningPlayerId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId OwningPlayerId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 132);
 
     /// <summary>
     /// IntProperty: PingInMs

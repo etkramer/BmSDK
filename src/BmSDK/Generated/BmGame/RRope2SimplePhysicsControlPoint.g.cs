@@ -289,9 +289,6 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// StructProperty: ControlPointPhysicsNode
     /// </summary>
-    public unsafe System.IntPtr ControlPointPhysicsNode
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr ControlPointPhysicsNode
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 }

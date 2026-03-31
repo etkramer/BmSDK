@@ -247,9 +247,6 @@ public partial class RRiddlerSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IGam
     /// <summary>
     /// StructProperty: LastHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 592);
 }

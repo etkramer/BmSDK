@@ -234,11 +234,8 @@ public partial class RFreezeBreakableNoraStatue : BmSDK.Engine.FracturedStaticMe
     /// <summary>
     /// StructProperty: ExplosionMiddle
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExplosionMiddle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExplosionMiddle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// ObjectProperty: FreezePawn

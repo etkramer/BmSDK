@@ -491,11 +491,8 @@ public partial class RBMSpeechManager : BmSDK.Engine.ActorComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: CurrentVocal
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMSpeechManager.FVocal CurrentVocal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMSpeechManager.FVocal>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMSpeechManager.FVocal CurrentVocal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMSpeechManager.FVocal>(Ptr + 72);
 
     /// <summary>
     /// ArrayProperty: VocalQueue
@@ -509,11 +506,8 @@ public partial class RBMSpeechManager : BmSDK.Engine.ActorComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: AkSpeechHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle AkSpeechHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle AkSpeechHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 112);
 
     /// <summary>
     /// BoolProperty: bIsCurrentlyStopping
@@ -563,11 +557,8 @@ public partial class RBMSpeechManager : BmSDK.Engine.ActorComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: NoSpeechHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle NoSpeechHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle NoSpeechHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 140);
 
     /// <summary>
     /// IntProperty: lastSpeechIndexPlayed

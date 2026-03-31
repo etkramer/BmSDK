@@ -453,11 +453,8 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// StructProperty: CurrentSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 528);
 
     /// <summary>
     /// FloatProperty: ExplodeDist
@@ -516,11 +513,8 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// StructProperty: HoldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 HoldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 HoldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// FloatProperty: HoldPositionTime
@@ -534,11 +528,8 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// StructProperty: FinalDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 FinalDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 FinalDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// FloatProperty: FinalDestinationAccel

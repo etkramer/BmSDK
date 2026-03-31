@@ -422,11 +422,8 @@ public partial class AkMultipointEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameO
     /// <summary>
     /// StructProperty: MultipointEmitterSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 MultipointEmitterSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref System.Numerics.Vector3 MultipointEmitterSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 524);
 
     /// <summary>
     /// Enum: EMultipointEmitterType

@@ -320,11 +320,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: FakeTargetLeft
     /// </summary>
-    public unsafe System.Numerics.Vector3 FakeTargetLeft
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 FakeTargetLeft
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// ObjectProperty: StickLeft
@@ -365,11 +362,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: LeftStickStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LeftStickStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 LeftStickStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// FloatProperty: LeftStickStartTime
@@ -383,11 +377,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: LeftStickDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 LeftStickDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 LeftStickDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
 
     /// <summary>
     /// ArrayProperty: TargetListRight
@@ -455,11 +446,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: RightStickStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RightStickStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
+    public unsafe ref System.Numerics.Vector3 RightStickStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 704);
 
     /// <summary>
     /// FloatProperty: RightStickStartTime
@@ -473,11 +461,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: RightStickDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 RightStickDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
+    public unsafe ref System.Numerics.Vector3 RightStickDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 720);
 
     /// <summary>
     /// FloatProperty: StickSpinSpeed
@@ -491,11 +476,8 @@ public partial class RCombatMove_NightwingGroupStun : BmSDK.BmGame.RCombatMove_P
     /// <summary>
     /// StructProperty: TakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 736);
 
     /// <summary>
     /// ObjectProperty: Nightwing

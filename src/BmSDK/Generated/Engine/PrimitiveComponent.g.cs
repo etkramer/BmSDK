@@ -1696,38 +1696,26 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Bounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds Bounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe System.IntPtr SceneInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.IntPtr SceneInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: CachedParentToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix CachedParentToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix CachedParentToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 176);
 
     /// <summary>
     /// IntProperty: DetachFence
@@ -1903,20 +1891,14 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref System.Numerics.Vector3 Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 316);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 328);
 
     /// <summary>
     /// FloatProperty: Scale
@@ -1930,11 +1912,8 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Scale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 Scale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref System.Numerics.Vector3 Scale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 344);
 
     /// <summary>
     /// FloatProperty: LastRenderTime
@@ -2740,20 +2719,14 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 388);
 
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 392);
 
     /// <summary>
     /// ByteProperty: RBChannel

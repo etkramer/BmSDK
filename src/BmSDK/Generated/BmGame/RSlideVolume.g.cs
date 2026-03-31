@@ -128,11 +128,8 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// StructProperty: RelativeToRotationSlideDirection
     /// </summary>
-    public unsafe BmSDK.Rotator RelativeToRotationSlideDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.Rotator RelativeToRotationSlideDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 492);
 
     /// <summary>
     /// BoolProperty: bUseRelativeToRotationSlideDirection

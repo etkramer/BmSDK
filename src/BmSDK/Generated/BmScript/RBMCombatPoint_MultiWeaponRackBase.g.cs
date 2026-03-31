@@ -188,11 +188,8 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// StructProperty: CurrOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// Struct: FWeaponInfo
@@ -248,10 +245,9 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
         /// <summary>
         /// StructProperty: WeaponOffset
         /// </summary>
-        public unsafe System.Numerics.Vector3 WeaponOffset
+        public unsafe ref System.Numerics.Vector3 WeaponOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
         }
     }
 }

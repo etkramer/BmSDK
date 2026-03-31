@@ -80,38 +80,26 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
     /// <summary>
     /// StructProperty: MinInput
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinInput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinInput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: MaxInput
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxInput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxInput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: MinOutput
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinOutput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinOutput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: MaxOutput
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxOutput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxOutput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// ByteProperty: ParamModes

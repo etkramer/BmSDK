@@ -964,29 +964,20 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PrevPointLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevPointLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevPointLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1144);
 
     /// <summary>
     /// StructProperty: ActualVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActualVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActualVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1156);
 
     /// <summary>
     /// StructProperty: ActualAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActualAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActualAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1168);
 
     /// <summary>
     /// FloatProperty: ActualRotationalVelocity
@@ -1000,20 +991,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VirtualLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 VirtualLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
-    }
+    public unsafe ref System.Numerics.Vector3 VirtualLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1184);
 
     /// <summary>
     /// StructProperty: VirtualRotation
     /// </summary>
-    public unsafe BmSDK.Rotator VirtualRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
-    }
+    public unsafe ref BmSDK.Rotator VirtualRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1196);
 
     /// <summary>
     /// ObjectProperty: LookAtTarget
@@ -1108,20 +1093,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GustNormalStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 GustNormalStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
-    }
+    public unsafe ref System.Numerics.Vector3 GustNormalStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1248);
 
     /// <summary>
     /// StructProperty: GustNormalFinish
     /// </summary>
-    public unsafe System.Numerics.Vector3 GustNormalFinish
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
-    }
+    public unsafe ref System.Numerics.Vector3 GustNormalFinish
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1260);
 
     /// <summary>
     /// FloatProperty: GustMagnitude
@@ -1162,11 +1141,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentGustVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentGustVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentGustVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1288);
 
     /// <summary>
     /// FloatProperty: RotationBankingMagnitude
@@ -1216,11 +1192,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WobbleVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WobbleVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
-    }
+    public unsafe ref System.Numerics.Vector3 WobbleVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1320);
 
     /// <summary>
     /// FloatProperty: GustStrengthBase
@@ -1396,11 +1369,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: lightTargetOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator lightTargetOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1408); }
-    }
+    public unsafe ref BmSDK.Rotator lightTargetOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1408);
 
     /// <summary>
     /// FloatProperty: fControlVolumeTimer
@@ -1477,20 +1447,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightFloorPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightFloorPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightFloorPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1452);
 
     /// <summary>
     /// StructProperty: lightPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 lightPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
-    }
+    public unsafe ref System.Numerics.Vector3 lightPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1464);
 
     /// <summary>
     /// ObjectProperty: PlayerPawn
@@ -1531,11 +1495,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: lightOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator lightOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1492); }
-    }
+    public unsafe ref BmSDK.Rotator lightOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1492);
 
     /// <summary>
     /// ArrayProperty: HelicopterDifficultyLevels
@@ -1657,11 +1618,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BMLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 BMLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1564); }
-    }
+    public unsafe ref System.Numerics.Vector3 BMLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1564);
 
     /// <summary>
     /// FloatProperty: LastSpottedTime

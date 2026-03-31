@@ -1011,20 +1011,14 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// StructProperty: LanBeacon
     /// </summary>
-    public unsafe System.IntPtr LanBeacon
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref System.IntPtr LanBeacon
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 220);
 
     /// <summary>
     /// StructProperty: SessionInfo
     /// </summary>
-    public unsafe System.IntPtr SessionInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref System.IntPtr SessionInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 224);
 
     /// <summary>
     /// DelegateProperty: __OnFindOnlineGamesComplete__Delegate

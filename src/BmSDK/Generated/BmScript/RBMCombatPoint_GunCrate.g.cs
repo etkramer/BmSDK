@@ -286,11 +286,8 @@ public partial class RBMCombatPoint_GunCrate : BmSDK.BmScript.RBMCombatPoint_Gun
     /// <summary>
     /// StructProperty: BoneLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// ComponentProperty: Light1

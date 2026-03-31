@@ -123,11 +123,8 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookFromLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookFromLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// ComponentProperty: TargetHead
@@ -141,11 +138,8 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SilentPredCameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SilentPredCameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 SilentPredCameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// BoolProperty: bFrozen
@@ -168,9 +162,6 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: InitialRot
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.Rotator InitialRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 896);
 }

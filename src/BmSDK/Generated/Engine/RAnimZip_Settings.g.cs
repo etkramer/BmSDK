@@ -229,11 +229,8 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultTrackSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings DefaultTrackSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings DefaultTrackSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 92);
 
     /// <summary>
     /// ArrayProperty: ForcedTrackSettings
@@ -247,11 +244,8 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MotionTrackSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings MotionTrackSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings MotionTrackSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 120);
 
     /// <summary>
     /// ByteProperty: ForceRotationCodec
@@ -292,137 +286,92 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CharacterTrackSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Bip01
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Bip01
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Bip01
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Pelvis
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Pelvis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Pelvis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Spine
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Spine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Spine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 212);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Face
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Face
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Face
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Head
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Head
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Head
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 244);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Clavicle
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Clavicle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Clavicle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Arm
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Arm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Arm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 276);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Hand
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Hand
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Hand
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 292);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Finger
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Finger
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Finger
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 308);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Gundummy
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Gundummy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Gundummy
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 324);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Leg
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Leg
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Leg
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 340);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Foot
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Foot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Foot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 356);
 
     /// <summary>
     /// StructProperty: CharacterTrackSettings_Toe
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Toe
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CharacterTrackSettings_Toe
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 372);
 
     /// <summary>
     /// StructProperty: CapeTrackSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CapeTrackSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
+    public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings CapeTrackSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 388);
 
     /// <summary>
     /// Struct: FAnimZipNamedTrackSettings
@@ -442,10 +391,9 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Settings
         /// </summary>
-        public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings Settings
+        public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings Settings
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipTrackSettings>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -458,10 +406,9 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ErrorBounds
         /// </summary>
-        public unsafe BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds ErrorBounds
+        public unsafe ref BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds ErrorBounds
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAnimZip_Settings.FAnimZipErrorBounds>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>

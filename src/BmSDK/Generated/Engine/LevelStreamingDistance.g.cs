@@ -76,11 +76,8 @@ public partial class LevelStreamingDistance : BmSDK.Engine.LevelStreaming, BmSDK
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe System.Numerics.Vector3 Origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref System.Numerics.Vector3 Origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 164);
 
     /// <summary>
     /// FloatProperty: MaxDistance

@@ -76,9 +76,6 @@ public partial class RAggGeomCollisionComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// StructProperty: AggGeom
     /// </summary>
-    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom AggGeom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.Engine.KMeshProps.FKAggregateGeom AggGeom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 404);
 }

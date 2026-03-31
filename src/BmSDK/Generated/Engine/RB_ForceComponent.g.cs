@@ -175,11 +175,8 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 416);
 
     /// <summary>
     /// FloatProperty: ElapsedTime
@@ -202,20 +199,14 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe System.IntPtr LinearKernel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr LinearKernel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: TheNxForceField
     /// </summary>
-    public unsafe System.IntPtr TheNxForceField
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref System.IntPtr TheNxForceField
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 432);
 
     /// <summary>
     /// Enum: EForceModeType

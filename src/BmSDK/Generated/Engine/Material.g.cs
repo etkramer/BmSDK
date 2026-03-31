@@ -789,74 +789,50 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DiffuseColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput DiffuseColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput DiffuseColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: DiffusePower
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput DiffusePower
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput DiffusePower
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: SpecularColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput SpecularColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput SpecularColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 200);
 
     /// <summary>
     /// StructProperty: SpecularPower
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput SpecularPower
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput SpecularPower
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVectorMaterialInput Normal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVectorMaterialInput Normal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 272);
 
     /// <summary>
     /// StructProperty: EmissiveColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput EmissiveColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput EmissiveColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 316);
 
     /// <summary>
     /// StructProperty: Opacity
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput Opacity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput Opacity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 352);
 
     /// <summary>
     /// StructProperty: OpacityMask
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput OpacityMask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput OpacityMask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 388);
 
     /// <summary>
     /// FloatProperty: OpacityMaskClipValue
@@ -879,218 +855,146 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: Distortion
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVector2MaterialInput Distortion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVector2MaterialInput>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVector2MaterialInput Distortion
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVector2MaterialInput>(Ptr + 432);
 
     /// <summary>
     /// StructProperty: CustomLighting
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput CustomLighting
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput CustomLighting
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 472);
 
     /// <summary>
     /// StructProperty: CustomSkylightDiffuse
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput CustomSkylightDiffuse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput CustomSkylightDiffuse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: AnisotropicDirection
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVectorMaterialInput AnisotropicDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVectorMaterialInput AnisotropicDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 544);
 
     /// <summary>
     /// StructProperty: FresnelMin
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput FresnelMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput FresnelMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: FresnelExponent
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput FresnelExponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput FresnelExponent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: LightWrapping
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput LightWrapping
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput LightWrapping
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: SSSNormal
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVectorMaterialInput SSSNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVectorMaterialInput SSSNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 696);
 
     /// <summary>
     /// StructProperty: SSSMask
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput SSSMask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput SSSMask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 740);
 
     /// <summary>
     /// StructProperty: SSSRadius
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput SSSRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput SSSRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 776);
 
     /// <summary>
     /// StructProperty: SpecularColor2
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput SpecularColor2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput SpecularColor2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 812);
 
     /// <summary>
     /// StructProperty: SpecularPower2
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput SpecularPower2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput SpecularPower2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 848);
 
     /// <summary>
     /// StructProperty: TwoSidedLightingMask
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput TwoSidedLightingMask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput TwoSidedLightingMask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 884);
 
     /// <summary>
     /// StructProperty: TwoSidedLightingColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput TwoSidedLightingColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput TwoSidedLightingColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 920);
 
     /// <summary>
     /// StructProperty: WorldPositionOffset
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVectorMaterialInput WorldPositionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVectorMaterialInput WorldPositionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 956);
 
     /// <summary>
     /// StructProperty: WorldDisplacement
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FVectorMaterialInput WorldDisplacement
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FVectorMaterialInput WorldDisplacement
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FVectorMaterialInput>(Ptr + 1000);
 
     /// <summary>
     /// StructProperty: TangentDisplacement
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput TangentDisplacement
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput TangentDisplacement
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 1044);
 
     /// <summary>
     /// StructProperty: SubsurfaceInscatteringColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput SubsurfaceInscatteringColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput SubsurfaceInscatteringColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 1080);
 
     /// <summary>
     /// StructProperty: SubsurfaceAbsorptionColor
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FColorMaterialInput SubsurfaceAbsorptionColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FColorMaterialInput SubsurfaceAbsorptionColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FColorMaterialInput>(Ptr + 1116);
 
     /// <summary>
     /// StructProperty: SubsurfaceScatteringRadius
     /// </summary>
-    public unsafe BmSDK.Engine.Material.FScalarMaterialInput SubsurfaceScatteringRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 1152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
-    }
+    public unsafe ref BmSDK.Engine.Material.FScalarMaterialInput SubsurfaceScatteringRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Material.FScalarMaterialInput>(Ptr + 1152);
 
     /// <summary>
     /// StructProperty: SSSColourDiffuse
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SSSColourDiffuse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1188); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SSSColourDiffuse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1188);
 
     /// <summary>
     /// StructProperty: SSSColourEpidermal
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SSSColourEpidermal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1204); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SSSColourEpidermal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1204);
 
     /// <summary>
     /// StructProperty: SSSColourSubdermal
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SSSColourSubdermal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1220); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SSSColourSubdermal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1220);
 
     /// <summary>
     /// StructProperty: SSSColourTransmittance
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SSSColourTransmittance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1236); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SSSColourTransmittance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1236);
 
     /// <summary>
     /// IntProperty: MaxBonesPerBatch
@@ -1104,44 +1008,29 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
-    public unsafe System.IntPtr MaterialResources_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
-    }
+    public unsafe ref System.IntPtr MaterialResources_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1256);
     /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
-    public unsafe System.IntPtr MaterialResources_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
-    }
+    public unsafe ref System.IntPtr MaterialResources_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1260);
 
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe System.IntPtr DefaultMaterialInstances_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
-    }
+    public unsafe ref System.IntPtr DefaultMaterialInstances_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1264);
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe System.IntPtr DefaultMaterialInstances_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
-    }
+    public unsafe ref System.IntPtr DefaultMaterialInstances_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1268);
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>
-    public unsafe System.IntPtr DefaultMaterialInstances_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
-    }
+    public unsafe ref System.IntPtr DefaultMaterialInstances_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1272);
 
     /// <summary>
     /// IntProperty: EditorX
@@ -1285,10 +1174,9 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Constant
         /// </summary>
-        public unsafe System.Numerics.Vector3 Constant
+        public unsafe ref System.Numerics.Vector3 Constant
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 32); } }
         }
     }
 
@@ -1335,10 +1223,9 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Constant
         /// </summary>
-        public unsafe BmSDK.GameObject.FColor Constant
+        public unsafe ref BmSDK.GameObject.FColor Constant
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>((IntPtr)thisPtr + 32); } }
         }
     }
 

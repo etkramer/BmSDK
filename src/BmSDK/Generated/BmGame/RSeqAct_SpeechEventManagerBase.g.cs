@@ -267,10 +267,9 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
         /// <summary>
         /// StructProperty: SpeechLine
         /// </summary>
-        public unsafe BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechLine SpeechLine
+        public unsafe ref BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechLine SpeechLine
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechLine>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechLine>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>

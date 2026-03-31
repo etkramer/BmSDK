@@ -232,11 +232,8 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// StructProperty: VfTable_IUIDataStorePublisher
     /// </summary>
-    public unsafe System.IntPtr VfTable_IUIDataStorePublisher
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr VfTable_IUIDataStorePublisher
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 
     /// <summary>
     /// ObjectProperty: Movie

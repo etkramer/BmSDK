@@ -107,9 +107,6 @@ public partial class SeqAct_SetCameraTarget : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// StructProperty: TransitionParams
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FViewTargetTransitionParams TransitionParams
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FViewTargetTransitionParams TransitionParams
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 208);
 }

@@ -160,20 +160,14 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// StructProperty: TargetHitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetHitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetHitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 548);
 
     /// <summary>
     /// StructProperty: TargetHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 560);
 
     /// <summary>
     /// ObjectProperty: IceRaftSpawnParticles
@@ -250,20 +244,14 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// StructProperty: RaftSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftSpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftSpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: RaftSpawnCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftSpawnCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftSpawnCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 
     /// <summary>
     /// ObjectProperty: WaterVolume

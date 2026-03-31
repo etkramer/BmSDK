@@ -163,11 +163,8 @@ public partial class RAEC_Attack_CheckGarg : BmSDK.BmGame.RAEC_SubGroup, BmSDK.I
     /// <summary>
     /// StructProperty: GargLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GargLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 GargLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// ObjectProperty: APS

@@ -136,20 +136,14 @@ public partial class RSeqAct_CameraBlurOverTime : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// StructProperty: oldSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct oldSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct oldSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: NewSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RDOFManager.FDofStruct NewSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref BmSDK.BmGame.RDOFManager.FDofStruct NewSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDOFManager.FDofStruct>(Ptr + 300);
 
     /// <summary>
     /// FloatProperty: BlurKernelSize

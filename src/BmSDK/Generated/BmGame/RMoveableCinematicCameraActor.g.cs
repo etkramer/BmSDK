@@ -97,11 +97,8 @@ public partial class RMoveableCinematicCameraActor : BmSDK.BmGame.RCinematicCame
     /// <summary>
     /// StructProperty: SavedCameraRot
     /// </summary>
-    public unsafe BmSDK.Rotator SavedCameraRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref BmSDK.Rotator SavedCameraRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 872);
 
     /// <summary>
     /// FloatProperty: CurrentLookAroundBlendTime

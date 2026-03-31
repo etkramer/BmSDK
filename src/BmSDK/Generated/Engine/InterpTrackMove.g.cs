@@ -547,29 +547,20 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PosTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector PosTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector PosTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: EulerTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector EulerTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector EulerTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: LookupTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 144);
 
     /// <summary>
     /// NameProperty: LookAtGroupName
@@ -673,9 +664,6 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove Randomiser
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove Randomiser
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove>(Ptr + 180);
 }

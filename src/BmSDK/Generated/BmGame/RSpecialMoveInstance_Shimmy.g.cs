@@ -159,11 +159,8 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// StructProperty: QueuedTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 652);
 
     /// <summary>
     /// ByteProperty: DesiredShimmy
@@ -177,20 +174,14 @@ public partial class RSpecialMoveInstance_Shimmy : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// StructProperty: LastReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: LastReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.Rotator LastReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 672);
 
     /// <summary>
     /// DelegateProperty: __FirstShimmyAnimFinished__Delegate

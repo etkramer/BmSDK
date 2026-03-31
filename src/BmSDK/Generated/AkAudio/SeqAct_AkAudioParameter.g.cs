@@ -121,11 +121,8 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// StructProperty: InterpolationStartTime
     /// </summary>
-    public unsafe double InterpolationStartTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref double InterpolationStartTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 232);
 
     /// <summary>
     /// Struct: FSeqAct_AkAudioParameterInterpolationInfo

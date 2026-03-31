@@ -160,110 +160,74 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// StructProperty: Constant
     /// </summary>
-    public unsafe System.Numerics.Vector3 Constant
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 Constant
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// StructProperty: PositionMultiplierX
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 528);
 
     /// <summary>
     /// StructProperty: PositionMultiplierY
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 540);
 
     /// <summary>
     /// StructProperty: PositionMultiplierZ
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// StructProperty: PositionTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierX
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierY
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierZ
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 
     /// <summary>
     /// StructProperty: VelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// StructProperty: Noise
     /// </summary>
-    public unsafe System.Numerics.Vector3 Noise
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 Noise
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: FalloffLinear
     /// </summary>
-    public unsafe System.Numerics.Vector3 FalloffLinear
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 FalloffLinear
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: FalloffQuadratic
     /// </summary>
-    public unsafe System.Numerics.Vector3 FalloffQuadratic
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 FalloffQuadratic
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// FloatProperty: TorusRadius
@@ -277,9 +241,6 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe System.IntPtr LinearKernel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.IntPtr LinearKernel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 664);
 }

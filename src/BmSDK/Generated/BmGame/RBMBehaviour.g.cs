@@ -1379,11 +1379,8 @@ public partial class RBMBehaviour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CustomIdle
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig CustomIdle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig CustomIdle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig>(Ptr + 304);
 
     /// <summary>
     /// IntProperty: NumBehaviourOutputLinks
@@ -1397,11 +1394,8 @@ public partial class RBMBehaviour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: RandomAimAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RandomAimAtPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 RandomAimAtPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// FloatProperty: LastRandomAimAtUpdateTime

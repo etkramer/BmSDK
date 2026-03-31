@@ -736,20 +736,14 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 988);
 
     /// <summary>
     /// StructProperty: AimDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1000);
 
     /// <summary>
     /// ByteProperty: LastMirrorChoice
@@ -772,11 +766,8 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1016);
 
     /// <summary>
     /// NameProperty: TargetBoneName
@@ -790,11 +781,8 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DummyTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DummyTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 DummyTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// FloatProperty: WhipRange
@@ -844,20 +832,14 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TripThugTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TripThugTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TripThugTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1076);
 
     /// <summary>
     /// StructProperty: DisarmThugTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DisarmThugTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DisarmThugTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1080);
 
     /// <summary>
     /// ObjectProperty: VictimHitReactionAnimSet
@@ -871,83 +853,53 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1088);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1100);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1112);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1124);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1136);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1148);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1160);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1172);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1184);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1196);
 
     /// <summary>
     /// FloatProperty: MinTripDistance

@@ -116,11 +116,8 @@ public partial class RCombatMove_VillainThrowBrick : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// StructProperty: ThrowID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 472);
 
     /// <summary>
     /// ObjectProperty: ThrownObject
@@ -143,9 +140,6 @@ public partial class RCombatMove_VillainThrowBrick : BmSDK.BmGame.RCombatMove, B
     /// <summary>
     /// StructProperty: LastSeenTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSeenTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSeenTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 }

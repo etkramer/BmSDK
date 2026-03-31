@@ -249,27 +249,18 @@ public partial class DynamicSMActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReplicatedMeshTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReplicatedMeshTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReplicatedMeshTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// StructProperty: ReplicatedMeshRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ReplicatedMeshRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.Rotator ReplicatedMeshRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 460);
 
     /// <summary>
     /// StructProperty: ReplicatedMeshScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReplicatedMeshScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReplicatedMeshScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 }

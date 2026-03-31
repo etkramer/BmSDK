@@ -171,9 +171,6 @@ public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: VfTable_FCallbackEventDevice
     /// </summary>
-    public unsafe System.IntPtr VfTable_FCallbackEventDevice
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.IntPtr VfTable_FCallbackEventDevice
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
 }

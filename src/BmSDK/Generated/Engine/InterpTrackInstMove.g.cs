@@ -76,36 +76,24 @@ public partial class InterpTrackInstMove : BmSDK.Engine.InterpTrackInst, BmSDK.I
     /// <summary>
     /// StructProperty: ResetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 ResetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: ResetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ResetRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.Rotator ResetRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: InitialTM
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix InitialTM
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix InitialTM
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: InitialQuat
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat InitialQuat
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat InitialQuat
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 144);
 }

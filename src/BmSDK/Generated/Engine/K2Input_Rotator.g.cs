@@ -76,9 +76,6 @@ public partial class K2Input_Rotator : BmSDK.Engine.K2Input, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultRotator
     /// </summary>
-    public unsafe BmSDK.Rotator DefaultRotator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.Rotator DefaultRotator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 68);
 }

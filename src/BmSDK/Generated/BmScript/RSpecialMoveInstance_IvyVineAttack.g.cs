@@ -292,20 +292,14 @@ public partial class RSpecialMoveInstance_IvyVineAttack : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: storedLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 storedLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref System.Numerics.Vector3 storedLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: StoredRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StoredRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.Rotator StoredRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 604);
 
     /// <summary>
     /// FloatProperty: TimeSinceDamage

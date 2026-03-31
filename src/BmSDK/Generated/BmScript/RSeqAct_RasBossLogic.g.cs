@@ -821,11 +821,8 @@ public partial class RSeqAct_RasBossLogic : BmSDK.BmGame.RSeqAct_RasBossLogicBas
     /// <summary>
     /// StructProperty: SpectralSpawnID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId SpectralSpawnID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId SpectralSpawnID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 384);
 
     /// <summary>
     /// FloatProperty: StartIntroDelay
@@ -893,11 +890,8 @@ public partial class RSeqAct_RasBossLogic : BmSDK.BmGame.RSeqAct_RasBossLogicBas
     /// <summary>
     /// StructProperty: LookAtRasOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookAtRasOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookAtRasOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 416);
 
     /// <summary>
     /// ByteProperty: LookSpeed

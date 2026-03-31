@@ -212,11 +212,8 @@ public partial class RAEC_Attack_Sub_Outsider : BmSDK.BmGame.RAlertEventCoordina
     /// <summary>
     /// StructProperty: AimTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// BoolProperty: bIsInPosition

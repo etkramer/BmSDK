@@ -255,39 +255,29 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: NextRepeatTime
         /// </summary>
-        public unsafe double NextRepeatTime
+        public unsafe ref double NextRepeatTime
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<double>((IntPtr)thisPtr + 8); } }
         }
     }
 
     /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe System.IntPtr VfTable_FExec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.IntPtr VfTable_FExec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: VfTable_FGlobalDataStoreClientManager
     /// </summary>
-    public unsafe System.IntPtr VfTable_FGlobalDataStoreClientManager
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.IntPtr VfTable_FGlobalDataStoreClientManager
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: VfTable_FCallbackEventDevice
     /// </summary>
-    public unsafe System.IntPtr VfTable_FCallbackEventDevice
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref System.IntPtr VfTable_FCallbackEventDevice
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 104);
 
     /// <summary>
     /// ObjectProperty: UIManager
@@ -409,11 +399,8 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MouseButtonRepeatInfo
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIKeyRepeatData MouseButtonRepeatInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIKeyRepeatData>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIKeyRepeatData MouseButtonRepeatInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIKeyRepeatData>(Ptr + 168);
 
     /// <summary>
     /// ArrayProperty: ConfiguredAxisEmulationDefinitions
@@ -436,33 +423,21 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 256);
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 276);
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 296);
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 316);
 }

@@ -298,11 +298,8 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// StructProperty: SpawnRate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SpawnRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SpawnRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84);
 
     /// <summary>
     /// ArrayProperty: BurstList
@@ -388,18 +385,12 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// StructProperty: NormalsSphereCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalsSphereCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalsSphereCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 156);
 
     /// <summary>
     /// StructProperty: NormalsCylinderDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalsCylinderDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalsCylinderDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 168);
 }

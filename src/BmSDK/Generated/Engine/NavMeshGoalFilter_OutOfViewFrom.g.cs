@@ -76,18 +76,12 @@ public partial class NavMeshGoalFilter_OutOfViewFrom : BmSDK.Engine.NavMeshGoal_
     /// <summary>
     /// StructProperty: GoalPoly
     /// </summary>
-    public unsafe System.IntPtr GoalPoly
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.IntPtr GoalPoly
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: OutOfViewLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutOfViewLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutOfViewLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 }

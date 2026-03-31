@@ -91,11 +91,8 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
     /// <summary>
     /// StructProperty: MoveOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 332);
 
     /// <summary>
     /// IntProperty: YawOffset

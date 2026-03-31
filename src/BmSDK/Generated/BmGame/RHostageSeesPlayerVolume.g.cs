@@ -159,11 +159,8 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// StructProperty: ThisBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox ThisBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox ThisBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 476);
 
     /// <summary>
     /// ObjectProperty: HostagePawn

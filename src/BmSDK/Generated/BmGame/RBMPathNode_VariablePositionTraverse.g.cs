@@ -264,10 +264,9 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
         /// <summary>
         /// StructProperty: refPoint
         /// </summary>
-        public unsafe System.Numerics.Vector3 refPoint
+        public unsafe ref System.Numerics.Vector3 refPoint
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -282,10 +281,9 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
         /// <summary>
         /// StructProperty: LandLoc
         /// </summary>
-        public unsafe System.Numerics.Vector3 LandLoc
+        public unsafe ref System.Numerics.Vector3 LandLoc
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
         }
     }
 
@@ -337,11 +335,8 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// StructProperty: JumpNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// ArrayProperty: JumpLockList

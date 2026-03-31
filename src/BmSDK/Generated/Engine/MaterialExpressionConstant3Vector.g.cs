@@ -76,11 +76,8 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: Colour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor Colour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor Colour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 92);
 
     /// <summary>
     /// FloatProperty: R

@@ -263,11 +263,8 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EntryAmbience
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle EntryAmbience
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle EntryAmbience
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 492);
 
     /// <summary>
     /// ObjectProperty: DeathAnimset

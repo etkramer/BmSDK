@@ -76,47 +76,32 @@ public partial class AkDrawBoundsComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: DrawBoundsColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DrawBoundsColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DrawBoundsColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: DrawBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds DrawBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds DrawBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 408);
 
     /// <summary>
     /// StructProperty: X_LMH
     /// </summary>
-    public unsafe System.Numerics.Vector3 X_LMH
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref System.Numerics.Vector3 X_LMH
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 436);
 
     /// <summary>
     /// StructProperty: Y_LMH
     /// </summary>
-    public unsafe System.Numerics.Vector3 Y_LMH
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 Y_LMH
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// StructProperty: Z_LMH
     /// </summary>
-    public unsafe System.Numerics.Vector3 Z_LMH
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 Z_LMH
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// BoolProperty: X_Enabled

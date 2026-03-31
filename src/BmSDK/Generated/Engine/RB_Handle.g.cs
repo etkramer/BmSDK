@@ -265,20 +265,14 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HandleData
     /// </summary>
-    public unsafe System.IntPtr HandleData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.IntPtr HandleData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: KinActorData
     /// </summary>
-    public unsafe System.IntPtr KinActorData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.IntPtr KinActorData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
 
     /// <summary>
     /// FloatProperty: LinearDamping
@@ -301,20 +295,14 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinearStiffnessScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearStiffnessScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearStiffnessScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: LinearDampingScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearDampingScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearDampingScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 120);
 
     /// <summary>
     /// FloatProperty: AngularDamping
@@ -337,27 +325,18 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Destination
     /// </summary>
-    public unsafe System.Numerics.Vector3 Destination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 Destination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: StepSize
     /// </summary>
-    public unsafe System.Numerics.Vector3 StepSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 StepSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 164);
 }

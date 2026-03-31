@@ -98,11 +98,8 @@ public partial class RSeqAct_Ocean : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: OceanSettings
     /// </summary>
-    public unsafe BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 204);
 
     /// <summary>
     /// ObjectProperty: OceanBaseMesh

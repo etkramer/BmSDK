@@ -76,11 +76,8 @@ public partial class RSkelControlLegIK : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: WidgetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WidgetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 WidgetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// BoolProperty: EnableMaxFootZ

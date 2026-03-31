@@ -2833,19 +2833,17 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
         /// <summary>
         /// StructProperty: TargetOffset
         /// </summary>
-        public unsafe System.Numerics.Vector3 TargetOffset
+        public unsafe ref System.Numerics.Vector3 TargetOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: TargetNormal
         /// </summary>
-        public unsafe System.Numerics.Vector3 TargetNormal
+        public unsafe ref System.Numerics.Vector3 TargetNormal
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -3038,19 +3036,17 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
         /// <summary>
         /// StructProperty: DamageCollisionProjection
         /// </summary>
-        public unsafe System.Numerics.Vector3 DamageCollisionProjection
+        public unsafe ref System.Numerics.Vector3 DamageCollisionProjection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 44); } }
         }
 
         /// <summary>
         /// StructProperty: DamageDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 DamageDirection
+        public unsafe ref System.Numerics.Vector3 DamageDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 56); } }
         }
 
         /// <summary>
@@ -3403,11 +3399,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: CombatAnimRecord
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CombatAnimRecord
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2004); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CombatAnimRecord
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2004);
 
     /// <summary>
     /// ComponentProperty: ChargeFX
@@ -3637,11 +3630,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: LastPylonCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPylonCheckLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPylonCheckLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2068);
 
     /// <summary>
     /// ArrayProperty: BoneNameListConversion
@@ -3664,11 +3654,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: PrevStrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 2104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 2104);
 
     /// <summary>
     /// ArrayProperty: PrevStrikeTargets
@@ -3754,11 +3741,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: LastDmgImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDmgImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDmgImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2320);
 
     /// <summary>
     /// NameProperty: LastDmgBoneName
@@ -3781,11 +3765,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: CheckCameraTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CheckCameraTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2352); }
-    }
+    public unsafe ref System.Numerics.Vector3 CheckCameraTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2352);
 
     /// <summary>
     /// ByteProperty: CheckCameraLookAtSpeed

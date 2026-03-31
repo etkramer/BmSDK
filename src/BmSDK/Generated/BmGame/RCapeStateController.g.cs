@@ -435,11 +435,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CapePhysicsRef
     /// </summary>
-    public unsafe System.IntPtr CapePhysicsRef
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.IntPtr CapePhysicsRef
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 60);
 
     /// <summary>
     /// NameProperty: CapeStateName
@@ -480,11 +477,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedSkinningLocalToWorlds
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 112);
 
     /// <summary>
     /// IntProperty: CachedCapeStateDataIndex
@@ -507,11 +501,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastUpdateCapeLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 336);
 
     /// <summary>
     /// FloatProperty: TimeSinceMovedBackwards
@@ -594,19 +585,17 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ParentAttachPointLocalToWorld
         /// </summary>
-        public unsafe BmSDK.GameObject.FMatrix ParentAttachPointLocalToWorld
+        public unsafe ref BmSDK.GameObject.FMatrix ParentAttachPointLocalToWorld
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: ParentAttachPointRefLocalToWorld
         /// </summary>
-        public unsafe BmSDK.GameObject.FMatrix ParentAttachPointRefLocalToWorld
+        public unsafe ref BmSDK.GameObject.FMatrix ParentAttachPointRefLocalToWorld
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 64); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 64); } }
         }
 
         /// <summary>
@@ -714,10 +703,9 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FakeSkinBoneDatas
         /// </summary>
-        public unsafe BmSDK.BmGame.RCapeStateController.FCapeBoneFakeSkinningDatas FakeSkinBoneDatas
+        public unsafe ref BmSDK.BmGame.RCapeStateController.FCapeBoneFakeSkinningDatas FakeSkinBoneDatas
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeStateController.FCapeBoneFakeSkinningDatas>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCapeStateController.FCapeBoneFakeSkinningDatas>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -822,19 +810,17 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PushTowardsDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 PushTowardsDirection
+        public unsafe ref System.Numerics.Vector3 PushTowardsDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
         }
 
         /// <summary>
         /// StructProperty: PushTowardsDirection2
         /// </summary>
-        public unsafe System.Numerics.Vector3 PushTowardsDirection2
+        public unsafe ref System.Numerics.Vector3 PushTowardsDirection2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 48); } }
         }
 
         /// <summary>
@@ -924,19 +910,17 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PhysShapeMesh
         /// </summary>
-        public unsafe System.IntPtr PhysShapeMesh
+        public unsafe ref System.IntPtr PhysShapeMesh
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: PhysShapeActor
         /// </summary>
-        public unsafe System.IntPtr PhysShapeActor
+        public unsafe ref System.IntPtr PhysShapeActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -967,10 +951,9 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: StoredPose
         /// </summary>
-        public unsafe BmSDK.GameObject.FMatrix StoredPose
+        public unsafe ref BmSDK.GameObject.FMatrix StoredPose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 16); } }
         }
     }
 

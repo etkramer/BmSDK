@@ -85,9 +85,6 @@ public partial class BookMark2D : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe BmSDK.GameObject.FIntPoint Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIntPoint>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.GameObject.FIntPoint Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIntPoint>(Ptr + 48);
 }

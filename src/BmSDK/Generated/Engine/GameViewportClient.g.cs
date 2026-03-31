@@ -831,38 +831,26 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FViewportClient
     /// </summary>
-    public unsafe System.IntPtr VfTable_FViewportClient
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr VfTable_FViewportClient
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe System.IntPtr VfTable_FExec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.IntPtr VfTable_FExec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
 
     /// <summary>
     /// StructProperty: Viewport
     /// </summary>
-    public unsafe System.IntPtr Viewport
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.IntPtr Viewport
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: ViewportFrame
     /// </summary>
-    public unsafe System.IntPtr ViewportFrame
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.IntPtr ViewportFrame
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 56);
 
     /// <summary>
     /// ArrayProperty: GlobalInteractions
@@ -903,11 +891,8 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ShowFlags
     /// </summary>
-    public unsafe ulong ShowFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref ulong ShowFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 84);
 
     /// <summary>
     /// StrProperty: LoadingMessage
@@ -1047,20 +1032,14 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TitleSafeZone
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 156);
 
     /// <summary>
     /// StructProperty: CollisionLightSavedShowFlags
     /// </summary>
-    public unsafe ulong CollisionLightSavedShowFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref ulong CollisionLightSavedShowFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<ulong>(Ptr + 172);
 
     /// <summary>
     /// ArrayProperty: SplitscreenInfo
@@ -1154,11 +1133,8 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScaleformInteraction
     /// </summary>
-    public unsafe System.IntPtr ScaleformInteraction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref System.IntPtr ScaleformInteraction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 240);
 
     /// <summary>
     /// DelegateProperty: __HandleInputKey__Delegate

@@ -76,9 +76,6 @@ public partial class AkStackName : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StackColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor StackColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor StackColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 48);
 }

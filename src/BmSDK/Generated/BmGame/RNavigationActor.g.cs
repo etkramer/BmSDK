@@ -177,11 +177,8 @@ public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.Engine.Interfa
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavigationHandle
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavigationHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr VfTable_IInterface_NavigationHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// ObjectProperty: NavHandle
@@ -195,11 +192,8 @@ public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.Engine.Interfa
     /// <summary>
     /// StructProperty: SearchExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 SearchExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref System.Numerics.Vector3 SearchExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 436);
 
     /// <summary>
     /// ByteProperty: CurrState

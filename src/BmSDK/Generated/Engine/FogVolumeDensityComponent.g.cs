@@ -135,20 +135,14 @@ public partial class FogVolumeDensityComponent : BmSDK.Engine.ActorComponent, Bm
     /// <summary>
     /// StructProperty: SimpleLightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SimpleLightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SimpleLightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: ApproxFogLightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ApproxFogLightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ApproxFogLightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 100);
 
     /// <summary>
     /// FloatProperty: StartDistance

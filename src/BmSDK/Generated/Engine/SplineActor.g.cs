@@ -374,20 +374,14 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SplineActorTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 SplineActorTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 SplineActorTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: SplineColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor SplineColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor SplineColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 452);
 
     /// <summary>
     /// BoolProperty: bDisableDestination
@@ -464,11 +458,8 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SplineVelocityOverTime
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SplineVelocityOverTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SplineVelocityOverTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 492);
 
     /// <summary>
     /// Struct: FSplineConnection

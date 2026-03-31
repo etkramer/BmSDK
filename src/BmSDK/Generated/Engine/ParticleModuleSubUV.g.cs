@@ -76,9 +76,6 @@ public partial class ParticleModuleSubUV : BmSDK.Engine.ParticleModuleSubUVBase,
     /// <summary>
     /// StructProperty: SubImageIndex
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SubImageIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SubImageIndex
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 }

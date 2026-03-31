@@ -328,9 +328,6 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// StructProperty: HumLoopHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle HumLoopHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle HumLoopHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 740);
 }

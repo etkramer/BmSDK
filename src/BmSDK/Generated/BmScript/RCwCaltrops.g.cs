@@ -162,11 +162,8 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: TrapStirOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrapStirOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrapStirOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1324);
 
     /// <summary>
     /// FloatProperty: TrapStirInnerVelocity
@@ -207,11 +204,8 @@ public partial class RCwCaltrops : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: TrapSwipeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrapSwipeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrapSwipeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1352);
 
     /// <summary>
     /// FloatProperty: TrapSwipeInnerVelocity

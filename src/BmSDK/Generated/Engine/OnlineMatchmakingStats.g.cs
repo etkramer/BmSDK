@@ -129,10 +129,9 @@ public partial class OnlineMatchmakingStats : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: MSecs
         /// </summary>
-        public unsafe double MSecs
+        public unsafe ref double MSecs
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<double>((IntPtr)thisPtr + 4); } }
         }
     }
 }

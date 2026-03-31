@@ -201,10 +201,9 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: NetDriver
         /// </summary>
-        public unsafe System.IntPtr NetDriver
+        public unsafe ref System.IntPtr NetDriver
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -319,20 +318,14 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 1568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1568); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 1568);
 
     /// <summary>
     /// StructProperty: LastRemoteURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastRemoteURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 1636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastRemoteURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 1636);
 
     /// <summary>
     /// ArrayProperty: ServerActors

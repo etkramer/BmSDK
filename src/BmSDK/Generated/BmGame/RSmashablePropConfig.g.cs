@@ -258,11 +258,8 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: PropStartImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropStartImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 PropStartImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 
     /// <summary>
     /// ArrayProperty: BrokenProps

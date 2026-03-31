@@ -105,20 +105,14 @@ public partial class SeqAct_SetLocation : BmSDK.Engine.SeqAct_SetSequenceVariabl
     /// <summary>
     /// StructProperty: LocationValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocationValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocationValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 
     /// <summary>
     /// StructProperty: RotationValue
     /// </summary>
-    public unsafe BmSDK.Rotator RotationValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.Rotator RotationValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 220);
 
     /// <summary>
     /// ObjectProperty: Target

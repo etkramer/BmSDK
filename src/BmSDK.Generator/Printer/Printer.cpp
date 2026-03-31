@@ -394,83 +394,108 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
             propNameManaged += to_string(i);
         }
 
-        // Print prop declaration
-        Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
-            << propNameManaged << endl;
+        bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+        bool isStructProperty = prop->IsA(UStructProperty::StaticClass());
 
-        // Print prop body
-        Printer::Indent(out) << "{" << endl;
-        Printer::PushIndent();
+        if (isStructProperty)
         {
-            // Print prop getter (single line)
-            Printer::Indent(out) << "get { ";
+            Printer::Indent(out) << "public unsafe ref " << prop->GetInnerTypeNameManaged() << " "
+                << propNameManaged << endl;
+
+            if (isInStruct)
             {
-                bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
-
-                // Make Ptr available locally so we can reuse the same getter code
-                if (isInStruct)
-                {
-                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                }
-
-                // Booleans (stored as bitmasks) need special handling
-                if (prop->IsA(UBoolProperty::StaticClass()))
-                {
-                    UBoolProperty* boolProp = (UBoolProperty*)prop;
-                    out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
-                        << ") & " << boolProp->BitMask << ") != 0;";
-                }
-                else
-                {
-                    out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                        << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");";
-                }
-
-                if (isInStruct)
-                {
-                    out << " };";
-                }
+                Printer::Indent(out) << "{" << endl;
+                Printer::PushIndent();
+                Printer::Indent(out) << "get { fixed (void* thisPtr = &this) { return ref "
+                    << "BmSDK.Framework.MarshalUtil.AsRef<" << prop->GetInnerTypeNameManaged()
+                    << ">((IntPtr)thisPtr + " << propOffset << "); } }" << endl;
+                Printer::PopIndent();
+                Printer::Indent(out) << "}" << endl;
             }
-            out << " }" << endl;
-
-            // Print prop setter (single line)
-            Printer::Indent(out) << "set { ";
+            else
             {
-                bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
-
-                // Make Ptr available locally so we can reuse the same setter code
-                if (isInStruct)
-                {
-                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                }
-
-                // Booleans (stored as bitmasks) need special handling
-                if (prop->IsA(UBoolProperty::StaticClass()))
-                {
-                    UBoolProperty* boolProp = (UBoolProperty*)prop;
-                    out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
-                        << propOffset << ");";
-                    out << " var newMask = value ? (currentMask | " << boolProp->BitMask
-                        << ") : (currentMask & ~" << boolProp->BitMask << ");";
-
-                    out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
-                        << propOffset << ");";
-                }
-                else
-                {
-                    out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
-                        << ");";
-                }
-
-                if (isInStruct)
-                {
-                    out << " };";
-                }
+                Printer::PushIndent();
+                Printer::Indent(out) << "=> ref BmSDK.Framework.MarshalUtil.AsRef<"
+                    << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");" << endl;
+                Printer::PopIndent();
             }
-            out << " }" << endl;
         }
-        Printer::PopIndent();
-        Printer::Indent(out) << "}" << endl;
+        else
+        {
+            // Print prop declaration
+            Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
+                << propNameManaged << endl;
+
+            // Print prop body
+            Printer::Indent(out) << "{" << endl;
+            Printer::PushIndent();
+            {
+                // Print prop getter (single line)
+                Printer::Indent(out) << "get { ";
+                {
+                    // Make Ptr available locally so we can reuse the same getter code
+                    if (isInStruct)
+                    {
+                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+                    }
+
+                    // Booleans (stored as bitmasks) need special handling
+                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    {
+                        UBoolProperty* boolProp = (UBoolProperty*)prop;
+                        out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
+                            << ") & " << boolProp->BitMask << ") != 0;";
+                    }
+                    else
+                    {
+                        out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
+                            << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");";
+                    }
+
+                    if (isInStruct)
+                    {
+                        out << " };";
+                    }
+                }
+                out << " }" << endl;
+
+                // Print prop setter (single line)
+                Printer::Indent(out) << "set { ";
+                {
+                    // Make Ptr available locally so we can reuse the same setter code
+                    if (isInStruct)
+                    {
+                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+                    }
+
+                    // Booleans (stored as bitmasks) need special handling
+                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    {
+                        UBoolProperty* boolProp = (UBoolProperty*)prop;
+                        out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+                            << propOffset << ");";
+                        out << " var newMask = value ? (currentMask | " << boolProp->BitMask
+                            << ") : (currentMask & ~" << boolProp->BitMask << ");";
+
+                        out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
+                            << propOffset << ");";
+                    }
+                    else
+                    {
+                        out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
+                            << ");";
+                    }
+
+                    if (isInStruct)
+                    {
+                        out << " };";
+                    }
+                }
+                out << " }" << endl;
+            }
+            Printer::PopIndent();
+            Printer::Indent(out) << "}" << endl;
+        }
     }
 }
 

@@ -285,9 +285,6 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 112);
 }

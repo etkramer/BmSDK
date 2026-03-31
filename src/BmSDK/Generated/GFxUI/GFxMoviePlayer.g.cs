@@ -1538,10 +1538,9 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: DataSource
         /// </summary>
-        public unsafe BmSDK.Engine.UIRoot.FUIDataStoreBinding DataSource
+        public unsafe ref BmSDK.Engine.UIRoot.FUIDataStoreBinding DataSource
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FUIDataStoreBinding>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIRoot.FUIDataStoreBinding>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -1628,19 +1627,17 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ModelRef
         /// </summary>
-        public unsafe System.IntPtr ModelRef
+        public unsafe ref System.IntPtr ModelRef
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 144); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 144); } }
         }
 
         /// <summary>
         /// StructProperty: ControlRef
         /// </summary>
-        public unsafe System.IntPtr ControlRef
+        public unsafe ref System.IntPtr ControlRef
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 148); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 148); } }
         }
     }
 
@@ -1735,29 +1732,20 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: pMovie
     /// </summary>
-    public unsafe System.IntPtr pMovie
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr pMovie
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: pCaptureKeys
     /// </summary>
-    public unsafe System.IntPtr pCaptureKeys
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.IntPtr pCaptureKeys
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
 
     /// <summary>
     /// StructProperty: pFocusIgnoreKeys
     /// </summary>
-    public unsafe System.IntPtr pFocusIgnoreKeys
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.IntPtr pFocusIgnoreKeys
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
 
     /// <summary>
     /// MapProperty: ASUClasses
@@ -1969,20 +1957,14 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OwnerAction
     /// </summary>
-    public unsafe System.IntPtr OwnerAction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref System.IntPtr OwnerAction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ViewMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 208);
 
     /// <summary>
     /// ObjectProperty: ExternalInterface

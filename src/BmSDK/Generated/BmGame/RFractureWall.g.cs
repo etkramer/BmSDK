@@ -309,9 +309,6 @@ public partial class RFractureWall : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// StructProperty: TouchingPlayerPrevPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TouchingPlayerPrevPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector3 TouchingPlayerPrevPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 748);
 }

@@ -76,36 +76,24 @@ public partial class ParticleModuleLocationDirect : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: LocationOffset
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector LocationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector LocationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: ScaleFactor
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ScaleFactor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector ScaleFactor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 140);
 }

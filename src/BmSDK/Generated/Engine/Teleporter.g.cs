@@ -176,11 +176,8 @@ public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: TargetVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
     /// FloatProperty: LastFired

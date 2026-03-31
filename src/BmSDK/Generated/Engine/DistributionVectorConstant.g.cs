@@ -76,11 +76,8 @@ public partial class DistributionVectorConstant : BmSDK.DistributionVector, BmSD
     /// <summary>
     /// StructProperty: Constant
     /// </summary>
-    public unsafe System.Numerics.Vector3 Constant
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref System.Numerics.Vector3 Constant
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 64);
 
     /// <summary>
     /// BoolProperty: bLockAxes

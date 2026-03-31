@@ -94,20 +94,14 @@ public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticCo
     /// <summary>
     /// StructProperty: ApexDestructibleActor
     /// </summary>
-    public unsafe System.IntPtr ApexDestructibleActor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.IntPtr ApexDestructibleActor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: ApexDestructiblePreview
     /// </summary>
-    public unsafe System.IntPtr ApexDestructiblePreview
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.IntPtr ApexDestructiblePreview
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 448);
 
     /// <summary>
     /// BoolProperty: bIsThumbnailComponent

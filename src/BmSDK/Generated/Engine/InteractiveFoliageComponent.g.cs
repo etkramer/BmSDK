@@ -76,9 +76,6 @@ public partial class InteractiveFoliageComponent : BmSDK.Engine.StaticMeshCompon
     /// <summary>
     /// StructProperty: FoliageSceneProxy
     /// </summary>
-    public unsafe System.IntPtr FoliageSceneProxy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.IntPtr FoliageSceneProxy
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 476);
 }

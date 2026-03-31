@@ -121,9 +121,6 @@ public partial class RBMAIAction_Glance : BmSDK.BmGame.RBMAIAction, BmSDK.IGameO
     /// <summary>
     /// StructProperty: TargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator TargetRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref BmSDK.Rotator TargetRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 572);
 }

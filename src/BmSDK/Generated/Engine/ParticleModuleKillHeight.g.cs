@@ -76,11 +76,8 @@ public partial class ParticleModuleKillHeight : BmSDK.Engine.ParticleModuleKillB
     /// <summary>
     /// StructProperty: Height
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Height
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Height
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: bAbsolute

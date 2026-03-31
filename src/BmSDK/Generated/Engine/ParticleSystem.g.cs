@@ -296,11 +296,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThumbnailAngle
     /// </summary>
-    public unsafe BmSDK.Rotator ThumbnailAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.Rotator ThumbnailAngle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 76);
 
     /// <summary>
     /// FloatProperty: ThumbnailDistance
@@ -503,11 +500,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FixedRelativeBoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox FixedRelativeBoundingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox FixedRelativeBoundingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 136);
 
     /// <summary>
     /// FloatProperty: SecondsBeforeInactive
@@ -530,20 +524,14 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: FloorRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FloorRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref BmSDK.Rotator FloorRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 192);
 
     /// <summary>
     /// FloatProperty: FloorScale
@@ -557,20 +545,14 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 
     /// <summary>
     /// StructProperty: BackgroundColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BackgroundColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BackgroundColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 220);
 
     /// <summary>
     /// ObjectProperty: ThumbnailImage
@@ -602,11 +584,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MacroUVPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 MacroUVPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector3 MacroUVPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 236);
 
     /// <summary>
     /// FloatProperty: MacroUVRadius
@@ -620,11 +599,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomOcclusionBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox CustomOcclusionBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox CustomOcclusionBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 252);
 
     /// <summary>
     /// ArrayProperty: SoloTracking

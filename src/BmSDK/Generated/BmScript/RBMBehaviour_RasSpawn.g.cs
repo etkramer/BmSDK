@@ -124,11 +124,8 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// StructProperty: AnimId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 396);
 
     /// <summary>
     /// NameProperty: SpawnAnimName
@@ -142,20 +139,14 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// StructProperty: DestSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DestSpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref System.Numerics.Vector3 DestSpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 408);
 
     /// <summary>
     /// StructProperty: SpawnFacing
     /// </summary>
-    public unsafe BmSDK.Rotator SpawnFacing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.Rotator SpawnFacing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 420);
 
     /// <summary>
     /// IntProperty: ShowFrames

@@ -128,9 +128,6 @@ public partial class RMagicSmasher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// StructProperty: HoldOrientation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat HoldOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat HoldOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 976);
 }

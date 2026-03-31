@@ -99,20 +99,14 @@ public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameO
     /// <summary>
     /// StructProperty: LookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookFromLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 LookFromLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// StructProperty: SilentPredCameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SilentPredCameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
-    }
+    public unsafe ref System.Numerics.Vector3 SilentPredCameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 876);
 
     /// <summary>
     /// BoolProperty: bFrozen

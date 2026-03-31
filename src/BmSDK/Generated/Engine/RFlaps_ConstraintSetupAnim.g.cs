@@ -76,11 +76,8 @@ public partial class RFlaps_ConstraintSetupAnim : BmSDK.Engine.RFlaps_Constraint
     /// <summary>
     /// StructProperty: ConstrainedParticle
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64);
 
     /// <summary>
     /// NameProperty: ConstraintFrameBoneName
@@ -103,11 +100,8 @@ public partial class RFlaps_ConstraintSetupAnim : BmSDK.Engine.RFlaps_Constraint
     /// <summary>
     /// StructProperty: ConstraintOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 
     /// <summary>
     /// FloatProperty: Spring

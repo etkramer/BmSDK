@@ -285,9 +285,6 @@ public partial class RPawnVillainGun : BmSDK.BmGame.RPawnVillainGunPredBase, BmS
     /// <summary>
     /// StructProperty: CollarSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle CollarSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 3640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3640); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle CollarSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 3640);
 }

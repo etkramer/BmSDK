@@ -76,9 +76,6 @@ public partial class RAnimNotify_Takedown : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// StructProperty: TakedownInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo TakedownInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo TakedownInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FTakedownInfo>(Ptr + 44);
 }

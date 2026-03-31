@@ -164,9 +164,6 @@ public partial class RBreakablePickupPenguinBase : BmSDK.BmGame.RSkeletalMeshAct
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IRSecretInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.IntPtr VfTable_IRSecretInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 528);
 }

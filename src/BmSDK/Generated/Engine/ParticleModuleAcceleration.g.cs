@@ -76,11 +76,8 @@ public partial class ParticleModuleAcceleration : BmSDK.Engine.ParticleModuleAcc
     /// <summary>
     /// StructProperty: Acceleration
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Acceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Acceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60);
 
     /// <summary>
     /// BoolProperty: bApplyOwnerScale

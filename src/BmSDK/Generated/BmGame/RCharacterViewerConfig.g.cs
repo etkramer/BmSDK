@@ -103,11 +103,8 @@ public partial class RCharacterViewerConfig : BmSDK.BmGame.RConfig, BmSDK.IGameO
     /// <summary>
     /// StructProperty: Angle
     /// </summary>
-    public unsafe BmSDK.Rotator Angle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.Rotator Angle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 56);
 
     /// <summary>
     /// FloatProperty: HeightMin

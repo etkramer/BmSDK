@@ -317,11 +317,8 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SourceArt
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror SourceArt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror SourceArt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 80);
 
     /// <summary>
     /// ByteProperty: CompressionSettings
@@ -416,20 +413,14 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Resource
     /// </summary>
-    public unsafe System.IntPtr Resource
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.IntPtr Resource
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 180);
 
     /// <summary>
     /// FloatProperty: AdjustBrightness

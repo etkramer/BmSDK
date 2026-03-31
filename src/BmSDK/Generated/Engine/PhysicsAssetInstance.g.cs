@@ -518,11 +518,8 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CollisionDisableTable
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror CollisionDisableTable
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror CollisionDisableTable
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 76);
 
     /// <summary>
     /// FloatProperty: LinearSpringScale

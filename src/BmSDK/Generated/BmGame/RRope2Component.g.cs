@@ -636,19 +636,13 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 404);
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 432);
 
     /// <summary>
     /// FloatProperty: RopeLength
@@ -785,19 +779,17 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe System.Numerics.Vector3 Position
+        public unsafe ref System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: Rotation
         /// </summary>
-        public unsafe BmSDK.GameObject.FQuat Rotation
+        public unsafe ref BmSDK.GameObject.FQuat Rotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>((IntPtr)thisPtr + 16); } }
         }
     }
 
@@ -810,28 +802,25 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: ConnectActor
         /// </summary>
-        public unsafe System.IntPtr ConnectActor
+        public unsafe ref System.IntPtr ConnectActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: ActorAttachPose
         /// </summary>
-        public unsafe BmSDK.GameObject.FMatrix ActorAttachPose
+        public unsafe ref BmSDK.GameObject.FMatrix ActorAttachPose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
         /// StructProperty: RopeAttachPose
         /// </summary>
-        public unsafe BmSDK.GameObject.FMatrix RopeAttachPose
+        public unsafe ref BmSDK.GameObject.FMatrix RopeAttachPose
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>((IntPtr)thisPtr + 80); } }
         }
 
         /// <summary>
@@ -889,10 +878,9 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: RopeEndRenderOffset
         /// </summary>
-        public unsafe System.Numerics.Vector3 RopeEndRenderOffset
+        public unsafe ref System.Numerics.Vector3 RopeEndRenderOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -941,37 +929,33 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: ConnectComponentLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 ConnectComponentLocation
+        public unsafe ref System.Numerics.Vector3 ConnectComponentLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 20); } }
         }
 
         /// <summary>
         /// StructProperty: ConnectComponentRotation
         /// </summary>
-        public unsafe BmSDK.Rotator ConnectComponentRotation
+        public unsafe ref BmSDK.Rotator ConnectComponentRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 32); } }
         }
 
         /// <summary>
         /// StructProperty: ConnectRopeLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 ConnectRopeLocation
+        public unsafe ref System.Numerics.Vector3 ConnectRopeLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 44); } }
         }
 
         /// <summary>
         /// StructProperty: ConnectRopeRotation
         /// </summary>
-        public unsafe BmSDK.Rotator ConnectRopeRotation
+        public unsafe ref BmSDK.Rotator ConnectRopeRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 56); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 56); } }
         }
 
         /// <summary>

@@ -156,11 +156,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// ByteProperty: TargetLocationSpace
@@ -318,20 +315,14 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DesiredTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: ActorSpaceLookAtTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActorSpaceLookAtTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActorSpaceLookAtTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 216);
 
     /// <summary>
     /// FloatProperty: MaxAngle
@@ -399,29 +390,20 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: LimitLookDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LimitLookDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref System.Numerics.Vector3 LimitLookDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: BaseLookDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseLookDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseLookDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 272);
 
     /// <summary>
     /// StructProperty: BaseBonePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseBonePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseBonePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 284);
 
     /// <summary>
     /// FloatProperty: LastCalcTime

@@ -244,11 +244,8 @@ public partial class RSpecialMoveInstance_HarpoonThug : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// StructProperty: FireTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FireTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FireTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 604);
 
     /// <summary>
     /// BoolProperty: bDisarm
@@ -271,11 +268,8 @@ public partial class RSpecialMoveInstance_HarpoonThug : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// StructProperty: ReleaseClawImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReleaseClawImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReleaseClawImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// IntProperty: bTugNextFrame

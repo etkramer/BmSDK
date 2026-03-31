@@ -171,20 +171,14 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: RotationComponents
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents RotationComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents RotationComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: TranslationComponents
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents TranslationComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents TranslationComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents>(Ptr + 56);
 
     /// <summary>
     /// Enum: EMeetingPointType

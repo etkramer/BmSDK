@@ -76,11 +76,8 @@ public partial class ParticleModuleMeshRotationRateOverLife : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: RotRate
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector RotRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: bScaleRotRate

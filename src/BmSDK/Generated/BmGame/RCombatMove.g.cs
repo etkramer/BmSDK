@@ -1152,11 +1152,8 @@ public partial class RCombatMove : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TeleportFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TeleportFromLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref System.Numerics.Vector3 TeleportFromLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 432);
 
     /// <summary>
     /// ObjectProperty: TeleportDummyCam
@@ -1170,11 +1167,8 @@ public partial class RCombatMove : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TeleportCamOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TeleportCamOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 TeleportCamOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// ObjectProperty: TeleportCameraTarget

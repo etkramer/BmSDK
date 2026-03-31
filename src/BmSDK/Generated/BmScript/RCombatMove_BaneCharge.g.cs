@@ -110,11 +110,8 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
     /// <summary>
     /// StructProperty: ChargeDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ChargeDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 ChargeDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// BoolProperty: bIsRunning

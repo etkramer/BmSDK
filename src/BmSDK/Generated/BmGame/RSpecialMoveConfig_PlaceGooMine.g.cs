@@ -94,11 +94,8 @@ public partial class RSpecialMoveConfig_PlaceGooMine : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// StructProperty: GelDummyOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GelDummyOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref System.Numerics.Vector3 GelDummyOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 384);
 
     /// <summary>
     /// FloatProperty: SprayLength

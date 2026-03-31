@@ -255,11 +255,8 @@ public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAEC_SubGroup, BmSD
     /// <summary>
     /// StructProperty: WatchTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 WatchTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 WatchTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// FloatProperty: WatchTime

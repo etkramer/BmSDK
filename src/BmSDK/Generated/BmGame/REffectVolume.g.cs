@@ -205,9 +205,6 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: SectionHalfSize
     /// </summary>
-    public unsafe System.Numerics.Vector3 SectionHalfSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 SectionHalfSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 }

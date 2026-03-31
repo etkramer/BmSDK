@@ -190,29 +190,20 @@ public partial class RCombatMove_VillainGetWeaponFromEnvironment : BmSDK.BmGame.
     /// <summary>
     /// StructProperty: GetWeaponLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWeaponLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 GetWeaponLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: GetWeaponMoveToLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWeaponMoveToLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 GetWeaponMoveToLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// StructProperty: GetWeaponAimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWeaponAimAtLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector3 GetWeaponAimAtLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 512);
 
     /// <summary>
     /// FloatProperty: GetWeaponYaw
@@ -226,20 +217,14 @@ public partial class RCombatMove_VillainGetWeaponFromEnvironment : BmSDK.BmGame.
     /// <summary>
     /// StructProperty: GetWeaponAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetWeaponAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetWeaponAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 528);
 
     /// <summary>
     /// StructProperty: TargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// ObjectProperty: SpawnedWeapon

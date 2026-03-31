@@ -509,389 +509,245 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 228);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 280);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 332);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 384);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 436);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 488);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 540);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 592);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 644);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 696);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 748);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 800);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 852);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 904);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 956);
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1008);
 
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1060);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1112);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1164);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1216); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1216);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1268);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1320);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1372);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1424);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1476);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1528); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1528);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1580); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1580);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1632); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1632);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1684); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1684);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1736);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1788); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1788);
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1840); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1840);
 
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1892); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1892);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1944); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1944);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1996); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1996);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2048); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2048);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2100);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2152); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2152);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2204);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2256); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2256);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2308);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2360); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2360);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2412); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2412);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2464);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2516);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2568); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2568);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2620); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2620);
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2672); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_E_InformantFlags_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 2672);
 
     /// <summary>
     /// BoolProperty: bDrawDebug

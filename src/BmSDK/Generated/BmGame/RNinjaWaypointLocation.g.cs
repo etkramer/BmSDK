@@ -114,11 +114,8 @@ public partial class RNinjaWaypointLocation : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// StructProperty: vNormalToNextWaypoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 vNormalToNextWaypoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 vNormalToNextWaypoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// FloatProperty: OverrideMinDistanceFromBatman

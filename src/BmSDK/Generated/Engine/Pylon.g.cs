@@ -261,10 +261,9 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
         /// <summary>
         /// StructProperty: OwningPylon
         /// </summary>
-        public unsafe BmSDK.Engine.Actor.FActorReference OwningPylon
+        public unsafe ref BmSDK.Engine.Actor.FActorReference OwningPylon
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FActorReference>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FActorReference>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -279,10 +278,9 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
         /// <summary>
         /// StructProperty: CachedPoly
         /// </summary>
-        public unsafe System.IntPtr CachedPoly
+        public unsafe ref System.IntPtr CachedPoly
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 12); } }
         }
     }
 
@@ -339,56 +337,38 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.IntPtr VfTable_IEditorLinkSelectionInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 628);
 
     /// <summary>
     /// StructProperty: NavMeshPtr
     /// </summary>
-    public unsafe System.IntPtr NavMeshPtr
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
-    }
+    public unsafe ref System.IntPtr NavMeshPtr
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 632);
 
     /// <summary>
     /// StructProperty: ObstacleMesh
     /// </summary>
-    public unsafe System.IntPtr ObstacleMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.IntPtr ObstacleMesh
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: DynamicObstacleMesh
     /// </summary>
-    public unsafe System.IntPtr DynamicObstacleMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.IntPtr DynamicObstacleMesh
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 640);
 
     /// <summary>
     /// StructProperty: WorkingSetPtr
     /// </summary>
-    public unsafe System.IntPtr WorkingSetPtr
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref System.IntPtr WorkingSetPtr
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 644);
 
     /// <summary>
     /// StructProperty: PathObjectsThatAffectThisPylon
     /// </summary>
-    public unsafe System.IntPtr PathObjectsThatAffectThisPylon
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.IntPtr PathObjectsThatAffectThisPylon
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 648);
 
     /// <summary>
     /// ArrayProperty: NextPassSeedList
@@ -402,20 +382,14 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: OctreeId
     /// </summary>
-    public unsafe BmSDK.GameObject.FOctreeElementId OctreeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FOctreeElementId>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.GameObject.FOctreeElementId OctreeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FOctreeElementId>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: OctreeIWasAddedTo
     /// </summary>
-    public unsafe System.IntPtr OctreeIWasAddedTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.IntPtr OctreeIWasAddedTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 672);
 
     /// <summary>
     /// ObjectProperty: NextPylon
@@ -618,11 +592,8 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// StructProperty: ExpansionSphereCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExpansionSphereCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExpansionSphereCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 708);
 
     /// <summary>
     /// ComponentProperty: RenderingComp

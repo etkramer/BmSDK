@@ -720,20 +720,14 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: ConstraintActor1AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintActor1AttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintActor1AttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: ConstraintActor2AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintActor2AttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintActor2AttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// FloatProperty: RopeEnd1AttachMaxDistance
@@ -909,11 +903,8 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: RopePhysicsBase
     /// </summary>
-    public unsafe System.IntPtr RopePhysicsBase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.IntPtr RopePhysicsBase
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 536);
 
     /// <summary>
     /// ObjectProperty: ConstraintSetup

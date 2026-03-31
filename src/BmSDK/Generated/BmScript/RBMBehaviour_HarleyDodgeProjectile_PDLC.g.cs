@@ -94,18 +94,12 @@ public partial class RBMBehaviour_HarleyDodgeProjectile_PDLC : BmSDK.BmScript.RB
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 432);
 
     /// <summary>
     /// StructProperty: StartRot
     /// </summary>
-    public unsafe BmSDK.Rotator StartRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Rotator StartRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 444);
 }

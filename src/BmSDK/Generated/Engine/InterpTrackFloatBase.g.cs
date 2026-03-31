@@ -192,11 +192,8 @@ public partial class InterpTrackFloatBase : BmSDK.Engine.InterpTrack, BmSDK.IGam
     /// <summary>
     /// StructProperty: FloatTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat FloatTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat FloatTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 112);
 
     /// <summary>
     /// FloatProperty: CurveTension
@@ -210,9 +207,6 @@ public partial class InterpTrackFloatBase : BmSDK.Engine.InterpTrack, BmSDK.IGam
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator Randomiser
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator Randomiser
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackFloatBase.FRandomGenerator>(Ptr + 132);
 }

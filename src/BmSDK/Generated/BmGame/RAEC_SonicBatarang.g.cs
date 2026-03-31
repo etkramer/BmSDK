@@ -318,20 +318,14 @@ public partial class RAEC_SonicBatarang : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// StructProperty: ShootPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ShootPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 ShootPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: DirectMoveTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirectMoveTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirectMoveTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// FloatProperty: AlertVisibleTime

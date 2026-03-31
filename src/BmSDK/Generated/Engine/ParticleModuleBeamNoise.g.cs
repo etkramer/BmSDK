@@ -166,29 +166,20 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseRange
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector NoiseRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector NoiseRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: NoiseRangeScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseRangeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseRangeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: NoiseSpeed
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector NoiseSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector NoiseSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 124);
 
     /// <summary>
     /// FloatProperty: NoiseLockRadius
@@ -220,11 +211,8 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseTangentStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseTangentStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseTangentStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 164);
 
     /// <summary>
     /// IntProperty: NoiseTessellation
@@ -247,9 +235,6 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 200);
 }

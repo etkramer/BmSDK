@@ -96,9 +96,6 @@ public partial class SeqAct_GetVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: VelocityVect
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityVect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityVect
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 }

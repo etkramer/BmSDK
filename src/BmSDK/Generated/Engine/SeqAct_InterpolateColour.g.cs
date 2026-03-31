@@ -114,11 +114,8 @@ public partial class SeqAct_InterpolateColour : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// StructProperty: TargetColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor TargetColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor TargetColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 244);
 
     /// <summary>
     /// FloatProperty: RemainingTime

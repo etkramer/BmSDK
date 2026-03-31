@@ -396,11 +396,8 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: PushTransId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PushTransId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PushTransId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 556);
 
     /// <summary>
     /// ObjectProperty: PushRumble
@@ -414,9 +411,6 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// StructProperty: StartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 }

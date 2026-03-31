@@ -98,38 +98,26 @@ public partial class AnimNotify_ViewShake : BmSDK.Engine.AnimNotify_Scripted, Bm
     /// <summary>
     /// StructProperty: RotAmplitude
     /// </summary>
-    public unsafe System.Numerics.Vector3 RotAmplitude
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.Numerics.Vector3 RotAmplitude
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 48);
 
     /// <summary>
     /// StructProperty: RotFrequency
     /// </summary>
-    public unsafe System.Numerics.Vector3 RotFrequency
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 RotFrequency
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: LocAmplitude
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocAmplitude
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocAmplitude
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: LocFrequency
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocFrequency
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocFrequency
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 84);
 
     /// <summary>
     /// FloatProperty: FOVAmplitude

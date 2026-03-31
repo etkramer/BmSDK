@@ -1520,11 +1520,8 @@ public partial class RGFxMovieUI : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MenuIndex
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieUI.FMenuState MenuIndex
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI.FMenuState>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RGFxMovieUI.FMenuState MenuIndex
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGFxMovieUI.FMenuState>(Ptr + 496);
 
     /// <summary>
     /// StrProperty: IconSetPackage

@@ -112,9 +112,6 @@ public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: PostProcessSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 220);
 }

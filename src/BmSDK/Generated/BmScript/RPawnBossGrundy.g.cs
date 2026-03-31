@@ -2443,10 +2443,9 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
         /// <summary>
         /// StructProperty: baseLoc
         /// </summary>
-        public unsafe System.Numerics.Vector3 baseLoc
+        public unsafe ref System.Numerics.Vector3 baseLoc
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -2558,10 +2557,9 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
         /// <summary>
         /// StructProperty: centre
         /// </summary>
-        public unsafe System.Numerics.Vector3 centre
+        public unsafe ref System.Numerics.Vector3 centre
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -2804,38 +2802,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: currentTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId currentTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7200); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId currentTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7200);
 
     /// <summary>
     /// StructProperty: BMTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BMTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7204); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BMTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7204);
 
     /// <summary>
     /// StructProperty: leapStartPos_BM
     /// </summary>
-    public unsafe System.Numerics.Vector3 leapStartPos_BM
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7208); }
-    }
+    public unsafe ref System.Numerics.Vector3 leapStartPos_BM
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7208);
 
     /// <summary>
     /// StructProperty: leapStartDir_BMToGrundy
     /// </summary>
-    public unsafe BmSDK.Rotator leapStartDir_BMToGrundy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 7220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7220); }
-    }
+    public unsafe ref BmSDK.Rotator leapStartDir_BMToGrundy
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 7220);
 
     /// <summary>
     /// ByteProperty: swingChainState
@@ -3556,20 +3542,14 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 7372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7372); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 7372);
 
     /// <summary>
     /// StructProperty: lookRot
     /// </summary>
-    public unsafe BmSDK.Rotator lookRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 7516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7516); }
-    }
+    public unsafe ref BmSDK.Rotator lookRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 7516);
 
     /// <summary>
     /// FloatProperty: timeSinceLook
@@ -3653,11 +3633,8 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: nextElectrifiedAttackData
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectrifiedAttackData nextElectrifiedAttackData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectrifiedAttackData>(Ptr + 7580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7580); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossGrundy.FElectrifiedAttackData nextElectrifiedAttackData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossGrundy.FElectrifiedAttackData>(Ptr + 7580);
 
     /// <summary>
     /// FloatProperty: minElectricSmashDeviance
@@ -3977,11 +3954,8 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: SavedFloorRingSpawnPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedFloorRingSpawnPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7736); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedFloorRingSpawnPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7736);
 
     /// <summary>
     /// IntProperty: numConsecutiveElectricSmashes
@@ -4227,11 +4201,8 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: smashWeightReturnOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 smashWeightReturnOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7856); }
-    }
+    public unsafe ref System.Numerics.Vector3 smashWeightReturnOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7856);
 
     /// <summary>
     /// IntProperty: smashStartYaw
@@ -4459,27 +4430,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: electricPillars
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 7976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7976); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 7976);
     /// <summary>
     /// StructProperty: electricPillars
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8028); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8028);
     /// <summary>
     /// StructProperty: electricPillars
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8080); }
-    }
+    public unsafe ref BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8080);
 
     /// <summary>
     /// FloatProperty: electricPillarHeight
@@ -5241,68 +5203,44 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: deathVolOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 deathVolOffsets_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8512); }
-    }
+    public unsafe ref System.Numerics.Vector3 deathVolOffsets_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8512);
     /// <summary>
     /// StructProperty: deathVolOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 deathVolOffsets_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8524); }
-    }
+    public unsafe ref System.Numerics.Vector3 deathVolOffsets_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8524);
     /// <summary>
     /// StructProperty: deathVolOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 deathVolOffsets_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8536); }
-    }
+    public unsafe ref System.Numerics.Vector3 deathVolOffsets_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8536);
     /// <summary>
     /// StructProperty: deathVolOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 deathVolOffsets_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8548); }
-    }
+    public unsafe ref System.Numerics.Vector3 deathVolOffsets_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8548);
 
     /// <summary>
     /// StructProperty: deathVolOffsetRots
     /// </summary>
-    public unsafe BmSDK.Rotator deathVolOffsetRots_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8560); }
-    }
+    public unsafe ref BmSDK.Rotator deathVolOffsetRots_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 8560);
     /// <summary>
     /// StructProperty: deathVolOffsetRots
     /// </summary>
-    public unsafe BmSDK.Rotator deathVolOffsetRots_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8572); }
-    }
+    public unsafe ref BmSDK.Rotator deathVolOffsetRots_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 8572);
     /// <summary>
     /// StructProperty: deathVolOffsetRots
     /// </summary>
-    public unsafe BmSDK.Rotator deathVolOffsetRots_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8584); }
-    }
+    public unsafe ref BmSDK.Rotator deathVolOffsetRots_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 8584);
     /// <summary>
     /// StructProperty: deathVolOffsetRots
     /// </summary>
-    public unsafe BmSDK.Rotator deathVolOffsetRots_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8596); }
-    }
+    public unsafe ref BmSDK.Rotator deathVolOffsetRots_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 8596);
 
     /// <summary>
     /// FloatProperty: PadScaleAmount
@@ -5433,20 +5371,14 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: GrundyOnFireSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GrundyOnFireSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 8664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8664); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GrundyOnFireSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 8664);
 
     /// <summary>
     /// StructProperty: swingDirFlat
     /// </summary>
-    public unsafe System.Numerics.Vector3 swingDirFlat
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8676); }
-    }
+    public unsafe ref System.Numerics.Vector3 swingDirFlat
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8676);
 
     /// <summary>
     /// FloatProperty: swingImpactRagdollImpulse
@@ -5496,19 +5428,13 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: hardCodedSmashReturnOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 hardCodedSmashReturnOffsets_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8708); }
-    }
+    public unsafe ref System.Numerics.Vector3 hardCodedSmashReturnOffsets_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8708);
     /// <summary>
     /// StructProperty: hardCodedSmashReturnOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 hardCodedSmashReturnOffsets_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8720); }
-    }
+    public unsafe ref System.Numerics.Vector3 hardCodedSmashReturnOffsets_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8720);
 
     /// <summary>
     /// FloatProperty: firePatchBaseLength

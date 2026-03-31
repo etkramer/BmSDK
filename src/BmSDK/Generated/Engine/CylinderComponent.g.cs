@@ -134,11 +134,8 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// StructProperty: CylinderColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor CylinderColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor CylinderColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 416);
 
     /// <summary>
     /// BoolProperty: bDrawBoundingBox

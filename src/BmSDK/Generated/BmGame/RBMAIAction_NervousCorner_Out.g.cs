@@ -148,11 +148,8 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// StructProperty: CornerPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CornerPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 CornerPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: CornerYaw
@@ -193,11 +190,8 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// StructProperty: ExitCornerID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ExitCornerID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ExitCornerID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 592);
 
     /// <summary>
     /// NameProperty: OutStartTransition

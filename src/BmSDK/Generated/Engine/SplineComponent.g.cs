@@ -168,11 +168,8 @@ public partial class SplineComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: SplineInfo
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector SplineInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector SplineInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 404);
 
     /// <summary>
     /// FloatProperty: SplineCurviness
@@ -186,11 +183,8 @@ public partial class SplineComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: SplineColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor SplineColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor SplineColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 424);
 
     /// <summary>
     /// FloatProperty: SplineDrawRes
@@ -222,9 +216,6 @@ public partial class SplineComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: SplineReparamTable
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SplineReparamTable
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SplineReparamTable
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 440);
 }

@@ -228,20 +228,14 @@ public partial class RFreezeProjectileBlast : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: vTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vTargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 vTargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: vStartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 vStartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 vStartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// ObjectProperty: FreezableTarget
@@ -309,11 +303,8 @@ public partial class RFreezeProjectileBlast : BmSDK.BmGame.RProjectile, BmSDK.IG
     /// <summary>
     /// StructProperty: BatmanReactionNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanReactionNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanReactionNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// BoolProperty: bHasCollided

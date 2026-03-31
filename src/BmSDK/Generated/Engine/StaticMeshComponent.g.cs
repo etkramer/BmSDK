@@ -213,19 +213,17 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
         /// <summary>
         /// StructProperty: LightMap
         /// </summary>
-        public unsafe System.IntPtr LightMap
+        public unsafe ref System.IntPtr LightMap
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
         /// StructProperty: OverrideVertexColors
         /// </summary>
-        public unsafe System.IntPtr OverrideVertexColors
+        public unsafe ref System.IntPtr OverrideVertexColors
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -250,11 +248,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 420);
 
     /// <summary>
     /// IntProperty: OverriddenLightMapRes
@@ -340,11 +335,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LODData
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 444);
 
     /// <summary>
     /// IntProperty: VertexPositionVersionNumber

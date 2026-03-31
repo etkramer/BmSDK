@@ -372,11 +372,8 @@ public partial class RAudioHarleyHeadPoint_NonCollectable : BmSDK.BmGame.RAudioP
     /// <summary>
     /// StructProperty: ExplosionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExplosionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExplosionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// BoolProperty: bDestroyed

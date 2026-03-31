@@ -262,11 +262,8 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// StructProperty: VfTable_IRSecretInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IRSecretInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr VfTable_IRSecretInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// BoolProperty: bDestroyed
@@ -334,47 +331,32 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// StructProperty: OldPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: NewPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NewPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 NewPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// StructProperty: StartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: OldRot
     /// </summary>
-    public unsafe BmSDK.Rotator OldRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Rotator OldRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 488);
 
     /// <summary>
     /// StructProperty: NewRot
     /// </summary>
-    public unsafe BmSDK.Rotator NewRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref BmSDK.Rotator NewRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 500);
 
     /// <summary>
     /// IntProperty: SecretIndex

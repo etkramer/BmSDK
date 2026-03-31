@@ -123,11 +123,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe System.IntPtr State
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.IntPtr State
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 96);
 
     /// <summary>
     /// FloatProperty: InvisibleUpdateTime
@@ -177,29 +174,20 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: AmbientShadowColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor AmbientShadowColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor AmbientShadowColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 120);
 
     /// <summary>
     /// StructProperty: AmbientShadowSourceDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AmbientShadowSourceDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref System.Numerics.Vector3 AmbientShadowSourceDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: AmbientGlow
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor AmbientGlow
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor AmbientGlow
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 148);
 
     /// <summary>
     /// FloatProperty: LightDesaturation
@@ -420,11 +408,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: MaxModulatedShadowColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor MaxModulatedShadowColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor MaxModulatedShadowColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 188);
 
     /// <summary>
     /// FloatProperty: DominantShadowTransitionStartDistance
@@ -528,20 +513,14 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: OverriddenBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds OverriddenBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds OverriddenBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: OverriddenLightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer OverriddenLightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer OverriddenLightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 268);
 
     /// <summary>
     /// ArrayProperty: OverriddenLightComponents

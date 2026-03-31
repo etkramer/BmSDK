@@ -76,29 +76,20 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CurrentBlinkState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState CurrentBlinkState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState CurrentBlinkState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: CurrentLeftEyeRotation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FYawPitch CurrentLeftEyeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FYawPitch CurrentLeftEyeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: CurrentRightEyeRotation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FYawPitch CurrentRightEyeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FYawPitch CurrentRightEyeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 64);
 
     /// <summary>
     /// BoolProperty: ReduceBlinksAndEyeMovements

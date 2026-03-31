@@ -345,9 +345,6 @@ public partial class RXPSequence : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: XPSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle XPSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle XPSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 500);
 }

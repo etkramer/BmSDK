@@ -219,11 +219,8 @@ public partial class RViewPostProcess : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VectorOneVal
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor VectorOneVal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor VectorOneVal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 88);
 
     /// <summary>
     /// NameProperty: VectorOneName

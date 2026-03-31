@@ -685,10 +685,9 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
         /// <summary>
         /// StructProperty: FloorCorrection_OverrideConfig_Config
         /// </summary>
-        public unsafe BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig FloorCorrection_OverrideConfig_Config
+        public unsafe ref BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig FloorCorrection_OverrideConfig_Config
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FFloorMovementCorrectionConfig>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -2333,27 +2332,18 @@ public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, Bm
     /// <summary>
     /// StructProperty: GrenTraceExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrenTraceExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrenTraceExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// StructProperty: Debug_Anim_Player
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Debug_Anim_Player
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Debug_Anim_Player
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug>(Ptr + 184);
 
     /// <summary>
     /// StructProperty: Debug_Anim_Npc
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Debug_Anim_Npc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Debug_Anim_Npc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug>(Ptr + 220);
 }

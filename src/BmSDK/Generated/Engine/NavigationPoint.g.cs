@@ -338,28 +338,25 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BoundingBox
         /// </summary>
-        public unsafe BmSDK.GameObject.FBox BoundingBox
+        public unsafe ref BmSDK.GameObject.FBox BoundingBox
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: BoxCenter
         /// </summary>
-        public unsafe System.Numerics.Vector3 BoxCenter
+        public unsafe ref System.Numerics.Vector3 BoxCenter
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
         /// StructProperty: OctreeNode
         /// </summary>
-        public unsafe System.IntPtr OctreeNode
+        public unsafe ref System.IntPtr OctreeNode
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 40); } }
         }
 
         /// <summary>
@@ -654,11 +651,8 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: NavOctreeObject
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint.FNavigationOctreeObject NavOctreeObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationPoint.FNavigationOctreeObject>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationPoint.FNavigationOctreeObject NavOctreeObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationPoint.FNavigationOctreeObject>(Ptr + 432);
 
     /// <summary>
     /// ArrayProperty: PathList
@@ -825,20 +819,14 @@ public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MaxPathSize
     /// </summary>
-    public unsafe BmSDK.GameObject.FCylinder MaxPathSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FCylinder>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.GameObject.FCylinder MaxPathSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FCylinder>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: NavGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid NavGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid NavGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 604);
 
     /// <summary>
     /// ComponentProperty: GoodSprite

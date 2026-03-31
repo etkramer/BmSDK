@@ -94,11 +94,8 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: BloomTint
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BloomTint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BloomTint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 140);
 
     /// <summary>
     /// FloatProperty: BloomScreenBlendThreshold

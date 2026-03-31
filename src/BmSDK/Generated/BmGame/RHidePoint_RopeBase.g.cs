@@ -346,27 +346,18 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// StructProperty: RopeStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: RopeEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// StructProperty: SpecialEdgeCollection
     /// </summary>
-    public unsafe System.IntPtr SpecialEdgeCollection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.IntPtr SpecialEdgeCollection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 992);
 }

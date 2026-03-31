@@ -224,9 +224,6 @@ public partial class RPenguinTarget : BmSDK.BmGame.RBreakablePickupPenguinBase, 
     /// <summary>
     /// StructProperty: BatarangOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 540);
 }

@@ -264,11 +264,8 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// StructProperty: sinAimOverlayVec
     /// </summary>
-    public unsafe System.Numerics.Vector3 sinAimOverlayVec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 sinAimOverlayVec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// FloatProperty: lockProportion
@@ -291,11 +288,8 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// StructProperty: AimLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: BMMinDist

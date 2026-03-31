@@ -287,56 +287,38 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SceneInfo
     /// </summary>
-    public unsafe System.IntPtr SceneInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.IntPtr SceneInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: WorldToLight
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix WorldToLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix WorldToLight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 80);
 
     /// <summary>
     /// StructProperty: LightToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LightToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LightToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: OctreeId
     /// </summary>
-    public unsafe BmSDK.GameObject.FOctreeElementId OctreeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FOctreeElementId>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.GameObject.FOctreeElementId OctreeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FOctreeElementId>(Ptr + 208);
 
     /// <summary>
     /// StructProperty: LightGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: LightmapGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightmapGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightmapGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 220);
 
     /// <summary>
     /// FloatProperty: Brightness
@@ -350,11 +332,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 228);
 
     /// <summary>
     /// ObjectProperty: Function
@@ -377,11 +356,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LightEnv_BouncedModulationColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightEnv_BouncedModulationColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightEnv_BouncedModulationColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 240);
 
     /// <summary>
     /// BoolProperty: bEnabled
@@ -629,11 +605,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 264);
 
     /// <summary>
     /// ArrayProperty: InclusionVolumes
@@ -692,11 +665,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ModShadowColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ModShadowColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ModShadowColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 320);
 
     /// <summary>
     /// FloatProperty: ModShadowFadeoutTime
@@ -836,11 +806,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: BloomTint
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BloomTint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BloomTint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 392);
 
     /// <summary>
     /// FloatProperty: RadialBlurPercent

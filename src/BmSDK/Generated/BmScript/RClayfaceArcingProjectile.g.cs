@@ -139,11 +139,8 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// <summary>
     /// StructProperty: DownSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 DownSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 DownSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// FloatProperty: WaitTime

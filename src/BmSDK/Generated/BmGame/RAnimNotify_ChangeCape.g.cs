@@ -76,18 +76,12 @@ public partial class RAnimNotify_ChangeCape : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// StructProperty: StateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData StateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData StateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: ChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeChangeData ChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeChangeData>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeChangeData ChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeChangeData>(Ptr + 104);
 }

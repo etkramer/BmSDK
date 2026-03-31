@@ -76,9 +76,6 @@ public partial class DistributionFloatUniformCurve : BmSDK.DistributionFloat, Bm
     /// <summary>
     /// StructProperty: ConstantCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector2D ConstantCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector2D>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector2D ConstantCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector2D>(Ptr + 64);
 }

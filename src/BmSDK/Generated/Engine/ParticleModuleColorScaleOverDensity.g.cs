@@ -76,18 +76,12 @@ public partial class ParticleModuleColorScaleOverDensity : BmSDK.Engine.Particle
     /// <summary>
     /// StructProperty: ColorScaleOverDensity
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorScaleOverDensity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector ColorScaleOverDensity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: AlphaScaleOverDensity
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaScaleOverDensity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat AlphaScaleOverDensity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84);
 }

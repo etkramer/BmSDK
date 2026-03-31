@@ -76,20 +76,14 @@ public partial class ParticleModuleKillBox : BmSDK.Engine.ParticleModuleKillBase
     /// <summary>
     /// StructProperty: LowerLeftCorner
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector LowerLeftCorner
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector LowerLeftCorner
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: UpperRightCorner
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector UpperRightCorner
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector UpperRightCorner
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84);
 
     /// <summary>
     /// BoolProperty: bAbsolute

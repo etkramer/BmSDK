@@ -339,11 +339,8 @@ public partial class RPawnPlayerBmBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: EyeGlowColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor EyeGlowColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 5980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5980); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor EyeGlowColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 5980);
 
     /// <summary>
     /// ObjectProperty: GlideDirectionalDirectionNode

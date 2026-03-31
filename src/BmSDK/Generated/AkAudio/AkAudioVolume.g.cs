@@ -217,29 +217,20 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ParameterX
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 496);
 
     /// <summary>
     /// StructProperty: ParameterY
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 512);
 
     /// <summary>
     /// StructProperty: ParameterZ
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 528);
 
     /// <summary>
     /// ComponentProperty: DrawBoundsComponent
@@ -280,11 +271,8 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastTouchingUpdateTime
     /// </summary>
-    public unsafe double LastTouchingUpdateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref double LastTouchingUpdateTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 568);
 
     /// <summary>
     /// Struct: FTouchingActorInfo

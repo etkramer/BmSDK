@@ -339,10 +339,9 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PlatformData
         /// </summary>
-        public unsafe System.IntPtr PlatformData
+        public unsafe ref System.IntPtr PlatformData
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 4); } }
         }
     }
 
@@ -358,11 +357,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Query
     /// </summary>
-    public unsafe BmSDK.Engine.Settings.FLocalizedStringSetting Query
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.Settings.FLocalizedStringSetting Query
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: bIsLanQuery
@@ -412,11 +408,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ManualSkillOverride
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 128);
 
     /// <summary>
     /// ArrayProperty: NamedProperties
@@ -430,11 +423,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FilterQuery
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 180);
 
     /// <summary>
     /// StrProperty: AdditionalSearchCriteria

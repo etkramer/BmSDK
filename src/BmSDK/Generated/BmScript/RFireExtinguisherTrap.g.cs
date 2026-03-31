@@ -216,11 +216,8 @@ public partial class RFireExtinguisherTrap : BmSDK.BmGame.RFireExtinguisherTrapB
     /// <summary>
     /// StructProperty: BatarangImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 
     /// <summary>
     /// BoolProperty: bActive
@@ -234,11 +231,8 @@ public partial class RFireExtinguisherTrap : BmSDK.BmGame.RFireExtinguisherTrapB
     /// <summary>
     /// StructProperty: TargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ComponentProperty: FireExMesh

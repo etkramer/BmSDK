@@ -1682,11 +1682,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// StructProperty: AutoTargetExtCamRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator AutoTargetExtCamRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref BmSDK.Rotator AutoTargetExtCamRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 784);
 
     /// <summary>
     /// IntProperty: AmmoLast
@@ -1709,11 +1706,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// StructProperty: ThrowTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 804);
 
     /// <summary>
     /// NameProperty: TargetClass
@@ -1745,11 +1739,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// StructProperty: EmergencyThrowDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 EmergencyThrowDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref System.Numerics.Vector3 EmergencyThrowDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 828);
 
     /// <summary>
     /// FloatProperty: AutoTargetPlaneOffset
@@ -1826,11 +1817,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// StructProperty: GetOutSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GetOutSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GetOutSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 888);
 
     /// <summary>
     /// ObjectProperty: OverrideTargets
@@ -1898,11 +1886,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// StructProperty: MirrorRelativeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator MirrorRelativeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.Rotator MirrorRelativeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 956);
 
     /// <summary>
     /// Enum: CoverCornerType

@@ -1727,10 +1727,9 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         /// <summary>
         /// StructProperty: Location
         /// </summary>
-        public unsafe System.Numerics.Vector3 Location
+        public unsafe ref System.Numerics.Vector3 Location
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -1781,19 +1780,17 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         /// <summary>
         /// StructProperty: PrintSpawnLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 PrintSpawnLocation
+        public unsafe ref System.Numerics.Vector3 PrintSpawnLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
         /// StructProperty: PrintSpawnRotation
         /// </summary>
-        public unsafe BmSDK.Rotator PrintSpawnRotation
+        public unsafe ref BmSDK.Rotator PrintSpawnRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 40); } }
         }
     }
 
@@ -1927,11 +1924,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: CurrentWaypointDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentWaypointDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentWaypointDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
 
     /// <summary>
     /// ObjectProperty: DestinationActor
@@ -2521,11 +2515,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: vMoveNearInitialPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vMoveNearInitialPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref System.Numerics.Vector3 vMoveNearInitialPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 560);
 
     /// <summary>
     /// IntProperty: iFiringBlindMissileCounter
@@ -2602,38 +2593,26 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: vForcedGrenadeBatmanLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vForcedGrenadeBatmanLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 vForcedGrenadeBatmanLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: vForcedGrenadeFreezeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vForcedGrenadeFreezeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 vForcedGrenadeFreezeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: vWeaponNormalToTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 vWeaponNormalToTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 vWeaponNormalToTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
 
     /// <summary>
     /// StructProperty: vCurrentWeaponTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 vCurrentWeaponTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 vCurrentWeaponTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
 
     /// <summary>
     /// FloatProperty: fEstimatedWeaponHitTimestamp
@@ -2746,38 +2725,26 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: vLastKnownPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vLastKnownPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 vLastKnownPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// StructProperty: vCurrentTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vCurrentTargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 vCurrentTargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 
     /// <summary>
     /// StructProperty: vBatmanPositionPreviousFrame
     /// </summary>
-    public unsafe System.Numerics.Vector3 vBatmanPositionPreviousFrame
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector3 vBatmanPositionPreviousFrame
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 748);
 
     /// <summary>
     /// StructProperty: vBatmanMovementVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 vBatmanMovementVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref System.Numerics.Vector3 vBatmanMovementVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 760);
 
     /// <summary>
     /// FloatProperty: fLastKnownPositionTimeStamp
@@ -2818,11 +2785,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: fExtendedSearchFocalPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 fExtendedSearchFocalPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref System.Numerics.Vector3 fExtendedSearchFocalPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 788);
 
     /// <summary>
     /// FloatProperty: fExtendedSearchStartingRadius
@@ -3034,11 +2998,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: vFootprintCircleCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 vFootprintCircleCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref System.Numerics.Vector3 vFootprintCircleCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 892);
 
     /// <summary>
     /// FloatProperty: fFootprintCircleRadiusSquared
@@ -3088,11 +3049,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: vCircularTrailPredictedPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vCircularTrailPredictedPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 vCircularTrailPredictedPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// FloatProperty: fProximityCrystalRange
@@ -3169,11 +3127,8 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// StructProperty: LastVisibleFootprintLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastVisibleFootprintLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastVisibleFootprintLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 984);
 
     /// <summary>
     /// FloatProperty: fWedgeAngleForFootprints

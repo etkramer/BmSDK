@@ -144,20 +144,14 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
     /// <summary>
     /// StructProperty: SpeechEventPlayerClose
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent SpeechEventPlayerClose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent SpeechEventPlayerClose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent>(Ptr + 296);
 
     /// <summary>
     /// StructProperty: SpeechEventPlayerBlocking
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent SpeechEventPlayerBlocking
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent SpeechEventPlayerBlocking
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent>(Ptr + 332);
 
     /// <summary>
     /// BoolProperty: bPlayerAlreadyClose

@@ -1366,11 +1366,8 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: LifetimeEventHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle LifetimeEventHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle LifetimeEventHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 80);
 
     /// <summary>
     /// FloatProperty: PeakAudiblityRadius
@@ -1510,20 +1507,14 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: FalloffEnhancementTimestamp
     /// </summary>
-    public unsafe double FalloffEnhancementTimestamp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref double FalloffEnhancementTimestamp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 152);
 
     /// <summary>
     /// StructProperty: LastOcclusionUpdateTime
     /// </summary>
-    public unsafe double LastOcclusionUpdateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref double LastOcclusionUpdateTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 160);
 
     /// <summary>
     /// FloatProperty: CurrentOcclusion
@@ -1555,74 +1546,50 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugLastOcclusionPrimaryFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionPrimaryFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionPrimaryFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionPrimaryTo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionPrimaryTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionPrimaryTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryAFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryAFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryAFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryATo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryATo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryATo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryBFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryBFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryBFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryBTo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryBTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryBTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: SourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref System.Numerics.Vector3 SourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 252);
 
     /// <summary>
     /// StructProperty: SourceOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator SourceOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref BmSDK.Rotator SourceOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 264);
 
     /// <summary>
     /// FloatProperty: LastSourceVelocity
@@ -1636,11 +1603,8 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: LastSourceVelocityUpdateTime
     /// </summary>
-    public unsafe double LastSourceVelocityUpdateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref double LastSourceVelocityUpdateTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 280);
 
     /// <summary>
     /// ByteProperty: SpatialUpdateType
@@ -1708,11 +1672,8 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugLastFailedSourceCreateTime
     /// </summary>
-    public unsafe double DebugLastFailedSourceCreateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref double DebugLastFailedSourceCreateTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 320);
 
     /// <summary>
     /// Enum: EAkComponentSourceCreateFailReason

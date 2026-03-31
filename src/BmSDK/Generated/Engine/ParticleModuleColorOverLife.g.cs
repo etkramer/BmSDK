@@ -76,20 +76,14 @@ public partial class ParticleModuleColorOverLife : BmSDK.Engine.ParticleModuleCo
     /// <summary>
     /// StructProperty: ColorOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorOverLife
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector ColorOverLife
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: AlphaOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaOverLife
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat AlphaOverLife
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84);
 
     /// <summary>
     /// BoolProperty: bClampAlpha

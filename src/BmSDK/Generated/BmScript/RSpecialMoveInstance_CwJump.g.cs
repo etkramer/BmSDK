@@ -169,11 +169,8 @@ public partial class RSpecialMoveInstance_CwJump : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// StructProperty: InitialJumpVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialJumpVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialJumpVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 656);
 
     /// <summary>
     /// ObjectProperty: MyConfig
@@ -196,18 +193,12 @@ public partial class RSpecialMoveInstance_CwJump : BmSDK.BmGame.RSpecialMoveInst
     /// <summary>
     /// StructProperty: JumpLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator JumpLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator JumpLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: JumpVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 788);
 }

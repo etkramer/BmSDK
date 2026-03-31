@@ -282,11 +282,8 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AttackPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: DelayTimer

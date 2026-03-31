@@ -110,11 +110,8 @@ public partial class RSeqAct_SetTrackingObjectVars : BmSDK.Engine.SequenceAction
     /// <summary>
     /// StructProperty: Target
     /// </summary>
-    public unsafe System.Numerics.Vector3 Target
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 Target
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// ObjectProperty: Act

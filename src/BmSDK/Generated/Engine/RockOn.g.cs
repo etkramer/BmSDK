@@ -76,29 +76,20 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneShadows
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneShadows
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: SceneHighLights
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneHighLights
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneHighLights
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// StructProperty: SceneMidTones
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneMidTones
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneMidTones
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// FloatProperty: SceneDesaturation
@@ -112,11 +103,8 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// StructProperty: SceneColorize
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneColorize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneColorize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 220);
 
     /// <summary>
     /// FloatProperty: MotionBlurSoftEdgeKernelSize

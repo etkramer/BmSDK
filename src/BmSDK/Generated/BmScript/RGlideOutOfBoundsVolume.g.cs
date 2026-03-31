@@ -123,19 +123,17 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.BmGame.RBlockingVolume, BmS
         /// <summary>
         /// StructProperty: OriginLocationOffset
         /// </summary>
-        public unsafe System.Numerics.Vector3 OriginLocationOffset
+        public unsafe ref System.Numerics.Vector3 OriginLocationOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: OriginRotationOffset
         /// </summary>
-        public unsafe BmSDK.Rotator OriginRotationOffset
+        public unsafe ref BmSDK.Rotator OriginRotationOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
@@ -196,20 +194,14 @@ public partial class RGlideOutOfBoundsVolume : BmSDK.BmGame.RBlockingVolume, BmS
     /// <summary>
     /// StructProperty: ImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 500);
 
     /// <summary>
     /// StructProperty: ImpactRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ImpactRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref BmSDK.Rotator ImpactRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 512);
 
     /// <summary>
     /// ArrayProperty: GunFireEffects

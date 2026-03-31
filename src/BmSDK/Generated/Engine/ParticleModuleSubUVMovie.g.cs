@@ -85,11 +85,8 @@ public partial class ParticleModuleSubUVMovie : BmSDK.Engine.ParticleModuleSubUV
     /// <summary>
     /// StructProperty: FrameRate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat FrameRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat FrameRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88);
 
     /// <summary>
     /// IntProperty: StartingFrame

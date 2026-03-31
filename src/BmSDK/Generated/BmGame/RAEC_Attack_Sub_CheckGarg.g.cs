@@ -149,18 +149,12 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// StructProperty: MoveTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// StructProperty: AimTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 }

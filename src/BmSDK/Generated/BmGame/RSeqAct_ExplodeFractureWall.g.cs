@@ -87,11 +87,8 @@ public partial class RSeqAct_ExplodeFractureWall : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// StructProperty: ExplodeVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExplodeVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExplodeVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// BoolProperty: bIncludeSupportChunks

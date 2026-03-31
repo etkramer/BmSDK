@@ -101,29 +101,20 @@ public partial class BrushComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: BrushAggGeom
     /// </summary>
-    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom BrushAggGeom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref BmSDK.Engine.KMeshProps.FKAggregateGeom BrushAggGeom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 408);
 
     /// <summary>
     /// StructProperty: BrushPhysDesc
     /// </summary>
-    public unsafe System.IntPtr BrushPhysDesc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.IntPtr BrushPhysDesc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 464);
 
     /// <summary>
     /// StructProperty: CachedPhysBrushData
     /// </summary>
-    public unsafe BmSDK.Engine.BrushComponent.FKCachedConvexData_Mirror CachedPhysBrushData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BrushComponent.FKCachedConvexData_Mirror>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.Engine.BrushComponent.FKCachedConvexData_Mirror CachedPhysBrushData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.BrushComponent.FKCachedConvexData_Mirror>(Ptr + 468);
 
     /// <summary>
     /// IntProperty: CachedPhysBrushDataVersion

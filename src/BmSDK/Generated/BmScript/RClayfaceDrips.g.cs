@@ -116,11 +116,8 @@ public partial class RClayfaceDrips : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Drips
     /// </summary>
-    public unsafe BmSDK.BmScript.RClayfaceDrips.FRDripPool Drips
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RClayfaceDrips.FRDripPool>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmScript.RClayfaceDrips.FRDripPool Drips
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RClayfaceDrips.FRDripPool>(Ptr + 44);
 
     /// <summary>
     /// Struct: FRDripPool

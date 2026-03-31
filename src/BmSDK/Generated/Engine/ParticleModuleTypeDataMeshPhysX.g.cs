@@ -117,20 +117,14 @@ public partial class ParticleModuleTypeDataMeshPhysX : BmSDK.Engine.ParticleModu
     /// <summary>
     /// StructProperty: RenderInstance
     /// </summary>
-    public unsafe System.IntPtr RenderInstance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.IntPtr RenderInstance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: VerticalLod
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataPhysX.FPhysXEmitterVerticalLodProperties VerticalLod
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataPhysX.FPhysXEmitterVerticalLodProperties>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleTypeDataPhysX.FPhysXEmitterVerticalLodProperties VerticalLod
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleTypeDataPhysX.FPhysXEmitterVerticalLodProperties>(Ptr + 96);
 
     /// <summary>
     /// FloatProperty: ZOffset

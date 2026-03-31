@@ -879,11 +879,8 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CapeSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle CapeSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle CapeSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 116);
 
     /// <summary>
     /// ObjectProperty: CapeParam_WindStrength
@@ -1140,11 +1137,8 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ForwardToStateData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData ForwardToStateData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData ForwardToStateData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 152);
 
     /// <summary>
     /// FloatProperty: StateChangeRequestGameTime
@@ -1176,11 +1170,8 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CapePhysics
     /// </summary>
-    public unsafe System.IntPtr CapePhysics
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref System.IntPtr CapePhysics
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 224);
 
     /// <summary>
     /// ByteProperty: RBChannel
@@ -1230,11 +1221,8 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 240);
 
     /// <summary>
     /// StrProperty: CurrOwnerStateName

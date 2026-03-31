@@ -119,11 +119,8 @@ public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FInterpEdInputInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_FInterpEdInputInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.IntPtr VfTable_FInterpEdInputInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 44);
 
     /// <summary>
     /// ArrayProperty: InterpTracks
@@ -146,11 +143,8 @@ public partial class InterpGroup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GroupColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor GroupColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor GroupColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 68);
 
     /// <summary>
     /// ArrayProperty: GroupAnimSets

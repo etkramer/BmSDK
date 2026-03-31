@@ -278,11 +278,8 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: SpeechHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle SpeechHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle SpeechHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 440);
 
     /// <summary>
     /// ObjectProperty: StoredDialogueEvent
@@ -368,11 +365,8 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: storedLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 storedLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 storedLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// FloatProperty: setV

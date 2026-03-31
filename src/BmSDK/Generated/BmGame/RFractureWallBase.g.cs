@@ -872,10 +872,9 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
         /// <summary>
         /// StructProperty: ExplodePosition
         /// </summary>
-        public unsafe System.Numerics.Vector3 ExplodePosition
+        public unsafe ref System.Numerics.Vector3 ExplodePosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -890,10 +889,9 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
         /// <summary>
         /// StructProperty: ExplodeForce
         /// </summary>
-        public unsafe System.Numerics.Vector3 ExplodeForce
+        public unsafe ref System.Numerics.Vector3 ExplodeForce
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -909,20 +907,14 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IRSpotableInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 580);
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 584);
 
     /// <summary>
     /// IntProperty: SavedNumFragments
@@ -1242,11 +1234,8 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// StructProperty: LastExplosionCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastExplosionCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastExplosionCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// ObjectProperty: ClawAttachEffect

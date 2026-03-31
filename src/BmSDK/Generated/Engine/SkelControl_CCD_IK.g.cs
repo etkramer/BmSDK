@@ -76,11 +76,8 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: EffectorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EffectorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 EffectorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// ByteProperty: EffectorLocationSpace
@@ -103,11 +100,8 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: EffectorTranslationFromBone
     /// </summary>
-    public unsafe System.Numerics.Vector3 EffectorTranslationFromBone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref System.Numerics.Vector3 EffectorTranslationFromBone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 196);
 
     /// <summary>
     /// IntProperty: NumBones
@@ -202,9 +196,6 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: ComponentOffset
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom ComponentOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom ComponentOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 256);
 }

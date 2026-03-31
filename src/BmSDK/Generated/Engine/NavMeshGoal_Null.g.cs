@@ -139,9 +139,6 @@ public partial class NavMeshGoal_Null : BmSDK.Engine.NavMeshPathGoalEvaluator, B
     /// <summary>
     /// StructProperty: PartialGoal
     /// </summary>
-    public unsafe System.IntPtr PartialGoal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.IntPtr PartialGoal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 68);
 }

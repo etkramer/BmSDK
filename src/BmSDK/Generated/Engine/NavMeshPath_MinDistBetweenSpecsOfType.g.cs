@@ -96,11 +96,8 @@ public partial class NavMeshPath_MinDistBetweenSpecsOfType : BmSDK.Engine.NavMes
     /// <summary>
     /// StructProperty: InitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 
     /// <summary>
     /// ByteProperty: EdgeType

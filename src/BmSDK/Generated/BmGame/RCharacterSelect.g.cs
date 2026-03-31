@@ -516,20 +516,14 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LeftPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer LeftPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer LeftPlayer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer>(Ptr + 460);
 
     /// <summary>
     /// StructProperty: RightPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer RightPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
-    }
+    public unsafe ref BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer RightPlayer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer>(Ptr + 524);
 
     /// <summary>
     /// ObjectProperty: LeftPositionDummy
@@ -561,11 +555,8 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 600);
 
     /// <summary>
     /// ByteProperty: DepthPriorityGroup

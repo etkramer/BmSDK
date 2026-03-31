@@ -272,11 +272,8 @@ public partial class Font : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImportOptions
     /// </summary>
-    public unsafe BmSDK.Engine.FontImportOptions.FFontImportOptionsData ImportOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.Engine.FontImportOptions.FFontImportOptionsData ImportOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 152);
 
     /// <summary>
     /// IntProperty: NumCharacters

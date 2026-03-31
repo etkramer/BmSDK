@@ -76,9 +76,6 @@ public partial class ParticleModuleMeshRotationRate : BmSDK.Engine.ParticleModul
     /// <summary>
     /// StructProperty: StartRotationRate
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartRotationRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector StartRotationRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 }

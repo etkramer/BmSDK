@@ -87,9 +87,6 @@ public partial class RThugMineablePointWall : BmSDK.BmGame.RThugMineablePointBas
     /// <summary>
     /// StructProperty: StandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 448);
 }

@@ -132,9 +132,6 @@ public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, 
     /// <summary>
     /// StructProperty: EnvelopeTestPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvelopeTestPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvelopeTestPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 }

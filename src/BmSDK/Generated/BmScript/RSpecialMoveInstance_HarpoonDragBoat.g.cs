@@ -262,18 +262,12 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// StructProperty: FixedConstraintLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FixedConstraintLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 FixedConstraintLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: BoatConstraintOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoatConstraintOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoatConstraintOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 }

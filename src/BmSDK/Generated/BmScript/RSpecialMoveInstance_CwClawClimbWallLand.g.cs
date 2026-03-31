@@ -357,11 +357,8 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: LandLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator LandLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator LandLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 656);
 
     /// <summary>
     /// FloatProperty: MaxWallIdleTime
@@ -375,11 +372,8 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: CurrentLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 772);
 
     /// <summary>
     /// BoolProperty: bCancelPressed

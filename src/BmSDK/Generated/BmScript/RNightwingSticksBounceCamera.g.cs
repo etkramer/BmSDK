@@ -98,9 +98,6 @@ public partial class RNightwingSticksBounceCamera : BmSDK.BmGame.RBatarangCamera
     /// <summary>
     /// StructProperty: PrevRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PrevRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1376); }
-    }
+    public unsafe ref BmSDK.Rotator PrevRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1376);
 }

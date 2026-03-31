@@ -155,11 +155,8 @@ public partial class RSpecialMoveInstance_SmokeBombGrapple : BmSDK.BmGame.RSpeci
     /// <summary>
     /// StructProperty: SmokeBombTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId SmokeBombTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId SmokeBombTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 636);
 
     /// <summary>
     /// BoolProperty: bGrappleQueued

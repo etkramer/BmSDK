@@ -172,19 +172,17 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: LightDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 LightDirection
+        public unsafe ref System.Numerics.Vector3 LightDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
         }
 
         /// <summary>
         /// StructProperty: LightCol
         /// </summary>
-        public unsafe BmSDK.GameObject.FLinearColor LightCol
+        public unsafe ref BmSDK.GameObject.FLinearColor LightCol
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 52); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 52); } }
         }
 
         /// <summary>
@@ -235,28 +233,25 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         /// <summary>
         /// StructProperty: WaterColAbsorption
         /// </summary>
-        public unsafe BmSDK.GameObject.FLinearColor WaterColAbsorption
+        public unsafe ref BmSDK.GameObject.FLinearColor WaterColAbsorption
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 88); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 88); } }
         }
 
         /// <summary>
         /// StructProperty: WaterColTransmission
         /// </summary>
-        public unsafe BmSDK.GameObject.FLinearColor WaterColTransmission
+        public unsafe ref BmSDK.GameObject.FLinearColor WaterColTransmission
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 104); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 104); } }
         }
 
         /// <summary>
         /// StructProperty: WaterColScatter
         /// </summary>
-        public unsafe BmSDK.GameObject.FLinearColor WaterColScatter
+        public unsafe ref BmSDK.GameObject.FLinearColor WaterColScatter
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 120); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 120); } }
         }
     }
 
@@ -290,9 +285,6 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: OceanSettings
     /// </summary>
-    public unsafe BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 416);
 }

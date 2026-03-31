@@ -1118,29 +1118,20 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: PlayerRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PlayerRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.Rotator PlayerRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: LastDoorData
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDoorData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDoorData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 76);
 
     /// <summary>
     /// IntProperty: LastDoorRotation
@@ -2103,11 +2094,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastScannedLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastScannedLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastScannedLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 412);
 
     /// <summary>
     /// StrProperty: LastAmbientSoundCue
@@ -2706,11 +2694,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vObjectiveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vObjectiveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 vObjectiveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// ArrayProperty: CustomWaypoint

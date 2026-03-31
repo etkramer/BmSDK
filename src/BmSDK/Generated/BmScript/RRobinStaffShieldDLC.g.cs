@@ -224,9 +224,6 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// StructProperty: ShieldBashExtraRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ShieldBashExtraRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
-    }
+    public unsafe ref BmSDK.Rotator ShieldBashExtraRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1072);
 }

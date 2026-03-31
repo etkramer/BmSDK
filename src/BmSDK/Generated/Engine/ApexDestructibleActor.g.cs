@@ -271,11 +271,8 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: CachedFractureMaterials
     /// </summary>
-    public unsafe System.IntPtr CachedFractureMaterials
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.IntPtr CachedFractureMaterials
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 480);
 
     /// <summary>
     /// ObjectProperty: CachedFractureShardSound

@@ -204,11 +204,8 @@ public partial class Landscape : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 520);
 
     /// <summary>
     /// IntProperty: StaticLightingResolution
@@ -276,11 +273,8 @@ public partial class Landscape : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DataInterface
     /// </summary>
-    public unsafe System.IntPtr DataInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref System.IntPtr DataInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 760);
 
     /// <summary>
     /// IntProperty: ComponentSizeQuads

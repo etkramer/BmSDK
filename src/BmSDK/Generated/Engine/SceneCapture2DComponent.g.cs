@@ -163,18 +163,12 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ViewMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 160);
 
     /// <summary>
     /// StructProperty: ProjMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ProjMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ProjMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 224);
 }

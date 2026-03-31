@@ -311,29 +311,20 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: TargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: LastArriveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastArriveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastArriveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 84);
 
     /// <summary>
     /// FloatProperty: TreeSearchDist
@@ -347,11 +338,8 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResultLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResultLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector3 ResultLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 100);
 
     /// <summary>
     /// ObjectProperty: OwningActor

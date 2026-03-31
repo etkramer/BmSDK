@@ -148,18 +148,12 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// StructProperty: TargetCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: GrenadeSpin
     /// </summary>
-    public unsafe BmSDK.Rotator GrenadeSpin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.Rotator GrenadeSpin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 520);
 }

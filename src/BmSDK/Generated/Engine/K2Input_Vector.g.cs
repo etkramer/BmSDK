@@ -76,9 +76,6 @@ public partial class K2Input_Vector : BmSDK.Engine.K2Input, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 DefaultVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref System.Numerics.Vector3 DefaultVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 68);
 }

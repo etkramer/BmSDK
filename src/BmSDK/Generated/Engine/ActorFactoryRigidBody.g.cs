@@ -107,11 +107,8 @@ public partial class ActorFactoryRigidBody : BmSDK.Engine.ActorFactoryDynamicSM,
     /// <summary>
     /// StructProperty: InitialVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 120);
 
     /// <summary>
     /// ComponentProperty: AdditionalVelocity

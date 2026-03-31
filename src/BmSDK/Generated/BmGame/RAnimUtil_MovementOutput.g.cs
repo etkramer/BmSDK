@@ -95,19 +95,17 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: ProceduralMovement
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_MovementOutput.FProceduralMovement ProceduralMovement
+        public unsafe ref BmSDK.BmGame.RAnimUtil_MovementOutput.FProceduralMovement ProceduralMovement
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_MovementOutput.FProceduralMovement>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_MovementOutput.FProceduralMovement>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
         /// StructProperty: TranslationError
         /// </summary>
-        public unsafe System.Numerics.Vector3 TranslationError
+        public unsafe ref System.Numerics.Vector3 TranslationError
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 68); } }
         }
 
         /// <summary>
@@ -156,19 +154,17 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: AddTranslationVelocity
         /// </summary>
-        public unsafe System.Numerics.Vector3 AddTranslationVelocity
+        public unsafe ref System.Numerics.Vector3 AddTranslationVelocity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: AddTranslation
         /// </summary>
-        public unsafe System.Numerics.Vector3 AddTranslation
+        public unsafe ref System.Numerics.Vector3 AddTranslation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -201,10 +197,9 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: OverrideTranslationVelocity
         /// </summary>
-        public unsafe System.Numerics.Vector3 OverrideTranslationVelocity
+        public unsafe ref System.Numerics.Vector3 OverrideTranslationVelocity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
         }
 
         /// <summary>

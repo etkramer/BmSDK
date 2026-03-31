@@ -623,11 +623,8 @@ public partial class RPawnBossPenguinIcebergBase : BmSDK.BmGame.RPawnFriendly, B
     /// <summary>
     /// StructProperty: BatarangThrowPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangThrowPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2768); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangThrowPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2768);
 
     /// <summary>
     /// ObjectProperty: GunJammedPFX
@@ -659,11 +656,8 @@ public partial class RPawnBossPenguinIcebergBase : BmSDK.BmGame.RPawnFriendly, B
     /// <summary>
     /// StructProperty: StartPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2792); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2792);
 
     /// <summary>
     /// ObjectProperty: UpdateAction
@@ -749,11 +743,8 @@ public partial class RPawnBossPenguinIcebergBase : BmSDK.BmGame.RPawnFriendly, B
     /// <summary>
     /// StructProperty: CurrentAimPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentAimPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2840); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentAimPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2840);
 
     /// <summary>
     /// FloatProperty: BaseTooCloseDistance

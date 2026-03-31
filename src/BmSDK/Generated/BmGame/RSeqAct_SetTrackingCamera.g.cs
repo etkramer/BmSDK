@@ -328,9 +328,6 @@ public partial class RSeqAct_SetTrackingCamera : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: BatmanLookAheadPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanLookAheadPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanLookAheadPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 288);
 }

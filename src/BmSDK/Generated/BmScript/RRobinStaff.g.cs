@@ -188,11 +188,8 @@ public partial class RRobinStaff : BmSDK.BmGame.RStaffBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LaunchVel
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchVel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 972);
 
     /// <summary>
     /// FloatProperty: LaunchGravity

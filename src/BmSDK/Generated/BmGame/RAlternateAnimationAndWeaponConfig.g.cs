@@ -325,11 +325,8 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// <summary>
     /// StructProperty: MovementAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RAlternateAnimationAndWeaponConfig.FMovementAnimNames MovementAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAlternateAnimationAndWeaponConfig.FMovementAnimNames>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.BmGame.RAlternateAnimationAndWeaponConfig.FMovementAnimNames MovementAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAlternateAnimationAndWeaponConfig.FMovementAnimNames>(Ptr + 80);
 
     /// <summary>
     /// ArrayProperty: Overlays

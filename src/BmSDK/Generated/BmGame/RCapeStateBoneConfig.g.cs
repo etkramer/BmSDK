@@ -217,10 +217,9 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PushTowardsDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 PushTowardsDirection
+        public unsafe ref System.Numerics.Vector3 PushTowardsDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 48); } }
         }
 
         /// <summary>
@@ -253,10 +252,9 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: PushTowardsDirection2
         /// </summary>
-        public unsafe System.Numerics.Vector3 PushTowardsDirection2
+        public unsafe ref System.Numerics.Vector3 PushTowardsDirection2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 76); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 76); } }
         }
 
         /// <summary>

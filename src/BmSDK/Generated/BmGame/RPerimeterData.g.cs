@@ -206,21 +206,17 @@ public partial class RPerimeterData : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Location
         /// </summary>
-        public unsafe System.Numerics.Vector3 Location
+        public unsafe ref System.Numerics.Vector3 Location
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 20); } }
         }
     }
 
     /// <summary>
     /// StructProperty: EventCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// ArrayProperty: StandPointList

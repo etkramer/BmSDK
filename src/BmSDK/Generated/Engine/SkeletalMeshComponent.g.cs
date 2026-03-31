@@ -2765,10 +2765,9 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         /// <summary>
         /// StructProperty: DepthBiasVaryingDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 DepthBiasVaryingDirection
+        public unsafe ref System.Numerics.Vector3 DepthBiasVaryingDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -2810,10 +2809,9 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         /// <summary>
         /// StructProperty: DepthBiasCustomTestPoint
         /// </summary>
-        public unsafe System.Numerics.Vector3 DepthBiasCustomTestPoint
+        public unsafe ref System.Numerics.Vector3 DepthBiasCustomTestPoint
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
         }
 
         /// <summary>
@@ -2978,28 +2976,25 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         /// <summary>
         /// StructProperty: RelativeLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 RelativeLocation
+        public unsafe ref System.Numerics.Vector3 RelativeLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
         /// StructProperty: RelativeRotation
         /// </summary>
-        public unsafe BmSDK.Rotator RelativeRotation
+        public unsafe ref BmSDK.Rotator RelativeRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
         /// StructProperty: RelativeScale
         /// </summary>
-        public unsafe System.Numerics.Vector3 RelativeScale
+        public unsafe ref System.Numerics.Vector3 RelativeScale
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
         }
     }
 
@@ -3167,11 +3162,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothing
     /// </summary>
-    public unsafe System.IntPtr ApexClothing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.IntPtr ApexClothing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 528);
 
     /// <summary>
     /// ArrayProperty: ForceFieldComponents
@@ -3221,11 +3213,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FixedBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds FixedBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds FixedBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 560);
 
     /// <summary>
     /// FloatProperty: GlobalAnimRateScale
@@ -3239,20 +3228,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: MeshObject
     /// </summary>
-    public unsafe System.IntPtr MeshObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref System.IntPtr MeshObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 592);
 
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 596);
 
     /// <summary>
     /// ArrayProperty: SpaceBases
@@ -3437,11 +3420,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: Stretches
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances Stretches
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances>(Ptr + 852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances Stretches
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances>(Ptr + 852);
 
     /// <summary>
     /// IntProperty: ForcedLodModel
@@ -3986,11 +3966,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LineCheckBoundsScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 LineCheckBoundsScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
+    public unsafe ref System.Numerics.Vector3 LineCheckBoundsScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 976);
 
     /// <summary>
     /// BoolProperty: bAllowPermanentFixOnSleep
@@ -4292,47 +4269,32 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FrozenLocalToWorldPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 FrozenLocalToWorldPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
+    public unsafe ref System.Numerics.Vector3 FrozenLocalToWorldPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1028);
 
     /// <summary>
     /// StructProperty: FrozenLocalToWorldRot
     /// </summary>
-    public unsafe BmSDK.Rotator FrozenLocalToWorldRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref BmSDK.Rotator FrozenLocalToWorldRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1040);
 
     /// <summary>
     /// StructProperty: ClothExternalForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothExternalForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothExternalForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
 
     /// <summary>
     /// StructProperty: ClothWind
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothWind
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothWind
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
 
     /// <summary>
     /// StructProperty: ClothBaseVelClampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothBaseVelClampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothBaseVelClampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1076);
 
     /// <summary>
     /// FloatProperty: ClothBlendWeight
@@ -4373,47 +4335,32 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: MinPosDampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinPosDampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinPosDampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1104);
 
     /// <summary>
     /// StructProperty: MaxPosDampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxPosDampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxPosDampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1116);
 
     /// <summary>
     /// StructProperty: MinPosDampScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinPosDampScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinPosDampScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1128);
 
     /// <summary>
     /// StructProperty: MaxPosDampScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxPosDampScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxPosDampScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1140);
 
     /// <summary>
     /// StructProperty: ClothSim
     /// </summary>
-    public unsafe System.IntPtr ClothSim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
-    }
+    public unsafe ref System.IntPtr ClothSim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1152);
 
     /// <summary>
     /// IntProperty: SceneIndex
@@ -4535,11 +4482,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ClothRBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothRBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothRBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1264);
 
     /// <summary>
     /// FloatProperty: ClothForceScale
@@ -4589,11 +4533,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LastClothLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastClothLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastClothLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1288);
 
     /// <summary>
     /// ByteProperty: ApexClothingRBChannel
@@ -4607,11 +4548,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothingRBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ApexClothingRBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1304); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ApexClothingRBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1304);
 
     /// <summary>
     /// BoolProperty: bAutoFreezeApexClothingWhenNotRendered
@@ -4634,20 +4572,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothingBaseVelClampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 ApexClothingBaseVelClampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref System.Numerics.Vector3 ApexClothingBaseVelClampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1312);
 
     /// <summary>
     /// StructProperty: WindVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WindVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref System.Numerics.Vector3 WindVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1324);
 
     /// <summary>
     /// FloatProperty: WindVelocityBlendTime
@@ -4679,29 +4611,20 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: RootMotionDelta
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom RootMotionDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom RootMotionDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 1360);
 
     /// <summary>
     /// StructProperty: RootMotionVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1392); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1392);
 
     /// <summary>
     /// StructProperty: RootMotionAccelScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionAccelScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1404); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionAccelScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1404);
 
     /// <summary>
     /// ByteProperty: RootMotionMode
@@ -4769,11 +4692,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FaceFXActorInstance
     /// </summary>
-    public unsafe System.IntPtr FaceFXActorInstance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1428); }
-    }
+    public unsafe ref System.IntPtr FaceFXActorInstance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 1428);
 
     /// <summary>
     /// FloatProperty: FaceFxAnimStartTime
@@ -4850,11 +4770,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LocalToWorldBoneAtom
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom LocalToWorldBoneAtom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 1504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1504); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom LocalToWorldBoneAtom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 1504);
 
     /// <summary>
     /// BoolProperty: bDontPlaySoundWhenPlayingFaceFx
@@ -4877,11 +4794,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: CurrDepthBiasData
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData CurrDepthBiasData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData>(Ptr + 1544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1544); }
-    }
+    public unsafe ref BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData CurrDepthBiasData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData>(Ptr + 1544);
 
     /// <summary>
     /// BoolProperty: bDisableColourWrites
@@ -4976,11 +4890,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: StuckStartTime
     /// </summary>
-    public unsafe double StuckStartTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 1608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1608); }
-    }
+    public unsafe ref double StuckStartTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 1608);
 
     /// <summary>
     /// FloatProperty: CurrRagdollTime
@@ -5048,29 +4959,20 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: TwistBoneFixers
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FTwistBoneFixers TwistBoneFixers
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FTwistBoneFixers>(Ptr + 1660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1660); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FTwistBoneFixers TwistBoneFixers
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FTwistBoneFixers>(Ptr + 1660);
 
     /// <summary>
     /// StructProperty: ClavicleFixer
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FClavicleFixer ClavicleFixer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FClavicleFixer>(Ptr + 1672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FClavicleFixer ClavicleFixer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FClavicleFixer>(Ptr + 1672);
 
     /// <summary>
     /// StructProperty: BreathingFixer
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer BreathingFixer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer>(Ptr + 1688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1688); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer BreathingFixer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer>(Ptr + 1688);
 
     /// <summary>
     /// FloatProperty: ProgressiveDrawingFraction

@@ -128,9 +128,6 @@ public partial class RDebugLabel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Colour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor Colour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor Colour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 444);
 }

@@ -112,10 +112,9 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: NetId
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetId
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -128,10 +127,9 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: PartyLeader
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId PartyLeader
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -165,11 +163,8 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastParty
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineRecentPlayersList.FRecentParty LastParty
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineRecentPlayersList.FRecentParty>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineRecentPlayersList.FRecentParty LastParty
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineRecentPlayersList.FRecentParty>(Ptr + 68);
 
     /// <summary>
     /// IntProperty: MaxRecentPlayers

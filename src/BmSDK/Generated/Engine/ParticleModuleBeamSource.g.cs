@@ -139,27 +139,18 @@ public partial class ParticleModuleBeamSource : BmSDK.Engine.ParticleModuleBeamB
     /// <summary>
     /// StructProperty: Source
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Source
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Source
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: SourceTangent
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SourceTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SourceTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: SourceStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 128);
 }

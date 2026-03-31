@@ -96,9 +96,6 @@ public partial class RSeqAct_StartCameraWander : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// StructProperty: Settings
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings Settings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings Settings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.R3rdPersonCamera.FCameraWanderSettings>(Ptr + 208);
 }

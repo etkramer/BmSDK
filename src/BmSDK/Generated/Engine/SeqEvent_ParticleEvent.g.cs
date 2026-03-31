@@ -96,11 +96,8 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// <summary>
     /// StructProperty: EventPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 232);
 
     /// <summary>
     /// FloatProperty: EventEmitterTime
@@ -114,11 +111,8 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// <summary>
     /// StructProperty: EventVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// FloatProperty: EventParticleTime
@@ -132,11 +126,8 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// <summary>
     /// StructProperty: EventNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 
     /// <summary>
     /// BoolProperty: UseRelfectedImpactVector

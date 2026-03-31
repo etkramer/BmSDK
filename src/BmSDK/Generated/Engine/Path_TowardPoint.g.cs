@@ -87,9 +87,6 @@ public partial class Path_TowardPoint : BmSDK.Engine.PathConstraint, BmSDK.IGame
     /// <summary>
     /// StructProperty: GoalPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 52);
 }

@@ -76,11 +76,8 @@ public partial class ApexGenericAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: MApexAsset
     /// </summary>
-    public unsafe System.IntPtr MApexAsset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.IntPtr MApexAsset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 92);
 
     /// <summary>
     /// ArrayProperty: Materials

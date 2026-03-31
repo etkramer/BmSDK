@@ -219,11 +219,8 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: storedBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox storedBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox storedBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 652);
 
     /// <summary>
     /// FloatProperty: currentRainSoundValue

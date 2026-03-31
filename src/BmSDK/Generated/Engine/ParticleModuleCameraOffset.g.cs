@@ -87,11 +87,8 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
     /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat CameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: bSpawnTimeOnly

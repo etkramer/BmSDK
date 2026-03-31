@@ -14825,10 +14825,9 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
         /// <summary>
         /// StructProperty: AimDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 AimDirection
+        public unsafe ref System.Numerics.Vector3 AimDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -18309,11 +18308,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: HudScoreCombo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController.FHudComboData HudScoreCombo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController.FHudComboData>(Ptr + 2024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2024); }
-    }
+    public unsafe ref BmSDK.BmGame.RPlayerController.FHudComboData HudScoreCombo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPlayerController.FHudComboData>(Ptr + 2024);
 
     /// <summary>
     /// IntProperty: iHead2HeadBank
@@ -18327,11 +18323,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: HudChallengeCombatData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController.FChallengeCombatData HudChallengeCombatData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController.FChallengeCombatData>(Ptr + 2048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2048); }
-    }
+    public unsafe ref BmSDK.BmGame.RPlayerController.FChallengeCombatData HudChallengeCombatData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPlayerController.FChallengeCombatData>(Ptr + 2048);
 
     /// <summary>
     /// ObjectProperty: PlayerWaypoint
@@ -18633,11 +18626,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: RunRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RunRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
-    }
+    public unsafe ref BmSDK.Rotator RunRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2260);
 
     /// <summary>
     /// StrProperty: LastRoomNameShown
@@ -19128,11 +19118,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: AgilitySpecialMoveLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator AgilitySpecialMoveLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 2516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator AgilitySpecialMoveLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 2516);
 
     /// <summary>
     /// ObjectProperty: CoverSpecialMove
@@ -19146,11 +19133,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: CoverSpecialMoveLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CoverSpecialMoveLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 2632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2632); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CoverSpecialMoveLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 2632);
 
     /// <summary>
     /// FloatProperty: CapeGlideTerminalVelocity
@@ -19308,11 +19292,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: GlideRotator
     /// </summary>
-    public unsafe BmSDK.Rotator GlideRotator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2812); }
-    }
+    public unsafe ref BmSDK.Rotator GlideRotator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2812);
 
     /// <summary>
     /// FloatProperty: CapeGlideTurnProp
@@ -19587,11 +19568,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: CapeGlidePawnRotError
     /// </summary>
-    public unsafe BmSDK.Rotator CapeGlidePawnRotError
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2944); }
-    }
+    public unsafe ref BmSDK.Rotator CapeGlidePawnRotError
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2944);
 
     /// <summary>
     /// FloatProperty: CapeGlideSpeed
@@ -19614,20 +19592,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: RadioSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RadioSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 2964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2964); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RadioSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 2964);
 
     /// <summary>
     /// StructProperty: RadioBASoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RadioBASoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 2976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2976); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RadioBASoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 2976);
 
     /// <summary>
     /// FloatProperty: DodgeMax
@@ -19641,20 +19613,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: GlideViewModifier
     /// </summary>
-    public unsafe BmSDK.Rotator GlideViewModifier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2992); }
-    }
+    public unsafe ref BmSDK.Rotator GlideViewModifier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2992);
 
     /// <summary>
     /// StructProperty: RunDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 RunDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3004); }
-    }
+    public unsafe ref System.Numerics.Vector3 RunDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3004);
 
     /// <summary>
     /// ObjectProperty: GlidePostProcess
@@ -19812,11 +19778,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: TakedownBarrier
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator TakedownBarrier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 3084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3084); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator TakedownBarrier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 3084);
 
     /// <summary>
     /// FloatProperty: AboveTakedownTargetFloor2FloorHeight
@@ -19866,11 +19829,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: AboveTakedownRailingDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AboveTakedownRailingDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3216); }
-    }
+    public unsafe ref System.Numerics.Vector3 AboveTakedownRailingDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3216);
 
     /// <summary>
     /// ObjectProperty: AboveTakedownTarget
@@ -19938,11 +19898,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: SwingingFreeSpaceFloorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingingFreeSpaceFloorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3256); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingingFreeSpaceFloorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3256);
 
     /// <summary>
     /// FloatProperty: SwingTargetHorizontalRange
@@ -19992,11 +19949,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: CatwalkTakedownLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CatwalkTakedownLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 3288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3288); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CatwalkTakedownLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 3288);
 
     /// <summary>
     /// ArrayProperty: ActiveVolumes
@@ -20019,29 +19973,20 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: PawnVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 PawnVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3424); }
-    }
+    public unsafe ref System.Numerics.Vector3 PawnVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3424);
 
     /// <summary>
     /// StructProperty: LastGoodGrappleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGoodGrappleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3436); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGoodGrappleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3436);
 
     /// <summary>
     /// StructProperty: GrappleLaunchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleLaunchLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3448); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleLaunchLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3448);
 
     /// <summary>
     /// FloatProperty: GrapplePullStrength
@@ -20055,11 +20000,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: GrapplePullDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrapplePullDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3464); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrapplePullDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3464);
 
     /// <summary>
     /// FloatProperty: GrappleLegPullUpSpeed
@@ -20181,20 +20123,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: CornerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CornerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3536); }
-    }
+    public unsafe ref System.Numerics.Vector3 CornerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3536);
 
     /// <summary>
     /// StructProperty: CornerRotation
     /// </summary>
-    public unsafe BmSDK.Rotator CornerRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3548); }
-    }
+    public unsafe ref BmSDK.Rotator CornerRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3548);
 
     /// <summary>
     /// FloatProperty: CornerLROffset
@@ -20208,11 +20144,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: LadderTop
     /// </summary>
-    public unsafe System.Numerics.Vector3 LadderTop
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref System.Numerics.Vector3 LadderTop
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3564);
 
     /// <summary>
     /// FloatProperty: FallingAttackHeight
@@ -20424,11 +20357,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: SoftCoverEnvironmentTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer SoftCoverEnvironmentTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3724); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer SoftCoverEnvironmentTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3724);
 
     /// <summary>
     /// FloatProperty: SoftCoverInDistance
@@ -20469,20 +20399,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: PeerCameraType
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer PeerCameraType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3748); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer PeerCameraType
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3748);
 
     /// <summary>
     /// StructProperty: GlideDiveEdgeType
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer GlideDiveEdgeType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3756); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer GlideDiveEdgeType
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveTypesContainer>(Ptr + 3756);
 
     /// <summary>
     /// NameProperty: OverridableTransitionCamera
@@ -20595,11 +20519,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: FallingIntoSwingTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FallingIntoSwingTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3816); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FallingIntoSwingTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3816);
 
     /// <summary>
     /// IntProperty: FallingIntoSwingPhase
@@ -20613,11 +20534,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: AutoAlignDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AutoAlignDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3824); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3824); }
-    }
+    public unsafe ref System.Numerics.Vector3 AutoAlignDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3824);
 
     /// <summary>
     /// ObjectProperty: OriginalBatmanPawn
@@ -20658,20 +20576,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: Force1stPersonLookDirection
     /// </summary>
-    public unsafe BmSDK.Rotator Force1stPersonLookDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3876); }
-    }
+    public unsafe ref BmSDK.Rotator Force1stPersonLookDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3876);
 
     /// <summary>
     /// StructProperty: Force1stPersonLookDirectionOriginalDirection
     /// </summary>
-    public unsafe BmSDK.Rotator Force1stPersonLookDirectionOriginalDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3888); }
-    }
+    public unsafe ref BmSDK.Rotator Force1stPersonLookDirectionOriginalDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3888);
 
     /// <summary>
     /// FloatProperty: StateTimer
@@ -20739,11 +20651,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: LastGrappleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGrappleLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3944); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGrappleLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3944);
 
     /// <summary>
     /// FloatProperty: MinGrappleLengthThisGrapple
@@ -20793,11 +20702,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: GlideStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GlideStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3984); }
-    }
+    public unsafe ref System.Numerics.Vector3 GlideStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3984);
 
     /// <summary>
     /// FloatProperty: GlideStartTime
@@ -20811,11 +20717,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: GlideOverWaterStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GlideOverWaterStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4000); }
-    }
+    public unsafe ref System.Numerics.Vector3 GlideOverWaterStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4000);
 
     /// <summary>
     /// FloatProperty: DiveStartHeight
@@ -20829,11 +20732,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: WalkStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WalkStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4016); }
-    }
+    public unsafe ref System.Numerics.Vector3 WalkStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4016);
 
     /// <summary>
     /// ObjectProperty: AffectPlayerVolume
@@ -20874,20 +20774,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: CoverTurnTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CoverTurnTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 4044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4044); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CoverTurnTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 4044);
 
     /// <summary>
     /// StructProperty: FallingPose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FallingPose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 4048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4048); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FallingPose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 4048);
 
     /// <summary>
     /// FloatProperty: LastTimeOutOfGrate
@@ -21036,20 +20930,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: SaveGameLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SaveGameLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4116); }
-    }
+    public unsafe ref System.Numerics.Vector3 SaveGameLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4116);
 
     /// <summary>
     /// StructProperty: SaveGameRotation
     /// </summary>
-    public unsafe BmSDK.Rotator SaveGameRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4128); }
-    }
+    public unsafe ref BmSDK.Rotator SaveGameRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4128);
 
     /// <summary>
     /// FloatProperty: SaveGameSetTime
@@ -21063,11 +20951,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: SavedMovementRequestDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedMovementRequestDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4144); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedMovementRequestDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4144);
 
     /// <summary>
     /// ObjectProperty: CurrentSavedMove
@@ -21099,20 +20984,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: LastTakedownLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastTakedownLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4168); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastTakedownLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4168);
 
     /// <summary>
     /// StructProperty: LastTakedownRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastTakedownRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4180); }
-    }
+    public unsafe ref BmSDK.Rotator LastTakedownRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4180);
 
     /// <summary>
     /// IntProperty: LastTakedownRandomChoice
@@ -21144,11 +21023,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: InitialGrapplePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialGrapplePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4204); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialGrapplePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4204);
 
     /// <summary>
     /// FloatProperty: GadgetUsedRecentlyTime
@@ -21207,20 +21083,14 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: NPCAvoidanceNPCDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 NPCAvoidanceNPCDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4240); }
-    }
+    public unsafe ref System.Numerics.Vector3 NPCAvoidanceNPCDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4240);
 
     /// <summary>
     /// StructProperty: NPCAvoidancePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 NPCAvoidancePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4252); }
-    }
+    public unsafe ref System.Numerics.Vector3 NPCAvoidancePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4252);
 
     /// <summary>
     /// ObjectProperty: NPCAvoidanceLookActor
@@ -21324,11 +21194,8 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// StructProperty: LastLookAround
     /// </summary>
-    public unsafe BmSDK.Rotator LastLookAround
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4316); }
-    }
+    public unsafe ref BmSDK.Rotator LastLookAround
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4316);
 
     /// <summary>
     /// FloatProperty: CurrentLookAroundBlendTime

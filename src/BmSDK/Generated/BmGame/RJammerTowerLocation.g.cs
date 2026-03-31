@@ -209,11 +209,8 @@ public partial class RJammerTowerLocation : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CurrentWaypointLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentWaypointLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentWaypointLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// FloatProperty: DistanceToCurrentWaypoint

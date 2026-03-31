@@ -266,11 +266,8 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: OverrideStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OverrideStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 OverrideStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// ObjectProperty: Thug

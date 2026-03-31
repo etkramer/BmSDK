@@ -699,11 +699,8 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// StructProperty: DoorCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 DoorCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref System.Numerics.Vector3 DoorCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 668);
 
     /// <summary>
     /// ByteProperty: DoorAttractAxis
@@ -924,20 +921,14 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// StructProperty: MotorActivationFXOffset1
     /// </summary>
-    public unsafe System.Numerics.Vector3 MotorActivationFXOffset1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref System.Numerics.Vector3 MotorActivationFXOffset1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 812);
 
     /// <summary>
     /// StructProperty: MotorActivationFXOffset2
     /// </summary>
-    public unsafe System.Numerics.Vector3 MotorActivationFXOffset2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 824); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
-    }
+    public unsafe ref System.Numerics.Vector3 MotorActivationFXOffset2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 824);
 
     /// <summary>
     /// ObjectProperty: MotorFailFX
@@ -960,9 +951,6 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// StructProperty: MotorAutoTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MotorAutoTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref System.Numerics.Vector3 MotorAutoTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 844);
 }

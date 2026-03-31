@@ -377,11 +377,8 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImpactEffectInfo
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FPhysEffectInfo ImpactEffectInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FPhysEffectInfo ImpactEffectInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 500);
 
     /// <summary>
     /// ComponentProperty: ImpactForceComponent
@@ -404,11 +401,8 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SlideSoundLoop
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundLoop SlideSoundLoop
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundLoop>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundLoop SlideSoundLoop
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundLoop>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: LastSlideTime
@@ -422,11 +416,8 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SlideEffectInfo
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FPhysEffectInfo SlideEffectInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FPhysEffectInfo SlideEffectInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 552);
 
     /// <summary>
     /// FloatProperty: StayUprightTorqueFactor
@@ -458,11 +449,8 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RBState
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FRigidBodyState RBState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FRigidBodyState>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FRigidBodyState RBState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FRigidBodyState>(Ptr + 592);
 
     /// <summary>
     /// FloatProperty: AngErrorAccumulator
@@ -476,27 +464,18 @@ public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReplicatedDrawScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReplicatedDrawScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReplicatedDrawScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: InitialLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: InitialRotation
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref BmSDK.Rotator InitialRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 684);
 }

@@ -94,20 +94,14 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: FixedParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts FixedParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts FixedParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 52);
 
     /// <summary>
     /// StructProperty: UnfixedParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts UnfixedParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts UnfixedParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: MotorAll
@@ -121,11 +115,8 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: MotorParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts MotorParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts MotorParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 64);
 
     /// <summary>
     /// FloatProperty: MotorSpringScale

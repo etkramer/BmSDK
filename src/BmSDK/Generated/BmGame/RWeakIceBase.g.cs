@@ -202,11 +202,8 @@ public partial class RWeakIceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FData
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeakIceBase.FFloorData FData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RWeakIceBase.FFloorData>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.BmGame.RWeakIceBase.FFloorData FData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RWeakIceBase.FFloorData>(Ptr + 432);
 
     /// <summary>
     /// ObjectProperty: CrackMat

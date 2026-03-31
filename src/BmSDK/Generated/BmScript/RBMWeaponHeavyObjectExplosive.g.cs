@@ -239,20 +239,14 @@ public partial class RBMWeaponHeavyObjectExplosive : BmSDK.BmScript.RBMWeaponHea
     /// <summary>
     /// StructProperty: BatarangImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: TargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// ObjectProperty: ExplodeEvent

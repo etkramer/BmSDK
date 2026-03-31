@@ -138,9 +138,6 @@ public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.Engine.E
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.IntPtr VfTable_IEditorLinkSelectionInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 628);
 }

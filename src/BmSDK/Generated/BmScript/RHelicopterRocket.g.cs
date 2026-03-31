@@ -288,20 +288,14 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// StructProperty: RocketDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 RocketDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 RocketDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// StructProperty: FlightTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlightTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlightTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: FlightSpeed
@@ -333,11 +327,8 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// StructProperty: InitialMomentum
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialMomentum
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialMomentum
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// FloatProperty: MomentumCountdown

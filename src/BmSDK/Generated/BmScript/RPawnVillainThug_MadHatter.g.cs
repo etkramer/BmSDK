@@ -99,11 +99,8 @@ public partial class RPawnVillainThug_MadHatter : BmSDK.BmGame.RPawnFriendly, Bm
     /// <summary>
     /// StructProperty: maskTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 maskTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2748); }
-    }
+    public unsafe ref System.Numerics.Vector3 maskTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2748);
 
     /// <summary>
     /// ComponentProperty: maskComp

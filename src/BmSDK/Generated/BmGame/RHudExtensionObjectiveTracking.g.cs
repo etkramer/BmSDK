@@ -147,11 +147,8 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// StructProperty: vScreenPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 vScreenPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref System.Numerics.Vector3 vScreenPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 136);
 
     /// <summary>
     /// FloatProperty: fProximityToBatman

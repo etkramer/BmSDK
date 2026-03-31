@@ -123,39 +123,33 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Element
         /// </summary>
-        public unsafe System.IntPtr Element
+        public unsafe ref System.IntPtr Element
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: Next
         /// </summary>
-        public unsafe System.IntPtr Next
+        public unsafe ref System.IntPtr Next
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: PrevLink
         /// </summary>
-        public unsafe System.IntPtr PrevLink
+        public unsafe ref System.IntPtr PrevLink
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
         }
     }
 
     /// <summary>
     /// StructProperty: Mips
     /// </summary>
-    public unsafe BmSDK.GameObject.FIndirectArray_Mirror Mips
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.GameObject.FIndirectArray_Mirror Mips
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 212);
 
     /// <summary>
     /// IntProperty: SizeX
@@ -313,11 +307,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TextureFileCacheGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid TextureFileCacheGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid TextureFileCacheGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 268);
 
     /// <summary>
     /// IntProperty: RequestedMips
@@ -340,11 +331,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PendingMipChangeRequestStatus
     /// </summary>
-    public unsafe BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 280);
 
     /// <summary>
     /// ArrayProperty: SystemMemoryData
@@ -358,11 +346,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StreamableTexturesLink
     /// </summary>
-    public unsafe BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 296);
 
     /// <summary>
     /// IntProperty: StreamingIndex
@@ -385,11 +370,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResourceMem
     /// </summary>
-    public unsafe System.IntPtr ResourceMem
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref System.IntPtr ResourceMem
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 316);
 
     /// <summary>
     /// IntProperty: FirstResourceMemMip
@@ -418,10 +400,9 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror Data
+        public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror Data
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>

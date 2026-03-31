@@ -292,19 +292,17 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Middle
         /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionOptions Middle
+        public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionOptions Middle
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: End
         /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionOptions End
+        public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionOptions End
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -431,19 +429,17 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Start
         /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence.FAnimReferenceOptions Start
+        public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferenceOptions Start
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferenceOptions>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferenceOptions>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: End
         /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence.FAnimReferenceOptions End
+        public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferenceOptions End
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferenceOptions>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferenceOptions>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -1033,11 +1029,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// FloatProperty: ReferencePointYaw
@@ -1051,11 +1044,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferenceOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 188);
 
     /// <summary>
     /// FloatProperty: ProportionalMotionDistanceCap
@@ -1069,11 +1059,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CollisionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 232);
 
     /// <summary>
     /// FloatProperty: BlendInDuration
@@ -1222,38 +1209,26 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AnimZip_LinearOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimZip_LinearOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimZip_LinearOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: AnimZip_LinearSpan
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimZip_LinearSpan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimZip_LinearSpan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 332);
 
     /// <summary>
     /// StructProperty: TranslationCodec
     /// </summary>
-    public unsafe System.IntPtr TranslationCodec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref System.IntPtr TranslationCodec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 344);
 
     /// <summary>
     /// StructProperty: RotationCodec
     /// </summary>
-    public unsafe System.IntPtr RotationCodec
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.IntPtr RotationCodec
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 348);
 
     /// <summary>
     /// IntProperty: EncodingPkgVersion

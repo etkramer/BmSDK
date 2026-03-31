@@ -286,11 +286,8 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IRSpotableInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref System.IntPtr VfTable_IRSpotableInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 800);
 
     /// <summary>
     /// ArrayProperty: DetonateTargetCheckBones
@@ -367,11 +364,8 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     /// <summary>
     /// StructProperty: ImpactedWallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactedWallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactedWallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 836);
 
     /// <summary>
     /// ObjectProperty: IndicatorLightMaterial

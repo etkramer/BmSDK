@@ -101,20 +101,14 @@ public partial class RBMAIAction_NervousSearchMove_Raw : BmSDK.BmGame.RBMAIActio
     /// <summary>
     /// StructProperty: GoalPosFirst
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPosFirst
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalPosFirst
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: GoalPosSecond
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPosSecond
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalPosSecond
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 
     /// <summary>
     /// BoolProperty: bUseAdditionalPoint

@@ -135,11 +135,8 @@ public partial class RAEC_Search_Sub_CornerTerrified : BmSDK.BmGame.RAlertEventC
     /// <summary>
     /// StructProperty: StoredSearchDest
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState StoredSearchDest
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState StoredSearchDest
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState>(Ptr + 456);
 
     /// <summary>
     /// ObjectProperty: StartCorner

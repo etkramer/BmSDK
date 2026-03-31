@@ -103,9 +103,6 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// <summary>
     /// StructProperty: WorldLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 }

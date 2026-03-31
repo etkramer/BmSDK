@@ -158,11 +158,8 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// StructProperty: MotorActivationFXOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MotorActivationFXOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref System.Numerics.Vector3 MotorActivationFXOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 764);
 
     /// <summary>
     /// BoolProperty: bDebugDrawFXLocation

@@ -259,11 +259,8 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BodySetupIndexMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror BodySetupIndexMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror BodySetupIndexMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 48);
 
     /// <summary>
     /// ArrayProperty: BodySetup

@@ -310,11 +310,8 @@ public partial class RSpecialMoveInstance_HarpoonDragObject : BmSDK.BmGame.RSpec
     /// <summary>
     /// StructProperty: RopeTensionSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 624);
 
     /// <summary>
     /// IntProperty: RopeTensionSoundState

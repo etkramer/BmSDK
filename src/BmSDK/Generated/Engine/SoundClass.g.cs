@@ -76,11 +76,8 @@ public partial class SoundClass : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Properties
     /// </summary>
-    public unsafe BmSDK.Engine.SoundClass.FSoundClassProperties Properties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundClass.FSoundClassProperties>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.Engine.SoundClass.FSoundClassProperties Properties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SoundClass.FSoundClassProperties>(Ptr + 44);
 
     /// <summary>
     /// ArrayProperty: ChildClassNames

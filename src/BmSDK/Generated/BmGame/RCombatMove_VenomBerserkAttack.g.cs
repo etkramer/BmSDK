@@ -223,11 +223,8 @@ public partial class RCombatMove_VenomBerserkAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// StructProperty: StrikeID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StrikeID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 496);
 
     /// <summary>
     /// FloatProperty: MoveTime
@@ -268,9 +265,6 @@ public partial class RCombatMove_VenomBerserkAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// StructProperty: InitialHeading
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialHeading
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialHeading
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 }

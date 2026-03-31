@@ -133,11 +133,8 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// StructProperty: KickStandLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 KickStandLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 KickStandLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 
     /// <summary>
     /// NameProperty: KickBone
@@ -151,9 +148,6 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// StructProperty: KickAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId KickAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId KickAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596);
 }

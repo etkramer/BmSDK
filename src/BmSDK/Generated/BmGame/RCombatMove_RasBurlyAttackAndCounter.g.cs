@@ -572,10 +572,9 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
         /// <summary>
         /// StructProperty: AnimId
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
+        public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId AnimId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -617,10 +616,9 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
         /// <summary>
         /// StructProperty: RotationOffset
         /// </summary>
-        public unsafe BmSDK.Rotator RotationOffset
+        public unsafe ref BmSDK.Rotator RotationOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
@@ -654,11 +652,8 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: BatmanAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BatmanAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 468);
 
     /// <summary>
     /// FloatProperty: DelayWindow
@@ -834,11 +829,8 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// StructProperty: MoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: MaxDistFromCentre

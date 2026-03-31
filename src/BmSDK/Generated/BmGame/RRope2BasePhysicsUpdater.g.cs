@@ -91,48 +91,41 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
         /// <summary>
         /// StructProperty: EndInitPosition
         /// </summary>
-        public unsafe System.Numerics.Vector3 EndInitPosition
+        public unsafe ref System.Numerics.Vector3 EndInitPosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: EndInitRotation
         /// </summary>
-        public unsafe BmSDK.Rotator EndInitRotation
+        public unsafe ref BmSDK.Rotator EndInitRotation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
         /// StructProperty: EndInitLinearVelocity
         /// </summary>
-        public unsafe System.Numerics.Vector3 EndInitLinearVelocity
+        public unsafe ref System.Numerics.Vector3 EndInitLinearVelocity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
         /// StructProperty: EndInitAngularVelocity
         /// </summary>
-        public unsafe System.Numerics.Vector3 EndInitAngularVelocity
+        public unsafe ref System.Numerics.Vector3 EndInitAngularVelocity
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
         }
     }
 
     /// <summary>
     /// StructProperty: RopePhysics
     /// </summary>
-    public unsafe System.IntPtr RopePhysics
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref System.IntPtr RopePhysics
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 64);
 
     /// <summary>
     /// BoolProperty: bCreateBasicRopeJoint
@@ -200,17 +193,11 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 80);
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 132);
 }

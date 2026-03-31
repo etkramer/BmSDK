@@ -121,11 +121,8 @@ public partial class RSpecialMoveInstance_RelativeAnimWithAlignment : BmSDK.BmGa
     /// <summary>
     /// StructProperty: MoveStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 656);
 
     /// <summary>
     /// ComponentProperty: SyncSkeletalMeshComponent

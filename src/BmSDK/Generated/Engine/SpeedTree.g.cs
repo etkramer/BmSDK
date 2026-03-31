@@ -85,11 +85,8 @@ public partial class SpeedTree : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SRH
     /// </summary>
-    public unsafe System.IntPtr SRH
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.IntPtr SRH
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 48);
 
     /// <summary>
     /// FloatProperty: LeafStaticShadowOpacity
@@ -166,18 +163,12 @@ public partial class SpeedTree : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WindDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 WindDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector3 WindDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 96);
 }

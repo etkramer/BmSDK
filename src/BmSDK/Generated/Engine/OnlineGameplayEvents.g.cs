@@ -91,10 +91,9 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: EventLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 EventLocation
+        public unsafe ref System.Numerics.Vector3 EventLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
@@ -207,11 +206,8 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GameplaySessionID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid GameplaySessionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid GameplaySessionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 120);
 
     /// <summary>
     /// Struct: FPlayerInformation
@@ -240,10 +236,9 @@ public partial class OnlineGameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: UniqueId
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>

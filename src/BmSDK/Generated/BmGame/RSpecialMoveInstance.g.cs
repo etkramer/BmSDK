@@ -539,11 +539,8 @@ public partial class RSpecialMoveInstance : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CurrentMoveLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CurrentMoveLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator CurrentMoveLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 428);
 
     /// <summary>
     /// BoolProperty: bPushedState
@@ -719,9 +716,6 @@ public partial class RSpecialMoveInstance : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: PlayerAlertLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerAlertLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerAlertLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 }

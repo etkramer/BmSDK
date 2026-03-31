@@ -178,20 +178,14 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// StructProperty: WhipTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 WhipTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref System.Numerics.Vector3 WhipTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 656);
 
     /// <summary>
     /// StructProperty: MoveLocation
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(Ptr + 668);
 
     /// <summary>
     /// BoolProperty: bMoveProcedurally
@@ -241,9 +235,6 @@ public partial class RSpecialMoveInstance_CwAerialWhipPounce : BmSDK.BmGame.RSpe
     /// <summary>
     /// StructProperty: OriginalRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OriginalRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref BmSDK.Rotator OriginalRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 788);
 }

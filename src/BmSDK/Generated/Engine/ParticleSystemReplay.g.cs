@@ -134,10 +134,9 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: FrameState
         /// </summary>
-        public unsafe System.IntPtr FrameState
+        public unsafe ref System.IntPtr FrameState
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 8); } }
         }
     }
 }

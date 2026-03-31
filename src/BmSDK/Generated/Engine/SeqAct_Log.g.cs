@@ -114,11 +114,8 @@ public partial class SeqAct_Log : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 212);
 
     /// <summary>
     /// StrProperty: LogMessage

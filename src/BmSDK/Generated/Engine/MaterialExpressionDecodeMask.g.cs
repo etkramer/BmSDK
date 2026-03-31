@@ -101,10 +101,9 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
         /// <summary>
         /// StructProperty: Input
         /// </summary>
-        public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Input
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>((IntPtr)thisPtr + 12); } }
         }
     }
 
@@ -129,29 +128,20 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: Mask
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Mask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Mask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: BlendFrom
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput BlendFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: BlendTo
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput BlendTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 164);
 
     /// <summary>
     /// ByteProperty: DecodeBlendType

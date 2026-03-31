@@ -76,11 +76,8 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: FloatProp
     /// </summary>
-    public unsafe System.IntPtr FloatProp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.IntPtr FloatProp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
 
     /// <summary>
     /// FloatProperty: ResetFloat

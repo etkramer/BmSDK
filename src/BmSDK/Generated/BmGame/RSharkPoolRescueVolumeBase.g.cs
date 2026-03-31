@@ -154,11 +154,8 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// StructProperty: InitialWaterLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialWaterLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialWaterLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
 
     /// <summary>
     /// ObjectProperty: Player
@@ -208,20 +205,14 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// StructProperty: SharkAttackLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 SharkAttackLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 SharkAttackLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// StructProperty: SharkAttackNorm
     /// </summary>
-    public unsafe System.Numerics.Vector3 SharkAttackNorm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 SharkAttackNorm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// FloatProperty: WaterTop

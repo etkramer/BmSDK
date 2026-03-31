@@ -211,20 +211,14 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// StructProperty: ComponentBaseResources
     /// </summary>
-    public unsafe System.IntPtr ComponentBaseResources
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.IntPtr ComponentBaseResources
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 480);
 
     /// <summary>
     /// ArrayProperty: VisibleFragments

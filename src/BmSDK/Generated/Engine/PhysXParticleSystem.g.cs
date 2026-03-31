@@ -121,11 +121,8 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 56);
 
     /// <summary>
     /// FloatProperty: CollisionDistance
@@ -274,11 +271,8 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ExternalAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExternalAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExternalAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 100);
 
     /// <summary>
     /// FloatProperty: RestParticleDistance
@@ -346,20 +340,14 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CascadeScene
     /// </summary>
-    public unsafe System.IntPtr CascadeScene
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.IntPtr CascadeScene
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: PSys
     /// </summary>
-    public unsafe System.IntPtr PSys
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref System.IntPtr PSys
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 144);
 
     /// <summary>
     /// Enum: EPacketSizeMultiplier

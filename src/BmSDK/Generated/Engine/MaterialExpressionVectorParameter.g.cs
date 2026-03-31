@@ -76,9 +76,6 @@ public partial class MaterialExpressionVectorParameter : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: DefaultValue
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor DefaultValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor DefaultValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 104);
 }

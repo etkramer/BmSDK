@@ -82,18 +82,16 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         /// <summary>
         /// StructProperty: Phases
         /// </summary>
-        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_0
+        public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_0
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>((IntPtr)thisPtr + 0); } }
         }
         /// <summary>
         /// StructProperty: Phases
         /// </summary>
-        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_1
+        public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>((IntPtr)thisPtr + 12); } }
         }
     }
 
@@ -122,10 +120,9 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         /// <summary>
         /// StructProperty: TranslationAndScale
         /// </summary>
-        public unsafe System.Numerics.Vector4 TranslationAndScale
+        public unsafe ref System.Numerics.Vector4 TranslationAndScale
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -156,10 +153,9 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         /// <summary>
         /// StructProperty: Translation
         /// </summary>
-        public unsafe System.Numerics.Vector3 Translation
+        public unsafe ref System.Numerics.Vector3 Translation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>

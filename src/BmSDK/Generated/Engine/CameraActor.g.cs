@@ -202,11 +202,8 @@ public partial class CameraActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CamOverridePostProcess
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamOverridePostProcess
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamOverridePostProcess
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 444);
 
     /// <summary>
     /// ComponentProperty: DrawFrustum

@@ -752,10 +752,9 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
         /// <summary>
         /// StructProperty: SwingPosition
         /// </summary>
-        public unsafe System.Numerics.Vector3 SwingPosition
+        public unsafe ref System.Numerics.Vector3 SwingPosition
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -770,10 +769,9 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
         /// <summary>
         /// StructProperty: MidPoint
         /// </summary>
-        public unsafe System.Numerics.Vector3 MidPoint
+        public unsafe ref System.Numerics.Vector3 MidPoint
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
         }
     }
 
@@ -996,20 +994,14 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// StructProperty: HangOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 HangOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 HangOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: GrappleIconOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleIconOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleIconOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// FloatProperty: VantagePointRange
@@ -1104,11 +1096,8 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// StructProperty: RopeAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// FloatProperty: StoredRopeLengthForFear
@@ -1400,11 +1389,8 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// StructProperty: OctTreeObject
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 844);
 
     /// <summary>
     /// ObjectProperty: ThermalMat
@@ -1427,11 +1413,8 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// StructProperty: CatwomanPerchOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CatwomanPerchOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 CatwomanPerchOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// ObjectProperty: ClimbLocators

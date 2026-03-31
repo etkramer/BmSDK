@@ -269,11 +269,8 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// StructProperty: RopePelvisAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePelvisAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1208); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePelvisAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1208);
 
     /// <summary>
     /// ArrayProperty: RopeExtraAttachConnections
@@ -287,20 +284,14 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     /// <summary>
     /// StructProperty: RopeRenderStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeRenderStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeRenderStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1232);
 
     /// <summary>
     /// StructProperty: RopePhysStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePhysStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePhysStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1244);
 
     /// <summary>
     /// ArrayProperty: HangRope

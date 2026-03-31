@@ -77,10 +77,9 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: CurrentCycleTime
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil.FCycleTime CurrentCycleTime
+        public unsafe ref BmSDK.BmGame.RAnimUtil.FCycleTime CurrentCycleTime
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FCycleTime>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FCycleTime>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -113,10 +112,9 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: OneShotMovementCycle
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_MovementPlayer.FOneShotMovementCycle OneShotMovementCycle
+        public unsafe ref BmSDK.BmGame.RAnimUtil_MovementPlayer.FOneShotMovementCycle OneShotMovementCycle
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_MovementPlayer.FOneShotMovementCycle>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_MovementPlayer.FOneShotMovementCycle>((IntPtr)thisPtr + 20); } }
         }
 
         /// <summary>
@@ -156,19 +154,17 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: Anim
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil.FResolvedAnimConfig Anim
+        public unsafe ref BmSDK.BmGame.RAnimUtil.FResolvedAnimConfig Anim
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FResolvedAnimConfig>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FResolvedAnimConfig>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
         /// StructProperty: TransitionId
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
+        public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
@@ -228,10 +224,9 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: Time
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan Time
+        public unsafe ref BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan Time
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>(Ptr + 52); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FNormalizedTimeSpan>((IntPtr)thisPtr + 52); } }
         }
     }
 

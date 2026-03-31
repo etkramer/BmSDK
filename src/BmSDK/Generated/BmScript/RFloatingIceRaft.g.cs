@@ -240,11 +240,8 @@ public partial class RFloatingIceRaft : BmSDK.BmGame.RFloatingRaft, BmSDK.IGameO
     /// <summary>
     /// StructProperty: LastImpactLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastImpactLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastImpactLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1256);
 
     /// <summary>
     /// ArrayProperty: IceChunkMeshes

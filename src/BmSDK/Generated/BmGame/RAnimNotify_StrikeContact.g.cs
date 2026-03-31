@@ -294,19 +294,17 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
         /// <summary>
         /// StructProperty: DamageCollisionProjection
         /// </summary>
-        public unsafe System.Numerics.Vector3 DamageCollisionProjection
+        public unsafe ref System.Numerics.Vector3 DamageCollisionProjection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 20); } }
         }
 
         /// <summary>
         /// StructProperty: DamageDirection
         /// </summary>
-        public unsafe System.Numerics.Vector3 DamageDirection
+        public unsafe ref System.Numerics.Vector3 DamageDirection
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 32); } }
         }
 
         /// <summary>
@@ -356,47 +354,32 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// StructProperty: StrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo StrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo StrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo>(Ptr + 44);
 
     /// <summary>
     /// StructProperty: CameraInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo CameraInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo CameraInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: DamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo DamageInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo DamageInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo>(Ptr + 64);
 
     /// <summary>
     /// StructProperty: StrikeFlags
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags StrikeFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags StrikeFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: CapeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo CapeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo CapeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo>(Ptr + 120);
 
     /// <summary>
     /// IntProperty: UnlockChapter

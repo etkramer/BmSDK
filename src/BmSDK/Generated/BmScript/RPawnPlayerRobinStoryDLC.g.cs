@@ -432,20 +432,14 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// StructProperty: BombOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BombOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6136); }
-    }
+    public unsafe ref System.Numerics.Vector3 BombOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6136);
 
     /// <summary>
     /// StructProperty: BombRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BombRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 6148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6148); }
-    }
+    public unsafe ref BmSDK.Rotator BombRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 6148);
 
     /// <summary>
     /// BoolProperty: bCheatSuperShield

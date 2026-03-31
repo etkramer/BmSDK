@@ -76,20 +76,14 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     /// <summary>
     /// StructProperty: VfTable_IUIListElementProvider
     /// </summary>
-    public unsafe System.IntPtr VfTable_IUIListElementProvider
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
+    public unsafe ref System.IntPtr VfTable_IUIListElementProvider
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 76);
 
     /// <summary>
     /// StructProperty: VfTable_IUIListElementCellProvider
     /// </summary>
-    public unsafe System.IntPtr VfTable_IUIListElementCellProvider
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.IntPtr VfTable_IUIListElementCellProvider
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 80);
 
     /// <summary>
     /// ObjectProperty: PlayerStorage

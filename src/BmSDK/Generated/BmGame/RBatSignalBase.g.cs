@@ -217,9 +217,6 @@ public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BasePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 BasePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref System.Numerics.Vector3 BasePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 488);
 }

@@ -601,11 +601,8 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: LastPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 844);
 
     /// <summary>
     /// BoolProperty: Braking
@@ -736,29 +733,20 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: FlipOldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlipOldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlipOldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 872);
 
     /// <summary>
     /// StructProperty: FlipOldRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FlipOldRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref BmSDK.Rotator FlipOldRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 884);
 
     /// <summary>
     /// StructProperty: FlipTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FlipTargetRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.Rotator FlipTargetRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 896);
 
     /// <summary>
     /// FloatProperty: AutoLevelSpeed
@@ -817,20 +805,14 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// <summary>
     /// StructProperty: InitialFlipAnimTransform
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialFlipAnimTransform
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialFlipAnimTransform
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 936);
 
     /// <summary>
     /// StructProperty: InvInitialFlipAnimRotation
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix InvInitialFlipAnimRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix InvInitialFlipAnimRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 960);
 
     /// <summary>
     /// FloatProperty: OverworldRCBatarangRange

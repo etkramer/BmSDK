@@ -505,20 +505,14 @@ public partial class RPawnShark : BmSDK.BmGame.RPawnVillainThug, BmSDK.BmGame.RI
     /// <summary>
     /// StructProperty: StartPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3568); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3568);
 
     /// <summary>
     /// StructProperty: StartRotation
     /// </summary>
-    public unsafe BmSDK.Rotator StartRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3580); }
-    }
+    public unsafe ref BmSDK.Rotator StartRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3580);
 
     /// <summary>
     /// ObjectProperty: BatmanSuccessMove
@@ -532,20 +526,14 @@ public partial class RPawnShark : BmSDK.BmGame.RPawnVillainThug, BmSDK.BmGame.RI
     /// <summary>
     /// StructProperty: EndPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3596); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3596);
 
     /// <summary>
     /// StructProperty: EndRotation
     /// </summary>
-    public unsafe BmSDK.Rotator EndRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3608); }
-    }
+    public unsafe ref BmSDK.Rotator EndRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3608);
 
     /// <summary>
     /// IntProperty: NumHits

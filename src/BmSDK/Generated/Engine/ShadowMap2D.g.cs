@@ -85,29 +85,20 @@ public partial class ShadowMap2D : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CoordinateScale
     /// </summary>
-    public unsafe System.Numerics.Vector2 CoordinateScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref System.Numerics.Vector2 CoordinateScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 48);
 
     /// <summary>
     /// StructProperty: CoordinateBias
     /// </summary>
-    public unsafe System.Numerics.Vector2 CoordinateBias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.Numerics.Vector2 CoordinateBias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 56);
 
     /// <summary>
     /// StructProperty: LightGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 64);
 
     /// <summary>
     /// BoolProperty: bIsShadowFactorTexture

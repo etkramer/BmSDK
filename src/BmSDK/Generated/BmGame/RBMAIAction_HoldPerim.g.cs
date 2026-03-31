@@ -146,11 +146,8 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: EventCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// ArrayProperty: WatchPoint
@@ -182,20 +179,14 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: WatchAimAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 WatchAimAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 WatchAimAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// StructProperty: LookOutAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LookOutAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LookOutAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 616);
 
     /// <summary>
     /// NameProperty: LookOutAimName

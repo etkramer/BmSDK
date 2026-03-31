@@ -123,11 +123,8 @@ public partial class RBMAIAction_RunToWithDecellerate : BmSDK.BmGame.RBMAIAction
     /// <summary>
     /// StructProperty: Dest
     /// </summary>
-    public unsafe System.Numerics.Vector3 Dest
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref System.Numerics.Vector3 Dest
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 580);
 
     /// <summary>
     /// ObjectProperty: destActor

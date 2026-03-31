@@ -364,11 +364,8 @@ public partial class RSeqAct_SharkAttack : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// StructProperty: SavedStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedStartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedStartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 316);
 
     /// <summary>
     /// ObjectProperty: RaftBlockingVolume

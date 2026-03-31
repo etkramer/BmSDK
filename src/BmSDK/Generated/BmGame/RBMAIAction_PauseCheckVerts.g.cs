@@ -311,18 +311,12 @@ public partial class RBMAIAction_PauseCheckVerts : BmSDK.BmGame.RBMAIAction, BmS
     /// <summary>
     /// StructProperty: LastFaceDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastFaceDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastFaceDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// StructProperty: ForwardDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForwardDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForwardDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 }

@@ -148,18 +148,12 @@ public partial class ParticleModuleLocationPrimitiveBase : BmSDK.Engine.Particle
     /// <summary>
     /// StructProperty: VelocityScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat VelocityScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat VelocityScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60);
 
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 88);
 }

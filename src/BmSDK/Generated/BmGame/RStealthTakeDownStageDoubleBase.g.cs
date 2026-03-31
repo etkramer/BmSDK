@@ -306,11 +306,8 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     /// <summary>
     /// StructProperty: StageAnimsEx
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStageDoubleBase.FTakeDownStageDoubleAnimSet StageAnimsEx
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStageDoubleBase.FTakeDownStageDoubleAnimSet>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.BmGame.RStealthTakeDownStageDoubleBase.FTakeDownStageDoubleAnimSet StageAnimsEx
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RStealthTakeDownStageDoubleBase.FTakeDownStageDoubleAnimSet>(Ptr + 1044);
 
     /// <summary>
     /// ArrayProperty: VictimTransitions

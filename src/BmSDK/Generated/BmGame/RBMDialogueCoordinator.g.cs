@@ -460,20 +460,14 @@ public partial class RBMDialogueCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentConversation
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance CurrentConversation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance CurrentConversation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: FollowupConversation
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance FollowupConversation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance FollowupConversation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMDialogueCoordinator.FDialogueInstance>(Ptr + 472);
 
     /// <summary>
     /// ArrayProperty: ScriptedConversationBehaviour
@@ -619,10 +613,9 @@ public partial class RBMDialogueCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObj
         /// <summary>
         /// StructProperty: BarkToPlay
         /// </summary>
-        public unsafe BmSDK.BmGame.RBarkSet.FBarkDefinition BarkToPlay
+        public unsafe ref BmSDK.BmGame.RBarkSet.FBarkDefinition BarkToPlay
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBarkSet.FBarkDefinition>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBarkSet.FBarkDefinition>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>

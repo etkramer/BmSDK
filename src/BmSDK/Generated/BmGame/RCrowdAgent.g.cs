@@ -194,11 +194,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ToTargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator ToTargetRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Rotator ToTargetRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 444);
 
     /// <summary>
     /// BoolProperty: bRotateToTargetRot

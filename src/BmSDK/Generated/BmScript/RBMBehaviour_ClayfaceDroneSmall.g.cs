@@ -247,11 +247,8 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: DroneToBats
     /// </summary>
-    public unsafe System.Numerics.Vector3 DroneToBats
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
-    }
+    public unsafe ref System.Numerics.Vector3 DroneToBats
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 820);
 
     /// <summary>
     /// FloatProperty: SavedJumpYaw
@@ -265,11 +262,8 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: JumpId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId JumpId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 836);
 
     /// <summary>
     /// FloatProperty: ExplodeLeeway
@@ -283,11 +277,8 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// StructProperty: SavedStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 844);
 
     /// <summary>
     /// FloatProperty: TimeBeforePuddleMove

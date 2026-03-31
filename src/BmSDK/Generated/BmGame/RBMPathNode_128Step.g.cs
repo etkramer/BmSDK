@@ -91,11 +91,8 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 732);
 
     /// <summary>
     /// FloatProperty: LastLockTime
@@ -109,9 +106,6 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// StructProperty: StepLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StepLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref System.Numerics.Vector3 StepLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 740);
 }

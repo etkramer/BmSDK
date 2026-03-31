@@ -85,9 +85,6 @@ public partial class MaterialExpressionBlurTextureSampleParameter : BmSDK.Engine
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid ExpressionGUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 172);
 }

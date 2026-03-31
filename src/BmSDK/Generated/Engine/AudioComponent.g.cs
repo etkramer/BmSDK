@@ -675,29 +675,20 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SoundNodeResetWaveMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMultiMap_Mirror SoundNodeResetWaveMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.GameObject.FMultiMap_Mirror SoundNodeResetWaveMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: SoundNodeFMODMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMultiMap_Mirror SoundNodeFMODMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.GameObject.FMultiMap_Mirror SoundNodeFMODMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMultiMap_Mirror>(Ptr + 256);
 
     /// <summary>
     /// StructProperty: Listener
     /// </summary>
-    public unsafe System.IntPtr Listener
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref System.IntPtr Listener
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 316);
 
     /// <summary>
     /// FloatProperty: PlaybackTime
@@ -720,20 +711,14 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 328);
 
     /// <summary>
     /// StructProperty: ComponentLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ComponentLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref System.Numerics.Vector3 ComponentLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 340);
 
     /// <summary>
     /// ObjectProperty: LastOwner
@@ -765,11 +750,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CurrentLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 364);
 
     /// <summary>
     /// FloatProperty: CurrentVolume
@@ -837,11 +819,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastUpdateTime
     /// </summary>
-    public unsafe double LastUpdateTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref double LastUpdateTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<double>(Ptr + 404);
 
     /// <summary>
     /// FloatProperty: SourceInteriorVolume
@@ -882,11 +861,8 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 428);
 
     /// <summary>
     /// FloatProperty: VolumeMultiplier

@@ -123,11 +123,8 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// StructProperty: AimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: AimTime
@@ -159,11 +156,8 @@ public partial class RBMAIAction_SmokePerim : BmSDK.BmGame.RBMAIAction, BmSDK.IG
     /// <summary>
     /// StructProperty: LookOutAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LookOutAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LookOutAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 596);
 
     /// <summary>
     /// FloatProperty: AnimTimer

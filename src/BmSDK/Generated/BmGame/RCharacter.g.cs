@@ -250,10 +250,9 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BonePos1
         /// </summary>
-        public unsafe System.Numerics.Vector3 BonePos1
+        public unsafe ref System.Numerics.Vector3 BonePos1
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -268,10 +267,9 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: BonePos2
         /// </summary>
-        public unsafe System.Numerics.Vector3 BonePos2
+        public unsafe ref System.Numerics.Vector3 BonePos2
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
@@ -1202,11 +1200,8 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SoundCharacterFilter
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter SoundCharacterFilter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 340);
 
     /// <summary>
     /// ArrayProperty: AlwaysOnPS

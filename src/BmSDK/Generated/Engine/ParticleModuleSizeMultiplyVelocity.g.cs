@@ -76,11 +76,8 @@ public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleM
     /// <summary>
     /// StructProperty: VelocityMultiplier
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector VelocityMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector VelocityMultiplier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 
     /// <summary>
     /// BoolProperty: MultiplyX

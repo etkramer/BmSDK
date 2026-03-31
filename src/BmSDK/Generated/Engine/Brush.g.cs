@@ -119,11 +119,8 @@ public partial class Brush : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BrushColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BrushColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BrushColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 432);
 
     /// <summary>
     /// IntProperty: PolyFlags

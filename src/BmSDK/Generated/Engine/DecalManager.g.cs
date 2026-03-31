@@ -176,11 +176,8 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DecalBlendRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 DecalBlendRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector2 DecalBlendRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: ActiveDecals

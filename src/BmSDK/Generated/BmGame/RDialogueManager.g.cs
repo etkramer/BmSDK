@@ -1489,10 +1489,9 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Position
         /// </summary>
-        public unsafe System.Numerics.Vector3 Position
+        public unsafe ref System.Numerics.Vector3 Position
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 4); } }
         }
 
         /// <summary>
@@ -1860,20 +1859,14 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DebugFileWriter
     /// </summary>
-    public unsafe System.IntPtr DebugFileWriter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.IntPtr DebugFileWriter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 564);
 
     /// <summary>
     /// StructProperty: DebugInfoFileWriter
     /// </summary>
-    public unsafe System.IntPtr DebugInfoFileWriter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref System.IntPtr DebugInfoFileWriter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 568);
 
     /// <summary>
     /// BoolProperty: ActivatedThroughWarning
@@ -2085,11 +2078,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinePackageCallbackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt LinePackageCallbackData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt LinePackageCallbackData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDialogueManager.FLineLoadedCallbackSt>(Ptr + 612);
 
     /// <summary>
     /// StrProperty: FullTapeToLoad
@@ -2103,11 +2093,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TapeHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle TapeHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle TapeHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 648);
 
     /// <summary>
     /// IntProperty: TapeSubtitle
@@ -2139,11 +2126,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RandomPackageLoading
     /// </summary>
-    public unsafe System.IntPtr RandomPackageLoading
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.IntPtr RandomPackageLoading
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 672);
 
     /// <summary>
     /// ArrayProperty: BanksLoaded
@@ -2193,11 +2177,8 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HighestDialogue
     /// </summary>
-    public unsafe System.IntPtr HighestDialogue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref System.IntPtr HighestDialogue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 776);
 
     /// <summary>
     /// ArrayProperty: StreamingPackageDialogue

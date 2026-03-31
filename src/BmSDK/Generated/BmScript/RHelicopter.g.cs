@@ -1490,11 +1490,8 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// StructProperty: WindDirection
     /// </summary>
-    public unsafe BmSDK.Rotator WindDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1628); }
-    }
+    public unsafe ref BmSDK.Rotator WindDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1628);
 
     /// <summary>
     /// FloatProperty: PauseTime
@@ -1661,11 +1658,8 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// StructProperty: SearchLightMeshScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 SearchLightMeshScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1708); }
-    }
+    public unsafe ref System.Numerics.Vector3 SearchLightMeshScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1708);
 
     /// <summary>
     /// FloatProperty: FireTimer
@@ -1931,29 +1925,20 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// StructProperty: MoveTowardLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveTowardLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveTowardLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1844);
 
     /// <summary>
     /// StructProperty: MoveTowardPathLocation1
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveTowardPathLocation1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveTowardPathLocation1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1856);
 
     /// <summary>
     /// StructProperty: MoveTowardPathLocation2
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveTowardPathLocation2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1868); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveTowardPathLocation2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1868);
 
     /// <summary>
     /// FloatProperty: MoveTowardSpeed

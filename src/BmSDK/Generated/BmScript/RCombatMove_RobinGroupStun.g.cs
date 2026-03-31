@@ -208,11 +208,8 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// StructProperty: TakedownID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakedownID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 560);
 
     /// <summary>
     /// ComponentProperty: StaffTrail
@@ -253,9 +250,6 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// StructProperty: StaffPrevEndLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StaffPrevEndLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 StaffPrevEndLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 }

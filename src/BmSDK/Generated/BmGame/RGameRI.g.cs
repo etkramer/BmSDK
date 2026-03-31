@@ -2065,10 +2065,9 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: LevelLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 LevelLocation
+        public unsafe ref System.Numerics.Vector3 LevelLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 8); } }
         }
 
         /// <summary>
@@ -2162,19 +2161,17 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: EdgeStart
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeStart
+        public unsafe ref System.Numerics.Vector2 EdgeStart
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: EdgeEnd
         /// </summary>
-        public unsafe System.Numerics.Vector2 EdgeEnd
+        public unsafe ref System.Numerics.Vector2 EdgeEnd
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>((IntPtr)thisPtr + 8); } }
         }
     }
 
@@ -3158,67 +3155,43 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1100);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1136);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1172);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1208); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1208);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1244);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1280); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1280);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1316);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1352);
 
     /// <summary>
     /// ArrayProperty: PIECharacters

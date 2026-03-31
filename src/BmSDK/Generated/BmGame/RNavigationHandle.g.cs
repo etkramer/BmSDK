@@ -1347,19 +1347,17 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         /// <summary>
         /// StructProperty: CachedPathParams
         /// </summary>
-        public unsafe BmSDK.Engine.NavigationHandle.FNavMeshPathParams CachedPathParams
+        public unsafe ref BmSDK.Engine.NavigationHandle.FNavMeshPathParams CachedPathParams
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FNavMeshPathParams>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FNavMeshPathParams>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: ActorRot
         /// </summary>
-        public unsafe BmSDK.Rotator ActorRot
+        public unsafe ref BmSDK.Rotator ActorRot
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 52); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 52); } }
         }
 
         /// <summary>
@@ -1374,10 +1372,9 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         /// <summary>
         /// StructProperty: PathToPoint
         /// </summary>
-        public unsafe System.Numerics.Vector3 PathToPoint
+        public unsafe ref System.Numerics.Vector3 PathToPoint
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 68); } }
         }
 
         /// <summary>
@@ -1471,37 +1468,33 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         /// <summary>
         /// StructProperty: EdgeReachedLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 EdgeReachedLocation
+        public unsafe ref System.Numerics.Vector3 EdgeReachedLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: EdgeStart
         /// </summary>
-        public unsafe System.Numerics.Vector3 EdgeStart
+        public unsafe ref System.Numerics.Vector3 EdgeStart
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
         /// StructProperty: EdgeEnd
         /// </summary>
-        public unsafe System.Numerics.Vector3 EdgeEnd
+        public unsafe ref System.Numerics.Vector3 EdgeEnd
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
         /// StructProperty: NextEdgeLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 NextEdgeLocation
+        public unsafe ref System.Numerics.Vector3 NextEdgeLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 36); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 36); } }
         }
     }
 
@@ -1514,28 +1507,25 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         /// <summary>
         /// StructProperty: ShortenStart
         /// </summary>
-        public unsafe System.Numerics.Vector3 ShortenStart
+        public unsafe ref System.Numerics.Vector3 ShortenStart
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: ShortenEnd
         /// </summary>
-        public unsafe System.Numerics.Vector3 ShortenEnd
+        public unsafe ref System.Numerics.Vector3 ShortenEnd
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
         /// StructProperty: ShortenExtent
         /// </summary>
-        public unsafe System.Numerics.Vector3 ShortenExtent
+        public unsafe ref System.Numerics.Vector3 ShortenExtent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
@@ -1809,11 +1799,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PathToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 PathToPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref System.Numerics.Vector3 PathToPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 460);
 
     /// <summary>
     /// FloatProperty: AvoidDoublingBackStrength
@@ -1845,20 +1832,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: TempMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TempMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 TempMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 496);
 
     /// <summary>
     /// ObjectProperty: LastSafeAnchorPylon
@@ -1890,20 +1871,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: LastMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// StructProperty: StuckTestLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StuckTestLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 StuckTestLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// FloatProperty: StuckTestTime
@@ -1944,11 +1919,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StoredPathCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 584);
 
     /// <summary>
     /// ArrayProperty: AdditionalGoalList
@@ -1962,20 +1934,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PreviousPathLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousPathLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousPathLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 608);
 
     /// <summary>
     /// StructProperty: StoredAnchorPoly
     /// </summary>
-    public unsafe System.IntPtr StoredAnchorPoly
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref System.IntPtr StoredAnchorPoly
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 620);
 
     /// <summary>
     /// ArrayProperty: AvoidPathObjects
@@ -1989,20 +1955,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: HardBlockedEdges
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore HardBlockedEdges
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore HardBlockedEdges
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: SoftBlockedEdges
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore SoftBlockedEdges
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore SoftBlockedEdges
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 648);
 
     /// <summary>
     /// ArrayProperty: BlockedPolyList
@@ -2016,11 +1976,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StartStateDebug
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 672);
 
     /// <summary>
     /// DelegateProperty: __PathSuccess__Delegate

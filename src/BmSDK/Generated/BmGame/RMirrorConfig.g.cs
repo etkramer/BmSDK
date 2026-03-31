@@ -109,10 +109,9 @@ public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Action
         /// </summary>
-        public unsafe BmSDK.BmGame.RMirrorConfig.FMirrorAction Action
+        public unsafe ref BmSDK.BmGame.RMirrorConfig.FMirrorAction Action
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMirrorConfig.FMirrorAction>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RMirrorConfig.FMirrorAction>((IntPtr)thisPtr + 16); } }
         }
     }
 

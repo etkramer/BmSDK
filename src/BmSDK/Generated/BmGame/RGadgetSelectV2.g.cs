@@ -205,108 +205,69 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 84);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 92);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 100);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 108);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 116);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 124);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 132);
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 UpOffset_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector2 UpOffset_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 DownOffset_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref System.Numerics.Vector2 DownOffset_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 148);
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 DownOffset_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref System.Numerics.Vector2 DownOffset_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 156);
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 DownOffset_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref System.Numerics.Vector2 DownOffset_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 164);
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 DownOffset_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector2 DownOffset_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 172);
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 DownOffset_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector2 DownOffset_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 180);
 
     /// <summary>
     /// IntProperty: UpSelectIndex
@@ -457,29 +418,20 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: GadgetSelectOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector2 GadgetSelectOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref System.Numerics.Vector2 GadgetSelectOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: IconSize
     /// </summary>
-    public unsafe System.Numerics.Vector2 IconSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref System.Numerics.Vector2 IconSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 268);
 
     /// <summary>
     /// StructProperty: GadgetSelectRadius
     /// </summary>
-    public unsafe System.Numerics.Vector2 GadgetSelectRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref System.Numerics.Vector2 GadgetSelectRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 276);
 
     /// <summary>
     /// ObjectProperty: ArrowMat
@@ -493,94 +445,61 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SmallArrowSize
     /// </summary>
-    public unsafe System.Numerics.Vector2 SmallArrowSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref System.Numerics.Vector2 SmallArrowSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 288);
 
     /// <summary>
     /// StructProperty: LargeArrowSize
     /// </summary>
-    public unsafe System.Numerics.Vector2 LargeArrowSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref System.Numerics.Vector2 LargeArrowSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 296);
 
     /// <summary>
     /// StructProperty: TextPosition
     /// </summary>
-    public unsafe System.Numerics.Vector2 TextPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref System.Numerics.Vector2 TextPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 304);
 
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 312);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 320);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 328);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 336);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 344);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 352);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 360);
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 CurrentOffset_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref System.Numerics.Vector2 CurrentOffset_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 368);
 
     /// <summary>
     /// NameProperty: CurrentGadgets

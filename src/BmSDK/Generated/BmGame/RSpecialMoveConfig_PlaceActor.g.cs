@@ -85,9 +85,6 @@ public partial class RSpecialMoveConfig_PlaceActor : BmSDK.BmGame.RSpecialMoveCo
     /// <summary>
     /// StructProperty: CreationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CreationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref System.Numerics.Vector3 CreationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 364);
 }

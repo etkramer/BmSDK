@@ -246,20 +246,14 @@ public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     /// <summary>
     /// StructProperty: BaseProjectileLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseProjectileLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseProjectileLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// StructProperty: BaseProjectileVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseProjectileVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseProjectileVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 568);
 
     /// <summary>
     /// BoolProperty: bFixed

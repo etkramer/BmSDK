@@ -76,11 +76,8 @@ public partial class InterpTrackInstBoolProp : BmSDK.Engine.InterpTrackInstPrope
     /// <summary>
     /// StructProperty: BoolProp
     /// </summary>
-    public unsafe System.IntPtr BoolProp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
+    public unsafe ref System.IntPtr BoolProp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 52);
 
     /// <summary>
     /// BoolProperty: ResetBool

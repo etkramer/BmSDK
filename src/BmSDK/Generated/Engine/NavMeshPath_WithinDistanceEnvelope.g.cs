@@ -132,9 +132,6 @@ public partial class NavMeshPath_WithinDistanceEnvelope : BmSDK.Engine.NavMeshPa
     /// <summary>
     /// StructProperty: EnvelopeTestPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvelopeTestPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvelopeTestPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 80);
 }

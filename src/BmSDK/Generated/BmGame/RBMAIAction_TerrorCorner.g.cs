@@ -193,11 +193,8 @@ public partial class RBMAIAction_TerrorCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: CornerPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CornerPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref System.Numerics.Vector3 CornerPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: CornerYaw
@@ -211,11 +208,8 @@ public partial class RBMAIAction_TerrorCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: EnterCornerID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EnterCornerID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId EnterCornerID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 588);
 
     /// <summary>
     /// NameProperty: StanceName
@@ -256,11 +250,8 @@ public partial class RBMAIAction_TerrorCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: ExitCornerID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ExitCornerID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ExitCornerID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 620);
 
     /// <summary>
     /// BoolProperty: bPlayingOutEnd
@@ -274,9 +265,6 @@ public partial class RBMAIAction_TerrorCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: StoredRot
     /// </summary>
-    public unsafe BmSDK.Rotator StoredRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.Rotator StoredRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 628);
 }

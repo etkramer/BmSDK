@@ -85,11 +85,8 @@ public partial class ParticleModuleSpawnPerUnit : BmSDK.Engine.ParticleModuleSpa
     /// <summary>
     /// StructProperty: SpawnPerUnit
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SpawnPerUnit
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SpawnPerUnit
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 64);
 
     /// <summary>
     /// BoolProperty: bIgnoreSpawnRateWhenMoving

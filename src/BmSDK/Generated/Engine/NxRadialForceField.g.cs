@@ -112,9 +112,6 @@ public partial class NxRadialForceField : BmSDK.Engine.NxForceField, BmSDK.IGame
     /// <summary>
     /// StructProperty: LinearKernel
     /// </summary>
-    public unsafe System.IntPtr LinearKernel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.IntPtr LinearKernel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 508);
 }

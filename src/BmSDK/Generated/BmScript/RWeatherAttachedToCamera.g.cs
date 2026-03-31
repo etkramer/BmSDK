@@ -123,11 +123,8 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// StructProperty: CameraPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ComponentProperty: WeatherMesh
@@ -159,9 +156,6 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// StructProperty: WeatherSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle WeatherSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle WeatherSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 488);
 }

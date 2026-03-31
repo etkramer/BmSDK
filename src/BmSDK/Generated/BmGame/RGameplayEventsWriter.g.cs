@@ -314,11 +314,8 @@ public partial class RGameplayEventsWriter : BmSDK.BmGame.RGameplayEventsHydra, 
     /// <summary>
     /// StructProperty: Connection
     /// </summary>
-    public unsafe System.IntPtr Connection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.IntPtr Connection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 456);
 
     /// <summary>
     /// IntProperty: SessionDBID

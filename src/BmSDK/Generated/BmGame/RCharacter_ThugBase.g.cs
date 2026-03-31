@@ -161,20 +161,14 @@ public partial class RCharacter_ThugBase : BmSDK.BmGame.RCharacter, BmSDK.IGameO
     /// <summary>
     /// StructProperty: VestColourDef
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor VestColourDef
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor VestColourDef
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: ClothesColourDef
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ClothesColourDef
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ClothesColourDef
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 468);
 
     /// <summary>
     /// ArrayProperty: PresetVestColours

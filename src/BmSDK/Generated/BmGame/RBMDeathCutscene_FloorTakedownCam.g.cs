@@ -217,9 +217,6 @@ public partial class RBMDeathCutscene_FloorTakedownCam : BmSDK.BmGame.RBMDeathCu
     /// <summary>
     /// StructProperty: NextPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 184);
 }

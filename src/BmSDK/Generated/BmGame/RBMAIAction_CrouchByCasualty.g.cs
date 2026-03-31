@@ -266,11 +266,8 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// StructProperty: LastAdditiveAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId LastAdditiveAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId LastAdditiveAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 580);
 
     /// <summary>
     /// ByteProperty: CurrentOverlayState

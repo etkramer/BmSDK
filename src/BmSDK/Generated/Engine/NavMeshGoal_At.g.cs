@@ -146,11 +146,8 @@ public partial class NavMeshGoal_At : BmSDK.Engine.NavMeshPathGoalEvaluator, BmS
     /// <summary>
     /// StructProperty: Goal
     /// </summary>
-    public unsafe System.Numerics.Vector3 Goal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
+    public unsafe ref System.Numerics.Vector3 Goal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 64);
 
     /// <summary>
     /// FloatProperty: GoalDist
@@ -173,18 +170,12 @@ public partial class NavMeshGoal_At : BmSDK.Engine.NavMeshPathGoalEvaluator, BmS
     /// <summary>
     /// StructProperty: GoalPoly
     /// </summary>
-    public unsafe System.IntPtr GoalPoly
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.IntPtr GoalPoly
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: PartialGoal
     /// </summary>
-    public unsafe System.IntPtr PartialGoal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public unsafe ref System.IntPtr PartialGoal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 88);
 }

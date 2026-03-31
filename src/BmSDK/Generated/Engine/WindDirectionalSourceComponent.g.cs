@@ -76,11 +76,8 @@ public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponen
     /// <summary>
     /// StructProperty: SceneProxy
     /// </summary>
-    public unsafe System.IntPtr SceneProxy
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.IntPtr SceneProxy
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
 
     /// <summary>
     /// FloatProperty: Strength

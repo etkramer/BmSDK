@@ -152,11 +152,8 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr VfTable_IEditorLinkSelectionInterface
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// ByteProperty: RouteType

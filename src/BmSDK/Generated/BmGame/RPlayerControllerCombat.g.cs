@@ -3076,11 +3076,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: LastStrikeDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastStrikeDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4520); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastStrikeDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4520);
 
     /// <summary>
     /// FloatProperty: RunningTimer
@@ -3346,11 +3343,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: LastAttacked
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo LastAttacked
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo>(Ptr + 4656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4656); }
-    }
+    public unsafe ref BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo LastAttacked
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo>(Ptr + 4656);
 
     /// <summary>
     /// ArrayProperty: ComboMoves

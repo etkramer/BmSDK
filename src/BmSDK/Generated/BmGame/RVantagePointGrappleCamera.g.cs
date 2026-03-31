@@ -120,20 +120,14 @@ public partial class RVantagePointGrappleCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// StructProperty: SilentPredCameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SilentPredCameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref System.Numerics.Vector3 SilentPredCameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 868);
 
     /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// FloatProperty: PlayerTargetWeight
@@ -147,20 +141,14 @@ public partial class RVantagePointGrappleCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// StructProperty: InitialDirection
     /// </summary>
-    public unsafe BmSDK.Rotator InitialDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.Rotator InitialDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 896);
 
     /// <summary>
     /// StructProperty: CameraRoot
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraRoot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraRoot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 908);
 
     /// <summary>
     /// BoolProperty: bFrozen

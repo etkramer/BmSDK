@@ -105,9 +105,6 @@ public partial class SeqAct_DrawText : BmSDK.Engine.SequenceAction, BmSDK.IGameO
     /// <summary>
     /// StructProperty: DrawTextInfo
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FKismetDrawTextInfo DrawTextInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FKismetDrawTextInfo>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FKismetDrawTextInfo DrawTextInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FKismetDrawTextInfo>(Ptr + 212);
 }

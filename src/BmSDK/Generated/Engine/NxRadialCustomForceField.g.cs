@@ -85,9 +85,6 @@ public partial class NxRadialCustomForceField : BmSDK.Engine.NxRadialForceField,
     /// <summary>
     /// StructProperty: Kernel
     /// </summary>
-    public unsafe System.IntPtr Kernel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.IntPtr Kernel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 516);
 }

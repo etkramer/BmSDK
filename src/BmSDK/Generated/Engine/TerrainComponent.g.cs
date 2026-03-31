@@ -98,10 +98,9 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
         /// <summary>
         /// StructProperty: BitMask
         /// </summary>
-        public unsafe ulong BitMask
+        public unsafe ref ulong BitMask
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<ulong>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<ulong>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -169,11 +168,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: TerrainObject
     /// </summary>
-    public unsafe System.IntPtr TerrainObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.IntPtr TerrainObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 428);
 
     /// <summary>
     /// IntProperty: SectionBaseX
@@ -232,11 +228,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: PatchBounds
@@ -268,11 +261,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BVTree
     /// </summary>
-    public unsafe BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
-    }
+    public unsafe ref BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 488);
 
     /// <summary>
     /// ArrayProperty: CollisionVertices
@@ -286,11 +276,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: RBHeightfield
     /// </summary>
-    public unsafe System.IntPtr RBHeightfield
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.IntPtr RBHeightfield
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 512);
 
     /// <summary>
     /// BoolProperty: bDisplayCollisionLevel

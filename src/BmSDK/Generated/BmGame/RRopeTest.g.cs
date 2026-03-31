@@ -103,29 +103,20 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AttachPos1
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPos1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: AttachPos2
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPos2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: AttachPos3
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPos3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// FloatProperty: MaxLength1
@@ -202,20 +193,14 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StretchActorWorldAttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StretchActorWorldAttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 StretchActorWorldAttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: StretchActorActorAttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StretchActorActorAttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 StretchActorActorAttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// FloatProperty: StretchBreakRatio

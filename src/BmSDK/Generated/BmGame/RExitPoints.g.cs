@@ -104,21 +104,17 @@ public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ViewEdge
         /// </summary>
-        public unsafe System.Numerics.Vector3 ViewEdge
+        public unsafe ref System.Numerics.Vector3 ViewEdge
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
     }
 
     /// <summary>
     /// StructProperty: PerimeterCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 PerimeterCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref System.Numerics.Vector3 PerimeterCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 44);
 
     /// <summary>
     /// FloatProperty: PerimeterRadius

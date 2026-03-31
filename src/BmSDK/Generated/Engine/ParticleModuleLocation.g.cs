@@ -76,9 +76,6 @@ public partial class ParticleModuleLocation : BmSDK.Engine.ParticleModuleLocatio
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 }

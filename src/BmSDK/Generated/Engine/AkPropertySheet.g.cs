@@ -76,11 +76,8 @@ public partial class AkPropertySheet : BmSDK.Engine.ActorComponent, BmSDK.IGameO
     /// <summary>
     /// StructProperty: VfTable_AkStackable
     /// </summary>
-    public unsafe System.IntPtr VfTable_AkStackable
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.IntPtr VfTable_AkStackable
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 72);
 
     /// <summary>
     /// ArrayProperty: Actions

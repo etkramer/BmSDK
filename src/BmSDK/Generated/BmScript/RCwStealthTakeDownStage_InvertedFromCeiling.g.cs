@@ -89,18 +89,12 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeiling : BmSDK.BmGame.
     /// <summary>
     /// StructProperty: CeilingPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1056); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1056);
 
     /// <summary>
     /// StructProperty: CeilingNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1068);
 }

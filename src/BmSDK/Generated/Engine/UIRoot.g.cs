@@ -495,10 +495,9 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: CustomStringNode
         /// </summary>
-        public unsafe System.IntPtr CustomStringNode
+        public unsafe ref System.IntPtr CustomStringNode
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 84); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>((IntPtr)thisPtr + 84); } }
         }
     }
 
@@ -556,28 +555,25 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: RangeValue
         /// </summary>
-        public unsafe BmSDK.Engine.UIRoot.FUIRangeData RangeValue
+        public unsafe ref BmSDK.Engine.UIRoot.FUIRangeData RangeValue
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FUIRangeData>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIRoot.FUIRangeData>((IntPtr)thisPtr + 40); } }
         }
 
         /// <summary>
         /// StructProperty: NetIdValue
         /// </summary>
-        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetIdValue
+        public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetIdValue
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 60); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>((IntPtr)thisPtr + 60); } }
         }
 
         /// <summary>
         /// StructProperty: AtlasCoordinates
         /// </summary>
-        public unsafe BmSDK.Engine.UIRoot.FTextureCoordinates AtlasCoordinates
+        public unsafe ref BmSDK.Engine.UIRoot.FTextureCoordinates AtlasCoordinates
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FTextureCoordinates>(Ptr + 68); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIRoot.FTextureCoordinates>((IntPtr)thisPtr + 68); } }
         }
     }
 

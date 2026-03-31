@@ -76,20 +76,14 @@ public partial class ApexComponentBase : BmSDK.Engine.MeshComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: ComponentBaseResources
     /// </summary>
-    public unsafe System.IntPtr ComponentBaseResources
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.IntPtr ComponentBaseResources
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 420);
 
     /// <summary>
     /// ObjectProperty: Asset
@@ -103,11 +97,8 @@ public partial class ApexComponentBase : BmSDK.Engine.MeshComponent, BmSDK.IGame
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 428);
 
     /// <summary>
     /// BoolProperty: bAssetChanged

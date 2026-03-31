@@ -155,20 +155,14 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// <summary>
     /// StructProperty: PerimeterCentre
     /// </summary>
-    public unsafe System.Numerics.Vector3 PerimeterCentre
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 PerimeterCentre
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: BoomPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoomPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoomPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// ObjectProperty: NavHandle

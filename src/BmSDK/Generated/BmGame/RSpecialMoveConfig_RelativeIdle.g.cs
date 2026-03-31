@@ -175,11 +175,8 @@ public partial class RSpecialMoveConfig_RelativeIdle : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// StructProperty: CameraResetDir
     /// </summary>
-    public unsafe BmSDK.Rotator CameraResetDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref BmSDK.Rotator CameraResetDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 344);
 
     /// <summary>
     /// FloatProperty: TimeBeforeAnyMovementEnds

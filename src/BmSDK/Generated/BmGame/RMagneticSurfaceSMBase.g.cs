@@ -664,11 +664,8 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 
     /// <summary>
     /// FloatProperty: EnergyDrainPerSecond
@@ -1024,11 +1021,8 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: CameraTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// ObjectProperty: CurrentReceiver
@@ -1096,11 +1090,8 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// StructProperty: MagneticSourceOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MagneticSourceOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 MagneticSourceOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 
     /// <summary>
     /// ComponentProperty: MagBlastInteractions

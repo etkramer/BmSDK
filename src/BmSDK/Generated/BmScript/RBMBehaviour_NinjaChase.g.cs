@@ -374,11 +374,8 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// StructProperty: RelativeDestinationPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RelativeDestinationPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 RelativeDestinationPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// IntProperty: LastReachedPoint

@@ -392,10 +392,9 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Loc
         /// </summary>
-        public unsafe System.Numerics.Vector3 Loc
+        public unsafe ref System.Numerics.Vector3 Loc
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -541,11 +540,8 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ActionAimStateLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActionAimStateLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActionAimStateLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 472);
 
     /// <summary>
     /// NameProperty: ActionAimStateAimAtName
@@ -559,11 +555,8 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FacingState
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.FActionFacingState FacingState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction.FActionFacingState>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction.FActionFacingState FacingState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction.FActionFacingState>(Ptr + 492);
 
     /// <summary>
     /// FloatProperty: SpeedScale
@@ -604,11 +597,8 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RandomAimAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RandomAimAtPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 RandomAimAtPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// NameProperty: RandomAimAtName

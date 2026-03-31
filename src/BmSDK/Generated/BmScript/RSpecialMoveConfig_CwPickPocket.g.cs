@@ -94,9 +94,6 @@ public partial class RSpecialMoveConfig_CwPickPocket : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// StructProperty: SecurityCardRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator SecurityCardRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref BmSDK.Rotator SecurityCardRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 364);
 }

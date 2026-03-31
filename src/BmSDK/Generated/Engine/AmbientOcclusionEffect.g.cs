@@ -141,11 +141,8 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// <summary>
     /// StructProperty: OcclusionColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor OcclusionColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor OcclusionColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 108);
 
     /// <summary>
     /// FloatProperty: OcclusionPower

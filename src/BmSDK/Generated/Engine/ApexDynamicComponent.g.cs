@@ -76,9 +76,6 @@ public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSD
     /// <summary>
     /// StructProperty: ComponentDynamicResources
     /// </summary>
-    public unsafe System.IntPtr ComponentDynamicResources
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref System.IntPtr ComponentDynamicResources
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 436);
 }

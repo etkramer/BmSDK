@@ -208,11 +208,8 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.IntPtr VfTable_IInterface_NavMeshPathObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 468);
 
     /// <summary>
     /// ObjectProperty: TopNode
@@ -334,11 +331,8 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     /// <summary>
     /// StructProperty: ShimmyEdgeOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ShimmyEdgeOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref System.Numerics.Vector3 ShimmyEdgeOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 532);
 
     /// <summary>
     /// BoolProperty: bCanBeUsedByAI

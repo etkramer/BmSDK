@@ -85,11 +85,8 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EQSettings
     /// </summary>
-    public unsafe BmSDK.Engine.SoundMode.FAudioEQEffect EQSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundMode.FAudioEQEffect>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
+    public unsafe ref BmSDK.Engine.SoundMode.FAudioEQEffect EQSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SoundMode.FAudioEQEffect>(Ptr + 48);
 
     /// <summary>
     /// ArrayProperty: SoundClassEffects
@@ -206,10 +203,9 @@ public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: RootTime
         /// </summary>
-        public unsafe double RootTime
+        public unsafe ref double RootTime
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<double>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>

@@ -87,11 +87,8 @@ public partial class SeqAct_SetVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// StructProperty: VelocityDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// FloatProperty: VelocityMag

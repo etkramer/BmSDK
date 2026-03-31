@@ -76,11 +76,8 @@ public partial class MaterialExpressionStaticComponentMaskParameter : BmSDK.Engi
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 104);
 
     /// <summary>
     /// BoolProperty: DefaultR
@@ -121,9 +118,6 @@ public partial class MaterialExpressionStaticComponentMaskParameter : BmSDK.Engi
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe System.IntPtr InstanceOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref System.IntPtr InstanceOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 136);
 }

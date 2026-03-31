@@ -469,11 +469,8 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: DodgeId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3592); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DodgeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 3592);
 
     /// <summary>
     /// ObjectProperty: PenguinAnimSet
@@ -487,11 +484,8 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: RocketAttackData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnBossPenguinBase.FRocketParameters RocketAttackData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossPenguinBase.FRocketParameters>(Ptr + 3600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnBossPenguinBase.FRocketParameters RocketAttackData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossPenguinBase.FRocketParameters>(Ptr + 3600);
 
     /// <summary>
     /// FloatProperty: VisibilityAngleNeededToShoot
@@ -505,11 +499,8 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: ReloadOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId ReloadOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 3664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3664); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId ReloadOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 3664);
 
     /// <summary>
     /// ObjectProperty: CenterPoint
@@ -541,20 +532,14 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: SecretPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecretPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3684); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecretPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3684);
 
     /// <summary>
     /// StructProperty: CurrentMovementDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentMovementDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3696); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentMovementDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3696);
 
     /// <summary>
     /// ObjectProperty: NavHandle

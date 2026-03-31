@@ -505,19 +505,17 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: LocationOffset
         /// </summary>
-        public unsafe System.Numerics.Vector3 LocationOffset
+        public unsafe ref System.Numerics.Vector3 LocationOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
 
         /// <summary>
         /// StructProperty: RotationOffset
         /// </summary>
-        public unsafe BmSDK.Rotator RotationOffset
+        public unsafe ref BmSDK.Rotator RotationOffset
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>((IntPtr)thisPtr + 24); } }
         }
 
         /// <summary>
@@ -791,19 +789,17 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Poly
         /// </summary>
-        public unsafe BmSDK.Engine.Pylon.FPolyReference Poly
+        public unsafe ref BmSDK.Engine.Pylon.FPolyReference Poly
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pylon.FPolyReference>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Pylon.FPolyReference>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: Dest
         /// </summary>
-        public unsafe BmSDK.Engine.Actor.FBasedPosition Dest
+        public unsafe ref BmSDK.Engine.Actor.FBasedPosition Dest
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBasedPosition>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
@@ -825,10 +821,9 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: TargetActor
         /// </summary>
-        public unsafe BmSDK.Engine.CoverLink.FCoverReference TargetActor
+        public unsafe ref BmSDK.Engine.CoverLink.FCoverReference TargetActor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CoverLink.FCoverReference>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.CoverLink.FCoverReference>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
@@ -850,19 +845,17 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: LastTargetLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 LastTargetLocation
+        public unsafe ref System.Numerics.Vector3 LastTargetLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 0); } }
         }
 
         /// <summary>
         /// StructProperty: LastSrcLocation
         /// </summary>
-        public unsafe System.Numerics.Vector3 LastSrcLocation
+        public unsafe ref System.Numerics.Vector3 LastSrcLocation
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 12); } }
         }
     }
 
@@ -1068,28 +1061,25 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Location
         /// </summary>
-        public unsafe System.Numerics.Vector3 Location
+        public unsafe ref System.Numerics.Vector3 Location
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 16); } }
         }
 
         /// <summary>
         /// StructProperty: Normal
         /// </summary>
-        public unsafe System.Numerics.Vector3 Normal
+        public unsafe ref System.Numerics.Vector3 Normal
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 28); } }
         }
 
         /// <summary>
         /// StructProperty: Tangent
         /// </summary>
-        public unsafe System.Numerics.Vector3 Tangent
+        public unsafe ref System.Numerics.Vector3 Tangent
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 40); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>((IntPtr)thisPtr + 40); } }
         }
     }
 
@@ -1317,11 +1307,8 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CircularOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 CircularOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref System.Numerics.Vector3 CircularOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 680);
 
     /// <summary>
     /// FloatProperty: CircularRadius
@@ -1371,29 +1358,20 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StandingLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandingLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandingLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 712);
 
     /// <summary>
     /// StructProperty: CrouchLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrouchLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrouchLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// StructProperty: PopupOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PopupOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 PopupOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 
     /// <summary>
     /// FloatProperty: SlipDist

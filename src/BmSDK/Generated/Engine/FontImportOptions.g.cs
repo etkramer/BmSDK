@@ -76,11 +76,8 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Data
     /// </summary>
-    public unsafe BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
+    public unsafe ref BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 44);
 
     /// <summary>
     /// Struct: FFontImportOptionsData
@@ -217,10 +214,9 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: ForegroundColor
         /// </summary>
-        public unsafe BmSDK.GameObject.FLinearColor ForegroundColor
+        public unsafe ref BmSDK.GameObject.FLinearColor ForegroundColor
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 76); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
+            get { fixed (void* thisPtr = &this) { return ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>((IntPtr)thisPtr + 76); } }
         }
 
         /// <summary>

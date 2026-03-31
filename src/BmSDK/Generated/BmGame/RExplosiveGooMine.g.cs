@@ -515,11 +515,8 @@ public partial class RExplosiveGooMine : BmSDK.BmGame.RThugTrap, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: WallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 476);
 
     /// <summary>
     /// FloatProperty: SettleTimer
@@ -542,11 +539,8 @@ public partial class RExplosiveGooMine : BmSDK.BmGame.RThugTrap, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Shaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 496);
 
     /// <summary>
     /// IntProperty: AmmoPerMine

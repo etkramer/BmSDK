@@ -399,20 +399,14 @@ public partial class DownloadableContentManager : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// StructProperty: TextureCachePathMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror TextureCachePathMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror TextureCachePathMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 68);
 
     /// <summary>
     /// StructProperty: RockDLCCachePathMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror RockDLCCachePathMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror RockDLCCachePathMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 128);
 
     /// <summary>
     /// ArrayProperty: ClassesToReload

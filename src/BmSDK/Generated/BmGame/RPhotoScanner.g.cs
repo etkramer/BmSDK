@@ -404,11 +404,8 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OldRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OldRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Rotator OldRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 444);
 
     /// <summary>
     /// ArrayProperty: EvidenceArray
@@ -440,11 +437,8 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MovingSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle MovingSound
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle MovingSound
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 484);
 
     /// <summary>
     /// FloatProperty: TimeSinceLastScan
@@ -467,20 +461,14 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CursorMin
     /// </summary>
-    public unsafe System.Numerics.Vector2 CursorMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector2 CursorMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: CursorMax
     /// </summary>
-    public unsafe System.Numerics.Vector2 CursorMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref System.Numerics.Vector2 CursorMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 512);
 
     /// <summary>
     /// FloatProperty: ZoomTimer
@@ -503,20 +491,14 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OriginalView
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalView
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalView
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 528);
 
     /// <summary>
     /// StructProperty: OriginalViewRPC
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalViewRPC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalViewRPC
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 540);
 
     /// <summary>
     /// FloatProperty: RecoverZoom

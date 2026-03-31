@@ -176,11 +176,8 @@ public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinato
     /// <summary>
     /// StructProperty: AnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// BoolProperty: bIsAtRail

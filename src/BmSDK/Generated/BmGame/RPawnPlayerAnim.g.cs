@@ -362,11 +362,8 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: BaseAimAtTiming
     /// </summary>
-    public unsafe BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming BaseAimAtTiming
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming>(Ptr + 1984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1984); }
-    }
+    public unsafe ref BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming BaseAimAtTiming
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPoseConfig.FAimingTransitionTiming>(Ptr + 1984);
 
     /// <summary>
     /// ObjectProperty: AnimationConfig

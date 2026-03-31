@@ -165,11 +165,8 @@ public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Scene
     /// </summary>
-    public unsafe System.IntPtr Scene
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref System.IntPtr Scene
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.IntPtr>(Ptr + 56);
 
     /// <summary>
     /// ObjectProperty: Owner

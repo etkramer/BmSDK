@@ -247,29 +247,20 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Distance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Distance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: TaperFactor
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: TaperScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TaperScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 156);
 
     /// <summary>
     /// ArrayProperty: BonePairs

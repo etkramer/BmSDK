@@ -121,38 +121,26 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Position1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 72);
 
     /// <summary>
     /// StructProperty: Position2
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: Position3
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: Lengths1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Lengths1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref System.Numerics.Vector3 Lengths1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 108);
 
     /// <summary>
     /// FloatProperty: Length1
@@ -166,11 +154,8 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ForwardsVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForwardsVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForwardsVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 124);
 
     /// <summary>
     /// Enum: ECollisionShape

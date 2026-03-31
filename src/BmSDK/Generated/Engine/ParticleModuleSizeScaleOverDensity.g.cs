@@ -76,9 +76,6 @@ public partial class ParticleModuleSizeScaleOverDensity : BmSDK.Engine.ParticleM
     /// <summary>
     /// StructProperty: SizeScaleOverDensity
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SizeScaleOverDensity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector SizeScaleOverDensity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56);
 }

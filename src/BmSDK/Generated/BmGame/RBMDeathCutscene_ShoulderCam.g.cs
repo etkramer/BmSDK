@@ -356,11 +356,8 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: FocusPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 FocusPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// BoolProperty: bImpact
@@ -491,11 +488,8 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: ImpactCameraHeight
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactCameraHeight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactCameraHeight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 
     /// <summary>
     /// FloatProperty: PlayerFocusAmount
@@ -509,11 +503,8 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: ViewDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 280);
 
     /// <summary>
     /// ComponentProperty: TargetImpactBoneFollower
@@ -536,9 +527,6 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: PreviousBaseLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousBaseLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousBaseLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 300);
 }
