@@ -1,9 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "ScriptsDev",
 			"path": ".",
 		},
 		{
+			"name": "Scripts",
 			"path": "./../Scripts",
 		},
 	],
@@ -21,5 +23,22 @@
 			"**/obj/": true,
 			"**/bin/": true,
 		},
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch BatmanAC.exe",
+				"type": "cppvsdbg",
+				"request": "launch",
+				"program": "${workspaceFolder:ScriptsDev}/../../Binaries/Win32/BatmanAC.exe",
+				"cwd": "${workspaceFolder:ScriptsDev}/../../Binaries/Win32/",
+				"args": ["-nosplash"],
+				"logging": {
+					"exceptions": false,
+					"moduleLoad": false,
+				},
+			},
+		],
 	},
 }
