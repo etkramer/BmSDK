@@ -7,30 +7,21 @@ public partial class Struct
     /// <summary>
     /// Property: Children
     /// </summary>
-    public Struct SuperStruct
-    {
-        get => MarshalUtil.ToManaged<Struct>(Ptr + 56);
-    }
+    public Struct SuperStruct => MarshalUtil.ToManaged<Struct>(Ptr + 56);
 
     /// <summary>
     /// Property: Children
     /// </summary>
-    public Field Children
-    {
-        get => MarshalUtil.ToManaged<Field>(Ptr + 60);
-    }
+    public Field Children => MarshalUtil.ToManaged<Field>(Ptr + 60);
 
     /// <summary>
     /// Property: PropertiesSize
     /// </summary>
-    public short PropertiesSize
-    {
-        get => MarshalUtil.ToManaged<short>(Ptr + 64);
-    }
+    public short PropertiesSize => MarshalUtil.ToManaged<short>(Ptr + 64);
 
     public IEnumerable<Field> EnumerateFields()
     {
-        for (Field fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
+        for (var fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
         {
             yield return fieldLink;
         }
@@ -41,11 +32,9 @@ public partial class Struct
     /// </summary>
     public IEnumerable<Struct> EnumerateSupersAndSelf()
     {
-        var super = this;
-        while (super is not null)
+        for (var super = this; super != null; super = super.SuperStruct)
         {
             yield return super;
-            super = super.SuperStruct;
         }
     }
 }
