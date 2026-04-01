@@ -109,4 +109,16 @@ internal sealed record RedirectCall(
 
     public IGenericRedirect? NextRedirect() =>
         _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
+
+    public unsafe void RunOriginal(FFrame* stackPtr, IntPtr result)
+    {
+        // Call the actual target function and not an override
+        stackPtr->Node = TargetFunc.Ptr;
+        GameFunctions.ProcessInternal
+        (
+            TargetObj.Ptr,
+            (IntPtr)stackPtr,
+            result
+        );
+    }
 }
