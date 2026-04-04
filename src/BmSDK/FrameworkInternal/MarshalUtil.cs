@@ -191,13 +191,10 @@ public static unsafe class MarshalUtil
         {
             return typeof(GameObject);
         }
-        else if (prop is ArrayProperty)
+        else if (prop is ArrayProperty arrayProp)
         {
-            // TODO
-        }
-        else if (prop is MapProperty)
-        {
-            // TODO
+            var innerType = GetTypeFromProperty(arrayProp.Inner);
+            return typeof(TArray<>).MakeGenericType(innerType);
         }
         else if (prop is DelegateProperty)
         {
