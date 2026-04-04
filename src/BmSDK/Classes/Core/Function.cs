@@ -35,6 +35,10 @@ public partial class Function
         set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
     }
 
+    /// <summary>
+    /// Invokes this function with the specified parameters.
+    /// </summary>
+    /// <param name="obj">The object that this function will be called on. For static functions, this should be "null".</param>
     public unsafe object? Invoke(GameObject? obj, params object[] args)
     {
         var paramFields = EnumerateParams().ToArray();
@@ -45,7 +49,10 @@ public partial class Function
             $"Not enough args passed to {Name}.Invoke() (expected {paramFields.Length}, got {args.Length})"
         );
 
-        Guard.Require(IsStatic || obj is not null, $"Got unexpected null in {Name}.Invoke()");
+        Guard.Require(
+            IsStatic || obj is not null,
+            $"Object passed to {Name}.Invoke() must not be null"
+        );
 
         // Marshal args
         for (var i = 0; i < args.Length; i++)
