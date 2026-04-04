@@ -83,7 +83,7 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
     /// </summary>
     public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide.GetAnimInfo_AimAtLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide:GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
     /// </summary>
     public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide.GetAnimInfo_Name", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide:GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);

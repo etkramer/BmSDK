@@ -83,7 +83,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// </summary>
     public unsafe override void End(bool bLastStage = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.End", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown:End", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLastStage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// </summary>
     public unsafe virtual void TriggerSecondCamAnim(System.Numerics.Vector3 newRootLoc, BmSDK.Rotator newRootRot)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.TriggerSecondCamAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown:TriggerSecondCamAnim", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(newRootLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(newRootRot, paramsPtr + 12);
@@ -108,7 +108,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// </summary>
     public unsafe override void Begin()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.Begin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown:Begin", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

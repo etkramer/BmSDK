@@ -16,7 +16,7 @@ public partial class Property
     /// <summary>
     /// Property: ArrayDim
     /// </summary>
-    public unsafe int ArrayDim
+    public int ArrayDim
     {
         get => MarshalUtil.ToManaged<int>(Ptr + 48);
     }
@@ -24,7 +24,7 @@ public partial class Property
     /// <summary>
     /// Property: PropertyFlags
     /// </summary>
-    public unsafe EPropertyFlags PropertyFlags
+    public EPropertyFlags PropertyFlags
     {
         get => MarshalUtil.ToManaged<EPropertyFlags>(Ptr + 52);
     }

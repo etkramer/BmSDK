@@ -35,6 +35,65 @@ public partial class Function
         set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
     }
 
+    /// <summary>
+    /// Invokes this function with the specified parameters.
+    /// </summary>
+    /// <param name="obj">The object that this function will be called on. For static functions, this should be "null".</param>
+    public unsafe object? Invoke(GameObject? obj, params object[] args)
+    {
+        var paramFields = EnumerateParams().ToArray();
+        var paramsPtr = stackalloc byte[PropertiesSize];
+
+        Guard.Require(
+            args.Length >= paramFields.Length,
+            $"Not enough args passed to {Name}.Invoke() (expected {paramFields.Length}, got {args.Length})"
+        );
+
+        Guard.Require(
+            IsStatic || obj is not null,
+            $"Object passed to {Name}.Invoke() must not be null"
+        );
+
+        // Marshal args
+        for (var i = 0; i < args.Length; i++)
+        {
+            var argType = MarshalUtil.GetTypeFromProperty(paramFields[i]);
+            MarshalUtil.ToUnmanaged(args[i], (nint)paramsPtr + paramFields[i].Offset, argType);
+        }
+
+        // Execute function via ProcessEvent
+        var oldFlags = FunctionFlags;
+        var oldNative = iNative;
+        FunctionFlags &= ~EFunctionFlags.FUNC_Native;
+        FunctionFlags |= EFunctionFlags.FUNC_Defined;
+        iNative = 0;
+        GameFunctions.ProcessEvent(
+            IsStatic ? StaticClass().DefaultObject.Ptr : obj!.Ptr,
+            Ptr,
+            (nint)paramsPtr,
+            0
+        );
+        iNative = oldNative;
+        FunctionFlags = oldFlags;
+
+        // Marshal result back (if non-void)
+        var returnParam = GetReturnParam();
+        if (returnParam is not null)
+        {
+            var returnType = MarshalUtil.GetTypeFromProperty(returnParam);
+            return MarshalUtil.ToManaged((nint)paramsPtr + returnParam.Offset, returnType);
+        }
+
+        return null;
+    }
+
+    public Property? GetReturnParam() =>
+        EnumerateFields()
+            .OfType<Property>()
+            .FirstOrDefault(prop =>
+                prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
+            );
+
     public IEnumerable<Property> EnumerateParams()
     {
         return EnumerateFields()

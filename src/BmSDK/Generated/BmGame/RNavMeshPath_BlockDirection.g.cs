@@ -83,7 +83,7 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// </summary>
     public unsafe override void Recycle()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection.Recycle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection:Recycle", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// </summary>
     public unsafe static bool BlockDir(BmSDK.BmGame.RNavigationHandle NewNavHandle, System.Numerics.Vector3 nBlockPosition, System.Numerics.Vector3 nBlockDirection, int nBlockAngleHardYaw, int nBlockAngleSoftYaw, float nBlockDistance)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection.BlockDir", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection:BlockDir", true);
         byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(nBlockPosition, paramsPtr + 4);
@@ -111,7 +111,7 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// </summary>
     public unsafe virtual void RecycleNative()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection.RecycleNative", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection:RecycleNative", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -129,7 +129,7 @@ public partial class RNavMeshPath_BlockDirection : BmSDK.Engine.NavMeshPathConst
     /// </summary>
     public unsafe virtual void Initialise(BmSDK.BmGame.RNavigationHandle NewNavHandle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection.Initialise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_BlockDirection:Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

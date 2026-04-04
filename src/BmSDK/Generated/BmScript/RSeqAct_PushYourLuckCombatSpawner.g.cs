@@ -83,7 +83,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe static int GetObjClassVersion()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.GetObjClassVersion", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:GetObjClassVersion", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void StopFighting()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.StopFighting", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:StopFighting", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void Fight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.Fight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:Fight", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -116,7 +116,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void AddBonusScore(int bonus_score)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.AddBonusScore", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:AddBonusScore", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bonus_score, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -128,7 +128,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void AddBonusTime(float Bonus_Time)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.AddBonusTime", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:AddBonusTime", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bonus_Time, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -140,7 +140,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual bool AutoSpawnEnemy()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.AutoSpawnEnemy", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:AutoSpawnEnemy", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -151,7 +151,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void SpawnInitialEnemies()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.SpawnInitialEnemies", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:SpawnInitialEnemies", true);
         byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -162,7 +162,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void AcquirePlayer()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.AcquirePlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:AcquirePlayer", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -173,7 +173,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual BmSDK.Class GetRandomCharacterClass(BmSDK.BmScript.RSeqAct_PushYourLuckCombatSpawner.MySpawnTypes spawn_feature)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.GetRandomCharacterClass", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:GetRandomCharacterClass", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spawn_feature, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -185,7 +185,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void SpawnEnemy(BmSDK.BmScript.RSeqAct_PushYourLuckCombatSpawner.MySpawnTypes spawn_feature, BmSDK.BmScript.RSeqAct_PushYourLuckCombatSpawner.MySpawnTypes optional_weapon, BmSDK.Engine.Actor EnemySpawnPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.SpawnEnemy", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:SpawnEnemy", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spawn_feature, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(optional_weapon, paramsPtr + 1);
@@ -199,7 +199,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual float GetScoreForSpawnPoint(BmSDK.Engine.Actor TestPoint, BmSDK.BmGame.RPawnPlayerCombat Batman)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.GetScoreForSpawnPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:GetScoreForSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Batman, paramsPtr + 4);
@@ -212,7 +212,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual BmSDK.Engine.Actor GetRandomSpawnPoint()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.GetRandomSpawnPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:GetRandomSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(paramsPtr + 0);
@@ -223,7 +223,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void SpawnFeature(BmSDK.BmScript.RSeqAct_PushYourLuckCombatSpawner.MySpawnTypes spawn_feature, BmSDK.Engine.Actor OptionalSpawnPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.SpawnFeature", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:SpawnFeature", true);
         byte* paramsPtr = stackalloc byte[17];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(spawn_feature, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OptionalSpawnPoint, paramsPtr + 4);
@@ -236,7 +236,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual bool IsActiveOrDead(BmSDK.BmGame.RPawn test_pawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.IsActiveOrDead", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:IsActiveOrDead", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(test_pawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -248,7 +248,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void ClearDeadPawns()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.ClearDeadPawns", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:ClearDeadPawns", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -259,7 +259,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RPawn Pawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.IsOffScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -271,7 +271,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void CheckForDeadPawns()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.CheckForDeadPawns", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:CheckForDeadPawns", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -282,7 +282,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void AddDeadPawnToList(BmSDK.BmGame.RPawn NewDeadPawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.AddDeadPawnToList", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:AddDeadPawnToList", true);
         byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDeadPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -294,7 +294,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual int GetVillainType(BmSDK.BmGame.RPawn the_villain)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.GetVillainType", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:GetVillainType", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(the_villain, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -306,7 +306,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void CheckForExternalSpawns()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.CheckForExternalSpawns", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:CheckForExternalSpawns", true);
         byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -317,7 +317,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe override void PlayerTakesDamage()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.PlayerTakesDamage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:PlayerTakesDamage", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -328,7 +328,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void RefreshEnemyTotals()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.RefreshEnemyTotals", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:RefreshEnemyTotals", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -339,7 +339,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void RefreshWeaponTotals()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.RefreshWeaponTotals", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:RefreshWeaponTotals", true);
         byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -350,7 +350,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void BankGaugePoints(bool ScoreBonusPoints = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.BankGaugePoints", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:BankGaugePoints", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ScoreBonusPoints, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -362,7 +362,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void SetGaugeValue(int new_value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.SetGaugeValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:SetGaugeValue", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -374,7 +374,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void SetGaugeLevel(int new_level)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.SetGaugeLevel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:SetGaugeLevel", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_level, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -386,7 +386,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void TauntJoker()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.TauntJoker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:TauntJoker", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -397,7 +397,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void HideEveryone()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.HideEveryone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:HideEveryone", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -408,7 +408,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual bool CompareToTimeStamp(float time_stamp, float test_latency)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.CompareToTimeStamp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:CompareToTimeStamp", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(time_stamp, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(test_latency, paramsPtr + 4);
@@ -421,7 +421,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe override bool Update(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.Update", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:Update", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -433,7 +433,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void PlayHudSound(BmSDK.BmScript.RSeqAct_PushYourLuckCombatSpawner.PYL_HudSounds sound_to_play)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.PlayHudSound", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:PlayHudSound", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sound_to_play, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -445,7 +445,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// </summary>
     public unsafe virtual void InitialiseEverything()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner.InitialiseEverything", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PushYourLuckCombatSpawner:InitialiseEverything", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

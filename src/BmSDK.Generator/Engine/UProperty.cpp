@@ -5,7 +5,7 @@
 
 string UProperty::GetInnerTypeNameManaged() const
 {
-    if (GetPathName() == "Core.Object.ObjectFlags")
+    if (GetPathName() == "Core.Object:ObjectFlags")
     {
         return "BmSDK.GameObject.EObjectFlags";
     }
@@ -32,8 +32,7 @@ string UProperty::GetInnerTypeNameManaged() const
     {
         return "bool";
     }
-    else if (Class->GetPathName() == "Core.StrProperty" ||
-        Class->GetPathName() == "Core.StringProperty")
+    else if (Class->GetPathName() == "Core.StrProperty")
     {
         return "BmSDK.FString";
     }

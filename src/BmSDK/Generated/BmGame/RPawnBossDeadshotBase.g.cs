@@ -78,7 +78,7 @@ public partial class RPawnBossDeadshotBase : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// </summary>
     public unsafe virtual void JammerGadgetUsed()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossDeadshotBase.JammerGadgetUsed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossDeadshotBase:JammerGadgetUsed", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

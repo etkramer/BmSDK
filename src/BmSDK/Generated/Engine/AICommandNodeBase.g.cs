@@ -83,7 +83,7 @@ public partial class AICommandNodeBase : BmSDK.Engine.K2NodeBase, BmSDK.IGameObj
     /// </summary>
     public unsafe virtual BmSDK.Engine.AICommandNodeBase SelectBestChild(BmSDK.Engine.AIController InAI, out BmSDK.Engine.AITree.FAITreeHandle Handle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AICommandNodeBase.SelectBestChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AICommandNodeBase:SelectBestChild", true);
         byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InAI, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

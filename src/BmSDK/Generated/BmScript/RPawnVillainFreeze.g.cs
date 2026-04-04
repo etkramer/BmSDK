@@ -83,7 +83,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool FireRailsTargetSequenceEvent(BmSDK.BmScript.RFreezeEnvironmentTarget RailsTarget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FireRailsTargetSequenceEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FireRailsTargetSequenceEvent", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RailsTarget, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool FireIceMeshSequenceEvent(BmSDK.BmScript.RFreezeDynamicSMIceFormation IceMesh)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FireIceMeshSequenceEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FireIceMeshSequenceEvent", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IceMesh, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -107,7 +107,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FireSequenceEvent(BmSDK.Class InEventClass)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FireSequenceEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FireSequenceEvent", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InEventClass, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -119,7 +119,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FinishFinalBeatdownSequence()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FinishFinalBeatdownSequence", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FinishFinalBeatdownSequence", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -130,7 +130,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.Engine.AkParameterName GetParameterInterference()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetParameterInterference", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetParameterInterference", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(paramsPtr + 0);
@@ -141,7 +141,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.Engine.AkParameterName GetParameterAngle()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetParameterAngle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetParameterAngle", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(paramsPtr + 0);
@@ -152,7 +152,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool ShouldAutoClimbAfterGrapple(System.Numerics.Vector3 ClimbLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShouldAutoClimbAfterGrapple", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShouldAutoClimbAfterGrapple", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClimbLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -164,7 +164,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FinishBackscreenDownloadTimer()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FinishBackscreenDownloadTimer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FinishBackscreenDownloadTimer", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -175,7 +175,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StartBackscreenDownloadTimer(float TimerDuration)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StartBackscreenDownloadTimer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StartBackscreenDownloadTimer", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TimerDuration, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -187,7 +187,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool CanOpenBackScreen()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CanOpenBackScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CanOpenBackScreen", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -198,7 +198,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ReachedRageBeatdownPosition()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ReachedRageBeatdownPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ReachedRageBeatdownPosition", true);
         byte* paramsPtr = stackalloc byte[112];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -209,7 +209,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FinalStrikeLoseHealth()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FinalStrikeLoseHealth", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FinalStrikeLoseHealth", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -220,7 +220,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FinalStrikeShake()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FinalStrikeShake", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FinalStrikeShake", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -231,7 +231,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void GeneralStrikeShake()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GeneralStrikeShake", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GeneralStrikeShake", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -242,7 +242,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BareFaceStrike()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BareFaceStrike", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BareFaceStrike", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -253,7 +253,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactBatmanBone(BmSDK.FName BatmanBone)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactBatmanBone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactBatmanBone", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanBone, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -265,7 +265,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactKneeRight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactKneeRight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactKneeRight", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -276,7 +276,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactKneeLeft()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactKneeLeft", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactKneeLeft", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -287,7 +287,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactElbowRight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactElbowRight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactElbowRight", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -298,7 +298,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactElbowLeft()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactElbowLeft", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactElbowLeft", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -309,7 +309,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFootRight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFootRight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFootRight", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -320,7 +320,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFootLeft()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFootLeft", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFootLeft", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -331,7 +331,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFistRight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFistRight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFistRight", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -342,7 +342,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFistLeft()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFistLeft", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFistLeft", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -353,7 +353,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFace()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFace", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFace", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -364,7 +364,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ImpactFaceInternal(bool IsFinisher)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ImpactFaceInternal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ImpactFaceInternal", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IsFinisher, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -376,7 +376,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ShakeHealthBar()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShakeHealthBar", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShakeHealthBar", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -387,7 +387,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SmashVisor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SmashVisor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SmashVisor", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -398,7 +398,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetFootSparksActive(bool make_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetFootSparksActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetFootSparksActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(make_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -410,7 +410,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetIceCrystalsActive(bool make_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetIceCrystalsActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetIceCrystalsActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(make_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -422,7 +422,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetInvulnerableShieldActive(bool is_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetInvulnerableShieldActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetInvulnerableShieldActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -434,7 +434,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.Class GetBossTakedown(BmSDK.BmGame.RPawnPlayer.EStealthTakeDownStages takedown_stage)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetBossTakedown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetBossTakedown", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(takedown_stage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -446,7 +446,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void DrawDebugGraphics()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DrawDebugGraphics", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DrawDebugGraphics", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -457,7 +457,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void CreateBatmansFreezeSpecificWeaponConfig(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CreateBatmansFreezeSpecificWeaponConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CreateBatmansFreezeSpecificWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[284];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -469,7 +469,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfigFreeze(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet Anims1, BmSDK.Engine.AnimSet Anims2, BmSDK.Engine.AnimSet Anims3, BmSDK.Engine.AnimSet Anims4, BmSDK.Engine.AnimSet Anims5)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CreateCombatWeaponConfigFreeze", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CreateCombatWeaponConfigFreeze", true);
         byte* paramsPtr = stackalloc byte[5752];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Anims1, paramsPtr + 4);
@@ -486,7 +486,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RPoseConfig.FPose SetLegYawOnPose(BmSDK.BmGame.RPoseConfig.FPose InPose)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetLegYawOnPose", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetLegYawOnPose", true);
         byte* paramsPtr = stackalloc byte[680];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPose, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -498,7 +498,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool ShouldFreezeBlastDoDamage()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShouldFreezeBlastDoDamage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShouldFreezeBlastDoDamage", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -509,7 +509,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void NotifyNoraStatueDestroyed(bool bDestroyedByFreeze, System.Numerics.Vector3 StatueLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.NotifyNoraStatueDestroyed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:NotifyNoraStatueDestroyed", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDestroyedByFreeze, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StatueLocation, paramsPtr + 4);
@@ -522,7 +522,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DroneKeepAliveCountdown()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DroneKeepAliveCountdown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DroneKeepAliveCountdown", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -533,7 +533,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DroneKeepAliveTick()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DroneKeepAliveTick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DroneKeepAliveTick", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -544,7 +544,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void NotifyDroneFoundBatman(bool bWasDestroyed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.NotifyDroneFoundBatman", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:NotifyDroneFoundBatman", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bWasDestroyed, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -556,7 +556,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void NotifyBatmanEntersOrLeavesHighBoxVolume(bool is_entering)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.NotifyBatmanEntersOrLeavesHighBoxVolume", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:NotifyBatmanEntersOrLeavesHighBoxVolume", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_entering, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -568,7 +568,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FreezeNoticesTakedown()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FreezeNoticesTakedown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FreezeNoticesTakedown", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -579,7 +579,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BatmanBumped()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BatmanBumped", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BatmanBumped", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -590,7 +590,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void CollisionWith(BmSDK.BmGame.RPawnCombat OtherPawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CollisionWith", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CollisionWith", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -602,7 +602,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.Bump", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:Bump", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 4);
@@ -616,7 +616,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CreateWeaponConfigUnarmed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -628,7 +628,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsValidForStrike", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsValidForStrike", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPawn, paramsPtr + 4);
@@ -642,7 +642,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetFogProportion(float proportion_to_set)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetFogProportion", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetFogProportion", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(proportion_to_set, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -654,7 +654,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickFog(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickFog", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickFog", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -666,7 +666,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void RollInFog(float TargetLevel, float FogChangeDuration = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.RollInFog", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:RollInFog", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetLevel, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FogChangeDuration, paramsPtr + 4);
@@ -679,7 +679,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickRepelAttack(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickRepelAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickRepelAttack", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -691,7 +691,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void RepelBatman(System.Numerics.Vector3 RepelOrigin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.RepelBatman", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:RepelBatman", true);
         byte* paramsPtr = stackalloc byte[144];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RepelOrigin, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -703,7 +703,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool HasRepelLineOfSight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HasRepelLineOfSight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HasRepelLineOfSight", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -714,7 +714,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SpawnEmpEffectAtLocation(System.Numerics.Vector3 EffectLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SpawnEmpEffectAtLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SpawnEmpEffectAtLocation", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EffectLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -726,7 +726,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool ShouldSpawnEffect(float previous_radius, float actor_distance)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShouldSpawnEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShouldSpawnEffect", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(previous_radius, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(actor_distance, paramsPtr + 4);
@@ -739,7 +739,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickEmpEffect(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickEmpEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickEmpEffect", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -751,7 +751,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SortElecticalActors()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SortElecticalActors", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SortElecticalActors", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -762,7 +762,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void InitialiseEmpEffect()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.InitialiseEmpEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:InitialiseEmpEffect", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -773,7 +773,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void InitialiseRearFacingRepel()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.InitialiseRearFacingRepel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:InitialiseRearFacingRepel", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -784,7 +784,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void InitialiseRepelAttack(bool large_scale)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.InitialiseRepelAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:InitialiseRepelAttack", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(large_scale, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -796,7 +796,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsVulnerableToTakedown(BmSDK.FString takedown)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsVulnerableToTakedown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsVulnerableToTakedown", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(takedown, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -808,7 +808,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsAwareOfPlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 4);
@@ -821,7 +821,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsVulnerableToPawn(BmSDK.BmGame.RPawnCombat Attacker)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsVulnerableToPawn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsVulnerableToPawn", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -833,7 +833,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void HitByJammerGadgetCharge()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HitByJammerGadgetCharge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HitByJammerGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -844,7 +844,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsVulnerableToJammerGadget()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsVulnerableToJammerGadget", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsVulnerableToJammerGadget", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -855,7 +855,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsOutside()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsOutside", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsOutside", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -866,7 +866,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsVulnerableToBossStrike()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsVulnerableToBossStrike", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsVulnerableToBossStrike", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -877,7 +877,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsVulnerableToStunStrike()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsVulnerableToStunStrike", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsVulnerableToStunStrike", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -888,7 +888,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void InvulnerableWhileSliding()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.InvulnerableWhileSliding", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:InvulnerableWhileSliding", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -899,7 +899,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void MakeInvulnerableWhileSliding(float SlideDuration)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.MakeInvulnerableWhileSliding", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:MakeInvulnerableWhileSliding", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SlideDuration, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -911,7 +911,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool CanRepelAttack(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class DamageType)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CanRepelAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CanRepelAttack", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 4);
@@ -924,7 +924,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TakeRageStrike(float RageAnimScale, float ClipFront, float MeetingPoint = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TakeRageStrike", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TakeRageStrike", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RageAnimScale, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClipFront, paramsPtr + 4);
@@ -938,7 +938,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakeBossStrikeWhileExhausted(System.Numerics.Vector3 vBMtoFreeze, bool final_strike, out System.Numerics.Vector3 AttackLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TakeBossStrikeWhileExhausted", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TakeBossStrikeWhileExhausted", true);
         byte* paramsPtr = stackalloc byte[96];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(vBMtoFreeze, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(final_strike, paramsPtr + 12);
@@ -952,7 +952,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.FName GetRandomBeatDownReaction()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetRandomBeatDownReaction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetRandomBeatDownReaction", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
@@ -963,7 +963,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void TickMagneticBlast(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickMagneticBlast", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickMagneticBlast", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -975,7 +975,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TranslateToPosition(System.Numerics.Vector3 target_position)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TranslateToPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TranslateToPosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(target_position, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -987,7 +987,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StartHitWall(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StartHitWall", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StartHitWall", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(QueuedAnimID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -999,7 +999,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StartFlyBackwards(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QueuedAnimID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StartFlyBackwards", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StartFlyBackwards", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(QueuedAnimID, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1011,7 +1011,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetMagBlastPhase(BmSDK.BmScript.RPawnVillainFreeze.MagneticBlastPhase new_phase)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetMagBlastPhase", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetMagBlastPhase", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_phase, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1023,7 +1023,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FindMagBlastFlightTime()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FindMagBlastFlightTime", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FindMagBlastFlightTime", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1034,7 +1034,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void DoMagneticBlastAttract(System.Numerics.Vector3 magnet_source, BmSDK.Rotator wall_normal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoMagneticBlastAttract", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoMagneticBlastAttract", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(magnet_source, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(wall_normal, paramsPtr + 12);
@@ -1047,7 +1047,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override float GetMagneticBlastDuration()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetMagneticBlastDuration", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetMagneticBlastDuration", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -1058,7 +1058,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DoRecoilAnimationSeekers()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoRecoilAnimationSeekers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoRecoilAnimationSeekers", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1069,7 +1069,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DoRecoilAnimationGrenade()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoRecoilAnimationGrenade", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoRecoilAnimationGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1080,7 +1080,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DoRecoilAnimationFreezeBeam()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoRecoilAnimationFreezeBeam", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoRecoilAnimationFreezeBeam", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1091,7 +1091,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DoLookAround()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoLookAround", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoLookAround", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1102,7 +1102,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void DoKnockDownInternal(System.Numerics.Vector3 offender_origin, bool power_takedown, bool FromAbove = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DoKnockDownInternal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DoKnockDownInternal", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(offender_origin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(power_takedown, paramsPtr + 12);
@@ -1116,7 +1116,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void RespondToLineLauncher(System.Numerics.Vector3 batmans_position, bool be_knocked_down)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.RespondToLineLauncher", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:RespondToLineLauncher", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(batmans_position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(be_knocked_down, paramsPtr + 12);
@@ -1129,7 +1129,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void KickedByBatman(System.Numerics.Vector3 batman_origin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.KickedByBatman", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:KickedByBatman", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(batman_origin, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1141,7 +1141,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void HitWithGooMineEnhanced(System.Numerics.Vector3 goo_origin, bool is_glass)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HitWithGooMineEnhanced", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HitWithGooMineEnhanced", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(goo_origin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_glass, paramsPtr + 12);
@@ -1154,7 +1154,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool BossCanTakeGooHit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BossCanTakeGooHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BossCanTakeGooHit", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -1165,7 +1165,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.DamagedBy", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:DamagedBy", true);
         byte* paramsPtr = stackalloc byte[245];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DmgInfo, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1177,7 +1177,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void LightStun(System.Numerics.Vector3 offender_origin, bool alert_to_position)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.LightStun", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:LightStun", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(offender_origin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(alert_to_position, paramsPtr + 12);
@@ -1190,7 +1190,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void HitByFreezeCluster(System.Numerics.Vector3 ClusterLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HitByFreezeCluster", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HitByFreezeCluster", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClusterLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1202,7 +1202,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void HitByFreezeBlast()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HitByFreezeBlast", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HitByFreezeBlast", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1213,7 +1213,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool OverrideHarpoonHit(BmSDK.BmGame.RPawnPlayer PlayerPawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.OverrideHarpoonHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:OverrideHarpoonHit", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1225,7 +1225,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool StunPush(System.Numerics.Vector3 goo_origin, float OrientationProportion = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StunPush", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StunPush", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(goo_origin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OrientationProportion, paramsPtr + 12);
@@ -1238,7 +1238,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool StunPull(System.Numerics.Vector3 harpoon_origin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StunPull", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StunPull", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(harpoon_origin, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1250,7 +1250,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void OrientAndAnimate(System.Numerics.Vector3 object_position, BmSDK.FName animation_if_object_in_front, BmSDK.FName animation_if_object_behind, BmSDK.FName MovementStance, BmSDK.FName WeaponStance, float TransitionMeetingPoint, float OrientationProportion = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.OrientAndAnimate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:OrientAndAnimate", true);
         byte* paramsPtr = stackalloc byte[84];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(object_position, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(animation_if_object_in_front, paramsPtr + 12);
@@ -1268,7 +1268,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmScript.RPawnVillainFreeze.SourceDirection GetSourceDirection(System.Numerics.Vector3 Source)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetSourceDirection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetSourceDirection", true);
         byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Source, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1280,7 +1280,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsToLeft(System.Numerics.Vector3 Source)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsToLeft", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsToLeft", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Source, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1292,7 +1292,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsInFront(System.Numerics.Vector3 Source, float angle_radians = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsInFront", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsInFront", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Source, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(angle_radians, paramsPtr + 12);
@@ -1305,7 +1305,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StunReciprocalPeriod()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StunReciprocalPeriod", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StunReciprocalPeriod", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1316,7 +1316,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StartStunReciprocalTimer()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StartStunReciprocalTimer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StartStunReciprocalTimer", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1327,7 +1327,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsStunReciprocalActive()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsStunReciprocalActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsStunReciprocalActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -1338,7 +1338,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool CanBeKnockedDown(BmSDK.FString takedown = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CanBeKnockedDown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CanBeKnockedDown", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(takedown, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1350,7 +1350,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void JammerGadgetMuzzleEffect()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.JammerGadgetMuzzleEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:JammerGadgetMuzzleEffect", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1361,7 +1361,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void JammerGadgetKnockDown()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.JammerGadgetKnockDown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:JammerGadgetKnockDown", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1372,7 +1372,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void Electrify()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.Electrify", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:Electrify", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1383,7 +1383,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void ForceDisarm()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ForceDisarm", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ForceDisarm", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1394,7 +1394,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void Disarm()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.Disarm", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:Disarm", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1405,7 +1405,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool SpawnSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SpawnSpecialAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SpawnSpecialAttack", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 4);
@@ -1418,7 +1418,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CanBeHitInCombat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1430,7 +1430,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmScript.RBMBehaviour_Freeze GetBehaviour()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetBehaviour", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetBehaviour", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RBMBehaviour_Freeze>(paramsPtr + 0);
@@ -1441,7 +1441,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void SonicBatarangKill()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SonicBatarangKill", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SonicBatarangKill", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1452,7 +1452,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CanBatmanGrab", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CanBatmanGrab", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIController.BatmanGrabType>(paramsPtr + 0);
@@ -1463,7 +1463,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override bool IsBoss()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsBoss", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsBoss", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -1474,7 +1474,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void StopFreezeSound(BmSDK.BmScript.RPawnVillainFreeze.FreezeSounds the_sound)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.StopFreezeSound", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:StopFreezeSound", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(the_sound, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1486,7 +1486,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void PlayFreezeSound(BmSDK.BmScript.RPawnVillainFreeze.FreezeSounds the_sound)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PlayFreezeSound", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PlayFreezeSound", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(the_sound, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1498,7 +1498,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetTelemetryWarningActive(bool is_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetTelemetryWarningActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetTelemetryWarningActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1510,7 +1510,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetRoomFreezeExhaustActive(bool is_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetRoomFreezeExhaustActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetRoomFreezeExhaustActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1522,7 +1522,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickMovingBits(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickMovingBits", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickMovingBits", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1534,7 +1534,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickSuitPulse(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickSuitPulse", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickSuitPulse", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1546,7 +1546,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetSuitPulse(float Frequency)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetSuitPulse", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetSuitPulse", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Frequency, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1558,7 +1558,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsPointNearLaser(System.Numerics.Vector3 the_point)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsPointNearLaser", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsPointNearLaser", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(the_point, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1570,7 +1570,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TickLasers(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TickLasers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TickLasers", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1582,7 +1582,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetLasersActive(bool lasers_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetLasersActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetLasersActive", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(lasers_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1594,7 +1594,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetLampState(BmSDK.BmScript.RPawnVillainFreeze.FreezeLampState lamp_state)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetLampState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetLampState", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(lamp_state, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1606,7 +1606,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SpawnImpactEffect(System.Numerics.Vector3 ImpactLocation, BmSDK.Rotator ImpactRotation, bool IsFinisher)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SpawnImpactEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SpawnImpactEffect", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactRotation, paramsPtr + 12);
@@ -1620,7 +1620,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetGlassBrokenStage(float new_stage)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetGlassBrokenStage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetGlassBrokenStage", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_stage, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1632,7 +1632,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetLampColour(float colR, float colG, float colB)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetLampColour", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetLampColour", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(colR, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(colG, paramsPtr + 4);
@@ -1646,7 +1646,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual float GetTimeSinceLastVocal()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetTimeSinceLastVocal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetTimeSinceLastVocal", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -1657,7 +1657,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void SuspendBehaviour(bool OnlyIfNoVisualContact = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SuspendBehaviour", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SuspendBehaviour", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OnlyIfNoVisualContact, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1669,7 +1669,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ResetDialogueTimeStamp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ResetDialogueTimeStamp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ResetDialogueTimeStamp", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1680,7 +1680,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool FindClearPointNearLocation(System.Numerics.Vector3 TheLocation, out System.Numerics.Vector3 ClearPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FindClearPointNearLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FindClearPointNearLocation", true);
         byte* paramsPtr = stackalloc byte[72];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1693,7 +1693,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsLocationClear(System.Numerics.Vector3 TestLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsLocationClear", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsLocationClear", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1705,7 +1705,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsDirectionClear(BmSDK.Rotator TestDirection, float DistanceToTest = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsDirectionClear", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsDirectionClear", true);
         byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestDirection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DistanceToTest, paramsPtr + 12);
@@ -1718,7 +1718,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual float GetBestArrayDirection(out BmSDK.TArray<int> DirectionClearArray)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetBestArrayDirection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetBestArrayDirection", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         DirectionClearArray = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(paramsPtr + 0);
@@ -1730,7 +1730,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SampleAreaAndFindSafeDirection()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SampleAreaAndFindSafeDirection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SampleAreaAndFindSafeDirection", true);
         byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1741,7 +1741,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual int ArrayDirectionToYaw(float ArrayDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ArrayDirectionToYaw", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ArrayDirectionToYaw", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayDirection, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1753,7 +1753,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsArrayRangeClear(out BmSDK.TArray<int> DirectionClearArray, int TestDirIndex, BmSDK.Rotator CurrentViewDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsArrayRangeClear", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsArrayRangeClear", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestDirIndex, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentViewDirection, paramsPtr + 16);
@@ -1767,7 +1767,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool TestArrayDirection(out BmSDK.TArray<int> DirectionClearArray, int ArrayDirection, BmSDK.Rotator CurrentViewDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TestArrayDirection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TestArrayDirection", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayDirection, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentViewDirection, paramsPtr + 16);
@@ -1781,7 +1781,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual int ArrayDirectionToDegrees(float ArrayDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ArrayDirectionToDegrees", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ArrayDirectionToDegrees", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayDirection, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1793,7 +1793,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsArrayDirectionClear(int ArrayDirection, BmSDK.Rotator CurrentViewDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsArrayDirectionClear", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsArrayDirectionClear", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayDirection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentViewDirection, paramsPtr + 4);
@@ -1806,7 +1806,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FallTowardsClearArea()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FallTowardsClearArea", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FallTowardsClearArea", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1817,7 +1817,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void CheckForObstaclesAtEndOfSlide()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CheckForObstaclesAtEndOfSlide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CheckForObstaclesAtEndOfSlide", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -1828,7 +1828,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FallToEndOfSlope(BmSDK.BmScript.RFreezeSlipperySlopeVolume SlipperySlopeVolume)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FallToEndOfSlope", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FallToEndOfSlope", true);
         byte* paramsPtr = stackalloc byte[84];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SlipperySlopeVolume, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1840,7 +1840,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void CheckLeftAndRightForObstacles(bool CheckLeft, bool CheckRight, BmSDK.Rotator FinalFacingDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CheckLeftAndRightForObstacles", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CheckLeftAndRightForObstacles", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckLeft, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckRight, paramsPtr + 4);
@@ -1854,7 +1854,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool CheckForObstaclesWithPlusMinusOffset(BmSDK.Rotator FinalFacingDirection, int YawOffset, int PlusMinus)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CheckForObstaclesWithPlusMinusOffset", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CheckForObstaclesWithPlusMinusOffset", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinalFacingDirection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(YawOffset, paramsPtr + 12);
@@ -1868,7 +1868,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsDirectionOffsetClear(BmSDK.Rotator TestDirection, int YawOffset)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsDirectionOffsetClear", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsDirectionOffsetClear", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestDirection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(YawOffset, paramsPtr + 12);
@@ -1881,7 +1881,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void TurnToFaceClearArea(int ClearFacingYaw, float TurnDuration = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TurnToFaceClearArea", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TurnToFaceClearArea", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClearFacingYaw, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TurnDuration, paramsPtr + 4);
@@ -1894,7 +1894,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual float GetTurnToFaceMeetingPointEnd(float current_proportion, float total_duration, float requested_turn_duration)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetTurnToFaceMeetingPointEnd", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetTurnToFaceMeetingPointEnd", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(current_proportion, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(total_duration, paramsPtr + 4);
@@ -1908,7 +1908,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual BmSDK.BmScript.RFreezeSlipperySlopeVolume GetCurrentSlipperySlope()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetCurrentSlipperySlope", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetCurrentSlipperySlope", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RFreezeSlipperySlopeVolume>(paramsPtr + 0);
@@ -1919,7 +1919,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool ShouldBatmanUseSomersaultWhenAttackingFrom(System.Numerics.Vector3 BatmanPosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShouldBatmanUseSomersaultWhenAttackingFrom", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShouldBatmanUseSomersaultWhenAttackingFrom", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatmanPosition, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1931,7 +1931,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetFrozenCapeLevel(float FrozenCapeLevel)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetFrozenCapeLevel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetFrozenCapeLevel", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrozenCapeLevel, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1943,7 +1943,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void SetPropsInXray(bool bActivate)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetPropsInXray", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetPropsInXray", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bActivate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1955,7 +1955,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool PlayBatmanSpeechOnceOrInfrequently(BmSDK.BmScript.RPawnVillainFreeze.BatmanDialogueLines LineToPlay)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PlayBatmanSpeechOnceOrInfrequently", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PlayBatmanSpeechOnceOrInfrequently", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LineToPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1967,7 +1967,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool PlayBatmanSpeech(BmSDK.BmScript.RPawnVillainFreeze.BatmanDialogueLines LineToPlay, bool ForceInterrupt = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PlayBatmanSpeech", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PlayBatmanSpeech", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LineToPlay, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceInterrupt, paramsPtr + 4);
@@ -1980,7 +1980,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool HasPlayedLine(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.HasPlayedLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:HasPlayedLine", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LineToPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -1992,7 +1992,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool PlayFreezeSpeech(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay, bool ForceInterrupt = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PlayFreezeSpeech", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PlayFreezeSpeech", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LineToPlay, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ForceInterrupt, paramsPtr + 4);
@@ -2005,7 +2005,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void CommentObliviouslyOnLineLauncher()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.CommentObliviouslyOnLineLauncher", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:CommentObliviouslyOnLineLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2016,7 +2016,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ShortPauseThenCommentObliviouslyOnLineLauncher()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShortPauseThenCommentObliviouslyOnLineLauncher", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShortPauseThenCommentObliviouslyOnLineLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2027,7 +2027,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void AlertToGadgetNoise()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.AlertToGadgetNoise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:AlertToGadgetNoise", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2038,7 +2038,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ShortPauseThenAlertToGadgetNoise()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShortPauseThenAlertToGadgetNoise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShortPauseThenAlertToGadgetNoise", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2049,7 +2049,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void RefreshLinelauncherAwareness()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.RefreshLinelauncherAwareness", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:RefreshLinelauncherAwareness", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2060,7 +2060,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void AlertToLineLauncher()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.AlertToLineLauncher", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:AlertToLineLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2071,7 +2071,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void ShortPauseThenAlertToLineLauncher()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShortPauseThenAlertToLineLauncher", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShortPauseThenAlertToLineLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2082,7 +2082,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void BatmanEntersVent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BatmanEntersVent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BatmanEntersVent", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2093,7 +2093,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void AlertToBrokenGlassSound(System.Numerics.Vector3 BreakageLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.AlertToBrokenGlassSound", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:AlertToBrokenGlassSound", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BreakageLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2105,7 +2105,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool ShouldSeekersSelfDestruct()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.ShouldSeekersSelfDestruct", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:ShouldSeekersSelfDestruct", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -2116,7 +2116,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BecomeVulnerableAgain()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BecomeVulnerableAgain", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BecomeVulnerableAgain", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2127,7 +2127,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual bool IsInvulnerable()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.IsInvulnerable", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:IsInvulnerable", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -2138,7 +2138,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void PostRecoveryInvulnerablePeriod()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PostRecoveryInvulnerablePeriod", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PostRecoveryInvulnerablePeriod", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2149,7 +2149,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BatmanTalksAboutFlawedTactic()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BatmanTalksAboutFlawedTactic", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BatmanTalksAboutFlawedTactic", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2160,7 +2160,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void PauseThenCommentOnFlawedTactic(BmSDK.BmScript.RPawnVillainFreeze.BatmanDialogueLines FlawDialogue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PauseThenCommentOnFlawedTactic", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PauseThenCommentOnFlawedTactic", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlawDialogue, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2172,7 +2172,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void NoteAndMaybeCommentOnTacticalFlaw(BmSDK.BmScript.RPawnVillainFreeze.BatmanDialogueLines FlawDialogue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.NoteAndMaybeCommentOnTacticalFlaw", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:NoteAndMaybeCommentOnTacticalFlaw", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlawDialogue, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2184,7 +2184,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BatmanTalksAboutIcyLedge()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BatmanTalksAboutIcyLedge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BatmanTalksAboutIcyLedge", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2195,7 +2195,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void TriggerDropFromIcyLedge()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TriggerDropFromIcyLedge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TriggerDropFromIcyLedge", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2206,7 +2206,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void BatmanTalksAboutFailedGlide()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.BatmanTalksAboutFailedGlide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:BatmanTalksAboutFailedGlide", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2217,7 +2217,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void PlayGlideFailAnim()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.PlayGlideFailAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:PlayGlideFailAnim", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2228,7 +2228,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void TriggerFailedGlideMove(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.TriggerFailedGlideMove", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:TriggerFailedGlideMove", true);
         byte* paramsPtr = stackalloc byte[116];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Loc, paramsPtr + 4);
@@ -2241,7 +2241,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FindNoraStatues()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FindNoraStatues", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FindNoraStatues", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2252,7 +2252,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FindElecticalDevices()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FindElecticalDevices", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FindElecticalDevices", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2263,7 +2263,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void FindFogVolumes()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.FindFogVolumes", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:FindFogVolumes", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2274,7 +2274,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void EnableGrateCollision()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.EnableGrateCollision", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:EnableGrateCollision", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2285,7 +2285,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void KeepFreezeHeadInvisible()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.KeepFreezeHeadInvisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:KeepFreezeHeadInvisible", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2296,7 +2296,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetJokerHeadActive(bool is_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetJokerHeadActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetJokerHeadActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2308,7 +2308,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void InitJokerHead()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.InitJokerHead", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:InitJokerHead", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -2319,7 +2319,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override float GetBatarangPriority()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.GetBatarangPriority", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -2330,7 +2330,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetVocalsLoaded(bool bLoad)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetVocalsLoaded", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetVocalsLoaded", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLoad, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2342,7 +2342,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe virtual void SetRedEyesParameter(float RedEyesParameter)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.SetRedEyesParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:SetRedEyesParameter", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RedEyesParameter, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2354,7 +2354,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// </summary>
     public unsafe override void Initialise()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze.Initialise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainFreeze:Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

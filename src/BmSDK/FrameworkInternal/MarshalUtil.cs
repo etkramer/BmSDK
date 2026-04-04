@@ -151,6 +151,61 @@ internal static unsafe class MarshalUtil
         );
     }
 
+    public static Type GetTypeFromProperty(Property prop)
+    {
+        // Mirrored in UProperty.cpp (generator)
+        if (prop is IntProperty)
+        {
+            return typeof(int);
+        }
+        else if (prop is ByteProperty)
+        {
+            return typeof(byte);
+        }
+        else if (prop is FloatProperty)
+        {
+            return typeof(float);
+        }
+        else if (prop is BoolProperty)
+        {
+            return typeof(bool);
+        }
+        else if (prop is StrProperty)
+        {
+            return typeof(FString);
+        }
+        else if (prop is NameProperty)
+        {
+            return typeof(FName);
+        }
+        else if (prop is StructProperty structProp)
+        {
+            var structObj = structProp.Struct;
+            var structPath = structObj.GetPathName();
+            return Guard.NotNull(
+                StaticInit.GetManagedTypeForStructPath(structPath),
+                $"Couldn't find managed type for struct '{structPath}'"
+            );
+        }
+        else if (prop is ObjectProperty or ComponentProperty or ClassProperty or InterfaceProperty)
+        {
+            return typeof(GameObject);
+        }
+        else if (prop is ArrayProperty arrayProp)
+        {
+            var innerType = GetTypeFromProperty(arrayProp.Inner);
+            return typeof(TArray<>).MakeGenericType(innerType);
+        }
+        else if (prop is DelegateProperty)
+        {
+            return typeof(IntPtr);
+        }
+
+        throw new NotImplementedException(
+            $"Marshaling not (fully) implemented for property type {prop.Class.Name}"
+        );
+    }
+
     public static int GetSizeUnmanaged<TManaged>()
     {
         // Try to use managed size directly (for struct, primitive types)

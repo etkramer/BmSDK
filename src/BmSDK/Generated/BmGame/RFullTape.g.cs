@@ -83,7 +83,7 @@ public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void FullyCook(bool bStripData)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFullTape.FullyCook", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFullTape:FullyCook", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bStripData, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

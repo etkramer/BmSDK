@@ -83,7 +83,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual bool SaveSubscriberValue(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores, int BindingIndex = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.SaveSubscriberValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:SaveSubscriberValue", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindingIndex, paramsPtr + 12);
         var oldFlags = funcManaged.FunctionFlags;
@@ -103,7 +103,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual void ClearBoundDataStores()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.ClearBoundDataStores", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:ClearBoundDataStores", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -121,7 +121,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual void GetBoundDataStores(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.GetBoundDataStores", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:GetBoundDataStores", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -140,7 +140,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual void NotifyDataStoreValueUpdated(BmSDK.Engine.UIDataStore SourceDataStore, bool bValuesInvalidated, BmSDK.FName PropertyTag, BmSDK.Engine.UIDataProvider SourceProvider, int ArrayIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.NotifyDataStoreValueUpdated", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:NotifyDataStoreValueUpdated", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceDataStore, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bValuesInvalidated, paramsPtr + 4);
@@ -163,7 +163,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual bool RefreshSubscriberValue(int BindingIndex = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.RefreshSubscriberValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:RefreshSubscriberValue", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindingIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -182,7 +182,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual BmSDK.FString GetDataStoreBinding(int BindingIndex = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.GetDataStoreBinding", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:GetDataStoreBinding", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindingIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -201,7 +201,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual void SetDataStoreBinding(BmSDK.FString MarkupText, int BindingIndex = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.SetDataStoreBinding", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:SetDataStoreBinding", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkupText, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BindingIndex, paramsPtr + 12);
@@ -221,7 +221,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// </summary>
     public unsafe virtual void PublishValues()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.PublishValues", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber:PublishValues", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
