@@ -151,7 +151,7 @@ public static unsafe class MarshalUtil
         );
     }
 
-    public static Type GetManagedTypeFromProperty(Property prop)
+    public static Type GetTypeFromProperty(Property prop)
     {
         // Mirrored in UProperty.cpp (generator)
         if (prop is IntProperty)

@@ -51,7 +51,7 @@ public partial class Function
         // Marshal args
         for (var i = 0; i < args.Length; i++)
         {
-            var argType = MarshalUtil.GetManagedTypeFromProperty(paramFields[i]);
+            var argType = MarshalUtil.GetTypeFromProperty(paramFields[i]);
             MarshalUtil.ToUnmanaged(args[i], (nint)paramsPtr + paramFields[i].Offset, argType);
         }
 
@@ -74,7 +74,7 @@ public partial class Function
         var returnParam = GetReturnParam();
         if (returnParam is not null)
         {
-            var returnType = MarshalUtil.GetManagedTypeFromProperty(returnParam);
+            var returnType = MarshalUtil.GetTypeFromProperty(returnParam);
             return MarshalUtil.ToManaged((nint)paramsPtr + returnParam.Offset, returnType);
         }
 
