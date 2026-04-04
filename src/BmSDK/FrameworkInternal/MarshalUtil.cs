@@ -3,7 +3,7 @@ using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-public static unsafe class MarshalUtil
+internal static unsafe class MarshalUtil
 {
     [StructLayout(LayoutKind.Sequential)]
     private struct FScriptInterface
