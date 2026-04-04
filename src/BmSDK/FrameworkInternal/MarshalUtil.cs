@@ -3,7 +3,7 @@ using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-internal static unsafe class MarshalUtil
+public static unsafe class MarshalUtil
 {
     [StructLayout(LayoutKind.Sequential)]
     private struct FScriptInterface
@@ -148,6 +148,59 @@ internal static unsafe class MarshalUtil
 
         throw new NotImplementedException(
             $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
+        );
+    }
+
+    public static Type GetManagedTypeFromProperty(Property prop)
+    {
+        // Mirrored in UProperty.cpp (generator)
+        if (prop is IntProperty)
+        {
+            return typeof(int);
+        }
+        else if (prop is ByteProperty)
+        {
+            return typeof(byte);
+        }
+        else if (prop is FloatProperty)
+        {
+            return typeof(float);
+        }
+        else if (prop is BoolProperty)
+        {
+            return typeof(bool);
+        }
+        else if (prop is StrProperty)
+        {
+            return typeof(FString);
+        }
+        else if (prop is NameProperty)
+        {
+            return typeof(FName);
+        }
+        else if (prop is StructProperty)
+        {
+            // TODO: How can we get the C# struct type from a UE3 "Struct" object? Need to update StaticInit?
+        }
+        else if (prop is ObjectProperty or ComponentProperty or ClassProperty or InterfaceProperty)
+        {
+            return typeof(GameObject);
+        }
+        else if (prop is ArrayProperty)
+        {
+            // TODO
+        }
+        else if (prop is MapProperty)
+        {
+            // TODO
+        }
+        else if (prop is DelegateProperty)
+        {
+            return typeof(IntPtr);
+        }
+
+        throw new NotImplementedException(
+            $"Marshaling not (fully) implemented for property type {prop.Class.Name}"
         );
     }
 

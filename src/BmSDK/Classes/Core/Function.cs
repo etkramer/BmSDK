@@ -35,6 +35,58 @@ public partial class Function
         set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
     }
 
+    public unsafe object? Invoke(GameObject? obj, params object[] args)
+    {
+        var paramFields = EnumerateParams().ToArray();
+        var paramsSize = PropertiesSize;
+        var paramsPtr = stackalloc byte[paramsSize];
+
+        Guard.Require(
+            args.Length >= paramFields.Length,
+            $"Not enough args passed to {Name}.Invoke() (expected {paramFields.Length}, got {args.Length})"
+        );
+
+        Guard.Require(IsStatic || obj is not null, $"Got unexpected null in {Name}.Invoke()");
+
+        // Marshal args
+        for (var i = 0; i < args.Length; i++)
+        {
+            var argType = MarshalUtil.GetManagedTypeFromProperty(paramFields[i]);
+            MarshalUtil.ToUnmanaged(args[i], (nint)paramsPtr + paramFields[i].Offset, argType);
+        }
+
+        // Execute function via ProcessEvent
+        var oldFlags = FunctionFlags;
+        var oldNative = iNative;
+        FunctionFlags &= ~EFunctionFlags.FUNC_Native;
+        FunctionFlags |= EFunctionFlags.FUNC_Defined;
+        iNative = 0;
+        GameFunctions.ProcessEvent(
+            IsStatic ? StaticClass().DefaultObject.Ptr : obj!.Ptr,
+            Ptr,
+            (nint)paramsPtr,
+            0
+        );
+        iNative = oldNative;
+        FunctionFlags = oldFlags;
+
+        // Marshal result back (if non-void)
+        var returnParam = GetReturnParam();
+        if (returnParam is not null)
+        {
+            var returnType = MarshalUtil.GetManagedTypeFromProperty(returnParam);
+            return MarshalUtil.ToManaged((nint)paramsPtr + returnParam.Offset, returnType);
+        }
+
+        return null;
+    }
+
+    public Property? GetReturnParam() =>
+        EnumerateParams()
+            .FirstOrDefault(param =>
+                param.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
+            );
+
     public IEnumerable<Property> EnumerateParams()
     {
         return EnumerateFields()
