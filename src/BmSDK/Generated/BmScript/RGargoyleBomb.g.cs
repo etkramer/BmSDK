@@ -83,7 +83,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.OnToggle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe override void ActivateBomb()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.ActivateBomb", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:ActivateBomb", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -106,7 +106,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void TurnOn()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.TurnOn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -117,7 +117,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void Explode()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.Explode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:Explode", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -128,7 +128,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void AlertThugs()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.AlertThugs", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:AlertThugs", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -139,7 +139,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void PlayWarningBeep()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.PlayWarningBeep", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:PlayWarningBeep", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -150,7 +150,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe override void BatmanOnGargoyle()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.BatmanOnGargoyle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:BatmanOnGargoyle", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -161,7 +161,7 @@ public partial class RGargoyleBomb : BmSDK.BmGame.RGargoyleBombBase, BmSDK.BmGam
     /// </summary>
     public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb.SetInXrayMode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGargoyleBomb:SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(On, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceOff, paramsPtr + 4);

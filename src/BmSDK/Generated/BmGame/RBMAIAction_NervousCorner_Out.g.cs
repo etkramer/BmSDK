@@ -83,7 +83,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.ActionTick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:ActionTick", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe virtual void StartCorner(System.Numerics.Vector3 TargetPos, float TargetYaw)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.StartCorner", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:StartCorner", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetPos, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetYaw, paramsPtr + 12);
@@ -108,7 +108,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe override void OnDeactivate()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.OnDeactivate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +119,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe override void OnActivate()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.OnActivate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -130,7 +130,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe virtual void SetAggressive(bool bNewAgg)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.SetAggressive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:SetAggressive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewAgg, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -142,7 +142,7 @@ public partial class RBMAIAction_NervousCorner_Out : BmSDK.BmGame.RBMAIAction, B
     /// </summary>
     public unsafe virtual void SetCornerPos(System.Numerics.Vector3 pos, float Yaw)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out.SetCornerPos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_NervousCorner_Out:SetCornerPos", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(pos, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Yaw, paramsPtr + 12);

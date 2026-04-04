@@ -83,7 +83,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetTargetJammerLockonProportion(int CursorID, float Proportion)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetTargetJammerLockonProportion", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetTargetJammerLockonProportion", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CursorID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Proportion, paramsPtr + 4);
@@ -96,7 +96,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void TargetCursorPrivate(int CursorID, BmSDK.FString AnimName, bool bVisible, bool bSnapToPosition, float X, float Y, float Depth, bool Pulsing, int Charges, int MaxCharges)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.TargetCursorPrivate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:TargetCursorPrivate", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CursorID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimName, paramsPtr + 4);
@@ -117,7 +117,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void TargetCursor(int CursorID, BmSDK.FString AnimName, bool bVisible, bool bSnapToPosition, float X, float Y, float Depth, bool Pulsing = default, int Charges = default, int MaxCharges = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.TargetCursor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:TargetCursor", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CursorID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimName, paramsPtr + 4);
@@ -138,7 +138,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void ClearAllCursors()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.ClearAllCursors", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:ClearAllCursors", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -149,7 +149,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void DisplayMissileLaunchText(BmSDK.FString TextToDisplay, float DisplayDuration)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.DisplayMissileLaunchText", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:DisplayMissileLaunchText", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TextToDisplay, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DisplayDuration, paramsPtr + 12);
@@ -162,7 +162,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void HideGrenadeWarning()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.HideGrenadeWarning", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:HideGrenadeWarning", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -173,7 +173,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void Private_CachedFunction_SetGrenadeWarning(float grenade_x, float grenade_y, bool is_grenade)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.Private_CachedFunction_SetGrenadeWarning", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:Private_CachedFunction_SetGrenadeWarning", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(grenade_x, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(grenade_y, paramsPtr + 4);
@@ -187,7 +187,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetGrenadeWarning(System.Numerics.Vector3 GrenadePosition, bool IsGrenadeType = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetGrenadeWarning", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetGrenadeWarning", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GrenadePosition, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(IsGrenadeType, paramsPtr + 12);
@@ -200,7 +200,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void UpdateMissileWarning()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.UpdateMissileWarning", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:UpdateMissileWarning", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -211,7 +211,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetMissileWarning(System.Numerics.Vector3 _MissilePosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetMissileWarning", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetMissileWarning", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_MissilePosition, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -223,7 +223,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetMarkerAttributes(int MarkerIndex, bool MarkerVisible, float MarkerAngle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetMarkerAttributes", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetMarkerAttributes", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerVisible, paramsPtr + 4);
@@ -237,7 +237,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual bool IsMarkerVisible(int MarkerIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.IsMarkerVisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:IsMarkerVisible", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -249,7 +249,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void NotifyMarkerLocationChanged(int MarkerIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.NotifyMarkerLocationChanged", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:NotifyMarkerLocationChanged", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -261,7 +261,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetCustomMarkerFrameString(BmSDK.FString FrameString)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetCustomMarkerFrameString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetCustomMarkerFrameString", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameString, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -273,7 +273,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual bool CheckCustomMarkerFrame(BmSDK.FString TestSubstring, BmSDK.FString FrameToSet)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.CheckCustomMarkerFrame", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:CheckCustomMarkerFrame", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestSubstring, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FrameToSet, paramsPtr + 12);
@@ -286,7 +286,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetCustomMarkerIconTypeName(BmSDK.FString _CustomMarkerIconName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetCustomMarkerIconTypeName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetCustomMarkerIconTypeName", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_CustomMarkerIconName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -298,7 +298,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void HideCompass()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.HideCompass", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:HideCompass", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -309,7 +309,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetCompassAnglePrivate(float CompassAngle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetCompassAnglePrivate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetCompassAnglePrivate", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompassAngle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -321,7 +321,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetCompassAngle(float CompassAngle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetCompassAngle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetCompassAngle", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompassAngle, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -333,7 +333,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetAnytimeAngle(bool bVisible, float anytimeAngle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.SetAnytimeAngle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:SetAnytimeAngle", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(anytimeAngle, paramsPtr + 4);
@@ -346,7 +346,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void DrawGrappleIconAtEndOfHudUpdate()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.DrawGrappleIconAtEndOfHudUpdate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:DrawGrappleIconAtEndOfHudUpdate", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -357,7 +357,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void Private_SendAnytime(bool bVisible, float X, float Y, BmSDK.FString AnimName, bool bRestart, float Depth)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.Private_SendAnytime", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:Private_SendAnytime", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 4);
@@ -374,7 +374,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe virtual void ShowGrappleIcon(bool bVisible, float X, float Y, BmSDK.FString AnimName, bool bRestart, float Depth)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.ShowGrappleIcon", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:ShowGrappleIcon", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bVisible, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 4);
@@ -398,7 +398,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe override void Close()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.Close", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:Close", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -409,7 +409,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// </summary>
     public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets.Init", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionTargets:Init", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 4);

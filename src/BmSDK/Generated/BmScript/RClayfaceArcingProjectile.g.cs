@@ -83,7 +83,7 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// </summary>
     public unsafe override void Explode()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile.Explode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile:Explode", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// </summary>
     public unsafe override bool HurtBatman()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile.HurtBatman", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile:HurtBatman", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -105,7 +105,7 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// </summary>
     public unsafe override void UpdateMoveTarget(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile.UpdateMoveTarget", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile:UpdateMoveTarget", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -117,7 +117,7 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// </summary>
     public unsafe override void Tick(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile.Tick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile:Tick", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -129,7 +129,7 @@ public partial class RClayfaceArcingProjectile : BmSDK.BmScript.RClayfaceProject
     /// </summary>
     public unsafe virtual void InitialiseArcProj(BmSDK.BmGame.RPawnBossClayfaceBase CF, float FlightSpd, float Damage, bool bLarge, bool bDelaySpawn, float TimeBeforeActivate = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile.InitialiseArcProj", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceArcingProjectile:InitialiseArcProj", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CF, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlightSpd, paramsPtr + 4);

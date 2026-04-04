@@ -178,9 +178,14 @@ public static unsafe class MarshalUtil
         {
             return typeof(FName);
         }
-        else if (prop is StructProperty)
+        else if (prop is StructProperty structProp)
         {
-            // TODO: How can we get the C# struct type from a UE3 "Struct" object? Need to update StaticInit?
+            var structObj = structProp.Struct;
+            var structPath = structObj.GetPathName();
+            return Guard.NotNull(
+                StaticInit.GetManagedTypeForStructPath(structPath),
+                $"Couldn't find managed type for struct '{structPath}'"
+            );
         }
         else if (prop is ObjectProperty or ComponentProperty or ClassProperty or InterfaceProperty)
         {

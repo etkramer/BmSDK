@@ -83,7 +83,7 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void RemoveBlocker(BmSDK.GameObject NewUnblocker)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec.RemoveBlocker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec:RemoveBlocker", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUnblocker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -102,7 +102,7 @@ public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddBlocker(BmSDK.GameObject NewBlocker)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec.AddBlocker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RReachSpec:AddBlocker", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewBlocker, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

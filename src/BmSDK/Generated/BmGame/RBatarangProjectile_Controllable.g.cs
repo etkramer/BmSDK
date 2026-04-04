@@ -78,7 +78,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void TriggerFlip()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.TriggerFlip", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:TriggerFlip", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -89,7 +89,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void TraceLaserSight(out System.Numerics.Vector3 ForwardCheckLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.TraceLaserSight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:TraceLaserSight", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -108,7 +108,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void VeerAwayFrom(System.Numerics.Vector3 TargetLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.VeerAwayFrom", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:VeerAwayFrom", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetLocation, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -120,7 +120,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void CheckForCrows()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CheckForCrows", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CheckForCrows", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -131,7 +131,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void CheckForHostageTaker()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CheckForHostageTaker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CheckForHostageTaker", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -142,7 +142,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void CheckForTargetsToAvoid()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CheckForTargetsToAvoid", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CheckForTargetsToAvoid", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -153,7 +153,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.GetHelpPrompt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HelpPrompt, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bKismetHelpOn, paramsPtr + 4);
@@ -166,7 +166,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void Destroyed()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.Destroyed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -177,7 +177,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.ApplyFluidSurfaceImpact", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:ApplyFluidSurfaceImpact", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Fluid, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 4);
@@ -190,7 +190,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void VillainHit(BmSDK.BmGame.RPawnVillain Target)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.VillainHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:VillainHit", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -202,7 +202,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void HomingFinished()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.HomingFinished", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:HomingFinished", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -213,7 +213,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual float GetBatarangOutOfRangeFactor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.GetBatarangOutOfRangeFactor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:GetBatarangOutOfRangeFactor", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -224,7 +224,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual float GetHeightLimit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.GetHeightLimit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:GetHeightLimit", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -235,7 +235,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual bool CheckLevelLimitsForRCBatarang(BmSDK.BmGame.RLevelVolume PlayerLevelVolume, BmSDK.FName BatarangLevelName, BmSDK.BmGame.RLevelVolume FromLevelVolume, BmSDK.FName ToLevelName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CheckLevelLimitsForRCBatarang", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CheckLevelLimitsForRCBatarang", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerLevelVolume, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BatarangLevelName, paramsPtr + 4);
@@ -257,7 +257,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual bool GetLevelBorderHit(out System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Dir, float Range)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.GetLevelBorderHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:GetLevelBorderHit", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Loc, paramsPtr + 12);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Dir, paramsPtr + 24);
@@ -279,7 +279,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void CalculateHeightLimit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CalculateHeightLimit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CalculateHeightLimit", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -297,7 +297,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual bool CalculateLevelBorderDistance()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.CalculateLevelBorderDistance", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:CalculateLevelBorderDistance", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -315,7 +315,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual float GetLevelBorderDistance()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.GetLevelBorderDistance", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:GetLevelBorderDistance", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -326,7 +326,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual bool IsBatarangGoingOutOfRange()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.IsBatarangGoingOutOfRange", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:IsBatarangGoingOutOfRange", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -337,7 +337,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void DisableUserControl()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.DisableUserControl", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:DisableUserControl", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -348,7 +348,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void TriggerDodges()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.TriggerDodges", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:TriggerDodges", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -359,7 +359,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void InitBatarang(System.Numerics.Vector3 ThrowDirection, BmSDK.BmGame.RBatarang Launcher, bool bFlightPathMirrored = default, BmSDK.FName BoneTarget = default, float SpeedMod = default, bool bStraightPath = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.InitBatarang", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:InitBatarang", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ThrowDirection, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Launcher, paramsPtr + 12);
@@ -376,7 +376,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -387,7 +387,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void StopBrake()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.StopBrake", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:StopBrake", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -398,7 +398,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void StartBrake()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.StartBrake", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:StartBrake", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -409,7 +409,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void StopBoost()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.StopBoost", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:StopBoost", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -420,7 +420,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void StartBoost()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.StartBoost", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:StartBoost", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -431,7 +431,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void SpeedTimeoutBrake()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.SpeedTimeoutBrake", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:SpeedTimeoutBrake", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -442,7 +442,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void SpeedTimeoutBoost()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.SpeedTimeoutBoost", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:SpeedTimeoutBoost", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -453,7 +453,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void ExtraHitCheck()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.ExtraHitCheck", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:ExtraHitCheck", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -471,7 +471,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe virtual void PlayFlipAnimation(float InPosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.PlayFlipAnimation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:PlayFlipAnimation", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InPosition, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -490,7 +490,7 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     /// </summary>
     public unsafe override void UpdateFlightPath(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable.UpdateFlightPath", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile_Controllable:UpdateFlightPath", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

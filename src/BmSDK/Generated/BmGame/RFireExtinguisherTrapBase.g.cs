@@ -83,7 +83,7 @@ public partial class RFireExtinguisherTrapBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// </summary>
     public unsafe virtual void HitByGel()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFireExtinguisherTrapBase.HitByGel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFireExtinguisherTrapBase:HitByGel", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

@@ -83,7 +83,7 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void Quit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu.Quit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu:Quit", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void MenuClose()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu.MenuClose", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu:MenuClose", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void MenuOpen()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu.MenuOpen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu:MenuOpen", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -116,7 +116,7 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetupResolution(int X, int Y)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu.SetupResolution", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu:SetupResolution", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y, paramsPtr + 4);
@@ -129,7 +129,7 @@ public partial class GFxMovieHudMenu : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameOb
     /// </summary>
     public unsafe override bool Start(bool StartPaused = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu.Start", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.GFxMovieHudMenu:Start", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartPaused, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

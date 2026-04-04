@@ -78,7 +78,7 @@ public partial class AkSoundActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe override BmSDK.Engine.AkComponent GetAkComponent(bool AllowCreate = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkSoundActor.GetAkComponent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkSoundActor:GetAkComponent", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AllowCreate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

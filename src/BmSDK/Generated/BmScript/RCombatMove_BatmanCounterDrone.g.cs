@@ -83,7 +83,7 @@ public partial class RCombatMove_BatmanCounterDrone : BmSDK.BmGame.RCombatMove_B
     /// </summary>
     public unsafe override void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterDrone.PlayBatmanAnimation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterDrone:PlayBatmanAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WindingStartTime, paramsPtr + 4);

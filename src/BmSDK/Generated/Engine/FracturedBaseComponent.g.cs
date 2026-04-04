@@ -78,7 +78,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe virtual int GetNumVisibleFragments()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.GetNumVisibleFragments", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:GetNumVisibleFragments", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +96,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe virtual int GetNumFragments()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.GetNumFragments", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:GetNumFragments", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -114,7 +114,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe virtual bool IsFragmentVisible(int FragmentIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.IsFragmentVisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:IsFragmentVisible", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FragmentIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -133,7 +133,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe virtual BmSDK.TArray<byte> GetVisibleFragments()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.GetVisibleFragments", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:GetVisibleFragments", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -151,7 +151,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe override bool SetStaticMesh(BmSDK.Engine.StaticMesh NewMesh, bool bForce = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.SetStaticMesh", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:SetStaticMesh", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMesh, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForce, paramsPtr + 4);
@@ -171,7 +171,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe override bool GetUseSimpleLineCollision()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.GetUseSimpleLineCollision", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:GetUseSimpleLineCollision", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -189,7 +189,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// </summary>
     public unsafe override bool GetUseSimpleBoxCollision()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent.GetUseSimpleBoxCollision", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedBaseComponent:GetUseSimpleBoxCollision", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

@@ -83,7 +83,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FQuat GetOrientation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.GetOrientation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:GetOrientation", true);
         byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetOrientation(out BmSDK.GameObject.FQuat NewOrientation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.SetOrientation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:SetOrientation", true);
         byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -120,7 +120,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void UpdateSmoothLocation(out System.Numerics.Vector3 NewLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.UpdateSmoothLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:UpdateSmoothLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -139,7 +139,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetSmoothLocation(System.Numerics.Vector3 NewLocation, float MoveTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.SetSmoothLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:SetSmoothLocation", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLocation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveTime, paramsPtr + 12);
@@ -159,7 +159,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetLocation(System.Numerics.Vector3 NewLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.SetLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:SetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLocation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -178,7 +178,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ReleaseComponent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.ReleaseComponent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:ReleaseComponent", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -196,7 +196,7 @@ public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GrabComponent(BmSDK.Engine.PrimitiveComponent Component, BmSDK.FName InBoneName, System.Numerics.Vector3 GrabLocation, bool bConstrainRotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle.GrabComponent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_Handle:GrabComponent", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Component, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InBoneName, paramsPtr + 4);

@@ -78,7 +78,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// </summary>
     public unsafe override void ReplayAnim()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.ReplayAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase:ReplayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +96,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// </summary>
     public unsafe override void StopAnim()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.StopAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase:StopAnim", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -114,7 +114,7 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     /// </summary>
     public unsafe override void PlayAnim(bool bLoop = default, float Rate = default, float StartTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase.PlayAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendBase:PlayAnim", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bLoop, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rate, paramsPtr + 4);

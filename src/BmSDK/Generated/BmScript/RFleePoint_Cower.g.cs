@@ -83,7 +83,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// </summary>
     public unsafe override void StopScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.StopScaredIdle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower:StopScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentUser, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// </summary>
     public unsafe override void StartScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.StartScaredIdle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower:StartScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentUser, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -107,7 +107,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// </summary>
     public unsafe override bool IsPlayerScary(bool bCurrentlyScared, BmSDK.BmGame.RBMPawnAI CurrentUser, BmSDK.BmGame.RPawn Player)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.IsPlayerScary", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower:IsPlayerScary", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCurrentlyScared, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentUser, paramsPtr + 4);
@@ -121,7 +121,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// </summary>
     public unsafe override bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.UsedByPawn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower:UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUser, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInstantUse, paramsPtr + 4);

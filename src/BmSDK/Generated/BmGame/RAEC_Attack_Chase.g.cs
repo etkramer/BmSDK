@@ -83,7 +83,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool GetFenceNodeLockFor(BmSDK.BmGame.RBMAIController TestCon, BmSDK.BmGame.RBMPathNode_FenceJumpProxy TargetNode, System.Numerics.Vector3 LockPos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetFenceNodeLockFor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetFenceNodeLockFor", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetNode, paramsPtr + 4);
@@ -97,7 +97,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void DoChaseInProgressBark()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.DoChaseInProgressBark", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:DoChaseInProgressBark", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -108,7 +108,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void StopDistantRunners()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.StopDistantRunners", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:StopDistantRunners", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +119,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void DropPriorityDueToVantageEscape()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.DropPriorityDueToVantageEscape", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:DropPriorityDueToVantageEscape", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -130,7 +130,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RAEC_Attack_Smoke CreateSmokeAEC(BmSDK.BmGame.RSmokeScreen NewSmokeScreen)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.CreateSmokeAEC", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:CreateSmokeAEC", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSmokeScreen, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -142,7 +142,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool AreOtherPawnsInRadius(System.Numerics.Vector3 ExplodePoint, float ExplodeRadius)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.AreOtherPawnsInRadius", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:AreOtherPawnsInRadius", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExplodePoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExplodeRadius, paramsPtr + 12);
@@ -155,7 +155,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool IsSafeToThrowGrenade(float ShortestDistToRunToTarget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.IsSafeToThrowGrenade", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:IsSafeToThrowGrenade", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ShortestDistToRunToTarget, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -167,7 +167,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool TryAssignVentThrower(out System.Numerics.Vector3 NewChasePos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.TryAssignVentThrower", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:TryAssignVentThrower", true);
         byte* paramsPtr = stackalloc byte[56];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         NewChasePos = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
@@ -179,7 +179,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RTunnelFunnel FindTunnelFunnelToGrenade()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.FindTunnelFunnelToGrenade", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:FindTunnelFunnelToGrenade", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelFunnel>(paramsPtr + 0);
@@ -190,7 +190,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool TryGrenadeThrow()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.TryGrenadeThrow", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:TryGrenadeThrow", true);
         byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -201,7 +201,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitThugEdgeSearch(int TS_j)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitThugEdgeSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitThugEdgeSearch", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TS_j, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -213,7 +213,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitEdgeSearchMultiNavHandleWrapper()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitEdgeSearchMultiNavHandleWrapper", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitEdgeSearchMultiNavHandleWrapper", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -224,7 +224,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void PostLadderChaseAssign(BmSDK.BmGame.RBMAIController C)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.PostLadderChaseAssign", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:PostLadderChaseAssign", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -236,7 +236,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RChasePoint GetBestPushPastRootChild(BmSDK.BmGame.RChasePoint TestChasePoint, float TargetDepth, float DepthSoFar)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetBestPushPastRootChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetBestPushPastRootChild", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestChasePoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetDepth, paramsPtr + 4);
@@ -250,7 +250,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void MarkAssigned(BmSDK.BmGame.RChasePoint LatestChildChasePoint, BmSDK.BmGame.RChasePoint AlreadyDoneChasePoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.MarkAssigned", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:MarkAssigned", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LatestChildChasePoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AlreadyDoneChasePoint, paramsPtr + 4);
@@ -263,7 +263,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitChaser(BmSDK.BmGame.RBMAIController C, bool bForceThroughChaseRoot = default, float RootDist = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitChaser", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitChaser", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bForceThroughChaseRoot, paramsPtr + 4);
@@ -277,7 +277,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearChaseSearch()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearChaseSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearChaseSearch", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -288,7 +288,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearThugEdgeRequests()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearThugEdgeRequests", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearThugEdgeRequests", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -299,7 +299,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearEdgeSearch()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearEdgeSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearEdgeSearch", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -310,7 +310,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearGrenVentRequests()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearGrenVentRequests", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearGrenVentRequests", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -321,7 +321,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearChaseRootRequests()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearChaseRootRequests", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearChaseRootRequests", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -332,7 +332,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ClearAllNavRequests()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ClearAllNavRequests", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ClearAllNavRequests", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -343,7 +343,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void FinishChaseFor(BmSDK.BmGame.RAEC_Attack_Sub_Chase FinishedSub)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.FinishChaseFor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:FinishChaseFor", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedSub, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -355,7 +355,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RChasePoint FindInterceptMeetFollowerChasePoint(BmSDK.BmGame.RChasePoint TestCP)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.FindInterceptMeetFollowerChasePoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:FindInterceptMeetFollowerChasePoint", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCP, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -367,7 +367,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RChasePoint FindBestChildChasePoint(BmSDK.BmGame.RAEC_Attack_Sub_Chase Arrivee, BmSDK.BmGame.RChasePoint TestCP)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.FindBestChildChasePoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:FindBestChildChasePoint", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Arrivee, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCP, paramsPtr + 4);
@@ -380,7 +380,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual float GetScoreForBranchPoint(BmSDK.BmGame.RAEC_Attack_Sub_Chase Arrivee, BmSDK.BmGame.RChasePoint TestCP)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetScoreForBranchPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetScoreForBranchPoint", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Arrivee, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestCP, paramsPtr + 4);
@@ -393,7 +393,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool GetNextChasePointFor(BmSDK.BmGame.RAEC_Attack_Sub_Chase Arrivee, out BmSDK.BmGame.RChasePoint NextChasePoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetNextChasePointFor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetNextChasePointFor", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Arrivee, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -406,7 +406,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitUnreachableChaseHandling()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitUnreachableChaseHandling", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitUnreachableChaseHandling", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -417,7 +417,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void CullBranchesHeadingAwayFromPlayer()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.CullBranchesHeadingAwayFromPlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:CullBranchesHeadingAwayFromPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -428,7 +428,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ChaseSearchFailed(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ChaseSearchFailed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ChaseSearchFailed", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletedSearch, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -440,7 +440,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ChaseSearchDone(BmSDK.BmGame.RChaseLocationSearch CompletedSearch)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ChaseSearchDone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ChaseSearchDone", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CompletedSearch, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -452,7 +452,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ChaseFailAlert()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.ChaseFailAlert", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:ChaseFailAlert", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -463,7 +463,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitVentPathSearch()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitVentPathSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitVentPathSearch", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -474,7 +474,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitChaseRootSearch()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitChaseRootSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitChaseRootSearch", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -485,7 +485,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void FindOverLookFences(System.Numerics.Vector3 EstimatedPlayerPos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.FindOverLookFences", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:FindOverLookFences", true);
         byte* paramsPtr = stackalloc byte[92];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EstimatedPlayerPos, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -497,7 +497,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitEdgeWatchFinder()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitEdgeWatchFinder", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitEdgeWatchFinder", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -508,7 +508,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitChaseTreeFinder(BmSDK.BmGame.RLadder DangerLadder = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitChaseTreeFinder", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitChaseTreeFinder", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DangerLadder, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -520,7 +520,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RLadder GetDangerLadder()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetDangerLadder", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetDangerLadder", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLadder>(paramsPtr + 0);
@@ -531,7 +531,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void InitCeilingWatchAndWait()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.InitCeilingWatchAndWait", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:InitCeilingWatchAndWait", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -542,7 +542,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void PrepChase()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.PrepChase", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:PrepChase", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -553,7 +553,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void TryDrawChaseState()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.TryDrawChaseState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:TryDrawChaseState", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -564,7 +564,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.NotifyFinished", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 4);
@@ -577,7 +577,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.VillainStolen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Stolen, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -589,7 +589,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.GetThoughts", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:GetThoughts", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         ThoughtList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor.FThought>>(paramsPtr + 0);
@@ -601,7 +601,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual bool AreAttackersActive()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.AreAttackersActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:AreAttackersActive", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -612,7 +612,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.RemoveChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemAEC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -624,7 +624,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void PreStreamOut()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.PreStreamOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -635,7 +635,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe virtual void SetTargetPlayer(BmSDK.BmGame.RPawnPlayer NewTargetPlayer)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.SetTargetPlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:SetTargetPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetPlayer, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -647,7 +647,7 @@ public partial class RAEC_Attack_Chase : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IGame
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Chase:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

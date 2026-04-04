@@ -78,7 +78,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe override void Tick(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.Tick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:Tick", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -90,7 +90,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -101,7 +101,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe override void InitSection(BmSDK.Engine.ParticleSystemComponent P, BmSDK.Engine.ParticleSystemComponent Q, System.Numerics.Vector3 pos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.InitSection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:InitSection", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Q, paramsPtr + 4);
@@ -115,7 +115,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetSplashPoints(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.SetSplashPoints", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:SetSplashPoints", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -134,7 +134,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void CalculateSplashPoints()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.CalculateSplashPoints", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:CalculateSplashPoints", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -145,7 +145,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void ShrinkSplashPoints()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.ShrinkSplashPoints", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:ShrinkSplashPoints", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -163,7 +163,7 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void GetNewRandom()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase.GetNewRandom", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRainVolumeBase:GetNewRandom", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

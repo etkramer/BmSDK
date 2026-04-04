@@ -83,7 +83,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe virtual void DropPriorityDueToVantageEscape()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.DropPriorityDueToVantageEscape", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:DropPriorityDueToVantageEscape", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe virtual void TopOfLadderChecked()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.TopOfLadderChecked", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:TopOfLadderChecked", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe virtual void ClearTestRequests()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.ClearTestRequests", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:ClearTestRequests", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -116,7 +116,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe virtual void PrepChaseWithLadder(BmSDK.BmGame.RLadder NewDangerLadder, System.Numerics.Vector3 NewChasePoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.PrepChaseWithLadder", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:PrepChaseWithLadder", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewDangerLadder, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewChasePoint, paramsPtr + 4);
@@ -129,7 +129,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.RemoveChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemAEC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -141,7 +141,7 @@ public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe override void PreStreamOut()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase.PreStreamOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_LadderChase:PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

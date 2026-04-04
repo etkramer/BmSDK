@@ -83,7 +83,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void FireElectricFloorEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.FireElectricFloorEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:FireElectricFloorEvent", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void InitIce(BmSDK.BmGame.RPlayerController _RPC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.InitIce", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:InitIce", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -106,7 +106,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual bool HasBeenNeutralised()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.HasBeenNeutralised", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:HasBeenNeutralised", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -117,7 +117,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void EjectBatmanFromFloorGrates()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.EjectBatmanFromFloorGrates", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:EjectBatmanFromFloorGrates", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -128,7 +128,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void CheckHighBoxKnockBack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.CheckHighBoxKnockBack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:CheckHighBoxKnockBack", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -139,7 +139,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void DisableFloorGrates()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.DisableFloorGrates", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:DisableFloorGrates", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -150,7 +150,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void TurnOffMagneticSurfaces()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.TurnOffMagneticSurfaces", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:TurnOffMagneticSurfaces", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -161,7 +161,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void TurnOffInteractableItems()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.TurnOffInteractableItems", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:TurnOffInteractableItems", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -172,7 +172,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void TurnAffectablesBackOff()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.TurnAffectablesBackOff", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:TurnAffectablesBackOff", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -183,7 +183,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void DisableRailChaser(int RailChaserIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.DisableRailChaser", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:DisableRailChaser", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RailChaserIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -195,7 +195,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void FireRailsTargetEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.FireRailsTargetEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:FireRailsTargetEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -206,7 +206,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual bool TickRailFreeze(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.TickRailFreeze", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:TickRailFreeze", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -218,7 +218,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 GetWorldPositionForChainDistanceAndNode(int node_index, float chain_distance)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.GetWorldPositionForChainDistanceAndNode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:GetWorldPositionForChainDistanceAndNode", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(node_index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(chain_distance, paramsPtr + 4);
@@ -231,7 +231,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual int GetNodeIndexForChainDistance(float chain_distance)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.GetNodeIndexForChainDistance", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:GetNodeIndexForChainDistance", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(chain_distance, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -243,7 +243,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void SpawnSparkly(int sparkly_index, BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.SpawnSparkly", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:SpawnSparkly", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(sparkly_index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Template, paramsPtr + 4);
@@ -257,7 +257,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void InitialiseRailChasers()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.InitialiseRailChasers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:InitialiseRailChasers", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -268,7 +268,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void AddActorsMaterialToArray(BmSDK.BmScript.RFreezeDynamicSMIceFormation new_actor)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.AddActorsMaterialToArray", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:AddActorsMaterialToArray", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_actor, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -280,7 +280,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void FreezeRails()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.FreezeRails", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:FreezeRails", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -291,7 +291,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void SetTimersOnAffectables(float base_delay, System.Numerics.Vector3 ImpactPoint, float delay_range)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.SetTimersOnAffectables", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:SetTimersOnAffectables", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(base_delay, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactPoint, paramsPtr + 4);
@@ -305,7 +305,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void CleanUpFractureWall()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.CleanUpFractureWall", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:CleanUpFractureWall", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -316,7 +316,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// </summary>
     public unsafe virtual void Neutralise(System.Numerics.Vector3 ImpactPoint, System.Numerics.Vector3 ImpactVector)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget.Neutralise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeEnvironmentTarget:Neutralise", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ImpactVector, paramsPtr + 12);

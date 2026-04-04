@@ -83,7 +83,7 @@ public partial class RPawnVillainGunJammerTyger : BmSDK.BmScript.RPawnVillainGun
     /// </summary>
     public unsafe override void AddPawnProps()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerTyger.AddPawnProps", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerTyger:AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[124];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

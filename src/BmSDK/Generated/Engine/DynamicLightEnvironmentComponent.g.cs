@@ -83,7 +83,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FBoxSphereBounds GetOwnerBounds()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.GetOwnerBounds", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent:GetOwnerBounds", true);
         byte* paramsPtr = stackalloc byte[28];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// </summary>
     public unsafe virtual void ResetEnvironment()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent.ResetEnvironment", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicLightEnvironmentComponent:ResetEnvironment", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

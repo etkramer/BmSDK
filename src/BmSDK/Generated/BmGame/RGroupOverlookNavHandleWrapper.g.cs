@@ -83,7 +83,7 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
     /// </summary>
     public unsafe virtual int NumPawns()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper.NumPawns", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper:NumPawns", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
     /// </summary>
     public unsafe virtual bool IsFinished()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper.IsFinished", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper:IsFinished", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -105,7 +105,7 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
     /// </summary>
     public unsafe virtual void InitThugSearch()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper.InitThugSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper:InitThugSearch", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -116,7 +116,7 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
     /// </summary>
     public unsafe virtual void StartSearch(System.Numerics.Vector3 OverlookTarget, float MaxDist, BmSDK.TArray<BmSDK.BmGame.RBMPawnAI> NewStoredSearcher)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper.StartSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper:StartSearch", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OverlookTarget, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxDist, paramsPtr + 12);
@@ -130,7 +130,7 @@ public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IG
     /// </summary>
     public unsafe virtual void Cleanup()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper.Cleanup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGroupOverlookNavHandleWrapper:Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

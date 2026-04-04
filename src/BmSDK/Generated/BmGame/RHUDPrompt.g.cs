@@ -83,7 +83,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetHighPriorityInstructions(BmSDK.FString NewInstructions)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetHighPriorityInstructions", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:SetHighPriorityInstructions", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInstructions, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool SetInstructions(BmSDK.FString NewInstructions, bool CanOverrideEmptyKismet = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetInstructions", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:SetInstructions", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInstructions, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CanOverrideEmptyKismet, paramsPtr + 12);
@@ -108,7 +108,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GetLines()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.GetLines", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:GetLines", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +119,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetOverridePrompt(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetOverridePrompt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:SetOverridePrompt", true);
         byte* paramsPtr = stackalloc byte[13];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
@@ -132,7 +132,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.DrawHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:DrawHUD", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -150,7 +150,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ResetLines()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.ResetLines", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:ResetLines", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -168,7 +168,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddLine(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:AddLine", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
@@ -191,7 +191,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool HelpLinesMatch(out BmSDK.BmGame.RHUDPrompt.FHelpLine HL1, out BmSDK.BmGame.RHUDPrompt.FHelpLine HL2)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.HelpLinesMatch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:HelpLinesMatch", true);
         byte* paramsPtr = stackalloc byte[44];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -211,7 +211,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddTutorialLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddTutorialLineLoc", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:AddTutorialLineLoc", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
@@ -227,7 +227,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddGadgetLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddGadgetLineLoc", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:AddGadgetLineLoc", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
@@ -243,7 +243,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddLineLoc", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt:AddLineLoc", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);

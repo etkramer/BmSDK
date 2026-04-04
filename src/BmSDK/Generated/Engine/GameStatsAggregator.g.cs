@@ -83,7 +83,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// </summary>
     public unsafe virtual bool GetAggregateMappingIDs(int EventID, out int AggregateID, out int TargetAggregateID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.GetAggregateMappingIDs", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator:GetAggregateMappingIDs", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -104,7 +104,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// </summary>
     public unsafe override void PostProcessStream()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PostProcessStream", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator:PostProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -122,7 +122,7 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// </summary>
     public unsafe override void PreProcessStream()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator.PreProcessStream", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStatsAggregator:PreProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

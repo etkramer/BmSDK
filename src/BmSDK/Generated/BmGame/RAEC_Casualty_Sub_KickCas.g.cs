@@ -83,7 +83,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// </summary>
     public unsafe override void PlayDiscoverBark()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.PlayDiscoverBark", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas:PlayDiscoverBark", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// </summary>
     public unsafe virtual void AssignCasualtyKick(BmSDK.BmGame.RPawnVillain NewCas, System.Numerics.Vector3 KickLoc, BmSDK.FName KickBone)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.AssignCasualtyKick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas:AssignCasualtyKick", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCas, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KickLoc, paramsPtr + 4);
@@ -108,7 +108,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// </summary>
     public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.NotifyFailed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas:NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FinishedAction, paramsPtr + 4);

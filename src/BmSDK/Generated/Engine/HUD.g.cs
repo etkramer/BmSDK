@@ -83,7 +83,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PlayerOwnerDied()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PlayerOwnerDied", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:PlayerOwnerDied", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.Font GetFontSizeIndex(int FontSize)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.GetFontSizeIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:GetFontSizeIndex", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FontSize, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -106,7 +106,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawText(BmSDK.FString Text, System.Numerics.Vector2 Position, BmSDK.Engine.Font TextFont, System.Numerics.Vector2 FontScale, BmSDK.GameObject.FColor TextColor)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawText", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DrawText", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 12);
@@ -122,7 +122,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DisplayKismetMessages()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayKismetMessages", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DisplayKismetMessages", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -133,7 +133,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DisplayLocalMessages()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayLocalMessages", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DisplayLocalMessages", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -144,7 +144,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawMessageText(BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessage, float ScreenX, float ScreenY)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawMessageText", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DrawMessageText", true);
         byte* paramsPtr = stackalloc byte[112];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocalMessage, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ScreenX, paramsPtr + 64);
@@ -158,7 +158,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawMessage(int I, float PosY, out float DX, out float DY)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DrawMessage", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PosY, paramsPtr + 4);
@@ -173,7 +173,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GetScreenCoords(float PosY, out float ScreenX, out float ScreenY, out BmSDK.Engine.HUD.FHudLocalizedMessage InMessage)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.GetScreenCoords", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:GetScreenCoords", true);
         byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PosY, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -188,7 +188,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddLocalizedMessage(int Index, BmSDK.Class InMessageClass, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, int MessageCount = default, BmSDK.GameObject OptionalObject = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.AddLocalizedMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:AddLocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMessageClass, paramsPtr + 4);
@@ -209,7 +209,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void LocalizedMessage(BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo RelatedPRI, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, BmSDK.GameObject OptionalObject = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.LocalizedMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:LocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMessageClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI, paramsPtr + 4);
@@ -230,7 +230,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddConsoleMessage(BmSDK.FString M, BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo PRI, float Lifetime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.AddConsoleMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:AddConsoleMessage", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMessageClass, paramsPtr + 12);
@@ -245,7 +245,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DisplayConsoleMessages()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayConsoleMessages", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DisplayConsoleMessages", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -256,7 +256,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Message(BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.FString msg, BmSDK.FName MsgType, float Lifetime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Message", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:Message", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(msg, paramsPtr + 4);
@@ -271,7 +271,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ClearMessage(out BmSDK.Engine.HUD.FHudLocalizedMessage M)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ClearMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ClearMessage", true);
         byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         M = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(paramsPtr + 0);
@@ -283,7 +283,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DisplayBadConnectionAlert()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DisplayBadConnectionAlert", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DisplayBadConnectionAlert", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -294,7 +294,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DrawHUD", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -305,7 +305,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PostRender()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PostRender", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:PostRender", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -316,7 +316,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PreCalcValues()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PreCalcValues", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:PreCalcValues", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -327,7 +327,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ShowDebugInfo(out float out_YL, out float out_YPos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowDebugInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ShowDebugInfo", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         out_YL = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -340,7 +340,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool ShouldDisplayDebug(BmSDK.FName DebugType)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShouldDisplayDebug", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ShouldDisplayDebug", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -352,7 +352,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ShowDebug(BmSDK.FName DebugType = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowDebug", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ShowDebug", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebugType, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -364,7 +364,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetShowScores(bool bNewValue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.SetShowScores", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:SetShowScores", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewValue, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -376,7 +376,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ShowScores()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowScores", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ShowScores", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -387,7 +387,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ShowHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ShowHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ShowHUD", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -398,7 +398,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ToggleHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.ToggleHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:ToggleHUD", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -409,7 +409,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DrawActorOverlays(System.Numerics.Vector3 ViewPoint, BmSDK.Rotator ViewRotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.DrawActorOverlays", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:DrawActorOverlays", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ViewPoint, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ViewRotation, paramsPtr + 12);
@@ -429,7 +429,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -440,7 +440,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Draw2DLine(int X1, int Y1, int X2, int Y2, BmSDK.GameObject.FColor LineColor)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Draw2DLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:Draw2DLine", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y1, paramsPtr + 4);
@@ -463,7 +463,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Draw3DLine(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.GameObject.FColor LineColor)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.Draw3DLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD:Draw3DLine", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Start, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(End, paramsPtr + 12);

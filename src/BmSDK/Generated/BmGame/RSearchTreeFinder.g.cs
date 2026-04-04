@@ -78,7 +78,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetThoughtString()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.GetThoughtString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:GetThoughtString", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
@@ -89,7 +89,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe override void Destroyed()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.Destroyed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -100,7 +100,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Cleanup()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.Cleanup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -111,7 +111,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void RemoveDuplicateUnseenVerts()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.RemoveDuplicateUnseenVerts", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:RemoveDuplicateUnseenVerts", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -129,7 +129,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void CalculateBranchLengths()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.CalculateBranchLengths", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:CalculateBranchLengths", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -147,7 +147,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void CountBranchPoints()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.CountBranchPoints", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:CountBranchPoints", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -165,7 +165,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void BuildSearchPaths()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.BuildSearchPaths", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:BuildSearchPaths", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -183,7 +183,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AddUnseenVerts()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.AddUnseenVerts", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:AddUnseenVerts", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -201,7 +201,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ReduceBranches()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.ReduceBranches", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:ReduceBranches", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -219,7 +219,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ConnectVisitedEdges()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.ConnectVisitedEdges", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:ConnectVisitedEdges", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -237,7 +237,7 @@ public partial class RSearchTreeFinder : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DebugShowPaths(bool bPersistent)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder.DebugShowPaths", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSearchTreeFinder:DebugShowPaths", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPersistent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

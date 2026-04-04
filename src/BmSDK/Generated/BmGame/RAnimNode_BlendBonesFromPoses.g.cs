@@ -83,7 +83,7 @@ public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendB
     /// </summary>
     public unsafe virtual void SetTargetBlendWeight(float NewTargetWeight, float NewTargetBlendDuration)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_BlendBonesFromPoses.SetTargetBlendWeight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_BlendBonesFromPoses:SetTargetBlendWeight", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetWeight, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetBlendDuration, paramsPtr + 4);
@@ -103,7 +103,7 @@ public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendB
     /// </summary>
     public unsafe virtual void SetBlendPosesFromSkeletalMeshComp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_BlendBonesFromPoses.SetBlendPosesFromSkeletalMeshComp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_BlendBonesFromPoses:SetBlendPosesFromSkeletalMeshComp", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

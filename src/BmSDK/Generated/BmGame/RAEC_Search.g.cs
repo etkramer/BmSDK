@@ -83,7 +83,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void ReassignToPredatorPoint(BmSDK.BmGame.RAEC_Search_Sub PointLeader, BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToPredatorPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:ReassignToPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PointLeader, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PredatorPoint, paramsPtr + 4);
@@ -96,7 +96,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void ReassignToCornerTerrified(BmSDK.BmGame.RAEC_Search_Sub_Terrified CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToCornerTerrified", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:ReassignToCornerTerrified", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CornerLeader, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartCorner, paramsPtr + 4);
@@ -110,7 +110,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void ReassignToRailPeek(BmSDK.BmGame.RAEC_Search_Sub PeekLeader, BmSDK.BmGame.RBMPathNode_FenceJump FenceNode, System.Numerics.Vector3 StartPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToRailPeek", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:ReassignToRailPeek", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PeekLeader, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FenceNode, paramsPtr + 4);
@@ -124,7 +124,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void ReassignToCorner(BmSDK.BmGame.RAEC_Search_Sub CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToCorner", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:ReassignToCorner", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CornerLeader, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartCorner, paramsPtr + 4);
@@ -138,7 +138,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignFromTerrorCorner(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromTerrorCorner", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignFromTerrorCorner", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldState, paramsPtr + 4);
@@ -151,7 +151,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe override void AssignFromFollow(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromFollow", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignFromFollow", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldState, paramsPtr + 4);
@@ -164,7 +164,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignToSniperPoint(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSniperPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignToSniperPoint", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -176,7 +176,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignToSmashGenerators(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSmashGenerators", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignToSmashGenerators", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -188,7 +188,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignToSmashGargoyles(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSmashGargoyles", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignToSmashGargoyles", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -200,7 +200,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignFromThermalFail(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromThermalFail", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignFromThermalFail", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -212,7 +212,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe override void Assign(BmSDK.BmGame.RBMAIController NewMember, bool bFirstAttempt = default, bool bHasHintLoc = default, System.Numerics.Vector3 HintLoc = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.Assign", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:Assign", true);
         byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bFirstAttempt, paramsPtr + 4);
@@ -227,7 +227,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignToImmiediateSmash(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToImmiediateSmash", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignToImmiediateSmash", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -239,7 +239,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void AssignToGuard(BmSDK.BmGame.RBMAIController NewMember)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToGuard", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:AssignToGuard", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMember, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -251,7 +251,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe virtual void SendToGuardPoint(BmSDK.BmGame.RBMAIController NewGuardCon, BmSDK.BmGame.RGuardPoint GuardPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.SendToGuardPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:SendToGuardPoint", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewGuardCon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GuardPoint, paramsPtr + 4);
@@ -264,7 +264,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe override bool CanSnipe()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.CanSnipe", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:CanSnipe", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -275,7 +275,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// </summary>
     public unsafe override void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.SetNewFearLevel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search:SetNewFearLevel", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FearLevel, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

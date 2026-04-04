@@ -18,6 +18,12 @@ internal static partial class StaticInit
         return typeof(GameObject);
     }
 
+    public static Type? GetManagedTypeForStructPath(string structPath)
+    {
+        _structPathToManagedTypeMap.TryGetValue(structPath, out var res);
+        return res;
+    }
+
     public static string GetClassPathForManagedType(Type type)
     {
         _managedTypeToClassPathMap.TryGetValue(type, out var res);

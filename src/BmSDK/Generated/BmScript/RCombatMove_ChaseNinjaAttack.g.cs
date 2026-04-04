@@ -83,7 +83,7 @@ public partial class RCombatMove_ChaseNinjaAttack : BmSDK.BmGame.RCombatMove_Nin
     /// </summary>
     public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack.TurnOffHighlight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack:TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSuccess, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RCombatMove_ChaseNinjaAttack : BmSDK.BmGame.RCombatMove_Nin
     /// </summary>
     public unsafe override void TurnOnHighlight()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack.TurnOnHighlight", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack:TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

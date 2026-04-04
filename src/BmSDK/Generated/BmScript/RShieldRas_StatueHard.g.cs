@@ -83,7 +83,7 @@ public partial class RShieldRas_StatueHard : BmSDK.BmScript.RShieldRas_StatueEas
     /// </summary>
     public unsafe override void SetYawOffsets()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueHard.SetYawOffsets", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueHard:SetYawOffsets", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

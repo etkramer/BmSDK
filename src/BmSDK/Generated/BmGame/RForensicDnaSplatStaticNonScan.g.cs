@@ -83,7 +83,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// </summary>
     public unsafe override void RegisterEvidence()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.RegisterEvidence", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan:RegisterEvidence", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// </summary>
     public unsafe override void show(float _show, int ShowMode = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.show", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan:show", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_show, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ShowMode, paramsPtr + 4);
@@ -107,7 +107,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// </summary>
     public unsafe override bool CanBeScanned()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.CanBeScanned", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan:CanBeScanned", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);

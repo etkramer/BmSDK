@@ -83,7 +83,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetNickname()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.GetNickname", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:GetNickname", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetUniqueNetId()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.GetUniqueNetId", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:GetUniqueNetId", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(paramsPtr + 0);
@@ -105,7 +105,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool ProjectStaticMeshBounds(BmSDK.Engine.StaticMeshComponent MeshComponent, out System.Numerics.Vector2 Min, out System.Numerics.Vector2 Max)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.ProjectStaticMeshBounds", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:ProjectStaticMeshBounds", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MeshComponent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -126,7 +126,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DeProject(System.Numerics.Vector2 RelativeScreenPos, out System.Numerics.Vector3 WorldOrigin, out System.Numerics.Vector3 WorldDirection)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.DeProject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:DeProject", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RelativeScreenPos, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -147,7 +147,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void TouchPlayerPostProcessChain()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.TouchPlayerPostProcessChain", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:TouchPlayerPostProcessChain", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -165,7 +165,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.Engine.PostProcessChain GetPostProcessChain(int InIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.GetPostProcessChain", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:GetPostProcessChain", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -184,7 +184,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool RemoveAllPostProcessingChains()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.RemoveAllPostProcessingChains", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:RemoveAllPostProcessingChains", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -202,7 +202,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool RemovePostProcessingChain(int InIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.RemovePostProcessingChain", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:RemovePostProcessingChain", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -221,7 +221,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool InsertPostProcessingChain(BmSDK.Engine.PostProcessChain InChain, int InIndex, bool bInClone)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.InsertPostProcessingChain", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:InsertPostProcessingChain", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InChain, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InIndex, paramsPtr + 4);
@@ -242,7 +242,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.Engine.TranslationContext GetTranslationContext()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.GetTranslationContext", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:GetTranslationContext", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -260,7 +260,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetControllerId(int NewControllerId)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.SetControllerId", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:SetControllerId", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewControllerId, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -272,7 +272,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ClearPostProcessSettingsOverride(float BlendOutTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.ClearPostProcessSettingsOverride", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:ClearPostProcessSettingsOverride", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendOutTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -291,7 +291,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void OverridePostProcessSettings(BmSDK.Engine.PostProcessVolume.FPostProcessSettings OverrideSettings, float BlendInTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.OverridePostProcessSettings", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:OverridePostProcessSettings", true);
         byte* paramsPtr = stackalloc byte[404];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OverrideSettings, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendInTime, paramsPtr + 400);
@@ -311,7 +311,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetActorVisibility(BmSDK.Engine.Actor TestActor)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.GetActorVisibility", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:GetActorVisibility", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestActor, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -330,7 +330,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SendSplitJoin()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.SendSplitJoin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:SendSplitJoin", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -348,7 +348,7 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool SpawnPlayActor(BmSDK.FString URL, out BmSDK.FString OutError)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer.SpawnPlayActor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.LocalPlayer:SpawnPlayActor", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(URL, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

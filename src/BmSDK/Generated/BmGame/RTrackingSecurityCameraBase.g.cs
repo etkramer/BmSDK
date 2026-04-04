@@ -78,7 +78,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual void TurnTowards(BmSDK.Rotator WantedRotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.TurnTowards", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:TurnTowards", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WantedRotation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -97,7 +97,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 GetTrackingOrigin()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetTrackingOrigin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetTrackingOrigin", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
@@ -108,7 +108,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -119,7 +119,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual bool UseSecretLocation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.UseSecretLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -130,7 +130,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual int GetSecretLocationY()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretLocationY", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -141,7 +141,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual int GetSecretLocationX()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretLocationX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -152,7 +152,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual byte GetSecretZone()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretZone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<byte>(paramsPtr + 0);
@@ -163,7 +163,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual int GetSecretPickupIndex()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretPickupIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -174,7 +174,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual BmSDK.FString GetSecretSubType()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretSubType", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
@@ -185,7 +185,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual BmSDK.FString GetSecretName()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.GetSecretName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:GetSecretName", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
@@ -196,7 +196,7 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     /// </summary>
     public unsafe virtual bool IsValidSecret()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase.IsValidSecret", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTrackingSecurityCameraBase:IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);

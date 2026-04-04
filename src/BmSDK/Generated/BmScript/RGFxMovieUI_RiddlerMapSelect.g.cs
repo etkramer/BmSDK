@@ -83,7 +83,7 @@ public partial class RGFxMovieUI_RiddlerMapSelect : BmSDK.BmGame.RGFxMovieUI_Rid
     /// </summary>
     public unsafe override bool BuildLoadList()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerMapSelect.BuildLoadList", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerMapSelect:BuildLoadList", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);

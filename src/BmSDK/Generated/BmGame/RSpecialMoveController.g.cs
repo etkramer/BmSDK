@@ -83,7 +83,7 @@ public partial class RSpecialMoveController : BmSDK.GameObject, BmSDK.IGameObjec
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RSpecialMoveConfig FindBestSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Feature, BmSDK.Engine.Pawn Instigator, float DeltaTime, BmSDK.Rotator CheckDirection, System.Numerics.Vector3 StickDir = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveController.FindBestSpecialMove", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveController:FindBestSpecialMove", true);
         byte* paramsPtr = stackalloc byte[148];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Feature, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Instigator, paramsPtr + 112);

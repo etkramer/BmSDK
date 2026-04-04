@@ -83,7 +83,7 @@ public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// </summary>
     public unsafe virtual bool CalculateFireGunHitResult(System.Numerics.Vector3 StartPos, System.Numerics.Vector3 EndPos, out BmSDK.TArray<BmSDK.Engine.Actor.FImpactInfo> OutImpactInfo, float CheckBoxExtent = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBlowDartBase.CalculateFireGunHitResult", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBlowDartBase:CalculateFireGunHitResult", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartPos, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EndPos, paramsPtr + 12);

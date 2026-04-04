@@ -83,7 +83,7 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ProcessSoundEvent(BmSDK.FName SoundEventName, BmSDK.Engine.PlayerController SoundOwner = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISoundTheme.ProcessSoundEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISoundTheme:ProcessSoundEvent", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundEventName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundOwner, paramsPtr + 8);

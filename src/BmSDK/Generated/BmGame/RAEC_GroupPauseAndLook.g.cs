@@ -83,7 +83,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
     /// </summary>
     public unsafe virtual void TryDisperse()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.TryDisperse", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook:TryDisperse", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
     /// </summary>
     public unsafe override void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.AddToGroup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook:AddToGroup", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -106,7 +106,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
     /// </summary>
     public unsafe virtual void SetLookPoint(System.Numerics.Vector3 NewLookPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.SetLookPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook:SetLookPoint", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLookPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -118,7 +118,7 @@ public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAEC_SubGroup, BmSDK.
     /// </summary>
     public unsafe virtual void SetLookPriority(int NewPriority, bool bNewForce)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook.SetLookPriority", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_GroupPauseAndLook:SetLookPriority", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPriority, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewForce, paramsPtr + 4);

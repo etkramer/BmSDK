@@ -83,7 +83,7 @@ public partial class NavMeshPath_Toward : BmSDK.Engine.NavMeshPathConstraint, Bm
     /// </summary>
     public unsafe override void Recycle()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward.Recycle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward:Recycle", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class NavMeshPath_Toward : BmSDK.Engine.NavMeshPathConstraint, Bm
     /// </summary>
     public unsafe static bool TowardPoint(BmSDK.Engine.NavigationHandle NavHandle, System.Numerics.Vector3 Point)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward.TowardPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward:TowardPoint", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 4);
@@ -107,7 +107,7 @@ public partial class NavMeshPath_Toward : BmSDK.Engine.NavMeshPathConstraint, Bm
     /// </summary>
     public unsafe static bool TowardGoal(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.Engine.Actor Goal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward.TowardGoal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPath_Toward:TowardGoal", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Goal, paramsPtr + 4);

@@ -83,7 +83,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual void Cleanup()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.Cleanup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual void StartDisperse()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.StartDisperse", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:StartDisperse", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RBMAIController GetRandomThugToSpeak()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.GetRandomThugToSpeak", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:GetRandomThugToSpeak", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIController>(paramsPtr + 0);
@@ -116,7 +116,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual bool AreThugsAtPerimeter()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.AreThugsAtPerimeter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:AreThugsAtPerimeter", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -127,7 +127,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual bool TryReassign()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.TryReassign", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:TryReassign", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -138,7 +138,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe virtual void StartPerimeter(System.Numerics.Vector3 NewPerimeterCentre, System.Numerics.Vector3 NewBoomPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.StartPerimeter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:StartPerimeter", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPerimeterCentre, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewBoomPoint, paramsPtr + 12);
@@ -151,7 +151,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// </summary>
     public unsafe override void PreStreamOut()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter.PreStreamOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall_GroupCheck_Perimeter:PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

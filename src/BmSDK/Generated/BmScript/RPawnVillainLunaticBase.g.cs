@@ -78,7 +78,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override void PairedAnimsSuccessfullyLoaded()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PairedAnimsSuccessfullyLoaded", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:PairedAnimsSuccessfullyLoaded", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -89,7 +89,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe static BmSDK.BmGame.RWeaponConfig CreateRagdollWeaponConfigLoony(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CreateRagdollWeaponConfigLoony", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:CreateRagdollWeaponConfigLoony", true);
         byte* paramsPtr = stackalloc byte[2404];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSet1, paramsPtr + 4);
@@ -103,7 +103,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe static BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfigLoony(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet Anims1)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CreateCombatWeaponConfigLoony", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:CreateCombatWeaponConfigLoony", true);
         byte* paramsPtr = stackalloc byte[4168];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Anims1, paramsPtr + 4);
@@ -116,7 +116,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult GroupAttackHit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.GroupAttackHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:GroupAttackHit", true);
         byte* paramsPtr = stackalloc byte[252];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.DamageResult>(paramsPtr + 0);
@@ -127,7 +127,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.GetSmokeBombReactionClass", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
@@ -138,7 +138,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe virtual void PlayAdditiveBatarangReaction()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PlayAdditiveBatarangReaction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:PlayAdditiveBatarangReaction", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -149,7 +149,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override void PlayHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PlayHitReaction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:PlayHitReaction", true);
         byte* paramsPtr = stackalloc byte[244];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DmgInfo, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -161,7 +161,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.ShouldGoRagdoll", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:ShouldGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageAmount, paramsPtr + 4);
@@ -174,7 +174,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override bool CanDodgeAttack(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType, bool bFar)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CanDodgeAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:CanDodgeAttack", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 4);
@@ -188,7 +188,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// </summary>
     public unsafe override bool CanPlayBark()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CanPlayBark", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase:CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);

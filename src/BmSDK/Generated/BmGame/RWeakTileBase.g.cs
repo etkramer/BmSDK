@@ -78,7 +78,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// </summary>
     public unsafe override void OnWallSmashed(System.Numerics.Vector3 ExplosionCentre, int NumPiecesRemoved)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.OnWallSmashed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase:OnWallSmashed", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ExplosionCentre, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumPiecesRemoved, paramsPtr + 12);
@@ -91,7 +91,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -102,7 +102,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void RemoveBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.RemoveBlockers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase:RemoveBlockers", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlockingBoxes, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -114,7 +114,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ActivateBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.ActivateBlockers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase:ActivateBlockers", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlockingBoxes, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

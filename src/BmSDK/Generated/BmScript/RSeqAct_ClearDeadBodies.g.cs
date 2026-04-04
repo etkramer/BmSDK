@@ -83,7 +83,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe override bool Update(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.Update", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies:Update", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe virtual void ClearBodies(int numDead, int numClear)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.ClearBodies", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies:ClearBodies", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(numDead, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(numClear, paramsPtr + 4);
@@ -108,7 +108,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// </summary>
     public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RPawnVillain Pawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.IsOffScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies:IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

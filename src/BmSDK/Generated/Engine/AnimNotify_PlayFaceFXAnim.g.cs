@@ -83,7 +83,7 @@ public partial class AnimNotify_PlayFaceFXAnim : BmSDK.Engine.AnimNotify_Scripte
     /// </summary>
     public unsafe override void Notify(BmSDK.Engine.Actor Owner, BmSDK.Engine.SkeletalMeshComponent SkelComponent)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_PlayFaceFXAnim.Notify", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_PlayFaceFXAnim:Notify", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Owner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComponent, paramsPtr + 4);

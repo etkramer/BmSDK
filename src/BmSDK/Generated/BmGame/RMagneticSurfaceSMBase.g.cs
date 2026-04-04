@@ -83,7 +83,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual bool EmergencyStop()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.EmergencyStop", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:EmergencyStop", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetFXLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetFXLocation", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MotorComp, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -106,7 +106,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual bool IsBlockingPlayerInteraction(BmSDK.BmGame.RPawnPlayer Player, bool bDebugDraw = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.IsBlockingPlayerInteraction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:IsBlockingPlayerInteraction", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDebugDraw, paramsPtr + 4);
@@ -119,7 +119,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.UnlinkToActor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LinkTarget, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -131,7 +131,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.LinkToActor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:LinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LinkTarget, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -143,7 +143,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 GetClosestPoint(System.Numerics.Vector3 TestPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetClosestPoint", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetClosestPoint", true);
         byte* paramsPtr = stackalloc byte[132];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPoint, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -155,7 +155,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetInvestigateHighlighted", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(highMat, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(On, paramsPtr + 4);
@@ -168,7 +168,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override void Tick(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.Tick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:Tick", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -180,7 +180,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void StressTest()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.StressTest", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:StressTest", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -191,7 +191,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void converge(out float Value, float Target, float Speed, float tolerance = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.converge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:converge", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 8);
@@ -206,7 +206,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void HitWhileDeactivated()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.HitWhileDeactivated", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:HitWhileDeactivated", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -217,7 +217,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void Recover()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.Recover", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:Recover", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -228,7 +228,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetRecoveryTime(float RecoveryTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetRecoveryTime", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetRecoveryTime", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RecoveryTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -240,7 +240,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetMagStr(float NewStr, bool bInitialFrame, BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.RMagneticSurfaceSMBase CallFromMaster = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetMagStr", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetMagStr", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewStr, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInitialFrame, paramsPtr + 4);
@@ -255,7 +255,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void StopMotor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.StopMotor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:StopMotor", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -266,7 +266,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void PlayMotorDown()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.PlayMotorDown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:PlayMotorDown", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -277,7 +277,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void PlayMotorUp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.PlayMotorUp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:PlayMotorUp", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -288,7 +288,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RPawnVillain> GetInfluencedVillains(BmSDK.BmGame.RPawnPlayer Player)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetInfluencedVillains", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetInfluencedVillains", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -300,7 +300,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual BmSDK.TArray<BmSDK.Engine.Actor> GetBeamEffectsTargets()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetBeamEffectsTargets", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetBeamEffectsTargets", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(paramsPtr + 0);
@@ -311,7 +311,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RMagneticBlastInterface> GetInfluencedDynamicObjects(bool bInitialFrame)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetInfluencedDynamicObjects", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetInfluencedDynamicObjects", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInitialFrame, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -323,7 +323,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual float GetAccumulatedMagStr()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetAccumulatedMagStr", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetAccumulatedMagStr", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
@@ -334,7 +334,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RMagneticSurfaceSMBase GetMasterGenerator()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetMasterGenerator", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetMasterGenerator", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticSurfaceSMBase>(paramsPtr + 0);
@@ -345,7 +345,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void ClearMatinee()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.ClearMatinee", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:ClearMatinee", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -356,7 +356,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetMatinee(BmSDK.Engine.SeqAct_Interp M)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetMatinee", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetMatinee", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -368,7 +368,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override void PostBeginPlay()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.PostBeginPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -379,7 +379,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetBlowUpState(bool bNewBlownUp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetBlowUpState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetBlowUpState", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewBlownUp, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -391,7 +391,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void BlowUp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.BlowUp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:BlowUp", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -402,7 +402,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetActive(bool _active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -414,7 +414,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void RemoveCurrentReceiver(BmSDK.BmGame.RMagneticBlastReceiver OldReceiver)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.RemoveCurrentReceiver", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:RemoveCurrentReceiver", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldReceiver, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -426,7 +426,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void SetCurrentReceiver(BmSDK.BmGame.RMagneticBlastReceiver NewReceiver)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.SetCurrentReceiver", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:SetCurrentReceiver", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewReceiver, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -438,7 +438,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.OnToggle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -450,7 +450,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe override System.Numerics.Vector3 GetFOVCheckLocation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetFOVCheckLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetFOVCheckLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
@@ -461,7 +461,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 GetAutoTargetLocation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetAutoTargetLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetAutoTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -479,7 +479,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void GetClosestTriangle(System.Numerics.Vector3 P, out System.Numerics.Vector3 v0, out System.Numerics.Vector3 v1, out System.Numerics.Vector3 v2)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetClosestTriangle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetClosestTriangle", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -501,7 +501,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual float GetMatineeLength()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetMatineeLength", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetMatineeLength", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -519,7 +519,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual float GetMatineePosition()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.GetMatineePosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:GetMatineePosition", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -537,7 +537,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual bool StepMatinee(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.StepMatinee", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:StepMatinee", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -556,7 +556,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual void UpdateEditorComponents()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.UpdateEditorComponents", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:UpdateEditorComponents", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -574,7 +574,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 ConvertPosToActorSpace(BmSDK.Engine.Actor Object, System.Numerics.Vector3 WorldPosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase.ConvertPosToActorSpace", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticSurfaceSMBase:ConvertPosToActorSpace", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Object, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPosition, paramsPtr + 4);

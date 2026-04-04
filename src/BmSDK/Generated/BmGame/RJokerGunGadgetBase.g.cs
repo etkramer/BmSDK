@@ -83,7 +83,7 @@ public partial class RJokerGunGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.
     /// </summary>
     public unsafe virtual bool GetShouldKnockHelmetOff(BmSDK.FName BoneName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase.GetShouldKnockHelmetOff", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase:GetShouldKnockHelmetOff", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -102,7 +102,7 @@ public partial class RJokerGunGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.
     /// </summary>
     public unsafe virtual BmSDK.FName GetWritheAnimName(BmSDK.FName BoneName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase.GetWritheAnimName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase:GetWritheAnimName", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BoneName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -121,7 +121,7 @@ public partial class RJokerGunGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.
     /// </summary>
     public unsafe virtual bool CalculateFireGunHitResult(BmSDK.Rotator FireRotation, System.Numerics.Vector3 FirePosition, out BmSDK.TArray<BmSDK.Engine.Actor.FImpactInfo> OutImpactInfo, float CheckBoxExtent = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase.CalculateFireGunHitResult", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerGunGadgetBase:CalculateFireGunHitResult", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FireRotation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FirePosition, paramsPtr + 12);

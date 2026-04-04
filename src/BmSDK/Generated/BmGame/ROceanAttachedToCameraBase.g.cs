@@ -83,7 +83,7 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
     /// </summary>
     public unsafe virtual void StopPlayerOceanEffect()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase.StopPlayerOceanEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase:StopPlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
     /// </summary>
     public unsafe virtual void UpdatePlayerOceanEffect(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase.UpdatePlayerOceanEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase:UpdatePlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

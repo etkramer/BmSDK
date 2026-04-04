@@ -83,7 +83,7 @@ public partial class RWaterFlowTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 CalculateFlowVelocity(System.Numerics.Vector3 TestPosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterFlowTarget.CalculateFlowVelocity", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWaterFlowTarget:CalculateFlowVelocity", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestPosition, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

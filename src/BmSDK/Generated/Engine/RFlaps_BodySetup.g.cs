@@ -83,7 +83,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.Engine.RB_BodySetup FindPhysAssetBody()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindPhysAssetBody", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup:FindPhysAssetBody", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int FindPhysAssetBodyIndex()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindPhysAssetBodyIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup:FindPhysAssetBodyIndex", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int FindParticleIndex(BmSDK.FName ParticleName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindParticleIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup:FindParticleIndex", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParticleName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

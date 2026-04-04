@@ -83,7 +83,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool WidgetUnloaded(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.WidgetUnloaded", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:WidgetUnloaded", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WidgetName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WidgetPath, paramsPtr + 8);
@@ -97,7 +97,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool WidgetInitialized(BmSDK.FName WidgetName, BmSDK.FName WidgetPath, BmSDK.GFxUI.GFxObject Widget)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.WidgetInitialized", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:WidgetInitialized", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WidgetName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WidgetPath, paramsPtr + 8);
@@ -111,7 +111,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject AttachMovie(BmSDK.FString symbolname, BmSDK.FString instancename, int Depth = default, BmSDK.Class Type = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.AttachMovie", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:AttachMovie", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(symbolname, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(instancename, paramsPtr + 12);
@@ -133,7 +133,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject CreateEmptyMovieClip(BmSDK.FString instancename, int Depth = default, BmSDK.Class Type = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.CreateEmptyMovieClip", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:CreateEmptyMovieClip", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(instancename, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Depth, paramsPtr + 12);
@@ -154,7 +154,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GotoAndStopI(int frame)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GotoAndStopI", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GotoAndStopI", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(frame, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -173,7 +173,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GotoAndStop(BmSDK.FString frame)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GotoAndStop", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GotoAndStop", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(frame, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -192,7 +192,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GotoAndPlayI(int frame)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GotoAndPlayI", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GotoAndPlayI", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(frame, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -211,7 +211,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GotoAndPlay(BmSDK.FString frame)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GotoAndPlay", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GotoAndPlay", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(frame, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -230,7 +230,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.TArray<BmSDK.GFxUI.GFxObject> ActionScriptArray(BmSDK.FString Path)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptArray", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptArray", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Path, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -249,7 +249,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject ActionScriptObject(BmSDK.FString Path)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptObject", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Path, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -268,7 +268,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString ActionScriptString(BmSDK.FString method)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptString", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(method, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -287,7 +287,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float ActionScriptFloat(BmSDK.FString method)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptFloat", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(method, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -306,7 +306,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int ActionScriptInt(BmSDK.FString method)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptInt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptInt", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(method, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -325,7 +325,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ActionScriptVoid(BmSDK.FString method)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptVoid", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptVoid", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(method, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -344,7 +344,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxMoviePlayer.FASValue Invoke(BmSDK.FString Member, BmSDK.TArray<BmSDK.GFxUI.GFxMoviePlayer.FASValue> args)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.Invoke", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:Invoke", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(args, paramsPtr + 12);
@@ -364,7 +364,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ActionScriptSetFunctionOn(BmSDK.GFxUI.GFxObject Target, BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptSetFunctionOn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptSetFunctionOn", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -384,7 +384,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ActionScriptSetFunction(BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.ActionScriptSetFunction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:ActionScriptSetFunction", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -403,7 +403,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementMemberString(int Index, BmSDK.FString Member, BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementMemberString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementMemberString", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -424,7 +424,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementMemberFloat(int Index, BmSDK.FString Member, float F)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementMemberFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementMemberFloat", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -445,7 +445,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementMemberBool(int Index, BmSDK.FString Member, bool B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementMemberBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementMemberBool", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -466,7 +466,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementMemberObject(int Index, BmSDK.FString Member, BmSDK.GFxUI.GFxObject val)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementMemberObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementMemberObject", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -487,7 +487,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementMember(int Index, BmSDK.FString Member, BmSDK.GFxUI.GFxMoviePlayer.FASValue Arg)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementMember", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementMember", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -508,7 +508,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetElementMemberString(int Index, BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementMemberString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementMemberString", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -528,7 +528,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float GetElementMemberFloat(int Index, BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementMemberFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementMemberFloat", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -548,7 +548,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetElementMemberBool(int Index, BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementMemberBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementMemberBool", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -568,7 +568,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject GetElementMemberObject(int Index, BmSDK.FString Member, BmSDK.Class Type = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementMemberObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementMemberObject", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -589,7 +589,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxMoviePlayer.FASValue GetElementMember(int Index, BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementMember", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementMember", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 4);
@@ -609,7 +609,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementColorTransform(int Index, BmSDK.GFxUI.GFxObject.FASColorTransform cxform)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementColorTransform", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementColorTransform", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(cxform, paramsPtr + 4);
@@ -629,7 +629,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementPosition(int Index, float X, float Y)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementPosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 4);
@@ -650,7 +650,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementVisible(int Index, bool Visible)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementVisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementVisible", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Visible, paramsPtr + 4);
@@ -670,7 +670,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementDisplayMatrix(int Index, BmSDK.GameObject.FMatrix M)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementDisplayMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementDisplayMatrix", true);
         byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 16);
@@ -690,7 +690,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementDisplayInfo(int Index, BmSDK.GFxUI.GFxObject.FASDisplayInfo D)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementDisplayInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementDisplayInfo", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(D, paramsPtr + 4);
@@ -710,7 +710,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FMatrix GetElementDisplayMatrix(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementDisplayMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementDisplayMatrix", true);
         byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -729,7 +729,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject.FASDisplayInfo GetElementDisplayInfo(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementDisplayInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementDisplayInfo", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -748,7 +748,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementString(int Index, BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementString", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 4);
@@ -768,7 +768,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementFloat(int Index, float F)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementFloat", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 4);
@@ -788,7 +788,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementBool(int Index, bool B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementBool", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -808,7 +808,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElementObject(int Index, BmSDK.GFxUI.GFxObject val)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElementObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElementObject", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(val, paramsPtr + 4);
@@ -828,7 +828,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetElement(int Index, BmSDK.GFxUI.GFxMoviePlayer.FASValue Arg)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetElement", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetElement", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Arg, paramsPtr + 4);
@@ -848,7 +848,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetElementString(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementString", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -867,7 +867,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float GetElementFloat(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementFloat", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -886,7 +886,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetElementBool(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementBool", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -905,7 +905,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject GetElementObject(int Index, BmSDK.Class Type = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElementObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElementObject", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 4);
@@ -925,7 +925,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxMoviePlayer.FASValue GetElement(int Index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetElement", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetElement", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -944,7 +944,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetText(BmSDK.FString Text, BmSDK.Engine.TranslationContext InContext = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetText", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetText", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InContext, paramsPtr + 12);
@@ -964,7 +964,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetText()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetText", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetText", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -982,7 +982,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetVisible(bool Visible)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetVisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetVisible", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Visible, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1001,7 +1001,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetDisplayMatrix3D(BmSDK.GameObject.FMatrix M)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetDisplayMatrix3D", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetDisplayMatrix3D", true);
         byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1020,7 +1020,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetDisplayMatrix(BmSDK.GameObject.FMatrix M)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetDisplayMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetDisplayMatrix", true);
         byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(M, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1039,7 +1039,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetColorTransform(BmSDK.GFxUI.GFxObject.FASColorTransform cxform)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetColorTransform", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetColorTransform", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(cxform, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1058,7 +1058,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetPosition(float X, float Y)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetPosition", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y, paramsPtr + 4);
@@ -1078,7 +1078,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetDisplayInfo(BmSDK.GFxUI.GFxObject.FASDisplayInfo D)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetDisplayInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetDisplayInfo", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(D, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1097,7 +1097,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FMatrix GetDisplayMatrix()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetDisplayMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetDisplayMatrix", true);
         byte* paramsPtr = stackalloc byte[64];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1115,7 +1115,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject.FASColorTransform GetColorTransform()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetColorTransform", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetColorTransform", true);
         byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1133,7 +1133,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetPosition(out float X, out float Y)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1153,7 +1153,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject.FASDisplayInfo GetDisplayInfo()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetDisplayInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetDisplayInfo", true);
         byte* paramsPtr = stackalloc byte[44];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -1171,7 +1171,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString TranslateString(BmSDK.FString StringToTranslate, BmSDK.Engine.TranslationContext InContext = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.TranslateString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:TranslateString", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StringToTranslate, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InContext, paramsPtr + 12);
@@ -1191,7 +1191,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetFunction(BmSDK.FString Member, BmSDK.GameObject context, BmSDK.FName fname)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetFunction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetFunction", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(context, paramsPtr + 12);
@@ -1212,7 +1212,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetObject(BmSDK.FString Member, BmSDK.GFxUI.GFxObject val)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetObject", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(val, paramsPtr + 12);
@@ -1232,7 +1232,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetString(BmSDK.FString Member, BmSDK.FString S, BmSDK.Engine.TranslationContext InContext = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetString", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 12);
@@ -1253,7 +1253,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetFloat(BmSDK.FString Member, float F)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetFloat", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 12);
@@ -1273,7 +1273,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetBool(BmSDK.FString Member, bool B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.SetBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:SetBool", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -1293,7 +1293,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Set(BmSDK.FString Member, BmSDK.GFxUI.GFxMoviePlayer.FASValue Arg)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.Set", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:Set", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Arg, paramsPtr + 12);
@@ -1313,7 +1313,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxObject GetObject(BmSDK.FString Member, BmSDK.Class Type = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetObject", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Type, paramsPtr + 12);
@@ -1333,7 +1333,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString GetString(BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetString", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1352,7 +1352,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float GetFloat(BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetFloat", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1371,7 +1371,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetBool(BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.GetBool", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:GetBool", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1390,7 +1390,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GFxUI.GFxMoviePlayer.FASValue Get(BmSDK.FString Member)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject.Get", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxObject:Get", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Member, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

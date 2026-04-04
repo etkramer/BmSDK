@@ -83,7 +83,7 @@ public partial class RCharacter_KillerCrocDrugged : BmSDK.BmGame.RCharacter, BmS
     /// </summary>
     public unsafe static void SetupCustomPhysics(BmSDK.BmGame.RBMPawnAI Pawn)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCharacter_KillerCrocDrugged.SetupCustomPhysics", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCharacter_KillerCrocDrugged:SetupCustomPhysics", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

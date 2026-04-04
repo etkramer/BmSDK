@@ -83,7 +83,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// </summary>
     public unsafe virtual void SetSimulationPosition(System.Numerics.Vector3 WorldPos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.SetSimulationPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent:SetSimulationPosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPos, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -102,7 +102,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// </summary>
     public unsafe virtual void SetDetailPosition(System.Numerics.Vector3 WorldPos)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.SetDetailPosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent:SetDetailPosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPos, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -121,7 +121,7 @@ public partial class FluidSurfaceComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// </summary>
     public unsafe virtual void ApplyForce(System.Numerics.Vector3 WorldPos, float Strength, float Radius, bool bImpulse = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent.ApplyForce", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FluidSurfaceComponent:ApplyForce", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(WorldPos, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Strength, paramsPtr + 12);

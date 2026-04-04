@@ -83,7 +83,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// </summary>
     public unsafe virtual BmSDK.Engine.AnimNodeSequence GetActiveChild()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.GetActiveChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader:GetActiveChild", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// </summary>
     public unsafe virtual BmSDK.FName GetAnimName()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.GetAnimName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader:GetAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// </summary>
     public unsafe virtual void BlendToLoopingAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float Rate = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.BlendToLoopingAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader:BlendToLoopingAnim", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendInTime, paramsPtr + 8);
@@ -140,7 +140,7 @@ public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGam
     /// </summary>
     public unsafe virtual void PlayOneShotAnim(BmSDK.FName AnimSeqName, float BlendInTime = default, float BlendOutTime = default, bool bDontBlendOut = default, float Rate = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader.PlayOneShotAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeCrossfader:PlayOneShotAnim", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSeqName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendInTime, paramsPtr + 8);

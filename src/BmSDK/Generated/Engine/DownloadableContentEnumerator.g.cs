@@ -83,7 +83,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void TriggerFindDLCDelegates()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.TriggerFindDLCDelegates", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:TriggerFindDLCDelegates", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void InstallDLC(BmSDK.FString DLCName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.InstallDLC", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:InstallDLC", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DLCName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -120,7 +120,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void InstallAllDLC()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.InstallAllDLC", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:InstallAllDLC", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -131,7 +131,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void DeleteDLC(BmSDK.FString DLCName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.DeleteDLC", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:DeleteDLC", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DLCName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -150,7 +150,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void ClearFindDLCDelegate(System.IntPtr InDelegate)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.ClearFindDLCDelegate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:ClearFindDLCDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -162,7 +162,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void AddFindDLCDelegate(System.IntPtr InDelegate)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AddFindDLCDelegate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:AddFindDLCDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -174,7 +174,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void OnFindDLCComplete()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.OnFindDLCComplete", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:OnFindDLCComplete", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -185,7 +185,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual BmSDK.TArray<BmSDK.FString> GetListOfBadBundles(bool bCorrupt)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.GetListOfBadBundles", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:GetListOfBadBundles", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bCorrupt, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -197,7 +197,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual bool AnyInvalid()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AnyInvalid", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:AnyInvalid", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -208,7 +208,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual bool AnyCorrupt()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AnyCorrupt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:AnyCorrupt", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -219,7 +219,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void ClearAllContent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.ClearAllContent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:ClearAllContent", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -230,7 +230,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     public unsafe virtual void FindDLC()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.FindDLC", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator:FindDLC", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

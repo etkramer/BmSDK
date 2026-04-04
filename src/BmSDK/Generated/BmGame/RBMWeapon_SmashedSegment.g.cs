@@ -83,7 +83,7 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
     /// </summary>
     public unsafe virtual void SetSegmentMesh(BmSDK.Engine.StaticMesh NewMesh, System.Numerics.Vector3 Vel, System.Numerics.Vector3 AngVel, System.Numerics.Vector3 NewLocation, BmSDK.Rotator NewRotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment.SetSegmentMesh", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment:SetSegmentMesh", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMesh, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vel, paramsPtr + 4);
@@ -99,7 +99,7 @@ public partial class RBMWeapon_SmashedSegment : BmSDK.Engine.KActorSpawnable, Bm
     /// </summary>
     public unsafe virtual void DestroyCheck()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment.DestroyCheck", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon_SmashedSegment:DestroyCheck", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

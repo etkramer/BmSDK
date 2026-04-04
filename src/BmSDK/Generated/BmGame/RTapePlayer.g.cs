@@ -83,7 +83,7 @@ public partial class RTapePlayer : BmSDK.BmGame.RRiddlePlayer, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void TickFromDialogueManager()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer.TickFromDialogueManager", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer:TickFromDialogueManager", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RTapePlayer : BmSDK.BmGame.RRiddlePlayer, BmSDK.IGameObject
     /// </summary>
     public unsafe override bool FindValidConversation(bool DoBanks, bool FromPackageLoad)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer.FindValidConversation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer:FindValidConversation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DoBanks, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FromPackageLoad, paramsPtr + 4);

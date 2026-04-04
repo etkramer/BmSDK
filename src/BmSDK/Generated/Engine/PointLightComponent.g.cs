@@ -83,7 +83,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// </summary>
     public unsafe override void OnUpdatePropertyBrightness()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.OnUpdatePropertyBrightness", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent:OnUpdatePropertyBrightness", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// </summary>
     public unsafe override void OnUpdatePropertyLightColor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.OnUpdatePropertyLightColor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent:OnUpdatePropertyLightColor", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class PointLightComponent : BmSDK.Engine.LightComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetTranslation(System.Numerics.Vector3 NewTranslation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent.SetTranslation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PointLightComponent:SetTranslation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTranslation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

@@ -83,7 +83,7 @@ public partial class GFxFSCmdHandler_Kismet : BmSDK.GFxUI.GFxFSCmdHandler, BmSDK
     /// </summary>
     public unsafe override bool FSCommand(BmSDK.GFxUI.GFxMoviePlayer Movie, BmSDK.GFxUI.GFxEvent_FSCommand Event, BmSDK.FString Cmd, BmSDK.FString Arg)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxFSCmdHandler_Kismet.FSCommand", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxFSCmdHandler_Kismet:FSCommand", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Movie, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Event, paramsPtr + 4);

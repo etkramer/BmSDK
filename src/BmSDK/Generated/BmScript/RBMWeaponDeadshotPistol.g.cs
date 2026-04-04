@@ -83,7 +83,7 @@ public partial class RBMWeaponDeadshotPistol : BmSDK.BmScript.RBMWeaponCombatRif
     /// </summary>
     public unsafe static BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponDeadshotPistol.CreateCombatWeaponConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponDeadshotPistol:CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[712];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AnimSet1, paramsPtr + 4);
@@ -99,7 +99,7 @@ public partial class RBMWeaponDeadshotPistol : BmSDK.BmScript.RBMWeaponCombatRif
     /// </summary>
     public unsafe virtual void DoFakedShotFX(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponDeadshotPistol.DoFakedShotFX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponDeadshotPistol:DoFakedShotFX", true);
         byte* paramsPtr = stackalloc byte[120];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Start, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(End, paramsPtr + 12);

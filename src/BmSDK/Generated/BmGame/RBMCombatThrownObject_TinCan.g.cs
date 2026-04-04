@@ -83,7 +83,7 @@ public partial class RBMCombatThrownObject_TinCan : BmSDK.BmGame.RBMCombatThrown
     /// </summary>
     public unsafe override void HitCombatPawn(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_TinCan.HitCombatPawn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_TinCan:HitCombatPawn", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 4);

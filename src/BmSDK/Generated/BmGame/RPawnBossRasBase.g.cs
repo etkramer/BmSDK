@@ -83,7 +83,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetBurstOutEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBurstOutEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBurstOutEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetElectricutedEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetElectricutedEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetElectricutedEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -105,7 +105,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetHitEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetHitEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetHitEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -116,7 +116,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetShurikanHitSandEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetShurikanHitSandEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetShurikanHitSandEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -127,7 +127,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetShurikanLoopEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetShurikanLoopEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetShurikanLoopEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -138,7 +138,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetShurikanStopEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetShurikanStopEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetShurikanStopEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -149,7 +149,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetBladeClusterHitBMEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBladeClusterHitBMEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBladeClusterHitBMEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -160,7 +160,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetBladeClusterStopEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBladeClusterStopEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBladeClusterStopEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -171,7 +171,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetBladeClusterFireEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBladeClusterFireEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBladeClusterFireEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -182,7 +182,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Engine.AkEvent GetBladeClusterSpawnEvent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBladeClusterSpawnEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBladeClusterSpawnEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(paramsPtr + 0);
@@ -193,7 +193,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void IntroTaunt()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.IntroTaunt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:IntroTaunt", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -204,7 +204,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void GiantAppearTaunt()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GiantAppearTaunt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GiantAppearTaunt", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -215,7 +215,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe override bool ShouldForceBeatDown()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ShouldForceBeatDown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ShouldForceBeatDown", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -226,7 +226,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetForceIsInBeatdown(bool bBeatdown)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetForceIsInBeatdown", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetForceIsInBeatdown", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bBeatdown, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -238,7 +238,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ShowRECHelp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ShowRECHelp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ShowRECHelp", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -249,7 +249,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool TrySpawnDemonBlastAttack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.TrySpawnDemonBlastAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:TrySpawnDemonBlastAttack", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -260,7 +260,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool TrySpawnChopAttack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.TrySpawnChopAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:TrySpawnChopAttack", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -271,7 +271,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ClearLookAtPawn()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ClearLookAtPawn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ClearLookAtPawn", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -282,7 +282,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ImpactSmall()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ImpactSmall", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ImpactSmall", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -293,7 +293,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ImpactStrong(bool bScreenShake = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ImpactStrong", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ImpactStrong", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bScreenShake, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -305,7 +305,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool ShouldBlindFireBatarang()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ShouldBlindFireBatarang", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ShouldBlindFireBatarang", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -316,7 +316,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool CanTeleport()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.CanTeleport", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:CanTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -327,7 +327,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ResetMaterials(BmSDK.Engine.SkeletalMeshComponent SMesh)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ResetMaterials", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ResetMaterials", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SMesh, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -339,7 +339,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe override void Tick(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.Tick", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:Tick", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -351,7 +351,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe override bool ShouldGetUpWhenHitFloor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ShouldGetUpWhenHitFloor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ShouldGetUpWhenHitFloor", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -362,7 +362,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool UpdateDesintegrate(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.UpdateDesintegrate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:UpdateDesintegrate", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -374,7 +374,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetDestroyPending()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetDestroyPending", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetDestroyPending", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -385,7 +385,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void OnChargeComplete()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.OnChargeComplete", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:OnChargeComplete", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -396,7 +396,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetCombatBehaviourState(BmSDK.FName NewState)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetCombatBehaviourState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetCombatBehaviourState", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewState, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -408,7 +408,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void HideToBurstOut()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.HideToBurstOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:HideToBurstOut", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -419,7 +419,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void GotoLandAndCharge()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GotoLandAndCharge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GotoLandAndCharge", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -430,7 +430,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnFuryAttack(bool bDoSmokeBomb = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnFuryAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnFuryAttack", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDoSmokeBomb, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -442,7 +442,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void OnDoneHide()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.OnDoneHide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:OnDoneHide", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -453,7 +453,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void OnStartedHide()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.OnStartedHide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:OnStartedHide", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -464,7 +464,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool IsHideDone()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.IsHideDone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:IsHideDone", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -475,7 +475,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void Hidden()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.Hidden", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:Hidden", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -486,7 +486,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void StartHide(BmSDK.FName OnDoneHideFunc, System.Numerics.Vector3 HideLoc, bool bInstant = default, float HideTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.StartHide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:StartHide", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OnDoneHideFunc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HideLoc, paramsPtr + 8);
@@ -501,7 +501,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnDesintegrateParticles(bool bPlaySfx = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnDesintegrateParticles", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnDesintegrateParticles", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlaySfx, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -513,7 +513,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void PlayChargeInSpeech()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.PlayChargeInSpeech", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:PlayChargeInSpeech", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -524,7 +524,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnSpectral()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnSpectral", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnSpectral", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -535,7 +535,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetRealRas()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetRealRas", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetRealRas", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -546,7 +546,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void OnCombatMoveExit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.OnCombatMoveExit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:OnCombatMoveExit", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -557,7 +557,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetSandMesh()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetSandMesh", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetSandMesh", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -568,7 +568,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetDefaultMesh(bool bPlayPfx = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetDefaultMesh", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetDefaultMesh", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPlayPfx, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -580,7 +580,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void DeactivateSandFieldFX()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.DeactivateSandFieldFX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:DeactivateSandFieldFX", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -591,7 +591,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ActivateSandFieldFX()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ActivateSandFieldFX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ActivateSandFieldFX", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -602,7 +602,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void DeactivatePrecursor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.DeactivatePrecursor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:DeactivatePrecursor", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -613,7 +613,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ActivatePrecursor()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ActivatePrecursor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ActivatePrecursor", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -624,7 +624,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void DeactivateAura()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.DeactivateAura", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:DeactivateAura", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -635,7 +635,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ActivateAura()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ActivateAura", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ActivateAura", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -646,7 +646,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void DeactivateWaistBlendFX()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.DeactivateWaistBlendFX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:DeactivateWaistBlendFX", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -657,7 +657,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ActivateWaistBlendFX()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ActivateWaistBlendFX", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ActivateWaistBlendFX", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -668,7 +668,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RPawnBossRasBase.EBatmanMovement GetBatmanMovement()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetBatmanMovement", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetBatmanMovement", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnBossRasBase.EBatmanMovement>(paramsPtr + 0);
@@ -679,7 +679,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnChopAttackBarrier(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnChopAttackBarrier", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnChopAttackBarrier", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SwordLoc, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SwordRot, paramsPtr + 12);
@@ -692,7 +692,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual BmSDK.Rotator GetSwordRotation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetSwordRotation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetSwordRotation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 0);
@@ -703,7 +703,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 GetSwordLocation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.GetSwordLocation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:GetSwordLocation", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
@@ -714,7 +714,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual bool IsRasHit()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.IsRasHit", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:IsRasHit", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -725,7 +725,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void HitSwordWall()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.HitSwordWall", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:HitSwordWall", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -736,7 +736,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ShieldTurnToProtect()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ShieldTurnToProtect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ShieldTurnToProtect", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -747,7 +747,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void ActivateShield(bool bMultiGaps)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.ActivateShield", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:ActivateShield", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bMultiGaps, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -759,7 +759,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void TripAnyGooMines()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.TripAnyGooMines", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:TripAnyGooMines", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -770,7 +770,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, BmSDK.FName MovementStance)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnHitReaction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnHitReaction", true);
         byte* paramsPtr = stackalloc byte[252];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DmgInfo, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MovementStance, paramsPtr + 244);
@@ -783,7 +783,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnChopAttack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnChopAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnChopAttack", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -794,7 +794,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnSwordAttack(BmSDK.FName SummonPose, BmSDK.FName Transition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnSwordAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnSwordAttack", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SummonPose, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Transition, paramsPtr + 8);
@@ -807,7 +807,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnChargeAttack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnChargeAttack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnChargeAttack", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -818,7 +818,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SpawnMoveDemonBlast()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SpawnMoveDemonBlast", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SpawnMoveDemonBlast", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -829,7 +829,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// </summary>
     public unsafe virtual void SetMeshMaterial(BmSDK.Engine.SkeletalMeshComponent TargetMesh, BmSDK.TArray<BmSDK.Engine.MaterialInstanceConstant> BodyOverrideMaterials)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase.SetMeshMaterial", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossRasBase:SetMeshMaterial", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetMesh, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyOverrideMaterials, paramsPtr + 4);

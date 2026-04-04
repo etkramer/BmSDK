@@ -78,7 +78,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// </summary>
     public unsafe virtual void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.PublishStats", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase:PublishStats", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GFXHud, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -90,7 +90,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// </summary>
     public unsafe virtual void ClearChallengeStats()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.ClearChallengeStats", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase:ClearChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -101,7 +101,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// </summary>
     public unsafe virtual void OutputMoveScores()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.OutputMoveScores", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase:OutputMoveScores", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -112,7 +112,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// </summary>
     public unsafe virtual void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.AddCombatMove", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase:AddCombatMove", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveType, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveScore, paramsPtr + 4);

@@ -10,7 +10,8 @@ string UObject::GetPathName() const
     string res = this->GetName();
     for (auto outer = this->Outer; outer; outer = outer->Outer)
     {
-        res = (outer->GetName() + "." + res);
+        string separator = (outer->Class->GetName() == "Package") ? "." : ":";
+        res = (outer->GetName() + separator + res);
     }
 
     return res;

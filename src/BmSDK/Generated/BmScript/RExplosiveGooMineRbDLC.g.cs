@@ -83,7 +83,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// </summary>
     public unsafe override void DamageVictim(BmSDK.BmGame.RPawnVillain Victim)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.DamageVictim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC:DamageVictim", true);
         byte* paramsPtr = stackalloc byte[300];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Victim, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// </summary>
     public unsafe virtual void CheckWallBase()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.CheckWallBase", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC:CheckWallBase", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -106,7 +106,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// </summary>
     public unsafe override void Explode()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.Explode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC:Explode", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

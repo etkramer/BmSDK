@@ -83,7 +83,7 @@ public partial class AnimNodeBlend : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void SetBlendTarget(float BlendTarget, float BlendTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlend.SetBlendTarget", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlend:SetBlendTarget", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendTarget, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BlendTime, paramsPtr + 4);

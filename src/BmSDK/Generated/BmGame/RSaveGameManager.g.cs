@@ -83,7 +83,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ProcessSavedGame()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.ProcessSavedGame", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:ProcessSavedGame", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DecompressSavedGame()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.DecompressSavedGame", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:DecompressSavedGame", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DecompressShared()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.DecompressShared", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:DecompressShared", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -137,7 +137,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DecompressOptions()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.DecompressOptions", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:DecompressOptions", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -155,7 +155,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void LoadPDataBuffer(int AsSlotX)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.LoadPDataBuffer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:LoadPDataBuffer", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AsSlotX, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -174,7 +174,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SavePDataBuffer(int AsSlotX)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.SavePDataBuffer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:SavePDataBuffer", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AsSlotX, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -193,7 +193,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetActiveStorySlotID(BmSDK.BmGame.RSaveGameManager.StorySlots SlotID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.SetActiveStorySlotID", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:SetActiveStorySlotID", true);
         byte* paramsPtr = stackalloc byte[1];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SlotID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -212,7 +212,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RSaveGameManager.StorySlots GetActiveStorySlotID()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.GetActiveStorySlotID", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:GetActiveStorySlotID", true);
         byte* paramsPtr = stackalloc byte[1];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -230,7 +230,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetIfSaveDataValidForSlot()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.SetIfSaveDataValidForSlot", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:SetIfSaveDataValidForSlot", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -248,7 +248,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void JoinSaveBuffers()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.JoinSaveBuffers", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:JoinSaveBuffers", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -266,7 +266,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool StoreOptionsToMemory(bool bSharedToo)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.StoreOptionsToMemory", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:StoreOptionsToMemory", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSharedToo, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -285,7 +285,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void LoadSavedGameInfo(BmSDK.BmGame.RPlayerController RPC, out BmSDK.TArray<BmSDK.BmGame.RSaveGameManager.FRSaveGameSummaryInfo> SaveGames, out BmSDK.TArray<BmSDK.BmGame.RSaveGameManager.FRSaveGameSummaryInfo> StartPoints)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.LoadSavedGameInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:LoadSavedGameInfo", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RPC, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -306,7 +306,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Initialise()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager.Initialise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSaveGameManager:Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

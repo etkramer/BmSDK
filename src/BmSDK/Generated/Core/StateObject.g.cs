@@ -78,7 +78,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Disable(BmSDK.FName ProbeFunc)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.Disable", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:Disable", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ProbeFunc, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -97,7 +97,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Enable(BmSDK.FName ProbeFunc)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.Enable", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:Enable", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ProbeFunc, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -116,7 +116,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ContinuedState()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.ContinuedState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:ContinuedState", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -127,7 +127,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PausedState()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.PausedState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:PausedState", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -138,7 +138,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PoppedState()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.PoppedState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:PoppedState", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -149,7 +149,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PushedState()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.PushedState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:PushedState", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -160,7 +160,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void EndState(BmSDK.FName NextStateName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.EndState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:EndState", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NextStateName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -172,7 +172,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void BeginState(BmSDK.FName PreviousStateName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.BeginState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:BeginState", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PreviousStateName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -184,7 +184,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DumpStateStack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.DumpStateStack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:DumpStateStack", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -202,7 +202,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PopState(bool bPopAll = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.PopState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:PopState", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPopAll, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -221,7 +221,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void PushState(BmSDK.FName NewState, BmSDK.FName NewLabel = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.PushState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:PushState", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLabel, paramsPtr + 8);
@@ -241,7 +241,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FName GetStateName()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.GetStateName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:GetStateName", true);
         byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -259,7 +259,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsChildState(BmSDK.FName TestState, BmSDK.FName TestParentState)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.IsChildState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:IsChildState", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestParentState, paramsPtr + 8);
@@ -279,7 +279,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsInState(BmSDK.FName TestState, bool bTestStateStack = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.IsInState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:IsInState", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTestStateStack, paramsPtr + 8);
@@ -299,7 +299,7 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GotoState(BmSDK.FName NewState = default, BmSDK.FName Label = default, bool bForceEvents = default, bool bKeepStack = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject.GotoState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.StateObject:GotoState", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewState, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Label, paramsPtr + 8);

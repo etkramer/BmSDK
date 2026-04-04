@@ -78,7 +78,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual bool IsBeingNoisyThisFrame()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.IsBeingNoisyThisFrame", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:IsBeingNoisyThisFrame", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -89,7 +89,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void CrackTile()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.CrackTile", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:CrackTile", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -100,7 +100,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void PlayBMWobbleAnimation()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.PlayBMWobbleAnimation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:PlayBMWobbleAnimation", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -111,7 +111,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void BreakTile()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.BreakTile", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:BreakTile", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -122,7 +122,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual bool IsWeakAndBatmanWalking()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.IsWeakAndBatmanWalking", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:IsWeakAndBatmanWalking", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -133,7 +133,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void UpdateTiles(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.UpdateTiles", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:UpdateTiles", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -145,7 +145,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void UpdateHud()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.UpdateHud", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:UpdateHud", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -156,7 +156,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void UpdateNoiseLevel(float UpdateTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.UpdateNoiseLevel", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:UpdateNoiseLevel", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UpdateTime, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -168,7 +168,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void AddBatWalkIfCan()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.AddBatWalkIfCan", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:AddBatWalkIfCan", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -179,7 +179,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void RemoveBatWalkIfCan()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.RemoveBatWalkIfCan", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:RemoveBatWalkIfCan", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -190,7 +190,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual void RemoveBatWalk()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.RemoveBatWalk", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:RemoveBatWalk", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -201,7 +201,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual bool IsOnIceBaseAndSetValues()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.IsOnIceBaseAndSetValues", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:IsOnIceBaseAndSetValues", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
@@ -212,7 +212,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// </summary>
     public unsafe virtual bool NativeUpdate(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase.NativeUpdate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IceMeterBase:NativeUpdate", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

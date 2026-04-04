@@ -83,7 +83,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 CalculateCurrentFallbackPos()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentFallbackPos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:CalculateCurrentFallbackPos", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 CalculateCurrentTargetPos()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentTargetPos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:CalculateCurrentTargetPos", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 CalculateCurrentDragPos()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentDragPos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:CalculateCurrentDragPos", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -137,7 +137,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual void UpdateCurrentExplodePose(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.UpdateCurrentExplodePose", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:UpdateCurrentExplodePose", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -156,7 +156,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual void UpdateCurrentFollowPose(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.UpdateCurrentFollowPose", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:UpdateCurrentFollowPose", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -175,7 +175,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual void HandleExplode()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.HandleExplode", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:HandleExplode", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -186,7 +186,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// </summary>
     public unsafe virtual void Initialise(BmSDK.BmGame.RControllableChatteringTeethBase NewTargetTeeth)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.Initialise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera:Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTargetTeeth, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

@@ -83,7 +83,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.InGameAdManager GetAdManager()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.GetAdManager", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:GetAdManager", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.DownloadableContentManager GetDLCManager()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.GetDLCManager", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:GetDLCManager", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.DownloadableContentEnumerator GetDLCEnumerator()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.GetDLCEnumerator", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:GetDLCEnumerator", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -137,7 +137,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.OnlineSubsystem GetOnlineSubsystem()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.GetOnlineSubsystem", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:GetOnlineSubsystem", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -155,7 +155,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void DestroyNamedNetDriver(BmSDK.FName NetDriverName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.DestroyNamedNetDriver", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:DestroyNamedNetDriver", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NetDriverName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -174,7 +174,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool CreateNamedNetDriver(BmSDK.FName NetDriverName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine.CreateNamedNetDriver", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameEngine:CreateNamedNetDriver", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NetDriverName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

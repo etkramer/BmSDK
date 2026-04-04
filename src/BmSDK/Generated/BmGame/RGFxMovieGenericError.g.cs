@@ -83,7 +83,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe virtual void PressedB()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.PressedB", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:PressedB", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe virtual void PressedA()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.PressedA", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:PressedA", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ExitThePlayer(BmSDK.FString ToHere, bool bPS3Only = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.ExitThePlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:ExitThePlayer", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ToHere, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPS3Only, paramsPtr + 12);
@@ -118,7 +118,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe virtual void SetData(BmSDK.BmGame.RGFxMovieGenericError.GE_Type typeID, BmSDK.FString Message, BmSDK.FString PromptA, BmSDK.FString PromptB = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.SetData", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:SetData", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(typeID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Message, paramsPtr + 4);
@@ -133,7 +133,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe virtual void RestoreFocus()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.RestoreFocus", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:RestoreFocus", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -144,7 +144,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.Init", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError:Init", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

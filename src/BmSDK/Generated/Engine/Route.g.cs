@@ -83,7 +83,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// </summary>
     public unsafe virtual int MoveOntoRoutePath(BmSDK.Engine.Pawn P, BmSDK.Engine.Route.ERouteDirection RouteDirection = default, float DistFudgeFactor = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route.MoveOntoRoutePath", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route:MoveOntoRoutePath", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RouteDirection, paramsPtr + 4);
@@ -104,7 +104,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// </summary>
     public unsafe virtual int ResolveRouteIndex(int Idx, BmSDK.Engine.Route.ERouteDirection RouteDirection, out byte out_bComplete, out byte out_bReverse)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route.ResolveRouteIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route:ResolveRouteIndex", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Idx, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RouteDirection, paramsPtr + 4);

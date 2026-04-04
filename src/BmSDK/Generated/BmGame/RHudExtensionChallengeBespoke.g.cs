@@ -83,7 +83,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void UpdatePushYourLuckBandDetails(int Band_Index, int Bonus_Points, int Bonus_Time)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.UpdatePushYourLuckBandDetails", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:UpdatePushYourLuckBandDetails", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Band_Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Bonus_Points, paramsPtr + 4);
@@ -97,7 +97,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void PushYourLuckShakeGauge()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.PushYourLuckShakeGauge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:PushYourLuckShakeGauge", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -108,7 +108,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void PushYourLuckBankValue(int bank_level, int Score, int Bonus_Time, bool max_gauge)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.PushYourLuckBankValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:PushYourLuckBankValue", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bank_level, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Score, paramsPtr + 4);
@@ -123,7 +123,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void SetPushYourLuckGaugeValue(int raw_value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetPushYourLuckGaugeValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:SetPushYourLuckGaugeValue", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(raw_value, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -135,7 +135,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void SetPushYourLuckBandDetails(int Band_Index, BmSDK.FString Band_Title, int Bonus_Points, int Bonus_Time, int GaugeValueForNext)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetPushYourLuckBandDetails", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:SetPushYourLuckBandDetails", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Band_Index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Band_Title, paramsPtr + 4);
@@ -151,7 +151,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe virtual void SetHeadToHeadBankLocal(int bank_level)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetHeadToHeadBankLocal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:SetHeadToHeadBankLocal", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bank_level, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -163,7 +163,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe override void Close()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.Close", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:Close", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -174,7 +174,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// </summary>
     public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.Init", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke:Init", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(_ExtensionName, paramsPtr + 4);

@@ -83,7 +83,7 @@ public partial class PhysicsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int FindBodyIndex(BmSDK.FName BodyName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsAsset.FindBodyIndex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicsAsset:FindBodyIndex", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

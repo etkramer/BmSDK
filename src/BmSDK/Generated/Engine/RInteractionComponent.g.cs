@@ -83,7 +83,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// </summary>
     public unsafe virtual void RemoveRelevantInteraction(BmSDK.FName InteractionToRemove)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.RemoveRelevantInteraction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent:RemoveRelevantInteraction", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InteractionToRemove, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -102,7 +102,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// </summary>
     public unsafe virtual void AddRelevantInteraction(BmSDK.FName NewInteraction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.AddRelevantInteraction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent:AddRelevantInteraction", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInteraction, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

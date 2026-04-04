@@ -83,7 +83,7 @@ public partial class RPawnVillainGunJammer : BmSDK.BmScript.RPawnVillainGunJamme
     /// </summary>
     public unsafe static void UpdateAerialSnapAnim(BmSDK.BmScript.RPawnVillainGunJammer Pawn, BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition, BmSDK.Engine.AnimSet OverrideAnimSet = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer.UpdateAerialSnapAnim", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer:UpdateAerialSnapAnim", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Transition, paramsPtr + 4);
@@ -97,7 +97,7 @@ public partial class RPawnVillainGunJammer : BmSDK.BmScript.RPawnVillainGunJamme
     /// </summary>
     public unsafe static void SetAerialSnapAnimSet(BmSDK.BmScript.RPawnVillainGunJammer Pawn, BmSDK.Engine.AnimSet VictimAnimSet)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer.SetAerialSnapAnimSet", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer:SetAerialSnapAnimSet", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Pawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(VictimAnimSet, paramsPtr + 4);
@@ -110,7 +110,7 @@ public partial class RPawnVillainGunJammer : BmSDK.BmScript.RPawnVillainGunJamme
     /// </summary>
     public unsafe override void AddPawnProps()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer.AddPawnProps", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammer:AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[124];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

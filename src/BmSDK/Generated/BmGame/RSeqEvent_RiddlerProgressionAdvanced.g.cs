@@ -83,7 +83,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe static int GetObjClassVersion()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.GetObjClassVersion", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:GetObjClassVersion", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual bool CheckRequiredFlags(int CriterionIndex, BmSDK.BmGame.RFlagManager FlagMan)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.CheckRequiredFlags", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:CheckRequiredFlags", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CriterionIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagMan, paramsPtr + 4);
@@ -107,7 +107,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual bool CheckAlreadyUnlocked(int CriterionIndex, BmSDK.BmGame.RFlagManager FlagMan)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.CheckAlreadyUnlocked", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:CheckAlreadyUnlocked", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CriterionIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagMan, paramsPtr + 4);
@@ -120,7 +120,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual void SetFlagsTrue(int CriterionIndex, BmSDK.BmGame.RFlagManager FlagMan)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.SetFlagsTrue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:SetFlagsTrue", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CriterionIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagMan, paramsPtr + 4);
@@ -133,7 +133,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual bool ShouldLockdownPreventUnlock(BmSDK.BmGame.RFlagManager FlagMan, BmSDK.BmGame.RGameRI RGRI, byte GameChapter)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.ShouldLockdownPreventUnlock", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:ShouldLockdownPreventUnlock", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagMan, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RGRI, paramsPtr + 4);
@@ -147,7 +147,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual void SyncWithPdata(BmSDK.BmGame.RFlagManager FlagMan)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.SyncWithPdata", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:SyncWithPdata", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FlagMan, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -159,7 +159,7 @@ public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.Sequenc
     /// </summary>
     public unsafe virtual void CheckForUnlocks(BmSDK.BmGame.RPlayerController RPC, int RiddlerUnlockTotal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced.CheckForUnlocks", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_RiddlerProgressionAdvanced:CheckForUnlocks", true);
         byte* paramsPtr = stackalloc byte[41];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RPC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RiddlerUnlockTotal, paramsPtr + 4);

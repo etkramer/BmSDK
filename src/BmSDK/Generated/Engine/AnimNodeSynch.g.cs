@@ -83,7 +83,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void SetGroupRateScale(BmSDK.FName GroupName, float NewRateScale)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.SetGroupRateScale", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:SetGroupRateScale", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRateScale, paramsPtr + 8);
@@ -103,7 +103,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual float GetRelativePosition(BmSDK.FName GroupName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.GetRelativePosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:GetRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -122,7 +122,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void ForceRelativePosition(BmSDK.FName GroupName, float RelativePosition)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.ForceRelativePosition", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:ForceRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RelativePosition, paramsPtr + 8);
@@ -142,7 +142,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual BmSDK.Engine.AnimNodeSequence GetMasterNodeOfGroup(BmSDK.FName GroupName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.GetMasterNodeOfGroup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:GetMasterNodeOfGroup", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -161,7 +161,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void RemoveNodeFromGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.RemoveNodeFromGroup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:RemoveNodeFromGroup", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SeqNode, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 4);
@@ -181,7 +181,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// </summary>
     public unsafe virtual void AddNodeToGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.AddNodeToGroup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch:AddNodeToGroup", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SeqNode, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GroupName, paramsPtr + 4);

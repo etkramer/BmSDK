@@ -83,7 +83,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void SetCampaignComplete(bool CampaignComplete, int TotalMedals, int MaxMedals, int PreviousBest)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.SetCampaignComplete", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:SetCampaignComplete", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CampaignComplete, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TotalMedals, paramsPtr + 4);
@@ -98,7 +98,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void CampaignCompleteAuto(bool CurrentRoundComplete)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.CampaignCompleteAuto", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:CampaignCompleteAuto", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentRoundComplete, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -110,7 +110,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual int GetTotalMedals(BmSDK.BmGame.RChallengeManager ChalMan)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.GetTotalMedals", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:GetTotalMedals", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChalMan, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -122,7 +122,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void FreeRetry()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.FreeRetry", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:FreeRetry", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -133,7 +133,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void SpendRetry()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.SpendRetry", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:SpendRetry", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -144,7 +144,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void BankPlusMedals()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.BankPlusMedals", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:BankPlusMedals", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -155,7 +155,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void SetPlusMedalCount(int new_count)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.SetPlusMedalCount", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:SetPlusMedalCount", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_count, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -167,7 +167,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void SetRoundInfo(int round_index, int map_index, int medals_earned)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.SetRoundInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:SetRoundInfo", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(round_index, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(map_index, paramsPtr + 4);
@@ -181,7 +181,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void SetCampaignInfo(int curr_round, int total_retries)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.SetCampaignInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:SetCampaignInfo", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(curr_round, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(total_retries, paramsPtr + 4);
@@ -194,7 +194,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual int GetRoundMedals(int round_index)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.GetRoundMedals", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:GetRoundMedals", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(round_index, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -206,7 +206,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void RequestCampaignInfo()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.RequestCampaignInfo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:RequestCampaignInfo", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -217,7 +217,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void OnCloseHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.OnCloseHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:OnCloseHUD", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -228,7 +228,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void CloseScreen()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.CloseScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -239,7 +239,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void Hide()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.Hide", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:Hide", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -250,7 +250,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void show(int Mode)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.show", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:show", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Mode, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -262,7 +262,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void HideItem(BmSDK.FString ItemName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.HideItem", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:HideItem", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ItemName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -274,7 +274,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void ShowItem(BmSDK.FString ItemName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.ShowItem", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:ShowItem", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ItemName, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -286,7 +286,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe virtual void KismetControlsInOut(bool bTrue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.KismetControlsInOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:KismetControlsInOut", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bTrue, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -298,7 +298,7 @@ public partial class RGFxMovieCampaignProgress : BmSDK.BmGame.RGFxMovie, BmSDK.I
     /// </summary>
     public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress.Init", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieCampaignProgress:Init", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

@@ -83,7 +83,7 @@ public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathCon
     /// </summary>
     public unsafe static bool AvoidPathObjectArray(BmSDK.BmGame.RNavigationHandle NewNavHandle, BmSDK.TArray<BmSDK.Engine.Actor> AvoidObjectList)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPathObjects.AvoidPathObjectArray", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidPathObjects:AvoidPathObjectArray", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNavHandle, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AvoidObjectList, paramsPtr + 4);

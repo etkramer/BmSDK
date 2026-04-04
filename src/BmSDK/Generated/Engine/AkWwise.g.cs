@@ -78,7 +78,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void FullReset()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.FullReset", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:FullReset", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +96,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.Actor GetSurveillanceFocus()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.GetSurveillanceFocus", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:GetSurveillanceFocus", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -114,7 +114,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsSurveillanceUIVisible()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.IsSurveillanceUIVisible", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:IsSurveillanceUIVisible", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -132,7 +132,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsSurveillanceDialogueEnabled()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.IsSurveillanceDialogueEnabled", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:IsSurveillanceDialogueEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -150,7 +150,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void EnableSurveillanceDialogue(bool AllowSurv)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.EnableSurveillanceDialogue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:EnableSurveillanceDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AllowSurv, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -169,7 +169,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsSurveillanceDialogueActive()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.IsSurveillanceDialogueActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:IsSurveillanceDialogueActive", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -187,7 +187,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void ResetSurveillanceDialogue()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.ResetSurveillanceDialogue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:ResetSurveillanceDialogue", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -205,7 +205,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void NotifySurveillanceDialogue(BmSDK.Engine.Actor Speaker, float SurvRange, int SurvConversation = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.NotifySurveillanceDialogue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:NotifySurveillanceDialogue", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speaker, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SurvRange, paramsPtr + 4);
@@ -226,7 +226,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetCustomGlobalState(BmSDK.FString StateGroup, BmSDK.FString StateName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetCustomGlobalState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetCustomGlobalState", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StateGroup, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StateName, paramsPtr + 12);
@@ -246,7 +246,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetCustomSourceSwitch(BmSDK.Engine.Actor Parent, BmSDK.FString SwitchGroup, BmSDK.FString SwitchName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetCustomSourceSwitch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetCustomSourceSwitch", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Parent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SwitchGroup, paramsPtr + 4);
@@ -267,7 +267,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetCustomSourceParameter(BmSDK.Engine.Actor Parent, BmSDK.FString ParamName, float ParamValue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetCustomSourceParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetCustomSourceParameter", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Parent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 4);
@@ -288,7 +288,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetCustomGlobalParameter(BmSDK.FString ParamName, float ParamValue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetCustomGlobalParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetCustomGlobalParameter", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 12);
@@ -308,7 +308,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StopCustomAudioEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StopCustomAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StopCustomAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -327,7 +327,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.AkWwise.FAkSoundHandle StartCustomAudioEvent(BmSDK.Engine.Actor Parent, BmSDK.FString EventName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StartCustomAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StartCustomAudioEvent", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Parent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventName, paramsPtr + 4);
@@ -347,7 +347,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void UnregisterMusicCallback(BmSDK.GameObject CallbackOwner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.UnregisterMusicCallback", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:UnregisterMusicCallback", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CallbackOwner, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -366,7 +366,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static bool RegisterMusicCallback(int CallbackFlags, System.IntPtr MusicCallbackDelegate, bool UnregisterOnStop = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.RegisterMusicCallback", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:RegisterMusicCallback", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CallbackFlags, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MusicCallbackDelegate, paramsPtr + 4);
@@ -387,7 +387,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void ResetMusicParameters(float InterpolationTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.ResetMusicParameters", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:ResetMusicParameters", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InterpolationTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -406,7 +406,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicParameter(BmSDK.Engine.AkParameterName ParamName, float ParamValue, float InterpolationTime = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicParameter", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 4);
@@ -427,7 +427,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicTrigger(BmSDK.Engine.AkTriggerName TriggerName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicTrigger", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicTrigger", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TriggerName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -446,7 +446,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicGameplayState(BmSDK.FString GameplayName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicGameplayState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicGameplayState", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GameplayName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -465,7 +465,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicLevelState(BmSDK.FString LevelName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicLevelState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicLevelState", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(LevelName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -484,7 +484,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicChapterState(BmSDK.FString ChapterName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicChapterState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicChapterState", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChapterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -503,7 +503,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMixChapterState(BmSDK.FString ChapterName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMixChapterState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMixChapterState", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChapterName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -522,7 +522,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetMusicState(BmSDK.Engine.AkStateName StateName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetMusicState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetMusicState", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StateName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -541,7 +541,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StopMusic()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StopMusic", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StopMusic", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -559,7 +559,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StartMusic(BmSDK.Engine.AkEvent CustomMusicEvent = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StartMusic", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StartMusic", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomMusicEvent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -578,7 +578,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void CancelAudioCallbacks(BmSDK.GameObject OwnerObject)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.CancelAudioCallbacks", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:CancelAudioCallbacks", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OwnerObject, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -597,7 +597,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsSoundHandleValid(out BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandleToTest)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.IsSoundHandleValid", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:IsSoundHandleValid", true);
         byte* paramsPtr = stackalloc byte[16];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -616,7 +616,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StartContinuousCollisionAudioEvent(out BmSDK.Engine.AkWwise.FAkSoundLoop CollisionLoop, BmSDK.Engine.Actor CollidingActor, System.Numerics.Vector3 CollisionPosition, float CollisionVelocity, float CollisionStrength)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StartContinuousCollisionAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StartContinuousCollisionAudioEvent", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollidingActor, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionPosition, paramsPtr + 20);
@@ -639,7 +639,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StartCollisionAudioEvent(BmSDK.Engine.AkEvent CollisionEvent, BmSDK.Engine.Actor CollidingActor, System.Numerics.Vector3 CollisionPosition, float CollisionVelocity, float CollisionStrength)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StartCollisionAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StartCollisionAudioEvent", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollisionEvent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CollidingActor, paramsPtr + 4);
@@ -662,7 +662,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetGlobalAudioState(BmSDK.Engine.AkStateName StateName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetGlobalAudioState", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetGlobalAudioState", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StateName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -681,7 +681,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetGlobalAudioSwitch(BmSDK.Engine.AkSwitchName SwitchName, BmSDK.Engine.AkWwise.EGlobalAudioSourceID GlobalSource)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetGlobalAudioSwitch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetGlobalAudioSwitch", true);
         byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SwitchName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GlobalSource, paramsPtr + 4);
@@ -701,7 +701,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetGlobalStickyParameterEx(BmSDK.Engine.AkParameterName ParamName, float ParamValue, float NewReleaseValue, float NewReleaseTime, float NewSustainTime, float NewAttackTime, bool AllowPause)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetGlobalStickyParameterEx", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetGlobalStickyParameterEx", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 4);
@@ -726,7 +726,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetGlobalStickyParameter(BmSDK.Engine.AkParameterName ParamName, float ParamValue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetGlobalStickyParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetGlobalStickyParameter", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 4);
@@ -746,7 +746,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetGlobalAudioParameter(BmSDK.Engine.AkParameterName ParamName, float ParamValue)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.SetGlobalAudioParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:SetGlobalAudioParameter", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParamValue, paramsPtr + 4);
@@ -766,7 +766,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static void StopGlobalAudioEvent(out BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, bool QuickStop = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StopGlobalAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StopGlobalAudioEvent", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(QuickStop, paramsPtr + 12);
         var oldFlags = funcManaged.FunctionFlags;
@@ -786,7 +786,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Engine.AkWwise.FAkSoundHandle StartGlobalAudioEvent(BmSDK.Engine.AkEvent AudioEvent, BmSDK.Engine.AkWwise.EGlobalAudioSourceID GlobalSource, System.IntPtr SoundCallbackDelegate = default, int SoundCallbackFlags = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.StartGlobalAudioEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:StartGlobalAudioEvent", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AudioEvent, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(GlobalSource, paramsPtr + 4);
@@ -808,7 +808,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AkMusicCallback(int CallbackFlags, int MarkerID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.AkMusicCallback", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:AkMusicCallback", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CallbackFlags, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerID, paramsPtr + 4);
@@ -839,7 +839,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void AkSoundCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.AkSoundCallback", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise:AkSoundCallback", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CallbackFlags, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundHandle, paramsPtr + 4);

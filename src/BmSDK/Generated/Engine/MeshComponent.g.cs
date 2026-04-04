@@ -78,7 +78,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.CreateAndSetMaterialInstanceConstant", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:CreateAndSetMaterialInstanceConstant", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -90,7 +90,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual BmSDK.Engine.MaterialInstanceConstant CastTemporaryMaterial(BmSDK.Engine.MaterialInterface Material)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.CastTemporaryMaterial", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:CastTemporaryMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Material, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -109,7 +109,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual void PrestreamTextures(float Seconds, bool bPrioritizeCharacterTextures, int CinematicTextureGroups = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.PrestreamTextures", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:PrestreamTextures", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Seconds, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bPrioritizeCharacterTextures, paramsPtr + 4);
@@ -130,7 +130,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual int GetNumElements()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetNumElements", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:GetNumElements", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -148,7 +148,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual void ClearMaterials()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.ClearMaterials", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:ClearMaterials", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -166,7 +166,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.SetMaterial", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:SetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Material, paramsPtr + 4);
@@ -186,7 +186,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetMaterial", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:GetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ElementIndex, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -205,7 +205,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual bool GetUseSimpleLineCollision()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetUseSimpleLineCollision", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:GetUseSimpleLineCollision", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -223,7 +223,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// </summary>
     public unsafe virtual bool GetUseSimpleBoxCollision()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetUseSimpleBoxCollision", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent:GetUseSimpleBoxCollision", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

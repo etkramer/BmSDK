@@ -78,7 +78,7 @@ public partial class RBMCombatThrownObject_MaskBase : BmSDK.BmGame.RBMCombatThro
     /// </summary>
     public unsafe override void HitSomething(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MaskBase.HitSomething", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MaskBase:HitSomething", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HitPawn, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 4);
@@ -91,7 +91,7 @@ public partial class RBMCombatThrownObject_MaskBase : BmSDK.BmGame.RBMCombatThro
     /// </summary>
     public unsafe override void ThrowWithVelocity(System.Numerics.Vector3 NewVel, System.Numerics.Vector3 NewAngVel = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MaskBase.ThrowWithVelocity", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MaskBase:ThrowWithVelocity", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewVel, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAngVel, paramsPtr + 12);

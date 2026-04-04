@@ -83,7 +83,7 @@ public partial class HeightFogComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// </summary>
     public unsafe virtual void SetEnabled(bool bSetEnabled)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HeightFogComponent.SetEnabled", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HeightFogComponent:SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bSetEnabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

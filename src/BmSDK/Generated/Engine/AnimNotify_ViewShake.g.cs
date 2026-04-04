@@ -83,7 +83,7 @@ public partial class AnimNotify_ViewShake : BmSDK.Engine.AnimNotify_Scripted, Bm
     /// </summary>
     public unsafe override void Notify(BmSDK.Engine.Actor Owner, BmSDK.Engine.SkeletalMeshComponent SkelComponent)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_ViewShake.Notify", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_ViewShake:Notify", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Owner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SkelComponent, paramsPtr + 4);

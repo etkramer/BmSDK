@@ -83,7 +83,7 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void TickLaser(float deltaT, System.Numerics.Vector3 SocketLocation, BmSDK.Rotator SocketRotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect.TickLaser", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect:TickLaser", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(deltaT, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SocketLocation, paramsPtr + 4);
@@ -97,7 +97,7 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void CheckCollisions()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect.CheckCollisions", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect:CheckCollisions", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -108,7 +108,7 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetLaserLength(float new_length)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect.SetLaserLength", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect:SetLaserLength", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(new_length, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -120,7 +120,7 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetActive(bool is_active)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect.SetActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect:SetActive", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(is_active, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -132,7 +132,7 @@ public partial class RFreezeLaserEffect : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void Initialise(BmSDK.BmScript.RPawnVillainFreeze mr_freeze, BmSDK.Engine.SkeletalMeshComponent parent_mesh, BmSDK.FName parent_socket, float Proportion, BmSDK.BmGame.RObjectPool object_pool)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect.Initialise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeLaserEffect:Initialise", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(mr_freeze, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(parent_mesh, paramsPtr + 4);

@@ -83,7 +83,7 @@ public partial class RJammerGadgetNw : BmSDK.BmScript.RJammerGadgetBm, BmSDK.IGa
     /// </summary>
     public unsafe override BmSDK.FName GetGadgetClassNameForHUD()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw.GetGadgetClassNameForHUD", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw:GetGadgetClassNameForHUD", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
@@ -94,7 +94,7 @@ public partial class RJammerGadgetNw : BmSDK.BmScript.RJammerGadgetBm, BmSDK.IGa
     /// </summary>
     public unsafe override void CheckUpgrades()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw.CheckUpgrades", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw:CheckUpgrades", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;

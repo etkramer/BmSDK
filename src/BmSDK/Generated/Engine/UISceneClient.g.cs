@@ -78,7 +78,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void InitializeSceneClient()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.InitializeSceneClient", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient:InitializeSceneClient", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -89,7 +89,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FMatrix GetInverseCanvasToScreen()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.GetInverseCanvasToScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient:GetInverseCanvasToScreen", true);
         byte* paramsPtr = stackalloc byte[64];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -107,7 +107,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.GameObject.FMatrix GetCanvasToScreen()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.GetCanvasToScreen", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient:GetCanvasToScreen", true);
         byte* paramsPtr = stackalloc byte[64];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -125,7 +125,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsUIActive(int Flags = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.IsUIActive", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient:IsUIActive", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Flags, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

@@ -83,7 +83,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RGameplayEventsHydra.EMetricsAction GetMetricsActionFromGameAction(BmSDK.BmGame.RGameInfo.EGameAction TheGameAction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.GetMetricsActionFromGameAction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:GetMetricsActionFromGameAction", true);
         byte* paramsPtr = stackalloc byte[2];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheGameAction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual void RecordGameAction(BmSDK.Engine.Controller Player, BmSDK.BmGame.RGameInfo.EGameAction TheGameAction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.RecordGameAction", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:RecordGameAction", true);
         byte* paramsPtr = stackalloc byte[6];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TheGameAction, paramsPtr + 4);
@@ -108,7 +108,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual void LogBestScoreValue(int EventID, BmSDK.Engine.Controller Player, int new_value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogBestScoreValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogBestScoreValue", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 4);
@@ -122,7 +122,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual void GetValuesFromPlayerControllerBeforeSending(float TimeSinceLast)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.GetValuesFromPlayerControllerBeforeSending", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:GetValuesFromPlayerControllerBeforeSending", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TimeSinceLast, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -134,7 +134,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void LogSystemPollEvents()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogSystemPollEvents", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogSystemPollEvents", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -152,7 +152,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void LogAllPlayerPositionsEvent(int EventID)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogAllPlayerPositionsEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogAllPlayerPositionsEvent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -171,7 +171,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void LogPlayerStringEvent(int EventID, BmSDK.Engine.Controller Player, BmSDK.FString EventString)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogPlayerStringEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogPlayerStringEvent", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 4);
@@ -192,7 +192,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void LogPlayerFloatEvent(int EventID, BmSDK.Engine.Controller Player, float Value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogPlayerFloatEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogPlayerFloatEvent", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 4);
@@ -213,7 +213,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void LogPlayerIntEvent(int EventID, BmSDK.Engine.Controller Player, int Value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.LogPlayerIntEvent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:LogPlayerIntEvent", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventID, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 4);
@@ -234,7 +234,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void CloseStatsFile()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.CloseStatsFile", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:CloseStatsFile", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -252,7 +252,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override bool SerializeHeader()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.SerializeHeader", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:SerializeHeader", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -270,7 +270,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override bool OpenStatsFile(BmSDK.FString Filename)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.OpenStatsFile", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:OpenStatsFile", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Filename, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -289,7 +289,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe override void Poll()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.Poll", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:Poll", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -300,7 +300,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual void TickHydra()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.TickHydra", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:TickHydra", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -318,7 +318,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// </summary>
     public unsafe virtual void Init()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra.Init", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGameplayEventsHydra:Init", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

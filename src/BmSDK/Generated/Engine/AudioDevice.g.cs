@@ -83,7 +83,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ClearScaleformData()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice.ClearScaleformData", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice:ClearScaleformData", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void ForceUpdate()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice.ForceUpdate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice:ForceUpdate", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -119,7 +119,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float GetFadeVolume()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice.GetFadeVolume", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice:GetFadeVolume", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -137,7 +137,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetFadeVolume(float Volume)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice.SetFadeVolume", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice:SetFadeVolume", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Volume, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -156,7 +156,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetDebugMessage(BmSDK.FString msg, int V)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice.SetDebugMessage", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioDevice:SetDebugMessage", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(msg, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 12);

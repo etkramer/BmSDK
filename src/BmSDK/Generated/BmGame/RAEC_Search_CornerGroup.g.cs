@@ -83,7 +83,7 @@ public partial class RAEC_Search_CornerGroup : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe virtual void SetLeaderFromSearch(BmSDK.BmGame.RBMAIController NewLeader, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_CornerGroup.SetLeaderFromSearch", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_CornerGroup:SetLeaderFromSearch", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLeader, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OldState, paramsPtr + 4);
@@ -98,7 +98,7 @@ public partial class RAEC_Search_CornerGroup : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// </summary>
     public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_CornerGroup.RemoveChild", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_CornerGroup:RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RemAEC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

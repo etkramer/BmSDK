@@ -83,7 +83,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// </summary>
     public unsafe virtual void ResetSourceRegions()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.ResetSourceRegions", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite:ResetSourceRegions", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// </summary>
     public unsafe virtual void UpdateCompositeTexture(int NumMipsToGenerate)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.UpdateCompositeTexture", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite:UpdateCompositeTexture", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NumMipsToGenerate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -120,7 +120,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// </summary>
     public unsafe virtual bool SourceTexturesFullyStreamedIn()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.SourceTexturesFullyStreamedIn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite:SourceTexturesFullyStreamedIn", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

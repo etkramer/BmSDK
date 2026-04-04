@@ -5,7 +5,7 @@
 
 string UProperty::GetInnerTypeNameManaged() const
 {
-    if (GetPathName() == "Core.Object.ObjectFlags")
+    if (GetPathName() == "Core.Object:ObjectFlags")
     {
         return "BmSDK.GameObject.EObjectFlags";
     }

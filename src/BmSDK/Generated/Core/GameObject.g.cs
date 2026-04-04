@@ -78,7 +78,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int GetBuildChangelistNumber()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetBuildChangelistNumber", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetBuildChangelistNumber", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -96,7 +96,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int GetEngineVersion()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetEngineVersion", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetEngineVersion", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -114,7 +114,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void GetSystemTime(out int Year, out int Month, out int DayOfWeek, out int Day, out int Hour, out int Min, out int Sec, out int MSec)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetSystemTime", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetSystemTime", true);
         byte* paramsPtr = stackalloc byte[32];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -140,7 +140,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FString TimeStamp()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TimeStamp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:TimeStamp", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -158,7 +158,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 TransformVectorByRotation(BmSDK.Rotator SourceRotation, System.Numerics.Vector3 SourceVector, bool bInverse = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TransformVectorByRotation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:TransformVectorByRotation", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceRotation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceVector, paramsPtr + 12);
@@ -179,7 +179,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsCapturingMovie()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsCapturingMovie", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsCapturingMovie", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -197,7 +197,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsInPIE()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsInPIE", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsInPIE", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -215,7 +215,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FName GetPackageName()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetPackageName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetPackageName", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
@@ -226,7 +226,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsPendingKill()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsPendingKill", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsPendingKill", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -244,7 +244,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FindDeltaAngle(float A1, float A2)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FindDeltaAngle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FindDeltaAngle", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A1, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A2, paramsPtr + 4);
@@ -257,7 +257,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void GetAngularFromDotDist(out System.Numerics.Vector2 OutAngDist, System.Numerics.Vector2 DotDist)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetAngularFromDotDist", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetAngularFromDotDist", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DotDist, paramsPtr + 8);
         var oldFlags = funcManaged.FunctionFlags;
@@ -277,7 +277,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool GetAngularDistance(out System.Numerics.Vector2 OutAngularDist, System.Numerics.Vector3 Direction, System.Numerics.Vector3 AxisX, System.Numerics.Vector3 AxisY, System.Numerics.Vector3 AxisZ)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetAngularDistance", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetAngularDistance", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Direction, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AxisX, paramsPtr + 20);
@@ -300,7 +300,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool GetDotDistance(out System.Numerics.Vector2 OutDotDist, System.Numerics.Vector3 Direction, System.Numerics.Vector3 AxisX, System.Numerics.Vector3 AxisY, System.Numerics.Vector3 AxisZ)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetDotDistance", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetDotDistance", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Direction, paramsPtr + 8);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AxisX, paramsPtr + 20);
@@ -323,7 +323,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 PointProjectToPlane(System.Numerics.Vector3 Point, System.Numerics.Vector3 A, System.Numerics.Vector3 B, System.Numerics.Vector3 C)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointProjectToPlane", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointProjectToPlane", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 12);
@@ -345,7 +345,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool SphereIntersectingLine(System.Numerics.Vector3 SphereOrigin, float SphereRadius, System.Numerics.Vector3 LineOrigin, System.Numerics.Vector3 LineDir, out System.Numerics.Vector3 ClosestPoint1, out System.Numerics.Vector3 ClosestPoint2)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SphereIntersectingLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:SphereIntersectingLine", true);
         byte* paramsPtr = stackalloc byte[68];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SphereOrigin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SphereRadius, paramsPtr + 12);
@@ -369,7 +369,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float PointDistSquaredToLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistSquaredToLineSegment", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointDistSquaredToLineSegment", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Line, paramsPtr + 12);
@@ -390,7 +390,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float PointDistAlongLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistAlongLineSegment", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointDistAlongLineSegment", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Line, paramsPtr + 12);
@@ -411,7 +411,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float PointDistAlongLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistAlongLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointDistAlongLine", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Line, paramsPtr + 12);
@@ -432,7 +432,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float PointDistToSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, out System.Numerics.Vector3 OutClosestPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistToSegment", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointDistToSegment", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(StartPoint, paramsPtr + 12);
@@ -454,7 +454,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float PointDistToLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin, out System.Numerics.Vector3 OutClosestPoint)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistToLine", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PointDistToLine", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Point, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Line, paramsPtr + 12);
@@ -476,7 +476,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString GetConfigString(BmSDK.FString Section, BmSDK.FString Key)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetConfigString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetConfigString", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Section, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Key, paramsPtr + 12);
@@ -496,7 +496,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool GetPerObjectConfigSections(BmSDK.Class SearchClass, out BmSDK.TArray<BmSDK.FString> out_SectionNames, BmSDK.GameObject ObjectOuter = default, int MaxResults = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetPerObjectConfigSections", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetPerObjectConfigSections", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SearchClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ObjectOuter, paramsPtr + 16);
@@ -518,7 +518,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void StaticSaveConfig()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.StaticSaveConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:StaticSaveConfig", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -536,7 +536,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SaveConfig()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SaveConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:SaveConfig", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -554,7 +554,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject FindObject(BmSDK.FString ObjectName, BmSDK.Class ObjectClass)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FindObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FindObject", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ObjectName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ObjectClass, paramsPtr + 12);
@@ -574,7 +574,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject DynamicLoadObject(BmSDK.FString ObjectName, BmSDK.Class ObjectClass, bool MayFail = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.DynamicLoadObject", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:DynamicLoadObject", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ObjectName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ObjectClass, paramsPtr + 12);
@@ -595,7 +595,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FName GetEnum(BmSDK.GameObject E, int I)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetEnum", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetEnum", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(E, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 4);
@@ -615,7 +615,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsUTracing()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsUTracing", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsUTracing", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -633,7 +633,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void SetUTracing(bool bShouldUTrace)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SetUTracing", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:SetUTracing", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bShouldUTrace, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -652,7 +652,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FName GetFuncName()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetFuncName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetFuncName", true);
         byte* paramsPtr = stackalloc byte[8];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -670,7 +670,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void DebugBreak(int UserFlags = default, BmSDK.GameObject.EDebugBreakType DebuggerType = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.DebugBreak", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:DebugBreak", true);
         byte* paramsPtr = stackalloc byte[5];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(UserFlags, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DebuggerType, paramsPtr + 4);
@@ -690,7 +690,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString GetScriptTrace()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetScriptTrace", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetScriptTrace", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -708,7 +708,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void ScriptTrace()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ScriptTrace", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ScriptTrace", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -726,7 +726,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void LogInternalBoss(BmSDK.FString S, BmSDK.FName Tag = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.LogInternalBoss", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:LogInternalBoss", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Tag, paramsPtr + 12);
@@ -746,7 +746,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void LogInternalPlayer(BmSDK.FString S, BmSDK.FName Tag = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.LogInternalPlayer", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:LogInternalPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Tag, paramsPtr + 12);
@@ -766,7 +766,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void LogInternalAI(BmSDK.FString S, BmSDK.FName Tag = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.LogInternalAI", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:LogInternalAI", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Tag, paramsPtr + 12);
@@ -786,7 +786,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void LogInternalAudio(BmSDK.FString S, BmSDK.FName Tag = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.LogInternalAudio", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:LogInternalAudio", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Tag, paramsPtr + 12);
@@ -806,7 +806,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool DoesLocalisedStringExist(BmSDK.FString PackageName, BmSDK.FString SectionName, BmSDK.FString KeyName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.DoesLocalisedStringExist", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:DoesLocalisedStringExist", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PackageName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SectionName, paramsPtr + 12);
@@ -827,7 +827,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool DoesLocalisedExist(BmSDK.FString PackageSectionKeyName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.DoesLocalisedExist", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:DoesLocalisedExist", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PackageSectionKeyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -846,7 +846,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString GetLocalised(BmSDK.FString PackageSectionKeyName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetLocalised", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetLocalised", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PackageSectionKeyName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -865,7 +865,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString GetLocalisedString(BmSDK.FString PackageName, BmSDK.FString SectionName, BmSDK.FString KeyName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetLocalisedString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetLocalisedString", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(PackageName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SectionName, paramsPtr + 12);
@@ -886,7 +886,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Localize(BmSDK.FString SectionName, BmSDK.FString KeyName, BmSDK.FString PackageName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Localize", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Localize", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(SectionName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(KeyName, paramsPtr + 12);
@@ -907,7 +907,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void WarnInternal(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.WarnInternal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:WarnInternal", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -926,7 +926,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void LogInternal(BmSDK.FString S, BmSDK.FName Tag = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.LogInternal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:LogInternal", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Tag, paramsPtr + 12);
@@ -948,7 +948,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FLinearColor MakeLinearColor(float R, float G, float B, float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MakeLinearColor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MakeLinearColor", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(R, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(G, paramsPtr + 4);
@@ -963,7 +963,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FColor MakeColor(byte R, byte G, byte B, byte A = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MakeColor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MakeColor", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(R, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(G, paramsPtr + 1);
@@ -982,7 +982,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual System.Numerics.Vector2 EvalInterpCurveVector2D(BmSDK.GameObject.FInterpCurveVector2D Vector2DCurve, float InVal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveVector2D", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:EvalInterpCurveVector2D", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Vector2DCurve, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVal, paramsPtr + 16);
@@ -1002,7 +1002,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual System.Numerics.Vector3 EvalInterpCurveVector(BmSDK.GameObject.FInterpCurveVector VectorCurve, float InVal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveVector", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:EvalInterpCurveVector", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(VectorCurve, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVal, paramsPtr + 16);
@@ -1022,7 +1022,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual float EvalInterpCurveFloat(BmSDK.GameObject.FInterpCurveFloat FloatCurve, float InVal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveFloat", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:EvalInterpCurveFloat", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(FloatCurve, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVal, paramsPtr + 16);
@@ -1042,7 +1042,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float GetMappedRangeValue(System.Numerics.Vector2 InputRange, System.Numerics.Vector2 OutputRange, float Value)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetMappedRangeValue", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetMappedRangeValue", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InputRange, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OutputRange, paramsPtr + 8);
@@ -1073,7 +1073,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatSlerp(BmSDK.GameObject.FQuat A, BmSDK.GameObject.FQuat B, float Alpha, bool bShortestPath = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatSlerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatSlerp", true);
         byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 16);
@@ -1095,7 +1095,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator QuatToRotator(BmSDK.GameObject.FQuat A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatToRotator", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatToRotator", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1114,7 +1114,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatFromRotator(BmSDK.Rotator A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatFromRotator", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatFromRotator", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1133,7 +1133,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatFromAxisAndAngle(System.Numerics.Vector3 Axis, float Angle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatFromAxisAndAngle", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatFromAxisAndAngle", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Axis, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Angle, paramsPtr + 12);
@@ -1153,7 +1153,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatFindBetween(System.Numerics.Vector3 A, System.Numerics.Vector3 B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatFindBetween", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatFindBetween", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -1173,7 +1173,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 QuatRotateVector(BmSDK.GameObject.FQuat A, System.Numerics.Vector3 B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatRotateVector", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatRotateVector", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 16);
@@ -1193,7 +1193,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatInvert(BmSDK.GameObject.FQuat A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatInvert", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatInvert", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1212,7 +1212,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float QuatDot(BmSDK.GameObject.FQuat A, BmSDK.GameObject.FQuat B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatDot", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatDot", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 16);
@@ -1232,7 +1232,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FQuat QuatProduct(BmSDK.GameObject.FQuat A, BmSDK.GameObject.FQuat B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.QuatProduct", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:QuatProduct", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 16);
@@ -1252,7 +1252,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 MatrixGetAxis(BmSDK.GameObject.FMatrix TM, BmSDK.GameObject.EAxis Axis)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MatrixGetAxis", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MatrixGetAxis", true);
         byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Axis, paramsPtr + 64);
@@ -1272,7 +1272,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 MatrixGetOrigin(BmSDK.GameObject.FMatrix TM)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MatrixGetOrigin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MatrixGetOrigin", true);
         byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1291,7 +1291,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator MatrixGetRotator(BmSDK.GameObject.FMatrix TM)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MatrixGetRotator", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MatrixGetRotator", true);
         byte* paramsPtr = stackalloc byte[76];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1310,7 +1310,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FMatrix MakeRotationMatrix(BmSDK.Rotator Rotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MakeRotationMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MakeRotationMatrix", true);
         byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rotation, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1329,7 +1329,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.GameObject.FMatrix MakeRotationTranslationMatrix(System.Numerics.Vector3 Translation, BmSDK.Rotator Rotation)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MakeRotationTranslationMatrix", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MakeRotationTranslationMatrix", true);
         byte* paramsPtr = stackalloc byte[96];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Translation, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rotation, paramsPtr + 12);
@@ -1349,7 +1349,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 InverseTransformNormal(BmSDK.GameObject.FMatrix TM, System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.InverseTransformNormal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:InverseTransformNormal", true);
         byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 64);
@@ -1369,7 +1369,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 TransformNormal(BmSDK.GameObject.FMatrix TM, System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TransformNormal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:TransformNormal", true);
         byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 64);
@@ -1389,7 +1389,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 InverseTransformVector(BmSDK.GameObject.FMatrix TM, System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.InverseTransformVector", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:InverseTransformVector", true);
         byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 64);
@@ -1409,7 +1409,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 TransformVector(BmSDK.GameObject.FMatrix TM, System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TransformVector", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:TransformVector", true);
         byte* paramsPtr = stackalloc byte[88];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TM, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 64);
@@ -1432,7 +1432,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool IsA(BmSDK.FName ClassName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsA", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsA", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ClassName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1451,7 +1451,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool ClassIsChildOf(BmSDK.Class TestClass, BmSDK.Class ParentClass)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ClassIsChildOf", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ClassIsChildOf", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(TestClass, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParentClass, paramsPtr + 4);
@@ -1475,7 +1475,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString PathName(BmSDK.GameObject CheckObject)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PathName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:PathName", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckObject, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1494,7 +1494,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.TArray<BmSDK.FString> SplitString(BmSDK.FString Source, BmSDK.FString Delimiter = default, bool bCullEmpty = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SplitString", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:SplitString", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Source, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Delimiter, paramsPtr + 12);
@@ -1508,7 +1508,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void ParseStringIntoArray(BmSDK.FString BaseString, out BmSDK.TArray<BmSDK.FString> Pieces, BmSDK.FString delim, bool bCullEmpty)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ParseStringIntoArray", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ParseStringIntoArray", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(BaseString, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(delim, paramsPtr + 24);
@@ -1530,7 +1530,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Capitalise(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Capitalise", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Capitalise", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1549,7 +1549,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Repl(BmSDK.FString Src, BmSDK.FString Match, BmSDK.FString With, bool bCaseSensitive = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Repl", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Repl", true);
         byte* paramsPtr = stackalloc byte[52];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Src, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Match, paramsPtr + 12);
@@ -1571,7 +1571,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Asc(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Asc", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Asc", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1590,7 +1590,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Chr(int I)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Chr", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Chr", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1609,7 +1609,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Locs(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Locs", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Locs", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1628,7 +1628,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Caps(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Caps", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Caps", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1647,7 +1647,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Right(BmSDK.FString S, int I)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Right", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Right", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 12);
@@ -1667,7 +1667,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Left(BmSDK.FString S, int I)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Left", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Left", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 12);
@@ -1687,7 +1687,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString Mid(BmSDK.FString S, int I, int J = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Mid", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Mid", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(I, paramsPtr + 12);
@@ -1708,7 +1708,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int InStr(BmSDK.FString S, BmSDK.FString T, bool bSearchFromRight = default, bool bIgnoreCase = default, int StartPos = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.InStr", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:InStr", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(T, paramsPtr + 12);
@@ -1731,7 +1731,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Len(BmSDK.FString S)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Len", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Len", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(S, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1762,7 +1762,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float RSize(BmSDK.Rotator R)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RSize", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RSize", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(R, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1781,7 +1781,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float RDiff(BmSDK.Rotator A, BmSDK.Rotator B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RDiff", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RDiff", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -1801,7 +1801,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int NormalizeRotAxis(int Angle)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.NormalizeRotAxis", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:NormalizeRotAxis", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Angle, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1820,7 +1820,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator RInterpTo(BmSDK.Rotator Current, BmSDK.Rotator Target, float DeltaTime, float InterpSpeed, bool bConstantInterpSpeed = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RInterpTo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RInterpTo", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 12);
@@ -1843,7 +1843,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator RTransform(BmSDK.Rotator R, BmSDK.Rotator RBasis)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RTransform", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RTransform", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(R, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(RBasis, paramsPtr + 12);
@@ -1863,7 +1863,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator RSmerp(BmSDK.Rotator A, BmSDK.Rotator B, float Alpha, bool bShortestPath = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RSmerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RSmerp", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -1885,7 +1885,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator RLerp(BmSDK.Rotator A, BmSDK.Rotator B, float Alpha, bool bShortestPath = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RLerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RLerp", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -1907,7 +1907,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator Normalize(BmSDK.Rotator Rot)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Normalize", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Normalize", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Rot, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1926,7 +1926,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator OrthoRotation(System.Numerics.Vector3 X, System.Numerics.Vector3 Y, System.Numerics.Vector3 Z)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.OrthoRotation", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:OrthoRotation", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y, paramsPtr + 12);
@@ -1947,7 +1947,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.Rotator RotRand(bool bRoll = default)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RotRand", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RotRand", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bRoll, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -1966,7 +1966,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 GetRotatorAxis(BmSDK.Rotator A, int Axis)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetRotatorAxis", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetRotatorAxis", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Axis, paramsPtr + 12);
@@ -1986,7 +1986,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void GetUnAxes(BmSDK.Rotator A, out System.Numerics.Vector3 X, out System.Numerics.Vector3 Y, out System.Numerics.Vector3 Z)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetUnAxes", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetUnAxes", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2008,7 +2008,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static void GetAxes(BmSDK.Rotator A, out System.Numerics.Vector3 X, out System.Numerics.Vector3 Y, out System.Numerics.Vector3 Z)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetAxes", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetAxes", true);
         byte* paramsPtr = stackalloc byte[48];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2042,7 +2042,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float NoZDot(System.Numerics.Vector3 A, System.Numerics.Vector3 B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.NoZDot", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:NoZDot", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -2062,7 +2062,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 ClampLength(System.Numerics.Vector3 V, float MaxLength)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ClampLength", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ClampLength", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxLength, paramsPtr + 12);
@@ -2082,7 +2082,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VInterpTo(System.Numerics.Vector3 Current, System.Numerics.Vector3 Target, float DeltaTime, float InterpSpeed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VInterpTo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VInterpTo", true);
         byte* paramsPtr = stackalloc byte[44];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 12);
@@ -2104,7 +2104,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe virtual int GetYawFromDirection(System.Numerics.Vector3 Direction)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetYawFromDirection", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:GetYawFromDirection", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Direction, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -2116,7 +2116,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VRandRange(System.Numerics.Vector3 MinRange, System.Numerics.Vector3 MaxRange)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VRandRange", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VRandRange", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MinRange, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MaxRange, paramsPtr + 12);
@@ -2136,7 +2136,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static bool IsZero(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsZero", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:IsZero", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2155,7 +2155,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 ProjectOnTo(System.Numerics.Vector3 X, System.Numerics.Vector3 Y)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ProjectOnTo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ProjectOnTo", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(X, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Y, paramsPtr + 12);
@@ -2175,7 +2175,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 MirrorVectorByNormal(System.Numerics.Vector3 InVect, System.Numerics.Vector3 InNormal)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.MirrorVectorByNormal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:MirrorVectorByNormal", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InVect, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InNormal, paramsPtr + 12);
@@ -2195,7 +2195,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VRandCone2(System.Numerics.Vector3 Dir, float HorizontalConeHalfAngleRadians, float VerticalConeHalfAngleRadians)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VRandCone2", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VRandCone2", true);
         byte* paramsPtr = stackalloc byte[32];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Dir, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(HorizontalConeHalfAngleRadians, paramsPtr + 12);
@@ -2216,7 +2216,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VRandCone(System.Numerics.Vector3 Dir, float ConeHalfAngleRadians)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VRandCone", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VRandCone", true);
         byte* paramsPtr = stackalloc byte[28];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Dir, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ConeHalfAngleRadians, paramsPtr + 12);
@@ -2236,7 +2236,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VRand()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VRand", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VRand", true);
         byte* paramsPtr = stackalloc byte[12];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2254,7 +2254,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VSmerp(System.Numerics.Vector3 A, System.Numerics.Vector3 B, float Alpha)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VSmerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VSmerp", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -2275,7 +2275,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 VLerp(System.Numerics.Vector3 A, System.Numerics.Vector3 B, float Alpha)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VLerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VLerp", true);
         byte* paramsPtr = stackalloc byte[40];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 12);
@@ -2296,7 +2296,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static System.Numerics.Vector3 Normal(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Normal", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Normal", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2315,7 +2315,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float VSizeSq2D(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VSizeSq2D", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VSizeSq2D", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2334,7 +2334,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float VSizeSq(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VSizeSq", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VSizeSq", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2353,7 +2353,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float VSize2D(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VSize2D", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VSize2D", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2372,7 +2372,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float VSize(System.Numerics.Vector3 A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.VSize", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:VSize", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2409,7 +2409,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FInterpConstantTo(float Current, float Target, float DeltaTime, float InterpSpeed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FInterpConstantTo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FInterpConstantTo", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 4);
@@ -2431,7 +2431,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FInterpTo(float Current, float Target, float DeltaTime, float InterpSpeed)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FInterpTo", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FInterpTo", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Current, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Target, paramsPtr + 4);
@@ -2453,7 +2453,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FPctByRange(float Value, float InMin, float InMax)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FPctByRange", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FPctByRange", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Value, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMin, paramsPtr + 4);
@@ -2467,7 +2467,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float RandRange(float InMin, float InMax)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.RandRange", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:RandRange", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMin, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMax, paramsPtr + 4);
@@ -2480,7 +2480,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FInterpEaseInOut(float A, float B, float Alpha, float Exp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FInterpEaseInOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FInterpEaseInOut", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2502,7 +2502,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FInterpEaseOut(float A, float B, float Alpha, float Exp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FInterpEaseOut", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FInterpEaseOut", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2517,7 +2517,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FInterpEaseIn(float A, float B, float Alpha, float Exp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FInterpEaseIn", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FInterpEaseIn", true);
         byte* paramsPtr = stackalloc byte[20];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2532,7 +2532,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FCubicInterp(float P0, float T0, float P1, float T1, float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FCubicInterp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FCubicInterp", true);
         byte* paramsPtr = stackalloc byte[24];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(P0, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(T0, paramsPtr + 4);
@@ -2555,7 +2555,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int FCeil(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FCeil", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FCeil", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2574,7 +2574,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int FFloor(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FFloor", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FFloor", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2593,7 +2593,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Round(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Round", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Round", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2612,7 +2612,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Lerp(float A, float B, float Alpha)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Lerp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Lerp", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2633,7 +2633,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FClamp(float V, float A, float B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FClamp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FClamp", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 4);
@@ -2654,7 +2654,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FMax(float A, float B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FMax", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FMax", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2674,7 +2674,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FMin(float A, float B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FMin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FMin", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2694,7 +2694,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float FRand()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.FRand", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:FRand", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -2712,7 +2712,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Square(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Square", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Square", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2731,7 +2731,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Sqrt(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Sqrt", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Sqrt", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2750,7 +2750,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Pow(float Base, float Exp)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Pow", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Pow", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Base, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Exp, paramsPtr + 4);
@@ -2770,7 +2770,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Loge(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Loge", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Loge", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2789,7 +2789,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Exp(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Exp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Exp", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2808,7 +2808,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Atan2(float A, float B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Atan2", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Atan2", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -2828,7 +2828,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Atan(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Atan", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Atan", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2847,7 +2847,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Tan(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Tan", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Tan", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2866,7 +2866,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Acos(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Acos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Acos", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2885,7 +2885,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Cos(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Cos", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Cos", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2904,7 +2904,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Asin(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Asin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Asin", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2923,7 +2923,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Sin(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Sin", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Sin", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2942,7 +2942,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static float Abs(float A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Abs", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Abs", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2979,7 +2979,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static BmSDK.FString ToHex(int A)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.ToHex", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:ToHex", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -2998,7 +2998,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Clamp(int V, int A, int B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Clamp", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Clamp", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(V, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 4);
@@ -3019,7 +3019,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Max(int A, int B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Max", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Max", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -3039,7 +3039,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Min(int A, int B)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Min", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Min", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(A, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(B, paramsPtr + 4);
@@ -3059,7 +3059,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// </summary>
     public unsafe static int Rand(int Max)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.Rand", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object:Rand", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Max, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

@@ -83,7 +83,7 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.Engine.PrefabInstance GetOwnerPrefab()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence.GetOwnerPrefab", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence:GetOwnerPrefab", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void SetOwnerPrefab(BmSDK.Engine.PrefabInstance InOwner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence.SetOwnerPrefab", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence:SetOwnerPrefab", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InOwner, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

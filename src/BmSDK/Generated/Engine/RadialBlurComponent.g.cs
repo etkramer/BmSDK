@@ -83,7 +83,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void OnUpdatePropertyBlurOpacity()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.OnUpdatePropertyBlurOpacity", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:OnUpdatePropertyBlurOpacity", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -94,7 +94,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void OnUpdatePropertyBlurFalloffExponent()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.OnUpdatePropertyBlurFalloffExponent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:OnUpdatePropertyBlurFalloffExponent", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -105,7 +105,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void OnUpdatePropertyBlurScale()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.OnUpdatePropertyBlurScale", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:OnUpdatePropertyBlurScale", true);
         byte* paramsPtr = stackalloc byte[0];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -116,7 +116,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetEnabled(bool bInEnabled)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.SetEnabled", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bInEnabled, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -135,7 +135,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetBlurOpacity(float InBlurOpacity)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.SetBlurOpacity", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:SetBlurOpacity", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InBlurOpacity, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -154,7 +154,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetBlurFalloffExponent(float InBlurFalloffExponent)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.SetBlurFalloffExponent", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:SetBlurFalloffExponent", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InBlurFalloffExponent, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -173,7 +173,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetBlurScale(float InBlurScale)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.SetBlurScale", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:SetBlurScale", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InBlurScale, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -192,7 +192,7 @@ public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IG
     /// </summary>
     public unsafe virtual void SetMaterial(BmSDK.Engine.MaterialInterface InMaterial)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent.SetMaterial", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RadialBlurComponent:SetMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMaterial, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

@@ -713,6 +713,8 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
             << endl;
         Printer::Indent(out) << "private static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
             << endl;
+        Printer::Indent(out) << "private static Dictionary<string, Type> _structPathToManagedTypeMap = [];"
+            << endl;
         out << endl;
 
         // Print StaticInitClasses()
@@ -720,16 +722,43 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
         Printer::Indent(out) << "{" << endl;
         Printer::PushIndent();
         {
+            Printer::Indent(out) << "// Built-in struct mappings" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector\"] = typeof(System.Numerics.Vector3);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector4\"] = typeof(System.Numerics.Vector4);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector2D\"] = typeof(System.Numerics.Vector2);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Rotator\"] = typeof(BmSDK.Rotator);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Pointer\"] = typeof(System.IntPtr);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Double\"] = typeof(double);" << endl;
+            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:QWord\"] = typeof(ulong);" << endl;
+            out << endl;
+
             for (auto _class : classes)
             {
+                // Emit class -> managed type mapping
                 auto classPath = _class->GetPathName();
                 auto managedPath = _class->GetPathNameManaged();
                 Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << classPath
                     << "\"] = typeof(" << managedPath << ");" << endl;
 
+                // Emit struct -> managed type mappings
+                for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+                {
+                    if (fieldLink->IsA(UScriptStruct::StaticClass()))
+                    {
+                        auto _struct = (UScriptStruct*)fieldLink;
+                        auto structPath = _struct->GetPathName();
+                        auto managedPath = _struct->GetPathNameManaged();
+                        Printer::Indent(out) << "_structPathToManagedTypeMap[\"" << structPath
+                            << "\"] = typeof(" << managedPath << ");" << endl;
+                    }
+                }
+
+                // Emit managed type -> class mapping
                 Printer::Indent(out) << "_managedTypeToClassPathMap[typeof(" << managedPath
                     << ")] = \"" << classPath << "\";" << endl;
             }
+
+            out << endl;
         }
         Printer::PopIndent();
         Printer::Indent(out) << "}" << endl;

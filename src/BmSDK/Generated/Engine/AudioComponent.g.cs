@@ -83,7 +83,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.OnAudioMarker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:OnAudioMarker", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AC, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerName, paramsPtr + 4);
@@ -96,7 +96,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void OnAudioFinished(BmSDK.Engine.AudioComponent AC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.OnAudioFinished", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:OnAudioFinished", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(AC, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -108,7 +108,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual bool IsLooping()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsLooping", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:IsLooping", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -126,7 +126,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void ResetToDefaults()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.ResetToDefaults", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:ResetToDefaults", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -144,7 +144,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetWaveParameter(BmSDK.FName InName, BmSDK.Engine.SoundNodeWave InWave)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetWaveParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:SetWaveParameter", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InWave, paramsPtr + 8);
@@ -164,7 +164,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetVelocity(BmSDK.FName InName, float InFloat)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetVelocity", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:SetVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFloat, paramsPtr + 8);
@@ -184,7 +184,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetSeekSpeed(BmSDK.FName InName, float InFloat)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetSeekSpeed", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:SetSeekSpeed", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFloat, paramsPtr + 8);
@@ -204,7 +204,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void SetFloatParameter(BmSDK.FName InName, float InFloat)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.SetFloatParameter", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:SetFloatParameter", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InName, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InFloat, paramsPtr + 8);
@@ -224,7 +224,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void Pause(bool bDoPause)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.Pause", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:Pause", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bDoPause, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -243,7 +243,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual bool IsPaused()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsPaused", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:IsPaused", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -261,7 +261,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual bool IsPlaying()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.IsPlaying", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:IsPlaying", true);
         byte* paramsPtr = stackalloc byte[4];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -279,7 +279,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void KeyOffOnMarker()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.KeyOffOnMarker", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:KeyOffOnMarker", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -297,7 +297,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void KeyOff()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.KeyOff", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:KeyOff", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -315,7 +315,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void Stop()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.Stop", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:Stop", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -333,7 +333,7 @@ public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// </summary>
     public unsafe virtual void Play()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent.Play", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AudioComponent:Play", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

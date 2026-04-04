@@ -83,7 +83,7 @@ public partial class RBmBatmanCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGa
     /// </summary>
     public unsafe virtual void InitialiseBatmanCutscene(BmSDK.BmGame.RPlayerController NewCutsceneOwner, BmSDK.BmGame.RPawn NewCutsceneTarget, BmSDK.BmGame.RBmBatmanCutscene.BatmanCutsceneType Type)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmBatmanCutscene.InitialiseBatmanCutscene", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmBatmanCutscene:InitialiseBatmanCutscene", true);
         byte* paramsPtr = stackalloc byte[9];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCutsceneOwner, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCutsceneTarget, paramsPtr + 4);

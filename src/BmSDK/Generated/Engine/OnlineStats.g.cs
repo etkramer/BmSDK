@@ -78,7 +78,7 @@ public partial class OnlineStats : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual BmSDK.FName GetViewName(int ViewId)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats.GetViewName", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats:GetViewName", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ViewId, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -97,7 +97,7 @@ public partial class OnlineStats : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual bool GetViewId(BmSDK.FName ViewName, out int ViewId)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats.GetViewId", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineStats:GetViewId", true);
         byte* paramsPtr = stackalloc byte[16];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ViewName, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

@@ -83,7 +83,7 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateBasicWeaponConfig(BmSDK.GameObject NewOwner)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig.CreateBasicWeaponConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig:CreateBasicWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1040];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -95,7 +95,7 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// </summary>
     public unsafe virtual BmSDK.BmGame.RAimingConfig GetWeaponUpAimingConfig()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig.GetWeaponUpAimingConfig", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig:GetWeaponUpAimingConfig", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig>(paramsPtr + 0);
@@ -106,7 +106,7 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// </summary>
     public unsafe virtual void Change(BmSDK.BmGame.RBMWeapon ParentWeapon, BmSDK.BmGame.RBMPawnAI NPC)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig.Change", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig:Change", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParentWeapon, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NPC, paramsPtr + 4);
@@ -119,7 +119,7 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// </summary>
     public unsafe virtual void Setup(BmSDK.BmGame.RBMWeapon ParentWeapon)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig.Setup", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig:Setup", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ParentWeapon, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
@@ -131,7 +131,7 @@ public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, 
     /// </summary>
     public unsafe virtual void FixBrokenDefault()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig.FixBrokenDefault", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAlternateAnimationAndWeaponConfig:FixBrokenDefault", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

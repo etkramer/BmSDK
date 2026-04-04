@@ -83,7 +83,7 @@ public partial class AkAssetPack : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void UnloadAssetPack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAssetPack.UnloadAssetPack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAssetPack:UnloadAssetPack", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class AkAssetPack : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// </summary>
     public unsafe virtual void LoadAssetPack()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAssetPack.LoadAssetPack", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkAssetPack:LoadAssetPack", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;

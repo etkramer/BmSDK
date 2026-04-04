@@ -83,7 +83,7 @@ public partial class RFractureManager : BmSDK.Engine.FractureManager, BmSDK.IGam
     /// </summary>
     public unsafe override void SpawnChunkDestroyEffect(BmSDK.Engine.ParticleSystem Effect, BmSDK.GameObject.FBox ChunkBox, System.Numerics.Vector3 ChunkDir, float Scale)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureManager.SpawnChunkDestroyEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFractureManager:SpawnChunkDestroyEffect", true);
         byte* paramsPtr = stackalloc byte[60];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Effect, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ChunkBox, paramsPtr + 4);

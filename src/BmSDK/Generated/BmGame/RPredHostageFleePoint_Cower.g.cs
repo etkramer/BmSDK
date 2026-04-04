@@ -83,7 +83,7 @@ public partial class RPredHostageFleePoint_Cower : BmSDK.BmGame.RPredHostageFlee
     /// </summary>
     public unsafe override bool PawnAtDest(BmSDK.BmGame.RBMPawnAI NewUser)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredHostageFleePoint_Cower.PawnAtDest", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredHostageFleePoint_Cower:PawnAtDest", true);
         byte* paramsPtr = stackalloc byte[12];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewUser, paramsPtr + 0);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);

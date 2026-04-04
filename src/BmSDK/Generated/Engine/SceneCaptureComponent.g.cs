@@ -78,7 +78,7 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// </summary>
     public unsafe virtual void SetEnabled(bool bEnable)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent.SetEnabled", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent:SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(bEnable, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
@@ -97,7 +97,7 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// </summary>
     public unsafe virtual void SetFrameRate(float NewFrameRate)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent.SetFrameRate", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent:SetFrameRate", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFrameRate, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;

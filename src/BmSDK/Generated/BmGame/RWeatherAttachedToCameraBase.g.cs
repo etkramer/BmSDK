@@ -83,7 +83,7 @@ public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IG
     /// </summary>
     public unsafe virtual void StopPlayerSnowEffect()
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase.StopPlayerSnowEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase:StopPlayerSnowEffect", true);
         byte* paramsPtr = stackalloc byte[0];
         var oldFlags = funcManaged.FunctionFlags;
         var oldNative = funcManaged.iNative;
@@ -101,7 +101,7 @@ public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IG
     /// </summary>
     public unsafe virtual void UpdatePlayerSnowEffect(float DeltaTime)
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase.UpdatePlayerSnowEffect", true);
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase:UpdatePlayerSnowEffect", true);
         byte* paramsPtr = stackalloc byte[4];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
         var oldFlags = funcManaged.FunctionFlags;
