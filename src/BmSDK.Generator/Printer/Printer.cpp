@@ -722,16 +722,6 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
         Printer::Indent(out) << "{" << endl;
         Printer::PushIndent();
         {
-            Printer::Indent(out) << "// Built-in struct mappings" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector\"] = typeof(System.Numerics.Vector3);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector4\"] = typeof(System.Numerics.Vector4);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Vector2D\"] = typeof(System.Numerics.Vector2);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Rotator\"] = typeof(BmSDK.Rotator);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Pointer\"] = typeof(System.IntPtr);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:Double\"] = typeof(double);" << endl;
-            Printer::Indent(out) << "_structPathToManagedTypeMap[\"Core.Object:QWord\"] = typeof(ulong);" << endl;
-            out << endl;
-
             for (auto _class : classes)
             {
                 // Emit class -> managed type mapping

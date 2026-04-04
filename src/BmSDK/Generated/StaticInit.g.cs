@@ -10,15 +10,6 @@ internal static partial class StaticInit
 
     public static void StaticInitClasses()
     {
-        // Built-in struct mappings
-        _structPathToManagedTypeMap["Core.Object:Vector"] = typeof(System.Numerics.Vector3);
-        _structPathToManagedTypeMap["Core.Object:Vector4"] = typeof(System.Numerics.Vector4);
-        _structPathToManagedTypeMap["Core.Object:Vector2D"] = typeof(System.Numerics.Vector2);
-        _structPathToManagedTypeMap["Core.Object:Rotator"] = typeof(BmSDK.Rotator);
-        _structPathToManagedTypeMap["Core.Object:Pointer"] = typeof(System.IntPtr);
-        _structPathToManagedTypeMap["Core.Object:Double"] = typeof(double);
-        _structPathToManagedTypeMap["Core.Object:QWord"] = typeof(ulong);
-
         _classPathToManagedTypeMap["Core.TextBuffer"] = typeof(BmSDK.TextBuffer);
         _managedTypeToClassPathMap[typeof(BmSDK.TextBuffer)] = "Core.TextBuffer";
         _classPathToManagedTypeMap["Core.Object"] = typeof(BmSDK.GameObject);
