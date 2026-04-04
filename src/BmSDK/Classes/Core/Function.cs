@@ -38,8 +38,7 @@ public partial class Function
     public unsafe object? Invoke(GameObject? obj, params object[] args)
     {
         var paramFields = EnumerateParams().ToArray();
-        var paramsSize = PropertiesSize;
-        var paramsPtr = stackalloc byte[paramsSize];
+        var paramsPtr = stackalloc byte[PropertiesSize];
 
         Guard.Require(
             args.Length >= paramFields.Length,
@@ -82,9 +81,10 @@ public partial class Function
     }
 
     public Property? GetReturnParam() =>
-        EnumerateParams()
-            .FirstOrDefault(param =>
-                param.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
+        EnumerateFields()
+            .OfType<Property>()
+            .FirstOrDefault(prop =>
+                prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
             );
 
     public IEnumerable<Property> EnumerateParams()
