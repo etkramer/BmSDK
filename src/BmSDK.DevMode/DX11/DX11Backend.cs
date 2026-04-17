@@ -2,6 +2,10 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 using ImGuiNET;
+using Silk.NET.Core.Native;
+using Silk.NET.Direct3D11;
+using Silk.NET.DXGI;
+using Silk.NET.Maths;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
@@ -9,37 +13,44 @@ namespace BmSDK.DevMode;
 
 internal static class DX11Backend
 {
-    [DllImport("d3d11.dll")]
-    private static extern unsafe int D3D11CreateDeviceAndSwapChain(
-        nint pAdapter, int driverType, nint software, uint flags,
-        nint pFeatureLevels, uint featureLevels, uint sdkVersion,
-        DxgiSwapChainDesc* pSwapChainDesc,
-        nint* ppSwapChain, nint* ppDevice, int* pFeatureLevel, nint* ppImmediateContext);
+    [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+    private static extern nint LoadLibraryW(string lpLibFileName);
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Ansi, ExactSpelling = true)]
+    private static extern nint GetProcAddress(nint hModule, string lpProcName);
 
     [DllImport("D3DCompiler_47.dll")]
     private static extern unsafe int D3DCompile(
-        byte* pSrcData, nuint srcDataSize, byte* pSourceName,
-        nint pDefines, nint pInclude,
-        byte* pEntrypoint, byte* pTarget,
-        uint flags1, uint flags2, nint* ppCode, nint* ppErrorMsgs);
+        byte* pSrcData,
+        nuint srcDataSize,
+        byte* pSourceName,
+        nint pDefines,
+        nint pInclude,
+        byte* pEntrypoint,
+        byte* pTarget,
+        uint flags1,
+        uint flags2,
+        ID3D10Blob** ppCode,
+        ID3D10Blob** ppErrorMsgs
+    );
 
-    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-    private static extern nint CreateWindowExW(
-        uint exStyle, string className, string windowName, uint style,
-        int x, int y, int w, int h, nint parent, nint menu, nint instance, nint param);
+    [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+    private unsafe delegate int CreateDXGIFactoryDelegate(nint riid, nint* ppFactory);
 
-    [DllImport("user32.dll")]
-    private static extern int DestroyWindow(nint hWnd);
-
-    [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
-    private static extern nint GetModuleHandleW(string? moduleName);
-
-    [DllImport("user32.dll")]
-    private static extern int GetClientRect(nint hWnd, out RawRect rect);
+    [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+    private unsafe delegate int CreateSwapChainDelegate(
+        nint pThis,
+        nint pDevice,
+        nint pDesc,
+        nint* ppSwapChain
+    );
 
     [UnmanagedFunctionPointer(CallingConvention.StdCall)]
     private delegate int PresentDelegate(nint swapChain, uint syncInterval, uint flags);
 
+    private static CreateDXGIFactoryDelegate? s_originalCreateDXGIFactory;
+    private static CreateDXGIFactoryDelegate? s_originalCreateDXGIFactory1;
+    private static CreateSwapChainDelegate? s_originalCreateSwapChain;
     private static PresentDelegate? s_originalPresent;
     private static bool s_renderInitialized;
     private static nint s_device;
@@ -61,71 +72,127 @@ internal static class DX11Backend
     private static int s_vertexBufferSize;
     private static int s_indexBufferSize;
 
-    // COM GUIDs
-    private static Guid IID_ID3D11Device = new("db6f6ddb-ac77-4e88-8253-819df9bbf140");
-    private static Guid IID_ID3D11Texture2D = new("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
-
     internal static unsafe void TryInstall()
     {
         try
         {
-            var tmpHwnd = CreateWindowExW(
-                0, "STATIC", "BmSDK_DX11_Dummy", 0x80000000,
-                0, 0, 1, 1, 0, 0, GetModuleHandleW(null), 0);
-
-            var scd = new DxgiSwapChainDesc
+            var dxgi = LoadLibraryW("dxgi.dll");
+            if (dxgi == 0)
             {
-                BufferCount = 1,
-                BufferDesc_Width = 1,
-                BufferDesc_Height = 1,
-                BufferDesc_Format = 28, // DXGI_FORMAT_R8G8B8A8_UNORM
-                BufferUsage = 0x20, // DXGI_USAGE_RENDER_TARGET_OUTPUT
-                OutputWindow = tmpHwnd,
-                SampleDesc_Count = 1,
-                Windowed = 1,
-                SwapEffect = 0, // DXGI_SWAP_EFFECT_DISCARD
-            };
-
-            nint swapChain, device, ctx;
-            int featureLevel;
-            var hr = D3D11CreateDeviceAndSwapChain(
-                0, 1, 0, 0, 0, 0, 7, &scd,
-                &swapChain, &device, &featureLevel, &ctx);
-
-            if (hr < 0)
-            {
-                DestroyWindow(tmpHwnd);
                 return;
             }
 
-            var swapChainVt = *(void***)swapChain;
-            var presentAddr = (nint)swapChainVt[8];
+            var createFactory = GetProcAddress(dxgi, "CreateDXGIFactory");
+            if (createFactory != 0)
+            {
+                s_originalCreateDXGIFactory =
+                    DetourHelper.CreateDetour<CreateDXGIFactoryDelegate>(
+                        createFactory,
+                        CreateDXGIFactoryHook
+                    );
+            }
 
-            Release(ctx);
-            Release(device);
-            Release(swapChain);
-            DestroyWindow(tmpHwnd);
-
-            s_originalPresent = DetourHelper.CreateDetour<PresentDelegate>(presentAddr, PresentHook);
+            var createFactory1 = GetProcAddress(dxgi, "CreateDXGIFactory1");
+            if (createFactory1 != 0)
+            {
+                s_originalCreateDXGIFactory1 =
+                    DetourHelper.CreateDetour<CreateDXGIFactoryDelegate>(
+                        createFactory1,
+                        CreateDXGIFactory1Hook
+                    );
+            }
         }
         catch
         {
-            // D3D11 not available
+            // DXGI not available
         }
     }
 
-    private static int PresentHook(nint swapChain, uint syncInterval, uint flags)
+    private static unsafe int CreateDXGIFactoryHook(nint riid, nint* ppFactory)
+    {
+        var hr = s_originalCreateDXGIFactory!(riid, ppFactory);
+        if (hr >= 0 && ppFactory != null && *ppFactory != 0)
+        {
+            HookCreateSwapChain(*ppFactory);
+        }
+        return hr;
+    }
+
+    private static unsafe int CreateDXGIFactory1Hook(nint riid, nint* ppFactory)
+    {
+        var hr = s_originalCreateDXGIFactory1!(riid, ppFactory);
+        if (hr >= 0 && ppFactory != null && *ppFactory != 0)
+        {
+            HookCreateSwapChain(*ppFactory);
+        }
+        return hr;
+    }
+
+    private static unsafe void HookCreateSwapChain(nint factoryPtr)
+    {
+        if (s_originalCreateSwapChain != null)
+        {
+            return;
+        }
+
+        try
+        {
+            var factory = (IDXGIFactory*)factoryPtr;
+            var createSwapChainAddr = (nint)factory->LpVtbl[10];
+
+            s_originalCreateSwapChain = DetourHelper.CreateDetour<CreateSwapChainDelegate>(
+                createSwapChainAddr,
+                CreateSwapChainHook
+            );
+        }
+        catch
+        {
+            // Hook installation failed
+        }
+    }
+
+    private static unsafe int CreateSwapChainHook(
+        nint pThis,
+        nint pDevice,
+        nint pDesc,
+        nint* ppSwapChain
+    )
+    {
+        var hr = s_originalCreateSwapChain!(pThis, pDevice, pDesc, ppSwapChain);
+
+        if (hr >= 0 && ppSwapChain != null && *ppSwapChain != 0 && s_originalPresent == null)
+        {
+            try
+            {
+                var swapChain = (IDXGISwapChain*)(*ppSwapChain);
+                var presentAddr = (nint)swapChain->LpVtbl[8];
+
+                s_originalPresent = DetourHelper.CreateDetour<PresentDelegate>(
+                    presentAddr,
+                    PresentHook
+                );
+            }
+            catch
+            {
+                // Hook installation failed
+            }
+        }
+
+        return hr;
+    }
+
+    private static int PresentHook(nint swapChainPtr, uint syncInterval, uint flags)
     {
         try
         {
             if (!s_renderInitialized)
             {
-                InitializeForSwapChain(swapChain);
+                InitializeForSwapChain(swapChainPtr);
             }
 
             if (s_renderInitialized)
             {
-                RenderFrame(swapChain);
+                RenderFrame(swapChainPtr);
             }
         }
         catch
@@ -133,48 +200,46 @@ internal static class DX11Backend
             // Don't crash the game
         }
 
-        return s_originalPresent!(swapChain, syncInterval, flags);
+        return s_originalPresent!(swapChainPtr, syncInterval, flags);
     }
 
-    private static unsafe void InitializeForSwapChain(nint swapChain)
+    private static unsafe void InitializeForSwapChain(nint swapChainPtr)
     {
-        var scVt = *(void***)swapChain;
+        var swapChain = (IDXGISwapChain*)swapChainPtr;
 
-        // IDXGISwapChain::GetDevice → ID3D11Device
-        fixed (Guid* iid = &IID_ID3D11Device)
+        var iid = ID3D11Device.Guid;
+        void* dev;
+        var hr = swapChain->GetDevice(&iid, &dev);
+        if (hr < 0)
         {
-            nint dev;
-            var hr = ((delegate* unmanaged[Stdcall]<nint, Guid*, nint*, int>)scVt[7])(swapChain, iid, &dev);
-            if (hr < 0)
-            {
-                return;
-            }
-            s_device = dev;
+            return;
         }
 
-        // ID3D11Device::GetImmediateContext
-        var devVt = *(void***)s_device;
-        nint ctx;
-        ((delegate* unmanaged[Stdcall]<nint, nint*, void>)devVt[40])(s_device, &ctx);
-        s_context = ctx;
+        var device = (ID3D11Device*)dev;
+        ID3D11DeviceContext* ctx;
+        device->GetImmediateContext(&ctx);
 
-        // Get HWND from swap chain desc
-        var desc = new DxgiSwapChainDesc();
-        ((delegate* unmanaged[Stdcall]<nint, DxgiSwapChainDesc*, int>)scVt[12])(swapChain, &desc);
+        SwapChainDesc desc;
+        swapChain->GetDesc(&desc);
+
+        if (desc.OutputWindow == 0 || !ImGuiController.TryInitialize())
+        {
+            ctx->Release();
+            device->Release();
+            return;
+        }
+
+        s_device = (nint)device;
+        s_context = (nint)ctx;
         s_hwnd = desc.OutputWindow;
-
-        if (s_hwnd == 0)
-        {
-            return;
-        }
-
-        if (!ImGuiController.TryInitialize())
-        {
-            return;
-        }
 
         if (!CreateDeviceObjects())
         {
+            s_device = 0;
+            s_context = 0;
+            s_hwnd = 0;
+            ctx->Release();
+            device->Release();
             return;
         }
 
@@ -183,21 +248,37 @@ internal static class DX11Backend
 
     private static unsafe bool CreateDeviceObjects()
     {
-        var devVt = *(void***)s_device;
+        var device = (ID3D11Device*)s_device;
 
         // Compile vertex shader
         var vsSrc = Encoding.ASCII.GetBytes(VertexShaderHLSL);
         var vsEntry = "main\0"u8.ToArray();
         var vsTarget = "vs_4_0\0"u8.ToArray();
-        nint vsBlob;
+        ID3D10Blob* vsBlob;
 
-        fixed (byte* pSrc = vsSrc, pEntry = vsEntry, pTarget = vsTarget)
+        fixed (
+            byte* pSrc = vsSrc,
+                pEntry = vsEntry,
+                pTarget = vsTarget
+        )
         {
-            nint errBlob;
-            var hr = D3DCompile(pSrc, (nuint)vsSrc.Length, null, 0, 0, pEntry, pTarget, 0, 0, &vsBlob, &errBlob);
-            if (errBlob != 0)
+            ID3D10Blob* errBlob;
+            var hr = D3DCompile(
+                pSrc,
+                (nuint)vsSrc.Length,
+                null,
+                0,
+                0,
+                pEntry,
+                pTarget,
+                0,
+                0,
+                &vsBlob,
+                &errBlob
+            );
+            if (errBlob != null)
             {
-                Release(errBlob);
+                errBlob->Release();
             }
             if (hr < 0)
             {
@@ -205,54 +286,82 @@ internal static class DX11Backend
             }
         }
 
-        var vsBlobVt = *(void***)vsBlob;
-        var vsData = ((delegate* unmanaged[Stdcall]<nint, nint>)vsBlobVt[3])(vsBlob);
-        var vsSize = ((delegate* unmanaged[Stdcall]<nint, nuint>)vsBlobVt[4])(vsBlob);
+        var vsData = vsBlob->GetBufferPointer();
+        var vsSize = vsBlob->GetBufferSize();
 
-        // ID3D11Device::CreateVertexShader (vtable 12)
-        nint vs;
-        var result = ((delegate* unmanaged[Stdcall]<nint, nint, nuint, nint, nint*, int>)devVt[12])(
-            s_device, vsData, vsSize, 0, &vs);
+        ID3D11VertexShader* vs;
+        var result = device->CreateVertexShader(vsData, vsSize, null, &vs);
         if (result < 0)
         {
-            Release(vsBlob);
+            vsBlob->Release();
             return false;
         }
-        s_vertexShader = vs;
+        s_vertexShader = (nint)vs;
 
-        // Create input layout (vtable 11)
-        var layoutDesc = stackalloc InputElementDesc[3];
-        var semanticPos = stackalloc byte[] { (byte)'P', (byte)'O', (byte)'S', (byte)'I', (byte)'T', (byte)'I', (byte)'O', (byte)'N', 0 };
-        var semanticTex = stackalloc byte[] { (byte)'T', (byte)'E', (byte)'X', (byte)'C', (byte)'O', (byte)'O', (byte)'R', (byte)'D', 0 };
-        var semanticCol = stackalloc byte[] { (byte)'C', (byte)'O', (byte)'L', (byte)'O', (byte)'R', 0 };
-
-        layoutDesc[0] = new InputElementDesc { SemanticName = (nint)semanticPos, Format = 16, AlignedByteOffset = 0 };  // R32G32_FLOAT
-        layoutDesc[1] = new InputElementDesc { SemanticName = (nint)semanticTex, Format = 16, AlignedByteOffset = 8 };  // R32G32_FLOAT
-        layoutDesc[2] = new InputElementDesc { SemanticName = (nint)semanticCol, Format = 28, AlignedByteOffset = 16 }; // R8G8B8A8_UNORM
-
-        nint il;
-        result = ((delegate* unmanaged[Stdcall]<nint, InputElementDesc*, uint, nint, nuint, nint*, int>)devVt[11])(
-            s_device, layoutDesc, 3, vsData, vsSize, &il);
-        Release(vsBlob);
-        if (result < 0)
+        // Create input layout
+        fixed (byte* semanticPos = SilkMarshal.StringToMemory("POSITION"))
+        fixed (byte* semanticTex = SilkMarshal.StringToMemory("TEXCOORD"))
+        fixed (byte* semanticCol = SilkMarshal.StringToMemory("COLOR"))
         {
-            return false;
+            var layoutDesc = stackalloc InputElementDesc[3];
+            layoutDesc[0] = new InputElementDesc
+            {
+                SemanticName = semanticPos,
+                Format = Format.FormatR32G32Float,
+                AlignedByteOffset = 0,
+            };
+            layoutDesc[1] = new InputElementDesc
+            {
+                SemanticName = semanticTex,
+                Format = Format.FormatR32G32Float,
+                AlignedByteOffset = 8,
+            };
+            layoutDesc[2] = new InputElementDesc
+            {
+                SemanticName = semanticCol,
+                Format = Format.FormatR8G8B8A8Unorm,
+                AlignedByteOffset = 16,
+            };
+
+            ID3D11InputLayout* il;
+            result = device->CreateInputLayout(layoutDesc, 3, vsData, vsSize, &il);
+            vsBlob->Release();
+            if (result < 0)
+            {
+                return false;
+            }
+            s_inputLayout = (nint)il;
         }
-        s_inputLayout = il;
 
         // Compile pixel shader
         var psSrc = Encoding.ASCII.GetBytes(PixelShaderHLSL);
         var psEntry = "main\0"u8.ToArray();
         var psTarget = "ps_4_0\0"u8.ToArray();
-        nint psBlob;
+        ID3D10Blob* psBlob;
 
-        fixed (byte* pSrc = psSrc, pEntry = psEntry, pTarget = psTarget)
+        fixed (
+            byte* pSrc = psSrc,
+                pEntry = psEntry,
+                pTarget = psTarget
+        )
         {
-            nint errBlob;
-            var hr = D3DCompile(pSrc, (nuint)psSrc.Length, null, 0, 0, pEntry, pTarget, 0, 0, &psBlob, &errBlob);
-            if (errBlob != 0)
+            ID3D10Blob* errBlob;
+            var hr = D3DCompile(
+                pSrc,
+                (nuint)psSrc.Length,
+                null,
+                0,
+                0,
+                pEntry,
+                pTarget,
+                0,
+                0,
+                &psBlob,
+                &errBlob
+            );
+            if (errBlob != null)
             {
-                Release(errBlob);
+                errBlob->Release();
             }
             if (hr < 0)
             {
@@ -260,83 +369,89 @@ internal static class DX11Backend
             }
         }
 
-        var psBlobVt = *(void***)psBlob;
-        var psData = ((delegate* unmanaged[Stdcall]<nint, nint>)psBlobVt[3])(psBlob);
-        var psSize = ((delegate* unmanaged[Stdcall]<nint, nuint>)psBlobVt[4])(psBlob);
-
-        // ID3D11Device::CreatePixelShader (vtable 15)
-        nint ps;
-        result = ((delegate* unmanaged[Stdcall]<nint, nint, nuint, nint, nint*, int>)devVt[15])(
-            s_device, psData, psSize, 0, &ps);
-        Release(psBlob);
+        ID3D11PixelShader* ps;
+        result = device->CreatePixelShader(
+            psBlob->GetBufferPointer(),
+            psBlob->GetBufferSize(),
+            null,
+            &ps
+        );
+        psBlob->Release();
         if (result < 0)
         {
             return false;
         }
-        s_pixelShader = ps;
+        s_pixelShader = (nint)ps;
 
-        // Create constant buffer (vtable 3)
-        var cbDesc = new BufferDesc { ByteWidth = 64, Usage = 1, BindFlags = 4 }; // DYNAMIC, CONSTANT_BUFFER
-        nint cb;
-        result = ((delegate* unmanaged[Stdcall]<nint, BufferDesc*, nint, nint*, int>)devVt[3])(
-            s_device, &cbDesc, 0, &cb);
+        // Create constant buffer
+        var cbDesc = new BufferDesc
+        {
+            ByteWidth = 64,
+            Usage = Usage.Dynamic,
+            BindFlags = (uint)BindFlag.ConstantBuffer,
+            CPUAccessFlags = (uint)CpuAccessFlag.Write,
+        };
+        ID3D11Buffer* cb;
+        result = device->CreateBuffer(&cbDesc, null, &cb);
         if (result < 0)
         {
             return false;
         }
-        s_constantBuffer = cb;
+        s_constantBuffer = (nint)cb;
 
-        // Create blend state (vtable 20)
+        // Create blend state
         var blendDesc = new BlendDesc();
-        blendDesc.RenderTarget0_BlendEnable = 1;
-        blendDesc.RenderTarget0_SrcBlend = 5;       // D3D11_BLEND_SRC_ALPHA
-        blendDesc.RenderTarget0_DestBlend = 6;      // D3D11_BLEND_INV_SRC_ALPHA
-        blendDesc.RenderTarget0_BlendOp = 1;        // D3D11_BLEND_OP_ADD
-        blendDesc.RenderTarget0_SrcBlendAlpha = 1;  // D3D11_BLEND_ONE
-        blendDesc.RenderTarget0_DestBlendAlpha = 6;  // D3D11_BLEND_INV_SRC_ALPHA
-        blendDesc.RenderTarget0_BlendOpAlpha = 1;   // D3D11_BLEND_OP_ADD
-        blendDesc.RenderTarget0_WriteMask = 0xF;    // ALL
-        nint bs;
-        result = ((delegate* unmanaged[Stdcall]<nint, BlendDesc*, nint*, int>)devVt[20])(s_device, &blendDesc, &bs);
+        blendDesc.RenderTarget[0] = new RenderTargetBlendDesc
+        {
+            BlendEnable = 1,
+            SrcBlend = Blend.SrcAlpha,
+            DestBlend = Blend.InvSrcAlpha,
+            BlendOp = BlendOp.Add,
+            SrcBlendAlpha = Blend.One,
+            DestBlendAlpha = Blend.InvSrcAlpha,
+            BlendOpAlpha = BlendOp.Add,
+            RenderTargetWriteMask = 0xF,
+        };
+        ID3D11BlendState* bs;
+        result = device->CreateBlendState(&blendDesc, &bs);
         if (result < 0)
         {
             return false;
         }
-        s_blendState = bs;
+        s_blendState = (nint)bs;
 
-        // Create rasterizer state (vtable 22)
+        // Create rasterizer state
         var rastDesc = new RasterizerDesc
         {
-            FillMode = 3,  // D3D11_FILL_SOLID
-            CullMode = 1,  // D3D11_CULL_NONE
+            FillMode = FillMode.Solid,
+            CullMode = CullMode.None,
             ScissorEnable = 1,
             DepthClipEnable = 1,
         };
-        nint rs;
-        result = ((delegate* unmanaged[Stdcall]<nint, RasterizerDesc*, nint*, int>)devVt[22])(s_device, &rastDesc, &rs);
+        ID3D11RasterizerState* rs;
+        result = device->CreateRasterizerState(&rastDesc, &rs);
         if (result < 0)
         {
             return false;
         }
-        s_rasterizerState = rs;
+        s_rasterizerState = (nint)rs;
 
-        // Create depth stencil state (vtable 21)
+        // Create depth stencil state
         var dsDesc = new DepthStencilDesc
         {
             DepthEnable = 0,
-            DepthWriteMask = 1, // D3D11_DEPTH_WRITE_MASK_ALL
-            DepthFunc = 4,      // D3D11_COMPARISON_ALWAYS
+            DepthWriteMask = DepthWriteMask.All,
+            DepthFunc = ComparisonFunc.Always,
             StencilEnable = 0,
         };
-        nint ds;
-        result = ((delegate* unmanaged[Stdcall]<nint, DepthStencilDesc*, nint*, int>)devVt[21])(s_device, &dsDesc, &ds);
+        ID3D11DepthStencilState* ds;
+        result = device->CreateDepthStencilState(&dsDesc, &ds);
         if (result < 0)
         {
             return false;
         }
-        s_depthStencilState = ds;
+        s_depthStencilState = (nint)ds;
 
-        // Create font texture
         CreateFontTexture();
 
         return true;
@@ -344,75 +459,85 @@ internal static class DX11Backend
 
     private static unsafe void CreateFontTexture()
     {
+        var device = (ID3D11Device*)s_device;
         var io = ImGui.GetIO();
-        io.Fonts.GetTexDataAsRGBA32(out nint pixels, out var width, out var height, out var bytesPerPixel);
+        io.Fonts.GetTexDataAsRGBA32(
+            out nint pixels,
+            out var width,
+            out var height,
+            out var bytesPerPixel
+        );
 
-        var devVt = *(void***)s_device;
-
-        // Create texture (vtable 5)
         var texDesc = new Texture2DDesc
         {
             Width = (uint)width,
             Height = (uint)height,
             MipLevels = 1,
             ArraySize = 1,
-            Format = 28, // DXGI_FORMAT_R8G8B8A8_UNORM
-            SampleDesc_Count = 1,
-            Usage = 0,   // DEFAULT
-            BindFlags = 8, // SHADER_RESOURCE
+            Format = Format.FormatR8G8B8A8Unorm,
+            SampleDesc = new SampleDesc(1, 0),
+            Usage = Usage.Default,
+            BindFlags = (uint)BindFlag.ShaderResource,
         };
-        var initData = new SubresourceData { pSysMem = pixels, SysMemPitch = (uint)(width * 4) };
+        var initData = new SubresourceData
+        {
+            PSysMem = (void*)pixels,
+            SysMemPitch = (uint)(width * 4),
+        };
 
-        nint texture;
-        var hr = ((delegate* unmanaged[Stdcall]<nint, Texture2DDesc*, SubresourceData*, nint*, int>)devVt[5])(
-            s_device, &texDesc, &initData, &texture);
+        ID3D11Texture2D* texture;
+        var hr = device->CreateTexture2D(&texDesc, &initData, &texture);
         if (hr < 0)
         {
             return;
         }
 
-        // Create SRV (vtable 7)
         var srvDesc = new ShaderResourceViewDesc
         {
-            Format = 28,
-            ViewDimension = 4, // D3D11_SRV_DIMENSION_TEXTURE2D
-            MostDetailedMip = 0,
-            MipLevels = 1,
+            Format = Format.FormatR8G8B8A8Unorm,
+            ViewDimension = D3DSrvDimension.D3DSrvDimensionTexture2D,
+            Anonymous = new ShaderResourceViewDescUnion
+            {
+                Texture2D = { MostDetailedMip = 0, MipLevels = 1 },
+            },
         };
-        nint srv;
-        hr = ((delegate* unmanaged[Stdcall]<nint, nint, ShaderResourceViewDesc*, nint*, int>)devVt[7])(
-            s_device, texture, &srvDesc, &srv);
-        Release(texture);
+        ID3D11ShaderResourceView* srv;
+        hr = device->CreateShaderResourceView((ID3D11Resource*)texture, &srvDesc, &srv);
+        texture->Release();
         if (hr < 0)
         {
             return;
         }
-        s_fontTextureSRV = srv;
+        s_fontTextureSRV = (nint)srv;
 
-        // Create sampler (vtable 23)
         var sampDesc = new SamplerDesc
         {
-            Filter = 21, // D3D11_FILTER_MIN_MAG_MIP_LINEAR
-            AddressU = 4, AddressV = 4, AddressW = 4, // CLAMP
-            ComparisonFunc = 8, // ALWAYS
+            Filter = Filter.MinMagMipLinear,
+            AddressU = TextureAddressMode.Border,
+            AddressV = TextureAddressMode.Border,
+            AddressW = TextureAddressMode.Border,
+            ComparisonFunc = ComparisonFunc.Always,
         };
-        nint sampler;
-        hr = ((delegate* unmanaged[Stdcall]<nint, SamplerDesc*, nint*, int>)devVt[23])(s_device, &sampDesc, &sampler);
+        ID3D11SamplerState* sampler;
+        hr = device->CreateSamplerState(&sampDesc, &sampler);
         if (hr < 0)
         {
             return;
         }
-        s_fontSampler = sampler;
+        s_fontSampler = (nint)sampler;
 
-        io.Fonts.SetTexID(srv);
+        io.Fonts.SetTexID((nint)srv);
     }
 
-    private static unsafe void RenderFrame(nint swapChain)
+    private static unsafe void RenderFrame(nint swapChainPtr)
     {
-        RawRect clientRect;
-        GetClientRect(s_hwnd, out clientRect);
-        var width = clientRect.Right - clientRect.Left;
-        var height = clientRect.Bottom - clientRect.Top;
+        var swapChain = (IDXGISwapChain*)swapChainPtr;
+        var device = (ID3D11Device*)s_device;
+        var ctx = (ID3D11DeviceContext*)s_context;
+
+        PInvoke.GetClientRect(new HWND(s_hwnd), out var clientRect);
+        var width = clientRect.right - clientRect.left;
+        var height = clientRect.bottom - clientRect.top;
 
         if (width <= 0 || height <= 0)
         {
@@ -427,30 +552,23 @@ internal static class DX11Backend
             return;
         }
 
-        var scVt = *(void***)swapChain;
-        var devVt = *(void***)s_device;
-        var ctxVt = *(void***)s_context;
-
         // Get back buffer and create RTV
-        nint backBuffer;
-        fixed (Guid* iid = &IID_ID3D11Texture2D)
+        var texIid = ID3D11Texture2D.Guid;
+        void* backBuf;
+        var hr = swapChain->GetBuffer(0, &texIid, &backBuf);
+        if (hr < 0)
         {
-            var hr = ((delegate* unmanaged[Stdcall]<nint, uint, Guid*, nint*, int>)scVt[9])(swapChain, 0, iid, &backBuffer);
-            if (hr < 0)
-            {
-                return;
-            }
+            return;
         }
 
-        nint rtv;
-        var result = ((delegate* unmanaged[Stdcall]<nint, nint, nint, nint*, int>)devVt[9])(s_device, backBuffer, 0, &rtv);
-        Release(backBuffer);
+        ID3D11RenderTargetView* rtv;
+        var result = device->CreateRenderTargetView((ID3D11Resource*)backBuf, null, &rtv);
+        ((ID3D11Texture2D*)backBuf)->Release();
         if (result < 0)
         {
             return;
         }
 
-        // Ensure vertex/index buffers are large enough
         EnsureBuffers(drawData);
 
         // Update constant buffer with projection matrix
@@ -460,60 +578,75 @@ internal static class DX11Backend
         var B = drawData.DisplayPos.Y + drawData.DisplaySize.Y;
 
         var mvp = stackalloc float[16];
-        mvp[0] = 2.0f / (R - L); mvp[1] = 0; mvp[2] = 0; mvp[3] = 0;
-        mvp[4] = 0; mvp[5] = 2.0f / (T - B); mvp[6] = 0; mvp[7] = 0;
-        mvp[8] = 0; mvp[9] = 0; mvp[10] = 0.5f; mvp[11] = 0;
-        mvp[12] = (R + L) / (L - R); mvp[13] = (T + B) / (B - T); mvp[14] = 0.5f; mvp[15] = 1.0f;
+        mvp[0] = 2.0f / (R - L);
+        mvp[1] = 0;
+        mvp[2] = 0;
+        mvp[3] = 0;
+        mvp[4] = 0;
+        mvp[5] = 2.0f / (T - B);
+        mvp[6] = 0;
+        mvp[7] = 0;
+        mvp[8] = 0;
+        mvp[9] = 0;
+        mvp[10] = 0.5f;
+        mvp[11] = 0;
+        mvp[12] = (R + L) / (L - R);
+        mvp[13] = (T + B) / (B - T);
+        mvp[14] = 0.5f;
+        mvp[15] = 1.0f;
 
         MappedSubresource mapped;
-        result = ((delegate* unmanaged[Stdcall]<nint, nint, uint, int, uint, MappedSubresource*, int>)ctxVt[14])(
-            s_context, s_constantBuffer, 0, 4, 0, &mapped);
+        result = ctx->Map((ID3D11Resource*)s_constantBuffer, 0, Map.WriteDiscard, 0, &mapped);
         if (result >= 0)
         {
-            Buffer.MemoryCopy(mvp, (void*)mapped.pData, 64, 64);
-            ((delegate* unmanaged[Stdcall]<nint, nint, uint, void>)ctxVt[15])(s_context, s_constantBuffer, 0);
+            Buffer.MemoryCopy(mvp, mapped.PData, 64, 64);
+            ctx->Unmap((ID3D11Resource*)s_constantBuffer, 0);
         }
 
         // Upload vertex data
-        var vtxMapped = new MappedSubresource();
-        result = ((delegate* unmanaged[Stdcall]<nint, nint, uint, int, uint, MappedSubresource*, int>)ctxVt[14])(
-            s_context, s_vertexBuffer, 0, 4, 0, &vtxMapped);
+        MappedSubresource vtxMapped;
+        result = ctx->Map((ID3D11Resource*)s_vertexBuffer, 0, Map.WriteDiscard, 0, &vtxMapped);
         if (result >= 0)
         {
             var totalVtxBytes = drawData.TotalVtxCount * sizeof(ImDrawVert);
-            var dst = (byte*)vtxMapped.pData;
+            var dst = (byte*)vtxMapped.PData;
             for (var n = 0; n < drawData.CmdListsCount; n++)
             {
                 var cmdList = drawData.CmdLists[n];
                 Buffer.MemoryCopy(
-                    (void*)cmdList.VtxBuffer.Data, dst,
-                    totalVtxBytes, cmdList.VtxBuffer.Size * sizeof(ImDrawVert));
+                    (void*)cmdList.VtxBuffer.Data,
+                    dst,
+                    totalVtxBytes,
+                    cmdList.VtxBuffer.Size * sizeof(ImDrawVert)
+                );
                 dst += cmdList.VtxBuffer.Size * sizeof(ImDrawVert);
             }
-            ((delegate* unmanaged[Stdcall]<nint, nint, uint, void>)ctxVt[15])(s_context, s_vertexBuffer, 0);
+            ctx->Unmap((ID3D11Resource*)s_vertexBuffer, 0);
         }
 
         // Upload index data
-        var idxMapped = new MappedSubresource();
-        result = ((delegate* unmanaged[Stdcall]<nint, nint, uint, int, uint, MappedSubresource*, int>)ctxVt[14])(
-            s_context, s_indexBuffer, 0, 4, 0, &idxMapped);
+        MappedSubresource idxMapped;
+        result = ctx->Map((ID3D11Resource*)s_indexBuffer, 0, Map.WriteDiscard, 0, &idxMapped);
         if (result >= 0)
         {
             var totalIdxBytes = drawData.TotalIdxCount * sizeof(ushort);
-            var dst = (byte*)idxMapped.pData;
+            var dst = (byte*)idxMapped.PData;
             for (var n = 0; n < drawData.CmdListsCount; n++)
             {
                 var cmdList = drawData.CmdLists[n];
                 Buffer.MemoryCopy(
-                    (void*)cmdList.IdxBuffer.Data, dst,
-                    totalIdxBytes, cmdList.IdxBuffer.Size * sizeof(ushort));
+                    (void*)cmdList.IdxBuffer.Data,
+                    dst,
+                    totalIdxBytes,
+                    cmdList.IdxBuffer.Size * sizeof(ushort)
+                );
                 dst += cmdList.IdxBuffer.Size * sizeof(ushort);
             }
-            ((delegate* unmanaged[Stdcall]<nint, nint, uint, void>)ctxVt[15])(s_context, s_indexBuffer, 0);
+            ctx->Unmap((ID3D11Resource*)s_indexBuffer, 0);
         }
 
         // Set pipeline state
-        SetupRenderState(ctxVt, rtv, drawData);
+        SetupRenderState(ctx, rtv, drawData);
 
         // Draw
         var vtxOffset = 0;
@@ -531,120 +664,118 @@ internal static class DX11Backend
                     continue;
                 }
 
-                var scissor = new RawRect
-                {
-                    Left = (int)(cmd.ClipRect.X - clipOff.X),
-                    Top = (int)(cmd.ClipRect.Y - clipOff.Y),
-                    Right = (int)(cmd.ClipRect.Z - clipOff.X),
-                    Bottom = (int)(cmd.ClipRect.W - clipOff.Y),
-                };
-                ((delegate* unmanaged[Stdcall]<nint, uint, RawRect*, void>)ctxVt[45])(s_context, 1, &scissor);
+                var scissor = new Box2D<int>(
+                    new Vector2D<int>(
+                        (int)(cmd.ClipRect.X - clipOff.X),
+                        (int)(cmd.ClipRect.Y - clipOff.Y)
+                    ),
+                    new Vector2D<int>(
+                        (int)(cmd.ClipRect.Z - clipOff.X),
+                        (int)(cmd.ClipRect.W - clipOff.Y)
+                    )
+                );
+                ctx->RSSetScissorRects(1, &scissor);
 
-                var texSrv = cmd.TextureId;
-                ((delegate* unmanaged[Stdcall]<nint, uint, uint, nint*, void>)ctxVt[8])(s_context, 0, 1, &texSrv);
+                var texSrv = (ID3D11ShaderResourceView*)cmd.TextureId;
+                ctx->PSSetShaderResources(0, 1, &texSrv);
 
-                // DrawIndexed (vtable 12)
-                ((delegate* unmanaged[Stdcall]<nint, uint, uint, int, void>)ctxVt[12])(
-                    s_context, cmd.ElemCount, (uint)(cmd.IdxOffset + idxOffset), (int)(cmd.VtxOffset + vtxOffset));
+                ctx->DrawIndexed(
+                    cmd.ElemCount,
+                    (uint)(cmd.IdxOffset + idxOffset),
+                    (int)(cmd.VtxOffset + vtxOffset)
+                );
             }
 
             vtxOffset += cmdList.VtxBuffer.Size;
             idxOffset += cmdList.IdxBuffer.Size;
         }
 
-        Release(rtv);
+        rtv->Release();
     }
 
-    private static unsafe void SetupRenderState(void** ctxVt, nint rtv, ImDrawDataPtr drawData)
+    private static unsafe void SetupRenderState(
+        ID3D11DeviceContext* ctx,
+        ID3D11RenderTargetView* rtv,
+        ImDrawDataPtr drawData
+    )
     {
         // IA
         var stride = (uint)sizeof(ImDrawVert);
         uint offset = 0;
-        var vb = s_vertexBuffer;
-        ((delegate* unmanaged[Stdcall]<nint, uint, uint, nint*, uint*, uint*, void>)ctxVt[18])(
-            s_context, 0, 1, &vb, &stride, &offset);
-        ((delegate* unmanaged[Stdcall]<nint, nint, int, uint, void>)ctxVt[19])(
-            s_context, s_indexBuffer, 57, 0); // DXGI_FORMAT_R16_UINT
-        ((delegate* unmanaged[Stdcall]<nint, nint, void>)ctxVt[17])(s_context, s_inputLayout);
-        ((delegate* unmanaged[Stdcall]<nint, int, void>)ctxVt[24])(s_context, 4); // TRIANGLELIST
+        var vb = (ID3D11Buffer*)s_vertexBuffer;
+        ctx->IASetVertexBuffers(0, 1, &vb, &stride, &offset);
+        ctx->IASetIndexBuffer((ID3D11Buffer*)s_indexBuffer, Format.FormatR16Uint, 0);
+        ctx->IASetInputLayout((ID3D11InputLayout*)s_inputLayout);
+        ctx->IASetPrimitiveTopology(D3DPrimitiveTopology.D3DPrimitiveTopologyTrianglelist);
 
         // VS
-        ((delegate* unmanaged[Stdcall]<nint, nint, nint, uint, void>)ctxVt[11])(s_context, s_vertexShader, 0, 0);
-        var cb = s_constantBuffer;
-        ((delegate* unmanaged[Stdcall]<nint, uint, uint, nint*, void>)ctxVt[7])(s_context, 0, 1, &cb);
+        ctx->VSSetShader((ID3D11VertexShader*)s_vertexShader, null, 0);
+        var cb = (ID3D11Buffer*)s_constantBuffer;
+        ctx->VSSetConstantBuffers(0, 1, &cb);
 
         // PS
-        ((delegate* unmanaged[Stdcall]<nint, nint, nint, uint, void>)ctxVt[9])(s_context, s_pixelShader, 0, 0);
-        var sampler = s_fontSampler;
-        ((delegate* unmanaged[Stdcall]<nint, uint, uint, nint*, void>)ctxVt[10])(s_context, 0, 1, &sampler);
+        ctx->PSSetShader((ID3D11PixelShader*)s_pixelShader, null, 0);
+        var sampler = (ID3D11SamplerState*)s_fontSampler;
+        ctx->PSSetSamplers(0, 1, &sampler);
 
         // OM
         var blendFactor = stackalloc float[4];
-        ((delegate* unmanaged[Stdcall]<nint, nint, float*, uint, void>)ctxVt[35])(s_context, s_blendState, blendFactor, 0xFFFFFFFF);
-        ((delegate* unmanaged[Stdcall]<nint, nint, uint, void>)ctxVt[36])(s_context, s_depthStencilState, 0);
-        ((delegate* unmanaged[Stdcall]<nint, uint, nint*, nint, void>)ctxVt[33])(s_context, 1, &rtv, 0);
+        ctx->OMSetBlendState((ID3D11BlendState*)s_blendState, blendFactor, 0xFFFFFFFF);
+        ctx->OMSetDepthStencilState((ID3D11DepthStencilState*)s_depthStencilState, 0);
+        ctx->OMSetRenderTargets(1, &rtv, null);
 
         // RS
-        ((delegate* unmanaged[Stdcall]<nint, nint, void>)ctxVt[43])(s_context, s_rasterizerState);
+        ctx->RSSetState((ID3D11RasterizerState*)s_rasterizerState);
 
         var vp = new Viewport
         {
             Width = drawData.DisplaySize.X,
             Height = drawData.DisplaySize.Y,
-            MinDepth = 0,
             MaxDepth = 1,
         };
-        ((delegate* unmanaged[Stdcall]<nint, uint, Viewport*, void>)ctxVt[44])(s_context, 1, &vp);
+        ctx->RSSetViewports(1, &vp);
     }
 
     private static unsafe void EnsureBuffers(ImDrawDataPtr drawData)
     {
-        var devVt = *(void***)s_device;
+        var device = (ID3D11Device*)s_device;
 
         if (s_vertexBuffer == 0 || s_vertexBufferSize < drawData.TotalVtxCount)
         {
             if (s_vertexBuffer != 0)
             {
-                Release(s_vertexBuffer);
+                ((ID3D11Buffer*)s_vertexBuffer)->Release();
             }
             s_vertexBufferSize = drawData.TotalVtxCount + 5000;
             var desc = new BufferDesc
             {
                 ByteWidth = (uint)(s_vertexBufferSize * sizeof(ImDrawVert)),
-                Usage = 2, // DYNAMIC
-                BindFlags = 1, // VERTEX_BUFFER
-                CPUAccessFlags = 0x10000, // WRITE
+                Usage = Usage.Dynamic,
+                BindFlags = (uint)BindFlag.VertexBuffer,
+                CPUAccessFlags = (uint)CpuAccessFlag.Write,
             };
-            nint buf;
-            ((delegate* unmanaged[Stdcall]<nint, BufferDesc*, nint, nint*, int>)devVt[3])(s_device, &desc, 0, &buf);
-            s_vertexBuffer = buf;
+            ID3D11Buffer* buf;
+            device->CreateBuffer(&desc, null, &buf);
+            s_vertexBuffer = (nint)buf;
         }
 
         if (s_indexBuffer == 0 || s_indexBufferSize < drawData.TotalIdxCount)
         {
             if (s_indexBuffer != 0)
             {
-                Release(s_indexBuffer);
+                ((ID3D11Buffer*)s_indexBuffer)->Release();
             }
             s_indexBufferSize = drawData.TotalIdxCount + 10000;
             var desc = new BufferDesc
             {
                 ByteWidth = (uint)(s_indexBufferSize * sizeof(ushort)),
-                Usage = 2,
-                BindFlags = 2, // INDEX_BUFFER
-                CPUAccessFlags = 0x10000,
+                Usage = Usage.Dynamic,
+                BindFlags = (uint)BindFlag.IndexBuffer,
+                CPUAccessFlags = (uint)CpuAccessFlag.Write,
             };
-            nint buf;
-            ((delegate* unmanaged[Stdcall]<nint, BufferDesc*, nint, nint*, int>)devVt[3])(s_device, &desc, 0, &buf);
-            s_indexBuffer = buf;
-        }
-    }
-
-    private static unsafe void Release(nint comObj)
-    {
-        if (comObj != 0)
-        {
-            ((delegate* unmanaged[Stdcall]<nint, uint>)(*(void***)comObj)[2])(comObj);
+            ID3D11Buffer* buf;
+            device->CreateBuffer(&desc, null, &buf);
+            s_indexBuffer = (nint)buf;
         }
     }
 
@@ -673,150 +804,11 @@ internal static class DX11Backend
         }
         """;
 
-    // Interop structs
-
     [StructLayout(LayoutKind.Sequential)]
     private struct ImDrawVert
     {
         public Vector2 pos;
         public Vector2 uv;
         public uint col;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct DxgiSwapChainDesc
-    {
-        public uint BufferDesc_Width, BufferDesc_Height;
-        public uint BufferDesc_RefreshRate_Num, BufferDesc_RefreshRate_Den;
-        public int BufferDesc_Format;
-        public int BufferDesc_ScanlineOrdering, BufferDesc_Scaling;
-        public uint SampleDesc_Count, SampleDesc_Quality;
-        public uint BufferUsage;
-        public uint BufferCount;
-        public nint OutputWindow;
-        public int Windowed;
-        public int SwapEffect;
-        public uint Flags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct BufferDesc
-    {
-        public uint ByteWidth;
-        public int Usage;
-        public uint BindFlags, CPUAccessFlags, MiscFlags, StructureByteStride;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct Texture2DDesc
-    {
-        public uint Width, Height, MipLevels, ArraySize;
-        public int Format;
-        public uint SampleDesc_Count, SampleDesc_Quality;
-        public int Usage;
-        public uint BindFlags, CPUAccessFlags, MiscFlags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct SubresourceData
-    {
-        public nint pSysMem;
-        public uint SysMemPitch, SysMemSlicePitch;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct MappedSubresource
-    {
-        public nint pData;
-        public uint RowPitch, DepthPitch;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct ShaderResourceViewDesc
-    {
-        public int Format;
-        public int ViewDimension;
-        public uint MostDetailedMip;
-        public uint MipLevels;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct SamplerDesc
-    {
-        public int Filter;
-        public int AddressU, AddressV, AddressW;
-        public float MipLODBias;
-        public uint MaxAnisotropy;
-        public int ComparisonFunc;
-        public float BorderColor0, BorderColor1, BorderColor2, BorderColor3;
-        public float MinLOD, MaxLOD;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct BlendDesc
-    {
-        public int AlphaToCoverageEnable;
-        public int IndependentBlendEnable;
-        public int RenderTarget0_BlendEnable;
-        public int RenderTarget0_SrcBlend;
-        public int RenderTarget0_DestBlend;
-        public int RenderTarget0_BlendOp;
-        public int RenderTarget0_SrcBlendAlpha;
-        public int RenderTarget0_DestBlendAlpha;
-        public int RenderTarget0_BlendOpAlpha;
-        public byte RenderTarget0_WriteMask;
-        private byte _pad0, _pad1, _pad2;
-        // Remaining 7 render targets (zeroed)
-        private long _rt1a, _rt1b, _rt2a, _rt2b, _rt3a, _rt3b, _rt4a, _rt4b;
-        private long _rt5a, _rt5b, _rt6a, _rt6b, _rt7a, _rt7b;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct RasterizerDesc
-    {
-        public int FillMode, CullMode;
-        public int FrontCounterClockwise, DepthBias;
-        public float DepthBiasClamp, SlopeScaledDepthBias;
-        public int DepthClipEnable, ScissorEnable;
-        public int MultisampleEnable, AntialiasedLineEnable;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct DepthStencilDesc
-    {
-        public int DepthEnable;
-        public int DepthWriteMask;
-        public int DepthFunc;
-        public int StencilEnable;
-        public byte StencilReadMask, StencilWriteMask;
-        private byte _pad0, _pad1;
-        // Front face stencil op
-        public int FrontStencilFailOp, FrontStencilDepthFailOp, FrontStencilPassOp, FrontStencilFunc;
-        // Back face stencil op
-        public int BackStencilFailOp, BackStencilDepthFailOp, BackStencilPassOp, BackStencilFunc;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct InputElementDesc
-    {
-        public nint SemanticName;
-        public uint SemanticIndex;
-        public int Format;
-        public uint InputSlot;
-        public uint AlignedByteOffset;
-        public int InputSlotClass;
-        public uint InstanceDataStepRate;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct Viewport
-    {
-        public float TopLeftX, TopLeftY, Width, Height, MinDepth, MaxDepth;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct RawRect
-    {
-        public int Left, Top, Right, Bottom;
     }
 }

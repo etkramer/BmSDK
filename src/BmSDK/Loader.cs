@@ -39,11 +39,11 @@ internal static class Loader
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
-        // Find/load scripts
-        ScriptManager.Init();
-
         // Init dev mode
         DevMode.DevMode.Init();
+
+        // Find/load scripts
+        ScriptManager.Init();
 
         // Create function detours
         _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(

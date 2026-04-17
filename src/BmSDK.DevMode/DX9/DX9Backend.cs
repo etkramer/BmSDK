@@ -1,5 +1,8 @@
+using System.Numerics;
 using System.Runtime.InteropServices;
 using ImGuiNET;
+using Silk.NET.Direct3D9;
+using Silk.NET.Maths;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
@@ -7,23 +10,31 @@ namespace BmSDK.DevMode;
 
 internal static class DX9Backend
 {
-    [DllImport("d3d9.dll")]
-    private static extern nint Direct3DCreate9(uint SDKVersion);
-
-    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-    private static extern nint CreateWindowExW(
-        uint exStyle, string className, string windowName, uint style,
-        int x, int y, int w, int h, nint parent, nint menu, nint instance, nint param);
-
-    [DllImport("user32.dll")]
-    private static extern int DestroyWindow(nint hWnd);
-
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
-    private static extern nint GetModuleHandleW(string? moduleName);
+    private static extern nint LoadLibraryW(string lpLibFileName);
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Ansi, ExactSpelling = true)]
+    private static extern nint GetProcAddress(nint hModule, string lpProcName);
+
+    [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+    private delegate nint Direct3DCreate9Delegate(uint sdkVersion);
+
+    [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+    private unsafe delegate int D3D9CreateDeviceDelegate(
+        nint pThis,
+        uint adapter,
+        int deviceType,
+        nint hFocusWindow,
+        uint behaviorFlags,
+        nint pPresentationParameters,
+        nint* ppReturnedDeviceInterface
+    );
 
     [UnmanagedFunctionPointer(CallingConvention.StdCall)]
     private delegate int EndSceneDelegate(nint device);
 
+    private static Direct3DCreate9Delegate? s_originalDirect3DCreate9;
+    private static D3D9CreateDeviceDelegate? s_originalCreateDevice;
     private static EndSceneDelegate? s_originalEndScene;
     private static bool s_renderInitialized;
     private static nint s_fontTexture;
@@ -33,43 +44,22 @@ internal static class DX9Backend
     {
         try
         {
-            var d3d9 = Direct3DCreate9(32);
+            var d3d9 = LoadLibraryW("d3d9.dll");
             if (d3d9 == 0)
             {
                 return;
             }
 
-            var tmpHwnd = CreateWindowExW(
-                0, "STATIC", "BmSDK_DX9_Dummy", 0x80000000,
-                0, 0, 1, 1, 0, 0, GetModuleHandleW(null), 0);
-
-            var pp = new D3DPRESENT_PARAMETERS
+            var createAddr = GetProcAddress(d3d9, "Direct3DCreate9");
+            if (createAddr == 0)
             {
-                Windowed = 1,
-                SwapEffect = 1,
-                BackBufferFormat = 0,
-            };
-
-            nint device;
-            var d3d9Vt = *(void***)d3d9;
-            var hr = ((delegate* unmanaged[Stdcall]<nint, uint, int, nint, uint, D3DPRESENT_PARAMETERS*, nint*, int>)
-                d3d9Vt[16])(d3d9, 0, 4, tmpHwnd, 0x20, &pp, &device);
-
-            if (hr < 0 || device == 0)
-            {
-                Release(d3d9);
-                DestroyWindow(tmpHwnd);
                 return;
             }
 
-            var deviceVt = *(void***)device;
-            var endSceneAddr = (nint)deviceVt[42];
-
-            Release(device);
-            Release(d3d9);
-            DestroyWindow(tmpHwnd);
-
-            s_originalEndScene = DetourHelper.CreateDetour<EndSceneDelegate>(endSceneAddr, EndSceneHook);
+            s_originalDirect3DCreate9 = DetourHelper.CreateDetour<Direct3DCreate9Delegate>(
+                createAddr,
+                Direct3DCreate9Hook
+            );
         }
         catch
         {
@@ -77,18 +67,84 @@ internal static class DX9Backend
         }
     }
 
-    private static int EndSceneHook(nint device)
+    private static unsafe nint Direct3DCreate9Hook(uint sdkVersion)
+    {
+        var result = s_originalDirect3DCreate9!(sdkVersion);
+
+        if (result != 0 && s_originalCreateDevice == null)
+        {
+            try
+            {
+                var d3d9 = (IDirect3D9*)result;
+                var createDeviceAddr = (nint)d3d9->LpVtbl[16];
+
+                s_originalCreateDevice = DetourHelper.CreateDetour<D3D9CreateDeviceDelegate>(
+                    createDeviceAddr,
+                    D3D9CreateDeviceHook
+                );
+            }
+            catch
+            {
+                // Hook installation failed
+            }
+        }
+
+        return result;
+    }
+
+    private static unsafe int D3D9CreateDeviceHook(
+        nint pThis,
+        uint adapter,
+        int deviceType,
+        nint hFocusWindow,
+        uint behaviorFlags,
+        nint pPresentationParameters,
+        nint* ppReturnedDeviceInterface
+    )
+    {
+        var hr = s_originalCreateDevice!(
+            pThis,
+            adapter,
+            deviceType,
+            hFocusWindow,
+            behaviorFlags,
+            pPresentationParameters,
+            ppReturnedDeviceInterface
+        );
+
+        if (hr >= 0 && ppReturnedDeviceInterface != null && *ppReturnedDeviceInterface != 0 && s_originalEndScene == null)
+        {
+            try
+            {
+                var device = (IDirect3DDevice9*)(*ppReturnedDeviceInterface);
+                var endSceneAddr = (nint)device->LpVtbl[42];
+
+                s_originalEndScene = DetourHelper.CreateDetour<EndSceneDelegate>(
+                    endSceneAddr,
+                    EndSceneHook
+                );
+            }
+            catch
+            {
+                // Hook installation failed
+            }
+        }
+
+        return hr;
+    }
+
+    private static int EndSceneHook(nint devicePtr)
     {
         try
         {
             if (!s_renderInitialized)
             {
-                InitializeForDevice(device);
+                InitializeForDevice(devicePtr);
             }
 
             if (s_renderInitialized)
             {
-                RenderFrame(device);
+                RenderFrame(devicePtr);
             }
         }
         catch
@@ -96,21 +152,21 @@ internal static class DX9Backend
             // Don't crash the game
         }
 
-        return s_originalEndScene!(device);
+        return s_originalEndScene!(devicePtr);
     }
 
-    private static unsafe void InitializeForDevice(nint device)
+    private static unsafe void InitializeForDevice(nint devicePtr)
     {
-        var vt = *(void***)device;
+        var device = (IDirect3DDevice9*)devicePtr;
 
-        var cp = new D3DDEVICE_CREATION_PARAMETERS();
-        var hr = ((delegate* unmanaged[Stdcall]<nint, D3DDEVICE_CREATION_PARAMETERS*, int>)vt[9])(device, &cp);
+        DeviceCreationParameters cp;
+        var hr = device->GetCreationParameters(&cp);
         if (hr < 0)
         {
             return;
         }
 
-        s_hwnd = cp.hFocusWindow;
+        s_hwnd = cp.HFocusWindow;
         if (s_hwnd == 0)
         {
             return;
@@ -125,37 +181,54 @@ internal static class DX9Backend
         s_renderInitialized = true;
     }
 
-    private static unsafe void CreateFontTexture(nint device)
+    private static unsafe void CreateFontTexture(IDirect3DDevice9* device)
     {
         var io = ImGui.GetIO();
-        io.Fonts.GetTexDataAsRGBA32(out nint pixels, out var width, out var height, out var bytesPerPixel);
+        io.Fonts.GetTexDataAsRGBA32(
+            out nint pixels,
+            out var width,
+            out var height,
+            out var bytesPerPixel
+        );
 
-        var vt = *(void***)device;
-        nint texture;
-        var hr = ((delegate* unmanaged[Stdcall]<nint, uint, uint, uint, uint, int, int, nint*, nint, int>)vt[23])(
-            device, (uint)width, (uint)height, 1, 0x200, 21, 0, &texture, 0);
+        IDirect3DTexture9* texture;
+        var hr = device->CreateTexture(
+            (uint)width,
+            (uint)height,
+            1,
+            0x200,
+            Format.A8R8G8B8,
+            Pool.Default,
+            &texture,
+            null
+        );
 
         if (hr < 0)
         {
-            // Fallback: try D3DPOOL_MANAGED without DYNAMIC usage
-            hr = ((delegate* unmanaged[Stdcall]<nint, uint, uint, uint, uint, int, int, nint*, nint, int>)vt[23])(
-                device, (uint)width, (uint)height, 1, 0, 21, 1, &texture, 0);
+            hr = device->CreateTexture(
+                (uint)width,
+                (uint)height,
+                1,
+                0,
+                Format.A8R8G8B8,
+                Pool.Managed,
+                &texture,
+                null
+            );
         }
 
-        if (hr < 0 || texture == 0)
+        if (hr < 0 || texture == null)
         {
             return;
         }
 
-        var texVt = *(void***)texture;
-        D3DLOCKED_RECT lockedRect;
-        hr = ((delegate* unmanaged[Stdcall]<nint, uint, D3DLOCKED_RECT*, nint, uint, int>)texVt[19])(
-            texture, 0, &lockedRect, 0, 0);
+        LockedRect lockedRect;
+        hr = texture->LockRect(0, &lockedRect, null, 0);
 
         if (hr >= 0)
         {
             var src = (byte*)pixels;
-            var dst = (byte*)lockedRect.pBits;
+            var dst = (byte*)lockedRect.PBits;
 
             for (var y = 0; y < height; y++)
             {
@@ -163,7 +236,7 @@ internal static class DX9Backend
                 {
                     var si = (y * width + x) * 4;
                     var di = y * lockedRect.Pitch + x * 4;
-                    // RGBA → BGRA (D3DFMT_A8R8G8B8 stores as BGRA in memory)
+                    // RGBA -> BGRA
                     dst[di + 0] = src[si + 2];
                     dst[di + 1] = src[si + 1];
                     dst[di + 2] = src[si + 0];
@@ -171,19 +244,18 @@ internal static class DX9Backend
                 }
             }
 
-            ((delegate* unmanaged[Stdcall]<nint, uint, int>)texVt[20])(texture, 0);
+            texture->UnlockRect(0);
         }
 
-        s_fontTexture = texture;
-        io.Fonts.SetTexID(texture);
+        s_fontTexture = (nint)texture;
+        io.Fonts.SetTexID((nint)texture);
     }
 
-    private static unsafe void RenderFrame(nint device)
+    private static unsafe void RenderFrame(nint devicePtr)
     {
-        var vt = *(void***)device;
+        var device = (IDirect3DDevice9*)devicePtr;
 
-        Windows.Win32.Foundation.RECT clientRect;
-        PInvoke.GetClientRect(new HWND(s_hwnd), out clientRect);
+        PInvoke.GetClientRect(new HWND(s_hwnd), out var clientRect);
         var width = clientRect.right - clientRect.left;
         var height = clientRect.bottom - clientRect.top;
 
@@ -200,100 +272,74 @@ internal static class DX9Backend
             return;
         }
 
-        // Create state block to save/restore device state
-        nint stateBlock;
-        var hr = ((delegate* unmanaged[Stdcall]<nint, int, nint*, int>)vt[59])(device, 1, &stateBlock);
-        if (hr < 0)
-        {
-            return;
-        }
-
-        SetupRenderState(device, vt, drawData);
+        SetupRenderState(device, drawData);
 
         for (var n = 0; n < drawData.CmdListsCount; n++)
         {
-            RenderDrawList(device, vt, drawData.CmdLists[n]);
+            RenderDrawList(device, drawData.CmdLists[n]);
         }
-
-        // Restore state
-        var sbVt = *(void***)stateBlock;
-        ((delegate* unmanaged[Stdcall]<nint, int>)sbVt[5])(stateBlock);
-        ((delegate* unmanaged[Stdcall]<nint, uint>)sbVt[2])(stateBlock);
     }
 
-    private static unsafe void SetupRenderState(nint device, void** vt, ImDrawDataPtr drawData)
+    private static unsafe void SetupRenderState(IDirect3DDevice9* device, ImDrawDataPtr drawData)
     {
-        var setRS = (delegate* unmanaged[Stdcall]<nint, int, uint, int>)vt[57];
-        var setTSS = (delegate* unmanaged[Stdcall]<nint, uint, int, uint, int>)vt[67];
-        var setSS = (delegate* unmanaged[Stdcall]<nint, uint, int, uint, int>)vt[69];
+        device->SetVertexShader((IDirect3DVertexShader9*)null);
+        device->SetPixelShader((IDirect3DPixelShader9*)null);
 
-        // Disable shaders
-        ((delegate* unmanaged[Stdcall]<nint, nint, int>)vt[92])(device, 0);
-        ((delegate* unmanaged[Stdcall]<nint, nint, int>)vt[107])(device, 0);
+        device->SetRenderState(Renderstatetype.Cullmode, (uint)Cull.None);
+        device->SetRenderState(Renderstatetype.Zenable, 0);
+        device->SetRenderState(Renderstatetype.Lighting, 0);
+        device->SetRenderState(Renderstatetype.Alphablendenable, 1);
+        device->SetRenderState(Renderstatetype.Alphatestenable, 0);
+        device->SetRenderState(Renderstatetype.Blendop, (uint)Blendop.Add);
+        device->SetRenderState(Renderstatetype.Srcblend, (uint)Blend.Srcalpha);
+        device->SetRenderState(Renderstatetype.Destblend, (uint)Blend.Invsrcalpha);
+        device->SetRenderState(Renderstatetype.Scissortestenable, 1);
+        device->SetRenderState(Renderstatetype.Shademode, 2);
+        device->SetRenderState(Renderstatetype.Fogenable, 0);
+        device->SetRenderState(Renderstatetype.Colorwriteenable, 0xF);
+        device->SetRenderState(Renderstatetype.Separatealphablendenable, 0);
+        device->SetRenderState(Renderstatetype.Stencilenable, 0);
 
-        // Render states
-        setRS(device, 22, 1);    // D3DRS_CULLMODE = D3DCULL_NONE
-        setRS(device, 7, 0);     // D3DRS_ZENABLE = FALSE
-        setRS(device, 137, 0);   // D3DRS_LIGHTING = FALSE
-        setRS(device, 27, 1);    // D3DRS_ALPHABLENDENABLE = TRUE
-        setRS(device, 15, 0);    // D3DRS_ALPHATESTENABLE = FALSE
-        setRS(device, 171, 1);   // D3DRS_BLENDOP = D3DBLENDOP_ADD
-        setRS(device, 19, 5);    // D3DRS_SRCBLEND = D3DBLEND_SRCALPHA
-        setRS(device, 20, 6);    // D3DRS_DESTBLEND = D3DBLEND_INVSRCALPHA
-        setRS(device, 174, 1);   // D3DRS_SCISSORTESTENABLE = TRUE
-        setRS(device, 9, 2);     // D3DRS_SHADEMODE = D3DSHADE_GOURAUD
-        setRS(device, 28, 0);    // D3DRS_FOGENABLE = FALSE
-        setRS(device, 168, 0xF); // D3DRS_COLORWRITEENABLE = ALL
-        setRS(device, 206, 0);   // D3DRS_SEPARATEALPHABLENDENABLE = FALSE
-        setRS(device, 52, 0);    // D3DRS_STENCILENABLE = FALSE
+        device->SetTextureStageState(0, Texturestagestatetype.Colorop, 4);
+        device->SetTextureStageState(0, Texturestagestatetype.Colorarg1, 2);
+        device->SetTextureStageState(0, Texturestagestatetype.Colorarg2, 0);
+        device->SetTextureStageState(0, Texturestagestatetype.Alphaop, 4);
+        device->SetTextureStageState(0, Texturestagestatetype.Alphaarg1, 2);
+        device->SetTextureStageState(0, Texturestagestatetype.Alphaarg2, 0);
+        device->SetTextureStageState(1, Texturestagestatetype.Colorop, 1);
+        device->SetTextureStageState(1, Texturestagestatetype.Alphaop, 1);
 
-        // Texture stage states
-        setTSS(device, 0, 1, 4);  // Stage 0, COLOROP = MODULATE
-        setTSS(device, 0, 2, 2);  // Stage 0, COLORARG1 = TEXTURE
-        setTSS(device, 0, 3, 0);  // Stage 0, COLORARG2 = DIFFUSE
-        setTSS(device, 0, 4, 4);  // Stage 0, ALPHAOP = MODULATE
-        setTSS(device, 0, 5, 2);  // Stage 0, ALPHAARG1 = TEXTURE
-        setTSS(device, 0, 6, 0);  // Stage 0, ALPHAARG2 = DIFFUSE
-        setTSS(device, 1, 1, 1);  // Stage 1, COLOROP = DISABLE
-        setTSS(device, 1, 4, 1);  // Stage 1, ALPHAOP = DISABLE
+        device->SetSamplerState(0, Samplerstatetype.Minfilter, 2);
+        device->SetSamplerState(0, Samplerstatetype.Magfilter, 2);
+        device->SetSamplerState(0, Samplerstatetype.Mipfilter, 0);
 
-        // Sampler states
-        setSS(device, 0, 5, 2);   // MINFILTER = LINEAR
-        setSS(device, 0, 6, 2);   // MAGFILTER = LINEAR
-        setSS(device, 0, 7, 0);   // MIPFILTER = NONE
+        device->SetFVF(0x142);
 
-        // FVF: XYZ + DIFFUSE + TEX1
-        ((delegate* unmanaged[Stdcall]<nint, uint, int>)vt[89])(device, 0x142);
-
-        // Projection matrix (orthographic)
         var L = drawData.DisplayPos.X;
         var R = drawData.DisplayPos.X + drawData.DisplaySize.X;
         var T = drawData.DisplayPos.Y;
         var B = drawData.DisplayPos.Y + drawData.DisplaySize.Y;
 
-        var setTransform = (delegate* unmanaged[Stdcall]<nint, int, D3DMATRIX*, int>)vt[44];
-        var identity = new D3DMATRIX { _11 = 1, _22 = 1, _33 = 1, _44 = 1 };
-        setTransform(device, 256, &identity);  // D3DTS_WORLD
-        setTransform(device, 2, &identity);    // D3DTS_VIEW
+        var identity = Matrix4x4.Identity;
+        device->SetTransform((Transformstatetype)256, in identity);
+        device->SetTransform(Transformstatetype.View, in identity);
 
-        var proj = new D3DMATRIX
+        var proj = new Matrix4x4
         {
-            _11 = 2.0f / (R - L),
-            _22 = 2.0f / (T - B),
-            _33 = 0.5f,
-            _41 = (L + R) / (L - R),
-            _42 = (T + B) / (B - T),
-            _43 = 0.5f,
-            _44 = 1.0f,
+            M11 = 2.0f / (R - L),
+            M22 = 2.0f / (T - B),
+            M33 = 0.5f,
+            M41 = (L + R) / (L - R),
+            M42 = (T + B) / (B - T),
+            M43 = 0.5f,
+            M44 = 1.0f,
         };
-        setTransform(device, 3, &proj);        // D3DTS_PROJECTION
+        device->SetTransform(Transformstatetype.Projection, in proj);
     }
 
-    private static unsafe void RenderDrawList(nint device, void** vt, ImDrawListPtr cmdList)
+    private static unsafe void RenderDrawList(IDirect3DDevice9* device, ImDrawListPtr cmdList)
     {
-        // Convert ImGui vertices to D3D9 format (need to swap R/B in color and add Z)
         var vtxCount = cmdList.VtxBuffer.Size;
-        var idxCount = cmdList.IdxBuffer.Size;
 
         var vtxDst = stackalloc CustomVertex[vtxCount];
         var vtxSrc = (ImDrawVert*)cmdList.VtxBuffer.Data;
@@ -309,10 +355,6 @@ internal static class DX9Backend
             vtxDst[i].V = vtxSrc[i].uv.Y;
         }
 
-        var setTexture = (delegate* unmanaged[Stdcall]<nint, uint, nint, int>)vt[65];
-        var setScissorRect = (delegate* unmanaged[Stdcall]<nint, D3DRect*, int>)vt[75];
-        var drawIndexedPrimUP = (delegate* unmanaged[Stdcall]<nint, int, uint, uint, uint, void*, int, void*, int, int>)vt[84];
-
         var idxData = (ushort*)cmdList.IdxBuffer.Data;
 
         for (var cmdIdx = 0; cmdIdx < cmdList.CmdBuffer.Size; cmdIdx++)
@@ -324,40 +366,35 @@ internal static class DX9Backend
                 continue;
             }
 
-            var scissor = new D3DRect
-            {
-                left = (int)cmd.ClipRect.X,
-                top = (int)cmd.ClipRect.Y,
-                right = (int)cmd.ClipRect.Z,
-                bottom = (int)cmd.ClipRect.W,
-            };
-            setScissorRect(device, &scissor);
-            setTexture(device, 0, cmd.TextureId);
+            var scissor = new Box2D<int>(
+                new Vector2D<int>((int)cmd.ClipRect.X, (int)cmd.ClipRect.Y),
+                new Vector2D<int>((int)cmd.ClipRect.Z, (int)cmd.ClipRect.W)
+            );
+            device->SetScissorRect(&scissor);
+            device->SetTexture(0, (IDirect3DBaseTexture9*)cmd.TextureId);
 
-            drawIndexedPrimUP(
-                device,
-                4,
+            device->DrawIndexedPrimitiveUP(
+                Primitivetype.Trianglelist,
                 cmd.VtxOffset,
                 (uint)vtxCount - cmd.VtxOffset,
                 cmd.ElemCount / 3,
                 idxData + cmd.IdxOffset,
-                101,
+                Format.Index16,
                 vtxDst,
-                sizeof(CustomVertex));
+                (uint)sizeof(CustomVertex)
+            );
         }
-    }
-
-    private static unsafe void Release(nint comObj)
-    {
-        ((delegate* unmanaged[Stdcall]<nint, uint>)(*(void***)comObj)[2])(comObj);
     }
 
     [StructLayout(LayoutKind.Sequential)]
     private struct CustomVertex
     {
-        public float X, Y, Z;
+        public float X,
+            Y,
+            Z;
         public uint Color;
-        public float U, V;
+        public float U,
+            V;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -366,54 +403,5 @@ internal static class DX9Backend
         public System.Numerics.Vector2 pos;
         public System.Numerics.Vector2 uv;
         public uint col;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct D3DPRESENT_PARAMETERS
-    {
-        public uint BackBufferWidth, BackBufferHeight;
-        public int BackBufferFormat;
-        public uint BackBufferCount;
-        public int MultiSampleType;
-        public uint MultiSampleQuality;
-        public int SwapEffect;
-        public nint hDeviceWindow;
-        public int Windowed;
-        public int EnableAutoDepthStencil;
-        public int AutoDepthStencilFormat;
-        public uint Flags;
-        public uint FullScreen_RefreshRateInHz;
-        public uint PresentationInterval;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct D3DDEVICE_CREATION_PARAMETERS
-    {
-        public uint AdapterOrdinal;
-        public int DeviceType;
-        public nint hFocusWindow;
-        public uint BehaviorFlags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct D3DLOCKED_RECT
-    {
-        public int Pitch;
-        public nint pBits;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct D3DMATRIX
-    {
-        public float _11, _12, _13, _14;
-        public float _21, _22, _23, _24;
-        public float _31, _32, _33, _34;
-        public float _41, _42, _43, _44;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct D3DRect
-    {
-        public int left, top, right, bottom;
     }
 }
