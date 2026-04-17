@@ -36,15 +36,10 @@ public sealed class Mod
         var tomlText = File.ReadAllText(tomlPath);
         var config = TomlSerializer.Deserialize<TomlTable>(tomlText)!;
 
-        string name;
-        if (config.TryGetValue("name", out var nameObj) && nameObj is string nameStr)
-        {
-            name = nameStr;
-        }
-        else
-        {
-            name = Path.GetFileName(modDir)!;
-        }
+        var name =
+            (config.TryGetValue("name", out var nameObj) && nameObj is string nameStr)
+                ? nameStr
+                : Path.GetFileName(modDir)!;
 
         return new Mod(name, modDir, config);
     }
