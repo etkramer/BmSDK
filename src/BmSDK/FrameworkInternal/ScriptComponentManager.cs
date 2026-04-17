@@ -278,6 +278,37 @@ internal static class ScriptComponentManager
     }
 
     /// <summary>
+    /// Unregisters auto-attachment types and detaches script components belonging to the specified assembly.
+    /// </summary>
+    public static void UnregisterTypes(Assembly asm)
+    {
+        // Remove auto-attach entries for types from this assembly
+        foreach (var (targetClass, types) in s_autoAttachTypes)
+        {
+            types.RemoveAll(t => t.Component.Assembly == asm);
+        }
+
+        var emptyKeys = s_autoAttachTypes
+            .Where(kv => kv.Value.Count == 0)
+            .Select(kv => kv.Key)
+            .ToList();
+
+        foreach (var key in emptyKeys)
+        {
+            s_autoAttachTypes.Remove(key);
+        }
+
+        // Detach all live ScriptComponents whose type belongs to this assembly
+        foreach (var component in GameObject.AllScriptComponents.ToArray())
+        {
+            if (component.GetType().Assembly == asm)
+            {
+                component.Detach();
+            }
+        }
+    }
+
+    /// <summary>
     /// Unregisters all <see cref="ScriptComponent"/>s and clears all auto-attachment type registrations.
     /// </summary>
     public static void UnregisterAll()
