@@ -1,12 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Platform>x86</Platform>
     <TargetFramework>net10.0-windows7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>14</LangVersion>
   </PropertyGroup>
 
@@ -16,27 +14,16 @@
     <OutputPath>$(SolutionDir)bin\Binaries\Win32\sdk\</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <DefineConstants>$(DefineConstants);BATMAN2</DefineConstants>
-  </PropertyGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="NativeMethods.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BmSDK.DevMode\BmSDK.DevMode.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Basic.Reference.Assemblies.Net100" Version="1.8.4" />
     <PackageReference Include="Detours.Win32Metadata" Version="4.0.1.18" />
-    <PackageReference Include="Microsoft.CodeAnalysis" Version="5.0.0" />
+    <PackageReference Include="ImGui.NET" Version="1.91.0.1" />
     <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.269">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="morelinq" Version="4.4.0" />
-    <PackageReference Include="Tomlyn" Version="2.3.0" />
   </ItemGroup>
 </Project>

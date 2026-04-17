@@ -128,7 +128,7 @@ function Invoke-Publish {
 
     # Build BmSDK in Release mode
     Write-Host "Building BmSDK, BmSDK.Host in Release mode..." -ForegroundColor Yellow
-    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") "Release"
+    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_DevMode", "BmSDK", "BmSDK_Host") "Release"
     if ($ExitCode -ne 0) {
         Write-Error "Failed to build BmSDK"
         return $false
@@ -317,7 +317,7 @@ switch ($Task) {
             exit 1
         }
         
-        $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") $Configuration
+        $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_DevMode", "BmSDK", "BmSDK_Host") $Configuration
         exit $ExitCode
     }
     

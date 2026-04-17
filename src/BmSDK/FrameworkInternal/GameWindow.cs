@@ -15,6 +15,12 @@ internal static class GameWindow
 
     private static LRESULT CustomWndProc(HWND hWnd, uint msg, WPARAM wParam, LPARAM lParam)
     {
+        // Let ImGui handle input first
+        if (DevMode.DevMode.WndProc((nint)hWnd, msg, (nuint)wParam, (nint)lParam))
+        {
+            return (LRESULT)1;
+        }
+
         switch (msg)
         {
             case PInvoke.WM_KEYUP:

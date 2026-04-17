@@ -1,0 +1,10 @@
+GetCurrentThread
+GetClientRect
+
+DetourRestoreAfterWith
+DetourTransactionBegin
+DetourTransactionCommit
+DetourUpdateThread
+DetourAttach
+
+WIN32_ERROR
