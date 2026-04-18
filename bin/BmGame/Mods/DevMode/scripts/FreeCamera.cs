@@ -37,7 +37,7 @@ public class FreeCamera
             // Process mouse look
             var delta = io.MouseDelta;
             _yaw += delta.X * 0.15f;
-            _pitch = Math.Clamp(_pitch - delta.Y * 0.15f, -89f, 89f);
+            _pitch = Math.Clamp(_pitch - delta.Y * 0.15f, -90f, 90f);
 
             var speed = 500f * Game.GetDeltaTime();
             if (ImGui.IsKeyDown(ImGuiKey.LeftShift))

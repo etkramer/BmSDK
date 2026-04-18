@@ -41,6 +41,9 @@ public class DevModeScript : Script
                 io.WantCaptureMouse = true;
                 io.WantCaptureKeyboard = true;
 
+                // Hide game HUD
+                controller.bGFxHideHUD = true;
+
                 // Enable free camera
                 _freeCamera.Activate(controller.PlayerCamera);
             }
@@ -65,6 +68,9 @@ public class DevModeScript : Script
             {
                 // Disable free camera
                 _freeCamera.Deactivate(controller.PlayerCamera);
+
+                // Unhide game HUD
+                controller.bGFxHideHUD = false;
 
                 // Stop blocking input
                 io.MouseDrawCursor = false;
