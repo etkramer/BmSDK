@@ -262,7 +262,6 @@ internal static class DX9Backend
     {
         lock (ImGuiController.RenderLock)
         {
-            ImGuiController.SetContext();
             var drawData = ImGui.GetDrawData();
             if (!drawData.Valid || drawData.CmdListsCount == 0)
             {

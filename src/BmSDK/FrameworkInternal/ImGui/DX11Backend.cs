@@ -546,7 +546,6 @@ internal static class DX11Backend
     {
         lock (ImGuiController.RenderLock)
         {
-            ImGuiController.SetContext();
             var drawData = ImGui.GetDrawData();
             if (!drawData.Valid || drawData.CmdListsCount == 0)
             {

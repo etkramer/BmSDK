@@ -1,7 +1,5 @@
-using System.Numerics;
 using ImGuiNET;
 using Windows.Win32;
-using Windows.Win32.Foundation;
 
 namespace BmSDK.Framework;
 
@@ -14,11 +12,6 @@ internal static class ImGuiController
     public static nint Hwnd;
     public static Action? OnGUI;
 
-    internal static void SetContext()
-    {
-        ImGui.SetCurrentContext(s_context);
-    }
-
     public static bool TryInitialize()
     {
         if (IsInitialized)
@@ -26,13 +19,31 @@ internal static class ImGuiController
             return false;
         }
 
+        // Create context
         s_context = ImGui.CreateContext();
         ImGui.SetCurrentContext(s_context);
 
         var io = ImGui.GetIO();
-        io.Fonts.AddFontFromFileTTF("C:\\Fonts\\segui.ttf", 24f);
-        io.ConfigFlags |= ImGuiConfigFlags.DpiEnableScaleFonts;
-        io.ConfigFlags |= ImGuiConfigFlags.DpiEnableScaleViewports;
+        var style = ImGui.GetStyle();
+
+        // Load fonts
+        var fontScale = 1.5f;
+        unsafe
+        {
+            var fontConfig = ImGuiNative.ImFontConfig_ImFontConfig();
+            fontConfig->OversampleH = 3;
+            fontConfig->OversampleV = 3;
+
+            // Load built-in Windows font
+            io.Fonts.AddFontFromFileTTF(
+                "C:\\Windows\\Fonts\\consola.ttf",
+                14f * fontScale,
+                fontConfig
+            );
+            style.ScaleAllSizes(fontScale);
+
+            ImGuiNative.ImFontConfig_destroy(fontConfig);
+        }
 
         IsInitialized = true;
         return true;
@@ -45,18 +56,16 @@ internal static class ImGuiController
             return;
         }
 
-        PInvoke.GetClientRect(new HWND(Hwnd), out var clientRect);
-        var width = clientRect.right - clientRect.left;
-        var height = clientRect.bottom - clientRect.top;
-        if (width <= 0 || height <= 0)
+        var gameViewportClient = Game.GetGameViewportClient();
+        gameViewportClient.GetViewportSize(out var viewportSize);
+
+        if (viewportSize.X <= 0 || viewportSize.Y <= 0)
         {
             return;
         }
 
-        ImGui.SetCurrentContext(s_context);
-
         var io = ImGui.GetIO();
-        io.DisplaySize = new Vector2(width, height);
+        io.DisplaySize = viewportSize;
         io.DeltaTime = Game.GetDeltaTime();
 
         lock (RenderLock)
