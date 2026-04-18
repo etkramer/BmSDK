@@ -88,9 +88,6 @@ internal static class Loader
         // Run any scheduled callbacks
         EngineSynchronizationContext.Instance.ExecutePending();
 
-        // Poll for input changes
-        InputManager.Tick();
-
         // Run ImGui frame (NewFrame → OnGUI → EndFrame) on the game thread
         ImGuiController.Tick();
 
@@ -144,6 +141,7 @@ internal static class Loader
             if (funcName == TickFuncName)
             {
                 // Tick framework stuff
+                InputManager.Tick();
                 GameWindow.Tick();
 
                 // Call OnTick() for scripts
