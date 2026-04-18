@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <!-- Compiler options -->
   <PropertyGroup>
     <TargetFramework>net10.0-windows7.0</TargetFramework>
@@ -26,13 +26,20 @@
       <HintPath>.\..\..\Binaries\Win32\sdk\BmSDK.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <!-- Tomlyn -->
+    <Reference Include="Tomlyn">
+      <HintPath>.\..\..\Binaries\Win32\sdk\Tomlyn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
   <!-- Global imports-->
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
+    <Using Include="Tomlyn.Model" />
   </ItemGroup>
   <!-- Importing scripts -->
   <ItemGroup>
     <Compile Include=".\..\Scripts\**\*.cs" />
+    <Compile Include=".\..\Mods\**\*.cs" />
   </ItemGroup>
 </Project>

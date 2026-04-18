@@ -207,6 +207,21 @@ internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     }
 
     /// <summary>
+    /// Clears cached redirector definitions for component types belonging to the specified assembly.
+    /// </summary>
+    public void ClearCacheForAssembly(Assembly asm)
+    {
+        var keysToRemove = _cachedLocalRedirDefinitionDict.Keys
+            .Where(t => t.Assembly == asm)
+            .ToList();
+
+        foreach (var key in keysToRemove)
+        {
+            _cachedLocalRedirDefinitionDict.Remove(key);
+        }
+    }
+
+    /// <summary>
     /// Clears the backing redirector dictionaries, therefore, uninstalling all local redirects.
     /// </summary>
     public void UnregisterAll()

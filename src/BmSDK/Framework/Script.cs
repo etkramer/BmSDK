@@ -12,6 +12,11 @@ public abstract class Script
     public string Name { get; set; } = "Script";
 
     /// <summary>
+    /// The mod that this script belongs to.
+    /// </summary>
+    public Mod Mod { get; internal set; } = null!;
+
+    /// <summary>
     /// Script entry point, called once when the engine first becomes ready.
     /// Should be used to perform basic setup that doesn't need access to the game world.
     /// </summary>

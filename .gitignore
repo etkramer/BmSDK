@@ -25,6 +25,7 @@ mono_crash.*
 /bin/BmGame/*
 !bin/BmGame/Scripts/
 !bin/BmGame/ScriptsDev/
+!bin/BmGame/Mods/
 
 # Build results
 [Dd]ebug/

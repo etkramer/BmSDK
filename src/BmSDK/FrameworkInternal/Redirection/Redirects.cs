@@ -30,7 +30,8 @@ internal interface IGenericRedirect
 internal sealed record GlobalRedirectorInfo(
     Type TargetType,
     bool AllowSubtypes,
-    MethodInfo RedirectMethod
+    MethodInfo RedirectMethod,
+    Assembly SourceAssembly
 ) : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);

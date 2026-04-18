@@ -44,7 +44,7 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
         // Store the redirect for later use.
-        var redirInfo = new GlobalRedirectorInfo(targetType, redirAttr.AllowSubtypes, redirectMi);
+        var redirInfo = new GlobalRedirectorInfo(targetType, redirAttr.AllowSubtypes, redirectMi, redirectMi.DeclaringType!.Assembly);
 
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
@@ -138,6 +138,27 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         if (result != null && redirMethod.ReturnType != typeof(void))
         {
             MarshalUtil.ToUnmanaged(result, Result, redirMethod.ReturnType);
+        }
+    }
+
+    /// <summary>
+    /// Unregisters all global redirectors originating from the specified assembly.
+    /// </summary>
+    public void UnregisterRedirectors(Assembly asm)
+    {
+        var emptyKeys = new List<string>();
+        foreach (var (funcPath, redirects) in _globalRedirsDict)
+        {
+            redirects.RemoveAll(r => r.SourceAssembly == asm);
+            if (redirects.Count == 0)
+            {
+                emptyKeys.Add(funcPath);
+            }
+        }
+
+        foreach (var key in emptyKeys)
+        {
+            _globalRedirsDict.Remove(key);
         }
     }
 
