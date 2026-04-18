@@ -26,6 +26,9 @@ internal static class ImGuiController
         var io = ImGui.GetIO();
         var style = ImGui.GetStyle();
 
+        // Disable background transparency
+        style.Colors[(int)ImGuiCol.WindowBg].W = 1;
+
         // Load fonts
         var fontScale = 1.5f;
         unsafe

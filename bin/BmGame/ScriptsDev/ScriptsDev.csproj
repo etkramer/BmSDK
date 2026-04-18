@@ -41,7 +41,7 @@
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
     <Using Include="Tomlyn.Model" />
-    <Using Include="ImGuiNet" />
+    <Using Include="ImGuiNET" />
   </ItemGroup>
   <!-- Importing scripts -->
   <ItemGroup>

@@ -1,10 +1,24 @@
+using System.Numerics;
 using ImGuiNET;
 
+namespace DevMode;
+
 [Script]
-public class DevMode : Script
+public class DevModeScript : Script
 {
     private bool _visible;
     private bool _wasVisible;
+
+    private readonly List<Widget> _widgets = [];
+
+    public override void Main() => OnLoad();
+
+    public override void OnLoad()
+    {
+        _widgets.Add(new MenuBar());
+
+        base.OnLoad();
+    }
 
     public override void OnGUI()
     {
@@ -33,6 +47,11 @@ public class DevMode : Script
 
             // Do ImGui layout
             ImGui.ShowDemoWindow();
+            ImGui.ShowAboutWindow();
+            foreach (var widget in _widgets)
+            {
+                widget.OnGUI();
+            }
 
             _wasVisible = true;
         }
