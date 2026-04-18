@@ -1,6 +1,3 @@
-using System.Numerics;
-using ImGuiNET;
-
 namespace DevMode;
 
 [Script]
@@ -9,6 +6,7 @@ public class DevModeScript : Script
     private bool _visible;
     private bool _wasVisible;
 
+    private readonly FreeCamera _freeCamera = new();
     private readonly List<Widget> _widgets = [];
 
     public override void Main() => OnLoad();
@@ -33,17 +31,22 @@ public class DevModeScript : Script
 
         if (_visible)
         {
-            // Block input from reaching the game while tools are visible
-            io.WantCaptureMouse = true;
-            io.WantCaptureKeyboard = true;
-            io.MouseDrawCursor = true;
-
             // Enter dev mode
             if (!_wasVisible)
             {
                 // Pause world
                 worldInfo.Pauser = controller.PlayerReplicationInfo;
+
+                // Block input from reaching the game while tools are visible
+                io.WantCaptureMouse = true;
+                io.WantCaptureKeyboard = true;
+
+                // Enable free camera
+                _freeCamera.Activate(controller.PlayerCamera);
             }
+
+            // Update free camera controls
+            _freeCamera.Update(controller.PlayerCamera, io);
 
             // Do ImGui layout
             ImGui.ShowDemoWindow();
@@ -60,13 +63,16 @@ public class DevModeScript : Script
             // Exit dev mode
             if (_wasVisible)
             {
-                // Unpause world
-                worldInfo.Pauser = null;
+                // Disable free camera
+                _freeCamera.Deactivate(controller.PlayerCamera);
 
                 // Stop blocking input
                 io.MouseDrawCursor = false;
                 io.WantCaptureKeyboard = false;
                 io.WantCaptureMouse = false;
+
+                // Unpause world
+                worldInfo.Pauser = null;
 
                 _wasVisible = false;
             }
