@@ -24,7 +24,7 @@ public partial class Class
     /// <summary>
     /// Gets the default object for this class.
     /// </summary>
-    public unsafe GameObject DefaultObject
+    public new unsafe GameObject DefaultObject
     {
         get
         {
