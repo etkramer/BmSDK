@@ -1,12 +1,9 @@
 using System.Numerics;
-using System.Runtime.InteropServices;
 using ImGuiNET;
 using Silk.NET.Direct3D9;
 using Silk.NET.Maths;
-using Windows.Win32;
-using Windows.Win32.Foundation;
 
-namespace BmSDK.DevMode;
+namespace BmSDK.Framework;
 
 internal static class DX9Backend
 {
@@ -56,9 +53,10 @@ internal static class DX9Backend
                 return;
             }
 
-            s_originalDirect3DCreate9 = DetourHelper.CreateDetour<Direct3DCreate9Delegate>(
+            s_originalDirect3DCreate9 = DetourUtil.NewDetour<Direct3DCreate9Delegate>(
                 createAddr,
-                Direct3DCreate9Hook
+                Direct3DCreate9Hook,
+                false
             );
         }
         catch
@@ -78,9 +76,10 @@ internal static class DX9Backend
                 var d3d9 = (IDirect3D9*)result;
                 var createDeviceAddr = (nint)d3d9->LpVtbl[16];
 
-                s_originalCreateDevice = DetourHelper.CreateDetour<D3D9CreateDeviceDelegate>(
+                s_originalCreateDevice = DetourUtil.NewDetour<D3D9CreateDeviceDelegate>(
                     createDeviceAddr,
-                    D3D9CreateDeviceHook
+                    D3D9CreateDeviceHook,
+                    false
                 );
             }
             catch
@@ -112,16 +111,22 @@ internal static class DX9Backend
             ppReturnedDeviceInterface
         );
 
-        if (hr >= 0 && ppReturnedDeviceInterface != null && *ppReturnedDeviceInterface != 0 && s_originalEndScene == null)
+        if (
+            hr >= 0
+            && ppReturnedDeviceInterface != null
+            && *ppReturnedDeviceInterface != 0
+            && s_originalEndScene == null
+        )
         {
             try
             {
-                var device = (IDirect3DDevice9*)(*ppReturnedDeviceInterface);
+                var device = (IDirect3DDevice9*)*ppReturnedDeviceInterface;
                 var endSceneAddr = (nint)device->LpVtbl[42];
 
-                s_originalEndScene = DetourHelper.CreateDetour<EndSceneDelegate>(
+                s_originalEndScene = DetourUtil.NewDetour<EndSceneDelegate>(
                     endSceneAddr,
-                    EndSceneHook
+                    EndSceneHook,
+                    false
                 );
             }
             catch
@@ -171,6 +176,8 @@ internal static class DX9Backend
         {
             return;
         }
+
+        ImGuiController.Hwnd = s_hwnd;
 
         if (!ImGuiController.TryInitialize())
         {
@@ -253,30 +260,22 @@ internal static class DX9Backend
 
     private static unsafe void RenderFrame(nint devicePtr)
     {
-        var device = (IDirect3DDevice9*)devicePtr;
-
-        PInvoke.GetClientRect(new HWND(s_hwnd), out var clientRect);
-        var width = clientRect.right - clientRect.left;
-        var height = clientRect.bottom - clientRect.top;
-
-        if (width <= 0 || height <= 0)
+        lock (ImGuiController.RenderLock)
         {
-            return;
-        }
+            ImGuiController.SetContext();
+            var drawData = ImGui.GetDrawData();
+            if (!drawData.Valid || drawData.CmdListsCount == 0)
+            {
+                return;
+            }
 
-        ImGuiController.NewFrame(width, height);
+            var device = (IDirect3DDevice9*)devicePtr;
+            SetupRenderState(device, drawData);
 
-        var drawData = ImGui.GetDrawData();
-        if (!drawData.Valid || drawData.CmdListsCount == 0)
-        {
-            return;
-        }
-
-        SetupRenderState(device, drawData);
-
-        for (var n = 0; n < drawData.CmdListsCount; n++)
-        {
-            RenderDrawList(device, drawData.CmdLists[n]);
+            for (var n = 0; n < drawData.CmdListsCount; n++)
+            {
+                RenderDrawList(device, drawData.CmdLists[n]);
+            }
         }
     }
 

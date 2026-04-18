@@ -41,6 +41,12 @@ public abstract class Script
     public virtual void OnTick() { }
 
     /// <summary>
+    /// Called every frame from the render thread, during the ImGui render pass.
+    /// This is the only place where you can use ImGui methods.
+    /// </summary>
+    public virtual void OnGUI() { }
+
+    /// <summary>
     /// Called every time a key is pressed.
     /// </summary>
     public virtual void OnKeyDown(Keys key) { }

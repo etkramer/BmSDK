@@ -1,9 +1,7 @@
-namespace BmSDK.DevMode;
+namespace BmSDK.Framework;
 
-public static class DevMode
+internal static class ImGuiBackend
 {
-    internal static bool IsVisible { get; private set; }
-
     public static void Init()
     {
         DX9Backend.TryInstall();
@@ -13,10 +11,5 @@ public static class DevMode
     public static bool WndProc(nint hWnd, uint msg, nuint wParam, nint lParam)
     {
         return ImGuiInput.ProcessMessage(hWnd, msg, wParam, lParam);
-    }
-
-    internal static void Toggle()
-    {
-        IsVisible = !IsVisible;
     }
 }

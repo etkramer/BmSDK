@@ -25,12 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BmSDK.DevMode\BmSDK.DevMode.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Basic.Reference.Assemblies.Net100" Version="1.8.4" />
     <PackageReference Include="Detours.Win32Metadata" Version="4.0.1.18" />
+    <PackageReference Include="ImGui.NET" Version="1.91.0.1" />
+    <PackageReference Include="Silk.NET.Direct3D9" Version="2.23.0" />
+    <PackageReference Include="Silk.NET.Direct3D11" Version="2.23.0" />
     <PackageReference Include="Microsoft.CodeAnalysis" Version="5.0.0" />
     <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.269">
       <PrivateAssets>all</PrivateAssets>

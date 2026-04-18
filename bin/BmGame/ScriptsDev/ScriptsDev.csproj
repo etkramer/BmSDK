@@ -31,11 +31,17 @@
       <HintPath>.\..\..\Binaries\Win32\sdk\Tomlyn.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <!-- ImGui.NET -->
+    <Reference Include="ImGui.NET">
+      <HintPath>.\..\..\Binaries\Win32\sdk\ImGui.NET.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
   <!-- Global imports-->
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
     <Using Include="Tomlyn.Model" />
+    <Using Include="ImGuiNet" />
   </ItemGroup>
   <!-- Importing scripts -->
   <ItemGroup>

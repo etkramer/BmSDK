@@ -1,15 +1,12 @@
 using System.Numerics;
-using System.Runtime.InteropServices;
 using System.Text;
 using ImGuiNET;
 using Silk.NET.Core.Native;
 using Silk.NET.Direct3D11;
 using Silk.NET.DXGI;
 using Silk.NET.Maths;
-using Windows.Win32;
-using Windows.Win32.Foundation;
 
-namespace BmSDK.DevMode;
+namespace BmSDK.Framework;
 
 internal static class DX11Backend
 {
@@ -85,21 +82,21 @@ internal static class DX11Backend
             var createFactory = GetProcAddress(dxgi, "CreateDXGIFactory");
             if (createFactory != 0)
             {
-                s_originalCreateDXGIFactory =
-                    DetourHelper.CreateDetour<CreateDXGIFactoryDelegate>(
-                        createFactory,
-                        CreateDXGIFactoryHook
-                    );
+                s_originalCreateDXGIFactory = DetourUtil.NewDetour<CreateDXGIFactoryDelegate>(
+                    createFactory,
+                    CreateDXGIFactoryHook,
+                    false
+                );
             }
 
             var createFactory1 = GetProcAddress(dxgi, "CreateDXGIFactory1");
             if (createFactory1 != 0)
             {
-                s_originalCreateDXGIFactory1 =
-                    DetourHelper.CreateDetour<CreateDXGIFactoryDelegate>(
-                        createFactory1,
-                        CreateDXGIFactory1Hook
-                    );
+                s_originalCreateDXGIFactory1 = DetourUtil.NewDetour<CreateDXGIFactoryDelegate>(
+                    createFactory1,
+                    CreateDXGIFactory1Hook,
+                    false
+                );
             }
         }
         catch
@@ -115,6 +112,7 @@ internal static class DX11Backend
         {
             HookCreateSwapChain(*ppFactory);
         }
+
         return hr;
     }
 
@@ -125,6 +123,7 @@ internal static class DX11Backend
         {
             HookCreateSwapChain(*ppFactory);
         }
+
         return hr;
     }
 
@@ -140,9 +139,10 @@ internal static class DX11Backend
             var factory = (IDXGIFactory*)factoryPtr;
             var createSwapChainAddr = (nint)factory->LpVtbl[10];
 
-            s_originalCreateSwapChain = DetourHelper.CreateDetour<CreateSwapChainDelegate>(
+            s_originalCreateSwapChain = DetourUtil.NewDetour<CreateSwapChainDelegate>(
                 createSwapChainAddr,
-                CreateSwapChainHook
+                CreateSwapChainHook,
+                false
             );
         }
         catch
@@ -164,12 +164,13 @@ internal static class DX11Backend
         {
             try
             {
-                var swapChain = (IDXGISwapChain*)(*ppSwapChain);
+                var swapChain = (IDXGISwapChain*)*ppSwapChain;
                 var presentAddr = (nint)swapChain->LpVtbl[8];
 
-                s_originalPresent = DetourHelper.CreateDetour<PresentDelegate>(
+                s_originalPresent = DetourUtil.NewDetour<PresentDelegate>(
                     presentAddr,
-                    PresentHook
+                    PresentHook,
+                    false
                 );
             }
             catch
@@ -232,6 +233,7 @@ internal static class DX11Backend
         s_device = (nint)device;
         s_context = (nint)ctx;
         s_hwnd = desc.OutputWindow;
+        ImGuiController.Hwnd = s_hwnd;
 
         if (!CreateDeviceObjects())
         {
@@ -280,6 +282,7 @@ internal static class DX11Backend
             {
                 errBlob->Release();
             }
+
             if (hr < 0)
             {
                 return false;
@@ -296,6 +299,7 @@ internal static class DX11Backend
             vsBlob->Release();
             return false;
         }
+
         s_vertexShader = (nint)vs;
 
         // Create input layout
@@ -330,6 +334,7 @@ internal static class DX11Backend
             {
                 return false;
             }
+
             s_inputLayout = (nint)il;
         }
 
@@ -363,6 +368,7 @@ internal static class DX11Backend
             {
                 errBlob->Release();
             }
+
             if (hr < 0)
             {
                 return false;
@@ -381,6 +387,7 @@ internal static class DX11Backend
         {
             return false;
         }
+
         s_pixelShader = (nint)ps;
 
         // Create constant buffer
@@ -397,6 +404,7 @@ internal static class DX11Backend
         {
             return false;
         }
+
         s_constantBuffer = (nint)cb;
 
         // Create blend state
@@ -418,6 +426,7 @@ internal static class DX11Backend
         {
             return false;
         }
+
         s_blendState = (nint)bs;
 
         // Create rasterizer state
@@ -434,6 +443,7 @@ internal static class DX11Backend
         {
             return false;
         }
+
         s_rasterizerState = (nint)rs;
 
         // Create depth stencil state
@@ -450,6 +460,7 @@ internal static class DX11Backend
         {
             return false;
         }
+
         s_depthStencilState = (nint)ds;
 
         CreateFontTexture();
@@ -508,6 +519,7 @@ internal static class DX11Backend
         {
             return;
         }
+
         s_fontTextureSRV = (nint)srv;
 
         var sampDesc = new SamplerDesc
@@ -524,6 +536,7 @@ internal static class DX11Backend
         {
             return;
         }
+
         s_fontSampler = (nint)sampler;
 
         io.Fonts.SetTexID((nint)srv);
@@ -531,166 +544,161 @@ internal static class DX11Backend
 
     private static unsafe void RenderFrame(nint swapChainPtr)
     {
-        var swapChain = (IDXGISwapChain*)swapChainPtr;
-        var device = (ID3D11Device*)s_device;
-        var ctx = (ID3D11DeviceContext*)s_context;
-
-        PInvoke.GetClientRect(new HWND(s_hwnd), out var clientRect);
-        var width = clientRect.right - clientRect.left;
-        var height = clientRect.bottom - clientRect.top;
-
-        if (width <= 0 || height <= 0)
+        lock (ImGuiController.RenderLock)
         {
-            return;
-        }
-
-        ImGuiController.NewFrame(width, height);
-
-        var drawData = ImGui.GetDrawData();
-        if (!drawData.Valid || drawData.CmdListsCount == 0)
-        {
-            return;
-        }
-
-        // Get back buffer and create RTV
-        var texIid = ID3D11Texture2D.Guid;
-        void* backBuf;
-        var hr = swapChain->GetBuffer(0, &texIid, &backBuf);
-        if (hr < 0)
-        {
-            return;
-        }
-
-        ID3D11RenderTargetView* rtv;
-        var result = device->CreateRenderTargetView((ID3D11Resource*)backBuf, null, &rtv);
-        ((ID3D11Texture2D*)backBuf)->Release();
-        if (result < 0)
-        {
-            return;
-        }
-
-        EnsureBuffers(drawData);
-
-        // Update constant buffer with projection matrix
-        var L = drawData.DisplayPos.X;
-        var R = drawData.DisplayPos.X + drawData.DisplaySize.X;
-        var T = drawData.DisplayPos.Y;
-        var B = drawData.DisplayPos.Y + drawData.DisplaySize.Y;
-
-        var mvp = stackalloc float[16];
-        mvp[0] = 2.0f / (R - L);
-        mvp[1] = 0;
-        mvp[2] = 0;
-        mvp[3] = 0;
-        mvp[4] = 0;
-        mvp[5] = 2.0f / (T - B);
-        mvp[6] = 0;
-        mvp[7] = 0;
-        mvp[8] = 0;
-        mvp[9] = 0;
-        mvp[10] = 0.5f;
-        mvp[11] = 0;
-        mvp[12] = (R + L) / (L - R);
-        mvp[13] = (T + B) / (B - T);
-        mvp[14] = 0.5f;
-        mvp[15] = 1.0f;
-
-        MappedSubresource mapped;
-        result = ctx->Map((ID3D11Resource*)s_constantBuffer, 0, Map.WriteDiscard, 0, &mapped);
-        if (result >= 0)
-        {
-            Buffer.MemoryCopy(mvp, mapped.PData, 64, 64);
-            ctx->Unmap((ID3D11Resource*)s_constantBuffer, 0);
-        }
-
-        // Upload vertex data
-        MappedSubresource vtxMapped;
-        result = ctx->Map((ID3D11Resource*)s_vertexBuffer, 0, Map.WriteDiscard, 0, &vtxMapped);
-        if (result >= 0)
-        {
-            var totalVtxBytes = drawData.TotalVtxCount * sizeof(ImDrawVert);
-            var dst = (byte*)vtxMapped.PData;
-            for (var n = 0; n < drawData.CmdListsCount; n++)
+            ImGuiController.SetContext();
+            var drawData = ImGui.GetDrawData();
+            if (!drawData.Valid || drawData.CmdListsCount == 0)
             {
-                var cmdList = drawData.CmdLists[n];
-                Buffer.MemoryCopy(
-                    (void*)cmdList.VtxBuffer.Data,
-                    dst,
-                    totalVtxBytes,
-                    cmdList.VtxBuffer.Size * sizeof(ImDrawVert)
-                );
-                dst += cmdList.VtxBuffer.Size * sizeof(ImDrawVert);
+                return;
             }
-            ctx->Unmap((ID3D11Resource*)s_vertexBuffer, 0);
-        }
 
-        // Upload index data
-        MappedSubresource idxMapped;
-        result = ctx->Map((ID3D11Resource*)s_indexBuffer, 0, Map.WriteDiscard, 0, &idxMapped);
-        if (result >= 0)
-        {
-            var totalIdxBytes = drawData.TotalIdxCount * sizeof(ushort);
-            var dst = (byte*)idxMapped.PData;
-            for (var n = 0; n < drawData.CmdListsCount; n++)
+            var swapChain = (IDXGISwapChain*)swapChainPtr;
+            var device = (ID3D11Device*)s_device;
+            var ctx = (ID3D11DeviceContext*)s_context;
+
+            // Get back buffer and create RTV
+            var texIid = ID3D11Texture2D.Guid;
+            void* backBuf;
+            var hr = swapChain->GetBuffer(0, &texIid, &backBuf);
+            if (hr < 0)
             {
-                var cmdList = drawData.CmdLists[n];
-                Buffer.MemoryCopy(
-                    (void*)cmdList.IdxBuffer.Data,
-                    dst,
-                    totalIdxBytes,
-                    cmdList.IdxBuffer.Size * sizeof(ushort)
-                );
-                dst += cmdList.IdxBuffer.Size * sizeof(ushort);
+                return;
             }
-            ctx->Unmap((ID3D11Resource*)s_indexBuffer, 0);
-        }
 
-        // Set pipeline state
-        SetupRenderState(ctx, rtv, drawData);
-
-        // Draw
-        var vtxOffset = 0;
-        var idxOffset = 0;
-        var clipOff = drawData.DisplayPos;
-
-        for (var n = 0; n < drawData.CmdListsCount; n++)
-        {
-            var cmdList = drawData.CmdLists[n];
-            for (var cmdIdx = 0; cmdIdx < cmdList.CmdBuffer.Size; cmdIdx++)
+            ID3D11RenderTargetView* rtv;
+            var result = device->CreateRenderTargetView((ID3D11Resource*)backBuf, null, &rtv);
+            ((ID3D11Texture2D*)backBuf)->Release();
+            if (result < 0)
             {
-                var cmd = cmdList.CmdBuffer[cmdIdx];
-                if (cmd.UserCallback != 0)
+                return;
+            }
+
+            EnsureBuffers(drawData);
+
+            // Update constant buffer with projection matrix
+            var L = drawData.DisplayPos.X;
+            var R = drawData.DisplayPos.X + drawData.DisplaySize.X;
+            var T = drawData.DisplayPos.Y;
+            var B = drawData.DisplayPos.Y + drawData.DisplaySize.Y;
+
+            var mvp = stackalloc float[16];
+            mvp[0] = 2.0f / (R - L);
+            mvp[1] = 0;
+            mvp[2] = 0;
+            mvp[3] = 0;
+            mvp[4] = 0;
+            mvp[5] = 2.0f / (T - B);
+            mvp[6] = 0;
+            mvp[7] = 0;
+            mvp[8] = 0;
+            mvp[9] = 0;
+            mvp[10] = 0.5f;
+            mvp[11] = 0;
+            mvp[12] = (R + L) / (L - R);
+            mvp[13] = (T + B) / (B - T);
+            mvp[14] = 0.5f;
+            mvp[15] = 1.0f;
+
+            MappedSubresource mapped;
+            result = ctx->Map((ID3D11Resource*)s_constantBuffer, 0, Map.WriteDiscard, 0, &mapped);
+            if (result >= 0)
+            {
+                Buffer.MemoryCopy(mvp, mapped.PData, 64, 64);
+                ctx->Unmap((ID3D11Resource*)s_constantBuffer, 0);
+            }
+
+            // Upload vertex data
+            MappedSubresource vtxMapped;
+            result = ctx->Map((ID3D11Resource*)s_vertexBuffer, 0, Map.WriteDiscard, 0, &vtxMapped);
+            if (result >= 0)
+            {
+                var totalVtxBytes = drawData.TotalVtxCount * sizeof(ImDrawVert);
+                var dst = (byte*)vtxMapped.PData;
+                for (var n = 0; n < drawData.CmdListsCount; n++)
                 {
-                    continue;
+                    var cmdList = drawData.CmdLists[n];
+                    Buffer.MemoryCopy(
+                        (void*)cmdList.VtxBuffer.Data,
+                        dst,
+                        totalVtxBytes,
+                        cmdList.VtxBuffer.Size * sizeof(ImDrawVert)
+                    );
+                    dst += cmdList.VtxBuffer.Size * sizeof(ImDrawVert);
                 }
 
-                var scissor = new Box2D<int>(
-                    new Vector2D<int>(
-                        (int)(cmd.ClipRect.X - clipOff.X),
-                        (int)(cmd.ClipRect.Y - clipOff.Y)
-                    ),
-                    new Vector2D<int>(
-                        (int)(cmd.ClipRect.Z - clipOff.X),
-                        (int)(cmd.ClipRect.W - clipOff.Y)
-                    )
-                );
-                ctx->RSSetScissorRects(1, &scissor);
-
-                var texSrv = (ID3D11ShaderResourceView*)cmd.TextureId;
-                ctx->PSSetShaderResources(0, 1, &texSrv);
-
-                ctx->DrawIndexed(
-                    cmd.ElemCount,
-                    (uint)(cmd.IdxOffset + idxOffset),
-                    (int)(cmd.VtxOffset + vtxOffset)
-                );
+                ctx->Unmap((ID3D11Resource*)s_vertexBuffer, 0);
             }
 
-            vtxOffset += cmdList.VtxBuffer.Size;
-            idxOffset += cmdList.IdxBuffer.Size;
-        }
+            // Upload index data
+            MappedSubresource idxMapped;
+            result = ctx->Map((ID3D11Resource*)s_indexBuffer, 0, Map.WriteDiscard, 0, &idxMapped);
+            if (result >= 0)
+            {
+                var totalIdxBytes = drawData.TotalIdxCount * sizeof(ushort);
+                var dst = (byte*)idxMapped.PData;
+                for (var n = 0; n < drawData.CmdListsCount; n++)
+                {
+                    var cmdList = drawData.CmdLists[n];
+                    Buffer.MemoryCopy(
+                        (void*)cmdList.IdxBuffer.Data,
+                        dst,
+                        totalIdxBytes,
+                        cmdList.IdxBuffer.Size * sizeof(ushort)
+                    );
+                    dst += cmdList.IdxBuffer.Size * sizeof(ushort);
+                }
 
-        rtv->Release();
+                ctx->Unmap((ID3D11Resource*)s_indexBuffer, 0);
+            }
+
+            // Set pipeline state
+            SetupRenderState(ctx, rtv, drawData);
+
+            // Draw
+            var vtxOffset = 0;
+            var idxOffset = 0;
+            var clipOff = drawData.DisplayPos;
+
+            for (var n = 0; n < drawData.CmdListsCount; n++)
+            {
+                var cmdList = drawData.CmdLists[n];
+                for (var cmdIdx = 0; cmdIdx < cmdList.CmdBuffer.Size; cmdIdx++)
+                {
+                    var cmd = cmdList.CmdBuffer[cmdIdx];
+                    if (cmd.UserCallback != 0)
+                    {
+                        continue;
+                    }
+
+                    var scissor = new Box2D<int>(
+                        new Vector2D<int>(
+                            (int)(cmd.ClipRect.X - clipOff.X),
+                            (int)(cmd.ClipRect.Y - clipOff.Y)
+                        ),
+                        new Vector2D<int>(
+                            (int)(cmd.ClipRect.Z - clipOff.X),
+                            (int)(cmd.ClipRect.W - clipOff.Y)
+                        )
+                    );
+                    ctx->RSSetScissorRects(1, &scissor);
+
+                    var texSrv = (ID3D11ShaderResourceView*)cmd.TextureId;
+                    ctx->PSSetShaderResources(0, 1, &texSrv);
+
+                    ctx->DrawIndexed(
+                        cmd.ElemCount,
+                        (uint)(cmd.IdxOffset + idxOffset),
+                        (int)(cmd.VtxOffset + vtxOffset)
+                    );
+                }
+
+                vtxOffset += cmdList.VtxBuffer.Size;
+                idxOffset += cmdList.IdxBuffer.Size;
+            }
+
+            rtv->Release();
+        }
     }
 
     private static unsafe void SetupRenderState(
@@ -746,6 +754,7 @@ internal static class DX11Backend
             {
                 ((ID3D11Buffer*)s_vertexBuffer)->Release();
             }
+
             s_vertexBufferSize = drawData.TotalVtxCount + 5000;
             var desc = new BufferDesc
             {
@@ -765,6 +774,7 @@ internal static class DX11Backend
             {
                 ((ID3D11Buffer*)s_indexBuffer)->Release();
             }
+
             s_indexBufferSize = drawData.TotalIdxCount + 10000;
             var desc = new BufferDesc
             {

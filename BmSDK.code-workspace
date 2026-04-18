@@ -128,7 +128,7 @@
         "request": "launch",
         "preLaunchTask": "Build",
         "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
-        "args": ["-nosplash", "-d3d11"],
+        "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
         "logging": {
           "exceptions": false,

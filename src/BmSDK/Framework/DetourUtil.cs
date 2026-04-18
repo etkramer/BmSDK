@@ -9,14 +9,14 @@ public static class DetourUtil
     private static readonly List<Delegate> s_detourDelegateRefs = [];
 
     // Creates a detour and returns the original function
-    public static unsafe T NewDetour<T>(IntPtr funcOffset, T detourFunc)
+    public static unsafe T NewDetour<T>(IntPtr funcOffset, T detourFunc, bool isOffset = true)
         where T : Delegate
     {
-        void* origFuncPtr = MemUtil.GetPointer(funcOffset);
+        var origFuncPtr = isOffset ? MemUtil.GetPointer(funcOffset) : (void*)funcOffset;
 
         // Get a pointer to the managed detour method
         s_detourDelegateRefs.Add(detourFunc);
-        void* managedDetourFuncPtr = Marshal.GetFunctionPointerForDelegate(detourFunc).ToPointer();
+        var managedDetourFuncPtr = Marshal.GetFunctionPointerForDelegate(detourFunc).ToPointer();
 
         PInvokeDetours.DetourRestoreAfterWith();
 

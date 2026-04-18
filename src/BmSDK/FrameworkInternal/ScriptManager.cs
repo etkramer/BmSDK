@@ -33,6 +33,8 @@ internal static class ScriptManager
         MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
         // Tomlyn.dll
         MetadataReference.CreateFromFile(typeof(Tomlyn.TomlSerializer).Assembly.Location),
+        // ImGui.NET.dll
+        MetadataReference.CreateFromFile(typeof(ImGuiNET.ImGui).Assembly.Location),
     ];
     public const string GlobalUsings = """
         global using global::System;
@@ -45,6 +47,7 @@ internal static class ScriptManager
 
         global using global::BmSDK.Framework;
         global using global::Tomlyn.Model;
+        global using global::ImGuiNET;
         """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
     public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(

@@ -39,11 +39,20 @@ internal static class Loader
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
-        // Init dev mode
-        DevMode.DevMode.Init();
+        // Init ImGui rendering backend
+        ImGuiBackend.Init();
 
         // Find/load scripts
         ScriptManager.Init();
+
+        // Wire up script OnGUI callbacks for ImGui rendering
+        ImGuiController.OnGUI = () =>
+        {
+            foreach (var script in ScriptManager.Scripts)
+            {
+                script.OnGUI();
+            }
+        };
 
         // Create function detours
         _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
@@ -76,8 +85,15 @@ internal static class Loader
 
     private static IntPtr EngineTickDetour(IntPtr self)
     {
-        // Run the scheduled callbacks
+        // Run any scheduled callbacks
         EngineSynchronizationContext.Instance.ExecutePending();
+
+        // Poll for input changes
+        InputManager.Tick();
+
+        // Run ImGui frame (NewFrame → OnGUI → EndFrame) on the game thread
+        ImGuiController.Tick();
+
         return _EngineTickDetourBase!.Invoke(self);
     }
 
@@ -128,7 +144,6 @@ internal static class Loader
             if (funcName == TickFuncName)
             {
                 // Tick framework stuff
-                InputManager.Tick();
                 GameWindow.Tick();
 
                 // Call OnTick() for scripts
