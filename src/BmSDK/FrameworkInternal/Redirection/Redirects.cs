@@ -27,6 +27,7 @@ internal interface IGenericRedirect
 /// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
 /// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
+/// <param name="SourceAssembly">Mod which registered this redirect</param>
 internal sealed record GlobalRedirectorInfo(
     Type TargetType,
     bool AllowSubtypes,
