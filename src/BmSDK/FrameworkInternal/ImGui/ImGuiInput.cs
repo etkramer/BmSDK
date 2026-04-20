@@ -1,5 +1,6 @@
 using ImGuiNET;
 using Windows.Win32;
+using Windows.Win32.UI.Input.KeyboardAndMouse;
 
 namespace BmSDK.Framework;
 
@@ -68,6 +69,7 @@ internal static class ImGuiInput
             case PInvoke.WM_KEYDOWN:
             case PInvoke.WM_SYSKEYDOWN:
             {
+                UpdateKeyModifiers(io);
                 var key = VkToImGuiKey((int)wParam);
                 if (key != ImGuiKey.None)
                 {
@@ -79,6 +81,7 @@ internal static class ImGuiInput
             case PInvoke.WM_KEYUP:
             case PInvoke.WM_SYSKEYUP:
             {
+                UpdateKeyModifiers(io);
                 var key = VkToImGuiKey((int)wParam);
                 if (key != ImGuiKey.None)
                 {
@@ -113,6 +116,16 @@ internal static class ImGuiInput
                 or PInvoke.WM_CHAR
                 or PInvoke.WM_SYSKEYDOWN
                 or PInvoke.WM_SYSKEYUP;
+
+    private static bool IsVkDown(VIRTUAL_KEY vk) => (PInvoke.GetKeyState((int)vk) & 0x8000) != 0;
+
+    private static void UpdateKeyModifiers(ImGuiIOPtr io)
+    {
+        io.AddKeyEvent(ImGuiKey.ModCtrl, IsVkDown(VIRTUAL_KEY.VK_CONTROL));
+        io.AddKeyEvent(ImGuiKey.ModShift, IsVkDown(VIRTUAL_KEY.VK_SHIFT));
+        io.AddKeyEvent(ImGuiKey.ModAlt, IsVkDown(VIRTUAL_KEY.VK_MENU));
+        io.AddKeyEvent(ImGuiKey.ModSuper, IsVkDown(VIRTUAL_KEY.VK_LWIN) || IsVkDown(VIRTUAL_KEY.VK_RWIN));
+    }
 
     private static ImGuiKey VkToImGuiKey(int vk) =>
         vk switch
