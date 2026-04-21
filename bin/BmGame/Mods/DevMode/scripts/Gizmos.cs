@@ -58,7 +58,7 @@ public static class Gizmos
         RotationBasis(rotation, out var fwd, out var right, out var up);
 
         Span<Vector3> c = stackalloc Vector3[8];
-        for (int i = 0; i < 8; i++)
+        for (var i = 0; i < 8; i++)
         {
             var lx = (i & 1) != 0 ? localHalfExtents.X : -localHalfExtents.X;
             var ly = (i & 2) != 0 ? localHalfExtents.Y : -localHalfExtents.Y;
@@ -95,7 +95,7 @@ public static class Gizmos
         float m10 = MathF.Abs(fwd.Y), m11 = MathF.Abs(right.Y), m12 = MathF.Abs(up.Y);
         float m20 = MathF.Abs(fwd.Z), m21 = MathF.Abs(right.Z), m22 = MathF.Abs(up.Z);
 
-        float det = m00 * (m11 * m22 - m12 * m21)
+        var det = m00 * (m11 * m22 - m12 * m21)
                   - m01 * (m10 * m22 - m12 * m20)
                   + m02 * (m10 * m21 - m11 * m20);
 
@@ -104,7 +104,7 @@ public static class Gizmos
             return worldHalfExtents;
         }
 
-        float invDet = 1f / det;
+        var invDet = 1f / det;
         var w = worldHalfExtents;
 
         return new Vector3(
@@ -138,12 +138,12 @@ public static class Gizmos
 
     private static void RotationBasis(Rotator rotation, out Vector3 forward, out Vector3 right, out Vector3 up)
     {
-        float cp = MathF.Cos(rotation.Pitch * MathF.PI / 180f);
-        float sp = MathF.Sin(rotation.Pitch * MathF.PI / 180f);
-        float cy = MathF.Cos(rotation.Yaw * MathF.PI / 180f);
-        float sy = MathF.Sin(rotation.Yaw * MathF.PI / 180f);
-        float cr = MathF.Cos(rotation.Roll * MathF.PI / 180f);
-        float sr = MathF.Sin(rotation.Roll * MathF.PI / 180f);
+        var cp = MathF.Cos(rotation.Pitch * MathF.PI / 180f);
+        var sp = MathF.Sin(rotation.Pitch * MathF.PI / 180f);
+        var cy = MathF.Cos(rotation.Yaw * MathF.PI / 180f);
+        var sy = MathF.Sin(rotation.Yaw * MathF.PI / 180f);
+        var cr = MathF.Cos(rotation.Roll * MathF.PI / 180f);
+        var sr = MathF.Sin(rotation.Roll * MathF.PI / 180f);
 
         forward = new Vector3(cp * cy, cp * sy, sp);
         right = new Vector3(sr * sp * cy - cr * sy, sr * sp * sy + cr * cy, -sr * cp);

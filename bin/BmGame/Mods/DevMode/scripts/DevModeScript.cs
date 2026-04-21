@@ -65,7 +65,7 @@ public class DevModeScript : Script
             // Handle object selection on left click (when not interacting with ImGui windows)
             if (ImGui.IsMouseClicked(ImGuiMouseButton.Left) && !ImGui.IsWindowHovered(ImGuiHoveredFlags.AnyWindow))
             {
-                Selection = PickActor(io.MousePos, io.DisplaySize);
+                Selection = PickObject(io.MousePos, io.DisplaySize);
             }
 
             // Clear selection if object was unloaded
@@ -81,7 +81,12 @@ public class DevModeScript : Script
             }
 
             // Draw selection gizmos
-            if (Selection is Actor selectedActor)
+            if (Selection is PrimitiveComponent selectedComponent)
+            {
+                var bounds = selectedComponent.Bounds;
+                Gizmos.DrawWireBox(bounds.Origin, bounds.BoxExtent, default, 0xFFFFFFFF);
+            }
+            else if (Selection is Actor selectedActor)
             {
                 selectedActor.GetComponentsBoundingBox(out var box);
                 var center = (box.Min + box.Max) / 2f;
@@ -151,7 +156,7 @@ public class DevModeScript : Script
         _wasVisible = false;
     }
 
-    private Actor? PickActor(Vector2 mousePos, Vector2 displaySize)
+    private GameObject? PickObject(Vector2 mousePos, Vector2 displaySize)
     {
         var worldOrigin = _freeCamera.Position;
         var worldDirection = _freeCamera.ScreenToWorldDirection(mousePos, displaySize);
@@ -165,9 +170,14 @@ public class DevModeScript : Script
             worldOrigin,
             true,
             Vector3.Zero,
-            out _,
+            out var hitInfo,
             0
         );
+
+        if (hitActor is StaticMeshCollectionActor)
+        {
+            return hitInfo.HitComponent;
+        }
 
         return hitActor;
     }

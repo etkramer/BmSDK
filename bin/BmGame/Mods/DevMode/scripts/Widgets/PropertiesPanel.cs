@@ -297,7 +297,11 @@ public class PropertiesPanel : Widget
     {
         if (obj is Actor actor)
         {
-            actor.ForceUpdateComponents(false, true);
+            actor.ForceUpdateComponents(true);
+        }
+        else if (obj is ActorComponent component)
+        {
+            component.ForceUpdate(false);
         }
     }
 }
