@@ -78,7 +78,7 @@ public class PropertiesPanel : Widget
                 continue;
             }
 
-            var flags = structDef == obj.Class ? ImGuiTreeNodeFlags.DefaultOpen : ImGuiTreeNodeFlags.None;
+            var flags = (structDef == obj.Class ? ImGuiTreeNodeFlags.DefaultOpen : ImGuiTreeNodeFlags.None) | ImGuiTreeNodeFlags.SpanFullWidth;
             var category = structDef.Name.ToString();
             if (ImGui.CollapsingHeader(category, flags))
             {
