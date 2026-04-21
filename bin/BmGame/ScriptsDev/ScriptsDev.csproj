@@ -36,6 +36,11 @@
       <HintPath>.\..\..\Binaries\Win32\sdk\Hexa.NET.ImGui.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <!-- Hexa.NET.ImGuizmo -->
+    <Reference Include="Hexa.NET.ImGuizmo">
+      <HintPath>.\..\..\Binaries\Win32\sdk\Hexa.NET.ImGuizmo.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <!-- System.Reactive -->
     <Reference Include="System.Reactive">
       <HintPath>.\..\..\Binaries\Win32\sdk\System.Reactive.dll</HintPath>

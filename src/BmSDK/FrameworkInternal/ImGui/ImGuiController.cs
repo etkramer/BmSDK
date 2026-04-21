@@ -1,4 +1,5 @@
 using Hexa.NET.ImGui;
+using Hexa.NET.ImGuizmo;
 
 namespace BmSDK.Framework;
 
@@ -22,11 +23,13 @@ internal static class ImGuiController
         var sdkPath = Path.Combine(FileUtils.GetBinariesPath(), "sdk");
         var runtimesPath = Path.Combine(sdkPath, "runtimes", "win-x86", "native");
         NativeLibrary.Load(Path.Combine(runtimesPath, "cimgui.dll"));
+        NativeLibrary.Load(Path.Combine(runtimesPath, "cimguizmo.dll"));
         NativeLibrary.Load(Path.Combine(runtimesPath, "ImGuiImpl.dll"));
 
         // Create context
         s_context = ImGui.CreateContext();
         ImGui.SetCurrentContext(s_context);
+        ImGuizmo.SetImGuiContext(s_context);
 
         var io = ImGui.GetIO();
         var style = ImGui.GetStyle();

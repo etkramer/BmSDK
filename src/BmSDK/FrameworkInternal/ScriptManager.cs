@@ -35,6 +35,8 @@ internal static class ScriptManager
         MetadataReference.CreateFromFile(typeof(Tomlyn.TomlSerializer).Assembly.Location),
         // Hexa.NET.ImGui.dll
         MetadataReference.CreateFromFile(typeof(Hexa.NET.ImGui.ImGui).Assembly.Location),
+        // Hexa.NET.ImGuizmo.dll
+        MetadataReference.CreateFromFile(typeof(Hexa.NET.ImGuizmo.ImGuizmo).Assembly.Location),
         // System.Reactive.dll
         MetadataReference.CreateFromFile(typeof(System.Reactive.Linq.Observable).Assembly.Location),
     ];

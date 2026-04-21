@@ -56,6 +56,12 @@ public class DevModeScript : Script
                 EnterDevMode();
             }
 
+            // Clear selection if object was unloaded
+            if (Selection is { IsValid: false })
+            {
+                Selection = null;
+            }
+
             // Snapshot camera state for gizmos before updating (matches the rendered scene)
             Gizmos.Begin(_freeCamera, io.DisplaySize);
 
@@ -68,8 +74,8 @@ public class DevModeScript : Script
                 Selection = PickObject(io.MousePos, io.DisplaySize);
             }
 
-            // Clear selection if object was unloaded
-            if (Selection is { IsValid: false })
+            // Handle object deselect on Esc
+            if (ImGui.IsKeyPressed(ImGuiKey.Escape))
             {
                 Selection = null;
             }
@@ -88,8 +94,11 @@ public class DevModeScript : Script
             }
             else if (Selection is Actor selectedActor)
             {
-                var (center, extents) = Gizmos.ComputeLocalBounds(selectedActor);
-                Gizmos.DrawWireBox(center, extents, selectedActor.Rotation, 0xFFFFFFFF);
+                selectedActor.GetComponentsBoundingBox(out var box);
+                var boxOrigin = (box.Min + box.Max) / 2f;
+                var boxExtent = (box.Max - box.Min) / 2f;
+                
+                Gizmos.DrawWireBox(boxOrigin, boxExtent, selectedActor.Rotation, 0xFFFFFFFF);
             }
 
             _wasVisible = true;
