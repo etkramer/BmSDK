@@ -48,6 +48,7 @@ internal static class Loader
         // Wire up script OnGUI callbacks for ImGui rendering
         ImGuiController.OnGUI = () =>
         {
+            // Call OnGUI() for scripts
             foreach (var script in ScriptManager.Scripts)
             {
                 script.OnGUI();

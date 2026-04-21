@@ -1,5 +1,6 @@
 using System.Numerics;
 using BmSDK;
+using BmSDK.BmGame;
 using BmSDK.Engine;
 
 namespace DevMode;
@@ -274,6 +275,7 @@ public class PropertiesPanel : Widget
                     ptr[1] = (byte)(color.Y * 255f);
                     ptr[2] = (byte)(color.X * 255f);
                     ptr[3] = (byte)(color.W * 255f);
+                    OnPropertyEdited(obj);
                 }
 
                 break;
@@ -281,7 +283,11 @@ public class PropertiesPanel : Widget
             case "LinearColor":
             {
                 PropertyLabel(label, labelWidth, tooltip);
-                ImGui.ColorEdit4($"##{label}", ref *(Vector4*)(obj.Ptr + prop.Offset));
+                if (ImGui.ColorEdit4($"##{label}", ref *(Vector4*)(obj.Ptr + prop.Offset)))
+                {
+                    OnPropertyEdited(obj);
+                }
+
                 break;
             }
             default:
@@ -297,11 +303,29 @@ public class PropertiesPanel : Widget
     {
         if (obj is Actor actor)
         {
+            if (obj is Light)
+            {
+                // Reset DLEs so characters pick up location changes immediately
+                foreach (var pawn in Game.FindObjects<RPawn>())
+                {
+                    pawn.LightEnvironment?.ResetEnvironment();
+                }
+            }
+
             actor.ForceUpdateComponents(true);
         }
         else if (obj is ActorComponent component)
         {
             component.ForceUpdate(false);
+
+            if (component is LightComponent)
+            {
+                // Reset DLEs so characters pick up color/brightness changes immediately
+                foreach (var pawn in Game.FindObjects<RPawn>())
+                {
+                    pawn.LightEnvironment?.ResetEnvironment();
+                }
+            }
         }
     }
 }

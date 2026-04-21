@@ -10,6 +10,7 @@ public class DevModeScript : Script
     public static DevModeScript Instance { get; private set; } = null!;
 
     public GameObject? Selection { get; set; }
+    public FreeCamera FreeCamera => _freeCamera;
 
     private bool _visible;
     private bool _wasVisible;
@@ -24,6 +25,7 @@ public class DevModeScript : Script
         Instance = this;
         _widgets.Add(new MenuBar());
         _widgets.Add(new PropertiesPanel());
+        _widgets.Add(new ContextMenu());
 
         base.OnLoad();
     }
