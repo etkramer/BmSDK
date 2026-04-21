@@ -2,6 +2,8 @@ namespace DevMode;
 
 public class MenuBar : Widget
 {
+    private const string ControlsText = "RMB: Move Camera | Home: Exit ";
+
     public sealed override void OnGUI()
     {
         ImGui.BeginMainMenuBar();
@@ -13,6 +15,10 @@ public class MenuBar : Widget
             ImGui.Separator();
             ImGui.Text($"Selected: {selection.Class.Name} ({selection.GetPathName()})");
         }
+
+        var controlsWidth = ImGui.CalcTextSize(ControlsText).X;
+        ImGui.SameLine(ImGui.GetWindowWidth() - controlsWidth - ImGui.GetStyle().ItemSpacing.X);
+        ImGui.TextDisabled(ControlsText);
 
         ImGui.EndMainMenuBar();
     }
