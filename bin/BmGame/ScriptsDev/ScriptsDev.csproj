@@ -36,12 +36,18 @@
       <HintPath>.\..\..\Binaries\Win32\sdk\ImGui.NET.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <!-- System.Reactive -->
+    <Reference Include="System.Reactive">
+      <HintPath>.\..\..\Binaries\Win32\sdk\System.Reactive.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
   <!-- Global imports-->
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
     <Using Include="Tomlyn.Model" />
     <Using Include="ImGuiNET" />
+    <Using Include="System.Reactive.Linq" />
   </ItemGroup>
   <!-- Importing scripts -->
   <ItemGroup>

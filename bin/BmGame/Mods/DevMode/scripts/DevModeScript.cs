@@ -1,8 +1,16 @@
+using System.Numerics;
+using BmSDK;
+using BmSDK.Engine;
+
 namespace DevMode;
 
 [Script]
 public class DevModeScript : Script
 {
+    public static DevModeScript Instance { get; private set; } = null!;
+
+    public GameObject? SelectedObject;
+
     private bool _visible;
     private bool _wasVisible;
 
@@ -13,6 +21,7 @@ public class DevModeScript : Script
 
     public override void OnLoad()
     {
+        Instance = this;
         _widgets.Add(new MenuBar());
 
         base.OnLoad();
@@ -51,9 +60,14 @@ public class DevModeScript : Script
             // Update free camera controls
             _freeCamera.Update(controller.PlayerCamera, io);
 
+            // Handle object selection on left click (when not interacting with ImGui windows)
+            if (ImGui.IsMouseClicked(ImGuiMouseButton.Left) && !ImGui.IsWindowHovered(ImGuiHoveredFlags.AnyWindow))
+            {
+                SelectedObject = PickActor(io.MousePos, io.DisplaySize);
+            }
+
             // Do ImGui layout
             ImGui.ShowDemoWindow();
-            ImGui.ShowAboutWindow();
             foreach (var widget in _widgets)
             {
                 widget.OnGUI();
@@ -80,8 +94,30 @@ public class DevModeScript : Script
                 // Unpause world
                 worldInfo.Pauser = null;
 
+                SelectedObject = null;
                 _wasVisible = false;
             }
         }
+    }
+
+    private Actor? PickActor(Vector2 mousePos, Vector2 displaySize)
+    {
+        var worldOrigin = _freeCamera.Position;
+        var worldDirection = _freeCamera.ScreenToWorldDirection(mousePos, displaySize);
+
+        var traceEnd = worldOrigin + worldDirection * 100000f;
+
+        var hitActor = Game.GetWorldInfo().Trace(
+            out _,
+            out _,
+            traceEnd,
+            worldOrigin,
+            true,
+            Vector3.Zero,
+            out _,
+            0
+        );
+
+        return hitActor;
     }
 }

@@ -6,6 +6,8 @@ namespace DevMode;
 
 public class FreeCamera
 {
+    public Vector3 Position => _position;
+
     private Vector3 _position;
     private float _pitch;
     private float _yaw;
@@ -85,5 +87,27 @@ public class FreeCamera
         pov.Rotation = new Rotator(_pitch, _yaw, 0);
         pov.FOV = _fov;
         camera.CameraCache.POV = pov;
+    }
+
+    public Vector3 ScreenToWorldDirection(Vector2 mousePos, Vector2 displaySize)
+    {
+        var ndcX = (mousePos.X / displaySize.X - 0.5f) * 2f;
+        var ndcY = (mousePos.Y / displaySize.Y - 0.5f) * 2f;
+
+        var aspectRatio = displaySize.X / displaySize.Y;
+        var tanHalfFov = MathF.Tan(_fov * MathF.PI / 360f);
+
+        // FOV is horizontal in UE3
+        var localDir = Vector3.Normalize(new Vector3(
+            1f,
+            ndcX * tanHalfFov,
+            -ndcY * tanHalfFov / aspectRatio
+        ));
+
+        var forward = new Rotator(_pitch, _yaw, 0).ToDirection();
+        var right = new Rotator(0, _yaw + 90f, 0).ToDirection();
+        var up = Vector3.Cross(forward, right);
+
+        return Vector3.Normalize(forward * localDir.X + right * localDir.Y + up * localDir.Z);
     }
 }
