@@ -20,7 +20,7 @@ public static class Gizmos
     public static void Begin(FreeCamera camera, Vector2 displaySize)
     {
         _displaySize = displaySize;
-        _drawList = ImGui.GetForegroundDrawList();
+        _drawList = ImGui.GetBackgroundDrawList();
         _cameraPos = camera.Position;
         _cameraFwd = camera.Forward;
         _cameraRight = Vector3.Normalize(Vector3.Cross(Vector3.UnitZ, _cameraFwd));

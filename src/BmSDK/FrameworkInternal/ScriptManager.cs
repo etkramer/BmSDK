@@ -33,8 +33,8 @@ internal static class ScriptManager
         MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
         // Tomlyn.dll
         MetadataReference.CreateFromFile(typeof(Tomlyn.TomlSerializer).Assembly.Location),
-        // ImGui.NET.dll
-        MetadataReference.CreateFromFile(typeof(ImGuiNET.ImGui).Assembly.Location),
+        // Hexa.NET.ImGui.dll
+        MetadataReference.CreateFromFile(typeof(Hexa.NET.ImGui.ImGui).Assembly.Location),
         // System.Reactive.dll
         MetadataReference.CreateFromFile(typeof(System.Reactive.Linq.Observable).Assembly.Location),
     ];
@@ -49,7 +49,7 @@ internal static class ScriptManager
 
         global using global::BmSDK.Framework;
         global using global::Tomlyn.Model;
-        global using global::ImGuiNET;
+        global using global::Hexa.NET.ImGui;
         global using global::System.Reactive.Linq;
         """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";

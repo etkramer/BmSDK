@@ -1,23 +1,28 @@
-using ImGuiNET;
-using Windows.Win32;
+using Hexa.NET.ImGui;
 
 namespace BmSDK.Framework;
 
 internal static class ImGuiController
 {
-    private static nint s_context;
+    private static ImGuiContextPtr s_context;
     internal static readonly object RenderLock = new();
 
     public static bool IsInitialized { get; private set; }
     public static nint Hwnd;
     public static Action? OnGUI;
 
-    public static bool TryInitialize()
+    public static unsafe bool TryInitialize()
     {
         if (IsInitialized)
         {
             return false;
         }
+
+        // Preload cimgui.dll
+        var sdkPath = Path.Combine(FileUtils.GetBinariesPath(), "sdk");
+        var runtimesPath = Path.Combine(sdkPath, "runtimes", "win-x86", "native");
+        NativeLibrary.Load(Path.Combine(runtimesPath, "cimgui.dll"));
+        NativeLibrary.Load(Path.Combine(runtimesPath, "ImGuiImpl.dll"));
 
         // Create context
         s_context = ImGui.CreateContext();
@@ -28,25 +33,24 @@ internal static class ImGuiController
 
         // Disable background transparency
         style.Colors[(int)ImGuiCol.WindowBg].W = 1;
+        style.Colors[(int)ImGuiCol.TitleBg].W = 1;
+        style.Colors[(int)ImGuiCol.TitleBgCollapsed] = style.Colors[(int)ImGuiCol.TitleBg];
+        style.Colors[(int)ImGuiCol.TitleBg] = style.Colors[(int)ImGuiCol.TitleBgActive];
 
         // Load fonts
         var fontScale = 1.5f;
-        unsafe
-        {
-            var fontConfig = ImGuiNative.ImFontConfig_ImFontConfig();
-            fontConfig->OversampleH = 3;
-            fontConfig->OversampleV = 3;
+        var fontConfig = ImGui.ImFontConfig();
+        fontConfig.OversampleH = 3;
+        fontConfig.OversampleV = 3;
 
-            // Load built-in Windows font
-            io.Fonts.AddFontFromFileTTF(
-                "C:\\Windows\\Fonts\\consola.ttf",
-                14f * fontScale,
-                fontConfig
-            );
-            style.ScaleAllSizes(fontScale);
+        io.Fonts.Handle->AddFontFromFileTTF(
+            "C:\\Windows\\Fonts\\consola.ttf",
+            14f * fontScale,
+            fontConfig
+        );
+        style.ScaleAllSizes(fontScale);
 
-            ImGuiNative.ImFontConfig_destroy(fontConfig);
-        }
+        fontConfig.Destroy();
 
         IsInitialized = true;
         return true;
@@ -69,7 +73,7 @@ internal static class ImGuiController
 
         var io = ImGui.GetIO();
         io.DisplaySize = viewportSize;
-        io.DeltaTime = Game.GetDeltaTime();
+        io.DeltaTime = MathF.Max(Game.GetDeltaTime(), 0.001f);
 
         lock (RenderLock)
         {

@@ -1,7 +1,8 @@
-using System.Numerics;
-using ImGuiNET;
+using Hexa.NET.ImGui;
+using Hexa.NET.ImGui.Backends.Win32;
 using Silk.NET.Direct3D9;
-using Silk.NET.Maths;
+using ImGuiImplD3D9 = Hexa.NET.ImGui.Backends.D3D9.ImGuiImplD3D9;
+using HexaD3D9Device = Hexa.NET.ImGui.Backends.D3D9.IDirect3DDevice9;
 
 namespace BmSDK.Framework;
 
@@ -34,8 +35,6 @@ internal static class DX9Backend
     private static D3D9CreateDeviceDelegate? s_originalCreateDevice;
     private static EndSceneDelegate? s_originalEndScene;
     private static bool s_renderInitialized;
-    private static nint s_fontTexture;
-    private static nint s_hwnd;
 
     internal static unsafe void TryInstall()
     {
@@ -149,7 +148,7 @@ internal static class DX9Backend
 
             if (s_renderInitialized)
             {
-                RenderFrame(devicePtr);
+                RenderFrame();
             }
         }
         catch
@@ -171,94 +170,32 @@ internal static class DX9Backend
             return;
         }
 
-        s_hwnd = cp.HFocusWindow;
-        if (s_hwnd == 0)
+        var hwnd = cp.HFocusWindow;
+        if (hwnd == 0)
         {
             return;
         }
 
-        ImGuiController.Hwnd = s_hwnd;
+        ImGuiController.Hwnd = hwnd;
 
         if (!ImGuiController.TryInitialize())
         {
             return;
         }
 
-        CreateFontTexture(device);
+        var context = ImGui.GetCurrentContext();
+
+        ImGuiImplWin32.SetCurrentContext(context);
+        ImGuiImplWin32.Init((void*)hwnd);
+
+        ImGuiImplD3D9.SetCurrentContext(context);
+        ImGuiImplD3D9.Init((HexaD3D9Device*)(nint)device);
+        ImGuiImplD3D9.CreateDeviceObjects();
+
         s_renderInitialized = true;
     }
 
-    private static unsafe void CreateFontTexture(IDirect3DDevice9* device)
-    {
-        var io = ImGui.GetIO();
-        io.Fonts.GetTexDataAsRGBA32(
-            out nint pixels,
-            out var width,
-            out var height,
-            out var bytesPerPixel
-        );
-
-        IDirect3DTexture9* texture;
-        var hr = device->CreateTexture(
-            (uint)width,
-            (uint)height,
-            1,
-            0x200,
-            Format.A8R8G8B8,
-            Pool.Default,
-            &texture,
-            null
-        );
-
-        if (hr < 0)
-        {
-            hr = device->CreateTexture(
-                (uint)width,
-                (uint)height,
-                1,
-                0,
-                Format.A8R8G8B8,
-                Pool.Managed,
-                &texture,
-                null
-            );
-        }
-
-        if (hr < 0 || texture == null)
-        {
-            return;
-        }
-
-        LockedRect lockedRect;
-        hr = texture->LockRect(0, &lockedRect, null, 0);
-
-        if (hr >= 0)
-        {
-            var src = (byte*)pixels;
-            var dst = (byte*)lockedRect.PBits;
-
-            for (var y = 0; y < height; y++)
-            {
-                for (var x = 0; x < width; x++)
-                {
-                    var si = (y * width + x) * 4;
-                    var di = y * lockedRect.Pitch + x * 4;
-                    // RGBA -> BGRA
-                    dst[di + 0] = src[si + 2];
-                    dst[di + 1] = src[si + 1];
-                    dst[di + 2] = src[si + 0];
-                    dst[di + 3] = src[si + 3];
-                }
-            }
-
-            texture->UnlockRect(0);
-        }
-
-        s_fontTexture = (nint)texture;
-        io.Fonts.SetTexID((nint)texture);
-    }
-
-    private static unsafe void RenderFrame(nint devicePtr)
+    private static void RenderFrame()
     {
         lock (ImGuiController.RenderLock)
         {
@@ -268,138 +205,7 @@ internal static class DX9Backend
                 return;
             }
 
-            var device = (IDirect3DDevice9*)devicePtr;
-            SetupRenderState(device, drawData);
-
-            for (var n = 0; n < drawData.CmdListsCount; n++)
-            {
-                RenderDrawList(device, drawData.CmdLists[n]);
-            }
+            ImGuiImplD3D9.RenderDrawData(drawData);
         }
-    }
-
-    private static unsafe void SetupRenderState(IDirect3DDevice9* device, ImDrawDataPtr drawData)
-    {
-        device->SetVertexShader((IDirect3DVertexShader9*)null);
-        device->SetPixelShader((IDirect3DPixelShader9*)null);
-
-        device->SetRenderState(Renderstatetype.Cullmode, (uint)Cull.None);
-        device->SetRenderState(Renderstatetype.Zenable, 0);
-        device->SetRenderState(Renderstatetype.Lighting, 0);
-        device->SetRenderState(Renderstatetype.Alphablendenable, 1);
-        device->SetRenderState(Renderstatetype.Alphatestenable, 0);
-        device->SetRenderState(Renderstatetype.Blendop, (uint)Blendop.Add);
-        device->SetRenderState(Renderstatetype.Srcblend, (uint)Blend.Srcalpha);
-        device->SetRenderState(Renderstatetype.Destblend, (uint)Blend.Invsrcalpha);
-        device->SetRenderState(Renderstatetype.Scissortestenable, 1);
-        device->SetRenderState(Renderstatetype.Shademode, 2);
-        device->SetRenderState(Renderstatetype.Fogenable, 0);
-        device->SetRenderState(Renderstatetype.Colorwriteenable, 0xF);
-        device->SetRenderState(Renderstatetype.Separatealphablendenable, 0);
-        device->SetRenderState(Renderstatetype.Stencilenable, 0);
-
-        device->SetTextureStageState(0, Texturestagestatetype.Colorop, 4);
-        device->SetTextureStageState(0, Texturestagestatetype.Colorarg1, 2);
-        device->SetTextureStageState(0, Texturestagestatetype.Colorarg2, 0);
-        device->SetTextureStageState(0, Texturestagestatetype.Alphaop, 4);
-        device->SetTextureStageState(0, Texturestagestatetype.Alphaarg1, 2);
-        device->SetTextureStageState(0, Texturestagestatetype.Alphaarg2, 0);
-        device->SetTextureStageState(1, Texturestagestatetype.Colorop, 1);
-        device->SetTextureStageState(1, Texturestagestatetype.Alphaop, 1);
-
-        device->SetSamplerState(0, Samplerstatetype.Minfilter, 2);
-        device->SetSamplerState(0, Samplerstatetype.Magfilter, 2);
-        device->SetSamplerState(0, Samplerstatetype.Mipfilter, 0);
-
-        device->SetFVF(0x142);
-
-        var L = drawData.DisplayPos.X;
-        var R = drawData.DisplayPos.X + drawData.DisplaySize.X;
-        var T = drawData.DisplayPos.Y;
-        var B = drawData.DisplayPos.Y + drawData.DisplaySize.Y;
-
-        var identity = Matrix4x4.Identity;
-        device->SetTransform((Transformstatetype)256, in identity);
-        device->SetTransform(Transformstatetype.View, in identity);
-
-        var proj = new Matrix4x4
-        {
-            M11 = 2.0f / (R - L),
-            M22 = 2.0f / (T - B),
-            M33 = 0.5f,
-            M41 = (L + R) / (L - R),
-            M42 = (T + B) / (B - T),
-            M43 = 0.5f,
-            M44 = 1.0f,
-        };
-        device->SetTransform(Transformstatetype.Projection, in proj);
-    }
-
-    private static unsafe void RenderDrawList(IDirect3DDevice9* device, ImDrawListPtr cmdList)
-    {
-        var vtxCount = cmdList.VtxBuffer.Size;
-
-        var vtxDst = stackalloc CustomVertex[vtxCount];
-        var vtxSrc = (ImDrawVert*)cmdList.VtxBuffer.Data;
-
-        for (var i = 0; i < vtxCount; i++)
-        {
-            vtxDst[i].X = vtxSrc[i].pos.X;
-            vtxDst[i].Y = vtxSrc[i].pos.Y;
-            vtxDst[i].Z = 0;
-            var c = vtxSrc[i].col;
-            vtxDst[i].Color = (c & 0xFF00FF00) | ((c & 0xFF0000) >> 16) | ((c & 0xFF) << 16);
-            vtxDst[i].U = vtxSrc[i].uv.X;
-            vtxDst[i].V = vtxSrc[i].uv.Y;
-        }
-
-        var idxData = (ushort*)cmdList.IdxBuffer.Data;
-
-        for (var cmdIdx = 0; cmdIdx < cmdList.CmdBuffer.Size; cmdIdx++)
-        {
-            var cmd = cmdList.CmdBuffer[cmdIdx];
-
-            if (cmd.UserCallback != 0)
-            {
-                continue;
-            }
-
-            var scissor = new Box2D<int>(
-                new Vector2D<int>((int)cmd.ClipRect.X, (int)cmd.ClipRect.Y),
-                new Vector2D<int>((int)cmd.ClipRect.Z, (int)cmd.ClipRect.W)
-            );
-            device->SetScissorRect(&scissor);
-            device->SetTexture(0, (IDirect3DBaseTexture9*)cmd.TextureId);
-
-            device->DrawIndexedPrimitiveUP(
-                Primitivetype.Trianglelist,
-                cmd.VtxOffset,
-                (uint)vtxCount - cmd.VtxOffset,
-                cmd.ElemCount / 3,
-                idxData + cmd.IdxOffset,
-                Format.Index16,
-                vtxDst,
-                (uint)sizeof(CustomVertex)
-            );
-        }
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct CustomVertex
-    {
-        public float X,
-            Y,
-            Z;
-        public uint Color;
-        public float U,
-            V;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    private struct ImDrawVert
-    {
-        public System.Numerics.Vector2 pos;
-        public System.Numerics.Vector2 uv;
-        public uint col;
     }
 }

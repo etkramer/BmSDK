@@ -31,9 +31,9 @@
       <HintPath>.\..\..\Binaries\Win32\sdk\Tomlyn.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <!-- ImGui.NET -->
-    <Reference Include="ImGui.NET">
-      <HintPath>.\..\..\Binaries\Win32\sdk\ImGui.NET.dll</HintPath>
+    <!-- Hexa.NET.ImGui -->
+    <Reference Include="Hexa.NET.ImGui">
+      <HintPath>.\..\..\Binaries\Win32\sdk\Hexa.NET.ImGui.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <!-- System.Reactive -->
@@ -46,7 +46,7 @@
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
     <Using Include="Tomlyn.Model" />
-    <Using Include="ImGuiNET" />
+    <Using Include="Hexa.NET.ImGui" />
     <Using Include="System.Reactive.Linq" />
   </ItemGroup>
   <!-- Importing scripts -->
