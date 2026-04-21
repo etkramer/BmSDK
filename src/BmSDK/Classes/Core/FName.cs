@@ -53,7 +53,7 @@ public struct FName
 #elif BATMAN3
         var str = Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->UniName));
 #endif
-        return Number == 0 ? str : $"{str}_{Number}";
+        return Number == 0 ? str : $"{str}_{Number - 1}";
 
     }
 
