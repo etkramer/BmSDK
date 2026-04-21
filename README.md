@@ -33,5 +33,5 @@ Follow these steps to set up your environment for building, running, and debuggi
 ## 🛠️ Contributing
 To get started contributing to BmSDK, see the wiki for instructions: [Building BmSDK](../../wiki/Building-BmSDK)
 
-## 📋 Licence
+## 📋 License
 BmSDK is licenced under the [MIT licence](LICENSE.md).
