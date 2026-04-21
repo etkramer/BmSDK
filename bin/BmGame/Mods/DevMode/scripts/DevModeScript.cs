@@ -56,6 +56,9 @@ public class DevModeScript : Script
                 EnterDevMode();
             }
 
+            // Snapshot camera state for gizmos before updating (matches the rendered scene)
+            Gizmos.Begin(_freeCamera, io.DisplaySize);
+
             // Update free camera controls
             _freeCamera.Update(controller.PlayerCamera, io);
 
@@ -75,6 +78,16 @@ public class DevModeScript : Script
             foreach (var widget in _widgets)
             {
                 widget.OnGUI();
+            }
+
+            // Draw selection gizmos
+            if (Selection is Actor selectedActor)
+            {
+                selectedActor.GetComponentsBoundingBox(out var box);
+                var center = (box.Min + box.Max) / 2f;
+                var worldHalfExtents = (box.Max - box.Min) / 2f;
+                var localHalfExtents = Gizmos.RecoverLocalExtents(worldHalfExtents, selectedActor.Rotation);
+                Gizmos.DrawWireBox(center, localHalfExtents, selectedActor.Rotation, 0xFFFFFFFF);
             }
 
             _wasVisible = true;
@@ -97,6 +110,9 @@ public class DevModeScript : Script
 
         // Pause world
         worldInfo.Pauser = controller.PlayerReplicationInfo;
+
+        // Prevent alt+tab from triggering the pause menu while already paused
+        Game.GetEngine().bPauseOnLossOfFocus = false;
 
         // Block input from reaching the game while tools are visible
         io.WantCaptureMouse = true;
@@ -125,6 +141,9 @@ public class DevModeScript : Script
         io.MouseDrawCursor = false;
         io.WantCaptureKeyboard = false;
         io.WantCaptureMouse = false;
+
+        // Re-enable normal pause-on-focus-loss behavior
+        Game.GetEngine().bPauseOnLossOfFocus = true;
 
         // Unpause world
         worldInfo.Pauser = null;

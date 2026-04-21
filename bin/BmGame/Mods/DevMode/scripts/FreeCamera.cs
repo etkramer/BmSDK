@@ -7,6 +7,8 @@ namespace DevMode;
 public class FreeCamera
 {
     public Vector3 Position => _position;
+    public Vector3 Forward => new Rotator(_pitch, _yaw, 0).ToDirection();
+    public float Fov => _fov;
 
     private Vector3 _position;
     private float _pitch;
@@ -87,6 +89,35 @@ public class FreeCamera
         pov.Rotation = new Rotator(_pitch, _yaw, 0);
         pov.FOV = _fov;
         camera.CameraCache.POV = pov;
+    }
+
+    public bool WorldToScreen(Vector3 worldPos, Vector2 displaySize, out Vector2 screenPos)
+    {
+        var toPoint = worldPos - _position;
+
+        var forward = new Rotator(_pitch, _yaw, 0).ToDirection();
+        var right = new Rotator(0, _yaw + 90f, 0).ToDirection();
+        var up = Vector3.Cross(forward, right);
+
+        var depth = Vector3.Dot(toPoint, forward);
+        if (depth <= 0.001f)
+        {
+            screenPos = default;
+            return false;
+        }
+
+        var aspectRatio = displaySize.X / displaySize.Y;
+        var tanHalfFov = MathF.Tan(_fov * MathF.PI / 360f);
+
+        var ndcX = Vector3.Dot(toPoint, right) / (depth * tanHalfFov);
+        var ndcY = -Vector3.Dot(toPoint, up) * aspectRatio / (depth * tanHalfFov);
+
+        screenPos = new Vector2(
+            (ndcX / 2f + 0.5f) * displaySize.X,
+            (ndcY / 2f + 0.5f) * displaySize.Y
+        );
+
+        return true;
     }
 
     public Vector3 ScreenToWorldDirection(Vector2 mousePos, Vector2 displaySize)
