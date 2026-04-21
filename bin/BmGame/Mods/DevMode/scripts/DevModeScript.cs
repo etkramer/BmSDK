@@ -88,11 +88,8 @@ public class DevModeScript : Script
             }
             else if (Selection is Actor selectedActor)
             {
-                selectedActor.GetComponentsBoundingBox(out var box);
-                var center = (box.Min + box.Max) / 2f;
-                var worldHalfExtents = (box.Max - box.Min) / 2f;
-                var localHalfExtents = Gizmos.RecoverLocalExtents(worldHalfExtents, selectedActor.Rotation);
-                Gizmos.DrawWireBox(center, localHalfExtents, selectedActor.Rotation, 0xFFFFFFFF);
+                var (center, extents) = Gizmos.ComputeLocalBounds(selectedActor);
+                Gizmos.DrawWireBox(center, extents, selectedActor.Rotation, 0xFFFFFFFF);
             }
 
             _wasVisible = true;

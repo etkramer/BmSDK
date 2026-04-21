@@ -1,5 +1,6 @@
 using System.Numerics;
 using BmSDK;
+using BmSDK.Engine;
 
 namespace DevMode;
 
@@ -85,33 +86,82 @@ public static class Gizmos
         DrawLine(c[3], c[7], color, thickness);
     }
 
-    public static Vector3 RecoverLocalExtents(Vector3 worldHalfExtents, Rotator rotation)
+    public static (Vector3 Center, Vector3 Extents) ComputeLocalBounds(Actor actor)
     {
-        RotationBasis(rotation, out var fwd, out var right, out var up);
+        RotationBasis(actor.Rotation, out var fwd, out var right, out var up);
 
-        // The world-space AABB half-extents relate to local extents by:
-        //   M * local = world,  where M[i][j] = |basis_j[i]|
-        float m00 = MathF.Abs(fwd.X), m01 = MathF.Abs(right.X), m02 = MathF.Abs(up.X);
-        float m10 = MathF.Abs(fwd.Y), m11 = MathF.Abs(right.Y), m12 = MathF.Abs(up.Y);
-        float m20 = MathF.Abs(fwd.Z), m21 = MathF.Abs(right.Z), m22 = MathF.Abs(up.Z);
+        var localMin = new Vector3(float.MaxValue);
+        var localMax = new Vector3(float.MinValue);
+        var any = false;
 
-        var det = m00 * (m11 * m22 - m12 * m21)
-                  - m01 * (m10 * m22 - m12 * m20)
-                  + m02 * (m10 * m21 - m11 * m20);
-
-        if (MathF.Abs(det) < 0.001f)
+        foreach (var component in actor.AllComponents)
         {
-            return worldHalfExtents;
+            if (component is not MeshComponent mesh)
+            {
+                continue;
+            }
+
+            var bounds = mesh.Bounds;
+            var extent = bounds.BoxExtent;
+            if (extent == Vector3.Zero)
+            {
+                continue;
+            }
+
+            any = true;
+            var origin = bounds.Origin;
+
+            for (var i = 0; i < 8; i++)
+            {
+                var corner = origin + new Vector3(
+                    (i & 1) != 0 ? extent.X : -extent.X,
+                    (i & 2) != 0 ? extent.Y : -extent.Y,
+                    (i & 4) != 0 ? extent.Z : -extent.Z
+                );
+
+                var offset = corner - actor.Location;
+                var local = new Vector3(
+                    Vector3.Dot(offset, fwd),
+                    Vector3.Dot(offset, right),
+                    Vector3.Dot(offset, up)
+                );
+
+                localMin = Vector3.Min(localMin, local);
+                localMax = Vector3.Max(localMax, local);
+            }
         }
 
-        var invDet = 1f / det;
-        var w = worldHalfExtents;
+        if (!any)
+        {
+            actor.GetComponentsBoundingBox(out var box);
+            var boxOrigin = (box.Min + box.Max) / 2f;
+            var boxExtent = (box.Max - box.Min) / 2f;
 
-        return new Vector3(
-            MathF.Abs(invDet * (w.X * (m11 * m22 - m12 * m21) - m01 * (w.Y * m22 - m12 * w.Z) + m02 * (w.Y * m21 - m11 * w.Z))),
-            MathF.Abs(invDet * (m00 * (w.Y * m22 - m12 * w.Z) - w.X * (m10 * m22 - m12 * m20) + m02 * (m10 * w.Z - w.Y * m20))),
-            MathF.Abs(invDet * (m00 * (m11 * w.Z - w.Y * m21) - m01 * (m10 * w.Z - w.Y * m20) + w.X * (m10 * m21 - m11 * m20)))
-        );
+            for (var i = 0; i < 8; i++)
+            {
+                var corner = boxOrigin + new Vector3(
+                    (i & 1) != 0 ? boxExtent.X : -boxExtent.X,
+                    (i & 2) != 0 ? boxExtent.Y : -boxExtent.Y,
+                    (i & 4) != 0 ? boxExtent.Z : -boxExtent.Z
+                );
+
+                var offset = corner - actor.Location;
+                var local = new Vector3(
+                    Vector3.Dot(offset, fwd),
+                    Vector3.Dot(offset, right),
+                    Vector3.Dot(offset, up)
+                );
+
+                localMin = Vector3.Min(localMin, local);
+                localMax = Vector3.Max(localMax, local);
+            }
+        }
+
+        var localCenter = (localMin + localMax) / 2f;
+        var localExtents = (localMax - localMin) / 2f;
+        var worldCenter = actor.Location + fwd * localCenter.X + right * localCenter.Y + up * localCenter.Z;
+
+        return (worldCenter, localExtents);
     }
 
     private static bool WorldToScreen(Vector3 worldPos, out Vector2 screenPos)
