@@ -12,7 +12,7 @@ public struct FName
     /// <summary>
     /// Creates a new FName with the given index.
     /// </summary>
-    public unsafe FName(int index)
+    public FName(int index)
     {
         Index = index;
         Number = 0;
@@ -49,10 +49,12 @@ public struct FName
         var GNamesData = *GNames;
 
 #if BATMAN2
-        return Guard.NotNull(Marshal.PtrToStringUni((IntPtr)GNamesData[Index]->UniName));
+        var str = Guard.NotNull(Marshal.PtrToStringUni((IntPtr)GNamesData[Index]->UniName));
 #elif BATMAN3
-        return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->UniName));
+        var str = Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->UniName));
 #endif
+        return Number == 0 ? str : $"{str}_{Number}";
+
     }
 
 #pragma warning disable CS0649
