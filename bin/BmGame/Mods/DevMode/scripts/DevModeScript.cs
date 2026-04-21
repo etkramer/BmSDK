@@ -9,7 +9,7 @@ public class DevModeScript : Script
 {
     public static DevModeScript Instance { get; private set; } = null!;
 
-    public GameObject? SelectedObject;
+    public GameObject? Selection { get; set; }
 
     private bool _visible;
     private bool _wasVisible;
@@ -23,8 +23,19 @@ public class DevModeScript : Script
     {
         Instance = this;
         _widgets.Add(new MenuBar());
+        _widgets.Add(new PropertiesPanel());
 
         base.OnLoad();
+    }
+
+    public override void OnUnload()
+    {
+        if (_visible)
+        {
+            ExitDevMode();
+        }
+
+        base.OnUnload();
     }
 
     public override void OnGUI()
@@ -36,25 +47,13 @@ public class DevModeScript : Script
 
         var io = ImGui.GetIO();
         var controller = Game.GetPlayerController();
-        var worldInfo = Game.GetWorldInfo();
 
         if (_visible)
         {
             // Enter dev mode
             if (!_wasVisible)
             {
-                // Pause world
-                worldInfo.Pauser = controller.PlayerReplicationInfo;
-
-                // Block input from reaching the game while tools are visible
-                io.WantCaptureMouse = true;
-                io.WantCaptureKeyboard = true;
-
-                // Hide game HUD
-                controller.bGFxHideHUD = true;
-
-                // Enable free camera
-                _freeCamera.Activate(controller.PlayerCamera);
+                EnterDevMode();
             }
 
             // Update free camera controls
@@ -63,11 +62,16 @@ public class DevModeScript : Script
             // Handle object selection on left click (when not interacting with ImGui windows)
             if (ImGui.IsMouseClicked(ImGuiMouseButton.Left) && !ImGui.IsWindowHovered(ImGuiHoveredFlags.AnyWindow))
             {
-                SelectedObject = PickActor(io.MousePos, io.DisplaySize);
+                Selection = PickActor(io.MousePos, io.DisplaySize);
+            }
+
+            // Clear selection if object was unloaded
+            if (Selection is { IsValid: false })
+            {
+                Selection = null;
             }
 
             // Do ImGui layout
-            ImGui.ShowDemoWindow();
             foreach (var widget in _widgets)
             {
                 widget.OnGUI();
@@ -80,24 +84,52 @@ public class DevModeScript : Script
             // Exit dev mode
             if (_wasVisible)
             {
-                // Disable free camera
-                _freeCamera.Deactivate(controller.PlayerCamera);
-
-                // Unhide game HUD
-                controller.bGFxHideHUD = false;
-
-                // Stop blocking input
-                io.MouseDrawCursor = false;
-                io.WantCaptureKeyboard = false;
-                io.WantCaptureMouse = false;
-
-                // Unpause world
-                worldInfo.Pauser = null;
-
-                SelectedObject = null;
-                _wasVisible = false;
+                ExitDevMode();
             }
         }
+    }
+
+    public void EnterDevMode()
+    {
+        var io = ImGui.GetIO();
+        var controller = Game.GetPlayerController();
+        var worldInfo = Game.GetWorldInfo();
+
+        // Pause world
+        worldInfo.Pauser = controller.PlayerReplicationInfo;
+
+        // Block input from reaching the game while tools are visible
+        io.WantCaptureMouse = true;
+        io.WantCaptureKeyboard = true;
+
+        // Hide game HUD
+        controller.bGFxHideHUD = true;
+
+        // Enable free camera
+        _freeCamera.Activate(controller.PlayerCamera);
+    }
+
+    public void ExitDevMode()
+    {
+        var io = ImGui.GetIO();
+        var controller = Game.GetPlayerController();
+        var worldInfo = Game.GetWorldInfo();
+
+        // Disable free camera
+        _freeCamera.Deactivate(controller.PlayerCamera);
+
+        // Unhide game HUD
+        controller.bGFxHideHUD = false;
+
+        // Stop blocking input
+        io.MouseDrawCursor = false;
+        io.WantCaptureKeyboard = false;
+        io.WantCaptureMouse = false;
+
+        // Unpause world
+        worldInfo.Pauser = null;
+
+        _wasVisible = false;
     }
 
     private Actor? PickActor(Vector2 mousePos, Vector2 displaySize)

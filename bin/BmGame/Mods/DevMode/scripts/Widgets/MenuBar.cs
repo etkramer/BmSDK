@@ -7,11 +7,11 @@ public class MenuBar : Widget
         ImGui.BeginMainMenuBar();
         ImGui.Text("Dev Mode (press Home to exit)");
 
-        var selectedObject = DevModeScript.Instance.SelectedObject;
-        if (selectedObject is not null)
+        var selection = DevModeScript.Instance.Selection;
+        if (selection is not null)
         {
             ImGui.Separator();
-            ImGui.Text($"Selected: {selectedObject.Class.Name} ({selectedObject.GetPathName()})");
+            ImGui.Text($"Selected: {selection.Class.Name} ({selection.GetPathName()})");
         }
 
         ImGui.EndMainMenuBar();
