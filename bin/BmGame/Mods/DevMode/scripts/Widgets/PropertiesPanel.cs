@@ -299,7 +299,7 @@ public class PropertiesPanel : Widget
         }
     }
 
-    private static void OnPropertyEdited(GameObject obj)
+    public static void OnPropertyEdited(GameObject obj)
     {
         if (obj is Actor actor)
         {

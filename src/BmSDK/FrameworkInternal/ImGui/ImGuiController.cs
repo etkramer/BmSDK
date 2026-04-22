@@ -1,3 +1,4 @@
+using System.Numerics;
 using Hexa.NET.ImGui;
 using Hexa.NET.ImGuizmo;
 
@@ -30,6 +31,21 @@ internal static class ImGuiController
         s_context = ImGui.CreateContext();
         ImGui.SetCurrentContext(s_context);
         ImGuizmo.SetImGuiContext(s_context);
+
+        {
+            // Setup ImGuizmo style
+            var gizmoStyle = ImGuizmo.GetStyle();
+            gizmoStyle.Colors[(int)ImGuizmoColor.DirectionX] = new Vector4(1.0f, 0.2f, 0.32f, 1);
+            gizmoStyle.Colors[(int)ImGuizmoColor.DirectionY] = new Vector4(0.55f, 0.86f, 0, 1);
+            gizmoStyle.Colors[(int)ImGuizmoColor.DirectionZ] = new Vector4(0.16f, 0.57f, 1, 1);
+
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneX] = gizmoStyle.Colors[(int)ImGuizmoColor.DirectionX];
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneX].W = 0.5f;
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneY] = gizmoStyle.Colors[(int)ImGuizmoColor.DirectionY];
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneY].W = 0.5f;
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneZ] = gizmoStyle.Colors[(int)ImGuizmoColor.DirectionZ];
+            gizmoStyle.Colors[(int)ImGuizmoColor.PlaneZ].W = 0.5f;
+        }
 
         var io = ImGui.GetIO();
         var style = ImGui.GetStyle();
@@ -81,6 +97,12 @@ internal static class ImGuiController
         lock (RenderLock)
         {
             ImGui.NewFrame();
+
+            ImGuizmo.BeginFrame();
+            ImGuizmo.SetOrthographic(false);
+            ImGuizmo.SetDrawlist(ImGui.GetBackgroundDrawList());
+            ImGuizmo.SetRect(0, 0, io.DisplaySize.X, io.DisplaySize.Y);
+
             try
             {
                 OnGUI?.Invoke();

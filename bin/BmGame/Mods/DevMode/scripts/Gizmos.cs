@@ -1,6 +1,5 @@
 using System.Numerics;
 using BmSDK;
-using BmSDK.Engine;
 
 namespace DevMode;
 
@@ -108,7 +107,7 @@ public static class Gizmos
         return true;
     }
 
-    private static void RotationBasis(Rotator rotation, out Vector3 forward, out Vector3 right, out Vector3 up)
+    public static void RotationBasis(Rotator rotation, out Vector3 forward, out Vector3 right, out Vector3 up)
     {
         var cp = MathF.Cos(rotation.Pitch * MathF.PI / 180f);
         var sp = MathF.Sin(rotation.Pitch * MathF.PI / 180f);
@@ -120,5 +119,30 @@ public static class Gizmos
         forward = new Vector3(cp * cy, cp * sy, sp);
         right = new Vector3(sr * sp * cy - cr * sy, sr * sp * sy + cr * cy, -sr * cp);
         up = new Vector3(-(cr * sp * cy + sr * sy), cy * sr - cr * sp * sy, cr * cp);
+    }
+
+    public static Matrix4x4 BuildViewMatrix(FreeCamera camera)
+    {
+        var pos = camera.Position;
+        var fwd = camera.Forward;
+        var right = Vector3.Normalize(Vector3.Cross(Vector3.UnitZ, fwd));
+        var up = Vector3.Cross(fwd, right);
+
+        return new Matrix4x4(
+            right.X, up.X, -fwd.X, 0,
+            right.Y, up.Y, -fwd.Y, 0,
+            right.Z, up.Z, -fwd.Z, 0,
+            -Vector3.Dot(right, pos),
+            -Vector3.Dot(up, pos),
+            Vector3.Dot(fwd, pos),
+            1
+        );
+    }
+
+    public static Matrix4x4 BuildProjectionMatrix(float horizontalFovDegrees, float aspectRatio)
+    {
+        var tanHalfFov = MathF.Tan(horizontalFovDegrees * MathF.PI / 360f);
+        var verticalFov = 2f * MathF.Atan(tanHalfFov / aspectRatio);
+        return Matrix4x4.CreatePerspectiveFieldOfView(verticalFov, aspectRatio, 1f, 100000f);
     }
 }
