@@ -45,6 +45,9 @@ internal static class ImGuiController
             gizmoStyle.Colors[(int)ImGuizmoColor.PlaneY].W = 0.5f;
             gizmoStyle.Colors[(int)ImGuizmoColor.PlaneZ] = gizmoStyle.Colors[(int)ImGuizmoColor.DirectionZ];
             gizmoStyle.Colors[(int)ImGuizmoColor.PlaneZ].W = 0.5f;
+
+            ImGuizmo.AllowAxisFlip(false);
+            ImGuizmo.SetAxisLimit(0);
         }
 
         var io = ImGui.GetIO();
