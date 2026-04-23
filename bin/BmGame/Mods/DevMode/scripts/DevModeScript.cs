@@ -17,6 +17,7 @@ public class DevModeScript : Script
     private bool _wasVisible;
     private readonly TransformGizmo _transformGizmo = new();
     private readonly List<Widget> _widgets = [];
+    private readonly List<SelectionProxySource> _proxySources = [new LightProxySource()];
 
     public override void Main() => OnLoad();
 
@@ -70,6 +71,12 @@ public class DevModeScript : Script
             var projection = Gizmos.BuildProjectionMatrix(FreeCamera.Fov, io.DisplaySize.X / io.DisplaySize.Y);
 
             FreeCamera.Update(controller.PlayerCamera, io);
+
+            // Draw selection proxies (lights, etc.)
+            foreach (var source in _proxySources)
+            {
+                source.Draw();
+            }
 
             // Draw selection gizmos (before click handling so ImGuizmo.IsOver() is set)
             if (Selection is not null)
@@ -163,8 +170,11 @@ public class DevModeScript : Script
 
         var traceEnd = worldOrigin + worldDirection * 100000f;
 
+        GameObject? best = null;
+        var bestT = float.PositiveInfinity;
+
         var hitActor = Game.GetWorldInfo().Trace(
-            out _,
+            out var hitLocation,
             out _,
             traceEnd,
             worldOrigin,
@@ -174,11 +184,21 @@ public class DevModeScript : Script
             0
         );
 
-        if (hitActor is StaticMeshCollectionActor)
+        if (hitActor is not null)
         {
-            return hitInfo.HitComponent;
+            best = hitActor is StaticMeshCollectionActor ? hitInfo.HitComponent : hitActor;
+            bestT = Vector3.Dot(hitLocation - worldOrigin, worldDirection);
         }
 
-        return hitActor;
+        foreach (var source in _proxySources)
+        {
+            if (source.TryPick(worldOrigin, worldDirection, out var t, out var target) && t < bestT)
+            {
+                best = target;
+                bestT = t;
+            }
+        }
+
+        return best;
     }
 }
