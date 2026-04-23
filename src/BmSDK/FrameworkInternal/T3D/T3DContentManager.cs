@@ -134,7 +134,7 @@ internal static unsafe class T3DContentManager
         var location = ExtractVector(definition.Properties, "Location");
         var rotation = ExtractRotator(definition.Properties, "Rotation");
 
-        var actor = Game.SpawnActor(actorClass, location, rotation);
+        var actor = Game.SpawnActor(actorClass, location, rotation, Level: level);
         if (actor is null || !actor.IsValid)
         {
             Debug.LogError($"T3D: Failed to spawn actor for {definition.ObjectPath}");
@@ -184,10 +184,13 @@ internal static unsafe class T3DContentManager
         // instances carry that template as ObjectArchetype but may have a uniquified
         // instance name, so match on archetype name first and fall back to the
         // instance name for hand-written T3Ds that reference a live component directly.
+        // Walk both Components (populated immediately from the CDO template) and
+        // AllComponents (populated after UpdateComponents) — freshly spawned actors
+        // may not have AllComponents built yet.
         GameObject? byName = null;
-        foreach (var component in actor.AllComponents)
+        foreach (var component in actor.Components.Concat(actor.AllComponents))
         {
-            if (!component.IsValid)
+            if (component is null || !component.IsValid)
             {
                 continue;
             }
