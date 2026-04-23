@@ -20,6 +20,13 @@ public partial class GameObject
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
     /// <summary>
+    /// Returns the managed wrapper for the native UObject at the given address,
+    /// creating one if necessary. Returns null if <paramref name="ptr"/> is zero.
+    /// </summary>
+    public static GameObject? FromPtr(IntPtr ptr) =>
+        ptr == IntPtr.Zero ? null : MarshalUtil.GetOrCreateWrapper(ptr);
+
+    /// <summary>
     /// Returns true if this object is "alive", false if it has been destroyed or garbage collected on the UE3 side.
     /// If false, this object is unsafe to access or call any methods on.
     /// </summary>

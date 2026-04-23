@@ -6,7 +6,6 @@ namespace BmSDK.Framework.T3D;
 
 internal static unsafe class T3DContentManager
 {
-    private const int SpecializedPropertyFieldOffset = 88;
     private const int DebounceMillis = 500;
 
     private static readonly Dictionary<string, List<T3DActorDefinition>> s_contentByMod = [];
@@ -298,16 +297,14 @@ internal static unsafe class T3DContentManager
             return;
         }
 
-        // UE3 T3D writes enum-backed bytes as the enum member name. Resolve it
-        // by looking up the name in the UEnum's Names array (offset 48, right
-        // after UField).
-        var enumPtr = MarshalUtil.ToManaged<IntPtr>(prop.Ptr + SpecializedPropertyFieldOffset);
-        if (enumPtr == IntPtr.Zero)
+        // UE3 T3D writes enum-backed bytes as the enum member name.
+        var enumType = prop.Enum;
+        if (enumType is null || !enumType.IsValid)
         {
             throw new FormatException($"'{value}' is not a valid byte");
         }
 
-        var names = new TArray<FName>(enumPtr + 48);
+        var names = enumType.Names;
         for (var i = 0; i < names.Count; i++)
         {
             if (names[i].ToString().Equals(value, StringComparison.OrdinalIgnoreCase))
@@ -322,7 +319,7 @@ internal static unsafe class T3DContentManager
 
     private static void ApplyBoolValue(IntPtr basePtr, BoolProperty prop, bool value)
     {
-        var bitMask = MarshalUtil.ToManaged<int>(prop.Ptr + SpecializedPropertyFieldOffset);
+        var bitMask = prop.BitMask;
         var packed = (int*)(basePtr + prop.Offset);
         *packed = value ? (*packed | bitMask) : (*packed & ~bitMask);
     }
@@ -360,16 +357,13 @@ internal static unsafe class T3DContentManager
 
     private static void ApplyStructValue(IntPtr basePtr, StructProperty structProp, string value)
     {
-        var structTypePtr = MarshalUtil.ToManaged<IntPtr>(
-            structProp.Ptr + SpecializedPropertyFieldOffset
-        );
-        if (structTypePtr == IntPtr.Zero)
+        var structType = structProp.Struct;
+        if (structType is null || !structType.IsValid)
         {
             Debug.LogWarning($"T3D: StructProperty '{structProp.Name}' has no struct type");
             return;
         }
 
-        var structType = MarshalUtil.ToManaged<Struct>(&structTypePtr);
         var structBase = basePtr + structProp.Offset;
 
         var fields = T3DParser.ParseStructLiteral(value);

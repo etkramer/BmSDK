@@ -7,9 +7,6 @@ namespace DevMode;
 
 public class PropertiesPanel : Widget
 {
-    private const int UObjectNameOffset = 28;
-    private const int SpecializedPropertyFieldOffset = 88;
-
     private readonly Stack<GameObject> _navigationStack = new();
     private GameObject? _inspectedObject;
     private GameObject? _selectionRoot;
@@ -143,7 +140,7 @@ public class PropertiesPanel : Widget
         }
         else if (prop is BoolProperty boolProp)
         {
-            var bitMask = *(int*)(boolProp.Ptr + SpecializedPropertyFieldOffset);
+            var bitMask = boolProp.BitMask;
             var packed = (int*)(obj.Ptr + boolProp.Offset);
             var value = (*packed & bitMask) != 0;
             PropertyLabel(label, labelWidth, tooltip);
@@ -197,46 +194,32 @@ public class PropertiesPanel : Widget
 
     private unsafe void DrawObjectProperty(GameObject obj, Property prop, string label, float labelWidth, string tooltip)
     {
-        var refPtr = *(IntPtr*)(obj.Ptr + prop.Offset);
-        if (refPtr == IntPtr.Zero)
+        var refObj = GameObject.FromPtr(*(IntPtr*)(obj.Ptr + prop.Offset));
+        if (refObj is null || !refObj.IsValid)
         {
             PropertyLabel(label, labelWidth, tooltip);
             ImGui.TextDisabled("None");
             return;
         }
 
-        var refName = *(FName*)(refPtr + UObjectNameOffset);
-        var csProp = obj.GetType().GetProperty(label);
-
         PropertyLabel(label, labelWidth, tooltip);
-        if (csProp != null)
+        if (ImGui.Button($"{refObj.Name}##nav", new Vector2(-1, 0)))
         {
-            if (ImGui.Button($"{refName}##nav", new Vector2(-1, 0)))
-            {
-                if (csProp.GetValue(obj) is GameObject refObj && refObj.IsValid)
-                {
-                    NavigateTo(refObj);
-                }
-            }
-        }
-        else
-        {
-            ImGui.Text(refName.ToString());
+            NavigateTo(refObj);
         }
     }
 
     private unsafe void DrawStructProperty(GameObject obj, StructProperty prop, string label, float labelWidth, string tooltip)
     {
-        var structTypePtr = *(IntPtr*)(prop.Ptr + SpecializedPropertyFieldOffset);
-        if (structTypePtr == IntPtr.Zero)
+        var structType = prop.Struct;
+        if (structType is null || !structType.IsValid)
         {
             PropertyLabel(label, labelWidth, tooltip);
             ImGui.TextDisabled("(struct)");
             return;
         }
 
-        var structName = *(FName*)(structTypePtr + UObjectNameOffset);
-        var typeName = structName.ToString();
+        var typeName = structType.Name.ToString();
 
         switch (typeName)
         {
