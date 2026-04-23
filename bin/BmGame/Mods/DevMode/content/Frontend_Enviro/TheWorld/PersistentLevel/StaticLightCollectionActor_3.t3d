@@ -1,6 +1,7 @@
 Begin Actor Class=StaticLightCollectionActor Name=StaticLightCollectionActor_3
    Begin Object Class=DirectionalLightComponent Name=DirectionalLight_LC_1
-      LightColor=(B=255,G=0,R=255,A=255)
-      Brightness=10.0
+      Brightness=10
+      LightColor=(R=0,G=255,B=0,A=255)
+      LightingChannels=(Static=False,Character=True)
    End Object
 End Actor
