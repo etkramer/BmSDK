@@ -116,9 +116,6 @@ public static partial class Game
     public static IEnumerable<T> FindObjects<T>()
         where T : GameObject => FindObjectsCache.FindObjects<T>();
 
-    /// <summary>
-    /// Spawns a new actor of the given type.
-    /// </summary>
     public static unsafe Actor SpawnActor(
         Class Class,
         FName Name = default,
