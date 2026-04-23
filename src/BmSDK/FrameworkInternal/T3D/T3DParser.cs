@@ -70,6 +70,7 @@ internal static class T3DParser
                 {
                     actor.SubObjects.Add(currentSubObject);
                 }
+
                 currentSubObject = null;
             }
             else if (actor is not null)
@@ -98,7 +99,7 @@ internal static class T3DParser
         var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         // Skip "Begin Actor" or "Begin Object"
-        for (int i = 2; i < parts.Length; i++)
+        for (var i = 2; i < parts.Length; i++)
         {
             var eqIndex = parts[i].IndexOf('=');
             if (eqIndex > 0)
@@ -136,9 +137,9 @@ internal static class T3DParser
         }
 
         // Split on commas, respecting nested parens
-        int depth = 0;
-        int start = 0;
-        for (int i = 0; i <= value.Length; i++)
+        var depth = 0;
+        var start = 0;
+        for (var i = 0; i <= value.Length; i++)
         {
             if (i == value.Length || (value[i] == ',' && depth == 0))
             {
@@ -150,6 +151,7 @@ internal static class T3DParser
                     var val = segment[(eqIndex + 1)..].Trim();
                     result[key] = val;
                 }
+
                 start = i + 1;
             }
             else if (value[i] == '(')

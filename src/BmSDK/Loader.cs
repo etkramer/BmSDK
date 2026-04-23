@@ -106,7 +106,7 @@ internal static class Loader
     {
         RunGuarded(() =>
         {
-            IntPtr selfPtr = self;
+            var selfPtr = self;
             FFrame* stackPtr = (FFrame*)Stack.ToPointer();
             var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
             var funcObj = MarshalUtil.ToManaged<Function>(&stackPtr->Node);

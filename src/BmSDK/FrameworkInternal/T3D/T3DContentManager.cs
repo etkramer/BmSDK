@@ -50,6 +50,7 @@ internal static unsafe class T3DContentManager
             {
                 s_contentByMod[mod.DirectoryPath] = definitions;
             }
+
             Debug.Log($"[{mod.Name}] T3D: Discovered {definitions.Count} content {CommonUtils.FormatPlural(definitions.Count, "file")}");
         }
     }
@@ -205,7 +206,14 @@ internal static unsafe class T3DContentManager
             }
         }
 
-        return byName;
+        if (byName is not null)
+        {
+            return byName;
+        }
+
+        // Fallback: some actors keep components outside AllComponents (e.g.
+        // StaticLightCollectionActor.LightComponents). Resolve directly by path.
+        return Game.FindObject<GameObject>($"{actor.GetPathName()}.{subObjectName}");
     }
 
     private static void ApplyPropertyList(
@@ -253,8 +261,8 @@ internal static unsafe class T3DContentManager
                 ApplyBoolValue(basePtr, boolProp, ParseBool(value));
                 break;
 
-            case ByteProperty:
-                MarshalUtil.ToUnmanaged(byte.Parse(value, CultureInfo.InvariantCulture), dest);
+            case ByteProperty byteProp:
+                ApplyByteValue(dest, byteProp, value);
                 break;
 
             case NameProperty:
@@ -277,6 +285,36 @@ internal static unsafe class T3DContentManager
                 Debug.LogWarning($"T3D: Unsupported property type '{prop.Class.Name}'");
                 break;
         }
+    }
+
+    private static void ApplyByteValue(IntPtr dest, ByteProperty prop, string value)
+    {
+        if (byte.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var num))
+        {
+            MarshalUtil.ToUnmanaged(num, dest);
+            return;
+        }
+
+        // UE3 T3D writes enum-backed bytes as the enum member name. Resolve it
+        // by looking up the name in the UEnum's Names array (offset 48, right
+        // after UField).
+        var enumPtr = MarshalUtil.ToManaged<IntPtr>(prop.Ptr + SpecializedPropertyFieldOffset);
+        if (enumPtr == IntPtr.Zero)
+        {
+            throw new FormatException($"'{value}' is not a valid byte");
+        }
+
+        var names = new TArray<FName>(enumPtr + 48);
+        for (var i = 0; i < names.Count; i++)
+        {
+            if (names[i].ToString().Equals(value, StringComparison.OrdinalIgnoreCase))
+            {
+                MarshalUtil.ToUnmanaged((byte)i, dest);
+                return;
+            }
+        }
+
+        throw new FormatException($"Enum value '{value}' not found");
     }
 
     private static void ApplyBoolValue(IntPtr basePtr, BoolProperty prop, bool value)
@@ -370,6 +408,7 @@ internal static unsafe class T3DContentManager
                 }
             }
         }
+
         return map;
     }
 

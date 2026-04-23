@@ -86,9 +86,9 @@ public record struct Rotator
     /// </summary>
     public static Rotator FromDirection(Vector3 direction)
     {
-        float length = MathF.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
-        float pitch = MathF.Atan2(direction.Z, length);
-        float yaw = MathF.Atan2(direction.Y, direction.X);
+        var length = MathF.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
+        var pitch = MathF.Atan2(direction.Z, length);
+        var yaw = MathF.Atan2(direction.Y, direction.X);
 
         return FromRuu(
             pitch: (int)MathF.Round(pitch * RadiansToRuuFactor),
@@ -102,13 +102,13 @@ public record struct Rotator
     /// </summary>
     public readonly Vector3 ToDirection()
     {
-        float pitchRad = _pitch * RuuToRadiansFactor;
-        float yawRad = _yaw * RuuToRadiansFactor;
+        var pitchRad = _pitch * RuuToRadiansFactor;
+        var yawRad = _yaw * RuuToRadiansFactor;
 
-        float cosPitch = MathF.Cos(pitchRad);
-        float sinPitch = MathF.Sin(pitchRad);
-        float cosYaw = MathF.Cos(yawRad);
-        float sinYaw = MathF.Sin(yawRad);
+        var cosPitch = MathF.Cos(pitchRad);
+        var sinPitch = MathF.Sin(pitchRad);
+        var cosYaw = MathF.Cos(yawRad);
+        var sinYaw = MathF.Sin(yawRad);
 
         return new(x: cosPitch * cosYaw, y: cosPitch * sinYaw, z: sinPitch);
     }

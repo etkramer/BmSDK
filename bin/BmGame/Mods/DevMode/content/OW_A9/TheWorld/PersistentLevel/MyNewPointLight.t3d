@@ -1,6 +1,5 @@
 Begin Actor Class=PointLight Name=MyNewPointLight
    Begin Object Class=PointLightComponent Name=PointLightComponent0
-      Name=PointLightComponent0
       Brightness=5
       LightColor=(R=255,G=0,B=255,A=0)
       LightAffectsClassification=LAC_DYNAMIC_AND_STATIC_AFFECTING
