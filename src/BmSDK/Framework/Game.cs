@@ -116,9 +116,6 @@ public static partial class Game
     public static IEnumerable<T> FindObjects<T>()
         where T : GameObject => FindObjectsCache.FindObjects<T>();
 
-    /// <summary>
-    /// Spawns a new actor of the given type.
-    /// </summary>
     public static unsafe Actor SpawnActor(
         Class Class,
         Vector3 Location = default,
@@ -126,43 +123,32 @@ public static partial class Game
         Actor? Template = null,
         GameObject? Owner = null,
         GameObject? Instigator = null,
-        Level? Level = null
+        Level? Level = null,
+        FName Name = default
     )
     {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
 
         var world = (World)GetWorldInfo().Outer.Outer;
-        var savedLevel = Level is not null ? world.CurrentLevel : null;
         if (Level is not null)
         {
-            world.CurrentLevel = Level;
+            world = (World)Level.Outer;
         }
 
-        IntPtr resPtr;
-        try
-        {
-            resPtr = GameFunctions.SpawnActor(
-                world.Ptr,
-                Class.Ptr,
-                FName.None,
-                (IntPtr)(&Location),
-                (IntPtr)(&Rotation),
-                Template?.Ptr ?? 0,
-                1,
-                1,
-                Owner?.Ptr ?? 0,
-                Instigator?.Ptr ?? 0,
-                1
-            );
-        }
-        finally
-        {
-            if (savedLevel is not null)
-            {
-                world.CurrentLevel = savedLevel;
-            }
-        }
+        var resPtr = GameFunctions.SpawnActor(
+            world.Ptr,
+            Class.Ptr,
+            Name,
+            (IntPtr)(&Location),
+            (IntPtr)(&Rotation),
+            Template?.Ptr ?? 0,
+            1,
+            1,
+            Owner?.Ptr ?? 0,
+            Instigator?.Ptr ?? 0,
+            1
+        );
 
         return MarshalUtil.ToManaged<Actor>(&resPtr);
     }
@@ -174,10 +160,11 @@ public static partial class Game
         Actor? Template = null,
         GameObject? Owner = null,
         GameObject? Instigator = null,
-        Level? Level = null
+        Level? Level = null,
+        FName Name = default
     )
         where T : Actor, IGameObject =>
-        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator, Level) as T;
+        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator, Level, Name) as T;
 
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
