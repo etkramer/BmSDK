@@ -134,7 +134,7 @@ internal static unsafe class T3DContentManager
         var location = ExtractVector(definition.Properties, "Location");
         var rotation = ExtractRotator(definition.Properties, "Rotation");
 
-        var actor = Game.SpawnActor(actorClass, location, rotation, Level: level);
+        var actor = Game.SpawnActor(actorClass, location, rotation, Level: level, Name: definition.ActorName);
         if (actor is null || !actor.IsValid)
         {
             Debug.LogError($"T3D: Failed to spawn actor for {definition.ObjectPath}");

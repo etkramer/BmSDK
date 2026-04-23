@@ -59,8 +59,8 @@ public class PropertiesPanel : Widget
         }
 
         // Header
-        ImGui.TextColored(new Vector4(0.5f, 0.8f, 1f, 1f), obj.Class.Name.ToString());
-        ImGui.TextDisabled(obj.GetPathName());
+        ImGui.TextColored(new Vector4(0.5f, 0.8f, 1f, 1f), obj.Name.ToString());
+        ImGui.TextDisabled($"{obj.Class.Name} ({obj.GetPathName()})");
 
         ImGui.Separator();
 
