@@ -1,2 +1,6 @@
 name = "DevMode"
 description = "In-game editor tools for BmSDK"
+
+[preload]
+packages = ["OW_A9_Ch1z"]
+keep_alive = ["Batwing_Vehicle.Batwing.Batwing_NEW_SKY"]

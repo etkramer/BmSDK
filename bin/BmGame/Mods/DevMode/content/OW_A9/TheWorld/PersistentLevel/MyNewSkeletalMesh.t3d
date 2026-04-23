@@ -1,8 +1,7 @@
 Begin Actor Class=RSkeletalMeshActor Name=MyNewSkeletalMesh
    Begin Object Class=SkeletalMeshComponent Name=SkeletalMeshComponent0
-      SkeletalMesh=SkeletalMesh'Joker_Thugs.Mesh.Joker_Thug_2_Body'
-      PhysicsAsset=PhysicsAsset'Joker_Thugs.Physics.Joker_Thug1_Ragdoll'
+      SkeletalMesh=SkeletalMesh'Batwing_Vehicle.Batwing.Batwing_NEW_SKY'
    End Object
    bCollideActors=True
-   Location=(X=5558.556,Y=-5411.304,Z=3519.225)
+   Location=(X=6500,Y=-5700,Z=3800)
 End Actor

@@ -306,9 +306,9 @@ public class PropertiesPanel : Widget
             if (obj is Light)
             {
                 // Reset DLEs so characters pick up location changes immediately
-                foreach (var pawn in Game.FindObjects<RPawn>())
+                foreach (var lightEnvironment in Game.FindObjects<DynamicLightEnvironmentComponent>())
                 {
-                    pawn.LightEnvironment?.ResetEnvironment();
+                    lightEnvironment?.ResetEnvironment();
                 }
             }
 
@@ -321,9 +321,9 @@ public class PropertiesPanel : Widget
             if (component is LightComponent)
             {
                 // Reset DLEs so characters pick up color/brightness changes immediately
-                foreach (var pawn in Game.FindObjects<RPawn>())
+                foreach (var lightEnvironment in Game.FindObjects<DynamicLightEnvironmentComponent>())
                 {
-                    pawn.LightEnvironment?.ResetEnvironment();
+                    lightEnvironment?.ResetEnvironment();
                 }
             }
         }
