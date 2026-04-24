@@ -100,6 +100,42 @@ public partial class RActorFactoryBreakablePropStatic : BmSDK.Engine.ActorFactor
     public partial record struct FBreakablePropDef
     {
         /// <summary>
+        /// ArrayProperty: DamageStages
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.BmGame.RBreakablePropStatic.FDamageStage> DamageStages
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBreakablePropStatic.FDamageStage>>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: DamageTypes
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Class> DamageTypes
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+
+        /// <summary>
+        /// ArrayProperty: IgnoreDamageTypes
+        /// </summary>
+        public unsafe BmSDK.TArray<BmSDK.Class> IgnoreDamageTypes
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Class>>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: CollideDamageScale
+        /// </summary>
+        public unsafe float CollideDamageScale
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
         /// ObjectProperty: StaticMesh
         /// </summary>
         public unsafe BmSDK.Engine.StaticMesh StaticMesh

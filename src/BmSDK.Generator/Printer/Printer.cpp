@@ -356,20 +356,51 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        UField* fieldLink = _struct->Children;
-        while (fieldLink)
+        // C# record structs cannot inherit fields, so flatten the UE3 super chain
+        // (e.g. FPlane : FVector) into one list — base first, then derived.
+        vector<UScriptStruct*> chain;
+        for (UStruct* s = _struct; s && s->IsA(UScriptStruct::StaticClass()); s = s->SuperStruct)
         {
-            if (fieldLink->IsA(UProperty::StaticClass()))
-            {
-                Printer::PrintProperty((UProperty*)fieldLink, out);
+            chain.push_back((UScriptStruct*)s);
+        }
 
-                if (fieldLink->Next)
+        vector<UProperty*> properties;
+        for (auto it = chain.rbegin(); it != chain.rend(); ++it)
+        {
+            for (UField* fieldLink = (*it)->Children; fieldLink; fieldLink = fieldLink->Next)
+            {
+                if (!fieldLink->IsA(UProperty::StaticClass()))
                 {
-                    out << endl;
+                    continue;
+                }
+
+                auto prop = (UProperty*)fieldLink;
+                auto propName = prop->GetNameManaged();
+                bool alreadyEmitted = false;
+                for (auto existing : properties)
+                {
+                    if (existing->GetNameManaged() == propName)
+                    {
+                        alreadyEmitted = true;
+                        break;
+                    }
+                }
+
+                if (!alreadyEmitted)
+                {
+                    properties.push_back(prop);
                 }
             }
+        }
 
-            fieldLink = fieldLink->Next;
+        for (size_t i = 0; i < properties.size(); i++)
+        {
+            Printer::PrintProperty(properties[i], out);
+
+            if (i + 1 < properties.size())
+            {
+                out << endl;
+            }
         }
     }
     Printer::PopIndent();

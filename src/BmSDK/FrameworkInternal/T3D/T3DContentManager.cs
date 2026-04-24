@@ -319,9 +319,8 @@ internal static unsafe class T3DContentManager
 
     private static void ApplyBoolValue(IntPtr basePtr, BoolProperty prop, bool value)
     {
-        var bitMask = prop.BitMask;
-        var packed = (int*)(basePtr + prop.Offset);
-        *packed = value ? (*packed | bitMask) : (*packed & ~bitMask);
+        ref var packed = ref MarshalUtil.AsRef<int>(basePtr + prop.Offset);
+        packed = value ? (packed | prop.BitMask) : (packed & ~prop.BitMask);
     }
 
     private static void ApplyObjectValue(IntPtr dest, string value)

@@ -1163,6 +1163,15 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     public partial record struct FOnlineArbitrationRegistrant
     {
         /// <summary>
+        /// StructProperty: PlayerNetId
+        /// </summary>
+        public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerNetId
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
         /// StructProperty: MachineId
         /// </summary>
         public unsafe ulong MachineId

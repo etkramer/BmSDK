@@ -455,6 +455,33 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     public partial record struct FLightmassDirectionalLightSettings
     {
         /// <summary>
+        /// FloatProperty: IndirectLightingScale
+        /// </summary>
+        public unsafe float IndirectLightingScale
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: IndirectLightingSaturation
+        /// </summary>
+        public unsafe float IndirectLightingSaturation
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: ShadowExponent
+        /// </summary>
+        public unsafe float ShadowExponent
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
         /// FloatProperty: LightSourceAngle
         /// </summary>
         public unsafe float LightSourceAngle
@@ -470,6 +497,33 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public partial record struct FLightmassPointLightSettings
     {
+        /// <summary>
+        /// FloatProperty: IndirectLightingScale
+        /// </summary>
+        public unsafe float IndirectLightingScale
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: IndirectLightingSaturation
+        /// </summary>
+        public unsafe float IndirectLightingSaturation
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: ShadowExponent
+        /// </summary>
+        public unsafe float ShadowExponent
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
         /// <summary>
         /// FloatProperty: LightSourceRadius
         /// </summary>

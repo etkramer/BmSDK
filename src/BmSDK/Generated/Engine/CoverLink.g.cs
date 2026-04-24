@@ -1130,6 +1130,24 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     public partial record struct FCoverReference
     {
         /// <summary>
+        /// ObjectProperty: Actor
+        /// </summary>
+        public unsafe BmSDK.Engine.Actor Actor
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: Guid
+        /// </summary>
+        public unsafe BmSDK.GameObject.FGuid Guid
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
         /// IntProperty: SlotIdx
         /// </summary>
         public unsafe int SlotIdx

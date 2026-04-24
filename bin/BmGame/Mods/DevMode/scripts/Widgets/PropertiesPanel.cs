@@ -1,6 +1,5 @@
 using System.Numerics;
 using BmSDK;
-using BmSDK.BmGame;
 using BmSDK.Engine;
 
 namespace DevMode;
@@ -120,7 +119,7 @@ public class PropertiesPanel : Widget
         _inspectedObject = target;
     }
 
-    private unsafe void DrawProperty(GameObject obj, Property prop, float labelWidth)
+    private void DrawProperty(GameObject obj, Property prop, float labelWidth)
     {
         var label = prop.Name.ToString();
         var tooltip = $"Type: {prop.Class.Name}";
@@ -128,7 +127,7 @@ public class PropertiesPanel : Widget
         if (prop is FloatProperty)
         {
             PropertyLabel(label, labelWidth, tooltip);
-            if (ImGui.DragFloat($"##{label}", ref *(float*)(obj.Ptr + prop.Offset), 0.1f))
+            if (ImGui.DragFloat($"##{label}", ref prop.AsRef<float>(obj), 0.1f))
             {
                 OnPropertyEdited(obj);
             }
@@ -136,27 +135,24 @@ public class PropertiesPanel : Widget
         else if (prop is IntProperty)
         {
             PropertyLabel(label, labelWidth, tooltip);
-            ImGui.InputInt($"##{label}", ref *(int*)(obj.Ptr + prop.Offset));
+            ImGui.InputInt($"##{label}", ref prop.AsRef<int>(obj));
         }
         else if (prop is BoolProperty boolProp)
         {
-            var bitMask = boolProp.BitMask;
-            var packed = (int*)(obj.Ptr + boolProp.Offset);
-            var value = (*packed & bitMask) != 0;
+            var value = boolProp.GetValue(obj);
             PropertyLabel(label, labelWidth, tooltip);
             if (ImGui.Checkbox($"##{label}", ref value))
             {
-                *packed = value ? (*packed | bitMask) : (*packed & ~bitMask);
+                boolProp.SetValue(obj, value);
             }
         }
         else if (prop is ByteProperty)
         {
-            var ptr = (byte*)(obj.Ptr + prop.Offset);
-            var value = (int)*ptr;
+            var value = (int)prop.AsRef<byte>(obj);
             PropertyLabel(label, labelWidth, tooltip);
             if (ImGui.DragInt($"##{label}", ref value, 1f, 0, 255))
             {
-                *ptr = (byte)value;
+                prop.AsRef<byte>(obj) = (byte)value;
             }
         }
         else if (prop is StructProperty structProp)
@@ -166,24 +162,21 @@ public class PropertiesPanel : Widget
         else if (prop is NameProperty)
         {
             PropertyLabel(label, labelWidth, tooltip);
-            var name = *(FName*)(obj.Ptr + prop.Offset);
-            ImGui.Text(name.ToString());
+            ImGui.Text(prop.AsRef<FName>(obj).ToString());
         }
         else if (prop is StrProperty)
         {
             PropertyLabel(label, labelWidth, tooltip);
-            var str = *(FString*)(obj.Ptr + prop.Offset);
-            ImGui.Text(str.ToString() ?? "(null)");
+            ImGui.Text(prop.AsRef<FString>(obj).ToString() ?? "(null)");
         }
-        else if (prop is ObjectProperty)
+        else if (prop is ObjectProperty objProp)
         {
-            DrawObjectProperty(obj, prop, label, labelWidth, tooltip);
+            DrawObjectProperty(obj, objProp, label, labelWidth, tooltip);
         }
-        else if (prop is ArrayProperty)
+        else if (prop is ArrayProperty arrProp)
         {
             PropertyLabel(label, labelWidth, tooltip);
-            var count = *(int*)(obj.Ptr + prop.Offset + 4);
-            ImGui.TextDisabled($"[{count} elements]");
+            ImGui.TextDisabled($"[{arrProp.GetCount(obj)} elements]");
         }
         else
         {
@@ -192,9 +185,9 @@ public class PropertiesPanel : Widget
         }
     }
 
-    private unsafe void DrawObjectProperty(GameObject obj, Property prop, string label, float labelWidth, string tooltip)
+    private void DrawObjectProperty(GameObject obj, ObjectProperty prop, string label, float labelWidth, string tooltip)
     {
-        var refObj = GameObject.FromPtr(*(IntPtr*)(obj.Ptr + prop.Offset));
+        var refObj = prop.GetValue(obj);
         if (refObj is null || !refObj.IsValid)
         {
             PropertyLabel(label, labelWidth, tooltip);
@@ -209,7 +202,7 @@ public class PropertiesPanel : Widget
         }
     }
 
-    private unsafe void DrawStructProperty(GameObject obj, StructProperty prop, string label, float labelWidth, string tooltip)
+    private void DrawStructProperty(GameObject obj, StructProperty prop, string label, float labelWidth, string tooltip)
     {
         var structType = prop.Struct;
         if (structType is null || !structType.IsValid)
@@ -226,7 +219,7 @@ public class PropertiesPanel : Widget
             case "Vector":
             {
                 PropertyLabel(label, labelWidth, tooltip);
-                if (ImGui.DragFloat3($"##{label}", ref *(Vector3*)(obj.Ptr + prop.Offset), 1f))
+                if (ImGui.DragFloat3($"##{label}", ref prop.AsRef<Vector3>(obj), 1f))
                 {
                     OnPropertyEdited(obj);
                 }
@@ -235,13 +228,12 @@ public class PropertiesPanel : Widget
             }
             case "Rotator":
             {
-                var rotPtr = (Rotator*)(obj.Ptr + prop.Offset);
-                var rot = *rotPtr;
+                ref var rot = ref prop.AsRef<Rotator>(obj);
                 var degrees = new Vector3(rot.Pitch, rot.Yaw, rot.Roll);
                 PropertyLabel(label, labelWidth, tooltip);
                 if (ImGui.DragFloat3($"##{label}", ref degrees, 1f))
                 {
-                    *rotPtr = new Rotator(degrees.X, degrees.Y, degrees.Z);
+                    rot = new Rotator(degrees.X, degrees.Y, degrees.Z);
                     OnPropertyEdited(obj);
                 }
 
@@ -249,15 +241,15 @@ public class PropertiesPanel : Widget
             }
             case "Color":
             {
-                var ptr = (byte*)(obj.Ptr + prop.Offset);
-                var color = new Vector4(ptr[2] / 255f, ptr[1] / 255f, ptr[0] / 255f, ptr[3] / 255f);
+                ref var nativeColor = ref prop.AsRef<GameObject.FColor>(obj);
+                var color = new Vector4(nativeColor.R / 255f, nativeColor.G / 255f, nativeColor.B / 255f, nativeColor.A / 255f);
                 PropertyLabel(label, labelWidth, tooltip);
                 if (ImGui.ColorEdit4($"##{label}", ref color))
                 {
-                    ptr[0] = (byte)(color.Z * 255f);
-                    ptr[1] = (byte)(color.Y * 255f);
-                    ptr[2] = (byte)(color.X * 255f);
-                    ptr[3] = (byte)(color.W * 255f);
+                    nativeColor.R = (byte)(color.X * 255f);
+                    nativeColor.G = (byte)(color.Y * 255f);
+                    nativeColor.B = (byte)(color.Z * 255f);
+                    nativeColor.A = (byte)(color.W * 255f);
                     OnPropertyEdited(obj);
                 }
 
@@ -266,7 +258,7 @@ public class PropertiesPanel : Widget
             case "LinearColor":
             {
                 PropertyLabel(label, labelWidth, tooltip);
-                if (ImGui.ColorEdit4($"##{label}", ref *(Vector4*)(obj.Ptr + prop.Offset)))
+                if (ImGui.ColorEdit4($"##{label}", ref prop.AsRef<Vector4>(obj)))
                 {
                     OnPropertyEdited(obj);
                 }

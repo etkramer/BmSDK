@@ -233,6 +233,24 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     public partial record struct FUIAxisEmulationData
     {
         /// <summary>
+        /// NameProperty: CurrentRepeatKey
+        /// </summary>
+        public unsafe BmSDK.FName CurrentRepeatKey
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: NextRepeatTime
+        /// </summary>
+        public unsafe double NextRepeatTime
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
         /// BoolProperty: bEnabled
         /// </summary>
         public unsafe bool bEnabled

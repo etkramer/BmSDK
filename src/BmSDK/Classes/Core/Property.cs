@@ -44,4 +44,12 @@ public partial class Property
     {
         get => MarshalUtil.ToManaged<ushort>(Ptr + 52 + 4 + 4 + 2);
     }
+
+    /// <summary>
+    /// Returns a ref to this property's value on <paramref name="obj"/>.
+    /// Use for any unmanaged value type (float, int, Vector3, Rotator, FName, FString, FColor, ...).
+    /// Not valid for <see cref="BoolProperty"/> (bitfield-packed) or <see cref="ObjectProperty"/> — use their typed accessors instead.
+    /// </summary>
+    public ref T AsRef<T>(GameObject obj)
+        where T : unmanaged => ref MarshalUtil.AsRef<T>(obj.Ptr + Offset);
 }

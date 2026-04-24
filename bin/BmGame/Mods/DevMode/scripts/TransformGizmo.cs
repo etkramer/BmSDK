@@ -100,10 +100,10 @@ public class TransformGizmo
             {
                 _componentDragStartTranslation = c.Translation;
 
-                var ltw = (float*)(c.Ptr + 112);
-                _componentBasisX = Vector3.Normalize(new Vector3(ltw[0], ltw[1], ltw[2]));
-                _componentBasisY = Vector3.Normalize(new Vector3(ltw[4], ltw[5], ltw[6]));
-                _componentBasisZ = Vector3.Normalize(new Vector3(ltw[8], ltw[9], ltw[10]));
+                ref var ltw = ref c.LocalToWorld;
+                _componentBasisX = Vector3.Normalize(ltw.XPlane.ToVector3());
+                _componentBasisY = Vector3.Normalize(ltw.YPlane.ToVector3());
+                _componentBasisZ = Vector3.Normalize(ltw.ZPlane.ToVector3());
             }
 
             var localDelta = new Vector3(
