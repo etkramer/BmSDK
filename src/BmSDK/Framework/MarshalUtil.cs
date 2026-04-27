@@ -17,104 +17,10 @@ public static unsafe class MarshalUtil
 
     private static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
-    /// <inheritdoc cref="GetOrCreateWrapper(nint)"/>
-    /// <typeparam name="T">Type to cast the wrapper to</typeparam>
-    public static T GetOrCreateWrapper<T>(IntPtr objPtr)
-        where T : GameObject
-        => (T)GetOrCreateWrapper(objPtr);
-
     /// <summary>
-    /// Gets the managed wrapper instance corresponding to the given unmanaged pointer.
+    /// Marshals unmanaged data to managed, then returns it.
     /// </summary>
-    /// <remarks>
-    /// This function is useful when working with native redirects. It allows one to
-    /// easily convert this-pointers to the actual instances in BmSDK.
-    /// </remarks>
-    /// <param name="objPtr">Pointer to unmanaged object</param>
-    /// <returns>Managed wrapper of unmanaged pointer</returns>
-    public static GameObject GetOrCreateWrapper(IntPtr objPtr)
-    {
-        // Get cached object wrapepr
-        if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
-        {
-            return existingObj;
-        }
-
-        // Calculate memory address of the object's class
-        var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
-        var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
-        var classFlagsPtr = classPtr + GameInfo.MemberOffsets.Class__ClassFlags;
-
-        // Not clear yet why this happens, but maybe we don't need to worry about it.
-        var classIndex = *(int*)classIndexPtr.ToPointer();
-        if (classIndex < 1)
-        {
-            return CreateManagedWrapper(objPtr, typeof(Class));
-        }
-
-        // Get managed representation of the object's class
-        var classFlags = *(Class.EClassFlags*)classFlagsPtr.ToPointer();
-
-        // Get the managed type through the class object
-        var managedType = !classFlags.HasFlag(Class.EClassFlags.CLASS_Interface)
-            ? StaticInit.GetManagedTypeForClassPath(GetClassPath(classPtr))
-            : typeof(GameObject); // Wrap CDOs of interfaces as GameObject
-
-        // Wrap this object in a managed instance
-        return CreateManagedWrapper(objPtr, managedType);
-    }
-
-    private static GameObject CreateManagedWrapper(IntPtr objPtr, Type managedType)
-    {
-        // Create a new managed object
-        var newObj = s_managedObjects[objPtr] = Guard.NotNull(
-            (GameObject?)Activator.CreateInstance(managedType, true),
-            $"Couldn't create an instance of managed type {managedType.Name}"
-        );
-        newObj.Ptr = objPtr;
-        FindObjectsCache.Register(newObj);
-        return newObj;
-    }
-
-    internal static string GetClassPath(IntPtr classPtr)
-    {
-        // Fetch class name.
-        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        // Fetch outer name.
-        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
-        var classOuterName = *(FName*)
-            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        return $"{classOuterName}.{className}";
-    }
-
-    // Temp-ish hack. Let's see about refactoring this later.
-    internal static object? ToManaged(IntPtr data, Type managedType)
-    {
-        var method = Guard.NotNull(
-            typeof(MarshalUtil).GetMethod(
-                nameof(ToManaged),
-                BindingFlags.Public | BindingFlags.Static,
-                [typeof(IntPtr)]
-            )
-        );
-
-        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
-        return genericMethod.Invoke(null, [data]);
-    }
-
-    internal static TManaged ToManaged<TManaged>(IntPtr data) =>
-        ToManaged<TManaged>(data.ToPointer());
-
-    /// <summary>
-    /// Returns a ref to unmanaged data at the specified address.
-    /// </summary>
-    internal static ref T AsRef<T>(IntPtr data)
-        where T : unmanaged => ref *(T*)data.ToPointer();
-
-    // Marshals unmanaged data to managed, then returns it.
-    internal static TManaged ToManaged<TManaged>(void* data)
+    public static TManaged ToManaged<TManaged>(void* data)
     {
         // Try to copy memory directly (for struct, primitive types)
         if (typeof(TManaged).IsValueType)
@@ -162,25 +68,28 @@ public static unsafe class MarshalUtil
         );
     }
 
+    public static TManaged ToManaged<TManaged>(IntPtr data) =>
+        ToManaged<TManaged>(data.ToPointer());
+
     // Temp-ish hack. Let's see about refactoring this later.
-    internal static void ToUnmanaged(object? value, IntPtr data, Type managedType)
+    public static object? ToManaged(IntPtr data, Type managedType)
     {
         var method = Guard.NotNull(
-            typeof(MarshalUtil)
-                .GetMethods(BindingFlags.Public | BindingFlags.Static)
-                .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
-                .FirstOrDefault(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
+            typeof(MarshalUtil).GetMethod(
+                nameof(ToManaged),
+                BindingFlags.Public | BindingFlags.Static,
+                [typeof(IntPtr)]
+            )
         );
 
         var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
-        genericMethod.Invoke(null, [value, data]);
+        return genericMethod.Invoke(null, [data]);
     }
 
-    internal static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
-        ToUnmanaged(value, data.ToPointer());
-
-    // Marshals a managed object to native, then copies it into an existing buffer.
-    internal static void ToUnmanaged<TManaged>(TManaged value, void* data)
+    /// <summary>
+    /// Marshals a managed object to native, then copies it into an existing buffer.
+    /// </summary>
+    public static void ToUnmanaged<TManaged>(TManaged value, void* data)
     {
         // Try to copy memory directly (for struct, primitive types)
         if (typeof(TManaged).IsValueType)
@@ -225,6 +134,95 @@ public static unsafe class MarshalUtil
             $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
         );
     }
+
+    public static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
+        ToUnmanaged(value, data.ToPointer());
+
+    // Temp-ish hack. Let's see about refactoring this later.
+    public static void ToUnmanaged(object? value, IntPtr data, Type managedType)
+    {
+        var method = Guard.NotNull(
+            typeof(MarshalUtil)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
+                .FirstOrDefault(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
+        );
+
+        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
+        genericMethod.Invoke(null, [value, data]);
+    }
+
+    /// <summary>
+    /// Gets the managed wrapper instance corresponding to the given unmanaged pointer.
+    /// </summary>
+    /// <remarks>
+    /// This function is useful when working with native redirects. It allows one to
+    /// easily convert this-pointers to the actual instances in BmSDK.
+    /// </remarks>
+    /// <param name="objPtr">Pointer to unmanaged object</param>
+    /// <returns>Managed wrapper of unmanaged pointer</returns>
+    internal static GameObject GetOrCreateWrapper(IntPtr objPtr)
+    {
+        // Get cached object wrapepr
+        if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
+        {
+            return existingObj;
+        }
+
+        // Calculate memory address of the object's class
+        var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
+        var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
+        var classFlagsPtr = classPtr + GameInfo.MemberOffsets.Class__ClassFlags;
+
+        // Not clear yet why this happens, but maybe we don't need to worry about it.
+        var classIndex = *(int*)classIndexPtr.ToPointer();
+        if (classIndex < 1)
+        {
+            return CreateManagedWrapper(objPtr, typeof(Class));
+        }
+
+        // Get managed representation of the object's class
+        var classFlags = *(Class.EClassFlags*)classFlagsPtr.ToPointer();
+
+        // Get the managed type through the class object
+        var managedType = !classFlags.HasFlag(Class.EClassFlags.CLASS_Interface)
+            ? StaticInit.GetManagedTypeForClassPath(GetClassPath(classPtr))
+            : typeof(GameObject); // Wrap CDOs of interfaces as GameObject
+
+        // Wrap this object in a managed instance
+        return CreateManagedWrapper(objPtr, managedType);
+    }
+
+    private static GameObject CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    {
+        // Create a new managed object
+        var newObj = s_managedObjects[objPtr] = Guard.NotNull(
+            (GameObject?)Activator.CreateInstance(managedType, true),
+            $"Couldn't create an instance of managed type {managedType.Name}"
+        );
+        newObj.Ptr = objPtr;
+        FindObjectsCache.Register(newObj);
+        return newObj;
+    }
+
+    private static string GetClassPath(IntPtr classPtr)
+    {
+        // Fetch class name.
+        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        // Fetch outer name.
+        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
+        var classOuterName = *(FName*)
+            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        return $"{classOuterName}.{className}";
+    }
+
+    /// <summary>
+    /// Returns a ref to unmanaged data at the specified address.
+    /// </summary>
+    internal static ref T AsRef<T>(IntPtr data)
+        where T : unmanaged => ref *(T*)data.ToPointer();
 
     internal static int GetSizeUnmanaged<TManaged>()
     {
