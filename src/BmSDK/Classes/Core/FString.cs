@@ -5,7 +5,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public unsafe struct FString
+public unsafe struct FString : IDisposable
 {
     private IntPtr AllocatorInstance;
     private int Num;
@@ -34,5 +34,14 @@ public unsafe struct FString
         }
 
         return Marshal.PtrToStringUni(AllocatorInstance, Num - 1);
+    }
+
+    public void Dispose()
+    {
+        if (AllocatorInstance != IntPtr.Zero)
+        {
+            GameFunctions.AppFree(AllocatorInstance);
+            AllocatorInstance = IntPtr.Zero;
+        }
     }
 }
