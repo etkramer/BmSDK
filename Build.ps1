@@ -159,6 +159,7 @@ function Invoke-Publish {
         "bin/BmGame/ScriptsDev/ScriptsDev.slnx"             = "BmGame/ScriptsDev/ScriptsDev.slnx"
         "bin/BmGame/ScriptsDev/ScriptsDev.code-workspace"   = "BmGame/ScriptsDev/ScriptsDev.code-workspace"
         "bin/BmGame/ScriptsDev/Properties"                  = "BmGame/ScriptsDev/Properties"
+        "bin/BmGame/Mods/ModTemplate"                       = "BmGame/Mods/ModTemplate"
     }
 
     # Define Steam-specific files (includes BatmanAC.exe)
