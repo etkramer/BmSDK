@@ -1,6 +1,7 @@
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using BmSDK.Framework.Redirection;
 using Microsoft.CodeAnalysis;
@@ -63,8 +64,7 @@ internal static class ScriptManager
 
     private const int DebounceMillis = 500;
 
-    public static IEnumerable<Script> Scripts =>
-        s_loadedMods.Values.SelectMany(m => m.Scripts);
+    public static IEnumerable<Script> Scripts => s_loadedMods.Values.SelectMany(m => m.Scripts);
 
     private static bool s_isInitialized = false;
 
@@ -98,6 +98,20 @@ internal static class ScriptManager
         var modsDir = FileUtils.GetModsPath();
         var scriptsDir = FileUtils.GetScriptsPath();
 
+        // Load implicit "Scripts" mod from BmGame/Scripts/
+        if (Directory.Exists(scriptsDir))
+        {
+            try
+            {
+                var defaultMod = Mod.CreateDefault(scriptsDir);
+                LoadMod(defaultMod, scriptsDir);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Failed to load loose scripts: {e.Message}");
+            }
+        }
+
         // Load explicit mods from BmGame/Mods/*/
         if (Directory.Exists(modsDir))
         {
@@ -117,22 +131,10 @@ internal static class ScriptManager
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"Failed to load mod at {Path.GetFileName(modDir)}: {e.Message}");
+                    Debug.LogError(
+                        $"Failed to load mod at {Path.GetFileName(modDir)}: {e.Message}"
+                    );
                 }
-            }
-        }
-
-        // Load implicit "Scripts" mod from BmGame/Scripts/
-        if (Directory.Exists(scriptsDir))
-        {
-            try
-            {
-                var defaultMod = Mod.CreateDefault(scriptsDir);
-                LoadMod(defaultMod, scriptsDir);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Failed to load loose scripts: {e.Message}");
             }
         }
     }
@@ -382,9 +384,15 @@ internal static class ScriptManager
 
             try
             {
-                var script = (Script)Guard.NotNull(Activator.CreateInstance(scriptType));
+                // Create script instance without running constructor
+                var script = (Script)
+                    Guard.NotNull(RuntimeHelpers.GetUninitializedObject(scriptType));
+                // Set fields so they become available during initialization
                 script.Name = scriptName;
                 script.Mod = mod;
+                // Initialize object
+                scriptType.GetConstructor(Type.EmptyTypes)?.Invoke(script, null);
+
                 scripts.Add(script);
             }
             catch (Exception e)
