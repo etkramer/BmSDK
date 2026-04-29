@@ -9,14 +9,14 @@ public abstract class Script
     /// Name of this script, used mainly for logging. Defaults to the name of
     /// the original .cs file, but can be customized using the [Script] attribute.
     /// </summary>
-#pragma warning disable CS8618
+#nullable disable
     public string Name { get; set; }
 
     /// <summary>
     /// The mod that this script belongs to.
     /// </summary>
     public Mod Mod { get; internal set; }
-#pragma warning restore CS8618
+#nullable restore
 
     /// <summary>
     /// Script entry point, called once when the engine first becomes ready.
