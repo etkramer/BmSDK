@@ -125,26 +125,44 @@ public static partial class Game
         Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
-        GameObject? Instigator = null
+        GameObject? Instigator = null,
+        Level? Level = null
     )
     {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
 
         var world = (World)GetWorldInfo().Outer.Outer;
-        var resPtr = GameFunctions.SpawnActor(
-            world.Ptr,
-            Class.Ptr,
-            FName.None,
-            (IntPtr)(&Location),
-            (IntPtr)(&Rotation),
-            Template?.Ptr ?? 0,
-            1,
-            1,
-            Owner?.Ptr ?? 0,
-            Instigator?.Ptr ?? 0,
-            1
-        );
+        var savedLevel = Level is not null ? world.CurrentLevel : null;
+        if (Level is not null)
+        {
+            world.CurrentLevel = Level;
+        }
+
+        IntPtr resPtr;
+        try
+        {
+            resPtr = GameFunctions.SpawnActor(
+                world.Ptr,
+                Class.Ptr,
+                FName.None,
+                (IntPtr)(&Location),
+                (IntPtr)(&Rotation),
+                Template?.Ptr ?? 0,
+                1,
+                1,
+                Owner?.Ptr ?? 0,
+                Instigator?.Ptr ?? 0,
+                1
+            );
+        }
+        finally
+        {
+            if (savedLevel is not null)
+            {
+                world.CurrentLevel = savedLevel;
+            }
+        }
 
         return MarshalUtil.ToManaged<Actor>(&resPtr);
     }
@@ -155,10 +173,11 @@ public static partial class Game
         Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
-        GameObject? Instigator = null
+        GameObject? Instigator = null,
+        Level? Level = null
     )
         where T : Actor, IGameObject =>
-        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
+        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator, Level) as T;
 
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
