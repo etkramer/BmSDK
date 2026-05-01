@@ -31,7 +31,7 @@ public partial class RCombatMove_SmallDroneAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Constructs a new RCombatMove_SmallDroneAttack
     /// </summary>
-    public RCombatMove_SmallDroneAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RCombatMove_SmallDroneAttack(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

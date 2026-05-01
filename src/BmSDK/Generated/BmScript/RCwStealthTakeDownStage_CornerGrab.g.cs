@@ -31,7 +31,7 @@ public partial class RCwStealthTakeDownStage_CornerGrab : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Constructs a new RCwStealthTakeDownStage_CornerGrab
     /// </summary>
-    public RCwStealthTakeDownStage_CornerGrab(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RCwStealthTakeDownStage_CornerGrab(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

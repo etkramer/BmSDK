@@ -31,7 +31,7 @@ public partial class RNwStealthTakeDownStage_GrabOnFloor : BmSDK.BmGame.RStealth
     /// <summary>
     /// Constructs a new RNwStealthTakeDownStage_GrabOnFloor
     /// </summary>
-    public RNwStealthTakeDownStage_GrabOnFloor(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RNwStealthTakeDownStage_GrabOnFloor(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

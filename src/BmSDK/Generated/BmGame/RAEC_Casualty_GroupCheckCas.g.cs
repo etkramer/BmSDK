@@ -31,7 +31,7 @@ public partial class RAEC_Casualty_GroupCheckCas : BmSDK.BmGame.RAEC_SubGroup, B
     /// <summary>
     /// Constructs a new RAEC_Casualty_GroupCheckCas
     /// </summary>
-    public RAEC_Casualty_GroupCheckCas(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RAEC_Casualty_GroupCheckCas(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

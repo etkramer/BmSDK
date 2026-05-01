@@ -31,7 +31,7 @@ public partial class RCombatMove_VenomHit : BmSDK.BmGame.RCombatMove, BmSDK.IGam
     /// <summary>
     /// Constructs a new RCombatMove_VenomHit
     /// </summary>
-    public RCombatMove_VenomHit(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RCombatMove_VenomHit(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

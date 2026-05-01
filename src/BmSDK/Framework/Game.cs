@@ -119,31 +119,34 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
-    [Obsolete("Use `new Actor()` instead")]
     public static unsafe Actor SpawnActor(
         Class Class,
+        FName Name = default,
         Vector3 Location = default,
         Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
-        GameObject? Instigator = null
+        GameObject? Instigator = null,
+        Level? Level = null
     )
     {
-        var resPtr = SpawnActorInternal(Class, Location, Rotation, Template, Owner, Instigator);
+        var resPtr = SpawnActorInternal(Class, Name, Location, Rotation, Template, Owner, Instigator, Level);
         return MarshalUtil.ToManaged<Actor>(&resPtr);
     }
 
     /// <inheritdoc cref="SpawnActor"/>
     [Obsolete("Use `new Actor()` instead")]
     public static T? SpawnActor<T>(
+        FName Name = default,
         Vector3 Location = default,
         Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
-        GameObject? Instigator = null
+        GameObject? Instigator = null,
+        Level? Level = null
     )
         where T : Actor, IGameObject =>
-        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
+        SpawnActor(T.StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level) as T;
 
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
@@ -168,18 +171,20 @@ public static partial class Game
 
     internal static unsafe IntPtr SpawnActorInternal(
         Class Class,
+        FName Name,
         Vector3 Location,
         Rotator Rotation,
         Actor? Template,
         GameObject? Owner,
-        GameObject? Instigator
+        GameObject? Instigator,
+        Level? Level
     )
     {
-        var world = (World)GetWorldInfo().Outer.Outer;
+        var world = Level is null ? (World)GetWorldInfo().Outer.Outer : (World)Level.Outer;
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
             Class.Ptr,
-            FName.None,
+            Name,
             (IntPtr)(&Location),
             (IntPtr)(&Rotation),
             Template?.Ptr ?? 0,
