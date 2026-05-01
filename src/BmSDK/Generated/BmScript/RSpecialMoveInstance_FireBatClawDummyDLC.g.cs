@@ -31,7 +31,7 @@ public partial class RSpecialMoveInstance_FireBatClawDummyDLC : BmSDK.BmGame.RSp
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_FireBatClawDummyDLC
     /// </summary>
-    public RSpecialMoveInstance_FireBatClawDummyDLC(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
+    public RSpecialMoveInstance_FireBatClawDummyDLC(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
