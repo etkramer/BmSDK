@@ -635,7 +635,7 @@ public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMapIconType
     /// </summary>
-    public enum EMapIconType
+    public enum EMapIconType : byte
     {
         MapIcon_None = 0,
         MapIcon_DoorSmall = 1,

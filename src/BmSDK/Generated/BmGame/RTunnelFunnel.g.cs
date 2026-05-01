@@ -117,7 +117,7 @@ public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: TunnelFunnelType
     /// </summary>
-    public enum TunnelFunnelType
+    public enum TunnelFunnelType : byte
     {
         ETFT_BothDirections = 0,
         ETFT_LeftOnly = 1,

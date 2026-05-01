@@ -214,7 +214,7 @@ public partial class RGFxMovieUI_OptionsGame : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Enum: GOMenuItem
     /// </summary>
-    public enum GOMenuItem
+    public enum GOMenuItem : byte
     {
         GOMI_None = 0,
         GOMI_InvertLook = 1,

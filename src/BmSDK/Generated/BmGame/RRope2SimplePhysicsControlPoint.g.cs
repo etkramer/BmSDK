@@ -284,7 +284,7 @@ public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.I
     /// <summary>
     /// Enum: ControlPointPhysicsType
     /// </summary>
-    public enum ControlPointPhysicsType
+    public enum ControlPointPhysicsType : byte
     {
         ROPE2SIMPLECONTROLPOINTTYPE_Dynamic = 0,
         ROPE2SIMPLECONTROLPOINTTYPE_Fixed = 1,

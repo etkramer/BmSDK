@@ -872,7 +872,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MapMaskBits
     /// </summary>
-    public enum MapMaskBits
+    public enum MapMaskBits : byte
     {
         eMapMaskBit_Head2Head = 0,
         eMapMaskBit_1P_Only = 1,
@@ -999,7 +999,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPlayableCharacters
     /// </summary>
-    public enum EPlayableCharacters
+    public enum EPlayableCharacters : byte
     {
         PLR_Batman = 0,
         PLR_Catwoman = 1,

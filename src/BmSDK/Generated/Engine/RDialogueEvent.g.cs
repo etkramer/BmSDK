@@ -428,7 +428,7 @@ public partial class RDialogueEvent : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPlaceHolder
     /// </summary>
-    public enum EPlaceHolder
+    public enum EPlaceHolder : byte
     {
         PH_UNKNOWN = 0,
         PH_PLACEHOLDER = 1,
@@ -445,7 +445,7 @@ public partial class RDialogueEvent : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPriority
     /// </summary>
-    public enum EPriority
+    public enum EPriority : byte
     {
         PRI_UNKNOWN = 0,
         PRI_EMOTE = 1,

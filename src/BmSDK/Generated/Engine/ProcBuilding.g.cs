@@ -284,7 +284,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBuildingStatsBrowserColumns
     /// </summary>
-    public enum EBuildingStatsBrowserColumns
+    public enum EBuildingStatsBrowserColumns : byte
     {
         BSBC_Name = 0,
         BSBC_Ruleset = 1,
@@ -709,7 +709,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPBCornerType
     /// </summary>
-    public enum EPBCornerType
+    public enum EPBCornerType : byte
     {
         EPBC_Default = 0,
         EPBC_Chamfer = 1,
@@ -790,7 +790,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: EScopeEdge
     /// </summary>
-    public enum EScopeEdge
+    public enum EScopeEdge : byte
     {
         EPSA_Top = 0,
         EPSA_Bottom = 1,

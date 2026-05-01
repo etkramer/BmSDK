@@ -126,7 +126,7 @@ public partial class SeqAct_AkMusicSync : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// Enum: EMusicSyncOutputs
     /// </summary>
-    public enum EMusicSyncOutputs
+    public enum EMusicSyncOutputs : byte
     {
         MUSIC_SYNC_STOPPED = 0,
         MUSIC_SYNC_STARTED = 1,

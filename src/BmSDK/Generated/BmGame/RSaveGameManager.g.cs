@@ -417,7 +417,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: StorySlots
     /// </summary>
-    public enum StorySlots
+    public enum StorySlots : byte
     {
         StorySlot_Story = 0,
         StorySlot_Temp = 1,

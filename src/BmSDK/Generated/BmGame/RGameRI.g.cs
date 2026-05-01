@@ -1935,7 +1935,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EPhysWalkingType
     /// </summary>
-    public enum EPhysWalkingType
+    public enum EPhysWalkingType : byte
     {
         PHYSWALK_None = 0,
         PHYSWALK_GeoOnly = 1,
@@ -1949,7 +1949,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: WeaponSwitchCallbackResult
     /// </summary>
-    public enum WeaponSwitchCallbackResult
+    public enum WeaponSwitchCallbackResult : byte
     {
         WSCR_None = 0,
         WSCR_Handled = 1,
@@ -1960,7 +1960,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: ETauntNotifyType
     /// </summary>
-    public enum ETauntNotifyType
+    public enum ETauntNotifyType : byte
     {
         TAUNT_HeadAimStart = 0,
         TAUNT_HeadAimStop = 1,
@@ -1971,7 +1971,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EMultiPlayerGameType
     /// </summary>
-    public enum EMultiPlayerGameType
+    public enum EMultiPlayerGameType : byte
     {
         MPGT_SinglePlayer = 0,
         MPGT_NetworkMultiPlayer = 1,
@@ -1983,7 +1983,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EPredAttackState
     /// </summary>
-    public enum EPredAttackState
+    public enum EPredAttackState : byte
     {
         PAS_None = 0,
         PAS_Chase = 1,
@@ -2186,7 +2186,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EChallengeFlow
     /// </summary>
-    public enum EChallengeFlow
+    public enum EChallengeFlow : byte
     {
         ChallengeFlow_NotSet = 0,
         ChallengeFlow_Entry = 1,
@@ -3213,7 +3213,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EGameStatus
     /// </summary>
-    public enum EGameStatus
+    public enum EGameStatus : byte
     {
         GameStatus_None = 0,
         GameStatus_CharacterSelect = 1,
@@ -3231,7 +3231,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticString
     /// </summary>
-    public enum EStaticString
+    public enum EStaticString : byte
     {
         StaticString_Placeholder1 = 0,
         StaticString_Max = 1,
@@ -3240,7 +3240,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticFloat
     /// </summary>
-    public enum EStaticFloat
+    public enum EStaticFloat : byte
     {
         StaticFloat_Placeholder1 = 0,
         StaticFloat_Max = 1,
@@ -3249,7 +3249,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticInt
     /// </summary>
-    public enum EStaticInt
+    public enum EStaticInt : byte
     {
         StaticInt_TMP_MapIndex = 0,
         StaticInt_Max = 1,
@@ -3258,7 +3258,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticBool
     /// </summary>
-    public enum EStaticBool
+    public enum EStaticBool : byte
     {
         StaticBool_Catwoman_DLC_Checked = 0,
         StaticBool_Max = 1,

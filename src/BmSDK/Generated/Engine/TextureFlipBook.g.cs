@@ -155,7 +155,7 @@ public partial class TextureFlipBook : BmSDK.Engine.Texture2D, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureFlipBookMethod
     /// </summary>
-    public enum TextureFlipBookMethod
+    public enum TextureFlipBookMethod : byte
     {
         TFBM_UL_ROW = 0,
         TFBM_UL_COL = 1,

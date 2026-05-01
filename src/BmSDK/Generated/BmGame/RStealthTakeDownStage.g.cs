@@ -1092,7 +1092,7 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Enum: AttackApproachDirection
     /// </summary>
-    public enum AttackApproachDirection
+    public enum AttackApproachDirection : byte
     {
         AAP_Back = 0,
         AAP_Front = 1,

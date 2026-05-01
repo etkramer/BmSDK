@@ -172,7 +172,7 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Enum: GE_Type
     /// </summary>
-    public enum GE_Type
+    public enum GE_Type : byte
     {
         GE_StorageDeviceLost = 0,
         GE_DeviceSelectorRetry = 1,

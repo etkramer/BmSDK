@@ -282,7 +282,7 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERopeTestState
     /// </summary>
-    public enum ERopeTestState
+    public enum ERopeTestState : byte
     {
         ROPETEST_Wait = 0,
         ROPETEST_Initialise = 1,

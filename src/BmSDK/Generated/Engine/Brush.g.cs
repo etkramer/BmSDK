@@ -193,7 +193,7 @@ public partial class Brush : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECsgOper
     /// </summary>
-    public enum ECsgOper
+    public enum ECsgOper : byte
     {
         CSG_Active = 0,
         CSG_Add = 1,

@@ -108,7 +108,7 @@ public partial class K2Connector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EK2ConnectorDirection
     /// </summary>
-    public enum EK2ConnectorDirection
+    public enum EK2ConnectorDirection : byte
     {
         K2CD_Input = 0,
         K2CD_Output = 1,
@@ -118,7 +118,7 @@ public partial class K2Connector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EK2ConnectorType
     /// </summary>
-    public enum EK2ConnectorType
+    public enum EK2ConnectorType : byte
     {
         K2CT_Bool = 0,
         K2CT_Int = 1,

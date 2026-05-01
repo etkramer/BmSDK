@@ -81,7 +81,7 @@ public partial class RSpecialMoveConfig_GlideKick : BmSDK.BmGame.RSpecialMoveCon
     /// <summary>
     /// Enum: EGlideKickMoveExtraInfo
     /// </summary>
-    public enum EGlideKickMoveExtraInfo
+    public enum EGlideKickMoveExtraInfo : byte
     {
         GKMEI_GlideVelocity = 0,
         GKMEI_MAX = 1,

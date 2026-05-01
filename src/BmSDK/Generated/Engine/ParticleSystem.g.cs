@@ -191,7 +191,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSystemOcclusionBoundsMethod
     /// </summary>
-    public enum EParticleSystemOcclusionBoundsMethod
+    public enum EParticleSystemOcclusionBoundsMethod : byte
     {
         EPSOBM_None = 0,
         EPSOBM_ParticleBounds = 1,
@@ -218,7 +218,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ParticleSystemLODMethod
     /// </summary>
-    public enum ParticleSystemLODMethod
+    public enum ParticleSystemLODMethod : byte
     {
         PARTICLESYSTEMLODMETHOD_Automatic = 0,
         PARTICLESYSTEMLODMETHOD_DirectSet = 1,
@@ -628,7 +628,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSystemUpdateMode
     /// </summary>
-    public enum EParticleSystemUpdateMode
+    public enum EParticleSystemUpdateMode : byte
     {
         EPSUM_RealTime = 0,
         EPSUM_FixedTime = 1,

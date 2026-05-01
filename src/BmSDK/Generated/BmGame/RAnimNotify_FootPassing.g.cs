@@ -90,7 +90,7 @@ public partial class RAnimNotify_FootPassing : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// <summary>
     /// Enum: EFootPassing
     /// </summary>
-    public enum EFootPassing
+    public enum EFootPassing : byte
     {
         FOOTPASSING_Left = 0,
         FOOTPASSING_Right = 1,

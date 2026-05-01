@@ -226,7 +226,7 @@ public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GangTypeEnum
     /// </summary>
-    public enum GangTypeEnum
+    public enum GangTypeEnum : byte
     {
         GangType_None = 0,
         GangType_Joker = 1,

@@ -76,7 +76,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENavMeshGroup
     /// </summary>
-    public enum ENavMeshGroup
+    public enum ENavMeshGroup : byte
     {
         NavMeshGroup_All = 0,
         NavMeshGroup = 1,
@@ -119,7 +119,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELightingGroup
     /// </summary>
-    public enum ELightingGroup
+    public enum ELightingGroup : byte
     {
         LightingGroup_All = 0,
         LightingGroup = 1,

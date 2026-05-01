@@ -81,7 +81,7 @@ public partial class ParticleModuleLocationPrimitiveCylinder : BmSDK.Engine.Part
     /// <summary>
     /// Enum: CylinderHeightAxis
     /// </summary>
-    public enum CylinderHeightAxis
+    public enum CylinderHeightAxis : byte
     {
         PMLPC_HEIGHTAXIS_X = 0,
         PMLPC_HEIGHTAXIS_Y = 1,

@@ -103,7 +103,7 @@ public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ERFlapsConstraintType
     /// </summary>
-    public enum ERFlapsConstraintType
+    public enum ERFlapsConstraintType : byte
     {
         RFCT_Anim = 0,
         RFCT_AnimBlend = 1,

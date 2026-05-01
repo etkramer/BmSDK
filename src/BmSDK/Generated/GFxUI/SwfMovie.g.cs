@@ -180,7 +180,7 @@ public partial class SwfMovie : BmSDK.GFxUI.GFxRawData, BmSDK.IGameObject
     /// <summary>
     /// Enum: FlashTextureRescale
     /// </summary>
-    public enum FlashTextureRescale
+    public enum FlashTextureRescale : byte
     {
         FlashTextureScale_High = 0,
         FlashTextureScale_Low = 1,

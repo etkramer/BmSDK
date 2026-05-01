@@ -81,7 +81,7 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     /// <summary>
     /// Enum: ESampleBlurType
     /// </summary>
-    public enum ESampleBlurType
+    public enum ESampleBlurType : byte
     {
         SampleBlur_PoissonDisc = 0,
         SampleBlur_Mip = 1,

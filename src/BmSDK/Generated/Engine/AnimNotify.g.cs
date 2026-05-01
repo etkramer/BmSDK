@@ -76,7 +76,7 @@ public partial class AnimNotify : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENotifyCategory
     /// </summary>
-    public enum ENotifyCategory
+    public enum ENotifyCategory : byte
     {
         NOTIFYCATEGORY_Misc = 0,
         NOTIFYCATEGORY_Footsteps = 1,

@@ -199,7 +199,7 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EIKHAnd_PerHandState
     /// </summary>
-    public enum EIKHAnd_PerHandState
+    public enum EIKHAnd_PerHandState : byte
     {
         IKHPHS_Inactive = 0,
         IKHPHS_Lock = 1,

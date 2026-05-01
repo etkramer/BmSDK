@@ -114,7 +114,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Enum: BatmanCoverCorners
     /// </summary>
-    public enum BatmanCoverCorners
+    public enum BatmanCoverCorners : byte
     {
         BCC_LeftCorner = 0,
         BCC_RightCorner = 1,
@@ -126,7 +126,7 @@ public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Enum: CornerState
     /// </summary>
-    public enum CornerState
+    public enum CornerState : byte
     {
         CS_TwoWay = 0,
         CS_DestOnly = 1,

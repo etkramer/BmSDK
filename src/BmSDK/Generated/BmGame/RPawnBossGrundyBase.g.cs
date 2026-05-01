@@ -4506,7 +4506,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Enum: EGrundyForcedAttack
     /// </summary>
-    public enum EGrundyForcedAttack
+    public enum EGrundyForcedAttack : byte
     {
         EGrundyForcedAttack_Swing = 0,
         EGrundyForcedAttack_Smash = 1,
@@ -4520,7 +4520,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Enum: EGrundyAttacks
     /// </summary>
-    public enum EGrundyAttacks
+    public enum EGrundyAttacks : byte
     {
         GRUNDYATTACK_Maggots = 0,
         GRUNDYATTACK_Smash = 1,
@@ -4532,7 +4532,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Enum: EGrundyToggleType
     /// </summary>
-    public enum EGrundyToggleType
+    public enum EGrundyToggleType : byte
     {
         GRUNDYTOGGLE_Leave = 0,
         GRUNDYTOGGLE_Enable = 1,
@@ -4544,7 +4544,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Enum: EGrundyWeightSide
     /// </summary>
-    public enum EGrundyWeightSide
+    public enum EGrundyWeightSide : byte
     {
         GRUNDYWEIGHTSIDE_Left = 0,
         GRUNDYWEIGHTSIDE_Right = 1,
@@ -4556,7 +4556,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Enum: SolomonGrundyState
     /// </summary>
-    public enum SolomonGrundyState
+    public enum SolomonGrundyState : byte
     {
         SGS_Normal = 0,
         SGS_OnFire = 1,

@@ -81,7 +81,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// Enum: MatLoadedPhysMaterial
     /// </summary>
-    public enum MatLoadedPhysMaterial
+    public enum MatLoadedPhysMaterial : byte
     {
         LPM_NoLoadedPhysMat = 0,
         LPM_MAX = 1,
@@ -90,7 +90,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EParticleDownsampling
     /// </summary>
-    public enum EParticleDownsampling
+    public enum EParticleDownsampling : byte
     {
         PDS_Full = 0,
         PDS_Half = 1,

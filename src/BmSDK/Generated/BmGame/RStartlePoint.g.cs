@@ -103,7 +103,7 @@ public partial class RStartlePoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObjec
     /// <summary>
     /// Enum: StartleType
     /// </summary>
-    public enum StartleType
+    public enum StartleType : byte
     {
         ST_Furnace = 0,
         ST_FreezeVent = 1,

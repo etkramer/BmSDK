@@ -3914,7 +3914,7 @@ public partial class RPawnBossClayface : BmSDK.BmGame.RPawnBossClayfaceBase, BmS
     /// <summary>
     /// Enum: ClayStages
     /// </summary>
-    public enum ClayStages
+    public enum ClayStages : byte
     {
         CT_Stage1 = 0,
         CT_Stage2 = 1,
@@ -3926,7 +3926,7 @@ public partial class RPawnBossClayface : BmSDK.BmGame.RPawnBossClayfaceBase, BmS
     /// <summary>
     /// Enum: AttackTypes
     /// </summary>
-    public enum AttackTypes
+    public enum AttackTypes : byte
     {
         AT_NonSelected = 0,
         AT_GroundProjectile = 1,

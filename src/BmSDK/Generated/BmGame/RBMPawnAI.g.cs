@@ -2290,7 +2290,7 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.Engine.Interf
     /// <summary>
     /// Enum: GunTargetBoneState
     /// </summary>
-    public enum GunTargetBoneState
+    public enum GunTargetBoneState : byte
     {
         GTBS_Untested = 0,
         GTBS_Obscured = 1,

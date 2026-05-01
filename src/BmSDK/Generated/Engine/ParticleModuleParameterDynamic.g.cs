@@ -151,7 +151,7 @@ public partial class ParticleModuleParameterDynamic : BmSDK.Engine.ParticleModul
     /// <summary>
     /// Enum: EEmitterDynamicParameterValue
     /// </summary>
-    public enum EEmitterDynamicParameterValue
+    public enum EEmitterDynamicParameterValue : byte
     {
         EDPV_UserSet = 0,
         EDPV_VelocityX = 1,

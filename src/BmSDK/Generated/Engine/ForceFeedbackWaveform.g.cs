@@ -169,7 +169,7 @@ public partial class ForceFeedbackWaveform : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWaveformFunction
     /// </summary>
-    public enum EWaveformFunction
+    public enum EWaveformFunction : byte
     {
         WF_Constant = 0,
         WF_LinearIncreasing = 1,

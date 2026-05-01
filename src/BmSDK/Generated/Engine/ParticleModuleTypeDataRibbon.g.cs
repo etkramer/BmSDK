@@ -81,7 +81,7 @@ public partial class ParticleModuleTypeDataRibbon : BmSDK.Engine.ParticleModuleT
     /// <summary>
     /// Enum: ETrailsRenderAxisOption
     /// </summary>
-    public enum ETrailsRenderAxisOption
+    public enum ETrailsRenderAxisOption : byte
     {
         Trails_CameraUp = 0,
         Trails_SourceUp = 1,

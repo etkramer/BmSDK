@@ -106,7 +106,7 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ConstraintProjectionMode
     /// </summary>
-    public enum ConstraintProjectionMode
+    public enum ConstraintProjectionMode : byte
     {
         ECPM_Linear = 0,
         ECPM_LinearAndAngular = 1,

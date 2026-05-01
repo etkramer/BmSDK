@@ -250,7 +250,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMirroredYesNoMaybe
     /// </summary>
-    public enum EMirroredYesNoMaybe
+    public enum EMirroredYesNoMaybe : byte
     {
         MYNM_No = 0,
         MYNM_Yes = 1,
@@ -792,7 +792,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMovementStyle
     /// </summary>
-    public enum EMovementStyle
+    public enum EMovementStyle : byte
     {
         MTS_Yaw = 0,
         MTS_Direction = 1,
@@ -864,7 +864,7 @@ public partial class RPoseConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMovementSpeed
     /// </summary>
-    public enum EMovementSpeed
+    public enum EMovementSpeed : byte
     {
         MS_WalkSlow = 0,
         MS_Walk = 1,

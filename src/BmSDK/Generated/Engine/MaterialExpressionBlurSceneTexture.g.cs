@@ -81,7 +81,7 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     /// <summary>
     /// Enum: ESampleBlurSceneType
     /// </summary>
-    public enum ESampleBlurSceneType
+    public enum ESampleBlurSceneType : byte
     {
         SampleBlurScene_PoissonDisc = 0,
         SampleBlurScene_MAX = 1,
@@ -90,7 +90,7 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     /// <summary>
     /// Enum: EBlurSceneTextureType
     /// </summary>
-    public enum EBlurSceneTextureType
+    public enum EBlurSceneTextureType : byte
     {
         BlurSceneTex_Lighting = 0,
         BlurSceneTex_MAX = 1,

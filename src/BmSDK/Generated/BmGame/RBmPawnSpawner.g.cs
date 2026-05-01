@@ -993,7 +993,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Enum: EPS_PawnTypes
     /// </summary>
-    public enum EPS_PawnTypes
+    public enum EPS_PawnTypes : byte
     {
         EPS_LEAVEEMPTY = 0,
         EPS_MAX = 1,

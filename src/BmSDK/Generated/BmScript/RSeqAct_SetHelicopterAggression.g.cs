@@ -103,7 +103,7 @@ public partial class RSeqAct_SetHelicopterAggression : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Enum: AggroModes
     /// </summary>
-    public enum AggroModes
+    public enum AggroModes : byte
     {
         AM_PASSIVE = 0,
         AM_CHAINGUN = 1,

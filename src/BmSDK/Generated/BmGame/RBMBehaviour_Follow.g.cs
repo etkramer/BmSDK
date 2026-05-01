@@ -170,7 +170,7 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: MoveSpeed
     /// </summary>
-    public enum MoveSpeed
+    public enum MoveSpeed : byte
     {
         MOVESPEED_Walk = 0,
         MOVESPEED_Run = 1,

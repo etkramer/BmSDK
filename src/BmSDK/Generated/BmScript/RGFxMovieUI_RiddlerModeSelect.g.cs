@@ -282,7 +282,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Enum: RMMPopTypes
     /// </summary>
-    public enum RMMPopTypes
+    public enum RMMPopTypes : byte
     {
         RMMPopType_None = 0,
         RMMPopType_SignIn = 1,
@@ -293,7 +293,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Enum: RiddlerModeItems
     /// </summary>
-    public enum RiddlerModeItems
+    public enum RiddlerModeItems : byte
     {
         RMT_None = 0,
         RMT_Ranked = 1,

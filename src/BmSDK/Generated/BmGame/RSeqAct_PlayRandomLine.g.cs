@@ -104,7 +104,7 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: eRandomLineState
     /// </summary>
-    public enum eRandomLineState
+    public enum eRandomLineState : byte
     {
         eRandomLine_None = 0,
         eRandomLine_LoadPackage = 1,
@@ -120,7 +120,7 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: WhichSpeaker
     /// </summary>
-    public enum WhichSpeaker
+    public enum WhichSpeaker : byte
     {
         Speaker_Any = 0,
         Speaker_Thug = 1,

@@ -2735,7 +2735,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EPhysBodyOp
     /// </summary>
-    public enum EPhysBodyOp
+    public enum EPhysBodyOp : byte
     {
         PBO_None = 0,
         PBO_Term = 1,
@@ -2843,7 +2843,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EDepthBiasApplicationType
     /// </summary>
-    public enum EDepthBiasApplicationType
+    public enum EDepthBiasApplicationType : byte
     {
         DEPTHBIASAPPLICATIONTYPE_World = 0,
         DEPTHBIASAPPLICATIONTYPE_Screen = 1,
@@ -2854,7 +2854,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EDepthBiasCalculationType
     /// </summary>
-    public enum EDepthBiasCalculationType
+    public enum EDepthBiasCalculationType : byte
     {
         DEPTHBIASCALCULATIONTYPE_Constant = 0,
         DEPTHBIASCALCULATIONTYPE_DirectionVariable = 1,
@@ -2864,7 +2864,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EFaceFXRegOp
     /// </summary>
-    public enum EFaceFXRegOp
+    public enum EFaceFXRegOp : byte
     {
         FXRO_Add = 0,
         FXRO_Multiply = 1,
@@ -2875,7 +2875,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EFaceFXBlendMode
     /// </summary>
-    public enum EFaceFXBlendMode
+    public enum EFaceFXBlendMode : byte
     {
         FXBM_Overwrite = 0,
         FXBM_Additive = 1,
@@ -2885,7 +2885,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: ERootMotionRotationMode
     /// </summary>
-    public enum ERootMotionRotationMode
+    public enum ERootMotionRotationMode : byte
     {
         RMRM_Ignore = 0,
         RMRM_RotateActor = 1,
@@ -2895,7 +2895,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: ERootMotionMode
     /// </summary>
-    public enum ERootMotionMode
+    public enum ERootMotionMode : byte
     {
         RMM_Translate = 0,
         RMM_Velocity = 1,
@@ -2949,7 +2949,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EInstanceWeightUsage
     /// </summary>
-    public enum EInstanceWeightUsage
+    public enum EInstanceWeightUsage : byte
     {
         IWU_PartialSwap = 0,
         IWU_FullSwap = 1,
@@ -3036,7 +3036,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EMaxDistanceScaleMode
     /// </summary>
-    public enum EMaxDistanceScaleMode
+    public enum EMaxDistanceScaleMode : byte
     {
         MDSM_Multiply = 0,
         MDSM_Substract = 1,

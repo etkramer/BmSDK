@@ -266,7 +266,7 @@ public partial class RGFxMovieUI_Pause : BmSDK.BmGame.RGFxMovieUI_PauseBase, BmS
     /// <summary>
     /// Enum: PauseMenuItems
     /// </summary>
-    public enum PauseMenuItems
+    public enum PauseMenuItems : byte
     {
         PMI_None = 0,
         PMI_Resume = 1,

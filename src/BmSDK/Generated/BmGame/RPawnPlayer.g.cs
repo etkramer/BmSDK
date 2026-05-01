@@ -3926,7 +3926,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EQuickGadgetType
     /// </summary>
-    public enum EQuickGadgetType
+    public enum EQuickGadgetType : byte
     {
         QGT_GadgetLT = 0,
         QGT_GadgetRT = 1,
@@ -4100,7 +4100,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: PerchDirection
     /// </summary>
-    public enum PerchDirection
+    public enum PerchDirection : byte
     {
         PD_Forward = 0,
         PD_Backward = 1,
@@ -4110,7 +4110,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: OverheadRopeControlPointType
     /// </summary>
-    public enum OverheadRopeControlPointType
+    public enum OverheadRopeControlPointType : byte
     {
         ORCT_LeftHand = 0,
         ORCT_RightHand = 1,
@@ -4148,7 +4148,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EStealthTakeDownStages
     /// </summary>
-    public enum EStealthTakeDownStages
+    public enum EStealthTakeDownStages : byte
     {
         ESTDS_CornerGrab = 0,
         ESTDS_FallingTakeDown = 1,
@@ -4191,7 +4191,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EBatmanPoseType
     /// </summary>
-    public enum EBatmanPoseType
+    public enum EBatmanPoseType : byte
     {
         EBPT_Standard = 0,
         EBPT_Combat = 1,
@@ -4377,7 +4377,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EArmourType
     /// </summary>
-    public enum EArmourType
+    public enum EArmourType : byte
     {
         EA_ArmourMelee = 0,
         EA_ArmourBallistic = 1,
@@ -4593,7 +4593,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EPlayerLandMoves
     /// </summary>
-    public enum EPlayerLandMoves
+    public enum EPlayerLandMoves : byte
     {
         PLM_StraightLand = 0,
         PLM_JumpLandToRun = 1,
@@ -4608,7 +4608,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EBatmanGadgetList
     /// </summary>
-    public enum EBatmanGadgetList
+    public enum EBatmanGadgetList : byte
     {
         BGL_Batarang = 0,
         BGL_RCBatarang = 1,
@@ -4630,7 +4630,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EnvironmentAnimationDirection
     /// </summary>
-    public enum EnvironmentAnimationDirection
+    public enum EnvironmentAnimationDirection : byte
     {
         EAD_DoesntMatter = 0,
         EAD_Left = 1,
@@ -4641,7 +4641,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EnvironmentFeelerState
     /// </summary>
-    public enum EnvironmentFeelerState
+    public enum EnvironmentFeelerState : byte
     {
         EFS_Walking = 0,
         EFS_InCover = 1,
@@ -5078,7 +5078,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EHangLedgeType
     /// </summary>
-    public enum EHangLedgeType
+    public enum EHangLedgeType : byte
     {
         HLT_Braced = 0,
         HLT_Dangle = 1,
@@ -5089,7 +5089,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// Enum: EnvironmentSpecialMoveTypes
     /// </summary>
-    public enum EnvironmentSpecialMoveTypes
+    public enum EnvironmentSpecialMoveTypes : byte
     {
         ESMT_None = 0,
         ESMT_LowBarrier = 1,

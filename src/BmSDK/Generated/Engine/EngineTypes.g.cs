@@ -569,7 +569,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELightingBuildQuality
     /// </summary>
-    public enum ELightingBuildQuality
+    public enum ELightingBuildQuality : byte
     {
         Quality_Preview = 0,
         Quality_Medium = 1,
@@ -598,7 +598,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileAmbientOcclusionSource
     /// </summary>
-    public enum EMobileAmbientOcclusionSource
+    public enum EMobileAmbientOcclusionSource : byte
     {
         MAOS_Disabled = 0,
         MAOS_VertexColorRed = 1,
@@ -611,7 +611,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileSpecularMask
     /// </summary>
-    public enum EMobileSpecularMask
+    public enum EMobileSpecularMask : byte
     {
         MSM_Constant = 0,
         MSM_Luminance = 1,
@@ -626,7 +626,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileEnvironmentBlendMode
     /// </summary>
-    public enum EMobileEnvironmentBlendMode
+    public enum EMobileEnvironmentBlendMode : byte
     {
         MEBM_Add = 0,
         MEBM_Lerp = 1,
@@ -636,7 +636,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileEmissiveColorSource
     /// </summary>
-    public enum EMobileEmissiveColorSource
+    public enum EMobileEmissiveColorSource : byte
     {
         MECS_EmissiveTexture = 0,
         MECS_BaseTexture = 1,
@@ -647,7 +647,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileTexCoordsSource
     /// </summary>
-    public enum EMobileTexCoordsSource
+    public enum EMobileTexCoordsSource : byte
     {
         MTCS_TexCoords0 = 0,
         MTCS_TexCoords1 = 1,
@@ -659,7 +659,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileTextureBlendFactorSource
     /// </summary>
-    public enum EMobileTextureBlendFactorSource
+    public enum EMobileTextureBlendFactorSource : byte
     {
         MTBFS_VertexColor = 0,
         MTBFS_MaskTexture = 1,
@@ -669,7 +669,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileValueSource
     /// </summary>
-    public enum EMobileValueSource
+    public enum EMobileValueSource : byte
     {
         MVS_Constant = 0,
         MVS_VertexColorRed = 1,
@@ -691,7 +691,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileTextureTransformTarget
     /// </summary>
-    public enum EMobileTextureTransformTarget
+    public enum EMobileTextureTransformTarget : byte
     {
         MTTT_BaseTexture = 0,
         MTTT_DetailTexture = 1,
@@ -701,7 +701,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMaterialTessellationMode
     /// </summary>
-    public enum EMaterialTessellationMode
+    public enum EMaterialTessellationMode : byte
     {
         MTM_NoTessellation = 0,
         MTM_FlatTessellation = 1,
@@ -713,7 +713,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMaterialLightingModel
     /// </summary>
-    public enum EMaterialLightingModel
+    public enum EMaterialLightingModel : byte
     {
         MLM_Phong = 0,
         MLM_NonDirectional = 1,
@@ -727,7 +727,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBlendMode
     /// </summary>
-    public enum EBlendMode
+    public enum EBlendMode : byte
     {
         BLEND_Opaque = 0,
         BLEND_Masked = 1,
@@ -811,7 +811,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPathFindingError
     /// </summary>
-    public enum EPathFindingError
+    public enum EPathFindingError : byte
     {
         PATHERROR_None = 0,
         PATHERROR_STARTPOLYNOTFOUND = 1,

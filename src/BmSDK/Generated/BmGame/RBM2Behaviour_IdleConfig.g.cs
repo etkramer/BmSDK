@@ -1794,7 +1794,7 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// Enum: TransitionInInteruptSetting
     /// </summary>
-    public enum TransitionInInteruptSetting
+    public enum TransitionInInteruptSetting : byte
     {
         TRANSININTSET_None = 0,
         TRANSININTSET_Replay = 1,
@@ -1806,7 +1806,7 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// Enum: EStasisType
     /// </summary>
-    public enum EStasisType
+    public enum EStasisType : byte
     {
         STASIS_AllowStasisWhenNotTransitioning = 0,
         STASIS_AlwaysAllowStasis = 1,

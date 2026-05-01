@@ -382,7 +382,7 @@ public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETannoyChar
     /// </summary>
-    public enum ETannoyChar
+    public enum ETannoyChar : byte
     {
         TANCHAR_Harley = 0,
         TANCHAR_Joker = 1,

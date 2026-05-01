@@ -81,7 +81,7 @@ public partial class Scene : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDetailMode
     /// </summary>
-    public enum EDetailMode
+    public enum EDetailMode : byte
     {
         DM_Low = 0,
         DM_Medium = 1,
@@ -92,7 +92,7 @@ public partial class Scene : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESceneDepthPriorityGroup
     /// </summary>
-    public enum ESceneDepthPriorityGroup
+    public enum ESceneDepthPriorityGroup : byte
     {
         SDPG_UnrealEdBackground = 0,
         SDPG_World = 1,

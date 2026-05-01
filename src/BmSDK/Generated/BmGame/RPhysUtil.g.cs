@@ -270,7 +270,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeMirroredType
     /// </summary>
-    public enum ECapeMirroredType
+    public enum ECapeMirroredType : byte
     {
         ECAPEMIRROREDTYPE_Unmirrored = 0,
         ECAPEMIRROREDTYPE_Mirrored = 1,
@@ -280,7 +280,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeHiddenType
     /// </summary>
-    public enum ECapeHiddenType
+    public enum ECapeHiddenType : byte
     {
         CAPEHIDDENTYPE_Leave = 0,
         CAPEHIDDENTYPE_Hide = 1,
@@ -292,7 +292,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeEnabledType
     /// </summary>
-    public enum ECapeEnabledType
+    public enum ECapeEnabledType : byte
     {
         CAPEENABLEDTYPE_Leave = 0,
         CAPEENABLEDTYPE_Disable = 1,

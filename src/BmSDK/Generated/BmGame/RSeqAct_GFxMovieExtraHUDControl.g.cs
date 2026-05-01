@@ -119,7 +119,7 @@ public partial class RSeqAct_GFxMovieExtraHUDControl : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Enum: HUDControl
     /// </summary>
-    public enum HUDControl
+    public enum HUDControl : byte
     {
         HUDControl_KismetControlsHideShow = 0,
         HUDControl_Show = 1,

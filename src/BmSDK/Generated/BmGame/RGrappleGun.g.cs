@@ -858,7 +858,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: EOffscreenGrappleIconState
     /// </summary>
-    public enum EOffscreenGrappleIconState
+    public enum EOffscreenGrappleIconState : byte
     {
         OGIS_NotDisplayed = 0,
         OGIS_Displayed = 1,
@@ -869,7 +869,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: EGrappleFailReason
     /// </summary>
-    public enum EGrappleFailReason
+    public enum EGrappleFailReason : byte
     {
         GFR_Success = 0,
         GFR_CollisionFail = 1,

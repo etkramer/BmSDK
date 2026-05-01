@@ -157,7 +157,7 @@ public partial class RCrawlSpaceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: ReverbPreset
     /// </summary>
-    public enum ReverbPreset
+    public enum ReverbPreset : byte
     {
         REVERB_None = 0,
         REVERB_Generic = 1,

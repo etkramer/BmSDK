@@ -311,7 +311,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneSkinningType
     /// </summary>
-    public enum ECapeBoneSkinningType
+    public enum ECapeBoneSkinningType : byte
     {
         CAPEBONESKINNINGTYPE_Full = 0,
         CAPEBONESKINNINGTYPE_TranslationOnly = 1,
@@ -323,7 +323,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStateEffectType
     /// </summary>
-    public enum EStateEffectType
+    public enum EStateEffectType : byte
     {
         STATEEFFECT_SingleBone = 0,
         STATEEFFECT_ChainParents = 1,
@@ -335,7 +335,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneState
     /// </summary>
-    public enum ECapeBoneState
+    public enum ECapeBoneState : byte
     {
         ECAPEBONESTATE_Animated = 0,
         ECAPEBONESTATE_AnimationDriven = 1,

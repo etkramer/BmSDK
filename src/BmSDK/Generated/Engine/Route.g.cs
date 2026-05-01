@@ -124,7 +124,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// <summary>
     /// Enum: ERouteType
     /// </summary>
-    public enum ERouteType
+    public enum ERouteType : byte
     {
         ERT_Linear = 0,
         ERT_Loop = 1,
@@ -135,7 +135,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// <summary>
     /// Enum: ERouteDirection
     /// </summary>
-    public enum ERouteDirection
+    public enum ERouteDirection : byte
     {
         ERD_Forward = 0,
         ERD_Reverse = 1,
@@ -145,7 +145,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// <summary>
     /// Enum: ERouteFillAction
     /// </summary>
-    public enum ERouteFillAction
+    public enum ERouteFillAction : byte
     {
         RFA_Overwrite = 0,
         RFA_Add = 1,

@@ -188,7 +188,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Enum: EBeamDirection
     /// </summary>
-    public enum EBeamDirection
+    public enum EBeamDirection : byte
     {
         BD_Any = 0,
         BD_OnlyForward = 1,

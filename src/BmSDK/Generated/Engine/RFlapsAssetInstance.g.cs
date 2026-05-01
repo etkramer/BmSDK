@@ -565,7 +565,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERFlapsPoseExtractMode
     /// </summary>
-    public enum ERFlapsPoseExtractMode
+    public enum ERFlapsPoseExtractMode : byte
     {
         RFPEM_Full = 0,
         RFPEM_ConnectedRFlapChainsOnlyOrChildrenOrRFlaps = 1,

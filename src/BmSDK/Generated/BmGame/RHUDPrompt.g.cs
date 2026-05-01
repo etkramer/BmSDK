@@ -390,7 +390,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlIcon
     /// </summary>
-    public enum EControlIcon
+    public enum EControlIcon : byte
     {
         CI_None = 0,
         CI_UI_Start = 1,

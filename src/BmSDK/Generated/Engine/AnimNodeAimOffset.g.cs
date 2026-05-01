@@ -354,7 +354,7 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// Enum: EAimID
     /// </summary>
-    public enum EAimID
+    public enum EAimID : byte
     {
         EAID_LeftUp = 0,
         EAID_LeftDown = 1,
@@ -379,7 +379,7 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// Enum: EAnimAimDir
     /// </summary>
-    public enum EAnimAimDir
+    public enum EAnimAimDir : byte
     {
         ANIMAIM_LEFTUP = 0,
         ANIMAIM_CENTERUP = 1,

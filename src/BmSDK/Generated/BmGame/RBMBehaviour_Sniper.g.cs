@@ -702,7 +702,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: FireState
     /// </summary>
-    public enum FireState
+    public enum FireState : byte
     {
         FS_Reload = 0,
         FS_Wait = 1,

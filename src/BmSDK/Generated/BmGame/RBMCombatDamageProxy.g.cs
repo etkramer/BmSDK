@@ -200,7 +200,7 @@ public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Enum: DamageDirectionType
     /// </summary>
-    public enum DamageDirectionType
+    public enum DamageDirectionType : byte
     {
         DD_Parallel = 0,
         DD_Perpendicular = 1,

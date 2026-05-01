@@ -76,7 +76,7 @@ public partial class ParticleModuleCollisionBase : BmSDK.Engine.ParticleModule, 
     /// <summary>
     /// Enum: EParticleCollisionComplete
     /// </summary>
-    public enum EParticleCollisionComplete
+    public enum EParticleCollisionComplete : byte
     {
         EPCC_Kill = 0,
         EPCC_Freeze = 1,

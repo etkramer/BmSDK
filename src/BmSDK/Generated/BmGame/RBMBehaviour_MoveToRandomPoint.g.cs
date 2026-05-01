@@ -183,7 +183,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Enum: MoveToSpeed
     /// </summary>
-    public enum MoveToSpeed
+    public enum MoveToSpeed : byte
     {
         MOVETOSPEED_Walk = 0,
         MOVETOSPEED_Run = 1,

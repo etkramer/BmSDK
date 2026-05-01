@@ -2244,7 +2244,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESlavedTransitionTimeSync
     /// </summary>
-    public enum ESlavedTransitionTimeSync
+    public enum ESlavedTransitionTimeSync : byte
     {
         STTS_None = 0,
         STTS_SyncToStart = 1,
@@ -2686,7 +2686,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETurnInstigator
     /// </summary>
-    public enum ETurnInstigator
+    public enum ETurnInstigator : byte
     {
         TI_AimAt = 0,
         TI_FaceAt = 1,
@@ -2697,7 +2697,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimIdleType
     /// </summary>
-    public enum EAnimIdleType
+    public enum EAnimIdleType : byte
     {
         IDLE_Normal = 0,
         IDLE_Relative = 1,
@@ -2708,7 +2708,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimTransitionType
     /// </summary>
-    public enum EAnimTransitionType
+    public enum EAnimTransitionType : byte
     {
         TRANSITION_Normal = 0,
         TRANSITION_Absolute = 1,

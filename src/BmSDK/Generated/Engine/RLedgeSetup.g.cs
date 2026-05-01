@@ -196,7 +196,7 @@ public partial class RLedgeSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ValidUpAxis
     /// </summary>
-    public enum ValidUpAxis
+    public enum ValidUpAxis : byte
     {
         LIA_None = 0,
         LIA_Z_Pos = 1,

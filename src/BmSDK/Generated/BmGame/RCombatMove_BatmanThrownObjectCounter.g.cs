@@ -210,7 +210,7 @@ public partial class RCombatMove_BatmanThrownObjectCounter : BmSDK.BmGame.RComba
     /// <summary>
     /// Enum: CatchAnimType
     /// </summary>
-    public enum CatchAnimType
+    public enum CatchAnimType : byte
     {
         ECAT_VQuick = 0,
         ECAT_Quick = 1,

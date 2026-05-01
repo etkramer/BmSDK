@@ -81,7 +81,7 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAimingReference
     /// </summary>
-    public enum EAimingReference
+    public enum EAimingReference : byte
     {
         AR_Forward = 0,
         AR_Head = 1,

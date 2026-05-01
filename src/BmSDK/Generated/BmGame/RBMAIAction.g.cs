@@ -416,7 +416,7 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ActionTickResult
     /// </summary>
-    public enum ActionTickResult
+    public enum ActionTickResult : byte
     {
         ATR_Continue = 0,
         ATR_Finish = 1,
@@ -427,7 +427,7 @@ public partial class RBMAIAction : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ActionExitLevel
     /// </summary>
-    public enum ActionExitLevel
+    public enum ActionExitLevel : byte
     {
         AEL_None = 0,
         AEL_Smooth = 1,

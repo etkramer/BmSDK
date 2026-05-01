@@ -355,7 +355,7 @@ public partial class RCombatMove_VillainAttack : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Enum: AttackCounterTypes
     /// </summary>
-    public enum AttackCounterTypes
+    public enum AttackCounterTypes : byte
     {
         ACT_Counter = 0,
         ACT_Evade = 1,

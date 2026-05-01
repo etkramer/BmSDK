@@ -128,7 +128,7 @@ public partial class RSeqAct_SmashablePropChange : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Enum: ESmashablePropChangeType
     /// </summary>
-    public enum ESmashablePropChangeType
+    public enum ESmashablePropChangeType : byte
     {
         SMASHABLEPROPCHANGE_TriggerBreakProp = 0,
         SMASHABLEPROPCHANGE_TurnStaticOnStationary = 1,

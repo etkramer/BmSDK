@@ -954,7 +954,7 @@ public partial class RPawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Enum: PawnHistoryType
     /// </summary>
-    public enum PawnHistoryType
+    public enum PawnHistoryType : byte
     {
         PHT_General = 0,
         PHT_Behaviour = 1,
@@ -991,7 +991,7 @@ public partial class RPawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Enum: StunnedHitType
     /// </summary>
-    public enum StunnedHitType
+    public enum StunnedHitType : byte
     {
         HT_None = 0,
         HT_Head = 1,

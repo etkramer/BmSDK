@@ -271,7 +271,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Enum: eDrumPadAnims
     /// </summary>
-    public enum eDrumPadAnims
+    public enum eDrumPadAnims : byte
     {
         eDPA_Closed_Idle = 0,
         eDPA_Open = 1,
@@ -283,7 +283,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Enum: eDrumPadLightStates
     /// </summary>
-    public enum eDrumPadLightStates
+    public enum eDrumPadLightStates : byte
     {
         eDPLS_Idle = 0,
         eDPLS_Charging = 1,

@@ -334,7 +334,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// <summary>
     /// Enum: EMetricsBestScore
     /// </summary>
-    public enum EMetricsBestScore
+    public enum EMetricsBestScore : byte
     {
         MetBest_LongestGlide = 0,
         MetBest_HighestCombo = 1,
@@ -345,7 +345,7 @@ public partial class RGameplayEventsHydra : BmSDK.Engine.GameplayEventsWriter, B
     /// <summary>
     /// Enum: EMetricsAction
     /// </summary>
-    public enum EMetricsAction
+    public enum EMetricsAction : byte
     {
         MetAct_None = 0,
         MetAct_GroundTravel = 1,

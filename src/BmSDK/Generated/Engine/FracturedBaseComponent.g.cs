@@ -205,7 +205,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// Enum: ESimpleCollisionUsageType
     /// </summary>
-    public enum ESimpleCollisionUsageType
+    public enum ESimpleCollisionUsageType : byte
     {
         SCUT_Inherit = 0,
         SCUT_Simple = 1,

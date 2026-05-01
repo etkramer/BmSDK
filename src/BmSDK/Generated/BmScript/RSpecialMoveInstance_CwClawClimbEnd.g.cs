@@ -156,7 +156,7 @@ public partial class RSpecialMoveInstance_CwClawClimbEnd : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Enum: LaunchLandDir
     /// </summary>
-    public enum LaunchLandDir
+    public enum LaunchLandDir : byte
     {
         LD_Up = 0,
         LD_Left = 1,

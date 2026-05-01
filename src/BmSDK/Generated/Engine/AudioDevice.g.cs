@@ -910,7 +910,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAudioDebugLevels
     /// </summary>
-    public enum EAudioDebugLevels
+    public enum EAudioDebugLevels : byte
     {
         AUDIODEBUG_Off = 0,
         AUDIODEBUG_Normal = 1,
@@ -924,7 +924,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETTSSpeaker
     /// </summary>
-    public enum ETTSSpeaker
+    public enum ETTSSpeaker : byte
     {
         TTSSPEAKER_Paul = 0,
         TTSSPEAKER_Harry = 1,
@@ -941,7 +941,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDebugState
     /// </summary>
-    public enum EDebugState
+    public enum EDebugState : byte
     {
         DEBUGSTATE_None = 0,
         DEBUGSTATE_IsolateDryAudio = 1,
@@ -957,7 +957,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESoundClassName
     /// </summary>
-    public enum ESoundClassName
+    public enum ESoundClassName : byte
     {
         Master = 0,
         ESoundClassName_MAX = 1,

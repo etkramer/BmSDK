@@ -765,7 +765,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDynamicMenuButton
     /// </summary>
-    public enum EDynamicMenuButton
+    public enum EDynamicMenuButton : byte
     {
         DMB_A = 0,
         DMB_B = 1,

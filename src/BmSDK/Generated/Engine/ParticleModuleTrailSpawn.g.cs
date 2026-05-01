@@ -99,7 +99,7 @@ public partial class ParticleModuleTrailSpawn : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// Enum: ETrail2SpawnMethod
     /// </summary>
-    public enum ETrail2SpawnMethod
+    public enum ETrail2SpawnMethod : byte
     {
         PET2SM_Emitter = 0,
         PET2SM_Velocity = 1,

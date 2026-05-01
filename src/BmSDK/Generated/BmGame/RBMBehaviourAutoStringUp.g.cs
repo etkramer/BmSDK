@@ -400,7 +400,7 @@ public partial class RBMBehaviourAutoStringUp : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Enum: StringUpBones
     /// </summary>
-    public enum StringUpBones
+    public enum StringUpBones : byte
     {
         SUB_LeftFoot = 0,
         SUB_RightFoot = 1,

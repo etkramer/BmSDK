@@ -368,7 +368,7 @@ public partial class RControllableChatteringTeethBase : BmSDK.Engine.Pawn, BmSDK
     /// <summary>
     /// Enum: EExplosionOutcome
     /// </summary>
-    public enum EExplosionOutcome
+    public enum EExplosionOutcome : byte
     {
         EXPLOSIONOUTCOME_NotExploded = 0,
         EXPLOSIONOUTCOME_None = 1,
@@ -380,7 +380,7 @@ public partial class RControllableChatteringTeethBase : BmSDK.Engine.Pawn, BmSDK
     /// <summary>
     /// Enum: EChatteringTeethState
     /// </summary>
-    public enum EChatteringTeethState
+    public enum EChatteringTeethState : byte
     {
         CHATTERINGTEETHSTATE_Walking = 0,
         CHATTERINGTEETHSTATE_TriggerExplode = 1,

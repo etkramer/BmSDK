@@ -822,7 +822,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Enum: EHudWeaponType
     /// </summary>
-    public enum EHudWeaponType
+    public enum EHudWeaponType : byte
     {
         HWT_None = 0,
         HWT_Knives = 1,

@@ -1107,7 +1107,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Enum: ELightColour
     /// </summary>
-    public enum ELightColour
+    public enum ELightColour : byte
     {
         ELC_White = 0,
         ELC_Red = 1,
@@ -1117,7 +1117,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Enum: HeliHighlightType
     /// </summary>
-    public enum HeliHighlightType
+    public enum HeliHighlightType : byte
     {
         HHT_STANDARD = 0,
         HHT_SCANNABLE = 1,
@@ -1129,7 +1129,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Enum: HeliAttackMode
     /// </summary>
-    public enum HeliAttackMode
+    public enum HeliAttackMode : byte
     {
         HAM_NOT_SHOOTING = 0,
         HAM_SPIN_UP_CHAINGUN = 1,

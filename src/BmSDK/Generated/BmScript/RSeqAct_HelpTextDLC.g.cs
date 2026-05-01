@@ -158,7 +158,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Enum: EGameActionDLC
     /// </summary>
-    public enum EGameActionDLC
+    public enum EGameActionDLC : byte
     {
         GA_DLC_Ready_Shield = 0,
         GA_DLC_ZipKick_Thug = 1,

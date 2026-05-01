@@ -684,7 +684,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EInputPlatformType
     /// </summary>
-    public enum EInputPlatformType
+    public enum EInputPlatformType : byte
     {
         IPT_PC = 0,
         IPT = 1,
@@ -695,7 +695,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EUIDataProviderFieldType
     /// </summary>
-    public enum EUIDataProviderFieldType
+    public enum EUIDataProviderFieldType : byte
     {
         DATATYPE_Property = 0,
         DATATYPE_Provider = 1,

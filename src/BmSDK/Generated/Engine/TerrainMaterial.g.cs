@@ -81,7 +81,7 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETerrainMappingType
     /// </summary>
-    public enum ETerrainMappingType
+    public enum ETerrainMappingType : byte
     {
         TMT_Auto = 0,
         TMT_XY = 1,

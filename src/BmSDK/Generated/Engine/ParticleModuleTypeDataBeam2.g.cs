@@ -81,7 +81,7 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// Enum: EBeamTaperMethod
     /// </summary>
-    public enum EBeamTaperMethod
+    public enum EBeamTaperMethod : byte
     {
         PEBTM_None = 0,
         PEBTM_Full = 1,
@@ -279,7 +279,7 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// Enum: EBeam2Method
     /// </summary>
-    public enum EBeam2Method
+    public enum EBeam2Method : byte
     {
         PEB2M_Distance = 0,
         PEB2M_Target = 1,

@@ -3118,7 +3118,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EDebugBreakType
     /// </summary>
-    public enum EDebugBreakType
+    public enum EDebugBreakType : byte
     {
         DEBUGGER_NativeOnly = 0,
         DEBUGGER_ScriptOnly = 1,
@@ -3129,7 +3129,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EAutomatedRunResult
     /// </summary>
-    public enum EAutomatedRunResult
+    public enum EAutomatedRunResult : byte
     {
         ARR_Unknown = 0,
         ARR_OOM = 1,
@@ -3140,7 +3140,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: ETickingGroup
     /// </summary>
-    public enum ETickingGroup
+    public enum ETickingGroup : byte
     {
         TG_PreAsyncWork = 0,
         TG_PreAsyncWork2 = 1,
@@ -4135,7 +4135,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EInterpMethodType
     /// </summary>
-    public enum EInterpMethodType
+    public enum EInterpMethodType : byte
     {
         IMT_UseFixedTangentEvalAndNewAutoTangents = 0,
         IMT_UseFixedTangentEval = 1,
@@ -4146,7 +4146,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EInterpCurveMode
     /// </summary>
-    public enum EInterpCurveMode
+    public enum EInterpCurveMode : byte
     {
         CIM_Linear = 0,
         CIM_CurveAuto = 1,
@@ -4407,7 +4407,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EAspectRatioAxisConstraint
     /// </summary>
-    public enum EAspectRatioAxisConstraint
+    public enum EAspectRatioAxisConstraint : byte
     {
         AspectRatio_MaintainYFOV = 0,
         AspectRatio_MaintainXFOV = 1,
@@ -4418,7 +4418,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EInputEvent
     /// </summary>
-    public enum EInputEvent
+    public enum EInputEvent : byte
     {
         IE_Pressed = 0,
         IE_Released = 1,
@@ -4431,7 +4431,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: EAxis
     /// </summary>
-    public enum EAxis
+    public enum EAxis : byte
     {
         AXIS_NONE = 0,
         AXIS_X = 1,
@@ -4505,7 +4505,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Enum: AlphaBlendType
     /// </summary>
-    public enum AlphaBlendType
+    public enum AlphaBlendType : byte
     {
         ABT_Linear = 0,
         ABT_Cubic = 1,

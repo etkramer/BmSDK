@@ -864,7 +864,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: VillainFearLevel
     /// </summary>
-    public enum VillainFearLevel
+    public enum VillainFearLevel : byte
     {
         VFL_Cocky = 0,
         VFL_Nervous = 1,

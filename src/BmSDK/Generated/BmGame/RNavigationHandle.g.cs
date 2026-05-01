@@ -1556,7 +1556,7 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// Enum: PathStatus
     /// </summary>
-    public enum PathStatus
+    public enum PathStatus : byte
     {
         PATH_None = 0,
         PATH_Waiting = 1,

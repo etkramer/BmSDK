@@ -585,7 +585,7 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETransitionType
     /// </summary>
-    public enum ETransitionType
+    public enum ETransitionType : byte
     {
         TT_None = 0,
         TT_Paused = 1,

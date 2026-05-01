@@ -108,7 +108,7 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// <summary>
     /// Enum: CamNotifyType
     /// </summary>
-    public enum CamNotifyType
+    public enum CamNotifyType : byte
     {
         CNT_None = 0,
         CNT_SetGameSpeed = 1,

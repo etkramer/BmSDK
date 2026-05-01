@@ -125,7 +125,7 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: ETutorialLookAtState
     /// </summary>
-    public enum ETutorialLookAtState
+    public enum ETutorialLookAtState : byte
     {
         TLAS_WaitingToLookAt = 0,
         TLAS_LookAt = 1,

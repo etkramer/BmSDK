@@ -207,7 +207,7 @@ public partial class RB_RadialForceActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGa
     /// <summary>
     /// Enum: ERadialForceType
     /// </summary>
-    public enum ERadialForceType
+    public enum ERadialForceType : byte
     {
         RFT_Force = 0,
         RFT_Impulse = 1,

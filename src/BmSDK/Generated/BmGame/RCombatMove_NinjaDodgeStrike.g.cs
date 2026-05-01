@@ -139,7 +139,7 @@ public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, Bm
     /// <summary>
     /// Enum: NinjaDodgeReason
     /// </summary>
-    public enum NinjaDodgeReason
+    public enum NinjaDodgeReason : byte
     {
         DODGE_FarStrike = 0,
         DODGE_ShortStrike = 1,

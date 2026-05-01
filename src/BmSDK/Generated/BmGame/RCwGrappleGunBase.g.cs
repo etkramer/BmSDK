@@ -1587,7 +1587,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EClawClimbStartMode
     /// </summary>
-    public enum EClawClimbStartMode
+    public enum EClawClimbStartMode : byte
     {
         CCSM_FromGround = 0,
         CCSM_FromWallStick = 1,
@@ -2387,7 +2387,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: ClimbPathFailReason
     /// </summary>
-    public enum ClimbPathFailReason
+    public enum ClimbPathFailReason : byte
     {
         CPFR_None = 0,
         CPFR_NoStartPoint = 1,
@@ -2773,7 +2773,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EStartPoints
     /// </summary>
-    public enum EStartPoints
+    public enum EStartPoints : byte
     {
         START_NextToPlayer = 0,
         START_BelowTarget = 1,
@@ -2792,7 +2792,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EClawClimbDirection
     /// </summary>
-    public enum EClawClimbDirection
+    public enum EClawClimbDirection : byte
     {
         CCD_Random = 0,
         CCD_Left = 1,

@@ -81,7 +81,7 @@ public partial class ParticleModuleAttractorParticle : BmSDK.Engine.ParticleModu
     /// <summary>
     /// Enum: EAttractorParticleSelectionMethod
     /// </summary>
-    public enum EAttractorParticleSelectionMethod
+    public enum EAttractorParticleSelectionMethod : byte
     {
         EAPSM_Random = 0,
         EAPSM_Sequential = 1,

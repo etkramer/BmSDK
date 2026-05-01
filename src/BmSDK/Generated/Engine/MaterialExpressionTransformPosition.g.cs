@@ -81,7 +81,7 @@ public partial class MaterialExpressionTransformPosition : BmSDK.Engine.Material
     /// <summary>
     /// Enum: EMaterialPositionTransform
     /// </summary>
-    public enum EMaterialPositionTransform
+    public enum EMaterialPositionTransform : byte
     {
         TRANSFORMPOS_World = 0,
         TRANSFORMPOS_MAX = 1,

@@ -143,7 +143,7 @@ public partial interface RDisruptableInterface : BmSDK.Interface
     /// <summary>
     /// Enum: DisruptableObjectTargetType
     /// </summary>
-    public enum DisruptableObjectTargetType
+    public enum DisruptableObjectTargetType : byte
     {
         DOTT_AccessDoor = 0,
         DOTT_ElevatorControlCall = 1,
@@ -167,7 +167,7 @@ public partial interface RDisruptableInterface : BmSDK.Interface
     /// <summary>
     /// Enum: DisruptableObjectNetworkType
     /// </summary>
-    public enum DisruptableObjectNetworkType
+    public enum DisruptableObjectNetworkType : byte
     {
         DONT_GothamMunicipalNetwork = 0,
         DONT_TygerMcpMainframe = 1,

@@ -160,7 +160,7 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
     /// <summary>
     /// Enum: EOrbitChainMode
     /// </summary>
-    public enum EOrbitChainMode
+    public enum EOrbitChainMode : byte
     {
         EOChainMode_Add = 0,
         EOChainMode_Scale = 1,

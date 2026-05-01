@@ -251,7 +251,7 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// <summary>
     /// Enum: GadgetSelectionDirection
     /// </summary>
-    public enum GadgetSelectionDirection
+    public enum GadgetSelectionDirection : byte
     {
         GSD_Up = 0,
         GSD_Down = 1,

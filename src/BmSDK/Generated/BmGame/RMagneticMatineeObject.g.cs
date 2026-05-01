@@ -334,7 +334,7 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// Enum: EMatineeMoveState
     /// </summary>
-    public enum EMatineeMoveState
+    public enum EMatineeMoveState : byte
     {
         MMS_NotMoving = 0,
         MMS_MovedByMotor = 1,
@@ -422,7 +422,7 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.Bm
     /// <summary>
     /// Enum: MagMatObjEmitType
     /// </summary>
-    public enum MagMatObjEmitType
+    public enum MagMatObjEmitType : byte
     {
         MMOET_ForwardsOnly = 0,
         MMOET_BackwardsOnly = 1,

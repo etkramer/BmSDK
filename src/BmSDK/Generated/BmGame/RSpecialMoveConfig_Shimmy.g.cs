@@ -135,7 +135,7 @@ public partial class RSpecialMoveConfig_Shimmy : BmSDK.BmGame.RSpecialMoveConfig
     /// <summary>
     /// Enum: EShimmyDir
     /// </summary>
-    public enum EShimmyDir
+    public enum EShimmyDir : byte
     {
         SD_NoShimmy = 0,
         SD_ShimmyLeft = 1,

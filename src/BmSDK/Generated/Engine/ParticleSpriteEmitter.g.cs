@@ -81,7 +81,7 @@ public partial class ParticleSpriteEmitter : BmSDK.Engine.ParticleEmitter, BmSDK
     /// <summary>
     /// Enum: EParticleScreenAlignment
     /// </summary>
-    public enum EParticleScreenAlignment
+    public enum EParticleScreenAlignment : byte
     {
         PSA_Square = 0,
         PSA_Rectangle = 1,

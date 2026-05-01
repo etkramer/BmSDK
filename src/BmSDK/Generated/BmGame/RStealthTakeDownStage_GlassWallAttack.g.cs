@@ -303,7 +303,7 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// Enum: CameraCollisionOption
     /// </summary>
-    public enum CameraCollisionOption
+    public enum CameraCollisionOption : byte
     {
         CCO_None = 0,
         CCO_Player = 1,

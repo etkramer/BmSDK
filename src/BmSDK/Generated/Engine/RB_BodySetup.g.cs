@@ -311,7 +311,7 @@ public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESleepFamily
     /// </summary>
-    public enum ESleepFamily
+    public enum ESleepFamily : byte
     {
         SF_Normal = 0,
         SF_Sensitive = 1,

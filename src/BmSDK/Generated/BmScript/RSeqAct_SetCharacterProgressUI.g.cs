@@ -202,7 +202,7 @@ public partial class RSeqAct_SetCharacterProgressUI : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Enum: StoryUI
     /// </summary>
-    public enum StoryUI
+    public enum StoryUI : byte
     {
         SUI_None = 0,
         SUI_Open = 1,

@@ -243,7 +243,7 @@ public partial class RAnimUtil_MovementPlayer : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Enum: EOneShotMovementCycleState
     /// </summary>
-    public enum EOneShotMovementCycleState
+    public enum EOneShotMovementCycleState : byte
     {
         OSMCS_Inactive = 0,
         OSMCS_Waiting = 1,

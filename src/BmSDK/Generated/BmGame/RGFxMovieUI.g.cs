@@ -1727,7 +1727,7 @@ public partial class RGFxMovieUI : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// Enum: UIEVENT_ActionType
     /// </summary>
-    public enum UIEVENT_ActionType
+    public enum UIEVENT_ActionType : byte
     {
         UIEVENT_AT_Forward = 0,
         UIEVENT_AT_Back = 1,
@@ -1737,7 +1737,7 @@ public partial class RGFxMovieUI : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
     /// <summary>
     /// Enum: UIPromptType
     /// </summary>
-    public enum UIPromptType
+    public enum UIPromptType : byte
     {
         UIPT_None = 0,
         UIPT_MenuA = 1,

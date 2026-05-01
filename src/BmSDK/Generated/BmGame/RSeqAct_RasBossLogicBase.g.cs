@@ -819,7 +819,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Enum: RasSpeech
     /// </summary>
-    public enum RasSpeech
+    public enum RasSpeech : byte
     {
         RSSP_Intro = 0,
         RSSP_ArmyAngry = 1,
@@ -856,7 +856,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Enum: ERasStage
     /// </summary>
-    public enum ERasStage
+    public enum ERasStage : byte
     {
         RS_Sand = 0,
         RS_Mano = 1,

@@ -930,7 +930,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkPhysicsNotifyType
     /// </summary>
-    public enum EAkPhysicsNotifyType
+    public enum EAkPhysicsNotifyType : byte
     {
         AK_PHYS_NOTIFY_IMPACT = 0,
         AK_PHYS_NOTIFY_COLLAPSE = 1,
@@ -996,7 +996,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkIOStreamPriorities
     /// </summary>
-    public enum EAkIOStreamPriorities
+    public enum EAkIOStreamPriorities : byte
     {
         AKIO_PRIORITY_HIGH = 0,
         AKIO_PRIORITY_ABOVE_NORMAL = 1,
@@ -1009,7 +1009,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDialogueHelperType
     /// </summary>
-    public enum EDialogueHelperType
+    public enum EDialogueHelperType : byte
     {
         DialogueHelper_None = 0,
         DialogueHelper_Player = 1,
@@ -1030,7 +1030,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkGameSyncType
     /// </summary>
-    public enum EAkGameSyncType
+    public enum EAkGameSyncType : byte
     {
         AK_GS_GENERAL = 0,
         AK_GS_SFX = 1,
@@ -1046,7 +1046,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGlobalAudioSourceID
     /// </summary>
-    public enum EGlobalAudioSourceID
+    public enum EGlobalAudioSourceID : byte
     {
         AK_INVALID_SOURCE_ID = 0,
         AK_RESERVED_SOURCE_ID = 1,
@@ -1064,7 +1064,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EListenerID
     /// </summary>
-    public enum EListenerID
+    public enum EListenerID : byte
     {
         AK_LISTENER_PLAYER = 0,
         AK_LISTENER_CAMERA = 1,

@@ -139,7 +139,7 @@ public partial class RGFxMovieUI_OptionsMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Enum: OptionsMenuItems
     /// </summary>
-    public enum OptionsMenuItems
+    public enum OptionsMenuItems : byte
     {
         MMI_None = 0,
         MMI_OptionsGame = 1,

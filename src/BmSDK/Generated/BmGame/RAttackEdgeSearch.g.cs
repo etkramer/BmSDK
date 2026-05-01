@@ -180,7 +180,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AttackEdgeSearchState
     /// </summary>
-    public enum AttackEdgeSearchState
+    public enum AttackEdgeSearchState : byte
     {
         EAES_None = 0,
         EAES_BuildList = 1,

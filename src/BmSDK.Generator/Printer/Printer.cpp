@@ -405,7 +405,7 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print prop declaration
-    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << endl;
+    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << " : byte" << endl;
 
     // Print prop body
     Printer::Indent(out) << "{" << endl;

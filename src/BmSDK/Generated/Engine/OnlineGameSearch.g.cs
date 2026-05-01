@@ -183,7 +183,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchSortType
     /// </summary>
-    public enum EOnlineGameSearchSortType
+    public enum EOnlineGameSearchSortType : byte
     {
         OGSSO_Ascending = 0,
         OGSSO_Descending = 1,
@@ -236,7 +236,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchComparisonType
     /// </summary>
-    public enum EOnlineGameSearchComparisonType
+    public enum EOnlineGameSearchComparisonType : byte
     {
         OGSCT_Equals = 0,
         OGSCT_NotEquals = 1,
@@ -250,7 +250,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchEntryType
     /// </summary>
-    public enum EOnlineGameSearchEntryType
+    public enum EOnlineGameSearchEntryType : byte
     {
         OGSET_Property = 0,
         OGSET_LocalizedSetting = 1,

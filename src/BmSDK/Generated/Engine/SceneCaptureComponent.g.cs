@@ -114,7 +114,7 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Enum: ESceneCaptureViewMode
     /// </summary>
-    public enum ESceneCaptureViewMode
+    public enum ESceneCaptureViewMode : byte
     {
         SceneCapView_Lit = 0,
         SceneCapView_Unlit = 1,

@@ -126,7 +126,7 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// <summary>
     /// Enum: EBaseBlendType
     /// </summary>
-    public enum EBaseBlendType
+    public enum EBaseBlendType : byte
     {
         BBT_ByActorTag = 0,
         BBT_ByActorClass = 1,

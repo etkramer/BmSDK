@@ -1113,7 +1113,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Enum: ENightwingGadgetList
     /// </summary>
-    public enum ENightwingGadgetList
+    public enum ENightwingGadgetList : byte
     {
         NWGL_Batarang = 0,
         NWGL_SticksAreaStun = 1,

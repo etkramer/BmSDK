@@ -178,7 +178,7 @@ public partial class RSeqAct_SwitchDate : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// Enum: EMonth
     /// </summary>
-    public enum EMonth
+    public enum EMonth : byte
     {
         Month_January = 0,
         Month_Febuary = 1,

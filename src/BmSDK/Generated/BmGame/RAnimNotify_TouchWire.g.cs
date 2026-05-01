@@ -81,7 +81,7 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// <summary>
     /// Enum: LimbOnOrOff
     /// </summary>
-    public enum LimbOnOrOff
+    public enum LimbOnOrOff : byte
     {
         LIMB_On = 0,
         LIMB_Off = 1,

@@ -269,7 +269,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Enum: EProviderAccessType
     /// </summary>
-    public enum EProviderAccessType
+    public enum EProviderAccessType : byte
     {
         ACCESS_ReadOnly = 0,
         ACCESS_PerField = 1,

@@ -101,7 +101,7 @@ public partial class SeqAct_ControlMovieTexture : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Enum: EMovieControlType
     /// </summary>
-    public enum EMovieControlType
+    public enum EMovieControlType : byte
     {
         MCT_Play = 0,
         MCT_Stop = 1,

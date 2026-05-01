@@ -96,7 +96,7 @@ public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// Enum: ETrailTaperMethod
     /// </summary>
-    public enum ETrailTaperMethod
+    public enum ETrailTaperMethod : byte
     {
         PETTM_None = 0,
         PETTM_Full = 1,

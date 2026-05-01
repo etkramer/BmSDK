@@ -81,7 +81,7 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
     /// <summary>
     /// Enum: ELocationBoneSocketSelectionMethod
     /// </summary>
-    public enum ELocationBoneSocketSelectionMethod
+    public enum ELocationBoneSocketSelectionMethod : byte
     {
         BONESOCKETSEL_Sequential = 0,
         BONESOCKETSEL_Random = 1,
@@ -186,7 +186,7 @@ public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleMod
     /// <summary>
     /// Enum: ELocationBoneSocketSource
     /// </summary>
-    public enum ELocationBoneSocketSource
+    public enum ELocationBoneSocketSource : byte
     {
         BONESOCKETSOURCE_Bones = 0,
         BONESOCKETSOURCE_Sockets = 1,

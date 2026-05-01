@@ -342,7 +342,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Enum: LaunchLandDir
     /// </summary>
-    public enum LaunchLandDir
+    public enum LaunchLandDir : byte
     {
         LD_Up = 0,
         LD_Left = 1,

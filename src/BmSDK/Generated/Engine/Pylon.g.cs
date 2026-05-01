@@ -328,7 +328,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Enum: ENavMeshEdgeType
     /// </summary>
-    public enum ENavMeshEdgeType
+    public enum ENavMeshEdgeType : byte
     {
         NAVEDGE_Normal = 0,
         NAVEDGE_Mantle = 1,

@@ -104,7 +104,7 @@ public partial class RBmBatmanCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGa
     /// <summary>
     /// Enum: BatmanCutsceneType
     /// </summary>
-    public enum BatmanCutsceneType
+    public enum BatmanCutsceneType : byte
     {
         BCT_BatClawCutscene = 0,
         BCT_MultiBatClawCutscene = 1,

@@ -657,7 +657,7 @@ public partial class RLevelTransitionDoorBase : BmSDK.BmGame.RLevelTransitionP, 
     /// <summary>
     /// Enum: ECombatLockSides
     /// </summary>
-    public enum ECombatLockSides
+    public enum ECombatLockSides : byte
     {
         CombatLock_BothSides = 0,
         CombatLock_RedDirectionOnly = 1,

@@ -1277,7 +1277,7 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: eDialogueFailResponse
     /// </summary>
-    public enum eDialogueFailResponse
+    public enum eDialogueFailResponse : byte
     {
         DF_Unknown = 0,
         DF_Allowed = 1,
@@ -1450,7 +1450,7 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ePendingErrorType
     /// </summary>
-    public enum ePendingErrorType
+    public enum ePendingErrorType : byte
     {
         PendingError_None = 0,
         PendingError_Bank = 1,
@@ -1461,7 +1461,7 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ePendingState
     /// </summary>
-    public enum ePendingState
+    public enum ePendingState : byte
     {
         PendingState_Starting = 0,
         PendingState_DebugPrint = 1,
@@ -1671,7 +1671,7 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ePendingLoadState
     /// </summary>
-    public enum ePendingLoadState
+    public enum ePendingLoadState : byte
     {
         ePendingLoad_PackageLoading = 0,
         ePendingLoad_LoadedPackage = 1,
@@ -1747,7 +1747,7 @@ public partial class RDialogueManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: eDialogueDebugNoteState
     /// </summary>
-    public enum eDialogueDebugNoteState
+    public enum eDialogueDebugNoteState : byte
     {
         DDN_Normal = 0,
         DDN_Warning = 1,

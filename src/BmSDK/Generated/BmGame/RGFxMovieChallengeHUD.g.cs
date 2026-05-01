@@ -1218,7 +1218,7 @@ public partial class RGFxMovieChallengeHUD : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// <summary>
     /// Enum: ChallengeModeEnum
     /// </summary>
-    public enum ChallengeModeEnum
+    public enum ChallengeModeEnum : byte
     {
         ChM_Unspecified = 0,
         ChM_Predator = 1,

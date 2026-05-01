@@ -81,7 +81,7 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     /// <summary>
     /// Enum: ESceneTextureType
     /// </summary>
-    public enum ESceneTextureType
+    public enum ESceneTextureType : byte
     {
         SceneTex_Lighting = 0,
         SceneTex_MAX = 1,

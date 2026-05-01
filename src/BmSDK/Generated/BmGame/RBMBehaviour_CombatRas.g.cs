@@ -523,7 +523,7 @@ public partial class RBMBehaviour_CombatRas : BmSDK.BmGame.RBMBehaviour_CombatAI
     /// <summary>
     /// Enum: ESwordClusterLevel
     /// </summary>
-    public enum ESwordClusterLevel
+    public enum ESwordClusterLevel : byte
     {
         SCL_Easy = 0,
         SCL_Medium = 1,

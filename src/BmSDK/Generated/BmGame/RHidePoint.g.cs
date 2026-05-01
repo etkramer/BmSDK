@@ -715,7 +715,7 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// Enum: EVantageWallInfo
     /// </summary>
-    public enum EVantageWallInfo
+    public enum EVantageWallInfo : byte
     {
         VWI_Default = 0,
         VWI_TwoWallCorner = 1,

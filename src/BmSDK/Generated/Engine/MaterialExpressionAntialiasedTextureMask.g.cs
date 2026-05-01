@@ -81,7 +81,7 @@ public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.Mat
     /// <summary>
     /// Enum: ETextureColorChannel
     /// </summary>
-    public enum ETextureColorChannel
+    public enum ETextureColorChannel : byte
     {
         TCC_Red = 0,
         TCC_Green = 1,

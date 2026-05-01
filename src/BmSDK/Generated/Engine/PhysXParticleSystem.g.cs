@@ -363,7 +363,7 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPacketSizeMultiplier
     /// </summary>
-    public enum EPacketSizeMultiplier
+    public enum EPacketSizeMultiplier : byte
     {
         EPSM = 0,
         EPSM_2 = 1,
@@ -377,7 +377,7 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESimulationMethod
     /// </summary>
-    public enum ESimulationMethod
+    public enum ESimulationMethod : byte
     {
         ESM_SPH = 0,
         ESM_NO_PARTICLE_INTERACTION = 1,

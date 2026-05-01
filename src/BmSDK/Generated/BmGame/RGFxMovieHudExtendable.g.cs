@@ -809,7 +809,7 @@ public partial class RGFxMovieHudExtendable : BmSDK.BmGame.RGFxMovie, BmSDK.IGam
     /// <summary>
     /// Enum: ObjIcon
     /// </summary>
-    public enum ObjIcon
+    public enum ObjIcon : byte
     {
         OI_Arrow = 0,
         OI_Ticked = 1,
@@ -826,7 +826,7 @@ public partial class RGFxMovieHudExtendable : BmSDK.BmGame.RGFxMovie, BmSDK.IGam
     /// <summary>
     /// Enum: JustifyText
     /// </summary>
-    public enum JustifyText
+    public enum JustifyText : byte
     {
         JT_Left = 0,
         JT_Center = 1,

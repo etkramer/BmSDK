@@ -315,7 +315,7 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Enum: SavePopupType
     /// </summary>
-    public enum SavePopupType
+    public enum SavePopupType : byte
     {
         SavePopupType_FreeSpace = 0,
         SavePopupType_Delete = 1,

@@ -236,7 +236,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Enum: SpawnAnimTypes
     /// </summary>
-    public enum SpawnAnimTypes
+    public enum SpawnAnimTypes : byte
     {
         SAT_JumpLeft = 0,
         SAT_JumpRight = 1,

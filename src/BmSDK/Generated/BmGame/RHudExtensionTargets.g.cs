@@ -421,7 +421,7 @@ public partial class RHudExtensionTargets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Enum: EObjectiveMarkerTypes
     /// </summary>
-    public enum EObjectiveMarkerTypes
+    public enum EObjectiveMarkerTypes : byte
     {
         OMT_Objective = 0,
         OMT_Custom = 1,

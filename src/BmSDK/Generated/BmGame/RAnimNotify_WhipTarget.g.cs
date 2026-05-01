@@ -108,7 +108,7 @@ public partial class RAnimNotify_WhipTarget : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// Enum: WhipTargetingType
     /// </summary>
-    public enum WhipTargetingType
+    public enum WhipTargetingType : byte
     {
         WhipTargeting_Instantaneous = 0,
         WhipTargeting_Continuous = 1,

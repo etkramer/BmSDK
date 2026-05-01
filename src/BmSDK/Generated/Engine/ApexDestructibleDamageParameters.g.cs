@@ -158,7 +158,7 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Enum: EDamageParameterOverrideMode
     /// </summary>
-    public enum EDamageParameterOverrideMode
+    public enum EDamageParameterOverrideMode : byte
     {
         DPOM_Absolute = 0,
         DPOM_Multiplier = 1,

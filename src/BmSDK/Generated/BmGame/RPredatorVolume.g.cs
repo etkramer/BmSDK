@@ -197,7 +197,7 @@ public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: PredatorAIType
     /// </summary>
-    public enum PredatorAIType
+    public enum PredatorAIType : byte
     {
         PRED_Minimal = 0,
         PRED_Lite = 1,

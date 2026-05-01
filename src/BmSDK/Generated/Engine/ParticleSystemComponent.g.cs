@@ -1258,7 +1258,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Enum: EParticleEventType
     /// </summary>
-    public enum EParticleEventType
+    public enum EParticleEventType : byte
     {
         EPET_Any = 0,
         EPET_Spawn = 1,
@@ -1271,7 +1271,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Enum: ParticleReplayState
     /// </summary>
-    public enum ParticleReplayState
+    public enum ParticleReplayState : byte
     {
         PRS_Disabled = 0,
         PRS_Capturing = 1,
@@ -1379,7 +1379,7 @@ public partial class ParticleSystemComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Enum: EParticleSysParamType
     /// </summary>
-    public enum EParticleSysParamType
+    public enum EParticleSysParamType : byte
     {
         PSPT_None = 0,
         PSPT_Scalar = 1,

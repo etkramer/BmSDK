@@ -503,7 +503,7 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: EBatclawFireDirections
     /// </summary>
-    public enum EBatclawFireDirections
+    public enum EBatclawFireDirections : byte
     {
         EBFD_Forward = 0,
         EBFD_Left = 1,
@@ -515,7 +515,7 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: HarpoonAttackType
     /// </summary>
-    public enum HarpoonAttackType
+    public enum HarpoonAttackType : byte
     {
         HAT_Legs = 0,
         HAT_Torso = 1,

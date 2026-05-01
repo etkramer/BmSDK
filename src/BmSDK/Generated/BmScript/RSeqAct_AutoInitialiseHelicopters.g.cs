@@ -116,7 +116,7 @@ public partial class RSeqAct_AutoInitialiseHelicopters : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Enum: HelicopterModes
     /// </summary>
-    public enum HelicopterModes
+    public enum HelicopterModes : byte
     {
         HM_STANDARD = 0,
         HM_CONTROL_NOT_FOUND = 1,

@@ -592,7 +592,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// Enum: EEmergencyStopMode
     /// </summary>
-    public enum EEmergencyStopMode
+    public enum EEmergencyStopMode : byte
     {
         EESM_AlwaysStop = 0,
         EESM_StopWhenMatineePlaysForward = 1,
@@ -603,7 +603,7 @@ public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// Enum: EForceFieldAxis
     /// </summary>
-    public enum EForceFieldAxis
+    public enum EForceFieldAxis : byte
     {
         EFFA_None = 0,
         EFFA_X_Axis = 1,

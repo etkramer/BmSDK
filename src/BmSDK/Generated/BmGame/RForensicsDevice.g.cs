@@ -1029,7 +1029,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: VisualHudMode
     /// </summary>
-    public enum VisualHudMode
+    public enum VisualHudMode : byte
     {
         VHM_NormalView = 0,
         VHM_DetectiveMode = 1,
@@ -1040,7 +1040,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: SpecialTrackingMode
     /// </summary>
-    public enum SpecialTrackingMode
+    public enum SpecialTrackingMode : byte
     {
         SPM_None = 0,
         SPM_Pheromone = 1,
@@ -1054,7 +1054,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: FlashStates
     /// </summary>
-    public enum FlashStates
+    public enum FlashStates : byte
     {
         FlS_Up = 0,
         FlS_Hold = 1,
@@ -1066,7 +1066,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EvidenceDisplayState
     /// </summary>
-    public enum EvidenceDisplayState
+    public enum EvidenceDisplayState : byte
     {
         EDS_ScannerNonScan = 0,
         EDS_Scanner = 1,

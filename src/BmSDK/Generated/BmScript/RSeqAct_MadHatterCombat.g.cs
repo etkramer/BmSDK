@@ -430,7 +430,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Enum: EHatterFX
     /// </summary>
-    public enum EHatterFX
+    public enum EHatterFX : byte
     {
         EHFX_Karma = 0,
         EHFX_fallingLines = 1,

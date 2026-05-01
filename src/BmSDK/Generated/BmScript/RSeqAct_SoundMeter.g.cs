@@ -334,7 +334,7 @@ public partial class RSeqAct_SoundMeter : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Enum: SoundMeterVolume
     /// </summary>
-    public enum SoundMeterVolume
+    public enum SoundMeterVolume : byte
     {
         CSMV_Quiet = 0,
         CSMV_Medium = 1,

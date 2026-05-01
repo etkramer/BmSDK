@@ -81,7 +81,7 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EBeamEndPointMethod
     /// </summary>
-    public enum EBeamEndPointMethod
+    public enum EBeamEndPointMethod : byte
     {
         PEBEPM_Calculated = 0,
         PEBEPM_Distribution = 1,
@@ -194,7 +194,7 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EBeamMethod
     /// </summary>
-    public enum EBeamMethod
+    public enum EBeamMethod : byte
     {
         PEBM_Distance = 0,
         PEBM_EndPoints = 1,

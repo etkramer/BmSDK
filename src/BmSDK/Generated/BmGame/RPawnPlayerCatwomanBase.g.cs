@@ -514,7 +514,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Enum: ESwingDirection
     /// </summary>
-    public enum ESwingDirection
+    public enum ESwingDirection : byte
     {
         SWD_Default = 0,
         SWD_Left = 1,
@@ -527,7 +527,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Enum: EAutoSwingState
     /// </summary>
-    public enum EAutoSwingState
+    public enum EAutoSwingState : byte
     {
         ASS_None = 0,
         ASS_InitialJump = 1,

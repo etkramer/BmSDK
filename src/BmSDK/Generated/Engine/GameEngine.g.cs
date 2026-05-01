@@ -259,7 +259,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFullyLoadPackageType
     /// </summary>
-    public enum EFullyLoadPackageType
+    public enum EFullyLoadPackageType : byte
     {
         FULLYLOAD_Map = 0,
         FULLYLOAD_Game_PreLoadClass = 1,

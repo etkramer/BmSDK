@@ -613,7 +613,7 @@ public partial class RBMSpeechManager : BmSDK.Engine.ActorComponent, BmSDK.IGame
     /// <summary>
     /// Enum: InternalSpeakingEnum
     /// </summary>
-    public enum InternalSpeakingEnum
+    public enum InternalSpeakingEnum : byte
     {
         InternalSpeaking_Off = 0,
         InternalSpeaking_FaceFX = 1,

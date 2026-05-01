@@ -454,7 +454,7 @@ public partial class RGFxMovieFrontMost : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Enum: SubtitleJustify
     /// </summary>
-    public enum SubtitleJustify
+    public enum SubtitleJustify : byte
     {
         SUBS_LeftAlign = 0,
         SUBS_Centered = 1,
@@ -492,7 +492,7 @@ public partial class RGFxMovieFrontMost : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObj
     /// <summary>
     /// Enum: AnimatedFadeType
     /// </summary>
-    public enum AnimatedFadeType
+    public enum AnimatedFadeType : byte
     {
         AF_Fade_Bats = 0,
         AF_Fade_Riddler = 1,

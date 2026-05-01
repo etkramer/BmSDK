@@ -138,7 +138,7 @@ public partial class RCombatMove_VillainJump : BmSDK.BmGame.RCombatMove, BmSDK.I
     /// <summary>
     /// Enum: EVillainJumpType
     /// </summary>
-    public enum EVillainJumpType
+    public enum EVillainJumpType : byte
     {
         EVJT_Left = 0,
         EVJT_Right = 1,

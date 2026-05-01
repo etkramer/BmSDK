@@ -353,7 +353,7 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EBoneControlSpace
     /// </summary>
-    public enum EBoneControlSpace
+    public enum EBoneControlSpace : byte
     {
         BCS_WorldSpace = 0,
         BCS_ActorSpace = 1,

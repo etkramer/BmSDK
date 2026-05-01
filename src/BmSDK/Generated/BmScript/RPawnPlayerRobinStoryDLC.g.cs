@@ -418,7 +418,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Enum: PDLCProgress
     /// </summary>
-    public enum PDLCProgress
+    public enum PDLCProgress : byte
     {
         PDLCP_ZipKicks = 0,
         PDLCP_ShieldBashes = 1,

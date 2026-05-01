@@ -342,7 +342,7 @@ public partial class RHUD : BmSDK.BmGame.RHUDBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECinematicPriorities
     /// </summary>
-    public enum ECinematicPriorities
+    public enum ECinematicPriorities : byte
     {
         CP_Front = 0,
         CP_Middle = 1,

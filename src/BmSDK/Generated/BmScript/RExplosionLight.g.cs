@@ -116,7 +116,7 @@ public partial class RExplosionLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELifeType
     /// </summary>
-    public enum ELifeType
+    public enum ELifeType : byte
     {
         EL_None = 0,
         EL_FastStartSlowEnd = 1,

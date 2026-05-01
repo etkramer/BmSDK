@@ -124,7 +124,7 @@ public partial class RChapterLineSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFaction
     /// </summary>
-    public enum EFaction
+    public enum EFaction : byte
     {
         FACTION_None = 0,
         FACTION_All = 1,

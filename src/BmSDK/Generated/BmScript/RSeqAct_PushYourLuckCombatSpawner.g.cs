@@ -641,7 +641,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// <summary>
     /// Enum: MySpawnTypes
     /// </summary>
-    public enum MySpawnTypes
+    public enum MySpawnTypes : byte
     {
         MST_Thug = 0,
         MST_ThugArmoured = 1,
@@ -661,7 +661,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// <summary>
     /// Enum: PYL_Output
     /// </summary>
-    public enum PYL_Output
+    public enum PYL_Output : byte
     {
         PYL_GameOver = 0,
         PYL_SpawnGun = 1,
@@ -689,7 +689,7 @@ public partial class RSeqAct_PushYourLuckCombatSpawner : BmSDK.BmGame.RSeqAct_He
     /// <summary>
     /// Enum: PYL_HudSounds
     /// </summary>
-    public enum PYL_HudSounds
+    public enum PYL_HudSounds : byte
     {
         PHS_CounterChange = 0,
         PHS_Bank = 1,

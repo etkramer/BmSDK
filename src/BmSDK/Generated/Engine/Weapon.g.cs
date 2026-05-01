@@ -1143,7 +1143,7 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWeaponFireType
     /// </summary>
-    public enum EWeaponFireType
+    public enum EWeaponFireType : byte
     {
         EWFT_InstantHit = 0,
         EWFT_Projectile = 1,

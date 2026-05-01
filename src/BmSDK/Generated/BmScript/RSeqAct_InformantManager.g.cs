@@ -484,7 +484,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Enum: eInformantZone
     /// </summary>
-    public enum eInformantZone
+    public enum eInformantZone : byte
     {
         eInformantZone_OW_A = 0,
         eInformantZone_OW_C = 1,

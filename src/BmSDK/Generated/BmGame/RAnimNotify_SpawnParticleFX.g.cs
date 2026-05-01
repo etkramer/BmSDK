@@ -180,7 +180,7 @@ public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSD
     /// <summary>
     /// Enum: BoneOrSocketSource
     /// </summary>
-    public enum BoneOrSocketSource
+    public enum BoneOrSocketSource : byte
     {
         BOSS_Bone = 0,
         BOSS_Socket = 1,

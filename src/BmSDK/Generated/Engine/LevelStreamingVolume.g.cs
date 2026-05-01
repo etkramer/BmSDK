@@ -93,7 +93,7 @@ public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStreamingVolumeUsage
     /// </summary>
-    public enum EStreamingVolumeUsage
+    public enum EStreamingVolumeUsage : byte
     {
         SVB_Loading = 0,
         SVB_LoadingAndVisibility = 1,

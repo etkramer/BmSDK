@@ -81,7 +81,7 @@ public partial class ParticleModuleTypeDataMeshPhysX : BmSDK.Engine.ParticleModu
     /// <summary>
     /// Enum: EPhysXMeshRotationMethod
     /// </summary>
-    public enum EPhysXMeshRotationMethod
+    public enum EPhysXMeshRotationMethod : byte
     {
         PMRM_Disabled = 0,
         PMRM_Spherical = 1,

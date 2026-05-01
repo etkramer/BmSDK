@@ -1923,7 +1923,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStasisLevel
     /// </summary>
-    public enum EStasisLevel
+    public enum EStasisLevel : byte
     {
         STASISLEVEL_Normal = 0,
         STASISLEVEL_Cheap = 1,
@@ -2203,7 +2203,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ThugResponseType
     /// </summary>
-    public enum ThugResponseType
+    public enum ThugResponseType : byte
     {
         TRS_None = 0,
         TRS_Ambient = 1,
@@ -2213,7 +2213,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: GameCombatCameraType
     /// </summary>
-    public enum GameCombatCameraType
+    public enum GameCombatCameraType : byte
     {
         GCCT_BrawlComatCamera = 0,
         GCCT_CorridorCombatCamera = 1,
@@ -2240,7 +2240,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtSpeed
     /// </summary>
-    public enum CameraLookAtSpeed
+    public enum CameraLookAtSpeed : byte
     {
         CLASP_Slow = 0,
         CLASP_Fast = 1,
@@ -2252,7 +2252,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtStrength
     /// </summary>
-    public enum CameraLookAtStrength
+    public enum CameraLookAtStrength : byte
     {
         CLAS_ForceCamera = 0,
         CLAS_ForceUntilLookAtNeutral = 1,
@@ -2264,7 +2264,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtType
     /// </summary>
-    public enum CameraLookAtType
+    public enum CameraLookAtType : byte
     {
         CLAT_NoLookAt = 0,
         CLAT_LookAtRotation = 1,
@@ -2276,7 +2276,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECombatLockType
     /// </summary>
-    public enum ECombatLockType
+    public enum ECombatLockType : byte
     {
         ECLT_None = 0,
         ECLT_Thugs = 1,
@@ -2287,7 +2287,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeModifiers
     /// </summary>
-    public enum EChallengeModifiers
+    public enum EChallengeModifiers : byte
     {
         CMod_None = 0,
         CMod_Neg_ExtremeEnemies = 1,
@@ -2308,7 +2308,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeModifierType
     /// </summary>
-    public enum EChallengeModifierType
+    public enum EChallengeModifierType : byte
     {
         EChallengeModifier_None = 0,
         EChallengeModifier_Example1 = 1,
@@ -2319,7 +2319,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeCharacter
     /// </summary>
-    public enum EChallengeCharacter
+    public enum EChallengeCharacter : byte
     {
         ECCID_Batman = 0,
         ECCID_BatmanArmoured = 1,
@@ -2330,7 +2330,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeMode
     /// </summary>
-    public enum EChallengeMode
+    public enum EChallengeMode : byte
     {
         ECMID_Combat = 0,
         ECMID_CombatEndurance = 1,
@@ -2341,7 +2341,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAchievementID
     /// </summary>
-    public enum EAchievementID
+    public enum EAchievementID : byte
     {
         EACID_None = 0,
         EACID_Im_Batman = 1,
@@ -2420,7 +2420,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: SContexts
     /// </summary>
-    public enum SContexts
+    public enum SContexts : byte
     {
         SContexts_OVERWORLD = 0,
         SContexts_COURT = 1,
@@ -2443,7 +2443,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EContexts
     /// </summary>
-    public enum EContexts
+    public enum EContexts : byte
     {
         EContexts_CHALLENGE = 0,
         EContexts_Nothing = 1,
@@ -2456,7 +2456,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPresenceID
     /// </summary>
-    public enum EPresenceID
+    public enum EPresenceID : byte
     {
         EPresence_Idle = 0,
         EPresence_Frontend = 1,
@@ -2469,7 +2469,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EComboMoveType
     /// </summary>
-    public enum EComboMoveType
+    public enum EComboMoveType : byte
     {
         ECMT_Strike = 0,
         ECMT_PowerStrike = 1,
@@ -2533,7 +2533,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: RagdollStunType
     /// </summary>
-    public enum RagdollStunType
+    public enum RagdollStunType : byte
     {
         RAGSTUN_Generic = 0,
         RAGSTUN_Batarang = 1,
@@ -2569,7 +2569,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameAction
     /// </summary>
-    public enum EGameAction
+    public enum EGameAction : byte
     {
         GA_None = 0,
         GA_Takedown_CombatTakedown = 1,
@@ -2832,7 +2832,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELive_LiveError
     /// </summary>
-    public enum ELive_LiveError
+    public enum ELive_LiveError : byte
     {
         EL_None = 0,
         EL_LoginLost = 1,
@@ -2856,7 +2856,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGS_Reason
     /// </summary>
-    public enum EGS_Reason
+    public enum EGS_Reason : byte
     {
         EGS_None = 0,
         EGS_StoryExit = 1,
@@ -2869,7 +2869,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameModes
     /// </summary>
-    public enum EGameModes
+    public enum EGameModes : byte
     {
         EGM_Frontend = 0,
         EGM_Story = 1,
@@ -2880,7 +2880,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELeaderboardColumns
     /// </summary>
-    public enum ELeaderboardColumns
+    public enum ELeaderboardColumns : byte
     {
         ELBC_Medal = 0,
         ELBC_Score = 1,
@@ -2891,7 +2891,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StreamedCombatWeaponTypes
     /// </summary>
-    public enum StreamedCombatWeaponTypes
+    public enum StreamedCombatWeaponTypes : byte
     {
         COMBATWEAPON_None = 0,
         COMBATWEAPON_Rifle = 1,
@@ -2907,7 +2907,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StreamedPredWeaponTypes
     /// </summary>
-    public enum StreamedPredWeaponTypes
+    public enum StreamedPredWeaponTypes : byte
     {
         PREDWEAPON_Rifle = 0,
         PREDWEAPON_Shotgun = 1,
@@ -2919,7 +2919,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: VocalPriority
     /// </summary>
-    public enum VocalPriority
+    public enum VocalPriority : byte
     {
         EVP_Default = 0,
         EVP_Low = 1,
@@ -2933,7 +2933,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: VocalType
     /// </summary>
-    public enum VocalType
+    public enum VocalType : byte
     {
         EVT_Emote = 0,
         EVT_Bark = 1,

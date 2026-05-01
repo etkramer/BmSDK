@@ -128,7 +128,7 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSourceSelectionMethod
     /// </summary>
-    public enum EParticleSourceSelectionMethod
+    public enum EParticleSourceSelectionMethod : byte
     {
         EPSSM_Random = 0,
         EPSSM_Sequential = 1,
@@ -138,7 +138,7 @@ public partial class ParticleModule : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EModuleType
     /// </summary>
-    public enum EModuleType
+    public enum EModuleType : byte
     {
         EPMT_General = 0,
         EPMT_TypeData = 1,

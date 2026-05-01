@@ -199,7 +199,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Enum: LunaticMoveState
     /// </summary>
-    public enum LunaticMoveState
+    public enum LunaticMoveState : byte
     {
         LMS_Walk = 0,
         LMS_Jump = 1,

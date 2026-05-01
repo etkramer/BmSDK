@@ -315,7 +315,7 @@ public partial class FluidInfluenceComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// Enum: EInfluenceType
     /// </summary>
-    public enum EInfluenceType
+    public enum EInfluenceType : byte
     {
         Fluid_Flow = 0,
         Fluid_Raindrops = 1,

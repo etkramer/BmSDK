@@ -307,7 +307,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkBankLoadType
     /// </summary>
-    public enum EAkBankLoadType
+    public enum EAkBankLoadType : byte
     {
         AK_BANK_LOAD_NONE = 0,
         AK_BANK_LOAD_NORMAL = 1,

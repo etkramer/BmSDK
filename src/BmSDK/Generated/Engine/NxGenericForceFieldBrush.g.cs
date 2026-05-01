@@ -263,7 +263,7 @@ public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Enum: FFB_ForceFieldCoordinates
     /// </summary>
-    public enum FFB_ForceFieldCoordinates
+    public enum FFB_ForceFieldCoordinates : byte
     {
         FFB_CARTESIAN = 0,
         FFB_SPHERICAL = 1,

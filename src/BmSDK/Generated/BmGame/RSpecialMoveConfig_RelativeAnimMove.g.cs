@@ -134,7 +134,7 @@ public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Enum: ERelativeAnimMoveExtraInfo
     /// </summary>
-    public enum ERelativeAnimMoveExtraInfo
+    public enum ERelativeAnimMoveExtraInfo : byte
     {
         ERAMEI_FreeRotation = 0,
         ERAMEI_MAX = 1,

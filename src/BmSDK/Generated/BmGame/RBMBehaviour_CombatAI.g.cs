@@ -704,7 +704,7 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// Enum: NoMoveReason
     /// </summary>
-    public enum NoMoveReason
+    public enum NoMoveReason : byte
     {
         NMR_None = 0,
         NMR_NoFloor = 1,

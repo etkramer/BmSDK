@@ -189,7 +189,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EStretchPhase
     /// </summary>
-    public enum EStretchPhase
+    public enum EStretchPhase : byte
     {
         STRETCHPHASE_PostAnimBlend = 0,
         STRETCHPHASE_PreRender = 1,
@@ -199,7 +199,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EParentAnimComponentMode
     /// </summary>
-    public enum EParentAnimComponentMode
+    public enum EParentAnimComponentMode : byte
     {
         PACM_Original = 0,
         PACM_Add = 1,
@@ -212,7 +212,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: ESkeletalMeshComponentBoundsType
     /// </summary>
-    public enum ESkeletalMeshComponentBoundsType
+    public enum ESkeletalMeshComponentBoundsType : byte
     {
         SMCBT_Automatic = 0,
         SMCBT_Conservative = 1,
@@ -375,7 +375,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EFaceFXRegisterOwner
     /// </summary>
-    public enum EFaceFXRegisterOwner
+    public enum EFaceFXRegisterOwner : byte
     {
         FXREGISTEROWNER_Code = 0,
         FXREGISTEROWNER_CodeBlink = 1,

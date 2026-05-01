@@ -1324,7 +1324,7 @@ public partial class RPawnPlayerCatwoman : BmSDK.BmGame.RPawnPlayerCatwomanBase,
     /// <summary>
     /// Enum: ECatwomanGadgetList
     /// </summary>
-    public enum ECatwomanGadgetList
+    public enum ECatwomanGadgetList : byte
     {
         CWGL_BullWhip = 0,
         CWGL_Bolas = 1,

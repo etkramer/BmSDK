@@ -1708,7 +1708,7 @@ public partial class GameInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStandbyType
     /// </summary>
-    public enum EStandbyType
+    public enum EStandbyType : byte
     {
         STDBY_Rx = 0,
         STDBY_Tx = 1,
