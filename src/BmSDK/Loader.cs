@@ -2,7 +2,7 @@ global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
-using BmSDK.Framework.T3D;
+using BmSDK.Framework.Content;
 using MoreLinq;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
@@ -44,9 +44,8 @@ internal static class Loader
         // Init ImGui rendering backend
         ImGuiBackend.Init();
 
-        // Find/load scripts and T3D content
+        // Find/load scripts
         ScriptManager.Init();
-        T3DContentManager.Init();
 
         // Wire up script OnGUI callbacks for ImGui rendering
         ImGuiController.OnGUI = () =>
@@ -213,10 +212,10 @@ internal static class Loader
                 ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
             }
 
-            // Apply T3D content when a level finishes loading (before PreBeginPlay)
+            // Apply mod content when a level finishes loading (before PreBeginPlay)
             if (obj is Level level)
             {
-                T3DContentManager.ApplyContentForLevel(level);
+                ContentManager.ApplyContentForLevel(level);
             }
         });
     }

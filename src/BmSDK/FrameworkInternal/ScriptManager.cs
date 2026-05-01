@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using System.Text;
 using BmSDK.Framework.Redirection;
-using BmSDK.Framework.T3D;
+using BmSDK.Framework.Content;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -157,8 +157,8 @@ internal static class ScriptManager
     /// </summary>
     private static bool LoadMod(Mod mod, string scriptsDir)
     {
-        // Discover T3D content regardless of whether scripts exist
-        T3DContentManager.DiscoverContent(mod);
+        // Discover mod content regardless of whether scripts exist
+        ContentManager.DiscoverContent(mod);
 
         var (peStream, pdbStream) = CompileMod(mod, scriptsDir);
         if (peStream == null)
@@ -216,8 +216,6 @@ internal static class ScriptManager
             RedirectManager.Global.UnregisterRedirectors(asm);
             RedirectManager.Local.ClearCacheForAssembly(asm);
         }
-
-        T3DContentManager.UnloadContent(loaded.Mod);
 
         // Unload the assembly context
         loaded.Alc.Unload();

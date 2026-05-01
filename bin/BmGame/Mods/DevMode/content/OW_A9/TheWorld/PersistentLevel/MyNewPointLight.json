@@ -1,0 +1,17 @@
+{
+    "Class": "Engine.PointLight",
+    "Location": { "X": 6600, "Y": -5700, "Z": 3600 },
+    "PointLightComponent0": {
+        "Brightness": 2,
+        "LightColor": { "R": 255, "G": 0, "B": 255, "A": 0 },
+        "LightAffectsClassification": "LAC_DYNAMIC_AND_STATIC_AFFECTING",
+        "LightingChannels": {
+            "BSP": true,
+            "Static": true,
+            "Dynamic": true,
+            "CompositeDynamic": true,
+            "Character": true,
+            "bInitialized": true
+        }
+    }
+}

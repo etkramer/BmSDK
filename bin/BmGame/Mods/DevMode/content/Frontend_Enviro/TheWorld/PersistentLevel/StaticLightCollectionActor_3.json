@@ -1,0 +1,8 @@
+{
+    "Class": "StaticLightCollectionActor",
+    "DirectionalLight_LC_1": {
+        "Brightness": 10,
+        "LightColor": { "R": 0, "G": 255, "B": 0, "A": 255 },
+        "LightingChannels": { "Static": false, "Character": true }
+    }
+}

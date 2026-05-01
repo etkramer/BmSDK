@@ -1,0 +1,7 @@
+{
+    "Class": "Engine.StaticMeshActor",
+    "Location": { "X": 5229.971, "Y": -6524.3267, "Z": 3942.1704 },
+    "StaticMeshComponent0": {
+        "Materials": ["EngineMaterials.DefaultMaterial"]
+    }
+}

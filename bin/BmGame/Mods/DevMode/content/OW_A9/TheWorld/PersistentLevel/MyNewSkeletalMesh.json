@@ -1,0 +1,8 @@
+{
+    "Class": "BmGame.RSkeletalMeshActor",
+    "Location": { "X": 6500, "Y": -5700, "Z": 3800 },
+    "bCollideActors": true,
+    "SkeletalMeshComponent0": {
+        "SkeletalMesh": "Batwing_Vehicle.Batwing.Batwing_NEW_SKY"
+    }
+}

@@ -1,6 +1,0 @@
-Begin Actor Class=StaticMeshActor Name=StaticMeshActor_2632
-   Begin Object Class=StaticMeshComponent Name=StaticMeshComponent0
-      Materials=(Material'EngineMaterials.DefaultMaterial')
-   End Object
-   Location=(X=5229.971,Y=-6524.3267,Z=3942.1704)
-End Actor

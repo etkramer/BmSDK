@@ -1,7 +1,0 @@
-Begin Actor Class=RSkeletalMeshActor Name=MyNewSkeletalMesh
-   Begin Object Class=SkeletalMeshComponent Name=SkeletalMeshComponent0
-      SkeletalMesh=SkeletalMesh'Batwing_Vehicle.Batwing.Batwing_NEW_SKY'
-   End Object
-   bCollideActors=True
-   Location=(X=6500,Y=-5700,Z=3800)
-End Actor

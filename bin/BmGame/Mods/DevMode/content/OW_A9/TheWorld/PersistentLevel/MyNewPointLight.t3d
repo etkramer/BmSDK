@@ -1,9 +1,0 @@
-Begin Actor Class=PointLight Name=MyNewPointLight
-   Begin Object Class=PointLightComponent Name=PointLightComponent0
-      Brightness=2
-      LightColor=(R=255,G=0,B=255,A=0)
-      LightAffectsClassification=LAC_DYNAMIC_AND_STATIC_AFFECTING
-      LightingChannels=(BSP=True,Static=True,Dynamic=True,CompositeDynamic=True,Character=True,bInitialized=True)
-   End Object
-   Location=(X=6600,Y=-5700,Z=3600)
-End Actor
