@@ -76,7 +76,7 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     /// <summary>
     /// Enum: DistributionParamMode
     /// </summary>
-    public enum DistributionParamMode
+    public enum DistributionParamMode : byte
     {
         DPM_Normal = 0,
         DPM_Abs = 1,

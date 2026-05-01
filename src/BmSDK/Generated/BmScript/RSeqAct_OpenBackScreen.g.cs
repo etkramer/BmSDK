@@ -202,7 +202,7 @@ public partial class RSeqAct_OpenBackScreen : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Enum: EBioPageType
     /// </summary>
-    public enum EBioPageType
+    public enum EBioPageType : byte
     {
         BioPage_Info = 0,
         BioPage_Bio = 1,
@@ -214,7 +214,7 @@ public partial class RSeqAct_OpenBackScreen : BmSDK.Engine.SequenceAction, BmSDK
     /// <summary>
     /// Enum: EMapParamType
     /// </summary>
-    public enum EMapParamType
+    public enum EMapParamType : byte
     {
         EMPT_None = 0,
         EMPT_Script = 1,

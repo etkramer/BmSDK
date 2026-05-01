@@ -191,7 +191,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMovieStreamSource
     /// </summary>
-    public enum EMovieStreamSource
+    public enum EMovieStreamSource : byte
     {
         MovieStream_File = 0,
         MovieStream_Memory = 1,

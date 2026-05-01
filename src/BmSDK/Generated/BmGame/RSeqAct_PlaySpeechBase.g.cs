@@ -238,7 +238,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: EDialogueType
     /// </summary>
-    public enum EDialogueType
+    public enum EDialogueType : byte
     {
         DT_Normal = 0,
         DT_Cutscene = 1,

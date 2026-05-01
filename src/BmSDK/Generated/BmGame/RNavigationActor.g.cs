@@ -171,7 +171,7 @@ public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.Engine.Interfa
     /// <summary>
     /// Enum: NavActorState
     /// </summary>
-    public enum NavActorState
+    public enum NavActorState : byte
     {
         ENAS_None = 0,
         ENAS_Waiting = 1,

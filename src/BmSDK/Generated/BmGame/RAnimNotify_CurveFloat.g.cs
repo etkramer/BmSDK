@@ -108,7 +108,7 @@ public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// <summary>
     /// Enum: EFloatControlType
     /// </summary>
-    public enum EFloatControlType
+    public enum EFloatControlType : byte
     {
         FCC_Set = 0,
         FCC_LinearInterpolate = 1,

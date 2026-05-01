@@ -81,7 +81,7 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
     /// <summary>
     /// Enum: EParticleCameraOffsetUpdateMethod
     /// </summary>
-    public enum EParticleCameraOffsetUpdateMethod
+    public enum EParticleCameraOffsetUpdateMethod : byte
     {
         EPCOUM_DirectSet = 0,
         EPCOUM_Additive = 1,

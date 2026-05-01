@@ -433,7 +433,7 @@ public partial class AkMultipointEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameO
     /// <summary>
     /// Enum: EMultipointEmitterType
     /// </summary>
-    public enum EMultipointEmitterType
+    public enum EMultipointEmitterType : byte
     {
         MULTIPOINT_ADDITIVE = 0,
         MULTIPOINT_POSITIONAL = 1,

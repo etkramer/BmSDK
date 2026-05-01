@@ -214,7 +214,7 @@ public partial class RGFxMovieUI_PauseOptionsGame : BmSDK.BmGame.RGFxMovieUI_Pau
     /// <summary>
     /// Enum: GOPMenuItem
     /// </summary>
-    public enum GOPMenuItem
+    public enum GOPMenuItem : byte
     {
         GOPMI_None = 0,
         GOPMI_InvertLook = 1,

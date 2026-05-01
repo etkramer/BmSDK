@@ -619,7 +619,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Enum: InterrogationThugReaction
     /// </summary>
-    public enum InterrogationThugReaction
+    public enum InterrogationThugReaction : byte
     {
         ITR_None = 0,
         ITR_Yes = 1,

@@ -255,7 +255,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Enum: SpeechLinesOrder
     /// </summary>
-    public enum SpeechLinesOrder
+    public enum SpeechLinesOrder : byte
     {
         SL_Random = 0,
         SL_InOrder = 1,

@@ -96,7 +96,7 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
     /// <summary>
     /// Enum: EInterpMoveAxis
     /// </summary>
-    public enum EInterpMoveAxis
+    public enum EInterpMoveAxis : byte
     {
         AXIS_TranslationX = 0,
         AXIS_TranslationY = 1,

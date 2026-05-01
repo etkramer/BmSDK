@@ -850,7 +850,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Enum: EFractureWallSide
     /// </summary>
-    public enum EFractureWallSide
+    public enum EFractureWallSide : byte
     {
         EFRACTUREWALLSIDE_Front = 0,
         EFRACTUREWALLSIDE_Back = 1,
@@ -860,7 +860,7 @@ public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, 
     /// <summary>
     /// Enum: ERigidBodyCollisionResponseType
     /// </summary>
-    public enum ERigidBodyCollisionResponseType
+    public enum ERigidBodyCollisionResponseType : byte
     {
         RBCR_None = 0,
         RBCR_ForceBreak = 1,

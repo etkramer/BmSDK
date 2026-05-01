@@ -1695,7 +1695,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EAkComponentSourceCreateFailReason
     /// </summary>
-    public enum EAkComponentSourceCreateFailReason
+    public enum EAkComponentSourceCreateFailReason : byte
     {
         AK_COMPONENT_SOURCE_CREATE_FAIL_REASON_NONE = 0,
         AK_COMPONENT_SOURCE_CREATE_FAIL_REASON_DISTANT = 1,
@@ -1708,7 +1708,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EAkComponentUpdate
     /// </summary>
-    public enum EAkComponentUpdate
+    public enum EAkComponentUpdate : byte
     {
         AK_COMPONENT_UPDATE_SINGLE_AUTO = 0,
         AK_COMPONENT_UPDATE_SINGLE_NO_AUTO = 1,

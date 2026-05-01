@@ -452,7 +452,7 @@ public partial class RBMPawnAIAnim : BmSDK.BmGame.RPawnCombat, BmSDK.BmGame.RXra
     /// <summary>
     /// Enum: XrayType
     /// </summary>
-    public enum XrayType
+    public enum XrayType : byte
     {
         XT_Blue = 0,
         XT_Red = 1,

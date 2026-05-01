@@ -583,7 +583,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherTakedownFinish
     /// </summary>
-    public enum LineLauncherTakedownFinish
+    public enum LineLauncherTakedownFinish : byte
     {
         LLFM_Drop = 0,
         LLFM_WallSlam = 1,
@@ -594,7 +594,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherGrabType
     /// </summary>
-    public enum LineLauncherGrabType
+    public enum LineLauncherGrabType : byte
     {
         LLGT_GrabLeft = 0,
         LLGT_GrabRight = 1,
@@ -604,7 +604,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherDismountType
     /// </summary>
-    public enum LineLauncherDismountType
+    public enum LineLauncherDismountType : byte
     {
         LLDT_None = 0,
         LLDT_Land = 1,
@@ -617,7 +617,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherMovementResult
     /// </summary>
-    public enum LineLauncherMovementResult
+    public enum LineLauncherMovementResult : byte
     {
         LLMR_AllFine = 0,
         LLMR_HitObstacle = 1,
@@ -629,7 +629,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherKickDirection
     /// </summary>
-    public enum LineLauncherKickDirection
+    public enum LineLauncherKickDirection : byte
     {
         LLKD_ForwardKick = 0,
         LLKD_LeftKick = 1,

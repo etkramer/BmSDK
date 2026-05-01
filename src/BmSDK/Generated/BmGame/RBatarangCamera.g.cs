@@ -335,7 +335,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Enum: BatarangCameraRollingDirection
     /// </summary>
-    public enum BatarangCameraRollingDirection
+    public enum BatarangCameraRollingDirection : byte
     {
         BCRD_NotRolling = 0,
         BCRD_RollingLeft = 1,

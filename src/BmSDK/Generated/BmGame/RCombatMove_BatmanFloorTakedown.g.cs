@@ -205,7 +205,7 @@ public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Enum: CancelTakedownStatus
     /// </summary>
-    public enum CancelTakedownStatus
+    public enum CancelTakedownStatus : byte
     {
         ECTS_Undefined = 0,
         ECTS_Cancel = 1,

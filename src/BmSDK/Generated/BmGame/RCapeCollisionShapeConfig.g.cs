@@ -165,7 +165,7 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Enum: ECollisionShape
     /// </summary>
-    public enum ECollisionShape
+    public enum ECollisionShape : byte
     {
         ECollisionShape_Sphere = 0,
         ECollisionShape_ConvexHull = 1,

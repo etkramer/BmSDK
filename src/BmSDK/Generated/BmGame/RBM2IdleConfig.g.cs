@@ -142,7 +142,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: EInterrogationPose
     /// </summary>
-    public enum EInterrogationPose
+    public enum EInterrogationPose : byte
     {
         INTERROG_Standing = 0,
         INTERROG_Wall = 1,
@@ -156,7 +156,7 @@ public partial class RBM2IdleConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: BM2RelativeTransitionStyle
     /// </summary>
-    public enum BM2RelativeTransitionStyle
+    public enum BM2RelativeTransitionStyle : byte
     {
         BM2RTS_None = 0,
         BM2RTS_Prop = 1,

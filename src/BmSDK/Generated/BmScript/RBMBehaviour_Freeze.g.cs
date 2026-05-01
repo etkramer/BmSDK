@@ -1805,7 +1805,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: RoomAttackStrategies
     /// </summary>
-    public enum RoomAttackStrategies
+    public enum RoomAttackStrategies : byte
     {
         RAS_FreezeTheAir = 0,
         RAS_MAX = 1,
@@ -1814,7 +1814,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: RoomAttackStates
     /// </summary>
-    public enum RoomAttackStates
+    public enum RoomAttackStates : byte
     {
         RA_PrepareAttack = 0,
         RA_SuitEffect = 1,
@@ -1828,7 +1828,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: WeaponSequenceStates
     /// </summary>
-    public enum WeaponSequenceStates
+    public enum WeaponSequenceStates : byte
     {
         WS_TakeAim = 0,
         WS_PauseForDrama = 1,
@@ -1841,7 +1841,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: AttackPointSearchStates
     /// </summary>
-    public enum AttackPointSearchStates
+    public enum AttackPointSearchStates : byte
     {
         AP_Idle = 0,
         AP_FindPoints = 1,
@@ -1853,7 +1853,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: EnvNeutStrategy
     /// </summary>
-    public enum EnvNeutStrategy
+    public enum EnvNeutStrategy : byte
     {
         ENS_SilentTakedown = 0,
         ENS_RailsLedges = 1,
@@ -1872,7 +1872,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: FreezeWeapon
     /// </summary>
-    public enum FreezeWeapon
+    public enum FreezeWeapon : byte
     {
         FW_Repel = 0,
         FW_FreezeGun = 1,
@@ -1885,7 +1885,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: NavigationApproach
     /// </summary>
-    public enum NavigationApproach
+    public enum NavigationApproach : byte
     {
         NA_MoveToPosition = 0,
         NA_MoveNearToPosition = 1,
@@ -1896,7 +1896,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: NavigationStrategy
     /// </summary>
-    public enum NavigationStrategy
+    public enum NavigationStrategy : byte
     {
         NS_None = 0,
         NS_MoveToBatmansPosition = 1,
@@ -1911,7 +1911,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Enum: DiffLevel
     /// </summary>
-    public enum DiffLevel
+    public enum DiffLevel : byte
     {
         DL_EASY = 0,
         DL_NORMAL = 1,

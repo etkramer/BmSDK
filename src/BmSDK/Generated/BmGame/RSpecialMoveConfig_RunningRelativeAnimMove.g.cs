@@ -144,7 +144,7 @@ public partial class RSpecialMoveConfig_RunningRelativeAnimMove : BmSDK.BmGame.R
     /// <summary>
     /// Enum: RelativeAnimLaunchFoot
     /// </summary>
-    public enum RelativeAnimLaunchFoot
+    public enum RelativeAnimLaunchFoot : byte
     {
         RALF_LeftFoot = 0,
         RALF_RightFoot = 1,

@@ -445,7 +445,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Enum: LastStrikeSide
     /// </summary>
-    public enum LastStrikeSide
+    public enum LastStrikeSide : byte
     {
         LSS_None = 0,
         LSS_Left = 1,
@@ -456,7 +456,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Enum: BeatUpStages
     /// </summary>
-    public enum BeatUpStages
+    public enum BeatUpStages : byte
     {
         BUS_Stage1 = 0,
         BUS_Stage2 = 1,

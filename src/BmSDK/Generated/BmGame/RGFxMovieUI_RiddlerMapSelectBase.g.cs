@@ -794,7 +794,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Enum: PopUpTypeMap
     /// </summary>
-    public enum PopUpTypeMap
+    public enum PopUpTypeMap : byte
     {
         PopUpTypeMap_Login = 0,
         PopUpTypeMap_MAX = 1,
@@ -803,7 +803,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Enum: LobbyPageType
     /// </summary>
-    public enum LobbyPageType
+    public enum LobbyPageType : byte
     {
         LobbyPT_Ranked = 0,
         LobbyPT_Campaign = 1,

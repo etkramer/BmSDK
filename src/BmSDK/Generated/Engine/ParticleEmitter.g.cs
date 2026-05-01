@@ -76,7 +76,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EEmitterRenderMode
     /// </summary>
-    public enum EEmitterRenderMode
+    public enum EEmitterRenderMode : byte
     {
         ERM_Normal = 0,
         ERM_Point = 1,
@@ -88,7 +88,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSubUVInterpMethod
     /// </summary>
-    public enum EParticleSubUVInterpMethod
+    public enum EParticleSubUVInterpMethod : byte
     {
         PSUVIM_None = 0,
         PSUVIM_Linear = 1,
@@ -135,7 +135,7 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleBurstMethod
     /// </summary>
-    public enum EParticleBurstMethod
+    public enum EParticleBurstMethod : byte
     {
         EPBM_Instant = 0,
         EPBM_Interpolated = 1,

@@ -601,7 +601,7 @@ public partial class PhysicsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBoneSpringUsagePriority
     /// </summary>
-    public enum EBoneSpringUsagePriority
+    public enum EBoneSpringUsagePriority : byte
     {
         BONESPRINGUSAGEPRIORITY_None = 0,
         BONESPRINGUSAGEPRIORITY_NetDrive = 1,

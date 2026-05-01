@@ -81,7 +81,7 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Enum: SFModeType
     /// </summary>
-    public enum SFModeType
+    public enum SFModeType : byte
     {
         SFMode_All_True = 0,
         SFMode_All_False = 1,

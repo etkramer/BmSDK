@@ -4489,7 +4489,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDoubleClickDir
     /// </summary>
-    public enum EDoubleClickDir
+    public enum EDoubleClickDir : byte
     {
         DCLICK_None = 0,
         DCLICK_Left = 1,
@@ -4504,7 +4504,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETravelType
     /// </summary>
-    public enum ETravelType
+    public enum ETravelType : byte
     {
         TRAVEL_Absolute = 0,
         TRAVEL_Partial = 1,
@@ -4870,7 +4870,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECollisionType
     /// </summary>
-    public enum ECollisionType
+    public enum ECollisionType : byte
     {
         COLLIDE_CustomDefault = 0,
         COLLIDE_NoCollision = 1,
@@ -5068,7 +5068,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetRole
     /// </summary>
-    public enum ENetRole
+    public enum ENetRole : byte
     {
         ROLE_None = 0,
         ROLE_SimulatedProxy = 1,
@@ -5150,7 +5150,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMoveDir
     /// </summary>
-    public enum EMoveDir
+    public enum EMoveDir : byte
     {
         MD_Stationary = 0,
         MD_Forward = 1,
@@ -5165,7 +5165,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPhysics
     /// </summary>
-    public enum EPhysics
+    public enum EPhysics : byte
     {
         PHYS_None = 0,
         PHYS_Walking = 1,

@@ -361,7 +361,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAdditiveSubtractMode
     /// </summary>
-    public enum EAdditiveSubtractMode
+    public enum EAdditiveSubtractMode : byte
     {
         ASM_FirstFrame = 0,
         ASM_LastFrame = 1,
@@ -371,7 +371,7 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EYesNoDefault
     /// </summary>
-    public enum EYesNoDefault
+    public enum EYesNoDefault : byte
     {
         YND_Default = 0,
         YND_Yes = 1,

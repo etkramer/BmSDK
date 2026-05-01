@@ -396,7 +396,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFootSyncPoint
     /// </summary>
-    public enum EFootSyncPoint
+    public enum EFootSyncPoint : byte
     {
         FSP_LeftDown = 0,
         FSP_RightPassing = 1,
@@ -569,7 +569,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFuzziness
     /// </summary>
-    public enum EFuzziness
+    public enum EFuzziness : byte
     {
         FUZZ_Exact = 0,
         FUZZ_Fuzzy = 1,
@@ -739,7 +739,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMirrorChoice
     /// </summary>
-    public enum EMirrorChoice
+    public enum EMirrorChoice : byte
     {
         MC_Automatic = 0,
         MC_Yes = 1,
@@ -750,7 +750,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootBoneSubtractionMode
     /// </summary>
-    public enum ERootBoneSubtractionMode
+    public enum ERootBoneSubtractionMode : byte
     {
         RBSM_None = 0,
         RBSM_SubtractFirstFrame = 1,
@@ -1109,7 +1109,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBodyPart
     /// </summary>
-    public enum EBodyPart
+    public enum EBodyPart : byte
     {
         BP_UpperBody = 0,
         BP_LowerBody = 1,
@@ -1119,7 +1119,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAbsoluteOrRelative
     /// </summary>
-    public enum EAbsoluteOrRelative
+    public enum EAbsoluteOrRelative : byte
     {
         AOR_Absolute = 0,
         AOR_Relative = 1,
@@ -1520,7 +1520,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERagdollSoundType
     /// </summary>
-    public enum ERagdollSoundType
+    public enum ERagdollSoundType : byte
     {
         RST_Unknown = 0,
         RST_Generic = 1,
@@ -1532,7 +1532,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOptionalCharacterBone
     /// </summary>
-    public enum EOptionalCharacterBone
+    public enum EOptionalCharacterBone : byte
     {
         OCB_Spine3 = 0,
         OCB_Neck1 = 1,
@@ -1544,7 +1544,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECharacterBone
     /// </summary>
-    public enum ECharacterBone
+    public enum ECharacterBone : byte
     {
         CB_Bip01 = 0,
         CB_Pelvis = 1,

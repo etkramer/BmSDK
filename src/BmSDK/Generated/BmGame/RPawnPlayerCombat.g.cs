@@ -2258,7 +2258,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: EWeaponDestroyType
     /// </summary>
-    public enum EWeaponDestroyType
+    public enum EWeaponDestroyType : byte
     {
         WDL_Unarmed = 0,
         WDT_Bat = 1,
@@ -2434,7 +2434,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownMovement
     /// </summary>
-    public enum ETakedownMovement
+    public enum ETakedownMovement : byte
     {
         TDM_None = 0,
         TDM_Forwards = 1,
@@ -2445,7 +2445,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownType
     /// </summary>
-    public enum ETakedownType
+    public enum ETakedownType : byte
     {
         TDT_Unarmed = 0,
         TDT_Pipe = 1,
@@ -2460,7 +2460,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownSpeed
     /// </summary>
-    public enum ETakedownSpeed
+    public enum ETakedownSpeed : byte
     {
         TS_Slow = 0,
         TS_Fast = 1,
@@ -2790,7 +2790,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterStrength
     /// </summary>
-    public enum CounterStrength
+    public enum CounterStrength : byte
     {
         ECS_Weak = 0,
         ECS_Strong = 1,
@@ -2800,7 +2800,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterEnvironmentDir
     /// </summary>
-    public enum CounterEnvironmentDir
+    public enum CounterEnvironmentDir : byte
     {
         ECED_None = 0,
         ECED_Front = 1,
@@ -2813,7 +2813,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterMoveDir
     /// </summary>
-    public enum CounterMoveDir
+    public enum CounterMoveDir : byte
     {
         ECD_Front = 0,
         ECD_Back = 1,
@@ -3269,7 +3269,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeTargetType
     /// </summary>
-    public enum StrikeTargetType
+    public enum StrikeTargetType : byte
     {
         STT_Unarmed = 0,
         STT_Pipe = 1,
@@ -3285,7 +3285,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeTurnMotion
     /// </summary>
-    public enum StrikeTurnMotion
+    public enum StrikeTurnMotion : byte
     {
         STM_None = 0,
         STM_Clockwise = 1,
@@ -3296,7 +3296,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeDamageDirection
     /// </summary>
-    public enum StrikeDamageDirection
+    public enum StrikeDamageDirection : byte
     {
         SDD_None = 0,
         SDD_HorizontalAcrossBody = 1,
@@ -3309,7 +3309,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CameraDirection
     /// </summary>
-    public enum CameraDirection
+    public enum CameraDirection : byte
     {
         CAM_None = 0,
         CAM_Left = 1,
@@ -3320,7 +3320,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeRange
     /// </summary>
-    public enum StrikeRange
+    public enum StrikeRange : byte
     {
         SR_None = 0,
         SR_Close = 1,
@@ -3332,7 +3332,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeStrength
     /// </summary>
-    public enum StrikeStrength
+    public enum StrikeStrength : byte
     {
         SS_None = 0,
         SS_Weak = 1,
@@ -3352,7 +3352,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeHand
     /// </summary>
-    public enum StrikeHand
+    public enum StrikeHand : byte
     {
         SH_None = 0,
         SH_Left = 1,
@@ -3363,7 +3363,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeDirection
     /// </summary>
-    public enum StrikeDirection
+    public enum StrikeDirection : byte
     {
         SD_None = 0,
         SD_Front = 1,
@@ -3376,7 +3376,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: HitStrength
     /// </summary>
-    public enum HitStrength
+    public enum HitStrength : byte
     {
         HIT_Strong = 0,
         HIT_Weak = 1,
@@ -3388,7 +3388,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: BoneNameList
     /// </summary>
-    public enum BoneNameList
+    public enum BoneNameList : byte
     {
         BONE_None = 0,
         BONE_Head = 1,

@@ -112,7 +112,7 @@ public partial class RSeqAct_SetSimultaneousCounters : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Enum: SCounterSize
     /// </summary>
-    public enum SCounterSize
+    public enum SCounterSize : byte
     {
         SCS_Off = 0,
         SCS_UpTo2 = 1,

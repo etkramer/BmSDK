@@ -493,7 +493,7 @@ public partial class RPawnBossDeadshot : BmSDK.BmGame.RPawnBossDeadshotBase, BmS
     /// <summary>
     /// Enum: EDSTurnDir
     /// </summary>
-    public enum EDSTurnDir
+    public enum EDSTurnDir : byte
     {
         EDS_Left = 0,
         EDS_Right = 1,

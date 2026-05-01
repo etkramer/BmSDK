@@ -497,7 +497,7 @@ public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.BmGame.R
     /// <summary>
     /// Enum: DisruptableObjectDifficulty
     /// </summary>
-    public enum DisruptableObjectDifficulty
+    public enum DisruptableObjectDifficulty : byte
     {
         DOD_VeryEasy = 0,
         DOD_Easy = 1,

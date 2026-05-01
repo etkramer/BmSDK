@@ -81,7 +81,7 @@ public partial class MaterialExpressionBlendMode : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// Enum: EBlendModeFilter
     /// </summary>
-    public enum EBlendModeFilter
+    public enum EBlendModeFilter : byte
     {
         BlendMode_Normal = 0,
         BlendMode_Darken = 1,

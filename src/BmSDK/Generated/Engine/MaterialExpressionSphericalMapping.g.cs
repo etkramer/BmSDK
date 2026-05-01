@@ -90,7 +90,7 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
     /// <summary>
     /// Enum: ESphericalMappingType
     /// </summary>
-    public enum ESphericalMappingType
+    public enum ESphericalMappingType : byte
     {
         SPHERICALMAPPING_Correct = 0,
         SPHERICALMAPPING_CheapAlternative = 1,

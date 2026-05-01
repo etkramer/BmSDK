@@ -162,7 +162,7 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Enum: EScreenShakePreMades
     /// </summary>
-    public enum EScreenShakePreMades
+    public enum EScreenShakePreMades : byte
     {
         ESSPM_UseSpecifiedValues = 0,
         ESSPM_HitByBullet = 1,

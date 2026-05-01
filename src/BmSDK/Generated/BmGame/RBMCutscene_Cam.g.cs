@@ -278,7 +278,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: CamMovementTestResults
     /// </summary>
-    public enum CamMovementTestResults
+    public enum CamMovementTestResults : byte
     {
         CMTR_AllFine = 0,
         CMTR_CantMove = 1,

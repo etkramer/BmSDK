@@ -85,7 +85,7 @@ public partial class RAnimNotify_IK : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
     /// <summary>
     /// Enum: EIKHand
     /// </summary>
-    public enum EIKHand
+    public enum EIKHand : byte
     {
         IKH_Left = 0,
         IKH_Right = 1,

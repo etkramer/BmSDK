@@ -128,7 +128,7 @@ public partial class RSeqAct_GFxMovieChallengeHUDControl : BmSDK.Engine.Sequence
     /// <summary>
     /// Enum: ChallengeHUDControl
     /// </summary>
-    public enum ChallengeHUDControl
+    public enum ChallengeHUDControl : byte
     {
         ChallengeHUDControl_KismetControlsHideShow = 0,
         ChallengeHUDControl_Show = 1,

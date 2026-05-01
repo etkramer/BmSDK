@@ -176,7 +176,7 @@ public partial class RBarkSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EConvoBarkType
     /// </summary>
-    public enum EConvoBarkType
+    public enum EConvoBarkType : byte
     {
         CBARK_None = 0,
         CBARK_Exclaim = 1,

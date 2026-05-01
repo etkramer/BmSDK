@@ -280,7 +280,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AnimationKeyFormat
     /// </summary>
-    public enum AnimationKeyFormat
+    public enum AnimationKeyFormat : byte
     {
         AKF_ConstantKeyLerp = 0,
         AKF_VariableKeyLerp = 1,
@@ -395,7 +395,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootMotionTranslationOption
     /// </summary>
-    public enum ERootMotionTranslationOption
+    public enum ERootMotionTranslationOption : byte
     {
         RMTO_On = 0,
         RMTO_NoExtraction = 1,
@@ -406,7 +406,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootMotionRotationOption
     /// </summary>
-    public enum ERootMotionRotationOption
+    public enum ERootMotionRotationOption : byte
     {
         RMRO_On = 0,
         RMRO_NoExtraction = 1,
@@ -417,7 +417,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimPhysics
     /// </summary>
-    public enum EAnimPhysics
+    public enum EAnimPhysics : byte
     {
         APHYS_Walking = 0,
         APHYS_Flying = 1,
@@ -516,7 +516,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EForwardYawDirection
     /// </summary>
-    public enum EForwardYawDirection
+    public enum EForwardYawDirection : byte
     {
         FYD_Clockwise = 0,
         FYD_AntiClockwise = 1,
@@ -601,7 +601,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AnimationCompressionFormat
     /// </summary>
-    public enum AnimationCompressionFormat
+    public enum AnimationCompressionFormat : byte
     {
         ACF_None = 0,
         ACF_Float96NoW = 1,

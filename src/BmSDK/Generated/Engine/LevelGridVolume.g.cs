@@ -148,7 +148,7 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: LevelGridCellShape
     /// </summary>
-    public enum LevelGridCellShape
+    public enum LevelGridCellShape : byte
     {
         LGCS_Box = 0,
         LGCS_Hex = 1,

@@ -81,7 +81,7 @@ public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// Enum: EMaterialVectorCoordTransform
     /// </summary>
-    public enum EMaterialVectorCoordTransform
+    public enum EMaterialVectorCoordTransform : byte
     {
         TRANSFORM_World = 0,
         TRANSFORM_View = 1,
@@ -93,7 +93,7 @@ public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpressi
     /// <summary>
     /// Enum: EMaterialVectorCoordTransformSource
     /// </summary>
-    public enum EMaterialVectorCoordTransformSource
+    public enum EMaterialVectorCoordTransformSource : byte
     {
         TRANSFORMSOURCE_World = 0,
         TRANSFORMSOURCE_Local = 1,

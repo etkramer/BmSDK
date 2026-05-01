@@ -258,7 +258,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: AmbushDir
     /// </summary>
-    public enum AmbushDir
+    public enum AmbushDir : byte
     {
         AMB_NONE = 0,
         AMB_LEFT = 1,

@@ -108,7 +108,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EFootstepSurfaceFinder
     /// </summary>
-    public enum EFootstepSurfaceFinder
+    public enum EFootstepSurfaceFinder : byte
     {
         FSF_Auto = 0,
         FSF_Floor = 1,
@@ -121,7 +121,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EContactType
     /// </summary>
-    public enum EContactType
+    public enum EContactType : byte
     {
         Contact_Normal = 0,
         Contact_Land = 1,
@@ -151,7 +151,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EFoot
     /// </summary>
-    public enum EFoot
+    public enum EFoot : byte
     {
         Foot_Left = 0,
         Foot_Right = 1,

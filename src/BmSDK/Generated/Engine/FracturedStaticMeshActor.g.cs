@@ -740,7 +740,7 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Enum: EFractureMeshExplosionBlastType
     /// </summary>
-    public enum EFractureMeshExplosionBlastType
+    public enum EFractureMeshExplosionBlastType : byte
     {
         FMEBT_Constant = 0,
         FMEBT_Radial = 1,
@@ -751,7 +751,7 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Enum: EFractureMeshExplosionType
     /// </summary>
-    public enum EFractureMeshExplosionType
+    public enum EFractureMeshExplosionType : byte
     {
         FMET_SinglePart = 0,
         FMET_PartsInRadius = 1,

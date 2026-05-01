@@ -226,7 +226,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Enum: GPopup_Type
     /// </summary>
-    public enum GPopup_Type
+    public enum GPopup_Type : byte
     {
         GPopup_Callback = 0,
         GPopup_AltF4Handler = 1,

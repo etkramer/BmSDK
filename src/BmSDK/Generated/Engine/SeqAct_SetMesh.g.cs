@@ -126,7 +126,7 @@ public partial class SeqAct_SetMesh : BmSDK.Engine.SequenceAction, BmSDK.IGameOb
     /// <summary>
     /// Enum: EMeshType
     /// </summary>
-    public enum EMeshType
+    public enum EMeshType : byte
     {
         MeshType_StaticMesh = 0,
         MeshType_SkeletalMesh = 1,

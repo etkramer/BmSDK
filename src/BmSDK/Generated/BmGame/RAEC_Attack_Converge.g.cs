@@ -319,7 +319,7 @@ public partial class RAEC_Attack_Converge : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Enum: ConvergeProcessState
     /// </summary>
-    public enum ConvergeProcessState
+    public enum ConvergeProcessState : byte
     {
         CPS_Begin = 0,
         CPS_APS = 1,

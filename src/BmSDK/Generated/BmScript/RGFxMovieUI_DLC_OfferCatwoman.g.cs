@@ -138,7 +138,7 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Enum: CWOPopTypes
     /// </summary>
-    public enum CWOPopTypes
+    public enum CWOPopTypes : byte
     {
         CWOPopType_None = 0,
         CWOPopType_GoToStore = 1,

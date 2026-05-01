@@ -298,7 +298,7 @@ public partial class RGadgetSelectBM2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameO
     /// <summary>
     /// Enum: EGadgetSelectState
     /// </summary>
-    public enum EGadgetSelectState
+    public enum EGadgetSelectState : byte
     {
         GSS_UnInitialised = 0,
         GSS_Closed = 1,

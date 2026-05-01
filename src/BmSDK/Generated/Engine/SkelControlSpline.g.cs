@@ -81,7 +81,7 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// Enum: ESplineControlRotMode
     /// </summary>
-    public enum ESplineControlRotMode
+    public enum ESplineControlRotMode : byte
     {
         SCR_NoChange = 0,
         SCR_AlongSpline = 1,

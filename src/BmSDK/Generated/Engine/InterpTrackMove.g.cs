@@ -490,7 +490,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInterpTrackMoveRotMode
     /// </summary>
-    public enum EInterpTrackMoveRotMode
+    public enum EInterpTrackMoveRotMode : byte
     {
         IMR_Keyframed = 0,
         IMR_LookAtGroup = 1,
@@ -501,7 +501,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInterpTrackMoveFrame
     /// </summary>
-    public enum EInterpTrackMoveFrame
+    public enum EInterpTrackMoveFrame : byte
     {
         IMF_World = 0,
         IMF_RelativeToInitial = 1,

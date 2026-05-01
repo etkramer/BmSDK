@@ -2363,7 +2363,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: BatmanDialogueLines
     /// </summary>
-    public enum BatmanDialogueLines
+    public enum BatmanDialogueLines : byte
     {
         BDL_FailedGlide = 0,
         BDL_DropFromFrozen = 1,
@@ -2376,7 +2376,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: FreezeDialogueLines
     /// </summary>
-    public enum FreezeDialogueLines
+    public enum FreezeDialogueLines : byte
     {
         FDL_SpotBatman = 0,
         FDL_HearBatman = 1,
@@ -2414,7 +2414,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: FreezeSounds
     /// </summary>
-    public enum FreezeSounds
+    public enum FreezeSounds : byte
     {
         FS_RepelWarning = 0,
         FS_RepelActivated = 1,
@@ -2428,7 +2428,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: FreezeLampState
     /// </summary>
-    public enum FreezeLampState
+    public enum FreezeLampState : byte
     {
         FLS_INITIAL = 0,
         FLS_OFF = 1,
@@ -2441,7 +2441,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: MagneticBlastPhase
     /// </summary>
-    public enum MagneticBlastPhase
+    public enum MagneticBlastPhase : byte
     {
         MBP_STRUGGLE = 0,
         MBP_FLY_BACKWARDS = 1,
@@ -2452,7 +2452,7 @@ public partial class RPawnVillainFreeze : BmSDK.BmGame.RPawnVillainFreezeBase, B
     /// <summary>
     /// Enum: SourceDirection
     /// </summary>
-    public enum SourceDirection
+    public enum SourceDirection : byte
     {
         SD_Front = 0,
         SD_Right = 1,

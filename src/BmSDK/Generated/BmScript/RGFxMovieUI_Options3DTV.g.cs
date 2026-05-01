@@ -162,7 +162,7 @@ public partial class RGFxMovieUI_Options3DTV : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Enum: GOMenuItem
     /// </summary>
-    public enum GOMenuItem
+    public enum GOMenuItem : byte
     {
         TV3OMI_None = 0,
         TV3OMI_Mode3D = 1,

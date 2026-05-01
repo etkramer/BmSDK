@@ -167,7 +167,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Enum: MoveToSpeed
     /// </summary>
-    public enum MoveToSpeed
+    public enum MoveToSpeed : byte
     {
         MOVETOSPEED_Walk = 0,
         MOVETOSPEED_Run = 1,

@@ -112,7 +112,7 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDistributionVectorMirrorFlags
     /// </summary>
-    public enum EDistributionVectorMirrorFlags
+    public enum EDistributionVectorMirrorFlags : byte
     {
         EDVMF_Same = 0,
         EDVMF_Different = 1,
@@ -123,7 +123,7 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDistributionVectorLockFlags
     /// </summary>
-    public enum EDistributionVectorLockFlags
+    public enum EDistributionVectorLockFlags : byte
     {
         EDVLF_None = 0,
         EDVLF_XY = 1,

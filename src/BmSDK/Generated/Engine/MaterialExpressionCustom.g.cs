@@ -142,7 +142,7 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// <summary>
     /// Enum: ECustomMaterialOutputType
     /// </summary>
-    public enum ECustomMaterialOutputType
+    public enum ECustomMaterialOutputType : byte
     {
         CMOT_Float1 = 0,
         CMOT_Float2 = 1,

@@ -81,7 +81,7 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// Enum: EDecodeBlendType
     /// </summary>
-    public enum EDecodeBlendType
+    public enum EDecodeBlendType : byte
     {
         DECODE_Replace = 0,
         DECODE_Add = 1,

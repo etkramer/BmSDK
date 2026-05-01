@@ -767,7 +767,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESafeZoneType
     /// </summary>
-    public enum ESafeZoneType
+    public enum ESafeZoneType : byte
     {
         eSZ_TOP = 0,
         eSZ_BOTTOM = 1,
@@ -779,7 +779,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESplitScreenType
     /// </summary>
-    public enum ESplitScreenType
+    public enum ESplitScreenType : byte
     {
         eSST_NONE = 0,
         eSST_2P_HORIZONTAL = 1,

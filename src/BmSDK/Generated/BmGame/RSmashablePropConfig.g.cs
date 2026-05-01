@@ -81,7 +81,7 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// Enum: PropKOType
     /// </summary>
-    public enum PropKOType
+    public enum PropKOType : byte
     {
         KO_None = 0,
         KO_Window = 1,
@@ -357,7 +357,7 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// Enum: EBreakableType
     /// </summary>
-    public enum EBreakableType
+    public enum EBreakableType : byte
     {
         BREAKABLETYPE_ForceBreakable = 0,
         BREAKABLETYPE_PawnForceBreakable = 1,

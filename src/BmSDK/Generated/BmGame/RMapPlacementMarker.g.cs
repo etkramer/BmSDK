@@ -117,7 +117,7 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: MapMarkerType
     /// </summary>
-    public enum MapMarkerType
+    public enum MapMarkerType : byte
     {
         MMT_Objective = 0,
         MMT_CrimeScene = 1,

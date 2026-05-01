@@ -81,7 +81,7 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     /// <summary>
     /// Enum: ETonemapperType
     /// </summary>
-    public enum ETonemapperType
+    public enum ETonemapperType : byte
     {
         Tonemapper_Off = 0,
         Tonemapper_Filmic = 1,

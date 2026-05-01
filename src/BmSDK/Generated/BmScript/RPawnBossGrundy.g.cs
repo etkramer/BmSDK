@@ -2352,7 +2352,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: eSwingRumbleState
     /// </summary>
-    public enum eSwingRumbleState
+    public enum eSwingRumbleState : byte
     {
         ESRR_OutOfRange = 0,
         ESRR_Weak = 1,
@@ -2363,7 +2363,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: eGrundyVeinColourScheme
     /// </summary>
-    public enum eGrundyVeinColourScheme
+    public enum eGrundyVeinColourScheme : byte
     {
         eGVCS = 0,
         eGVCS_2 = 1,
@@ -2375,7 +2375,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: eGrundyHelpTextState
     /// </summary>
-    public enum eGrundyHelpTextState
+    public enum eGrundyHelpTextState : byte
     {
         eGHTS_None = 0,
         eGHTS_Gel = 1,
@@ -2414,7 +2414,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: eGrundyBeatMatch
     /// </summary>
-    public enum eGrundyBeatMatch
+    public enum eGrundyBeatMatch : byte
     {
         eGBM_BEFORE = 0,
         eGBM_AFTER = 1,
@@ -2634,7 +2634,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: E_SwingChainState
     /// </summary>
-    public enum E_SwingChainState
+    public enum E_SwingChainState : byte
     {
         E_SwingChainState_Anim = 0,
         E_SwingChainState_ToBM = 1,
@@ -5455,7 +5455,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// Enum: eGrundyMeshGlowiness
     /// </summary>
-    public enum eGrundyMeshGlowiness
+    public enum eGrundyMeshGlowiness : byte
     {
         eGMG_Opaque = 0,
         eGMG_EmissiveOnly = 1,

@@ -388,7 +388,7 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ESpeedTreeMeshType
     /// </summary>
-    public enum ESpeedTreeMeshType
+    public enum ESpeedTreeMeshType : byte
     {
         STMT_MinMinusOne = 0,
         STMT_Branches1 = 1,

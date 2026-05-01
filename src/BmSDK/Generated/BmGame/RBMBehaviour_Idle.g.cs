@@ -194,7 +194,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Enum: MirrorState
     /// </summary>
-    public enum MirrorState
+    public enum MirrorState : byte
     {
         MS_RandomMirroring = 0,
         MS_NoMirroring = 1,
@@ -205,7 +205,7 @@ public partial class RBMBehaviour_Idle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameO
     /// <summary>
     /// Enum: CommonPoses
     /// </summary>
-    public enum CommonPoses
+    public enum CommonPoses : byte
     {
         CP_Current = 0,
         CP_Standing = 1,

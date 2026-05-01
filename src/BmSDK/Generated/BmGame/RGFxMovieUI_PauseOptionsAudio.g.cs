@@ -139,7 +139,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Enum: AOPMenuItem
     /// </summary>
-    public enum AOPMenuItem
+    public enum AOPMenuItem : byte
     {
         AOPMI_None = 0,
         AOPMI_Subtitles = 1,

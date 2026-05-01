@@ -196,7 +196,7 @@ public partial class InterpTrackHeadTracking : BmSDK.Engine.InterpTrack, BmSDK.I
     /// <summary>
     /// Enum: EHeadTrackingAction
     /// </summary>
-    public enum EHeadTrackingAction
+    public enum EHeadTrackingAction : byte
     {
         EHTA_DisableHeadTracking = 0,
         EHTA_EnableHeadTracking = 1,

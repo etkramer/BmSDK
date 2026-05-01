@@ -926,7 +926,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeLengthControlType
     /// </summary>
-    public enum ERopeLengthControlType
+    public enum ERopeLengthControlType : byte
     {
         ROPELENGTHCONTROLTYPE_None = 0,
         ROPELENGTHCONTROLTYPE_GradualLengthChange = 1,
@@ -938,7 +938,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeLengthChangeType
     /// </summary>
-    public enum ERopeLengthChangeType
+    public enum ERopeLengthChangeType : byte
     {
         ROPELENGTHCHANGE_ChangeFromEnd1 = 0,
         ROPELENGTHCHANGE_ChangeFromEnd2 = 1,
@@ -952,7 +952,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeEndType
     /// </summary>
-    public enum ERopeEndType
+    public enum ERopeEndType : byte
     {
         ROPEEND_End1 = 0,
         ROPEEND_End2 = 1,

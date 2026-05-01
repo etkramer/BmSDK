@@ -355,7 +355,7 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFontImportCharacterSet
     /// </summary>
-    public enum EFontImportCharacterSet
+    public enum EFontImportCharacterSet : byte
     {
         FontICS_Default = 0,
         FontICS_Ansi = 1,

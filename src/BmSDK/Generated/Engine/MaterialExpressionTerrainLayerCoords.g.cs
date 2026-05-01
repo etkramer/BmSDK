@@ -126,7 +126,7 @@ public partial class MaterialExpressionTerrainLayerCoords : BmSDK.Engine.Materia
     /// <summary>
     /// Enum: ETerrainCoordMappingType
     /// </summary>
-    public enum ETerrainCoordMappingType
+    public enum ETerrainCoordMappingType : byte
     {
         TCMT_Auto = 0,
         TCMT_XY = 1,

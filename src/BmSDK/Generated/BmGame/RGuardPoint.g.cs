@@ -150,7 +150,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: GuardLocationType
     /// </summary>
-    public enum GuardLocationType
+    public enum GuardLocationType : byte
     {
         GLC_Generic = 0,
         GLC_Door = 1,

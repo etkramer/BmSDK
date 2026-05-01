@@ -472,7 +472,7 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMaterialUsage
     /// </summary>
-    public enum EMaterialUsage
+    public enum EMaterialUsage : byte
     {
         MATUSAGE_SkeletalMesh = 0,
         MATUSAGE_FracturedMeshes = 1,

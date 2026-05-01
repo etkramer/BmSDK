@@ -81,7 +81,7 @@ public partial class RSpecialMoveConfig_Interrogation : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Enum: CameraCollisionOption
     /// </summary>
-    public enum CameraCollisionOption
+    public enum CameraCollisionOption : byte
     {
         CCO_None = 0,
         CCO_Player = 1,

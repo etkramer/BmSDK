@@ -92,7 +92,7 @@ public partial class RSeqEvent_HelicopterAggroStateChanged : BmSDK.Engine.Sequen
     /// <summary>
     /// Enum: HeliAggroState
     /// </summary>
-    public enum HeliAggroState
+    public enum HeliAggroState : byte
     {
         HD_HelicopterAggroed = 0,
         HD_SafeFromHelicopters = 1,

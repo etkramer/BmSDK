@@ -95,7 +95,7 @@ public partial class RCreeperVineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVineState
     /// </summary>
-    public enum EVineState
+    public enum EVineState : byte
     {
         VINESTATE_PreAttack = 0,
         VINESTATE_Attack = 1,

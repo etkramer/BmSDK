@@ -161,7 +161,7 @@ public partial class RSeqAct_CanSeePawn : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Enum: SightCheckResult
     /// </summary>
-    public enum SightCheckResult
+    public enum SightCheckResult : byte
     {
         SCR_Error = 0,
         SCR_NoChange = 1,

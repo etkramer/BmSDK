@@ -196,7 +196,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: StanceVisType
     /// </summary>
-    public enum StanceVisType
+    public enum StanceVisType : byte
     {
         SVT_Both = 0,
         SVT_StandOnly = 1,
@@ -207,7 +207,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AttackPointSearchState
     /// </summary>
-    public enum AttackPointSearchState
+    public enum AttackPointSearchState : byte
     {
         EAPS_None = 0,
         EAPS_StartSearch = 1,

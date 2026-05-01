@@ -626,7 +626,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameStatGroups
     /// </summary>
-    public enum EGameStatGroups
+    public enum EGameStatGroups : byte
     {
         GSG_EngineStats = 0,
         GSG_Game = 1,

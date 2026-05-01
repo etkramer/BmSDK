@@ -76,7 +76,7 @@ public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObje
     /// <summary>
     /// Enum: EFocusType
     /// </summary>
-    public enum EFocusType
+    public enum EFocusType : byte
     {
         FOCUS_Distance = 0,
         FOCUS_Position = 1,

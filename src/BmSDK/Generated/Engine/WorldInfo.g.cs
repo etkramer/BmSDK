@@ -1021,7 +1021,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EHostMigrationProgress
     /// </summary>
-    public enum EHostMigrationProgress
+    public enum EHostMigrationProgress : byte
     {
         HostMigration_None = 0,
         HostMigration_FindingNewHost = 1,
@@ -1369,7 +1369,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVisibilityAggressiveness
     /// </summary>
-    public enum EVisibilityAggressiveness
+    public enum EVisibilityAggressiveness : byte
     {
         VIS_LeastAggressive = 0,
         VIS_ModeratelyAggressive = 1,
@@ -1459,7 +1459,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EConsoleType
     /// </summary>
-    public enum EConsoleType
+    public enum EConsoleType : byte
     {
         CONSOLE_Any = 0,
         CONSOLE_Xbox360 = 1,
@@ -1783,7 +1783,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetMode
     /// </summary>
-    public enum ENetMode
+    public enum ENetMode : byte
     {
         NM_Standalone = 0,
         NM_DedicatedServer = 1,

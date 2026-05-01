@@ -183,7 +183,7 @@ public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EInitialOscillatorOffset
     /// </summary>
-    public enum EInitialOscillatorOffset
+    public enum EInitialOscillatorOffset : byte
     {
         EOO_OffsetRandom = 0,
         EOO_OffsetZero = 1,

@@ -960,7 +960,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFireLinkID
     /// </summary>
-    public enum EFireLinkID
+    public enum EFireLinkID : byte
     {
         FLI_FireLink = 0,
         FLI_RejectedFireLink = 1,
@@ -970,7 +970,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverLocationDescription
     /// </summary>
-    public enum ECoverLocationDescription
+    public enum ECoverLocationDescription : byte
     {
         CoverDesc_None = 0,
         CoverDesc_InWindow = 1,
@@ -990,7 +990,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverType
     /// </summary>
-    public enum ECoverType
+    public enum ECoverType : byte
     {
         CT_None = 0,
         CT_Standing = 1,
@@ -1001,7 +1001,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverDirection
     /// </summary>
-    public enum ECoverDirection
+    public enum ECoverDirection : byte
     {
         CD_Default = 0,
         CD_Left = 1,
@@ -1013,7 +1013,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverAction
     /// </summary>
-    public enum ECoverAction
+    public enum ECoverAction : byte
     {
         CA_Default = 0,
         CA_BlindLeft = 1,

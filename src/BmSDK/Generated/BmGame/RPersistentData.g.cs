@@ -1071,7 +1071,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETutorialType
     /// </summary>
-    public enum ETutorialType
+    public enum ETutorialType : byte
     {
         TUT_None = 0,
         TUT_Combat_Strike = 1,
@@ -3155,7 +3155,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBatmanChallenge
     /// </summary>
-    public enum EBatmanChallenge
+    public enum EBatmanChallenge : byte
     {
         EBatChal_None = 0,
         EBatChal = 1,
@@ -3209,7 +3209,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerLocationName
     /// </summary>
-    public enum ERiddlerLocationName
+    public enum ERiddlerLocationName : byte
     {
         RiddlerLoc_OWA = 0,
         RiddlerLoc_OWB = 1,
@@ -3226,7 +3226,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPMapNames
     /// </summary>
-    public enum EPMapNames
+    public enum EPMapNames : byte
     {
         PMAP_None = 0,
         PMAP_Overworld = 1,
@@ -3242,7 +3242,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECharacterViewer
     /// </summary>
-    public enum ECharacterViewer
+    public enum ECharacterViewer : byte
     {
         EViewer_None = 0,
         EViewer_Batman = 1,
@@ -3323,7 +3323,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EProgressLocations
     /// </summary>
-    public enum EProgressLocations
+    public enum EProgressLocations : byte
     {
         EPL_Unknown = 0,
         EPL_GCPD = 1,
@@ -3352,7 +3352,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECustomWayPointType
     /// </summary>
-    public enum ECustomWayPointType
+    public enum ECustomWayPointType : byte
     {
         CustomWayType_Proximity = 0,
         CustomWayType_MapObj = 1,
@@ -3364,7 +3364,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EProgressCharacter
     /// </summary>
-    public enum EProgressCharacter
+    public enum EProgressCharacter : byte
     {
         ProgressCharacter_Azrael = 0,
         ProgressCharacter_Bane = 1,
@@ -3384,7 +3384,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EConceptArt
     /// </summary>
-    public enum EConceptArt
+    public enum EConceptArt : byte
     {
         ConceptArt_None = 0,
         ConceptArt_Renders_Catwoman = 1,
@@ -3473,7 +3473,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBioCharacter
     /// </summary>
-    public enum EBioCharacter
+    public enum EBioCharacter : byte
     {
         BioCharacter_Batman = 0,
         BioCharacter_Bruce_Wayne = 1,
@@ -3513,7 +3513,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETapeCharacter
     /// </summary>
-    public enum ETapeCharacter
+    public enum ETapeCharacter : byte
     {
         Tape_None = 0,
         Tape_Catwoman = 1,
@@ -3532,7 +3532,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECM_MedalType
     /// </summary>
-    public enum ECM_MedalType
+    public enum ECM_MedalType : byte
     {
         ECM_Medal_None = 0,
         ECM_Medal_Bronze = 1,
@@ -3544,7 +3544,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: PDVersion
     /// </summary>
-    public enum PDVersion
+    public enum PDVersion : byte
     {
         PDVer_Initial = 0,
         PDVer_XPLevel = 1,

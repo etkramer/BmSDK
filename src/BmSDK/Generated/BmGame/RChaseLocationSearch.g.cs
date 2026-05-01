@@ -302,7 +302,7 @@ public partial class RChaseLocationSearch : BmSDK.BmGame.RSearchTreeFinder, BmSD
     /// <summary>
     /// Enum: ChaseSearchState
     /// </summary>
-    public enum ChaseSearchState
+    public enum ChaseSearchState : byte
     {
         ECSS_None = 0,
         ECSS_WaitingForPaths = 1,

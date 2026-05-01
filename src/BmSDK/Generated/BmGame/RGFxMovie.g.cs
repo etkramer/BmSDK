@@ -1067,7 +1067,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Enum: FlashAudioChannel
     /// </summary>
-    public enum FlashAudioChannel
+    public enum FlashAudioChannel : byte
     {
         FLASH_AUDIO_CHANNEL_UI = 0,
         FLASH_AUDIO_CHANNEL_HUD = 1,
@@ -1077,7 +1077,7 @@ public partial class RGFxMovie : BmSDK.GFxUI.GFxMoviePlayer, BmSDK.IGameObject
     /// <summary>
     /// Enum: KeyMapping
     /// </summary>
-    public enum KeyMapping
+    public enum KeyMapping : byte
     {
         KeyMapping_None = 0,
         KeyMapping_START = 1,

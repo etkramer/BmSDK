@@ -779,7 +779,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Enum: ControllerStatusFields
     /// </summary>
-    public enum ControllerStatusFields
+    public enum ControllerStatusFields : byte
     {
         CSF_UsingController = 0,
         CSF_LeftX_OR_KeyboardX = 1,
@@ -798,7 +798,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Enum: ResonatorAudioEvent
     /// </summary>
-    public enum ResonatorAudioEvent
+    public enum ResonatorAudioEvent : byte
     {
         RAE_StickStable = 0,
         RAE_BothSticksStable = 1,

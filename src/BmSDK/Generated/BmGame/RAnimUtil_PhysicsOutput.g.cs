@@ -520,7 +520,7 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Enum: ERagdollTransitionInstigator
     /// </summary>
-    public enum ERagdollTransitionInstigator
+    public enum ERagdollTransitionInstigator : byte
     {
         RTI_Stack = 0,
         RTI_Notify = 1,
@@ -643,7 +643,7 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Enum: ERagdollForceType
     /// </summary>
-    public enum ERagdollForceType
+    public enum ERagdollForceType : byte
     {
         FORCETYPE_Force = 0,
         FORCETYPE_Impulse = 1,

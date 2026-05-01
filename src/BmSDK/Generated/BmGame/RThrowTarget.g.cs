@@ -126,7 +126,7 @@ public partial class RThrowTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EThrowTargetPriority
     /// </summary>
-    public enum EThrowTargetPriority
+    public enum EThrowTargetPriority : byte
     {
         ETTP_Low = 0,
         ETTP_High = 1,

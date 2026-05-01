@@ -294,7 +294,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERFlapsPoseControlType
     /// </summary>
-    public enum ERFlapsPoseControlType
+    public enum ERFlapsPoseControlType : byte
     {
         RFPCT_RotationOnly = 0,
         RFPCT_PositionOnly = 1,

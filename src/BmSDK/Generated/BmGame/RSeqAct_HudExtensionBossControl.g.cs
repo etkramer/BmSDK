@@ -101,7 +101,7 @@ public partial class RSeqAct_HudExtensionBossControl : BmSDK.Engine.SequenceActi
     /// <summary>
     /// Enum: BossHUDControl
     /// </summary>
-    public enum BossHUDControl
+    public enum BossHUDControl : byte
     {
         BHC_Show = 0,
         BHC_Hide = 1,

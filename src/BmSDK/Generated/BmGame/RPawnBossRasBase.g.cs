@@ -847,7 +847,7 @@ public partial class RPawnBossRasBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSD
     /// <summary>
     /// Enum: EBatmanMovement
     /// </summary>
-    public enum EBatmanMovement
+    public enum EBatmanMovement : byte
     {
         EBM_None = 0,
         EBM_Clockwise = 1,

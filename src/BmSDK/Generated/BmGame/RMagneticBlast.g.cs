@@ -580,7 +580,7 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// Enum: MBImpulseType
     /// </summary>
-    public enum MBImpulseType
+    public enum MBImpulseType : byte
     {
         MBI_KeepLast = 0,
         MBI_Repel = 1,
@@ -591,7 +591,7 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// Enum: MBControlType
     /// </summary>
-    public enum MBControlType
+    public enum MBControlType : byte
     {
         MB_NewControls = 0,
         MB_RubbishOldControls = 1,

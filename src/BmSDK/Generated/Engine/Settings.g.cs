@@ -1287,7 +1287,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPropertyValueMappingType
     /// </summary>
-    public enum EPropertyValueMappingType
+    public enum EPropertyValueMappingType : byte
     {
         PVMT_RawValue = 0,
         PVMT_PredefinedValues = 1,
@@ -1469,7 +1469,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESettingsDataType
     /// </summary>
-    public enum ESettingsDataType
+    public enum ESettingsDataType : byte
     {
         SDT_Empty = 0,
         SDT_Int32 = 1,
@@ -1519,7 +1519,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineDataAdvertisementType
     /// </summary>
-    public enum EOnlineDataAdvertisementType
+    public enum EOnlineDataAdvertisementType : byte
     {
         ODAT_DontAdvertise = 0,
         ODAT_OnlineService = 1,

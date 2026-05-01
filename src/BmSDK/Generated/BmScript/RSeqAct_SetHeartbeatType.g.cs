@@ -103,7 +103,7 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Enum: EHeartBeatType2
     /// </summary>
-    public enum EHeartBeatType2
+    public enum EHeartBeatType2 : byte
     {
         EHeartBeatType_Fine = 0,
         EHeartBeatType_Nervous = 1,

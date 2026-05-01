@@ -417,7 +417,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Enum: EShutterDoorState
     /// </summary>
-    public enum EShutterDoorState
+    public enum EShutterDoorState : byte
     {
         ESDS_Open = 0,
         ESDS_Closed = 1,
@@ -428,7 +428,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Enum: EAttractAxis
     /// </summary>
-    public enum EAttractAxis
+    public enum EAttractAxis : byte
     {
         EAA_None = 0,
         EAA_Positive_X = 1,

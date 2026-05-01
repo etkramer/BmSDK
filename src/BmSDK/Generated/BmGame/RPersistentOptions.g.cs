@@ -1685,7 +1685,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPlayerOptions
     /// </summary>
-    public enum EPlayerOptions
+    public enum EPlayerOptions : byte
     {
         EPlayerOption_InvertMouse = 0,
         EPlayerOption_InvertRotation = 1,
@@ -1702,7 +1702,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGeneralOptions
     /// </summary>
-    public enum EGeneralOptions
+    public enum EGeneralOptions : byte
     {
         ECommonOption_Difficulty = 0,
         ECommonOption_PCControlsPage = 1,
@@ -1722,7 +1722,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERandomSwitchStateType
     /// </summary>
-    public enum ERandomSwitchStateType
+    public enum ERandomSwitchStateType : byte
     {
         ERSS_None = 0,
         ERSS_DeathBane = 1,
@@ -1749,7 +1749,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: HelpTextLevel
     /// </summary>
-    public enum HelpTextLevel
+    public enum HelpTextLevel : byte
     {
         HelpText_None = 0,
         HelpText_Some = 1,
@@ -1760,7 +1760,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DifficultyLevels
     /// </summary>
-    public enum DifficultyLevels
+    public enum DifficultyLevels : byte
     {
         Difficulty_Easy = 0,
         Difficulty_Normal = 1,
@@ -1771,7 +1771,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ChallengeMode
     /// </summary>
-    public enum ChallengeMode
+    public enum ChallengeMode : byte
     {
         ChallengeMode_Ranked = 0,
         ChallengeMode_Campaign = 1,
@@ -1782,7 +1782,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DDAIntType
     /// </summary>
-    public enum DDAIntType
+    public enum DDAIntType : byte
     {
         DDAI_DeathsInRoom = 0,
         DDAI_MAX = 1,
@@ -1791,7 +1791,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: POVersion
     /// </summary>
-    public enum POVersion
+    public enum POVersion : byte
     {
         POVer_Initial = 0,
         POVer_ChallengeData = 1,

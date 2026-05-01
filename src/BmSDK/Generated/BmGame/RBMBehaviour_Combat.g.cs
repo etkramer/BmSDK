@@ -788,7 +788,7 @@ public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled,
     /// <summary>
     /// Enum: MoveForceWallDir
     /// </summary>
-    public enum MoveForceWallDir
+    public enum MoveForceWallDir : byte
     {
         WALL_Left = 0,
         WALL_Right = 1,

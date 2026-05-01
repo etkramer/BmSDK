@@ -90,7 +90,7 @@ public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleMo
     /// <summary>
     /// Enum: EParticleAxisLock
     /// </summary>
-    public enum EParticleAxisLock
+    public enum EParticleAxisLock : byte
     {
         EPAL_NONE = 0,
         EPAL_X = 1,

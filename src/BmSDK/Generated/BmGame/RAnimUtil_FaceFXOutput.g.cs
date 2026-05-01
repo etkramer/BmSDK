@@ -142,7 +142,7 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EBlinkSequenceState
     /// </summary>
-    public enum EBlinkSequenceState
+    public enum EBlinkSequenceState : byte
     {
         BSS_Waiting = 0,
         BSS_PreBlink = 1,

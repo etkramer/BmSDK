@@ -81,7 +81,7 @@ public partial class RDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBatmanArmourType
     /// </summary>
-    public enum EBatmanArmourType
+    public enum EBatmanArmourType : byte
     {
         EBA_ArmourMelee = 0,
         EBA_ArmourBallistic = 1,

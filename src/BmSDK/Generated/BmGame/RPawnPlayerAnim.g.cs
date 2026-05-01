@@ -312,7 +312,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Enum: AimingConfigDesc
     /// </summary>
-    public enum AimingConfigDesc
+    public enum AimingConfigDesc : byte
     {
         ACD_StandardAimingConfig = 0,
         ACD_HarpoonAimingConfig = 1,

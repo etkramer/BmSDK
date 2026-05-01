@@ -159,7 +159,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Enum: PredSwingTutorialState
     /// </summary>
-    public enum PredSwingTutorialState
+    public enum PredSwingTutorialState : byte
     {
         PSTS_GrappleToVantagePoint = 0,
         PSTS_WaitingForDetectiveModePrompt = 1,

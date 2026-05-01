@@ -81,7 +81,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ETerrainComponentNeighbors
     /// </summary>
-    public enum ETerrainComponentNeighbors
+    public enum ETerrainComponentNeighbors : byte
     {
         TCN_NW = 0,
         TCN_N = 1,

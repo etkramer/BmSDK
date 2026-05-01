@@ -396,7 +396,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESliderType
     /// </summary>
-    public enum ESliderType
+    public enum ESliderType : byte
     {
         ST_1D = 0,
         ST_2D = 1,

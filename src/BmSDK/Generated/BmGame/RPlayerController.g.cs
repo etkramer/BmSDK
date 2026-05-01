@@ -14721,7 +14721,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: KismetBatmanStates
     /// </summary>
-    public enum KismetBatmanStates
+    public enum KismetBatmanStates : byte
     {
         KBS_Walking = 0,
         KBS_Falling = 1,
@@ -14746,7 +14746,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: GroundMovementState
     /// </summary>
-    public enum GroundMovementState
+    public enum GroundMovementState : byte
     {
         GMS_Walking = 0,
         GMS_RunningMove = 1,
@@ -14849,7 +14849,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: ETakedownFeature_Type
     /// </summary>
-    public enum ETakedownFeature_Type
+    public enum ETakedownFeature_Type : byte
     {
         TFT_Railing = 0,
         TFT_OnTopOfRailing = 1,
@@ -14861,7 +14861,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EPlayerTakedownType
     /// </summary>
-    public enum EPlayerTakedownType
+    public enum EPlayerTakedownType : byte
     {
         TKD_Generic = 0,
         TKD_AboveInFront = 1,
@@ -15009,7 +15009,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EDeviceScanType
     /// </summary>
-    public enum EDeviceScanType
+    public enum EDeviceScanType : byte
     {
         DST_WonderAutomaton = 0,
         DST_HelicopterController = 1,
@@ -15019,7 +15019,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EDeviceScanResult
     /// </summary>
-    public enum EDeviceScanResult
+    public enum EDeviceScanResult : byte
     {
         DSR_PlayerAborts = 0,
         DSR_DamageAborts = 1,
@@ -15037,7 +15037,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EBatmanPoisonLevel
     /// </summary>
-    public enum EBatmanPoisonLevel
+    public enum EBatmanPoisonLevel : byte
     {
         BPL_NoPoison = 0,
         BPL_PoisonMild = 1,
@@ -15160,7 +15160,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: RiddlerRowType
     /// </summary>
-    public enum RiddlerRowType
+    public enum RiddlerRowType : byte
     {
         RRT_Tape = 0,
         RRT_Concept = 1,
@@ -15170,7 +15170,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: RiddlerType
     /// </summary>
-    public enum RiddlerType
+    public enum RiddlerType : byte
     {
         RiddlerType_None = 0,
         RiddlerType_Batman = 1,
@@ -21413,7 +21413,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EGlideAttackTargettingType
     /// </summary>
-    public enum EGlideAttackTargettingType
+    public enum EGlideAttackTargettingType : byte
     {
         GATT_GlideAndDropAttack = 0,
         GATT_GlideAttackOnly = 1,
@@ -21425,7 +21425,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: EPCCheckFrame
     /// </summary>
-    public enum EPCCheckFrame
+    public enum EPCCheckFrame : byte
     {
         PCCF_InteractableItemFrame = 0,
         PCCF_StealthAttackTargetFrame = 1,
@@ -21436,7 +21436,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: JumpSpaceResult
     /// </summary>
-    public enum JumpSpaceResult
+    public enum JumpSpaceResult : byte
     {
         JSR_NoSpace = 0,
         JSR_NoGlide = 1,
@@ -21447,7 +21447,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: MapKeyType
     /// </summary>
-    public enum MapKeyType
+    public enum MapKeyType : byte
     {
         MK_Upgrades = 0,
         MK_Map = 1,
@@ -21462,7 +21462,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Enum: StealthAttackType
     /// </summary>
-    public enum StealthAttackType
+    public enum StealthAttackType : byte
     {
         SAT_SilentTakedown = 0,
         SAT_FearTakedown = 1,

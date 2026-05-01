@@ -443,7 +443,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Enum: EFloorCorrectionInput
     /// </summary>
-    public enum EFloorCorrectionInput
+    public enum EFloorCorrectionInput : byte
     {
         FCI_NotWalking = 0,
         FCI_PawnFloor = 1,

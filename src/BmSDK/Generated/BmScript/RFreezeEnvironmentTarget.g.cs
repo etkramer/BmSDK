@@ -327,7 +327,7 @@ public partial class RFreezeEnvironmentTarget : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Enum: FreezeEnvTargetType
     /// </summary>
-    public enum FreezeEnvTargetType
+    public enum FreezeEnvTargetType : byte
     {
         FET_NONE = 0,
         FET_RailLedge = 1,

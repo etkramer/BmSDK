@@ -111,7 +111,7 @@ public partial class RBMBehaviour_SetIdleStance : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Enum: IdleStanceName
     /// </summary>
-    public enum IdleStanceName
+    public enum IdleStanceName : byte
     {
         ISN_Random = 0,
         ISN_None = 1,

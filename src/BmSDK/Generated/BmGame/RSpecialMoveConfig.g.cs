@@ -114,7 +114,7 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// Enum: AISpecialMoveCommentType
     /// </summary>
-    public enum AISpecialMoveCommentType
+    public enum AISpecialMoveCommentType : byte
     {
         SMCT_NoComment = 0,
         SMCT_JumpRailing = 1,
@@ -125,7 +125,7 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ESpecialMoveAnimSetType
     /// </summary>
-    public enum ESpecialMoveAnimSetType
+    public enum ESpecialMoveAnimSetType : byte
     {
         SMAT_LadderAnims = 0,
         SMAT_GrateRipAnims = 1,

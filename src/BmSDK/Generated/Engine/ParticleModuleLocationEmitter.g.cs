@@ -81,7 +81,7 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     /// <summary>
     /// Enum: ELocationEmitterSelectionMethod
     /// </summary>
-    public enum ELocationEmitterSelectionMethod
+    public enum ELocationEmitterSelectionMethod : byte
     {
         ELESM_Random = 0,
         ELESM_Sequential = 1,

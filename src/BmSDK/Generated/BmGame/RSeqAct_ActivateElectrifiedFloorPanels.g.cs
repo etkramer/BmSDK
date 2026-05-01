@@ -181,7 +181,7 @@ public partial class RSeqAct_ActivateElectrifiedFloorPanels : BmSDK.Engine.SeqAc
     /// <summary>
     /// Enum: StartUpType
     /// </summary>
-    public enum StartUpType
+    public enum StartUpType : byte
     {
         SUT_DistFromBats = 0,
         SUT_SameTime = 1,

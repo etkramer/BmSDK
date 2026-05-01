@@ -1903,7 +1903,7 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Enum: RiddleLoadingStatus
     /// </summary>
-    public enum RiddleLoadingStatus
+    public enum RiddleLoadingStatus : byte
     {
         RLS_None = 0,
         RLS_Package = 1,
@@ -1940,7 +1940,7 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Enum: UpgradeItemType
     /// </summary>
-    public enum UpgradeItemType
+    public enum UpgradeItemType : byte
     {
         UIT_Batsuit = 0,
         UIT_Gadgets = 1,
@@ -1953,7 +1953,7 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Enum: BackScreenType
     /// </summary>
-    public enum BackScreenType
+    public enum BackScreenType : byte
     {
         BST_Upgrade = 0,
         BST_Map = 1,

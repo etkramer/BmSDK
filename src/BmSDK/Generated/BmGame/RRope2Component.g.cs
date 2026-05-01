@@ -1040,7 +1040,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Enum: ERope2LengthChangeEndType
     /// </summary>
-    public enum ERope2LengthChangeEndType
+    public enum ERope2LengthChangeEndType : byte
     {
         ROPE2LENGTHCHANGEEND_ChangeFromEnd1 = 0,
         ROPE2LENGTHCHANGEEND_ChangeFromEnd2 = 1,
@@ -1051,7 +1051,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Enum: ERope2EndType
     /// </summary>
-    public enum ERope2EndType
+    public enum ERope2EndType : byte
     {
         ROPE2END_End1 = 0,
         ROPE2END_End2 = 1,

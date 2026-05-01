@@ -590,7 +590,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Enum: EvidenceDisplayType
     /// </summary>
-    public enum EvidenceDisplayType
+    public enum EvidenceDisplayType : byte
     {
         EEDT_None = 0,
         EEDT_NPC = 1,
@@ -602,7 +602,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Enum: ENPCType
     /// </summary>
-    public enum ENPCType
+    public enum ENPCType : byte
     {
         ENPCType_None = 0,
         ENPCType_Thug = 1,
@@ -628,7 +628,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Enum: EHeartBeatType
     /// </summary>
-    public enum EHeartBeatType
+    public enum EHeartBeatType : byte
     {
         EHeartBeatType_Fine = 0,
         EHeartBeatType_Nervous = 1,
@@ -654,7 +654,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Enum: ScannerPrompt
     /// </summary>
-    public enum ScannerPrompt
+    public enum ScannerPrompt : byte
     {
         ScannerPrompt_None = 0,
         ScannerPrompt_PressAndHoldToScan = 1,

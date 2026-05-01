@@ -141,7 +141,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Enum: VantageSearchResult
     /// </summary>
-    public enum VantageSearchResult
+    public enum VantageSearchResult : byte
     {
         VSR_TotalFail = 0,
         VSR_Retry = 1,

@@ -139,7 +139,7 @@ public partial class RGFxMovieUI_OptionsAudio : BmSDK.BmGame.RGFxMovieUI, BmSDK.
     /// <summary>
     /// Enum: GOMenuItem
     /// </summary>
-    public enum GOMenuItem
+    public enum GOMenuItem : byte
     {
         AOMI_None = 0,
         AOMI_Subtitles = 1,

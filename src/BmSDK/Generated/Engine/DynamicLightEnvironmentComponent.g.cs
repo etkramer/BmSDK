@@ -117,7 +117,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// Enum: EDynamicLightEnvironmentBoundsMethod
     /// </summary>
-    public enum EDynamicLightEnvironmentBoundsMethod
+    public enum EDynamicLightEnvironmentBoundsMethod : byte
     {
         DLEB_OwnerComponents = 0,
         DLEB_ManualOverride = 1,
@@ -551,7 +551,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// Enum: DLEC_Mode
     /// </summary>
-    public enum DLEC_Mode
+    public enum DLEC_Mode : byte
     {
         DLEC_Unmolested = 0,
         DLEC_APlus3D = 1,

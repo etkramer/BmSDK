@@ -2060,7 +2060,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVenomDifficultyType
     /// </summary>
-    public enum EVenomDifficultyType
+    public enum EVenomDifficultyType : byte
     {
         EVDT_Health = 0,
         EVDT_TakeDamageBatarangLight = 1,
@@ -2156,7 +2156,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDifficultyType
     /// </summary>
-    public enum EDifficultyType
+    public enum EDifficultyType : byte
     {
         EDT_DamageUnarmed = 0,
         EDT_DamagePipe = 1,
@@ -2203,7 +2203,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWeaponConfigType
     /// </summary>
-    public enum EWeaponConfigType
+    public enum EWeaponConfigType : byte
     {
         WEAPONCONFIG_None = 0,
         WEAPONCONFIG_Unarmed = 1,

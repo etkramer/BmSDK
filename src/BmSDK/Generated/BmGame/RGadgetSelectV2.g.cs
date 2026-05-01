@@ -199,7 +199,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// <summary>
     /// Enum: EGadgetSelectState
     /// </summary>
-    public enum EGadgetSelectState
+    public enum EGadgetSelectState : byte
     {
         GSS_Closed = 0,
         GSS_UpOpen = 1,

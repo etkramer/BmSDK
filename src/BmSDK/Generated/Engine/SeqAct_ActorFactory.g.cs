@@ -218,7 +218,7 @@ public partial class SeqAct_ActorFactory : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Enum: EPointSelection
     /// </summary>
-    public enum EPointSelection
+    public enum EPointSelection : byte
     {
         PS_Normal = 0,
         PS_Random = 1,

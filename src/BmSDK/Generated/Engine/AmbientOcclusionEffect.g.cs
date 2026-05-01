@@ -81,7 +81,7 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// <summary>
     /// Enum: EAmbientOcclusionQuality
     /// </summary>
-    public enum EAmbientOcclusionQuality
+    public enum EAmbientOcclusionQuality : byte
     {
         AO_High = 0,
         AO_Medium = 1,

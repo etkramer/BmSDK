@@ -81,7 +81,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EMeshCameraFacingOptions
     /// </summary>
-    public enum EMeshCameraFacingOptions
+    public enum EMeshCameraFacingOptions : byte
     {
         XAxisFacing_NoUp = 0,
         XAxisFacing_ZUp = 1,
@@ -102,7 +102,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EMeshCameraFacingUpAxis
     /// </summary>
-    public enum EMeshCameraFacingUpAxis
+    public enum EMeshCameraFacingUpAxis : byte
     {
         CameraFacing_NoneUP = 0,
         CameraFacing_ZUp = 1,
@@ -115,7 +115,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EMeshScreenAlignment
     /// </summary>
-    public enum EMeshScreenAlignment
+    public enum EMeshScreenAlignment : byte
     {
         PSMA_MeshFaceCameraWithRoll = 0,
         PSMA_MeshFaceCameraWithSpin = 1,

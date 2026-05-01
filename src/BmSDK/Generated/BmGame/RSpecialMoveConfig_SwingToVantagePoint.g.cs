@@ -81,7 +81,7 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// <summary>
     /// Enum: ESwingToVantagePointExtraInfo
     /// </summary>
-    public enum ESwingToVantagePointExtraInfo
+    public enum ESwingToVantagePointExtraInfo : byte
     {
         STVPEI_GrappleTarget = 0,
         STVPEI_MAX = 1,

@@ -773,7 +773,7 @@ public partial class RCapeComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EInitterType
     /// </summary>
-    public enum EInitterType
+    public enum EInitterType : byte
     {
         INITTERTYPE_Batman = 0,
         INITTERTYPE_Phys = 1,

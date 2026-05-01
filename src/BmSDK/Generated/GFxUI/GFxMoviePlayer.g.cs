@@ -1427,7 +1427,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxAlign
     /// </summary>
-    public enum GFxAlign
+    public enum GFxAlign : byte
     {
         Align_Center = 0,
         Align_TopCenter = 1,
@@ -1444,7 +1444,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxScaleMode
     /// </summary>
-    public enum GFxScaleMode
+    public enum GFxScaleMode : byte
     {
         SM_NoScale = 0,
         SM_ShowAll = 1,
@@ -1499,7 +1499,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ASType
     /// </summary>
-    public enum ASType
+    public enum ASType : byte
     {
         AS_Undefined = 0,
         AS_Null = 1,
@@ -1652,7 +1652,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxRenderTextureMode
     /// </summary>
-    public enum GFxRenderTextureMode
+    public enum GFxRenderTextureMode : byte
     {
         RTM_Opaque = 0,
         RTM_Alpha = 1,
@@ -1663,7 +1663,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxTimingMode
     /// </summary>
-    public enum GFxTimingMode
+    public enum GFxTimingMode : byte
     {
         TM_Game = 0,
         TM_Real = 1,
@@ -1673,7 +1673,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxDPGBias
     /// </summary>
-    public enum GFxDPGBias
+    public enum GFxDPGBias : byte
     {
         DPGB_BackMost = 0,
         DPGB_UnderHUD = 1,

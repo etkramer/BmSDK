@@ -115,7 +115,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SoftBodyBoneType
     /// </summary>
-    public enum SoftBodyBoneType
+    public enum SoftBodyBoneType : byte
     {
         SOFTBODYBONE_Fixed = 0,
         SOFTBODYBONE_BreakableAttachment = 1,
@@ -185,7 +185,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ClothBoneType
     /// </summary>
-    public enum ClothBoneType
+    public enum ClothBoneType : byte
     {
         CLOTHBONE_Fixed = 0,
         CLOTHBONE_BreakableAttachment = 1,
@@ -309,7 +309,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: TriangleSortAxis
     /// </summary>
-    public enum TriangleSortAxis
+    public enum TriangleSortAxis : byte
     {
         TSA_X_Axis = 0,
         TSA_Y_Axis = 1,
@@ -320,7 +320,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ClothMovementScaleGen
     /// </summary>
-    public enum ClothMovementScaleGen
+    public enum ClothMovementScaleGen : byte
     {
         ECMDM_DistToFixedVert = 0,
         ECMDM_VertexBoneWeight = 1,
@@ -331,7 +331,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: TriangleSortOption
     /// </summary>
-    public enum TriangleSortOption
+    public enum TriangleSortOption : byte
     {
         TRISORT_None = 0,
         TRISORT_CenterRadialDistance = 1,
@@ -346,7 +346,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: BoneBreakOption
     /// </summary>
-    public enum BoneBreakOption
+    public enum BoneBreakOption : byte
     {
         BONEBREAK_SoftPreferred = 0,
         BONEBREAK_AutoDetect = 1,

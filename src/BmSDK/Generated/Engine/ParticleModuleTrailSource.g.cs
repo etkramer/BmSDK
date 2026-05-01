@@ -150,7 +150,7 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
     /// <summary>
     /// Enum: ETrail2SourceMethod
     /// </summary>
-    public enum ETrail2SourceMethod
+    public enum ETrail2SourceMethod : byte
     {
         PET2SRCM_Default = 0,
         PET2SRCM_Particle = 1,

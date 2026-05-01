@@ -76,7 +76,7 @@ public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Enum: DragMovingState
     /// </summary>
-    public enum DragMovingState
+    public enum DragMovingState : byte
     {
         DMS_Moving = 0,
         DMS_AtStart = 1,

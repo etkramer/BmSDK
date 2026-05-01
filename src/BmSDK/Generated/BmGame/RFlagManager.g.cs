@@ -347,7 +347,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: RFlagType
     /// </summary>
-    public enum RFlagType
+    public enum RFlagType : byte
     {
         RFlagType_Global = 0,
         RFlagType_Actor = 1,

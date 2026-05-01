@@ -103,7 +103,7 @@ public partial class RSeqEvent_CustomBackscreenRequested : BmSDK.Engine.Sequence
     /// <summary>
     /// Enum: BackscreenAvailability
     /// </summary>
-    public enum BackscreenAvailability
+    public enum BackscreenAvailability : byte
     {
         BA_NotAvailableAbort = 0,
         BA_NotAvailableContinue = 1,

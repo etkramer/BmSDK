@@ -1997,7 +1997,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: SimultaneousCounterAnimType
     /// </summary>
-    public enum SimultaneousCounterAnimType
+    public enum SimultaneousCounterAnimType : byte
     {
         SCAT_None = 0,
         SCAT_2ThugAngled = 1,
@@ -2011,7 +2011,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: SimultaneousCounterFormation
     /// </summary>
-    public enum SimultaneousCounterFormation
+    public enum SimultaneousCounterFormation : byte
     {
         SCF_None = 0,
         SCF_FrontRight = 1,
@@ -2032,7 +2032,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: AdditionalRagdollForce
     /// </summary>
-    public enum AdditionalRagdollForce
+    public enum AdditionalRagdollForce : byte
     {
         ARF_None = 0,
         ARF_SpinLeft = 1,
@@ -2044,7 +2044,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: TargetStrikeResponse
     /// </summary>
-    public enum TargetStrikeResponse
+    public enum TargetStrikeResponse : byte
     {
         TSR_None = 0,
         TSR_Block = 1,
@@ -2056,7 +2056,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: DamageResult
     /// </summary>
-    public enum DamageResult
+    public enum DamageResult : byte
     {
         DMG_None = 0,
         DMG_Hit = 1,
@@ -2069,7 +2069,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: CounterLimb
     /// </summary>
-    public enum CounterLimb
+    public enum CounterLimb : byte
     {
         ECL_None = 0,
         ECL_LeftArm = 1,
@@ -2095,7 +2095,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ECombatPawnType
     /// </summary>
-    public enum ECombatPawnType
+    public enum ECombatPawnType : byte
     {
         ECPT_None = 0,
         ECPT_Player = 1,

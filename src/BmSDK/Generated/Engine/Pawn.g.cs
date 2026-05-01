@@ -2869,7 +2869,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Speaker, 
     /// <summary>
     /// Enum: EPathSearchType
     /// </summary>
-    public enum EPathSearchType
+    public enum EPathSearchType : byte
     {
         PST_Default = 0,
         PST_Breadth = 1,

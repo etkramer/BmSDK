@@ -225,7 +225,7 @@ public partial class RPresetAimingConfigs : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPresetAimingConfig
     /// </summary>
-    public enum EPresetAimingConfig
+    public enum EPresetAimingConfig : byte
     {
         PAC_None = 0,
         PAC_NoAiming = 1,

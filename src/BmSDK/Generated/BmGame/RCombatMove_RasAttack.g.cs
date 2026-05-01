@@ -184,7 +184,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Enum: RasAttackType
     /// </summary>
-    public enum RasAttackType
+    public enum RasAttackType : byte
     {
         RAT_None = 0,
         RAT_Charge = 1,

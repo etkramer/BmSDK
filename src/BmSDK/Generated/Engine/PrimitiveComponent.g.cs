@@ -1347,7 +1347,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: ERadialImpulseFalloff
     /// </summary>
-    public enum ERadialImpulseFalloff
+    public enum ERadialImpulseFalloff : byte
     {
         RIF_Constant = 0,
         RIF_Linear = 1,
@@ -1357,7 +1357,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: ERBCollisionChannel
     /// </summary>
-    public enum ERBCollisionChannel
+    public enum ERBCollisionChannel : byte
     {
         RBCC_Default = 0,
         RBCC_Nothing = 1,
@@ -1672,7 +1672,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: GJKResult
     /// </summary>
-    public enum GJKResult
+    public enum GJKResult : byte
     {
         GJK_Intersect = 0,
         GJK_NoIntersection = 1,
@@ -1683,7 +1683,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: LoadedPhysMaterial
     /// </summary>
-    public enum LoadedPhysMaterial
+    public enum LoadedPhysMaterial : byte
     {
         LPM_NoLoadedPhysMat = 0,
         LPM_MAX = 1,

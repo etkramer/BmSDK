@@ -160,7 +160,7 @@ public partial class RPhysicalMaterialTexture : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Enum: ERPMT_Encoding
     /// </summary>
-    public enum ERPMT_Encoding
+    public enum ERPMT_Encoding : byte
     {
         ERPMT_None = 0,
         ERPMT_0BPP = 1,

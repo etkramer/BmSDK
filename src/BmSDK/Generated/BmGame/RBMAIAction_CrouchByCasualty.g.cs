@@ -233,7 +233,7 @@ public partial class RBMAIAction_CrouchByCasualty : BmSDK.BmGame.RBMAIAction, Bm
     /// <summary>
     /// Enum: CheckManDown_OverlayState
     /// </summary>
-    public enum CheckManDown_OverlayState
+    public enum CheckManDown_OverlayState : byte
     {
         CMD_Any = 0,
         CMD_FaceDown = 1,

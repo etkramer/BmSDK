@@ -171,7 +171,7 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// <summary>
     /// Enum: ELengthChangeType
     /// </summary>
-    public enum ELengthChangeType
+    public enum ELengthChangeType : byte
     {
         LENGTHCHANGETYPE_Speed = 0,
         LENGTHCHANGETYPE_Linear = 1,

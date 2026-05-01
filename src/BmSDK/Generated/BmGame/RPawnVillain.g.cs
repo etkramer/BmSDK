@@ -3788,7 +3788,7 @@ public partial class RPawnVillain : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RSpotab
     /// <summary>
     /// Enum: CombatReadinessState
     /// </summary>
-    public enum CombatReadinessState
+    public enum CombatReadinessState : byte
     {
         CRS_None = 0,
         CRS_LoadingAnims = 1,
@@ -3904,7 +3904,7 @@ public partial class RPawnVillain : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RSpotab
     /// <summary>
     /// Enum: EArrayPropertyType
     /// </summary>
-    public enum EArrayPropertyType
+    public enum EArrayPropertyType : byte
     {
         EAPT_None = 0,
         EAPT_ClearAndAdd = 1,
@@ -3940,7 +3940,7 @@ public partial class RPawnVillain : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RSpotab
     /// <summary>
     /// Enum: AttackCounterTypes
     /// </summary>
-    public enum AttackCounterTypes
+    public enum AttackCounterTypes : byte
     {
         ACT_Counter = 0,
         ACT_Evade = 1,
@@ -3952,7 +3952,7 @@ public partial class RPawnVillain : BmSDK.BmGame.RBMPawnAI, BmSDK.BmGame.RSpotab
     /// <summary>
     /// Enum: StuckRagdollSolutionType
     /// </summary>
-    public enum StuckRagdollSolutionType
+    public enum StuckRagdollSolutionType : byte
     {
         SRST_LeaveStuck = 0,
         SRST_Freeze = 1,

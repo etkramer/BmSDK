@@ -242,7 +242,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
     /// <summary>
     /// Enum: EEventUploadType
     /// </summary>
-    public enum EEventUploadType
+    public enum EEventUploadType : byte
     {
         EUT_GenericStats = 0,
         EUT_ProfileData = 1,

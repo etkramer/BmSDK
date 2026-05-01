@@ -81,7 +81,7 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: EEmitterNormalsMode
     /// </summary>
-    public enum EEmitterNormalsMode
+    public enum EEmitterNormalsMode : byte
     {
         ENM_CameraFacing = 0,
         ENM_Spherical = 1,
@@ -92,7 +92,7 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: EParticleSortMode
     /// </summary>
-    public enum EParticleSortMode
+    public enum EParticleSortMode : byte
     {
         PSORTMODE_None = 0,
         PSORTMODE_ViewProjDepth = 1,

@@ -108,7 +108,7 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// Enum: ESubChapter
     /// </summary>
-    public enum ESubChapter
+    public enum ESubChapter : byte
     {
         ESubChapter_None = 0,
         ESubChapter_a = 1,
@@ -143,7 +143,7 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// Enum: ESideStory
     /// </summary>
-    public enum ESideStory
+    public enum ESideStory : byte
     {
         ESideStory_None = 0,
         ESideStory_Azrael = 1,

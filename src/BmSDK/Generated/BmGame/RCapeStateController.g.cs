@@ -976,7 +976,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneVisibility
     /// </summary>
-    public enum ECapeBoneVisibility
+    public enum ECapeBoneVisibility : byte
     {
         CAPEBONEVISIBILITY_Visible = 0,
         CAPEBONEVISIBILITY_Invisible = 1,

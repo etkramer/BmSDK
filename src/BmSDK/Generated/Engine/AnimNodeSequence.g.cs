@@ -347,7 +347,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootRotationOption
     /// </summary>
-    public enum ERootRotationOption
+    public enum ERootRotationOption : byte
     {
         RRO_Default = 0,
         RRO_Discard = 1,
@@ -358,7 +358,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootBoneAxis
     /// </summary>
-    public enum ERootBoneAxis
+    public enum ERootBoneAxis : byte
     {
         RBA_Default = 0,
         RBA_Discard = 1,

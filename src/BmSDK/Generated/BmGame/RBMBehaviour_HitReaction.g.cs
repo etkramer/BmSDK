@@ -312,7 +312,7 @@ public partial class RBMBehaviour_HitReaction : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Enum: HitAnimType
     /// </summary>
-    public enum HitAnimType
+    public enum HitAnimType : byte
     {
         HTY_Left = 0,
         HTY_Right = 1,

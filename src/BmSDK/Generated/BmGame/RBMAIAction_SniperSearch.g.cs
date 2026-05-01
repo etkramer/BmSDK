@@ -277,7 +277,7 @@ public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Enum: FireState
     /// </summary>
-    public enum FireState
+    public enum FireState : byte
     {
         FS_Reload = 0,
         FS_Wait = 1,

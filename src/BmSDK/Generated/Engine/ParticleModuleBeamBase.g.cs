@@ -76,7 +76,7 @@ public partial class ParticleModuleBeamBase : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: Beam2SourceTargetTangentMethod
     /// </summary>
-    public enum Beam2SourceTargetTangentMethod
+    public enum Beam2SourceTargetTangentMethod : byte
     {
         PEB2STTM_Direct = 0,
         PEB2STTM_UserSet = 1,
@@ -88,7 +88,7 @@ public partial class ParticleModuleBeamBase : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: Beam2SourceTargetMethod
     /// </summary>
-    public enum Beam2SourceTargetMethod
+    public enum Beam2SourceTargetMethod : byte
     {
         PEB2STM_Default = 0,
         PEB2STM_UserSet = 1,

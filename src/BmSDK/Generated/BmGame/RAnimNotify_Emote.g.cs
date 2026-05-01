@@ -90,7 +90,7 @@ public partial class RAnimNotify_Emote : BmSDK.BmGame.RAnimNotify_Script, BmSDK.
     /// <summary>
     /// Enum: EEmoteType
     /// </summary>
-    public enum EEmoteType
+    public enum EEmoteType : byte
     {
         Emote_Dazed = 0,
         Emote_ExertLight = 1,

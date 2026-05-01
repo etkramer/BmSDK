@@ -706,7 +706,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Enum: EGrateBoltPosition
     /// </summary>
-    public enum EGrateBoltPosition
+    public enum EGrateBoltPosition : byte
     {
         GBP_TopLeft = 0,
         GBP_TopRight = 1,
@@ -718,7 +718,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Enum: EGrateRemoveType
     /// </summary>
-    public enum EGrateRemoveType
+    public enum EGrateRemoveType : byte
     {
         GRATEREMOVE_Loud = 0,
         GRATEREMOVE_Silent = 1,

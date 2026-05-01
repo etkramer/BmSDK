@@ -531,7 +531,7 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: OverstretchHandlingMethod
     /// </summary>
-    public enum OverstretchHandlingMethod
+    public enum OverstretchHandlingMethod : byte
     {
         OVERSTRETCHHANDLINGMETHOD_Default = 0,
         OVERSTRETCHHANDLINGMETHOD_Simple = 1,
@@ -576,7 +576,7 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAutoForwardType
     /// </summary>
-    public enum EAutoForwardType
+    public enum EAutoForwardType : byte
     {
         AUTOFORWARDTYPE_None = 0,
         AUTOFORWARDTYPE_AtEndOfAnim = 1,

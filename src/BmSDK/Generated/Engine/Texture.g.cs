@@ -496,7 +496,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureMipGenSettings
     /// </summary>
-    public enum TextureMipGenSettings
+    public enum TextureMipGenSettings : byte
     {
         TMGS_FromTextureGroup = 0,
         TMGS_SimpleAverage = 1,
@@ -819,7 +819,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureGroup
     /// </summary>
-    public enum TextureGroup
+    public enum TextureGroup : byte
     {
         TEXTUREGROUP_World = 0,
         TEXTUREGROUP_WorldNormalMap = 1,
@@ -859,7 +859,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureAddress
     /// </summary>
-    public enum TextureAddress
+    public enum TextureAddress : byte
     {
         TA_Wrap = 0,
         TA_Clamp = 1,
@@ -870,7 +870,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureFilter
     /// </summary>
-    public enum TextureFilter
+    public enum TextureFilter : byte
     {
         TF_Nearest = 0,
         TF_Linear = 1,
@@ -880,7 +880,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPixelFormat
     /// </summary>
-    public enum EPixelFormat
+    public enum EPixelFormat : byte
     {
         PF_Unknown = 0,
         PF_A32B32G32R32F = 1,
@@ -916,7 +916,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureCompressionSettings
     /// </summary>
-    public enum TextureCompressionSettings
+    public enum TextureCompressionSettings : byte
     {
         TC_Default = 0,
         TC_Normalmap = 1,

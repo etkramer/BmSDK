@@ -146,7 +146,7 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// <summary>
     /// Enum: EParticleEventOutputType
     /// </summary>
-    public enum EParticleEventOutputType
+    public enum EParticleEventOutputType : byte
     {
         ePARTICLEOUT_Spawn = 0,
         ePARTICLEOUT_Death = 1,

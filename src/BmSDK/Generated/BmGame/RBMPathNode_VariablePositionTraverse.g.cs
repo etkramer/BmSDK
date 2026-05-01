@@ -232,7 +232,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Enum: FenceJumpEdgeType
     /// </summary>
-    public enum FenceJumpEdgeType
+    public enum FenceJumpEdgeType : byte
     {
         FENCEEDGE_Drop = 0,
         FENCEEDGE_Climb = 1,

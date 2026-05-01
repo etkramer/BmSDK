@@ -101,7 +101,7 @@ public partial class RSeqEvent_HelicopterDialogueTrigger : BmSDK.Engine.Sequence
     /// <summary>
     /// Enum: HeliDialogue
     /// </summary>
-    public enum HeliDialogue
+    public enum HeliDialogue : byte
     {
         HD_BatmanSeen = 0,
         HD_BatmanCombatSeen = 1,

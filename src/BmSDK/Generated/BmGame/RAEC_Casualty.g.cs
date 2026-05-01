@@ -395,7 +395,7 @@ public partial class RAEC_Casualty : BmSDK.BmGame.RAEC_CasualtyBase, BmSDK.IGame
     /// <summary>
     /// Enum: NervousSetPieceType
     /// </summary>
-    public enum NervousSetPieceType
+    public enum NervousSetPieceType : byte
     {
         NST_Normal = 0,
         NST_TerrorTrans = 1,

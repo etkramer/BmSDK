@@ -465,7 +465,7 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDecompressionType
     /// </summary>
-    public enum EDecompressionType
+    public enum EDecompressionType : byte
     {
         DTYPE_Setup = 0,
         DTYPE_Invalid = 1,

@@ -647,7 +647,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Enum: FloorPanelStates
     /// </summary>
-    public enum FloorPanelStates
+    public enum FloorPanelStates : byte
     {
         EFP_Deactivated = 0,
         EFP_WarmingUp = 1,

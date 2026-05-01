@@ -76,7 +76,7 @@ public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, 
     /// <summary>
     /// Enum: EStatsFetchType
     /// </summary>
-    public enum EStatsFetchType
+    public enum EStatsFetchType : byte
     {
         SFT_Player = 0,
         SFT_CenteredOnPlayer = 1,

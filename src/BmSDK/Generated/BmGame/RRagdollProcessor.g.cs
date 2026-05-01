@@ -353,7 +353,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: RagdollState
     /// </summary>
-    public enum RagdollState
+    public enum RagdollState : byte
     {
         RAG_Idle = 0,
         RAG_Ragdoll = 1,

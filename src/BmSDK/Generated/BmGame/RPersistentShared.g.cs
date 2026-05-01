@@ -1251,7 +1251,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPercentData
     /// </summary>
-    public enum EPercentData
+    public enum EPercentData : byte
     {
         EPercentData_Grand = 0,
         EPercentData_Story = 1,
@@ -1310,7 +1310,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameplayStats
     /// </summary>
-    public enum EGameplayStats
+    public enum EGameplayStats : byte
     {
         EGameplayStats_DistanceFlown = 0,
         EGameplayStats_MAX = 1,
@@ -1319,7 +1319,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: PSharedVersion
     /// </summary>
-    public enum PSharedVersion
+    public enum PSharedVersion : byte
     {
         PSharedVer_Initial = 0,
         PSharedVer_AddedNEWs = 1,

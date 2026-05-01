@@ -255,7 +255,7 @@ public partial class RSpecialMoveInstance_HarpoonBase : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Enum: BatclawRopeHandOn
     /// </summary>
-    public enum BatclawRopeHandOn
+    public enum BatclawRopeHandOn : byte
     {
         BRHO_NoHand = 0,
         BRHO_LeftHand = 1,

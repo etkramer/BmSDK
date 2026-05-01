@@ -81,7 +81,7 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
     /// <summary>
     /// Enum: EContractOrExpandInput
     /// </summary>
-    public enum EContractOrExpandInput
+    public enum EContractOrExpandInput : byte
     {
         Contract_Input = 0,
         Expand_Input = 1,

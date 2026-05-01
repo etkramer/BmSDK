@@ -709,7 +709,7 @@ public partial class OnlinePlayerStorage : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlinePlayerStorageAsyncState
     /// </summary>
-    public enum EOnlinePlayerStorageAsyncState
+    public enum EOnlinePlayerStorageAsyncState : byte
     {
         OPAS_None = 0,
         OPAS_Read = 1,
@@ -799,7 +799,7 @@ public partial class OnlinePlayerStorage : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineProfilePropertyOwner
     /// </summary>
-    public enum EOnlineProfilePropertyOwner
+    public enum EOnlineProfilePropertyOwner : byte
     {
         OPPO_None = 0,
         OPPO_OnlineService = 1,

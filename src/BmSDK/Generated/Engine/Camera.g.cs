@@ -520,7 +520,7 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECameraAnimPlaySpace
     /// </summary>
-    public enum ECameraAnimPlaySpace
+    public enum ECameraAnimPlaySpace : byte
     {
         CAPS_CameraLocal = 0,
         CAPS_World = 1,
@@ -601,7 +601,7 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EViewTargetBlendFunction
     /// </summary>
-    public enum EViewTargetBlendFunction
+    public enum EViewTargetBlendFunction : byte
     {
         VTBlend_Linear = 0,
         VTBlend_Cubic = 1,

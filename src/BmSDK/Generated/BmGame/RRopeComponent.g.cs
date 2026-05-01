@@ -470,7 +470,7 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
     /// <summary>
     /// Enum: ELoDUpdateMode
     /// </summary>
-    public enum ELoDUpdateMode
+    public enum ELoDUpdateMode : byte
     {
         LODUPDATEMODE_Normal = 0,
         LODUPDATEMODE_FixedLeafLength = 1,

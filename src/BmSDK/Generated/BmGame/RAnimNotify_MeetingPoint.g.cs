@@ -188,7 +188,7 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// Enum: EMeetingPointType
     /// </summary>
-    public enum EMeetingPointType
+    public enum EMeetingPointType : byte
     {
         MPT_End = 0,
         MPT_Begin = 1,

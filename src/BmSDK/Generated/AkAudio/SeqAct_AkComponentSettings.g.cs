@@ -342,7 +342,7 @@ public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Enum: EAkComponentSettingsBool
     /// </summary>
-    public enum EAkComponentSettingsBool
+    public enum EAkComponentSettingsBool : byte
     {
         AK_SETTING_UNCHANGED = 0,
         AK_SETTING_TRUE = 1,

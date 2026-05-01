@@ -151,7 +151,7 @@ public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// Enum: EVisibilityTrackCondition
     /// </summary>
-    public enum EVisibilityTrackCondition
+    public enum EVisibilityTrackCondition : byte
     {
         EVTC_Always = 0,
         EVTC_GoreEnabled = 1,
@@ -162,7 +162,7 @@ public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// Enum: EVisibilityTrackAction
     /// </summary>
-    public enum EVisibilityTrackAction
+    public enum EVisibilityTrackAction : byte
     {
         EVTA_Hide = 0,
         EVTA_Show = 1,

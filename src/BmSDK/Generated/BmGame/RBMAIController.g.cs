@@ -2184,7 +2184,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: CasualtyScreamReason
     /// </summary>
-    public enum CasualtyScreamReason
+    public enum CasualtyScreamReason : byte
     {
         CSR_Generic = 0,
         CSR_Fell = 1,
@@ -2198,7 +2198,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: BRAECReactionType
     /// </summary>
-    public enum BRAECReactionType
+    public enum BRAECReactionType : byte
     {
         BRAEC_Batarang = 0,
         BRAEC_SteerableBatarang = 1,
@@ -2211,7 +2211,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: FOVcategory
     /// </summary>
-    public enum FOVcategory
+    public enum FOVcategory : byte
     {
         FOV_None = 0,
         FOV_Peripheral = 1,
@@ -2222,7 +2222,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: BarkType
     /// </summary>
-    public enum BarkType
+    public enum BarkType : byte
     {
         BARK_SPOTTED = 0,
         BARK_SPOTTEDCHASE = 1,
@@ -2333,7 +2333,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: BatmanGrabType
     /// </summary>
-    public enum BatmanGrabType
+    public enum BatmanGrabType : byte
     {
         BGT_NoGrab = 0,
         BGT_Grab = 1,
@@ -2344,7 +2344,7 @@ public partial class RBMAIController : BmSDK.Engine.AIController, BmSDK.IGameObj
     /// <summary>
     /// Enum: PoseMirroredBehaviour
     /// </summary>
-    public enum PoseMirroredBehaviour
+    public enum PoseMirroredBehaviour : byte
     {
         PMB_DontCare = 0,
         PMB_NotMirrored = 1,

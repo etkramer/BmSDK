@@ -4091,7 +4091,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EProgressMessageType
     /// </summary>
-    public enum EProgressMessageType
+    public enum EProgressMessageType : byte
     {
         PMT_Clear = 0,
         PMT_Information = 1,
@@ -4335,7 +4335,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInputMatchAction
     /// </summary>
-    public enum EInputMatchAction
+    public enum EInputMatchAction : byte
     {
         IMA_GreaterThan = 0,
         IMA_LessThan = 1,
@@ -4345,7 +4345,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInputTypes
     /// </summary>
-    public enum EInputTypes
+    public enum EInputTypes : byte
     {
         IT_XAxis = 0,
         IT_YAxis = 1,

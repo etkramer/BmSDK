@@ -243,7 +243,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EShadowFilterQuality
     /// </summary>
-    public enum EShadowFilterQuality
+    public enum EShadowFilterQuality : byte
     {
         SFQ_Low = 0,
         SFQ_Medium = 1,
@@ -254,7 +254,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EShadowProjectionTechnique
     /// </summary>
-    public enum EShadowProjectionTechnique
+    public enum EShadowProjectionTechnique : byte
     {
         ShadowProjTech_Default = 0,
         ShadowProjTech_PCF = 1,
@@ -268,7 +268,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: ELightShadowMode
     /// </summary>
-    public enum ELightShadowMode
+    public enum ELightShadowMode : byte
     {
         LightShadow_Normal = 0,
         LightShadow_Modulate = 1,
@@ -279,7 +279,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: ELightAffectsClassification
     /// </summary>
-    public enum ELightAffectsClassification
+    public enum ELightAffectsClassification : byte
     {
         LAC_USER_SELECTED = 0,
         LAC_DYNAMIC_AFFECTING = 1,

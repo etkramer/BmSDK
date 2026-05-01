@@ -524,7 +524,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineNewsType
     /// </summary>
-    public enum EOnlineNewsType
+    public enum EOnlineNewsType : byte
     {
         ONT_Unknown = 0,
         ONT_GameNews = 1,
@@ -1065,7 +1065,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineAccountCreateStatus
     /// </summary>
-    public enum EOnlineAccountCreateStatus
+    public enum EOnlineAccountCreateStatus : byte
     {
         OACS_CreateSuccessful = 0,
         OACS_UnknownError = 1,
@@ -1114,7 +1114,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELanBeaconState
     /// </summary>
-    public enum ELanBeaconState
+    public enum ELanBeaconState : byte
     {
         LANB_NotUsingLanBeacon = 0,
         LANB_Hosting = 1,
@@ -1200,7 +1200,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENATType
     /// </summary>
-    public enum ENATType
+    public enum ENATType : byte
     {
         NAT_Unknown = 0,
         NAT_Open = 1,
@@ -1212,7 +1212,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineServerConnectionStatus
     /// </summary>
-    public enum EOnlineServerConnectionStatus
+    public enum EOnlineServerConnectionStatus : byte
     {
         OSCS_NotConnected = 0,
         OSCS_Connected = 1,
@@ -1335,7 +1335,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineContentType
     /// </summary>
-    public enum EOnlineContentType
+    public enum EOnlineContentType : byte
     {
         OCT_Downloaded = 0,
         OCT_SaveGame = 1,
@@ -1460,7 +1460,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineFriendState
     /// </summary>
-    public enum EOnlineFriendState
+    public enum EOnlineFriendState : byte
     {
         OFS_Offline = 0,
         OFS_Online = 1,
@@ -1472,7 +1472,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineEnumerationReadState
     /// </summary>
-    public enum EOnlineEnumerationReadState
+    public enum EOnlineEnumerationReadState : byte
     {
         OERS_NotStarted = 0,
         OERS_InProgress = 1,
@@ -1484,7 +1484,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameState
     /// </summary>
-    public enum EOnlineGameState
+    public enum EOnlineGameState : byte
     {
         OGS_NoSession = 0,
         OGS_Pending = 1,
@@ -1498,7 +1498,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetworkNotificationPosition
     /// </summary>
-    public enum ENetworkNotificationPosition
+    public enum ENetworkNotificationPosition : byte
     {
         NNP_TopLeft = 0,
         NNP_TopCenter = 1,
@@ -1540,7 +1540,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFeaturePrivilegeLevel
     /// </summary>
-    public enum EFeaturePrivilegeLevel
+    public enum EFeaturePrivilegeLevel : byte
     {
         FPL_Disabled = 0,
         FPL_EnabledFriendsOnly = 1,
@@ -1551,7 +1551,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELoginStatus
     /// </summary>
-    public enum ELoginStatus
+    public enum ELoginStatus : byte
     {
         LS_NotLoggedIn = 0,
         LS_UsingLocalProfile = 1,

@@ -160,7 +160,7 @@ public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameOb
     /// <summary>
     /// Enum: ETrackToggleAction
     /// </summary>
-    public enum ETrackToggleAction
+    public enum ETrackToggleAction : byte
     {
         ETTA_Off = 0,
         ETTA_On = 1,

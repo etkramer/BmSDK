@@ -208,7 +208,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Enum: ECapeBoundsCalculationType
     /// </summary>
-    public enum ECapeBoundsCalculationType
+    public enum ECapeBoundsCalculationType : byte
     {
         CAPEBOUNDSCALCULATION_Tight = 0,
         CAPEBOUNDSCALCULATION_Loose = 1,

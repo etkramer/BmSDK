@@ -571,7 +571,7 @@ public partial class RGFxMovieUI_MainMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGam
     /// <summary>
     /// Enum: MMHeadedTo
     /// </summary>
-    public enum MMHeadedTo
+    public enum MMHeadedTo : byte
     {
         MMHeadedNowhere = 0,
         MMHeadedToPSN = 1,
@@ -582,7 +582,7 @@ public partial class RGFxMovieUI_MainMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGam
     /// <summary>
     /// Enum: MMPopTypes
     /// </summary>
-    public enum MMPopTypes
+    public enum MMPopTypes : byte
     {
         MMPopType_None = 0,
         MMPopType_Exit = 1,
@@ -604,7 +604,7 @@ public partial class RGFxMovieUI_MainMenu : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGam
     /// <summary>
     /// Enum: MainMenuItems
     /// </summary>
-    public enum MainMenuItems
+    public enum MainMenuItems : byte
     {
         MMI_None = 0,
         MMI_NewGame = 1,

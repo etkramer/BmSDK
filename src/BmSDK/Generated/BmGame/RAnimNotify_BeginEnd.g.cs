@@ -85,7 +85,7 @@ public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EBeginEndType
     /// </summary>
-    public enum EBeginEndType
+    public enum EBeginEndType : byte
     {
         BET_Begin = 0,
         BET_End = 1,

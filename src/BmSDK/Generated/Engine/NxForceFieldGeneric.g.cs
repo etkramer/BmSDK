@@ -99,7 +99,7 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// Enum: FFG_ForceFieldCoordinates
     /// </summary>
-    public enum FFG_ForceFieldCoordinates
+    public enum FFG_ForceFieldCoordinates : byte
     {
         FFG_CARTESIAN = 0,
         FFG_SPHERICAL = 1,

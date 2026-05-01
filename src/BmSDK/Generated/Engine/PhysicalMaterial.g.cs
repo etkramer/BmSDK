@@ -186,7 +186,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPhysEffectType
     /// </summary>
-    public enum EPhysEffectType
+    public enum EPhysEffectType : byte
     {
         EPMET_Impact = 0,
         EPMET_Slide = 1,

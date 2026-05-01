@@ -234,7 +234,7 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// Enum: EGrapplePointOctreeTypeType
     /// </summary>
-    public enum EGrapplePointOctreeTypeType
+    public enum EGrapplePointOctreeTypeType : byte
     {
         GPOT_GrapplePoint = 0,
         GPOT_VantagePoint = 1,
@@ -244,7 +244,7 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// Enum: ELocalGrapplePlayer
     /// </summary>
-    public enum ELocalGrapplePlayer
+    public enum ELocalGrapplePlayer : byte
     {
         LGP_Player1 = 0,
         LGP_Player2 = 1,
@@ -647,7 +647,7 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// Enum: GrapplePointTypes
     /// </summary>
-    public enum GrapplePointTypes
+    public enum GrapplePointTypes : byte
     {
         GPT_Edge = 0,
         GPT_WallEdge = 1,

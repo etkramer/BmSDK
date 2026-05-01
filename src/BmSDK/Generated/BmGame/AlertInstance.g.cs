@@ -228,7 +228,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: VisibilityCategory
     /// </summary>
-    public enum VisibilityCategory
+    public enum VisibilityCategory : byte
     {
         VISCat_None = 0,
         VISCat_Suspect = 1,
@@ -241,7 +241,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: InterruptType
     /// </summary>
-    public enum InterruptType
+    public enum InterruptType : byte
     {
         IN_Blank = 0,
         IN_Noise = 1,

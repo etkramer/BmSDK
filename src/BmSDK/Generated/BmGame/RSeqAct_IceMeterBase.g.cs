@@ -499,7 +499,7 @@ public partial class RSeqAct_IceMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Enum: SoundMeterVolume
     /// </summary>
-    public enum SoundMeterVolume
+    public enum SoundMeterVolume : byte
     {
         CSMV_VeryQuiet = 0,
         CSMV_Quiet = 1,

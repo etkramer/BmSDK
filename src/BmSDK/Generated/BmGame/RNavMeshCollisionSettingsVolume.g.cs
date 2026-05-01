@@ -81,7 +81,7 @@ public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSD
     /// <summary>
     /// Enum: ENavMeshCollisionSettings
     /// </summary>
-    public enum ENavMeshCollisionSettings
+    public enum ENavMeshCollisionSettings : byte
     {
         ENavColl_None = 0,
         ENavColl_BlockAllRagdolls = 1,

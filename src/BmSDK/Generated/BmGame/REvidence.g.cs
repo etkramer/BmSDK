@@ -198,7 +198,7 @@ public partial class REvidence : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: DevicePostProcessEffects
     /// </summary>
-    public enum DevicePostProcessEffects
+    public enum DevicePostProcessEffects : byte
     {
         DPPE_Gas = 0,
         DPPE_Xray = 1,

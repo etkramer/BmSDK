@@ -174,7 +174,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Enum: GODifficultyMenuItem
     /// </summary>
-    public enum GODifficultyMenuItem
+    public enum GODifficultyMenuItem : byte
     {
         GODMI_None = 0,
         GODMI_Difficulty = 1,

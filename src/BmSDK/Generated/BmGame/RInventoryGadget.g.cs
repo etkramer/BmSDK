@@ -954,7 +954,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// Enum: FGadgetIDs
     /// </summary>
-    public enum FGadgetIDs
+    public enum FGadgetIDs : byte
     {
         FGID_None = 0,
         FGID_Batarang = 1,
@@ -1897,7 +1897,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// Enum: CoverCornerType
     /// </summary>
-    public enum CoverCornerType
+    public enum CoverCornerType : byte
     {
         CCT_NoCorner = 0,
         CCT_LeftCorner = 1,
@@ -1908,7 +1908,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// Enum: BatarangThrowType
     /// </summary>
-    public enum BatarangThrowType
+    public enum BatarangThrowType : byte
     {
         BTT_NullThrow = 0,
         BTT_StandingThrow = 1,
@@ -1927,7 +1927,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// Enum: PlayerWantsToCrouch
     /// </summary>
-    public enum PlayerWantsToCrouch
+    public enum PlayerWantsToCrouch : byte
     {
         PWC_Crouch = 0,
         PWC_StandUp = 1,
@@ -1937,7 +1937,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// Enum: GadgetEquipState
     /// </summary>
-    public enum GadgetEquipState
+    public enum GadgetEquipState : byte
     {
         GS_AttachedToBelt = 0,
         GS_AttachetToHand = 1,

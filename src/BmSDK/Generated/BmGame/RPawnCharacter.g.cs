@@ -2981,7 +2981,7 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERagdollVsNavMesh
     /// </summary>
-    public enum ERagdollVsNavMesh
+    public enum ERagdollVsNavMesh : byte
     {
         RAGvsNAV_Constrain = 0,
         RAGvsNAV_ConstrainWhenNotDead = 1,

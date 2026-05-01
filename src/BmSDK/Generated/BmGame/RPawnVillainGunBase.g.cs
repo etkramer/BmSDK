@@ -394,7 +394,7 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// <summary>
     /// Enum: LeftRight
     /// </summary>
-    public enum LeftRight
+    public enum LeftRight : byte
     {
         LR_Left = 0,
         LR_Right = 1,
@@ -404,7 +404,7 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// <summary>
     /// Enum: ThermalGoggleState
     /// </summary>
-    public enum ThermalGoggleState
+    public enum ThermalGoggleState : byte
     {
         TGS_Off = 0,
         TGS_Active = 1,

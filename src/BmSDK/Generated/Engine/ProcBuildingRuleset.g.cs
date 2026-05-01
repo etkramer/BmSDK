@@ -81,7 +81,7 @@ public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EProcBuildingAxis
     /// </summary>
-    public enum EProcBuildingAxis
+    public enum EProcBuildingAxis : byte
     {
         EPBAxis_X = 0,
         EPBAxis_Z = 1,

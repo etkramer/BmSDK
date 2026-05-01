@@ -222,7 +222,7 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// Enum: EForceModeType
     /// </summary>
-    public enum EForceModeType
+    public enum EForceModeType : byte
     {
         FMT_Constant = 0,
         FMT_Impulse = 1,

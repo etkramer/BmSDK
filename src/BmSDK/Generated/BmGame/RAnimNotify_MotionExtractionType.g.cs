@@ -90,7 +90,7 @@ public partial class RAnimNotify_MotionExtractionType : BmSDK.Engine.AnimNotify,
     /// <summary>
     /// Enum: EMotionExtractionType
     /// </summary>
-    public enum EMotionExtractionType
+    public enum EMotionExtractionType : byte
     {
         MET_CentreOfMass = 0,
         MET_Pelvis = 1,

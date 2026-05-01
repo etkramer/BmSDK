@@ -76,7 +76,7 @@ public partial class InterpTrack : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETrackActiveCondition
     /// </summary>
-    public enum ETrackActiveCondition
+    public enum ETrackActiveCondition : byte
     {
         ETAC_Always = 0,
         ETAC_GoreEnabled = 1,

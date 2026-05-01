@@ -242,7 +242,7 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// Enum: GameSessionType
     /// </summary>
-    public enum GameSessionType
+    public enum GameSessionType : byte
     {
         GT_SessionInvalid = 0,
         GT_SinglePlayer = 1,

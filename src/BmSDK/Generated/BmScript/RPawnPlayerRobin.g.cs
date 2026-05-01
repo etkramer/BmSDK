@@ -959,7 +959,7 @@ public partial class RPawnPlayerRobin : BmSDK.BmGame.RPawnPlayerBmBase, BmSDK.Bm
     /// <summary>
     /// Enum: ETypesOfExplodingThing
     /// </summary>
-    public enum ETypesOfExplodingThing
+    public enum ETypesOfExplodingThing : byte
     {
         TET_StickyBomb = 0,
         TET_Grenade = 1,
@@ -972,7 +972,7 @@ public partial class RPawnPlayerRobin : BmSDK.BmGame.RPawnPlayerBmBase, BmSDK.Bm
     /// <summary>
     /// Enum: ERobinGadgetList
     /// </summary>
-    public enum ERobinGadgetList
+    public enum ERobinGadgetList : byte
     {
         RGL_Batarang = 0,
         RGL_Staff = 1,

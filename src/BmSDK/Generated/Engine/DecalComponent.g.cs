@@ -136,7 +136,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EFilterMode
     /// </summary>
-    public enum EFilterMode
+    public enum EFilterMode : byte
     {
         FM_None = 0,
         FM_Ignore = 1,
@@ -147,7 +147,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EDecalTransform
     /// </summary>
-    public enum EDecalTransform
+    public enum EDecalTransform : byte
     {
         DecalTransform_OwnerAbsolute = 0,
         DecalTransform_OwnerRelative = 1,
