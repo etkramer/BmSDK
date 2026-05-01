@@ -3,10 +3,12 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
+using System.Text;
 using BmSDK.Framework.Redirection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
+using Microsoft.CodeAnalysis.Text;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
@@ -46,7 +48,7 @@ internal static class ScriptManager
         """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
     public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(
-        GlobalUsings,
+        SourceText.From(GlobalUsings, Encoding.UTF8),
         ParseOptions,
         GlobalUsingsPath
     );
@@ -282,8 +284,14 @@ internal static class ScriptManager
 
         var syntaxTrees = sourceFilePaths
             .Select(filePath =>
-                CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath)
-            )
+            {
+                using var stream = File.OpenRead(filePath);
+                return CSharpSyntaxTree.ParseText(
+                    SourceText.From(stream, Encoding.UTF8),
+                    ParseOptions,
+                    filePath
+                );
+            })
             .ToList();
 
         syntaxTrees.Insert(index: 0, GlobalUsingsTree);
