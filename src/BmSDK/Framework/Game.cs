@@ -119,6 +119,7 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
+    [Obsolete("Use `new Actor()` instead")]
     public static unsafe Actor SpawnActor(
         Class Class,
         Vector3 Location = default,
@@ -130,6 +131,39 @@ public static partial class Game
     {
         var resPtr = SpawnActorInternal(Class, Location, Rotation, Template, Owner, Instigator);
         return MarshalUtil.ToManaged<Actor>(&resPtr);
+    }
+
+    /// <inheritdoc cref="SpawnActor"/>
+    [Obsolete("Use `new Actor()` instead")]
+    public static T? SpawnActor<T>(
+        Vector3 Location = default,
+        Rotator Rotation = default,
+        Actor? Template = null,
+        GameObject? Owner = null,
+        GameObject? Instigator = null
+    )
+        where T : Actor, IGameObject =>
+        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
+
+    /// <summary>
+    /// Spawns a new actor of the given pawn and character types.
+    /// </summary>
+    [Obsolete("Use `RBMPawnAI.InitCharacter()` instead")]
+    public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
+        where TPawn : RBMPawnAI, IGameObject
+        where TCharacter : RCharacter, IGameObject
+    {
+        return (TPawn)
+            RCharacter.StaticCreatePawn(
+                Position,
+                Rotation,
+                null,
+                TPawn.StaticClass(),
+                TCharacter.StaticClass(),
+                true,
+                FName.None,
+                FName.None
+            );
     }
 
     internal static unsafe IntPtr SpawnActorInternal(
@@ -158,38 +192,6 @@ public static partial class Game
 
         Guard.Require(resPtr != 0, "SpawnActor() returned null");
         return resPtr;
-    }
-
-    /// <inheritdoc cref="SpawnActor"/>
-    public static T? SpawnActor<T>(
-        Vector3 Location = default,
-        Rotator Rotation = default,
-        Actor? Template = null,
-        GameObject? Owner = null,
-        GameObject? Instigator = null
-    )
-        where T : Actor, IGameObject =>
-        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
-
-    /// <summary>
-    /// Spawns a new actor of the given pawn and character types.
-    /// </summary>
-    [Obsolete("Use RBMPawnAI.InitCharacter() instead")]
-    public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
-        where TPawn : RBMPawnAI, IGameObject
-        where TCharacter : RCharacter, IGameObject
-    {
-        return (TPawn)
-            RCharacter.StaticCreatePawn(
-                Position,
-                Rotation,
-                null,
-                TPawn.StaticClass(),
-                TCharacter.StaticClass(),
-                true,
-                FName.None,
-                FName.None
-            );
     }
 
     /// <summary>
