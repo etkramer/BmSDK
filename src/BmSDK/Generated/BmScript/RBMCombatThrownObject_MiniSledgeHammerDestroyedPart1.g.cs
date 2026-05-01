@@ -31,7 +31,7 @@ public partial class RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1 : BmSD
     /// <summary>
     /// Constructs a new RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1
     /// </summary>
-    public RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RBMCombatThrownObject_MiniSledgeHammerDestroyedPart1(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

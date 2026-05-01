@@ -31,7 +31,7 @@ public partial class RAEC_Attack_Sub_ThrowGrenadeInVent : BmSDK.BmGame.RAlertEve
     /// <summary>
     /// Constructs a new RAEC_Attack_Sub_ThrowGrenadeInVent
     /// </summary>
-    public RAEC_Attack_Sub_ThrowGrenadeInVent(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RAEC_Attack_Sub_ThrowGrenadeInVent(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

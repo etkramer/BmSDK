@@ -31,7 +31,7 @@ public partial class RNwStealthTakeDownStage_GrabFromCrouchSuccess : BmSDK.BmGam
     /// <summary>
     /// Constructs a new RNwStealthTakeDownStage_GrabFromCrouchSuccess
     /// </summary>
-    public RNwStealthTakeDownStage_GrabFromCrouchSuccess(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RNwStealthTakeDownStage_GrabFromCrouchSuccess(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RRbStealthTakeDownStage_GlassWallAttack_Harley : BmSDK.BmGa
     /// <summary>
     /// Constructs a new RRbStealthTakeDownStage_GlassWallAttack_Harley
     /// </summary>
-    public RRbStealthTakeDownStage_GlassWallAttack_Harley(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RRbStealthTakeDownStage_GlassWallAttack_Harley(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley : BmSD
     /// <summary>
     /// Constructs a new RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley
     /// </summary>
-    public RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley(BmSDK.FName Name = default, System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RRbStealthTakeDownStage_GrabFromCrouchSuccess_Harley(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

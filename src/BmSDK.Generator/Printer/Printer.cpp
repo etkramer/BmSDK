@@ -193,15 +193,14 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             {
                 Printer::Indent(out)
                     << "public " << _class->GetNameManaged()
-                    << "(BmSDK.FName Name = default, "
-                    "System.Numerics.Vector3 Location = default, "
+                    << "(System.Numerics.Vector3 Location = default, "
                     "BmSDK.Rotator Rotation = default, "
                     "BmSDK.Engine.Actor Template = null, "
                     "BmSDK.GameObject Owner = null, "
                     "BmSDK.GameObject Instigator = null, "
                     "BmSDK.Engine.Level Level = null) "
                     ": base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), "
-                    "Name, Location, Rotation, Template, Owner, Instigator, Level)) { }"
+                    "default, Location, Rotation, Template, Owner, Instigator, Level)) { }"
                     << endl
                     << endl;
             }
