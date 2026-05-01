@@ -66,6 +66,8 @@ internal static class ScriptManager
 
     public static IEnumerable<Script> Scripts => s_loadedMods.Values.SelectMany(m => m.Scripts);
 
+    public static IEnumerable<Mod> Mods => s_loadedMods.Values.Select(m => m.Mod);
+
     private static bool s_isInitialized = false;
 
     /// <summary>

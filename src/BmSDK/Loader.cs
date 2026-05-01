@@ -95,6 +95,9 @@ internal static class Loader
             // Notify scripts of game init
             if (!s_hasGameInited && funcName == InitFuncName)
             {
+                // Preload packages and root keep-alive objects before any world loads
+                PreloadManager.Run();
+
                 ScriptManager.Scripts.ForEach(script =>
                     Debug.RunWithSender(script.Name, script.Main)
                 );
