@@ -3,10 +3,12 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
+using System.Text;
 using BmSDK.Framework.Redirection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
+using Microsoft.CodeAnalysis.Text;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
@@ -46,7 +48,7 @@ internal static class ScriptManager
         """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
     public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(
-        GlobalUsings,
+        SourceText.From(GlobalUsings, Encoding.UTF8),
         ParseOptions,
         GlobalUsingsPath
     );
@@ -144,15 +146,15 @@ internal static class ScriptManager
     /// </summary>
     private static bool LoadMod(Mod mod, string scriptsDir)
     {
-        var emitStream = CompileMod(mod, scriptsDir);
-        if (emitStream == null)
+        var (peStream, pdbStream) = CompileMod(mod, scriptsDir);
+        if (peStream == null)
         {
             return false;
         }
 
         var targetName = $"{mod.Name}.dll";
         var modAlc = new AssemblyLoadContext(targetName, isCollectible: true);
-        var asm = modAlc.LoadFromStream(emitStream);
+        var asm = modAlc.LoadFromStream(peStream, pdbStream);
 
         EngineSynchronizationContext.Instance.Post(
             _ =>
@@ -258,13 +260,13 @@ internal static class ScriptManager
     /// <summary>
     /// Compiles all C# script files for a single mod into an in-memory assembly.
     /// </summary>
-    private static MemoryStream? CompileMod(Mod mod, string scriptsDir)
+    private static (MemoryStream?, MemoryStream?) CompileMod(Mod mod, string scriptsDir)
     {
         var baseDir = FileUtils.GetBasePath();
 
         if (!Directory.Exists(scriptsDir))
         {
-            return null;
+            return (null, null);
         }
 
         var sourceFilePaths = Directory
@@ -277,13 +279,19 @@ internal static class ScriptManager
             Debug.LogWarning(
                 $"[{mod.Name}] No script files found in .\\{Path.GetRelativePath(baseDir, scriptsDir)}"
             );
-            return null;
+            return (null, null);
         }
 
         var syntaxTrees = sourceFilePaths
             .Select(filePath =>
-                CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath)
-            )
+            {
+                using var stream = File.OpenRead(filePath);
+                return CSharpSyntaxTree.ParseText(
+                    SourceText.From(stream, Encoding.UTF8),
+                    ParseOptions,
+                    filePath
+                );
+            })
             .ToList();
 
         syntaxTrees.Insert(index: 0, GlobalUsingsTree);
@@ -302,13 +310,14 @@ internal static class ScriptManager
             .AddReferences(MetadataReferences)
             .AddSyntaxTrees(syntaxTrees);
 
-        var emitStream = new MemoryStream();
-        var emitResult = compilation.Emit(emitStream);
+        var peStream = new MemoryStream();
+        var pdbStream = new MemoryStream();
+        var emitResult = compilation.Emit(peStream, pdbStream);
 
         if (!emitResult.Success)
         {
             PrintErrors(emitResult, scriptsDir, mod.Name);
-            return null;
+            return (null, null);
         }
 
         watch.Stop();
@@ -316,8 +325,9 @@ internal static class ScriptManager
             $"[{mod.Name}] Success! {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
         );
 
-        emitStream.Position = 0;
-        return emitStream;
+        peStream.Position = 0;
+        pdbStream.Position = 0;
+        return (peStream, pdbStream);
     }
 
     private static void PrintErrors(EmitResult emitResult, string scriptsDir, string modName)
