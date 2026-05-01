@@ -141,9 +141,6 @@ public static partial class Game
         GameObject? Instigator
     )
     {
-        // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
-        // If we wanted to get the script version working, we'd probably have to patch it.
-
         var world = (World)GetWorldInfo().Outer.Outer;
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
@@ -153,7 +150,7 @@ public static partial class Game
             (IntPtr)(&Rotation),
             Template?.Ptr ?? 0,
             1,
-            1,
+            0,
             Owner?.Ptr ?? 0,
             Instigator?.Ptr ?? 0,
             1
@@ -177,6 +174,7 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
     /// </summary>
+    [Obsolete("Use RBMPawnAI.InitCharacter() instead")]
     public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
         where TPawn : RBMPawnAI, IGameObject
         where TCharacter : RCharacter, IGameObject
