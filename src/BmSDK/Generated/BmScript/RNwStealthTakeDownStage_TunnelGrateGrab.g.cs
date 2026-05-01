@@ -31,7 +31,7 @@ public partial class RNwStealthTakeDownStage_TunnelGrateGrab : BmSDK.BmGame.RSte
     /// <summary>
     /// Constructs a new RNwStealthTakeDownStage_TunnelGrateGrab
     /// </summary>
-    public RNwStealthTakeDownStage_TunnelGrateGrab(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RNwStealthTakeDownStage_TunnelGrateGrab Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RNwStealthTakeDownStage_TunnelGrateGrab(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

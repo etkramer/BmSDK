@@ -31,7 +31,7 @@ public partial class LensFlareSource : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Constructs a new LensFlareSource
     /// </summary>
-    public LensFlareSource(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, LensFlareSource Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public LensFlareSource(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

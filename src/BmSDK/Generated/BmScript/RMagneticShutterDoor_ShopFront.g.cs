@@ -31,7 +31,7 @@ public partial class RMagneticShutterDoor_ShopFront : BmSDK.BmScript.RMagneticDo
     /// <summary>
     /// Constructs a new RMagneticShutterDoor_ShopFront
     /// </summary>
-    public RMagneticShutterDoor_ShopFront(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RMagneticShutterDoor_ShopFront Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RMagneticShutterDoor_ShopFront(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

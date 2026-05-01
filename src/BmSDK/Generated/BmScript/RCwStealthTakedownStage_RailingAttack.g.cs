@@ -31,7 +31,7 @@ public partial class RCwStealthTakedownStage_RailingAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// Constructs a new RCwStealthTakedownStage_RailingAttack
     /// </summary>
-    public RCwStealthTakedownStage_RailingAttack(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCwStealthTakedownStage_RailingAttack Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCwStealthTakedownStage_RailingAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

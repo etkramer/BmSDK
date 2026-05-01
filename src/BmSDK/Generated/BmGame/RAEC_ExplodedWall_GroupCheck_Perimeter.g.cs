@@ -31,7 +31,7 @@ public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAEC_
     /// <summary>
     /// Constructs a new RAEC_ExplodedWall_GroupCheck_Perimeter
     /// </summary>
-    public RAEC_ExplodedWall_GroupCheck_Perimeter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_ExplodedWall_GroupCheck_Perimeter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_ExplodedWall_GroupCheck_Perimeter(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

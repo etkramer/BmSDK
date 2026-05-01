@@ -31,7 +31,7 @@ public partial class RCombatMove_VenomWalkingCloseAttack : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Constructs a new RCombatMove_VenomWalkingCloseAttack
     /// </summary>
-    public RCombatMove_VenomWalkingCloseAttack(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_VenomWalkingCloseAttack Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_VenomWalkingCloseAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

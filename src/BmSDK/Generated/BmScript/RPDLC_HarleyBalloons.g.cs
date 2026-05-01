@@ -31,7 +31,7 @@ public partial class RPDLC_HarleyBalloons : BmSDK.BmGame.RJokerBalloonsBase, BmS
     /// <summary>
     /// Constructs a new RPDLC_HarleyBalloons
     /// </summary>
-    public RPDLC_HarleyBalloons(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPDLC_HarleyBalloons Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPDLC_HarleyBalloons(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

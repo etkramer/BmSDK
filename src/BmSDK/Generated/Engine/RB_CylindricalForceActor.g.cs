@@ -31,7 +31,7 @@ public partial class RB_CylindricalForceActor : BmSDK.Engine.RigidBodyBase, BmSD
     /// <summary>
     /// Constructs a new RB_CylindricalForceActor
     /// </summary>
-    public RB_CylindricalForceActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RB_CylindricalForceActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RB_CylindricalForceActor(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

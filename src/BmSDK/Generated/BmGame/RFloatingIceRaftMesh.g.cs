@@ -31,7 +31,7 @@ public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActo
     /// <summary>
     /// Constructs a new RFloatingIceRaftMesh
     /// </summary>
-    public RFloatingIceRaftMesh(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFloatingIceRaftMesh Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RFloatingIceRaftMesh(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

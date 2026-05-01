@@ -31,7 +31,7 @@ public partial class RBMCombatPoint_BottleOnShelf : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Constructs a new RBMCombatPoint_BottleOnShelf
     /// </summary>
-    public RBMCombatPoint_BottleOnShelf(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_BottleOnShelf Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatPoint_BottleOnShelf(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

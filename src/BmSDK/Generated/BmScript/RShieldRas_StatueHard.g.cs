@@ -31,7 +31,7 @@ public partial class RShieldRas_StatueHard : BmSDK.BmScript.RShieldRas_StatueEas
     /// <summary>
     /// Constructs a new RShieldRas_StatueHard
     /// </summary>
-    public RShieldRas_StatueHard(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RShieldRas_StatueHard Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RShieldRas_StatueHard(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

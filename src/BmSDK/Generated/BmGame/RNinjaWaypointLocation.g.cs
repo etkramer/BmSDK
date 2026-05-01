@@ -31,7 +31,7 @@ public partial class RNinjaWaypointLocation : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Constructs a new RNinjaWaypointLocation
     /// </summary>
-    public RNinjaWaypointLocation(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RNinjaWaypointLocation Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RNinjaWaypointLocation(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

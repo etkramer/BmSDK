@@ -173,18 +173,48 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         // Print main ctor (unless abstract)
         if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
         {
+            // Walk SuperStruct chain to detect Actor-derived classes, which need
+            // to be spawned via UWorld::SpawnActor instead of StaticConstructObject.
+            bool isActor = false;
+            for (UStruct* super = _class->SuperStruct; super; super = super->SuperStruct)
+            {
+                if (super->GetPathName() == "Engine.Actor")
+                {
+                    isActor = true;
+                    break;
+                }
+            }
+
             Printer::Indent(out) << "/// <summary>" << endl;
             Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
-            Printer::Indent(out)
-                << "public " << _class->GetNameManaged()
-                << "(BmSDK.GameObject Outer, string Name = null, "
-                "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
-                << _class->GetNameManaged()
-                << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
-                "Outer, Name, SetFlags, Template)) { }"
-                << endl
-                << endl;
+
+            if (isActor)
+            {
+                Printer::Indent(out)
+                    << "public " << _class->GetNameManaged()
+                    << "(System.Numerics.Vector3 Location = default, "
+                    "BmSDK.Rotator Rotation = default, "
+                    "BmSDK.Engine.Actor Template = null, "
+                    "BmSDK.GameObject Owner = null, "
+                    "BmSDK.GameObject Instigator = null) "
+                    ": base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), "
+                    "Location, Rotation, Template, Owner, Instigator)) { }"
+                    << endl
+                    << endl;
+            }
+            else
+            {
+                Printer::Indent(out)
+                    << "public " << _class->GetNameManaged()
+                    << "(BmSDK.GameObject Outer, string Name = null, "
+                    "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
+                    << _class->GetNameManaged()
+                    << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
+                    "Outer, Name, SetFlags, Template)) { }"
+                    << endl
+                    << endl;
+            }
         }
 
         // Print pointer ctor

@@ -31,7 +31,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Constructs a new RBMAIAction_RailPeek
     /// </summary>
-    public RBMAIAction_RailPeek(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_RailPeek Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_RailPeek(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

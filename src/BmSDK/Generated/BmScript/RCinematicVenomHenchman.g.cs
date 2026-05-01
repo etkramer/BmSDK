@@ -31,7 +31,7 @@ public partial class RCinematicVenomHenchman : BmSDK.BmGame.RCinematicActor, BmS
     /// <summary>
     /// Constructs a new RCinematicVenomHenchman
     /// </summary>
-    public RCinematicVenomHenchman(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCinematicVenomHenchman Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCinematicVenomHenchman(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

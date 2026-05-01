@@ -31,7 +31,7 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_SwingToVantagePoint
     /// </summary>
-    public RSpecialMoveInstance_SwingToVantagePoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_SwingToVantagePoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_SwingToVantagePoint(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

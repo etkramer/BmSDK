@@ -31,7 +31,7 @@ public partial class RFuseBoxSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IGam
     /// <summary>
     /// Constructs a new RFuseBoxSwitch
     /// </summary>
-    public RFuseBoxSwitch(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFuseBoxSwitch Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RFuseBoxSwitch(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

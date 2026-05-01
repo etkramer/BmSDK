@@ -31,7 +31,7 @@ public partial class RCombatMove_BatmanThrownObjectCounter : BmSDK.BmGame.RComba
     /// <summary>
     /// Constructs a new RCombatMove_BatmanThrownObjectCounter
     /// </summary>
-    public RCombatMove_BatmanThrownObjectCounter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_BatmanThrownObjectCounter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_BatmanThrownObjectCounter(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// <summary>
     /// Constructs a new RBMPathNode_128Step
     /// </summary>
-    public RBMPathNode_128Step(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMPathNode_128Step Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMPathNode_128Step(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

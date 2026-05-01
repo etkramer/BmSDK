@@ -31,7 +31,7 @@ public partial class RHidePoint_Plinth : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IGa
     /// <summary>
     /// Constructs a new RHidePoint_Plinth
     /// </summary>
-    public RHidePoint_Plinth(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHidePoint_Plinth Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RHidePoint_Plinth(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

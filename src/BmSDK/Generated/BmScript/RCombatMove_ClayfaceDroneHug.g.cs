@@ -31,7 +31,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Constructs a new RCombatMove_ClayfaceDroneHug
     /// </summary>
-    public RCombatMove_ClayfaceDroneHug(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_ClayfaceDroneHug Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_ClayfaceDroneHug(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -85,10 +85,8 @@ public class DemoScript : Script
         var charoffset = playerDir * (-1) * 100;
 
         // Spawn in a pawn
-        var newCharacter = Game.SpawnCharacter<RPawnVillainThug, RCharacter_Joker>(
-            playerPawn.Location,
-            playerPawn.Rotation
-        );
+        var newCharacter = new RPawnVillainThug(playerPawn.Location, playerPawn.Rotation);
+        newCharacter.InitCharacter(RCharacter_Joker.StaticClass());
 
         // Move new pawn behind player
         newCharacter?.Move(charoffset);
@@ -130,7 +128,7 @@ public class DemoScript : Script
         var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
-    }    
+    }
 }
 
 [ScriptComponent(AutoAttach = true)]

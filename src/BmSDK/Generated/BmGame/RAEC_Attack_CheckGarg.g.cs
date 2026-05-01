@@ -31,7 +31,7 @@ public partial class RAEC_Attack_CheckGarg : BmSDK.BmGame.RAEC_SubGroup, BmSDK.I
     /// <summary>
     /// Constructs a new RAEC_Attack_CheckGarg
     /// </summary>
-    public RAEC_Attack_CheckGarg(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Attack_CheckGarg Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Attack_CheckGarg(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

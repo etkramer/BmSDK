@@ -31,7 +31,7 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
     /// <summary>
     /// Constructs a new RCombatMove_BaneCharge
     /// </summary>
-    public RCombatMove_BaneCharge(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_BaneCharge Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_BaneCharge(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

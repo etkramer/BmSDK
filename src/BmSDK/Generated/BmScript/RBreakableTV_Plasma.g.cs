@@ -31,7 +31,7 @@ public partial class RBreakableTV_Plasma : BmSDK.BmGame.RBreakableTV, BmSDK.IGam
     /// <summary>
     /// Constructs a new RBreakableTV_Plasma
     /// </summary>
-    public RBreakableTV_Plasma(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBreakableTV_Plasma Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBreakableTV_Plasma(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

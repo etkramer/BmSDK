@@ -31,7 +31,7 @@ public partial class RCrowdSequence_SimplePath : BmSDK.BmGame.RCrowdSequence, Bm
     /// <summary>
     /// Constructs a new RCrowdSequence_SimplePath
     /// </summary>
-    public RCrowdSequence_SimplePath(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCrowdSequence_SimplePath Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCrowdSequence_SimplePath(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RBMCombatPoint_MultiWeaponRack_PipeAndKnife : BmSDK.BmScrip
     /// <summary>
     /// Constructs a new RBMCombatPoint_MultiWeaponRack_PipeAndKnife
     /// </summary>
-    public RBMCombatPoint_MultiWeaponRack_PipeAndKnife(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_MultiWeaponRack_PipeAndKnife Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatPoint_MultiWeaponRack_PipeAndKnife(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

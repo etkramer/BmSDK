@@ -31,7 +31,7 @@ public partial class RPawnVillainClayfaceDroneSmall : BmSDK.BmScript.RPawnVillai
     /// <summary>
     /// Constructs a new RPawnVillainClayfaceDroneSmall
     /// </summary>
-    public RPawnVillainClayfaceDroneSmall(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainClayfaceDroneSmall Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPawnVillainClayfaceDroneSmall(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

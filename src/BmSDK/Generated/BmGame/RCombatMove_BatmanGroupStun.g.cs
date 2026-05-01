@@ -31,7 +31,7 @@ public partial class RCombatMove_BatmanGroupStun : BmSDK.BmGame.RCombatMove_Play
     /// <summary>
     /// Constructs a new RCombatMove_BatmanGroupStun
     /// </summary>
-    public RCombatMove_BatmanGroupStun(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_BatmanGroupStun Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_BatmanGroupStun(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

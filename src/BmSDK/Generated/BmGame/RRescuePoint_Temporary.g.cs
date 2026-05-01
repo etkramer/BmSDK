@@ -31,7 +31,7 @@ public partial class RRescuePoint_Temporary : BmSDK.BmGame.RRescuePoint, BmSDK.I
     /// <summary>
     /// Constructs a new RRescuePoint_Temporary
     /// </summary>
-    public RRescuePoint_Temporary(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRescuePoint_Temporary Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRescuePoint_Temporary(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Constructs a new RBMAIAction_StandAndShoot
     /// </summary>
-    public RBMAIAction_StandAndShoot(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_StandAndShoot Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_StandAndShoot(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

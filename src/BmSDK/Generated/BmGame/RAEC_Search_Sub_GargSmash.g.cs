@@ -31,7 +31,7 @@ public partial class RAEC_Search_Sub_GargSmash : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Constructs a new RAEC_Search_Sub_GargSmash
     /// </summary>
-    public RAEC_Search_Sub_GargSmash(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Search_Sub_GargSmash Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Search_Sub_GargSmash(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RBMCombatPoint_Stool : BmSDK.BmGame.RBMCombatPoint_Environm
     /// <summary>
     /// Constructs a new RBMCombatPoint_Stool
     /// </summary>
-    public RBMCombatPoint_Stool(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_Stool Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatPoint_Stool(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

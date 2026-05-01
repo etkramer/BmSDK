@@ -31,7 +31,7 @@ public partial class RB_LineImpulseActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGa
     /// <summary>
     /// Constructs a new RB_LineImpulseActor
     /// </summary>
-    public RB_LineImpulseActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RB_LineImpulseActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RB_LineImpulseActor(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

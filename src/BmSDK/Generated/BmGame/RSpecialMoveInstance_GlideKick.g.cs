@@ -31,7 +31,7 @@ public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_GlideKick
     /// </summary>
-    public RSpecialMoveInstance_GlideKick(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_GlideKick Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_GlideKick(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

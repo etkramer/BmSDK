@@ -31,7 +31,7 @@ public partial class RRbStealthTakeDownStage_GlassWallAttackDLC : BmSDK.BmScript
     /// <summary>
     /// Constructs a new RRbStealthTakeDownStage_GlassWallAttackDLC
     /// </summary>
-    public RRbStealthTakeDownStage_GlassWallAttackDLC(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRbStealthTakeDownStage_GlassWallAttackDLC Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRbStealthTakeDownStage_GlassWallAttackDLC(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

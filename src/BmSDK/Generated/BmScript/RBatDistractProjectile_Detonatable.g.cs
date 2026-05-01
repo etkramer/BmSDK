@@ -31,7 +31,7 @@ public partial class RBatDistractProjectile_Detonatable : BmSDK.BmScript.RBatDis
     /// <summary>
     /// Constructs a new RBatDistractProjectile_Detonatable
     /// </summary>
-    public RBatDistractProjectile_Detonatable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatDistractProjectile_Detonatable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatDistractProjectile_Detonatable(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

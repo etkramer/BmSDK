@@ -31,7 +31,7 @@ public partial class RDisruptableControlBoxTimed_HS : BmSDK.BmScript.RDisruptabl
     /// <summary>
     /// Constructs a new RDisruptableControlBoxTimed_HS
     /// </summary>
-    public RDisruptableControlBoxTimed_HS(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDisruptableControlBoxTimed_HS Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RDisruptableControlBoxTimed_HS(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

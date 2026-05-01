@@ -31,7 +31,7 @@ public partial class RBMCombatThrownObject_HeavyObjectExplosive : BmSDK.BmScript
     /// <summary>
     /// Constructs a new RBMCombatThrownObject_HeavyObjectExplosive
     /// </summary>
-    public RBMCombatThrownObject_HeavyObjectExplosive(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject_HeavyObjectExplosive Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatThrownObject_HeavyObjectExplosive(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

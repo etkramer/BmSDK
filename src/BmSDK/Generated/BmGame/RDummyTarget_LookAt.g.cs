@@ -31,7 +31,7 @@ public partial class RDummyTarget_LookAt : BmSDK.BmGame.RDummyTarget, BmSDK.IGam
     /// <summary>
     /// Constructs a new RDummyTarget_LookAt
     /// </summary>
-    public RDummyTarget_LookAt(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDummyTarget_LookAt Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RDummyTarget_LookAt(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

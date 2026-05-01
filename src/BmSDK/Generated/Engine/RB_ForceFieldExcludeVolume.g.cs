@@ -31,7 +31,7 @@ public partial class RB_ForceFieldExcludeVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// <summary>
     /// Constructs a new RB_ForceFieldExcludeVolume
     /// </summary>
-    public RB_ForceFieldExcludeVolume(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RB_ForceFieldExcludeVolume Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RB_ForceFieldExcludeVolume(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

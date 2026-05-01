@@ -31,7 +31,7 @@ public partial class RFreezeTakeDownStage_GrabFromCrouch : BmSDK.BmScript.RFreez
     /// <summary>
     /// Constructs a new RFreezeTakeDownStage_GrabFromCrouch
     /// </summary>
-    public RFreezeTakeDownStage_GrabFromCrouch(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFreezeTakeDownStage_GrabFromCrouch Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RFreezeTakeDownStage_GrabFromCrouch(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

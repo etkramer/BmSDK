@@ -31,7 +31,7 @@ public partial class RNwStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Constructs a new RNwStealthTakeDownStage_DoubleHead
     /// </summary>
-    public RNwStealthTakeDownStage_DoubleHead(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RNwStealthTakeDownStage_DoubleHead Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RNwStealthTakeDownStage_DoubleHead(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RHidePoint_OWGargoyle : BmSDK.BmGame.RHidePoint_Mesh, BmSDK
     /// <summary>
     /// Constructs a new RHidePoint_OWGargoyle
     /// </summary>
-    public RHidePoint_OWGargoyle(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHidePoint_OWGargoyle Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RHidePoint_OWGargoyle(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

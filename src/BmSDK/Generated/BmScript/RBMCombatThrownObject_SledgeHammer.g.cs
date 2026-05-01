@@ -31,7 +31,7 @@ public partial class RBMCombatThrownObject_SledgeHammer : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Constructs a new RBMCombatThrownObject_SledgeHammer
     /// </summary>
-    public RBMCombatThrownObject_SledgeHammer(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject_SledgeHammer Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatThrownObject_SledgeHammer(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

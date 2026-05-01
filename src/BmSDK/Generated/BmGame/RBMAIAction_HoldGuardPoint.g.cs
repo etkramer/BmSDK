@@ -31,7 +31,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Constructs a new RBMAIAction_HoldGuardPoint
     /// </summary>
-    public RBMAIAction_HoldGuardPoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_HoldGuardPoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_HoldGuardPoint(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

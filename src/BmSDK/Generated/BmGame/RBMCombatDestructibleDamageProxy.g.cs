@@ -31,7 +31,7 @@ public partial class RBMCombatDestructibleDamageProxy : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// Constructs a new RBMCombatDestructibleDamageProxy
     /// </summary>
-    public RBMCombatDestructibleDamageProxy(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatDestructibleDamageProxy Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatDestructibleDamageProxy(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

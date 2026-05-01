@@ -31,7 +31,7 @@ public partial class RCh0CrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Constructs a new RCh0CrowdActorBase
     /// </summary>
-    public RCh0CrowdActorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCh0CrowdActorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCh0CrowdActorBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

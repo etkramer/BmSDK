@@ -31,7 +31,7 @@ public partial class RBreakablePickupPenguinBase : BmSDK.BmGame.RSkeletalMeshAct
     /// <summary>
     /// Constructs a new RBreakablePickupPenguinBase
     /// </summary>
-    public RBreakablePickupPenguinBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBreakablePickupPenguinBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBreakablePickupPenguinBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

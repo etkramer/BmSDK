@@ -31,7 +31,7 @@ public partial class RBMCombatThrownObject_PredatorSniper : BmSDK.BmGame.RBMComb
     /// <summary>
     /// Constructs a new RBMCombatThrownObject_PredatorSniper
     /// </summary>
-    public RBMCombatThrownObject_PredatorSniper(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject_PredatorSniper Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatThrownObject_PredatorSniper(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
