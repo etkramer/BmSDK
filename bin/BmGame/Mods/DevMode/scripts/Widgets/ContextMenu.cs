@@ -55,7 +55,7 @@ public class ContextMenu : Widget
             {
                 if (ImGui.MenuItem("PointLight"))
                 {
-                    var newActor = Game.SpawnActor<PointLight>(Location: _spawnLocation)!;
+                    var newActor = new PointLight(Location: _spawnLocation)!;
                     newActor.LightComponent.LightAffectsClassification = LightComponent.ELightAffectsClassification.LAC_DYNAMIC_AND_STATIC_AFFECTING;
                     newActor.LightComponent.LightingChannels.bInitialized = true;
                     newActor.LightComponent.LightingChannels.Character = true;
@@ -73,7 +73,7 @@ public class ContextMenu : Widget
                 {
                     Game.LoadPackage("PDLCOW");
 
-                    var newActor = Game.SpawnActor<RHelicopter>(Location: _spawnLocation)!;
+                    var newActor = new RHelicopter(Location: _spawnLocation)!;
                     newActor.SpawnDefaultController();
                     newActor.SetLocation(_spawnLocation);
                     newActor.ForceUpdateComponents(true);
