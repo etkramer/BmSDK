@@ -175,12 +175,12 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         {
             // Walk SuperStruct chain to detect Actor-derived classes, which need
             // to be spawned via UWorld::SpawnActor instead of StaticConstructObject.
-            bool isActorDerived = false;
-            for (UStruct* p = _class->SuperStruct; p; p = p->SuperStruct)
+            bool isActor = false;
+            for (UStruct* super = _class->SuperStruct; super; super = super->SuperStruct)
             {
-                if (((UClass*)p)->GetPathName() == "Engine.Actor")
+                if (super->GetPathName() == "Engine.Actor")
                 {
-                    isActorDerived = true;
+                    isActor = true;
                     break;
                 }
             }
@@ -189,7 +189,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
 
-            if (isActorDerived)
+            if (isActor)
             {
                 Printer::Indent(out)
                     << "public " << _class->GetNameManaged()
