@@ -31,7 +31,7 @@ public partial class RStealthTakedownStage_UnarmedArmouredFail : BmSDK.BmScript.
     /// <summary>
     /// Constructs a new RStealthTakedownStage_UnarmedArmouredFail
     /// </summary>
-    public RStealthTakedownStage_UnarmedArmouredFail(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStealthTakedownStage_UnarmedArmouredFail Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RStealthTakedownStage_UnarmedArmouredFail(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

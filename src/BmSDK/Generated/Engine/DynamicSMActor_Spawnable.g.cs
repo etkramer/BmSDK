@@ -31,7 +31,7 @@ public partial class DynamicSMActor_Spawnable : BmSDK.Engine.DynamicSMActor, BmS
     /// <summary>
     /// Constructs a new DynamicSMActor_Spawnable
     /// </summary>
-    public DynamicSMActor_Spawnable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DynamicSMActor_Spawnable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public DynamicSMActor_Spawnable(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

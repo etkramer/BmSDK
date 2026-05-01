@@ -31,7 +31,7 @@ public partial class RPred_MuseumBoothReactionPoint : BmSDK.BmGame.RPred_MuseumB
     /// <summary>
     /// Constructs a new RPred_MuseumBoothReactionPoint
     /// </summary>
-    public RPred_MuseumBoothReactionPoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPred_MuseumBoothReactionPoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPred_MuseumBoothReactionPoint(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

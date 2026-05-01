@@ -31,7 +31,7 @@ public partial class RDisruptableControlBox_HS_Harley : BmSDK.BmScript.RDisrupta
     /// <summary>
     /// Constructs a new RDisruptableControlBox_HS_Harley
     /// </summary>
-    public RDisruptableControlBox_HS_Harley(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDisruptableControlBox_HS_Harley Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RDisruptableControlBox_HS_Harley(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

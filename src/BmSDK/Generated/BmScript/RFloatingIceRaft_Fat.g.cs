@@ -31,7 +31,7 @@ public partial class RFloatingIceRaft_Fat : BmSDK.BmScript.RFloatingIceRaft, BmS
     /// <summary>
     /// Constructs a new RFloatingIceRaft_Fat
     /// </summary>
-    public RFloatingIceRaft_Fat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFloatingIceRaft_Fat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RFloatingIceRaft_Fat(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

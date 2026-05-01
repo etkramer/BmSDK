@@ -31,7 +31,7 @@ public partial class RCombatMove_VillainDropHeavyObject : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Constructs a new RCombatMove_VillainDropHeavyObject
     /// </summary>
-    public RCombatMove_VillainDropHeavyObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_VillainDropHeavyObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_VillainDropHeavyObject(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RCrowdAttractor_Player : BmSDK.BmGame.RCrowdAttractor, BmSD
     /// <summary>
     /// Constructs a new RCrowdAttractor_Player
     /// </summary>
-    public RCrowdAttractor_Player(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCrowdAttractor_Player Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCrowdAttractor_Player(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RPawnVillainGunPredLite : BmSDK.BmGame.RPawnVillainGunPredB
     /// <summary>
     /// Constructs a new RPawnVillainGunPredLite
     /// </summary>
-    public RPawnVillainGunPredLite(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainGunPredLite Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPawnVillainGunPredLite(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

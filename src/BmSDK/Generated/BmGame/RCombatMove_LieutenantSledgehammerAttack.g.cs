@@ -31,7 +31,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Constructs a new RCombatMove_LieutenantSledgehammerAttack
     /// </summary>
-    public RCombatMove_LieutenantSledgehammerAttack(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_LieutenantSledgehammerAttack Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_LieutenantSledgehammerAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

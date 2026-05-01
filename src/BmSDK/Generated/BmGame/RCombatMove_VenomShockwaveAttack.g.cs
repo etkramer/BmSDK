@@ -31,7 +31,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Constructs a new RCombatMove_VenomShockwaveAttack
     /// </summary>
-    public RCombatMove_VenomShockwaveAttack(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_VenomShockwaveAttack Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_VenomShockwaveAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

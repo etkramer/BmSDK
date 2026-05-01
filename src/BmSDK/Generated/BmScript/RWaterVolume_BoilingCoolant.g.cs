@@ -31,7 +31,7 @@ public partial class RWaterVolume_BoilingCoolant : BmSDK.BmGame.RWaterVolumeBase
     /// <summary>
     /// Constructs a new RWaterVolume_BoilingCoolant
     /// </summary>
-    public RWaterVolume_BoilingCoolant(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RWaterVolume_BoilingCoolant Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RWaterVolume_BoilingCoolant(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -31,7 +31,7 @@ public partial class RBunkerDoorVillainBlocker : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Constructs a new RBunkerDoorVillainBlocker
     /// </summary>
-    public RBunkerDoorVillainBlocker(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBunkerDoorVillainBlocker Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBunkerDoorVillainBlocker(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

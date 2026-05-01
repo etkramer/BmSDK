@@ -31,7 +31,7 @@ public partial class RBatarangProjectileRb_RoundTheBackarang : BmSDK.BmScript.RB
     /// <summary>
     /// Constructs a new RBatarangProjectileRb_RoundTheBackarang
     /// </summary>
-    public RBatarangProjectileRb_RoundTheBackarang(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatarangProjectileRb_RoundTheBackarang Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatarangProjectileRb_RoundTheBackarang(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

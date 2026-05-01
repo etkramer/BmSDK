@@ -31,7 +31,7 @@ public partial class RBMAIAction_GestureAtCasualty : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Constructs a new RBMAIAction_GestureAtCasualty
     /// </summary>
-    public RBMAIAction_GestureAtCasualty(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_GestureAtCasualty Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_GestureAtCasualty(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

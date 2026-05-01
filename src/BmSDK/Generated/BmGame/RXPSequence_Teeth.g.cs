@@ -31,7 +31,7 @@ public partial class RXPSequence_Teeth : BmSDK.BmGame.RXPSequence, BmSDK.IGameOb
     /// <summary>
     /// Constructs a new RXPSequence_Teeth
     /// </summary>
-    public RXPSequence_Teeth(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RXPSequence_Teeth Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RXPSequence_Teeth(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

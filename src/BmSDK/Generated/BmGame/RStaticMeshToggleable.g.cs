@@ -31,7 +31,7 @@ public partial class RStaticMeshToggleable : BmSDK.Engine.StaticMeshActor, BmSDK
     /// <summary>
     /// Constructs a new RStaticMeshToggleable
     /// </summary>
-    public RStaticMeshToggleable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStaticMeshToggleable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RStaticMeshToggleable(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

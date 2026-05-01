@@ -128,6 +128,19 @@ public static partial class Game
         GameObject? Instigator = null
     )
     {
+        var resPtr = SpawnActorInternal(Class, Location, Rotation, Template, Owner, Instigator);
+        return MarshalUtil.ToManaged<Actor>(&resPtr);
+    }
+
+    internal static unsafe IntPtr SpawnActorInternal(
+        Class Class,
+        Vector3 Location,
+        Rotator Rotation,
+        Actor? Template,
+        GameObject? Owner,
+        GameObject? Instigator
+    )
+    {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
 
@@ -146,7 +159,8 @@ public static partial class Game
             1
         );
 
-        return MarshalUtil.ToManaged<Actor>(&resPtr);
+        Guard.Require(resPtr != 0, "SpawnActor() returned null");
+        return resPtr;
     }
 
     /// <inheritdoc cref="SpawnActor"/>

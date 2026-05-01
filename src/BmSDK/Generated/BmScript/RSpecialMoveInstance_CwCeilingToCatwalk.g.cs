@@ -31,7 +31,7 @@ public partial class RSpecialMoveInstance_CwCeilingToCatwalk : BmSDK.BmGame.RSpe
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_CwCeilingToCatwalk
     /// </summary>
-    public RSpecialMoveInstance_CwCeilingToCatwalk(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_CwCeilingToCatwalk Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_CwCeilingToCatwalk(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

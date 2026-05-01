@@ -31,7 +31,7 @@ public partial class RBMAIAction_ThermalCheck_Cocky : BmSDK.BmGame.RBMAIAction_T
     /// <summary>
     /// Constructs a new RBMAIAction_ThermalCheck_Cocky
     /// </summary>
-    public RBMAIAction_ThermalCheck_Cocky(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_ThermalCheck_Cocky Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_ThermalCheck_Cocky(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

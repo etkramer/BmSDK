@@ -31,7 +31,7 @@ public partial class TriggerStreamingLevel : BmSDK.Engine.Trigger, BmSDK.IGameOb
     /// <summary>
     /// Constructs a new TriggerStreamingLevel
     /// </summary>
-    public TriggerStreamingLevel(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, TriggerStreamingLevel Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public TriggerStreamingLevel(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

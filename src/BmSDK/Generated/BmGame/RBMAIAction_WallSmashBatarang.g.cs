@@ -31,7 +31,7 @@ public partial class RBMAIAction_WallSmashBatarang : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Constructs a new RBMAIAction_WallSmashBatarang
     /// </summary>
-    public RBMAIAction_WallSmashBatarang(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_WallSmashBatarang Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_WallSmashBatarang(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

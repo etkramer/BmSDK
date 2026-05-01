@@ -31,7 +31,7 @@ public partial class RBatclawPipeCover_OW : BmSDK.BmScript.RBatclawPipeCover, Bm
     /// <summary>
     /// Constructs a new RBatclawPipeCover_OW
     /// </summary>
-    public RBatclawPipeCover_OW(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatclawPipeCover_OW Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatclawPipeCover_OW(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

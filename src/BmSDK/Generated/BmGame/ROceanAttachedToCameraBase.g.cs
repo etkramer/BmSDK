@@ -31,7 +31,7 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Constructs a new ROceanAttachedToCameraBase
     /// </summary>
-    public ROceanAttachedToCameraBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ROceanAttachedToCameraBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public ROceanAttachedToCameraBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

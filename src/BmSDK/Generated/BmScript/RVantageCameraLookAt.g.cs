@@ -31,7 +31,7 @@ public partial class RVantageCameraLookAt : BmSDK.BmGame.RDummyTarget, BmSDK.IGa
     /// <summary>
     /// Constructs a new RVantageCameraLookAt
     /// </summary>
-    public RVantageCameraLookAt(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVantageCameraLookAt Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RVantageCameraLookAt(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

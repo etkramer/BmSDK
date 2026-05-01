@@ -31,7 +31,7 @@ public partial class RCombatMove_RasMultiAttackAndChoke : BmSDK.BmGame.RCombatMo
     /// <summary>
     /// Constructs a new RCombatMove_RasMultiAttackAndChoke
     /// </summary>
-    public RCombatMove_RasMultiAttackAndChoke(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_RasMultiAttackAndChoke Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_RasMultiAttackAndChoke(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

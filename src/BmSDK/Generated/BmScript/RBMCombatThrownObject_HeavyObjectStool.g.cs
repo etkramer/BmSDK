@@ -31,7 +31,7 @@ public partial class RBMCombatThrownObject_HeavyObjectStool : BmSDK.BmScript.RBM
     /// <summary>
     /// Constructs a new RBMCombatThrownObject_HeavyObjectStool
     /// </summary>
-    public RBMCombatThrownObject_HeavyObjectStool(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject_HeavyObjectStool Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatThrownObject_HeavyObjectStool(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

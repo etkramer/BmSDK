@@ -31,7 +31,7 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
     /// <summary>
     /// Constructs a new RBmStealthTakedownStage_LRRailingTakedown
     /// </summary>
-    public RBmStealthTakedownStage_LRRailingTakedown(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBmStealthTakedownStage_LRRailingTakedown Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBmStealthTakedownStage_LRRailingTakedown(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

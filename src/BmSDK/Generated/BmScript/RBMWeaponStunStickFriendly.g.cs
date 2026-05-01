@@ -31,7 +31,7 @@ public partial class RBMWeaponStunStickFriendly : BmSDK.BmGame.RBMWeaponStunStic
     /// <summary>
     /// Constructs a new RBMWeaponStunStickFriendly
     /// </summary>
-    public RBMWeaponStunStickFriendly(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponStunStickFriendly Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMWeaponStunStickFriendly(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

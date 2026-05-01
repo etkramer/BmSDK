@@ -31,7 +31,7 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
     /// <summary>
     /// Constructs a new RBMCombatPoint_FireExOnSide
     /// </summary>
-    public RBMCombatPoint_FireExOnSide(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_FireExOnSide Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMCombatPoint_FireExOnSide(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

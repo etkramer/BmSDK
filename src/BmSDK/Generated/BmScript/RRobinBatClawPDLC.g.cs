@@ -31,7 +31,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Constructs a new RRobinBatClawPDLC
     /// </summary>
-    public RRobinBatClawPDLC(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRobinBatClawPDLC Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRobinBatClawPDLC(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

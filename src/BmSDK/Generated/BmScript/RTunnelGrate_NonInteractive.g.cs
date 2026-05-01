@@ -31,7 +31,7 @@ public partial class RTunnelGrate_NonInteractive : BmSDK.BmScript.RTunnelGrate, 
     /// <summary>
     /// Constructs a new RTunnelGrate_NonInteractive
     /// </summary>
-    public RTunnelGrate_NonInteractive(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTunnelGrate_NonInteractive Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RTunnelGrate_NonInteractive(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

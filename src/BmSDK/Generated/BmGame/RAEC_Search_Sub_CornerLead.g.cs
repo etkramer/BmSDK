@@ -31,7 +31,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Constructs a new RAEC_Search_Sub_CornerLead
     /// </summary>
-    public RAEC_Search_Sub_CornerLead(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Search_Sub_CornerLead Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Search_Sub_CornerLead(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

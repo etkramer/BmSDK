@@ -31,7 +31,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Constructs a new RMagneticSurfaceSM
     /// </summary>
-    public RMagneticSurfaceSM(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RMagneticSurfaceSM Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RMagneticSurfaceSM(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

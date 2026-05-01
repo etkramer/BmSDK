@@ -31,7 +31,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Constructs a new RPawnVillainThug_MadHatter_Combat
     /// </summary>
-    public RPawnVillainThug_MadHatter_Combat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainThug_MadHatter_Combat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPawnVillainThug_MadHatter_Combat(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

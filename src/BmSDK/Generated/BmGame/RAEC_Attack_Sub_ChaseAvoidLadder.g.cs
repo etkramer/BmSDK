@@ -31,7 +31,7 @@ public partial class RAEC_Attack_Sub_ChaseAvoidLadder : BmSDK.BmGame.RAlertEvent
     /// <summary>
     /// Constructs a new RAEC_Attack_Sub_ChaseAvoidLadder
     /// </summary>
-    public RAEC_Attack_Sub_ChaseAvoidLadder(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Attack_Sub_ChaseAvoidLadder Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Attack_Sub_ChaseAvoidLadder(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

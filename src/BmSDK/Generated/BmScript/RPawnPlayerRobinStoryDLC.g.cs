@@ -31,7 +31,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Constructs a new RPawnPlayerRobinStoryDLC
     /// </summary>
-    public RPawnPlayerRobinStoryDLC(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnPlayerRobinStoryDLC Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPawnPlayerRobinStoryDLC(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), Location, Rotation, Template, Owner, Instigator)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
