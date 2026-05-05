@@ -6,20 +6,21 @@ namespace BmSDK;
 public class InlineArray<T> : IReadOnlyList<T>
 {
     public int Count { get; }
-    private readonly IntPtr _ptr;
+    public IntPtr Ptr { get; }
+
     private readonly int _stride;
 
     internal InlineArray(int count, IntPtr ptr)
     {
         Count = count;
-        _ptr = ptr;
+        Ptr = ptr;
         _stride = MarshalUtil.GetSizeUnmanaged<T>();
     }
 
     public T this[int index]
     {
-        get => MarshalUtil.ToManaged<T>(_ptr + index * _stride);
-        set => MarshalUtil.ToUnmanaged(value, _ptr + index * _stride);
+        get => MarshalUtil.ToManaged<T>(Ptr + index * _stride);
+        set => MarshalUtil.ToUnmanaged(value, Ptr + index * _stride);
     }
 
     public IEnumerator<T> GetEnumerator()
@@ -34,4 +35,16 @@ public class InlineArray<T> : IReadOnlyList<T>
     {
         return GetEnumerator();
     }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is not InlineArray<T> array)
+        {
+            return false;
+        }
+
+        return Ptr == array.Ptr;
+    }
+
+    public override int GetHashCode() => HashCode.Combine(Ptr);
 }
