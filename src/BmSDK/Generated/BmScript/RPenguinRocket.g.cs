@@ -378,6 +378,7 @@ public partial class RPenguinRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
+    public InlineArray<BmSDK.Engine.ForceFeedbackWaveform> ImpactRumble => new(2, Ptr + 592);
     /// <summary>
     /// ObjectProperty: ImpactRumble
     /// </summary>

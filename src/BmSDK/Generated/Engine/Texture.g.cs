@@ -253,6 +253,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }
     }
 
+    public InlineArray<float> UnpackMin => new(4, Ptr + 48);
     /// <summary>
     /// FloatProperty: UnpackMin
     /// </summary>
@@ -286,6 +287,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
     }
 
+    public InlineArray<float> UnpackMax => new(4, Ptr + 64);
     /// <summary>
     /// FloatProperty: UnpackMax
     /// </summary>

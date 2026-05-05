@@ -1109,6 +1109,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 195); }
     }
 
+    public InlineArray<BmSDK.FString> ProgressMessage => new(2, Ptr + 196);
     /// <summary>
     /// StrProperty: ProgressMessage
     /// </summary>

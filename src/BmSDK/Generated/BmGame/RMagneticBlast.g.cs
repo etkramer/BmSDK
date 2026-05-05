@@ -902,6 +902,7 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1078); }
     }
 
+    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 1080);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>

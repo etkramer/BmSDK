@@ -424,6 +424,7 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 
+    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 576);
     /// <summary>
     /// ObjectProperty: OldMaterial
     /// </summary>

@@ -777,6 +777,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
+    public InlineArray<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace> phoneRaces => new(8, Ptr + 224);
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
@@ -1196,6 +1197,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
 
+    public InlineArray<float> difficultyTimeModifiers_Normal => new(8, Ptr + 536);
     /// <summary>
     /// FloatProperty: difficultyTimeModifiers_Normal
     /// </summary>

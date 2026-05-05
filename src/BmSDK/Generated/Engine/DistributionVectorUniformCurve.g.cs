@@ -111,6 +111,7 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 80); }
     }
 
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorLockFlags> LockedAxes => new(2, Ptr + 84);
     /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
@@ -128,6 +129,7 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 86);
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>

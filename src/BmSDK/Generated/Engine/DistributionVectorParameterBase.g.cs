@@ -106,6 +106,7 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
     public unsafe ref System.Numerics.Vector3 MaxOutput
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
+    public InlineArray<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode> ParamModes => new(3, Ptr + 140);
     /// <summary>
     /// ByteProperty: ParamModes
     /// </summary>

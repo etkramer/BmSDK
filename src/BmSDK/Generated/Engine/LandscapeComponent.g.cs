@@ -351,6 +351,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
+    public InlineArray<BmSDK.Engine.LandscapeComponent> Neighbors => new(8, Ptr + 616);
     /// <summary>
     /// ComponentProperty: Neighbors
     /// </summary>

@@ -625,6 +625,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 704);
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx
     /// </summary>
@@ -650,6 +651,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 716);
     /// <summary>
     /// ComponentProperty: BulletTrailFX
     /// </summary>
@@ -675,6 +677,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 728);
     /// <summary>
     /// ComponentProperty: ImpactFX
     /// </summary>
@@ -811,6 +814,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 
+    public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 808);
     /// <summary>
     /// ObjectProperty: XrayMats
     /// </summary>
@@ -836,6 +840,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> allMeshes => new(3, Ptr + 820);
     /// <summary>
     /// ComponentProperty: allMeshes
     /// </summary>

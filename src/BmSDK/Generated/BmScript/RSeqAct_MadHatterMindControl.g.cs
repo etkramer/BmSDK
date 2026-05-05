@@ -977,6 +977,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
+    public InlineArray<float> scoreThresholds => new(4, Ptr + 468);
     /// <summary>
     /// FloatProperty: scoreThresholds
     /// </summary>

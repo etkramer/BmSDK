@@ -423,23 +423,30 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
 
 void Printer::PrintProperty(UProperty* prop, ostream& out)
 {
+    bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+    if (!isInStruct && prop->ArrayDim > 1)
+    {
+        Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "
+            << prop->GetNameManaged() << " => new(" << prop->ArrayDim
+            << ", Ptr + " << prop->Offset << ");" << endl;
+    }
+
     for (auto i = 0; i < prop->ArrayDim; i++)
     {
         auto propOffset = prop->Offset + (i * prop->ElementSize);
+        auto propNameManaged = prop->GetNameManaged();
 
         // Print prop comment
         Printer::Indent(out) << "/// <summary>" << endl;
         Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
 
-        string propNameManaged = prop->GetNameManaged();
         if (prop->ArrayDim > 1)
         {
             propNameManaged += "_";
             propNameManaged += to_string(i);
         }
 
-        bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
         bool shouldReturnByRef = prop->ShouldReturnByRef() && !isInStruct;
 
         if (shouldReturnByRef)

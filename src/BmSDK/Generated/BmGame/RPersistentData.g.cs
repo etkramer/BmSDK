@@ -1336,6 +1336,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 231); }
     }
 
+    public InlineArray<byte> CurrentSideChapter => new(26, Ptr + 232);
     /// <summary>
     /// ByteProperty: CurrentSideChapter
     /// </summary>
@@ -1545,6 +1546,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 257); }
     }
 
+    public InlineArray<byte> CurrentSideSubChapter => new(26, Ptr + 258);
     /// <summary>
     /// ByteProperty: CurrentSideSubChapter
     /// </summary>

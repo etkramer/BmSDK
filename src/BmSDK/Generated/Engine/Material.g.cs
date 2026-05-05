@@ -1010,6 +1010,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
     }
 
+    public InlineArray<System.IntPtr> MaterialResources => new(2, Ptr + 1256);
     /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
@@ -1027,6 +1028,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
     }
 
+    public InlineArray<System.IntPtr> DefaultMaterialInstances => new(3, Ptr + 1264);
     /// <summary>
     /// StructProperty: DefaultMaterialInstances
     /// </summary>

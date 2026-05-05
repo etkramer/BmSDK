@@ -306,6 +306,7 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
+    public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> AvailableGadgets => new(4, Ptr + 476);
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
@@ -327,6 +328,7 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     public unsafe ref BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_3
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 512);
 
+    public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> BatarangGadgets => new(4, Ptr + 524);
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>

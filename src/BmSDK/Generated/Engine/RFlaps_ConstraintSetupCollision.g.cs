@@ -102,6 +102,7 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
+    public InlineArray<BmSDK.FName> BoneNames => new(8, Ptr + 88);
     /// <summary>
     /// NameProperty: BoneNames
     /// </summary>

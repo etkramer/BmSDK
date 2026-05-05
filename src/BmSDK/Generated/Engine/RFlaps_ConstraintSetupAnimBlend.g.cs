@@ -93,6 +93,7 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
     }
 
+    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData> BlendDatas => new(5, Ptr + 84);
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>

@@ -468,6 +468,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
+    public InlineArray<int> GridPosition => new(3, Ptr + 152);
     /// <summary>
     /// IntProperty: GridPosition
     /// </summary>

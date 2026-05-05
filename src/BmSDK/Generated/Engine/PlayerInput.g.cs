@@ -696,6 +696,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 326); }
     }
 
+    public InlineArray<float> ZeroTime => new(2, Ptr + 328);
     /// <summary>
     /// FloatProperty: ZeroTime
     /// </summary>
@@ -713,6 +714,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 
+    public InlineArray<float> SmoothedMouse => new(2, Ptr + 336);
     /// <summary>
     /// FloatProperty: SmoothedMouse
     /// </summary>

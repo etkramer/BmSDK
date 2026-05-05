@@ -1977,6 +1977,7 @@ public partial class RPawnBossClayface : BmSDK.BmGame.RPawnBossClayfaceBase, BmS
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3868); }
     }
 
+    public InlineArray<int> BombDamage => new(3, Ptr + 3872);
     /// <summary>
     /// IntProperty: BombDamage
     /// </summary>

@@ -303,6 +303,7 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ExtraBatarangMeshes => new(2, Ptr + 1356);
     /// <summary>
     /// ComponentProperty: ExtraBatarangMeshes
     /// </summary>

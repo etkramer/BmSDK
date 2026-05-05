@@ -5296,6 +5296,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
     }
 
+    public InlineArray<BmSDK.FString> LastBroadcastString => new(4, Ptr + 1248);
     /// <summary>
     /// StrProperty: LastBroadcastString
     /// </summary>

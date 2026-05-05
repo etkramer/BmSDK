@@ -884,6 +884,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
     }
 
+    public InlineArray<BmSDK.Engine.HUD.FHudLocalizedMessage> LocalMessages => new(8, Ptr + 496);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>

@@ -4975,6 +4975,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12296); }
     }
 
+    public InlineArray<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime> CameraSmoothingBuffer => new(10, Ptr + 12300);
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
@@ -5137,6 +5138,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12524); }
     }
 
+    public InlineArray<float> ZoomPoints => new(9, Ptr + 12528);
     /// <summary>
     /// FloatProperty: ZoomPoints
     /// </summary>
@@ -5210,6 +5212,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12560); }
     }
 
+    public InlineArray<System.Numerics.Vector3> ZoomPointDir => new(9, Ptr + 12564);
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
@@ -5256,6 +5259,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     public unsafe ref System.Numerics.Vector3 ZoomPointDir_8
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 12660);
 
+    public InlineArray<System.Numerics.Vector3> TightZoomPointDir => new(9, Ptr + 12672);
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>

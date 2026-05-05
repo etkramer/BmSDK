@@ -2203,6 +2203,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
     }
 
+    public InlineArray<BmSDK.Engine.BookMark> BookMarks => new(10, Ptr + 924);
     /// <summary>
     /// ObjectProperty: BookMarks
     /// </summary>
@@ -2284,6 +2285,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
+    public InlineArray<BmSDK.Engine.KismetBookMark> KismetBookMarks => new(10, Ptr + 964);
     /// <summary>
     /// ObjectProperty: KismetBookMarks
     /// </summary>

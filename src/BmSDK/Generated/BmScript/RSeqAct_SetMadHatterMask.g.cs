@@ -120,6 +120,7 @@ public partial class RSeqAct_SetMadHatterMask : BmSDK.Engine.SequenceAction, BmS
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMesh> maskMeshes => new(9, Ptr + 208);
     /// <summary>
     /// ObjectProperty: maskMeshes
     /// </summary>

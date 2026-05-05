@@ -310,6 +310,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
     }
 
+    public InlineArray<System.IntPtr> StaticParameters => new(2, Ptr + 120);
     /// <summary>
     /// StructProperty: StaticParameters
     /// </summary>
@@ -327,6 +328,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
+    public InlineArray<System.IntPtr> StaticPermutationResources => new(2, Ptr + 128);
     /// <summary>
     /// StructProperty: StaticPermutationResources
     /// </summary>
@@ -344,6 +346,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
+    public InlineArray<System.IntPtr> Resources => new(3, Ptr + 136);
     /// <summary>
     /// StructProperty: Resources
     /// </summary>

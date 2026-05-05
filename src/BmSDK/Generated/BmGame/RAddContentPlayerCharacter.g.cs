@@ -150,6 +150,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
     }
 
+    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 80);
     /// <summary>
     /// NameProperty: GadgetsConsoleInner
     /// </summary>
@@ -215,6 +216,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
+    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 144);
     /// <summary>
     /// NameProperty: GadgetsConsoleOuter
     /// </summary>
@@ -280,6 +282,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
+    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 208);
     /// <summary>
     /// NameProperty: GadgetsPC
     /// </summary>

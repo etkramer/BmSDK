@@ -1979,6 +1979,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
     }
 
+    public InlineArray<BmSDK.Engine.Actor> GoalList => new(4, Ptr + 596);
     /// <summary>
     /// ObjectProperty: GoalList
     /// </summary>

@@ -113,6 +113,7 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
     }
 
+    public InlineArray<BmSDK.BmGame.RDummyTarget> SlideDirection => new(2, Ptr + 484);
     /// <summary>
     /// ObjectProperty: SlideDirection
     /// </summary>

@@ -176,6 +176,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> crowMeshes => new(3, Ptr + 432);
     /// <summary>
     /// ComponentProperty: crowMeshes
     /// </summary>
@@ -255,6 +256,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
+    public InlineArray<BmSDK.Engine.DrawConeComponent> editorLines => new(2, Ptr + 468);
     /// <summary>
     /// ComponentProperty: editorLines
     /// </summary>

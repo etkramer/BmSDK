@@ -666,6 +666,7 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
+    public InlineArray<System.Numerics.Vector3> HarpoonTargetPos => new(3, Ptr + 1024);
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>

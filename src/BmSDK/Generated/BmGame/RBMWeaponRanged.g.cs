@@ -443,6 +443,7 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
+    public InlineArray<float> ShotDamage => new(3, Ptr + 964);
     /// <summary>
     /// FloatProperty: ShotDamage
     /// </summary>

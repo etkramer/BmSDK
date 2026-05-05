@@ -78,6 +78,7 @@ public partial class RResolvedDirectionalAnimConfig : BmSDK.GameObject, BmSDK.IG
         where TComponent : class, Framework.IScriptComponent<RResolvedDirectionalAnimConfig>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    public InlineArray<BmSDK.Engine.AnimSequence> Directions => new(12, Ptr + 44);
     /// <summary>
     /// ObjectProperty: Directions
     /// </summary>

@@ -1880,6 +1880,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1378); }
     }
 
+    public InlineArray<BmSDK.GameObject.FColor> DebugDrawColor => new(13, Ptr + 1380);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
@@ -2075,6 +2076,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1504); }
     }
 
+    public InlineArray<System.Numerics.Vector3> GrappleWayPoints => new(8, Ptr + 1508);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
@@ -2116,6 +2118,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     public unsafe ref System.Numerics.Vector3 GrappleWayPoints_7
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1592);
 
+    public InlineArray<float> GrappleWayPointDistances => new(8, Ptr + 1604);
     /// <summary>
     /// FloatProperty: GrappleWayPointDistances
     /// </summary>

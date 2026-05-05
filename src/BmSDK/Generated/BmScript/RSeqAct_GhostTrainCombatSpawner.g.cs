@@ -356,6 +356,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
+    public InlineArray<BmSDK.BmGame.RPawnVillain> TrainList => new(4, Ptr + 284);
     /// <summary>
     /// ObjectProperty: TrainList
     /// </summary>
@@ -407,6 +408,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMeshActor> Train1Cars => new(2, Ptr + 308);
     /// <summary>
     /// ObjectProperty: Train1Cars
     /// </summary>
@@ -424,6 +426,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
+    public InlineArray<BmSDK.Engine.SkeletalMeshActor> Train2Cars => new(2, Ptr + 316);
     /// <summary>
     /// ObjectProperty: Train2Cars
     /// </summary>

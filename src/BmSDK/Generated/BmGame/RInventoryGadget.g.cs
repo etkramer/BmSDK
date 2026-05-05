@@ -1108,6 +1108,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
+    public InlineArray<BmSDK.FName> ThrowEquipBoneNameOverride => new(10, Ptr + 560);
     /// <summary>
     /// NameProperty: ThrowEquipBoneNameOverride
     /// </summary>
@@ -1189,6 +1190,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
+    public InlineArray<BmSDK.FName> ThrowEquipBoneName2Override => new(10, Ptr + 640);
     /// <summary>
     /// NameProperty: ThrowEquipBoneName2Override
     /// </summary>

@@ -2757,6 +2757,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
+    public InlineArray<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef> WeaponConfigs => new(21, Ptr + 636);
     /// <summary>
     /// StructProperty: WeaponConfigs
     /// </summary>
@@ -3211,6 +3212,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
+    public InlineArray<BmSDK.Class> VenomAttackHistory => new(2, Ptr + 1024);
     /// <summary>
     /// ClassProperty: VenomAttackHistory
     /// </summary>

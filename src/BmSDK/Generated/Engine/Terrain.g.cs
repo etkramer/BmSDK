@@ -301,6 +301,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
+    public InlineArray<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray> CachedTerrainMaterials => new(2, Ptr + 556);
     /// <summary>
     /// StructProperty: CachedTerrainMaterials
     /// </summary>

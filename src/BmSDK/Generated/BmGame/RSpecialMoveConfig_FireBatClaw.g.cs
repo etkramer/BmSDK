@@ -78,6 +78,7 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_FireBatClaw>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    public InlineArray<BmSDK.FName> FireAnim => new(4, Ptr + 296);
     /// <summary>
     /// NameProperty: FireAnim
     /// </summary>
@@ -111,6 +112,7 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
+    public InlineArray<BmSDK.FName> FireIdle => new(4, Ptr + 328);
     /// <summary>
     /// NameProperty: FireIdle
     /// </summary>

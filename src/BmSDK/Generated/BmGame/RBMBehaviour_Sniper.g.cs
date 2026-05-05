@@ -855,6 +855,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
+    public InlineArray<float> BetweenShotTime => new(3, Ptr + 492);
     /// <summary>
     /// FloatProperty: BetweenShotTime
     /// </summary>

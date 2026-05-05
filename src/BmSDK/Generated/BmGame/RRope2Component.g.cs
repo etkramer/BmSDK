@@ -638,6 +638,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
     }
 
+    public InlineArray<BmSDK.BmGame.RRope2Component.FRopeEndAttachData> RopeEndAttachDatas => new(2, Ptr + 404);
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>

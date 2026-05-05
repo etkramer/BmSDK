@@ -117,6 +117,7 @@ public partial class DistributionVectorUniform : BmSDK.DistributionVector, BmSDK
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 93);
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>

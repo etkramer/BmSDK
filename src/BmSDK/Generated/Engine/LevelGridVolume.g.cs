@@ -96,6 +96,7 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
     }
 
+    public InlineArray<int> Subdivisions => new(3, Ptr + 488);
     /// <summary>
     /// IntProperty: Subdivisions
     /// </summary>
