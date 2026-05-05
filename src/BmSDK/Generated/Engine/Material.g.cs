@@ -1011,6 +1011,11 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: MaterialResources
+    /// </summary>
+    public InlineArray<System.IntPtr> MaterialResources => new(2, Ptr + 1256);
+
+    /// <summary>
     /// StructProperty: MaterialResources
     /// </summary>
     public unsafe System.IntPtr MaterialResources_0
@@ -1026,6 +1031,11 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
     }
+
+    /// <summary>
+    /// InlineArray{StructProperty}: DefaultMaterialInstances
+    /// </summary>
+    public InlineArray<System.IntPtr> DefaultMaterialInstances => new(3, Ptr + 1264);
 
     /// <summary>
     /// StructProperty: DefaultMaterialInstances

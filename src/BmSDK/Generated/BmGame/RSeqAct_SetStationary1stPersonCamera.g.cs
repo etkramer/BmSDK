@@ -499,6 +499,11 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: BreakoutTimesLeft
+    /// </summary>
+    public InlineArray<float> BreakoutTimesLeft => new(4, Ptr + 276);
+
+    /// <summary>
     /// FloatProperty: BreakoutTimesLeft
     /// </summary>
     public unsafe float BreakoutTimesLeft_0
@@ -530,6 +535,11 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 288); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: BreakoutTimesRight
+    /// </summary>
+    public InlineArray<float> BreakoutTimesRight => new(5, Ptr + 292);
 
     /// <summary>
     /// FloatProperty: BreakoutTimesRight
@@ -573,6 +583,11 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: BreakoutValuesLeft
+    /// </summary>
+    public InlineArray<float> BreakoutValuesLeft => new(4, Ptr + 312);
+
+    /// <summary>
     /// FloatProperty: BreakoutValuesLeft
     /// </summary>
     public unsafe float BreakoutValuesLeft_0
@@ -604,6 +619,11 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: BreakoutValuesRight
+    /// </summary>
+    public InlineArray<float> BreakoutValuesRight => new(5, Ptr + 328);
 
     /// <summary>
     /// FloatProperty: BreakoutValuesRight

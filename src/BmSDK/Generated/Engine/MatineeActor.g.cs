@@ -183,6 +183,11 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: AIGroupNames
+    /// </summary>
+    public InlineArray<BmSDK.FName> AIGroupNames => new(10, Ptr + 444);
+
+    /// <summary>
     /// NameProperty: AIGroupNames
     /// </summary>
     public unsafe BmSDK.FName AIGroupNames_0
@@ -264,6 +269,11 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: AIGroupPawns
+    /// </summary>
+    public InlineArray<BmSDK.Engine.Pawn> AIGroupPawns => new(10, Ptr + 524);
+
+    /// <summary>
     /// ObjectProperty: AIGroupPawns
     /// </summary>
     public unsafe BmSDK.Engine.Pawn AIGroupPawns_0
@@ -343,6 +353,11 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: AIGroupInitStage
+    /// </summary>
+    public InlineArray<int> AIGroupInitStage => new(10, Ptr + 564);
 
     /// <summary>
     /// IntProperty: AIGroupInitStage

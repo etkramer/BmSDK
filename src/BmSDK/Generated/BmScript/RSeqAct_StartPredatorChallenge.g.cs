@@ -250,6 +250,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: ActualChallengeActions
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ActualChallengeActions => new(3, Ptr + 268);
+
+    /// <summary>
     /// ByteProperty: ActualChallengeActions
     /// </summary>
     public unsafe BmSDK.BmGame.RGameInfo.EGameAction ActualChallengeActions_0
@@ -273,6 +278,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 270); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 270); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: ChallengeActions
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ChallengeActions => new(3, Ptr + 271);
 
     /// <summary>
     /// ByteProperty: ChallengeActions
@@ -300,6 +310,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: CWChallengeActions
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CWChallengeActions => new(3, Ptr + 274);
+
+    /// <summary>
     /// ByteProperty: CWChallengeActions
     /// </summary>
     public unsafe BmSDK.BmGame.RGameInfo.EGameAction CWChallengeActions_0
@@ -323,6 +338,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: CoopChallengeActions
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CoopChallengeActions => new(3, Ptr + 277);
 
     /// <summary>
     /// ByteProperty: CoopChallengeActions

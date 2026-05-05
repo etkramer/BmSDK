@@ -379,6 +379,11 @@ public partial class RPenguinRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: ImpactRumble
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ForceFeedbackWaveform> ImpactRumble => new(2, Ptr + 592);
+
+    /// <summary>
     /// ObjectProperty: ImpactRumble
     /// </summary>
     public unsafe BmSDK.Engine.ForceFeedbackWaveform ImpactRumble_0

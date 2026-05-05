@@ -307,6 +307,11 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: AvailableGadgets
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> AvailableGadgets => new(4, Ptr + 476);
+
+    /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
     public unsafe ref BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_0
@@ -326,6 +331,11 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// </summary>
     public unsafe ref BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_3
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 512);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: BatarangGadgets
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> BatarangGadgets => new(4, Ptr + 524);
 
     /// <summary>
     /// StructProperty: BatarangGadgets

@@ -249,6 +249,11 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: PoseControlParticles
+    /// </summary>
+    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference> PoseControlParticles => new(3, Ptr + 72);
+
+    /// <summary>
     /// StructProperty: PoseControlParticles
     /// </summary>
     public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_0

@@ -94,6 +94,11 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: BlendDatas
+    /// </summary>
+    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData> BlendDatas => new(5, Ptr + 84);
+
+    /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
     public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_0

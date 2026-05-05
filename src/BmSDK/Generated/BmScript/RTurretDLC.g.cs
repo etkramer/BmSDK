@@ -141,6 +141,11 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: ImpactShieldFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactShieldFX => new(3, Ptr + 840);
+
+    /// <summary>
     /// ComponentProperty: ImpactShieldFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent ImpactShieldFX_0

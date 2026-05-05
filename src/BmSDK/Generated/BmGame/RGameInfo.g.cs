@@ -3073,6 +3073,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: FloorTakedownChallengeAction
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> FloorTakedownChallengeAction => new(28, Ptr + 960);
+
+    /// <summary>
     /// ByteProperty: FloorTakedownChallengeAction
     /// </summary>
     public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_0

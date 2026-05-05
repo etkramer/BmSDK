@@ -1978,6 +1978,11 @@ public partial class RPawnBossClayface : BmSDK.BmGame.RPawnBossClayfaceBase, BmS
     }
 
     /// <summary>
+    /// InlineArray{IntProperty}: BombDamage
+    /// </summary>
+    public InlineArray<int> BombDamage => new(3, Ptr + 3872);
+
+    /// <summary>
     /// IntProperty: BombDamage
     /// </summary>
     public unsafe int BombDamage_0

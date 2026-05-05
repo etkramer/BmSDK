@@ -454,6 +454,11 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StrProperty}: History
+    /// </summary>
+    public InlineArray<BmSDK.FString> History => new(16, Ptr + 160);
+
+    /// <summary>
     /// StrProperty: History
     /// </summary>
     public unsafe BmSDK.FString History_0

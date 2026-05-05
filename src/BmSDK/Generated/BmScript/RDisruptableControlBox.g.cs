@@ -504,6 +504,11 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: ScreenMats
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> ScreenMats => new(4, Ptr + 680);
+
+    /// <summary>
     /// ObjectProperty: ScreenMats
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface ScreenMats_0
@@ -537,6 +542,11 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: BoxMats
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> BoxMats => new(4, Ptr + 696);
+
+    /// <summary>
     /// ObjectProperty: BoxMats
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface BoxMats_0
@@ -568,6 +578,11 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: BoxMesh
+    /// </summary>
+    public InlineArray<BmSDK.Engine.StaticMesh> BoxMesh => new(4, Ptr + 712);
 
     /// <summary>
     /// ObjectProperty: BoxMesh

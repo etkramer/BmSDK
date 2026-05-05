@@ -436,6 +436,11 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: AxisInputEmulation
+    /// </summary>
+    public InlineArray<BmSDK.Engine.UIInteraction.FUIAxisEmulationData> AxisInputEmulation => new(4, Ptr + 256);
+
+    /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
     public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0

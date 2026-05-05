@@ -778,6 +778,11 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: phoneRaces
+    /// </summary>
+    public InlineArray<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace> phoneRaces => new(8, Ptr + 224);
+
+    /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
     public unsafe ref BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_0
@@ -1195,6 +1200,11 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: difficultyTimeModifiers_Normal
+    /// </summary>
+    public InlineArray<float> difficultyTimeModifiers_Normal => new(8, Ptr + 536);
 
     /// <summary>
     /// FloatProperty: difficultyTimeModifiers_Normal

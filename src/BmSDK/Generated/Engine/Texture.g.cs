@@ -254,6 +254,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: UnpackMin
+    /// </summary>
+    public InlineArray<float> UnpackMin => new(4, Ptr + 48);
+
+    /// <summary>
     /// FloatProperty: UnpackMin
     /// </summary>
     public unsafe float UnpackMin_0
@@ -285,6 +290,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: UnpackMax
+    /// </summary>
+    public InlineArray<float> UnpackMax => new(4, Ptr + 64);
 
     /// <summary>
     /// FloatProperty: UnpackMax

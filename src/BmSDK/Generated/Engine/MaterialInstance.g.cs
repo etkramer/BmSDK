@@ -311,6 +311,11 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: StaticParameters
+    /// </summary>
+    public InlineArray<System.IntPtr> StaticParameters => new(2, Ptr + 120);
+
+    /// <summary>
     /// StructProperty: StaticParameters
     /// </summary>
     public unsafe System.IntPtr StaticParameters_0
@@ -328,6 +333,11 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: StaticPermutationResources
+    /// </summary>
+    public InlineArray<System.IntPtr> StaticPermutationResources => new(2, Ptr + 128);
+
+    /// <summary>
     /// StructProperty: StaticPermutationResources
     /// </summary>
     public unsafe System.IntPtr StaticPermutationResources_0
@@ -343,6 +353,11 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Resources
+    /// </summary>
+    public InlineArray<System.IntPtr> Resources => new(3, Ptr + 136);
 
     /// <summary>
     /// StructProperty: Resources

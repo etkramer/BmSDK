@@ -639,6 +639,11 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: RopeEndAttachDatas
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RRope2Component.FRopeEndAttachData> RopeEndAttachDatas => new(2, Ptr + 404);
+
+    /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
     public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0

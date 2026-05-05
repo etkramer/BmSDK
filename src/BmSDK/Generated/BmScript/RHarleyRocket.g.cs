@@ -293,6 +293,11 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: ExplosionFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ExplosionFX => new(2, Ptr + 488);
+
+    /// <summary>
     /// ComponentProperty: ExplosionFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent ExplosionFX_0
@@ -317,6 +322,11 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: dmgRadius
+    /// </summary>
+    public InlineArray<float> dmgRadius => new(2, Ptr + 500);
 
     /// <summary>
     /// FloatProperty: dmgRadius

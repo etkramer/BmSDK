@@ -208,6 +208,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: UpOffset
+    /// </summary>
+    public InlineArray<System.Numerics.Vector2> UpOffset => new(8, Ptr + 84);
+
+    /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
     public unsafe ref System.Numerics.Vector2 UpOffset_0
@@ -249,6 +254,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 140);
 
     /// <summary>
+    /// InlineArray{StructProperty}: DownOffset
+    /// </summary>
+    public InlineArray<System.Numerics.Vector2> DownOffset => new(5, Ptr + 148);
+
+    /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
     public unsafe ref System.Numerics.Vector2 DownOffset_0
@@ -273,6 +283,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// </summary>
     public unsafe ref System.Numerics.Vector2 DownOffset_4
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 180);
+
+    /// <summary>
+    /// InlineArray{IntProperty}: UpSelectIndex
+    /// </summary>
+    public InlineArray<int> UpSelectIndex => new(9, Ptr + 188);
 
     /// <summary>
     /// IntProperty: UpSelectIndex
@@ -346,6 +361,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: DownSelectIndex
+    /// </summary>
+    public InlineArray<int> DownSelectIndex => new(9, Ptr + 224);
 
     /// <summary>
     /// IntProperty: DownSelectIndex
@@ -466,6 +486,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 304);
 
     /// <summary>
+    /// InlineArray{StructProperty}: CurrentOffset
+    /// </summary>
+    public InlineArray<System.Numerics.Vector2> CurrentOffset => new(8, Ptr + 312);
+
+    /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
     public unsafe ref System.Numerics.Vector2 CurrentOffset_0
@@ -505,6 +530,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     /// </summary>
     public unsafe ref System.Numerics.Vector2 CurrentOffset_7
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 368);
+
+    /// <summary>
+    /// InlineArray{NameProperty}: CurrentGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 376);
 
     /// <summary>
     /// NameProperty: CurrentGadgets
@@ -572,6 +602,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: CurrentExtraGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> CurrentExtraGadgets => new(8, Ptr + 440);
+
+    /// <summary>
     /// NameProperty: CurrentExtraGadgets
     /// </summary>
     public unsafe BmSDK.FName CurrentExtraGadgets_0
@@ -635,6 +670,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: CurrentAllowSubClasses
+    /// </summary>
+    public InlineArray<byte> CurrentAllowSubClasses => new(8, Ptr + 504);
 
     /// <summary>
     /// ByteProperty: CurrentAllowSubClasses
@@ -709,6 +749,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGadgetSelectV2.EGadgetSelectState>(Ptr + 512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: CurrentSelectIndex
+    /// </summary>
+    public InlineArray<int> CurrentSelectIndex => new(9, Ptr + 516);
 
     /// <summary>
     /// IntProperty: CurrentSelectIndex

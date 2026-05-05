@@ -655,6 +655,11 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: RootBoneOption
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis> RootBoneOption => new(3, Ptr + 280);
+
+    /// <summary>
     /// ByteProperty: RootBoneOption
     /// </summary>
     public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption_0
@@ -678,6 +683,11 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis>(Ptr + 282); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 282); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: RootRotationOption
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootRotationOption> RootRotationOption => new(3, Ptr + 283);
 
     /// <summary>
     /// ByteProperty: RootRotationOption

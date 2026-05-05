@@ -549,6 +549,11 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: DamageRatios
+    /// </summary>
+    public InlineArray<float> DamageRatios => new(3, Ptr + 572);
+
+    /// <summary>
     /// FloatProperty: DamageRatios
     /// </summary>
     public unsafe float DamageRatios_0

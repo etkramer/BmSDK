@@ -1063,6 +1063,11 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: Bolts
+    /// </summary>
+    public InlineArray<BmSDK.Engine.StaticMeshComponent> Bolts => new(4, Ptr + 576);
+
+    /// <summary>
     /// ComponentProperty: Bolts
     /// </summary>
     public unsafe BmSDK.Engine.StaticMeshComponent Bolts_0
@@ -1094,6 +1099,11 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: BoltSockets
+    /// </summary>
+    public InlineArray<BmSDK.FName> BoltSockets => new(4, Ptr + 592);
 
     /// <summary>
     /// NameProperty: BoltSockets

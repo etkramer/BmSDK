@@ -112,6 +112,11 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: LockedAxes
+    /// </summary>
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorLockFlags> LockedAxes => new(2, Ptr + 84);
+
+    /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
     public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_0
@@ -127,6 +132,11 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 85); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: MirrorFlags
+    /// </summary>
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 86);
 
     /// <summary>
     /// ByteProperty: MirrorFlags

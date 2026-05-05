@@ -133,6 +133,11 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: InstanceData
+    /// </summary>
+    public InlineArray<BmSDK.Engine.SpeechRecognition.FRecogUserData> InstanceData => new(4, Ptr + 108);
+
+    /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
     public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_0

@@ -425,6 +425,11 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: OldMaterial
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 576);
+
+    /// <summary>
     /// ObjectProperty: OldMaterial
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface OldMaterial_0

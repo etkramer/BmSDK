@@ -5297,6 +5297,11 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     }
 
     /// <summary>
+    /// InlineArray{StrProperty}: LastBroadcastString
+    /// </summary>
+    public InlineArray<BmSDK.FString> LastBroadcastString => new(4, Ptr + 1248);
+
+    /// <summary>
     /// StrProperty: LastBroadcastString
     /// </summary>
     public unsafe BmSDK.FString LastBroadcastString_0

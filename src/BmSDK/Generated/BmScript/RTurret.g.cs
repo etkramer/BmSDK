@@ -626,6 +626,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: MuzzleFlashFx
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 704);
+
+    /// <summary>
     /// ComponentProperty: MuzzleFlashFx
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashFx_0
@@ -651,6 +656,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: BulletTrailFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 716);
+
+    /// <summary>
     /// ComponentProperty: BulletTrailFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_0
@@ -674,6 +684,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 724); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: ImpactFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 728);
 
     /// <summary>
     /// ComponentProperty: ImpactFX
@@ -812,6 +827,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: XrayMats
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 808);
+
+    /// <summary>
     /// ObjectProperty: XrayMats
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface XrayMats_0
@@ -835,6 +855,11 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 816); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: allMeshes
+    /// </summary>
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> allMeshes => new(3, Ptr + 820);
 
     /// <summary>
     /// ComponentProperty: allMeshes

@@ -118,6 +118,11 @@ public partial class DistributionVectorUniform : BmSDK.DistributionVector, BmSDK
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: MirrorFlags
+    /// </summary>
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 93);
+
+    /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
     public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_0

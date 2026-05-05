@@ -151,6 +151,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: GadgetsConsoleInner
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 80);
+
+    /// <summary>
     /// NameProperty: GadgetsConsoleInner
     /// </summary>
     public unsafe BmSDK.FName GadgetsConsoleInner_0
@@ -216,6 +221,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: GadgetsConsoleOuter
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 144);
+
+    /// <summary>
     /// NameProperty: GadgetsConsoleOuter
     /// </summary>
     public unsafe BmSDK.FName GadgetsConsoleOuter_0
@@ -279,6 +289,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 200); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: GadgetsPC
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 208);
 
     /// <summary>
     /// NameProperty: GadgetsPC

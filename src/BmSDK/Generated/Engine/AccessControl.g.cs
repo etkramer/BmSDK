@@ -359,6 +359,11 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StrProperty}: ACDisplayText
+    /// </summary>
+    public InlineArray<BmSDK.FString> ACDisplayText => new(3, Ptr + 564);
+
+    /// <summary>
     /// StrProperty: ACDisplayText
     /// </summary>
     public unsafe BmSDK.FString ACDisplayText_0
@@ -382,6 +387,11 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 588); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: ACDescText
+    /// </summary>
+    public InlineArray<BmSDK.FString> ACDescText => new(3, Ptr + 600);
 
     /// <summary>
     /// StrProperty: ACDescText

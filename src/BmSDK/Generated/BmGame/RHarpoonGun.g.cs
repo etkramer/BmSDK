@@ -667,6 +667,11 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     }
 
     /// <summary>
+    /// InlineArray{StructProperty}: HarpoonTargetPos
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> HarpoonTargetPos => new(3, Ptr + 1024);
+
+    /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
     public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_0
