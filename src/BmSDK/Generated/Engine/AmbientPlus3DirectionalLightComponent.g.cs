@@ -87,7 +87,11 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 408); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: LightDirections
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> LightDirections => new(3, Ptr + 412);
+
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
@@ -104,7 +108,11 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     public unsafe ref System.Numerics.Vector3 LightDirections_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 436);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: LightColours
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> LightColours => new(3, Ptr + 448);
+
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>

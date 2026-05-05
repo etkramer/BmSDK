@@ -548,7 +548,11 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: DamageRatios
+    /// </summary>
     public InlineArray<float> DamageRatios => new(3, Ptr + 572);
+
     /// <summary>
     /// FloatProperty: DamageRatios
     /// </summary>

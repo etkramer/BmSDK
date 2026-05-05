@@ -249,7 +249,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: ActualChallengeActions
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ActualChallengeActions => new(3, Ptr + 268);
+
     /// <summary>
     /// ByteProperty: ActualChallengeActions
     /// </summary>
@@ -275,7 +279,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 270); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: ChallengeActions
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ChallengeActions => new(3, Ptr + 271);
+
     /// <summary>
     /// ByteProperty: ChallengeActions
     /// </summary>
@@ -301,7 +309,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 273); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: CWChallengeActions
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CWChallengeActions => new(3, Ptr + 274);
+
     /// <summary>
     /// ByteProperty: CWChallengeActions
     /// </summary>
@@ -327,7 +339,11 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: CoopChallengeActions
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CoopChallengeActions => new(3, Ptr + 277);
+
     /// <summary>
     /// ByteProperty: CoopChallengeActions
     /// </summary>

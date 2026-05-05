@@ -511,7 +511,11 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: OW_A_InformantFlags
+    /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_A_InformantFlags => new(16, Ptr + 228);
+
     /// <summary>
     /// StructProperty: OW_A_InformantFlags
     /// </summary>
@@ -593,7 +597,11 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_A_InformantFlags_15
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1008);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: OW_C_InformantFlags
+    /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_C_InformantFlags => new(16, Ptr + 1060);
+
     /// <summary>
     /// StructProperty: OW_C_InformantFlags
     /// </summary>
@@ -675,7 +683,11 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     public unsafe ref BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag OW_C_InformantFlags_15
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1840);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: OW_E_InformantFlags
+    /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_E_InformantFlags => new(16, Ptr + 1892);
+
     /// <summary>
     /// StructProperty: OW_E_InformantFlags
     /// </summary>

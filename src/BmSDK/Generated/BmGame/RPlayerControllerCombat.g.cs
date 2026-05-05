@@ -3360,7 +3360,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4664); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: MoveTypeCount
+    /// </summary>
     public InlineArray<int> MoveTypeCount => new(56, Ptr + 4676);
+
     /// <summary>
     /// IntProperty: MoveTypeCount
     /// </summary>
@@ -3810,7 +3814,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4896); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: ComboMoveType
+    /// </summary>
     public InlineArray<int> ComboMoveType => new(56, Ptr + 4900);
+
     /// <summary>
     /// IntProperty: ComboMoveType
     /// </summary>
@@ -4260,7 +4268,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5120); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: GadgetMoveType
+    /// </summary>
     public InlineArray<int> GadgetMoveType => new(56, Ptr + 5124);
+
     /// <summary>
     /// IntProperty: GadgetMoveType
     /// </summary>
@@ -4710,7 +4722,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5344); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: SavedComboMoveType
+    /// </summary>
     public InlineArray<int> SavedComboMoveType => new(56, Ptr + 5348);
+
     /// <summary>
     /// IntProperty: SavedComboMoveType
     /// </summary>

@@ -426,9 +426,13 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
     if (!isInStruct && prop->ArrayDim > 1)
     {
+        Printer::Indent(out) << "/// <summary>" << endl;
+        Printer::Indent(out) << "/// InlineArray<" << prop->Class->GetName() << ">: " << prop->GetName() << endl;
+        Printer::Indent(out) << "/// </summary>" << endl;
+
         Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "
             << prop->GetNameManaged() << " => new(" << prop->ArrayDim
-            << ", Ptr + " << prop->Offset << ");" << endl;
+            << ", Ptr + " << prop->Offset << ");" << endl << endl;
     }
 
     for (auto i = 0; i < prop->ArrayDim; i++)

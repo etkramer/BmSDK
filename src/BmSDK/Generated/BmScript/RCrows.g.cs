@@ -256,7 +256,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: AnimNodes
+    /// </summary>
     public InlineArray<BmSDK.Engine.AnimNodeSequence> AnimNodes => new(3, Ptr + 480);
+
     /// <summary>
     /// ObjectProperty: AnimNodes
     /// </summary>
@@ -282,7 +286,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: startingLoc
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> startingLoc => new(3, Ptr + 492);
+
     /// <summary>
     /// StructProperty: startingLoc
     /// </summary>
@@ -299,7 +307,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     public unsafe ref System.Numerics.Vector3 startingLoc_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: startingRot
+    /// </summary>
     public InlineArray<BmSDK.Rotator> startingRot => new(3, Ptr + 528);
+
     /// <summary>
     /// StructProperty: startingRot
     /// </summary>
@@ -316,7 +328,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     public unsafe ref BmSDK.Rotator startingRot_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 552);
 
+    /// <summary>
+    /// InlineArray<IntProperty>: bReadyForTakeoff
+    /// </summary>
     public InlineArray<int> bReadyForTakeoff => new(3, Ptr + 564);
+
     /// <summary>
     /// IntProperty: bReadyForTakeoff
     /// </summary>
@@ -342,7 +358,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: bFinishedTakeOff
+    /// </summary>
     public InlineArray<int> bFinishedTakeOff => new(3, Ptr + 576);
+
     /// <summary>
     /// IntProperty: bFinishedTakeOff
     /// </summary>
@@ -389,7 +409,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     public unsafe ref System.Numerics.Vector3 baseFlightVelocity
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: trueFlightVelocity
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> trueFlightVelocity => new(3, Ptr + 616);
+
     /// <summary>
     /// StructProperty: trueFlightVelocity
     /// </summary>
@@ -412,7 +436,11 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     public unsafe ref System.Numerics.Vector3 baseToRootBone
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: MaterialConstants
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInstanceConstant> MaterialConstants => new(3, Ptr + 664);
+
     /// <summary>
     /// ObjectProperty: MaterialConstants
     /// </summary>

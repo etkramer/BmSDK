@@ -1225,7 +1225,11 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: Breadcrumbs
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> Breadcrumbs => new(10, Ptr + 284);
+
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>

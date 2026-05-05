@@ -855,7 +855,11 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: ThrowDirectionTypes
+    /// </summary>
     public InlineArray<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 1088);
+
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>

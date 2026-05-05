@@ -202,7 +202,11 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: EndInitDatas
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData> EndInitDatas => new(2, Ptr + 80);
+
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>

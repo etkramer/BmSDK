@@ -935,7 +935,11 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: clockSoundStartEvents
+    /// </summary>
     public InlineArray<BmSDK.Engine.AkEvent> clockSoundStartEvents => new(4, Ptr + 432);
+
     /// <summary>
     /// ObjectProperty: clockSoundStartEvents
     /// </summary>
@@ -969,7 +973,11 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: clockSoundStopEvents
+    /// </summary>
     public InlineArray<BmSDK.Engine.AkEvent> clockSoundStopEvents => new(4, Ptr + 448);
+
     /// <summary>
     /// ObjectProperty: clockSoundStopEvents
     /// </summary>

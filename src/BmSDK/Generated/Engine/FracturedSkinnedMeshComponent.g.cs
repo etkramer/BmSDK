@@ -132,7 +132,11 @@ public partial class FracturedSkinnedMeshComponent : BmSDK.Engine.FracturedBaseC
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 540); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 540); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: OldMaterial
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 544);
+
     /// <summary>
     /// ObjectProperty: OldMaterial
     /// </summary>

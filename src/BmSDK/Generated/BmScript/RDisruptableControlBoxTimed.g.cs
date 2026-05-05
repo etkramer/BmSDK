@@ -237,7 +237,11 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 568); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: ScreenMats
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInterface> ScreenMats => new(4, Ptr + 572);
+
     /// <summary>
     /// ObjectProperty: ScreenMats
     /// </summary>
@@ -271,7 +275,11 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: BoxMats
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInterface> BoxMats => new(4, Ptr + 588);
+
     /// <summary>
     /// ObjectProperty: BoxMats
     /// </summary>
@@ -305,7 +313,11 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: BoxMesh
+    /// </summary>
     public InlineArray<BmSDK.Engine.StaticMesh> BoxMesh => new(4, Ptr + 604);
+
     /// <summary>
     /// ObjectProperty: BoxMesh
     /// </summary>

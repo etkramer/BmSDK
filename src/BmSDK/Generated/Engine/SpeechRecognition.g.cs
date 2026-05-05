@@ -132,7 +132,11 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: InstanceData
+    /// </summary>
     public InlineArray<BmSDK.Engine.SpeechRecognition.FRecogUserData> InstanceData => new(4, Ptr + 108);
+
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>

@@ -2231,7 +2231,11 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 511); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: ActiveModifiers
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EChallengeModifierType> ActiveModifiers => new(8, Ptr + 512);
+
     /// <summary>
     /// ByteProperty: ActiveModifiers
     /// </summary>
@@ -3161,7 +3165,11 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: PlayerCharacters
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter> PlayerCharacters => new(8, Ptr + 1100);
+
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>

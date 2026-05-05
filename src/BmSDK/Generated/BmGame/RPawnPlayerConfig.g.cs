@@ -294,7 +294,11 @@ public partial class RPawnPlayerConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: SpecialMoveAnimsets
+    /// </summary>
     public InlineArray<BmSDK.Engine.AnimSet> SpecialMoveAnimsets => new(8, Ptr + 168);
+
     /// <summary>
     /// ObjectProperty: SpecialMoveAnimsets
     /// </summary>

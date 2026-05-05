@@ -3156,7 +3156,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3700); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: DoubleSwingData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters> DoubleSwingData => new(3, Ptr + 3704);
+
     /// <summary>
     /// StructProperty: DoubleSwingData
     /// </summary>
@@ -3173,7 +3177,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters DoubleSwingData_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters>(Ptr + 3736);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: SwingAttackData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters> SwingAttackData => new(3, Ptr + 3752);
+
     /// <summary>
     /// StructProperty: SwingAttackData
     /// </summary>
@@ -3190,7 +3198,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters SwingAttackData_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters>(Ptr + 4064);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: SmashAttackData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters> SmashAttackData => new(3, Ptr + 4220);
+
     /// <summary>
     /// StructProperty: SmashAttackData
     /// </summary>
@@ -3213,7 +3225,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters ElectrifiedSmashAttackData
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FElectrifiedSmashAttackParameters>(Ptr + 4340);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: StompAttackData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters> StompAttackData => new(3, Ptr + 4440);
+
     /// <summary>
     /// StructProperty: StompAttackData
     /// </summary>
@@ -3230,7 +3246,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters StompAttackData_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters>(Ptr + 4488);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: DecayingDeathData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters> DecayingDeathData => new(3, Ptr + 4512);
+
     /// <summary>
     /// StructProperty: DecayingDeathData
     /// </summary>
@@ -3247,7 +3267,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters DecayingDeathData_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4712);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: MeleeAttackData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters> MeleeAttackData => new(3, Ptr + 4812);
+
     /// <summary>
     /// StructProperty: MeleeAttackData
     /// </summary>
@@ -3270,7 +3294,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters NoArmMaggotsData
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters>(Ptr + 4920);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: HealthReductionData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters> HealthReductionData => new(3, Ptr + 5020);
+
     /// <summary>
     /// StructProperty: HealthReductionData
     /// </summary>
@@ -3350,7 +3378,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5612); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: TimeBetweenMajorAttacks
+    /// </summary>
     public InlineArray<float> TimeBetweenMajorAttacks => new(3, Ptr + 5616);
+
     /// <summary>
     /// FloatProperty: TimeBetweenMajorAttacks
     /// </summary>
@@ -3376,7 +3408,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5624); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: TimeBetweenMajorAttacksElectrified
+    /// </summary>
     public InlineArray<float> TimeBetweenMajorAttacksElectrified => new(3, Ptr + 5628);
+
     /// <summary>
     /// FloatProperty: TimeBetweenMajorAttacksElectrified
     /// </summary>
@@ -3555,7 +3591,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5712); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: FloorSparkData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark> FloorSparkData => new(12, Ptr + 5716);
+
     /// <summary>
     /// StructProperty: FloorSparkData
     /// </summary>
@@ -3617,7 +3657,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark FloorSparkData_11
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark>(Ptr + 6288);
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: FloorSparks
+    /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorSparks => new(12, Ptr + 6340);
+
     /// <summary>
     /// ComponentProperty: FloorSparks
     /// </summary>
@@ -3724,7 +3768,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6388); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: SmashFireData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire> SmashFireData => new(3, Ptr + 6392);
+
     /// <summary>
     /// StructProperty: SmashFireData
     /// </summary>
@@ -3741,7 +3789,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire SmashFireData_2
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire>(Ptr + 6448);
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: SmashFires
+    /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmashFires => new(3, Ptr + 6476);
+
     /// <summary>
     /// ComponentProperty: SmashFires
     /// </summary>
@@ -3929,7 +3981,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6572); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: ArmWeights
+    /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ArmWeights => new(2, Ptr + 6584);
+
     /// <summary>
     /// ComponentProperty: ArmWeights
     /// </summary>
@@ -3947,7 +4003,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6588); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: ArmWeightRopes
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RRope2Component> ArmWeightRopes => new(2, Ptr + 6592);
+
     /// <summary>
     /// ComponentProperty: ArmWeightRopes
     /// </summary>
@@ -3965,7 +4025,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6596); }
     }
 
+    /// <summary>
+    /// InlineArray<NameProperty>: ArmWeightAttachDummys
+    /// </summary>
     public InlineArray<BmSDK.FName> ArmWeightAttachDummys => new(2, Ptr + 6600);
+
     /// <summary>
     /// NameProperty: ArmWeightAttachDummys
     /// </summary>
@@ -3983,7 +4047,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6608); }
     }
 
+    /// <summary>
+    /// InlineArray<NameProperty>: HandBoneNames
+    /// </summary>
     public InlineArray<BmSDK.FName> HandBoneNames => new(2, Ptr + 6616);
+
     /// <summary>
     /// NameProperty: HandBoneNames
     /// </summary>
@@ -4001,7 +4069,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6624); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: CurrentChainLengths
+    /// </summary>
     public InlineArray<float> CurrentChainLengths => new(2, Ptr + 6632);
+
     /// <summary>
     /// FloatProperty: CurrentChainLengths
     /// </summary>
@@ -4019,7 +4091,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6636); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: CurrentWeightsData
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData> CurrentWeightsData => new(2, Ptr + 6640);
+
     /// <summary>
     /// StructProperty: CurrentWeightsData
     /// </summary>
@@ -4031,7 +4107,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     public unsafe ref BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData CurrentWeightsData_1
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData>(Ptr + 6716);
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: ExtendChainTime
+    /// </summary>
     public InlineArray<float> ExtendChainTime => new(2, Ptr + 6792);
+
     /// <summary>
     /// FloatProperty: ExtendChainTime
     /// </summary>
@@ -4049,7 +4129,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6796); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: RetractChainTime
+    /// </summary>
     public InlineArray<float> RetractChainTime => new(2, Ptr + 6800);
+
     /// <summary>
     /// FloatProperty: RetractChainTime
     /// </summary>
@@ -4118,7 +4202,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6836); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: ChainLengthAtSlowDownChange
+    /// </summary>
     public InlineArray<float> ChainLengthAtSlowDownChange => new(2, Ptr + 6840);
+
     /// <summary>
     /// FloatProperty: ChainLengthAtSlowDownChange
     /// </summary>
@@ -4172,7 +4260,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6860); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: WeightHeightAtSlow
+    /// </summary>
     public InlineArray<float> WeightHeightAtSlow => new(2, Ptr + 6864);
+
     /// <summary>
     /// FloatProperty: WeightHeightAtSlow
     /// </summary>
@@ -4190,7 +4282,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6868); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: WeightDistAtSlow
+    /// </summary>
     public InlineArray<float> WeightDistAtSlow => new(2, Ptr + 6872);
+
     /// <summary>
     /// FloatProperty: WeightDistAtSlow
     /// </summary>
@@ -4394,7 +4490,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7008); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: roomCogsMatinee
+    /// </summary>
     public InlineArray<BmSDK.Engine.SeqAct_Interp> roomCogsMatinee => new(3, Ptr + 7012);
+
     /// <summary>
     /// ObjectProperty: roomCogsMatinee
     /// </summary>
@@ -4420,7 +4520,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7020); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: padCogsMatinee
+    /// </summary>
     public InlineArray<BmSDK.Engine.SeqAct_Interp> padCogsMatinee => new(3, Ptr + 7024);
+
     /// <summary>
     /// ObjectProperty: padCogsMatinee
     /// </summary>
@@ -4494,7 +4598,11 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7104); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: bWeightsWantToBlockActors
+    /// </summary>
     public InlineArray<int> bWeightsWantToBlockActors => new(2, Ptr + 7108);
+
     /// <summary>
     /// IntProperty: bWeightsWantToBlockActors
     /// </summary>

@@ -3072,7 +3072,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: FloorTakedownChallengeAction
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> FloorTakedownChallengeAction => new(28, Ptr + 960);
+
     /// <summary>
     /// ByteProperty: FloorTakedownChallengeAction
     /// </summary>

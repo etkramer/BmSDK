@@ -914,7 +914,11 @@ public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled,
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: WallForces
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> WallForces => new(4, Ptr + 444);
+
     /// <summary>
     /// StructProperty: WallForces
     /// </summary>

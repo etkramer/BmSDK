@@ -399,7 +399,11 @@ public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: BetweenShotTime
+    /// </summary>
     public InlineArray<float> BetweenShotTime => new(3, Ptr + 616);
+
     /// <summary>
     /// FloatProperty: BetweenShotTime
     /// </summary>

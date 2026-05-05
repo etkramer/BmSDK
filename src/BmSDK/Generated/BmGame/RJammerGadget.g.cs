@@ -632,7 +632,11 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: ThrowDirectionTypes
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 992);
+
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>

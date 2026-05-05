@@ -453,7 +453,11 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
+    /// <summary>
+    /// InlineArray<StrProperty>: History
+    /// </summary>
     public InlineArray<BmSDK.FString> History => new(16, Ptr + 160);
+
     /// <summary>
     /// StrProperty: History
     /// </summary>

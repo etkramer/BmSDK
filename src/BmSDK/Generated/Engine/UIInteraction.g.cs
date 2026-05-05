@@ -435,7 +435,11 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: AxisInputEmulation
+    /// </summary>
     public InlineArray<BmSDK.Engine.UIInteraction.FUIAxisEmulationData> AxisInputEmulation => new(4, Ptr + 256);
+
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>

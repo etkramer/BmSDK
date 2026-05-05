@@ -703,7 +703,11 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: Projectile
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RProjectileWithRope> Projectile => new(2, Ptr + 1068);
+
     /// <summary>
     /// ObjectProperty: Projectile
     /// </summary>
@@ -721,7 +725,11 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: ProjectileRope
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> ProjectileRope => new(2, Ptr + 1076);
+
     /// <summary>
     /// ComponentProperty: ProjectileRope
     /// </summary>

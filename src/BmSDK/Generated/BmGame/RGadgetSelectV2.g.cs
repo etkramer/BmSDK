@@ -207,7 +207,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         GSS_MAX = 3,
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: UpOffset
+    /// </summary>
     public InlineArray<System.Numerics.Vector2> UpOffset => new(8, Ptr + 84);
+
     /// <summary>
     /// StructProperty: UpOffset
     /// </summary>
@@ -249,7 +253,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     public unsafe ref System.Numerics.Vector2 UpOffset_7
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 140);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: DownOffset
+    /// </summary>
     public InlineArray<System.Numerics.Vector2> DownOffset => new(5, Ptr + 148);
+
     /// <summary>
     /// StructProperty: DownOffset
     /// </summary>
@@ -276,7 +284,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     public unsafe ref System.Numerics.Vector2 DownOffset_4
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 180);
 
+    /// <summary>
+    /// InlineArray<IntProperty>: UpSelectIndex
+    /// </summary>
     public InlineArray<int> UpSelectIndex => new(9, Ptr + 188);
+
     /// <summary>
     /// IntProperty: UpSelectIndex
     /// </summary>
@@ -350,7 +362,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: DownSelectIndex
+    /// </summary>
     public InlineArray<int> DownSelectIndex => new(9, Ptr + 224);
+
     /// <summary>
     /// IntProperty: DownSelectIndex
     /// </summary>
@@ -469,7 +485,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     public unsafe ref System.Numerics.Vector2 TextPosition
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 304);
 
+    /// <summary>
+    /// InlineArray<StructProperty>: CurrentOffset
+    /// </summary>
     public InlineArray<System.Numerics.Vector2> CurrentOffset => new(8, Ptr + 312);
+
     /// <summary>
     /// StructProperty: CurrentOffset
     /// </summary>
@@ -511,7 +531,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     public unsafe ref System.Numerics.Vector2 CurrentOffset_7
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 368);
 
+    /// <summary>
+    /// InlineArray<NameProperty>: CurrentGadgets
+    /// </summary>
     public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 376);
+
     /// <summary>
     /// NameProperty: CurrentGadgets
     /// </summary>
@@ -577,7 +601,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
     }
 
+    /// <summary>
+    /// InlineArray<NameProperty>: CurrentExtraGadgets
+    /// </summary>
     public InlineArray<BmSDK.FName> CurrentExtraGadgets => new(8, Ptr + 440);
+
     /// <summary>
     /// NameProperty: CurrentExtraGadgets
     /// </summary>
@@ -643,7 +671,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: CurrentAllowSubClasses
+    /// </summary>
     public InlineArray<byte> CurrentAllowSubClasses => new(8, Ptr + 504);
+
     /// <summary>
     /// ByteProperty: CurrentAllowSubClasses
     /// </summary>
@@ -718,7 +750,11 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: CurrentSelectIndex
+    /// </summary>
     public InlineArray<int> CurrentSelectIndex => new(9, Ptr + 516);
+
     /// <summary>
     /// IntProperty: CurrentSelectIndex
     /// </summary>

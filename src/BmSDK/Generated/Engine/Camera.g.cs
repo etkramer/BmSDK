@@ -1075,7 +1075,11 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: AnimInstPool
+    /// </summary>
     public InlineArray<BmSDK.Engine.CameraAnimInst> AnimInstPool => new(8, Ptr + 1172);
+
     /// <summary>
     /// ObjectProperty: AnimInstPool
     /// </summary>

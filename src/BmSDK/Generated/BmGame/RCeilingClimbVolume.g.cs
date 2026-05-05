@@ -240,7 +240,11 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: Points
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RGrapplePoint> Points => new(10, Ptr + 512);
+
     /// <summary>
     /// ObjectProperty: Points
     /// </summary>
@@ -322,7 +326,11 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: PointsCrossLevel
+    /// </summary>
     public InlineArray<byte> PointsCrossLevel => new(10, Ptr + 552);
+
     /// <summary>
     /// ByteProperty: PointsCrossLevel
     /// </summary>

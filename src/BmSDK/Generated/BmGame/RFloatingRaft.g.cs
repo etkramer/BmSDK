@@ -611,7 +611,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: WakeOffsets
+    /// </summary>
     public InlineArray<System.Numerics.Vector3> WakeOffsets => new(4, Ptr + 1096);
+
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
@@ -633,7 +637,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     public unsafe ref System.Numerics.Vector3 WakeOffsets_3
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: WakeScales
+    /// </summary>
     public InlineArray<float> WakeScales => new(4, Ptr + 1144);
+
     /// <summary>
     /// FloatProperty: WakeScales
     /// </summary>
@@ -667,7 +675,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
 
+    /// <summary>
+    /// InlineArray<IntProperty>: WakeEmitterTypes
+    /// </summary>
     public InlineArray<int> WakeEmitterTypes => new(4, Ptr + 1160);
+
     /// <summary>
     /// IntProperty: WakeEmitterTypes
     /// </summary>
@@ -701,7 +713,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: WakeEmitters
+    /// </summary>
     public InlineArray<BmSDK.Engine.Emitter> WakeEmitters => new(4, Ptr + 1176);
+
     /// <summary>
     /// ObjectProperty: WakeEmitters
     /// </summary>

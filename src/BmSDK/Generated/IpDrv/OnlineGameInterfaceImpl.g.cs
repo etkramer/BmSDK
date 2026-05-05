@@ -804,7 +804,11 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 57); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: LanNonce
+    /// </summary>
     public InlineArray<byte> LanNonce => new(8, Ptr + 58);
+
     /// <summary>
     /// ByteProperty: LanNonce
     /// </summary>

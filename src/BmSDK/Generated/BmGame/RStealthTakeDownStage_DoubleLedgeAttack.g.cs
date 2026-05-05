@@ -201,7 +201,11 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
     }
 
+    /// <summary>
+    /// InlineArray<ByteProperty>: AttachRope
+    /// </summary>
     public InlineArray<byte> AttachRope => new(2, Ptr + 1180);
+
     /// <summary>
     /// ByteProperty: AttachRope
     /// </summary>
@@ -219,7 +223,11 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1181); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: RopeLength
+    /// </summary>
     public InlineArray<float> RopeLength => new(2, Ptr + 1184);
+
     /// <summary>
     /// FloatProperty: RopeLength
     /// </summary>

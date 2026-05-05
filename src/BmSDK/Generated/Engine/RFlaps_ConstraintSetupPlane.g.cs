@@ -78,7 +78,11 @@ public partial class RFlaps_ConstraintSetupPlane : BmSDK.Engine.RFlaps_Constrain
         where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupPlane>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// InlineArray<StructProperty>: ConstrainedParticles
+    /// </summary>
     public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference> ConstrainedParticles => new(5, Ptr + 64);
+
     /// <summary>
     /// StructProperty: ConstrainedParticles
     /// </summary>

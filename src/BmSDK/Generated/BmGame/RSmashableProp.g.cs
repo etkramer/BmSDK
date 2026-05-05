@@ -649,7 +649,11 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: OldMaterial
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 800);
+
     /// <summary>
     /// ObjectProperty: OldMaterial
     /// </summary>

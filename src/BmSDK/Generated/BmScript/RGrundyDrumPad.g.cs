@@ -382,7 +382,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: LightColours
+    /// </summary>
     public InlineArray<BmSDK.GameObject.FLinearColor> LightColours => new(4, Ptr + 544);
+
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
@@ -410,7 +414,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     public unsafe ref BmSDK.GameObject.FLinearColor currentLightColour
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 608);
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: ballGlowValues
+    /// </summary>
     public InlineArray<float> ballGlowValues => new(4, Ptr + 624);
+
     /// <summary>
     /// FloatProperty: ballGlowValues
     /// </summary>
@@ -462,7 +470,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: damageStateMeshes
+    /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> damageStateMeshes => new(3, Ptr + 648);
+
     /// <summary>
     /// ComponentProperty: damageStateMeshes
     /// </summary>
@@ -488,7 +500,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: damageStateUnderMeshes
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RStaticMeshToggleable> damageStateUnderMeshes => new(2, Ptr + 660);
+
     /// <summary>
     /// ObjectProperty: damageStateUnderMeshes
     /// </summary>
@@ -506,7 +522,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: damageStateAnimNames
+    /// </summary>
     public InlineArray<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet> damageStateAnimNames => new(3, Ptr + 668);
+
     /// <summary>
     /// StructProperty: damageStateAnimNames
     /// </summary>
@@ -541,7 +561,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: SmokeFX
+    /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmokeFX => new(3, Ptr + 712);
+
     /// <summary>
     /// ComponentProperty: SmokeFX
     /// </summary>
@@ -612,7 +636,11 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: ballMaterials
+    /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ballMaterials => new(2, Ptr + 740);
+
     /// <summary>
     /// ObjectProperty: ballMaterials
     /// </summary>

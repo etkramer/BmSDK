@@ -266,7 +266,11 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         AMB_MAX = 3,
     }
 
+    /// <summary>
+    /// InlineArray<ObjectProperty>: WallPoint
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RCornerWallMarkerBase> WallPoint => new(4, Ptr + 428);
+
     /// <summary>
     /// ObjectProperty: WallPoint
     /// </summary>

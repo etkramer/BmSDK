@@ -307,7 +307,11 @@ public partial class RGadgetSelectBM2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameO
         GSS_MAX = 4,
     }
 
+    /// <summary>
+    /// InlineArray<NameProperty>: CurrentGadgets
+    /// </summary>
     public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 84);
+
     /// <summary>
     /// NameProperty: CurrentGadgets
     /// </summary>

@@ -1190,7 +1190,11 @@ public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
 
+    /// <summary>
+    /// InlineArray<StructProperty>: ThrowDirectionTypes
+    /// </summary>
     public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 1160);
+
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>

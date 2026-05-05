@@ -292,7 +292,11 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
     }
 
+    /// <summary>
+    /// InlineArray<ComponentProperty>: ExplosionFX
+    /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> ExplosionFX => new(2, Ptr + 488);
+
     /// <summary>
     /// ComponentProperty: ExplosionFX
     /// </summary>
@@ -319,7 +323,11 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 
+    /// <summary>
+    /// InlineArray<FloatProperty>: dmgRadius
+    /// </summary>
     public InlineArray<float> dmgRadius => new(2, Ptr + 500);
+
     /// <summary>
     /// FloatProperty: dmgRadius
     /// </summary>
