@@ -383,7 +383,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: LightColours
+    /// InlineArray{StructProperty}: LightColours
     /// </summary>
     public InlineArray<BmSDK.GameObject.FLinearColor> LightColours => new(4, Ptr + 544);
 
@@ -415,7 +415,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 608);
 
     /// <summary>
-    /// InlineArray<FloatProperty>: ballGlowValues
+    /// InlineArray{FloatProperty}: ballGlowValues
     /// </summary>
     public InlineArray<float> ballGlowValues => new(4, Ptr + 624);
 
@@ -471,7 +471,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: damageStateMeshes
+    /// InlineArray{ComponentProperty}: damageStateMeshes
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> damageStateMeshes => new(3, Ptr + 648);
 
@@ -501,7 +501,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: damageStateUnderMeshes
+    /// InlineArray{ObjectProperty}: damageStateUnderMeshes
     /// </summary>
     public InlineArray<BmSDK.BmGame.RStaticMeshToggleable> damageStateUnderMeshes => new(2, Ptr + 660);
 
@@ -523,7 +523,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: damageStateAnimNames
+    /// InlineArray{StructProperty}: damageStateAnimNames
     /// </summary>
     public InlineArray<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet> damageStateAnimNames => new(3, Ptr + 668);
 
@@ -562,7 +562,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: SmokeFX
+    /// InlineArray{ComponentProperty}: SmokeFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmokeFX => new(3, Ptr + 712);
 
@@ -637,7 +637,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: ballMaterials
+    /// InlineArray{ObjectProperty}: ballMaterials
     /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ballMaterials => new(2, Ptr + 740);
 

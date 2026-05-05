@@ -1063,7 +1063,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: Bolts
+    /// InlineArray{ComponentProperty}: Bolts
     /// </summary>
     public InlineArray<BmSDK.Engine.StaticMeshComponent> Bolts => new(4, Ptr + 576);
 
@@ -1101,7 +1101,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: BoltSockets
+    /// InlineArray{NameProperty}: BoltSockets
     /// </summary>
     public InlineArray<BmSDK.FName> BoltSockets => new(4, Ptr + 592);
 

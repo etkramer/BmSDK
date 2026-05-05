@@ -512,7 +512,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: OW_A_InformantFlags
+    /// InlineArray{StructProperty}: OW_A_InformantFlags
     /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_A_InformantFlags => new(16, Ptr + 228);
 
@@ -598,7 +598,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1008);
 
     /// <summary>
-    /// InlineArray<StructProperty>: OW_C_InformantFlags
+    /// InlineArray{StructProperty}: OW_C_InformantFlags
     /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_C_InformantFlags => new(16, Ptr + 1060);
 
@@ -684,7 +684,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag>(Ptr + 1840);
 
     /// <summary>
-    /// InlineArray<StructProperty>: OW_E_InformantFlags
+    /// InlineArray{StructProperty}: OW_E_InformantFlags
     /// </summary>
     public InlineArray<BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag> OW_E_InformantFlags => new(16, Ptr + 1892);
 

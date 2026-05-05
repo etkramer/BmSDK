@@ -293,7 +293,7 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: ExplosionFX
+    /// InlineArray{ComponentProperty}: ExplosionFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> ExplosionFX => new(2, Ptr + 488);
 
@@ -324,7 +324,7 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: dmgRadius
+    /// InlineArray{FloatProperty}: dmgRadius
     /// </summary>
     public InlineArray<float> dmgRadius => new(2, Ptr + 500);
 

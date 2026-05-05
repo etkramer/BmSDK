@@ -616,7 +616,7 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: ThrowDirectionTypes
+    /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
     public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 1004);
 
@@ -726,7 +726,7 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1164);
 
     /// <summary>
-    /// InlineArray<StructProperty>: ThrowOffsetPosition
+    /// InlineArray{StructProperty}: ThrowOffsetPosition
     /// </summary>
     public InlineArray<System.Numerics.Vector3> ThrowOffsetPosition => new(10, Ptr + 1176);
 

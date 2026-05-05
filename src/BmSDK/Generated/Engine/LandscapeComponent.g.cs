@@ -352,7 +352,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: Neighbors
+    /// InlineArray{ComponentProperty}: Neighbors
     /// </summary>
     public InlineArray<BmSDK.Engine.LandscapeComponent> Neighbors => new(8, Ptr + 616);
 

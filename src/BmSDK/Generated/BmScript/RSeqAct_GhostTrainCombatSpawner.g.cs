@@ -357,7 +357,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: TrainList
+    /// InlineArray{ObjectProperty}: TrainList
     /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnVillain> TrainList => new(4, Ptr + 284);
 
@@ -413,7 +413,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: Train1Cars
+    /// InlineArray{ObjectProperty}: Train1Cars
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshActor> Train1Cars => new(2, Ptr + 308);
 
@@ -435,7 +435,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: Train2Cars
+    /// InlineArray{ObjectProperty}: Train2Cars
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshActor> Train2Cars => new(2, Ptr + 316);
 

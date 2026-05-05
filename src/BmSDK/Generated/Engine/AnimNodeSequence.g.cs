@@ -655,7 +655,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: RootBoneOption
+    /// InlineArray{ByteProperty}: RootBoneOption
     /// </summary>
     public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis> RootBoneOption => new(3, Ptr + 280);
 
@@ -685,7 +685,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: RootRotationOption
+    /// InlineArray{ByteProperty}: RootRotationOption
     /// </summary>
     public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootRotationOption> RootRotationOption => new(3, Ptr + 283);
 

@@ -311,7 +311,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: StaticParameters
+    /// InlineArray{StructProperty}: StaticParameters
     /// </summary>
     public InlineArray<System.IntPtr> StaticParameters => new(2, Ptr + 120);
 
@@ -333,7 +333,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: StaticPermutationResources
+    /// InlineArray{StructProperty}: StaticPermutationResources
     /// </summary>
     public InlineArray<System.IntPtr> StaticPermutationResources => new(2, Ptr + 128);
 
@@ -355,7 +355,7 @@ public partial class MaterialInstance : BmSDK.Engine.MaterialInterface, BmSDK.IG
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: Resources
+    /// InlineArray{StructProperty}: Resources
     /// </summary>
     public InlineArray<System.IntPtr> Resources => new(3, Ptr + 136);
 

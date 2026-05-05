@@ -302,7 +302,7 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: CachedTerrainMaterials
+    /// InlineArray{StructProperty}: CachedTerrainMaterials
     /// </summary>
     public InlineArray<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray> CachedTerrainMaterials => new(2, Ptr + 556);
 

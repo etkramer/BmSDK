@@ -267,7 +267,7 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: WallPoint
+    /// InlineArray{ObjectProperty}: WallPoint
     /// </summary>
     public InlineArray<BmSDK.BmGame.RCornerWallMarkerBase> WallPoint => new(4, Ptr + 428);
 

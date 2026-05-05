@@ -1337,7 +1337,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: CurrentSideChapter
+    /// InlineArray{ByteProperty}: CurrentSideChapter
     /// </summary>
     public InlineArray<byte> CurrentSideChapter => new(26, Ptr + 232);
 
@@ -1551,7 +1551,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: CurrentSideSubChapter
+    /// InlineArray{ByteProperty}: CurrentSideSubChapter
     /// </summary>
     public InlineArray<byte> CurrentSideSubChapter => new(26, Ptr + 258);
 

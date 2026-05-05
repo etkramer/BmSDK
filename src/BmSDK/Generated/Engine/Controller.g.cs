@@ -1980,7 +1980,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: GoalList
+    /// InlineArray{ObjectProperty}: GoalList
     /// </summary>
     public InlineArray<BmSDK.Engine.Actor> GoalList => new(4, Ptr + 596);
 

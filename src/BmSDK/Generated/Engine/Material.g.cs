@@ -1011,7 +1011,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: MaterialResources
+    /// InlineArray{StructProperty}: MaterialResources
     /// </summary>
     public InlineArray<System.IntPtr> MaterialResources => new(2, Ptr + 1256);
 
@@ -1033,7 +1033,7 @@ public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObjec
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: DefaultMaterialInstances
+    /// InlineArray{StructProperty}: DefaultMaterialInstances
     /// </summary>
     public InlineArray<System.IntPtr> DefaultMaterialInstances => new(3, Ptr + 1264);
 

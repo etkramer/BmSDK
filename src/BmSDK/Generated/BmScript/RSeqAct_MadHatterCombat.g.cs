@@ -936,7 +936,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: clockSoundStartEvents
+    /// InlineArray{ObjectProperty}: clockSoundStartEvents
     /// </summary>
     public InlineArray<BmSDK.Engine.AkEvent> clockSoundStartEvents => new(4, Ptr + 432);
 
@@ -974,7 +974,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: clockSoundStopEvents
+    /// InlineArray{ObjectProperty}: clockSoundStopEvents
     /// </summary>
     public InlineArray<BmSDK.Engine.AkEvent> clockSoundStopEvents => new(4, Ptr + 448);
 

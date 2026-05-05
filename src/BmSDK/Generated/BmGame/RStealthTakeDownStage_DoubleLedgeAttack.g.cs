@@ -202,7 +202,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: AttachRope
+    /// InlineArray{ByteProperty}: AttachRope
     /// </summary>
     public InlineArray<byte> AttachRope => new(2, Ptr + 1180);
 
@@ -224,7 +224,7 @@ public partial class RStealthTakeDownStage_DoubleLedgeAttack : BmSDK.BmGame.RSte
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: RopeLength
+    /// InlineArray{FloatProperty}: RopeLength
     /// </summary>
     public InlineArray<float> RopeLength => new(2, Ptr + 1184);
 

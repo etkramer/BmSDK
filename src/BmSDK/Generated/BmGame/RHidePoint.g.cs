@@ -1188,7 +1188,7 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: LinkedHidePointsSameLevel
+    /// InlineArray{ObjectProperty}: LinkedHidePointsSameLevel
     /// </summary>
     public InlineArray<BmSDK.BmGame.RHidePoint> LinkedHidePointsSameLevel => new(6, Ptr + 744);
 
@@ -1242,7 +1242,7 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: HidePointCrossLevel
+    /// InlineArray{ByteProperty}: HidePointCrossLevel
     /// </summary>
     public InlineArray<byte> HidePointCrossLevel => new(6, Ptr + 768);
 

@@ -903,7 +903,7 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: ThrowDirectionTypes
+    /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
     public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(10, Ptr + 1080);
 

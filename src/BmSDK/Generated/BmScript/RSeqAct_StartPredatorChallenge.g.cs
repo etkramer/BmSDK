@@ -250,7 +250,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: ActualChallengeActions
+    /// InlineArray{ByteProperty}: ActualChallengeActions
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ActualChallengeActions => new(3, Ptr + 268);
 
@@ -280,7 +280,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: ChallengeActions
+    /// InlineArray{ByteProperty}: ChallengeActions
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> ChallengeActions => new(3, Ptr + 271);
 
@@ -310,7 +310,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: CWChallengeActions
+    /// InlineArray{ByteProperty}: CWChallengeActions
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CWChallengeActions => new(3, Ptr + 274);
 
@@ -340,7 +340,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: CoopChallengeActions
+    /// InlineArray{ByteProperty}: CoopChallengeActions
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> CoopChallengeActions => new(3, Ptr + 277);
 

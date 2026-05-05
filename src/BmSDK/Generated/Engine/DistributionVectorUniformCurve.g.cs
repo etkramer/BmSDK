@@ -112,7 +112,7 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: LockedAxes
+    /// InlineArray{ByteProperty}: LockedAxes
     /// </summary>
     public InlineArray<BmSDK.DistributionVector.EDistributionVectorLockFlags> LockedAxes => new(2, Ptr + 84);
 
@@ -134,7 +134,7 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: MirrorFlags
+    /// InlineArray{ByteProperty}: MirrorFlags
     /// </summary>
     public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 86);
 

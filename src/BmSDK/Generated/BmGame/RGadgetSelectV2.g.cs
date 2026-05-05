@@ -208,7 +208,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: UpOffset
+    /// InlineArray{StructProperty}: UpOffset
     /// </summary>
     public InlineArray<System.Numerics.Vector2> UpOffset => new(8, Ptr + 84);
 
@@ -254,7 +254,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 140);
 
     /// <summary>
-    /// InlineArray<StructProperty>: DownOffset
+    /// InlineArray{StructProperty}: DownOffset
     /// </summary>
     public InlineArray<System.Numerics.Vector2> DownOffset => new(5, Ptr + 148);
 
@@ -285,7 +285,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 180);
 
     /// <summary>
-    /// InlineArray<IntProperty>: UpSelectIndex
+    /// InlineArray{IntProperty}: UpSelectIndex
     /// </summary>
     public InlineArray<int> UpSelectIndex => new(9, Ptr + 188);
 
@@ -363,7 +363,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: DownSelectIndex
+    /// InlineArray{IntProperty}: DownSelectIndex
     /// </summary>
     public InlineArray<int> DownSelectIndex => new(9, Ptr + 224);
 
@@ -486,7 +486,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 304);
 
     /// <summary>
-    /// InlineArray<StructProperty>: CurrentOffset
+    /// InlineArray{StructProperty}: CurrentOffset
     /// </summary>
     public InlineArray<System.Numerics.Vector2> CurrentOffset => new(8, Ptr + 312);
 
@@ -532,7 +532,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 368);
 
     /// <summary>
-    /// InlineArray<NameProperty>: CurrentGadgets
+    /// InlineArray{NameProperty}: CurrentGadgets
     /// </summary>
     public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 376);
 
@@ -602,7 +602,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: CurrentExtraGadgets
+    /// InlineArray{NameProperty}: CurrentExtraGadgets
     /// </summary>
     public InlineArray<BmSDK.FName> CurrentExtraGadgets => new(8, Ptr + 440);
 
@@ -672,7 +672,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: CurrentAllowSubClasses
+    /// InlineArray{ByteProperty}: CurrentAllowSubClasses
     /// </summary>
     public InlineArray<byte> CurrentAllowSubClasses => new(8, Ptr + 504);
 
@@ -751,7 +751,7 @@ public partial class RGadgetSelectV2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: CurrentSelectIndex
+    /// InlineArray{IntProperty}: CurrentSelectIndex
     /// </summary>
     public InlineArray<int> CurrentSelectIndex => new(9, Ptr + 516);
 

@@ -2232,7 +2232,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: ActiveModifiers
+    /// InlineArray{ByteProperty}: ActiveModifiers
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameInfo.EChallengeModifierType> ActiveModifiers => new(8, Ptr + 512);
 
@@ -3166,7 +3166,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: PlayerCharacters
+    /// InlineArray{StructProperty}: PlayerCharacters
     /// </summary>
     public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter> PlayerCharacters => new(8, Ptr + 1100);
 

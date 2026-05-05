@@ -107,7 +107,7 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
-    /// InlineArray<ByteProperty>: ParamModes
+    /// InlineArray{ByteProperty}: ParamModes
     /// </summary>
     public InlineArray<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode> ParamModes => new(3, Ptr + 140);
 

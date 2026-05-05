@@ -6012,7 +6012,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: UpAllowSubClasses
+    /// InlineArray{ByteProperty}: UpAllowSubClasses
     /// </summary>
     public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 2540);
 
@@ -6082,7 +6082,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ByteProperty>: DownAllowSubClasses
+    /// InlineArray{ByteProperty}: DownAllowSubClasses
     /// </summary>
     public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 2548);
 
@@ -6638,7 +6638,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FRailingInfo>(Ptr + 3432);
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: LandMoves
+    /// InlineArray{ObjectProperty}: LandMoves
     /// </summary>
     public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 3456);
 
@@ -7079,7 +7079,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: ControllerHistory
+    /// InlineArray{StructProperty}: ControllerHistory
     /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnPlayer.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 3820);
 
@@ -7360,7 +7360,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ClassProperty>: TakeDowns
+    /// InlineArray{ClassProperty}: TakeDowns
     /// </summary>
     public InlineArray<BmSDK.Class> TakeDowns => new(34, Ptr + 4188);
 
@@ -7746,7 +7746,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: SpawnedProjectiles
+    /// InlineArray{ObjectProperty}: SpawnedProjectiles
     /// </summary>
     public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4372);
 
@@ -7875,7 +7875,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: UpGadgets
+    /// InlineArray{NameProperty}: UpGadgets
     /// </summary>
     public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 4452);
 
@@ -7945,7 +7945,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: DoubleUpGadgets
+    /// InlineArray{NameProperty}: DoubleUpGadgets
     /// </summary>
     public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 4516);
 
@@ -8015,7 +8015,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: DownGadgets
+    /// InlineArray{NameProperty}: DownGadgets
     /// </summary>
     public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 4580);
 
@@ -8061,7 +8061,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: ExtraCollision
+    /// InlineArray{StructProperty}: ExtraCollision
     /// </summary>
     public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 4620);
 
@@ -8091,7 +8091,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: OverheadRopeControlPoint
+    /// InlineArray{ObjectProperty}: OverheadRopeControlPoint
     /// </summary>
     public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4672);
 
@@ -8137,7 +8137,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: OverheadRopeControlPointRopePosition
+    /// InlineArray{FloatProperty}: OverheadRopeControlPointRopePosition
     /// </summary>
     public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 4692);
 
@@ -8183,7 +8183,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: OverheadRopeControlPointSocketNames
+    /// InlineArray{NameProperty}: OverheadRopeControlPointSocketNames
     /// </summary>
     public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 4712);
 
@@ -8295,7 +8295,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: GadgetList
+    /// InlineArray{ObjectProperty}: GadgetList
     /// </summary>
     public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5000);
 
@@ -9181,7 +9181,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 5496);
 
     /// <summary>
-    /// InlineArray<IntProperty>: QuickGadgets
+    /// InlineArray{IntProperty}: QuickGadgets
     /// </summary>
     public InlineArray<int> QuickGadgets => new(5, Ptr + 5640);
 

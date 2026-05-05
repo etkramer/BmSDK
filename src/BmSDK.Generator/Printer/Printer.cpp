@@ -427,7 +427,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     if (!isInStruct && prop->ArrayDim > 1)
     {
         Printer::Indent(out) << "/// <summary>" << endl;
-        Printer::Indent(out) << "/// InlineArray<" << prop->Class->GetName() << ">: " << prop->GetName() << endl;
+        Printer::Indent(out) << "/// InlineArray{" << prop->Class->GetName() << "}: " << prop->GetName() << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
 
         Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "

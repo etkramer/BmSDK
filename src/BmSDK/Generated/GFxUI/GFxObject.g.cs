@@ -1635,7 +1635,7 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: Value
+    /// InlineArray{IntProperty}: Value
     /// </summary>
     public InlineArray<int> Value => new(12, Ptr + 44);
 

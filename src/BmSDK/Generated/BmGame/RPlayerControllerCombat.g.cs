@@ -3361,7 +3361,7 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: MoveTypeCount
+    /// InlineArray{IntProperty}: MoveTypeCount
     /// </summary>
     public InlineArray<int> MoveTypeCount => new(56, Ptr + 4676);
 
@@ -3815,7 +3815,7 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: ComboMoveType
+    /// InlineArray{IntProperty}: ComboMoveType
     /// </summary>
     public InlineArray<int> ComboMoveType => new(56, Ptr + 4900);
 
@@ -4269,7 +4269,7 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: GadgetMoveType
+    /// InlineArray{IntProperty}: GadgetMoveType
     /// </summary>
     public InlineArray<int> GadgetMoveType => new(56, Ptr + 5124);
 
@@ -4723,7 +4723,7 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: SavedComboMoveType
+    /// InlineArray{IntProperty}: SavedComboMoveType
     /// </summary>
     public InlineArray<int> SavedComboMoveType => new(56, Ptr + 5348);
 

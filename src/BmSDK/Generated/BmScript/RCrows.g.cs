@@ -257,7 +257,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: AnimNodes
+    /// InlineArray{ObjectProperty}: AnimNodes
     /// </summary>
     public InlineArray<BmSDK.Engine.AnimNodeSequence> AnimNodes => new(3, Ptr + 480);
 
@@ -287,7 +287,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: startingLoc
+    /// InlineArray{StructProperty}: startingLoc
     /// </summary>
     public InlineArray<System.Numerics.Vector3> startingLoc => new(3, Ptr + 492);
 
@@ -308,7 +308,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
-    /// InlineArray<StructProperty>: startingRot
+    /// InlineArray{StructProperty}: startingRot
     /// </summary>
     public InlineArray<BmSDK.Rotator> startingRot => new(3, Ptr + 528);
 
@@ -329,7 +329,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 552);
 
     /// <summary>
-    /// InlineArray<IntProperty>: bReadyForTakeoff
+    /// InlineArray{IntProperty}: bReadyForTakeoff
     /// </summary>
     public InlineArray<int> bReadyForTakeoff => new(3, Ptr + 564);
 
@@ -359,7 +359,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: bFinishedTakeOff
+    /// InlineArray{IntProperty}: bFinishedTakeOff
     /// </summary>
     public InlineArray<int> bFinishedTakeOff => new(3, Ptr + 576);
 
@@ -410,7 +410,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
-    /// InlineArray<StructProperty>: trueFlightVelocity
+    /// InlineArray{StructProperty}: trueFlightVelocity
     /// </summary>
     public InlineArray<System.Numerics.Vector3> trueFlightVelocity => new(3, Ptr + 616);
 
@@ -437,7 +437,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: MaterialConstants
+    /// InlineArray{ObjectProperty}: MaterialConstants
     /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInstanceConstant> MaterialConstants => new(3, Ptr + 664);
 

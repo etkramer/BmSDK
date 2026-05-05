@@ -612,7 +612,7 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: WakeOffsets
+    /// InlineArray{StructProperty}: WakeOffsets
     /// </summary>
     public InlineArray<System.Numerics.Vector3> WakeOffsets => new(4, Ptr + 1096);
 
@@ -638,7 +638,7 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
 
     /// <summary>
-    /// InlineArray<FloatProperty>: WakeScales
+    /// InlineArray{FloatProperty}: WakeScales
     /// </summary>
     public InlineArray<float> WakeScales => new(4, Ptr + 1144);
 
@@ -676,7 +676,7 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: WakeEmitterTypes
+    /// InlineArray{IntProperty}: WakeEmitterTypes
     /// </summary>
     public InlineArray<int> WakeEmitterTypes => new(4, Ptr + 1160);
 
@@ -714,7 +714,7 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: WakeEmitters
+    /// InlineArray{ObjectProperty}: WakeEmitters
     /// </summary>
     public InlineArray<BmSDK.Engine.Emitter> WakeEmitters => new(4, Ptr + 1176);
 

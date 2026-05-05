@@ -915,7 +915,7 @@ public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled,
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: WallForces
+    /// InlineArray{StructProperty}: WallForces
     /// </summary>
     public InlineArray<System.Numerics.Vector3> WallForces => new(4, Ptr + 444);
 

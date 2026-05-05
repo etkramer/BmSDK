@@ -2643,7 +2643,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: GrundyMesh
+    /// InlineArray{ComponentProperty}: GrundyMesh
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> GrundyMesh => new(2, Ptr + 7124);
 
@@ -2683,7 +2683,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: ChestMesh
+    /// InlineArray{ComponentProperty}: ChestMesh
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ChestMesh => new(2, Ptr + 7140);
 
@@ -2705,7 +2705,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: HeartMesh
+    /// InlineArray{ComponentProperty}: HeartMesh
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartMesh => new(2, Ptr + 7148);
 
@@ -2727,7 +2727,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: HeartDettachedMesh
+    /// InlineArray{ComponentProperty}: HeartDettachedMesh
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartDettachedMesh => new(2, Ptr + 7156);
 
@@ -2749,7 +2749,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: RibsMeshes
+    /// InlineArray{ComponentProperty}: RibsMeshes
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> RibsMeshes => new(4, Ptr + 7164);
 
@@ -2910,7 +2910,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: chainExtraLength
+    /// InlineArray{FloatProperty}: chainExtraLength
     /// </summary>
     public InlineArray<float> chainExtraLength => new(2, Ptr + 7240);
 
@@ -3436,7 +3436,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: TetherPoints
+    /// InlineArray{ObjectProperty}: TetherPoints
     /// </summary>
     public InlineArray<BmSDK.Engine.Actor> TetherPoints => new(2, Ptr + 7300);
 
@@ -3548,7 +3548,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: FireOnBallsPFX
+    /// InlineArray{ComponentProperty}: FireOnBallsPFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> FireOnBallsPFX => new(2, Ptr + 7356);
 
@@ -3570,7 +3570,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: ElectricityOnBallsPFX
+    /// InlineArray{ComponentProperty}: ElectricityOnBallsPFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> ElectricityOnBallsPFX => new(2, Ptr + 7364);
 
@@ -3613,7 +3613,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: ChainWrapBoneNames
+    /// InlineArray{NameProperty}: ChainWrapBoneNames
     /// </summary>
     public InlineArray<BmSDK.FName> ChainWrapBoneNames => new(2, Ptr + 7532);
 
@@ -3644,7 +3644,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<NameProperty>: GeneratorHitReacts
+    /// InlineArray{NameProperty}: GeneratorHitReacts
     /// </summary>
     public InlineArray<BmSDK.FName> GeneratorHitReacts => new(2, Ptr + 7552);
 
@@ -3717,7 +3717,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: floorRingSpeed
+    /// InlineArray{FloatProperty}: floorRingSpeed
     /// </summary>
     public InlineArray<float> floorRingSpeed => new(3, Ptr + 7592);
 
@@ -3909,7 +3909,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: FloorRingPFX
+    /// InlineArray{ComponentProperty}: FloorRingPFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorRingPFX => new(8, Ptr + 7676);
 
@@ -4057,7 +4057,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: crushDPS
+    /// InlineArray{FloatProperty}: crushDPS
     /// </summary>
     public InlineArray<float> crushDPS => new(3, Ptr + 7760);
 
@@ -4417,7 +4417,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: swingSpeedPadModifier
+    /// InlineArray{FloatProperty}: swingSpeedPadModifier
     /// </summary>
     public InlineArray<float> swingSpeedPadModifier => new(3, Ptr + 7936);
 
@@ -4510,7 +4510,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: electricPillars
+    /// InlineArray{StructProperty}: electricPillars
     /// </summary>
     public InlineArray<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX> electricPillars => new(3, Ptr + 7976);
 
@@ -4657,7 +4657,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: conductorCurrentRotationRate
+    /// InlineArray{FloatProperty}: conductorCurrentRotationRate
     /// </summary>
     public InlineArray<float> conductorCurrentRotationRate => new(3, Ptr + 8196);
 
@@ -4750,7 +4750,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<FloatProperty>: stage3PillarOffTime
+    /// InlineArray{FloatProperty}: stage3PillarOffTime
     /// </summary>
     public InlineArray<float> stage3PillarOffTime => new(3, Ptr + 8236);
 
@@ -4834,7 +4834,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: bPadCogsOn
+    /// InlineArray{IntProperty}: bPadCogsOn
     /// </summary>
     public InlineArray<int> bPadCogsOn => new(3, Ptr + 8280);
 
@@ -4972,7 +4972,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: OverloadExplodeFX
+    /// InlineArray{ObjectProperty}: OverloadExplodeFX
     /// </summary>
     public InlineArray<BmSDK.Engine.Emitter> OverloadExplodeFX => new(3, Ptr + 8340);
 
@@ -5308,7 +5308,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: deathVolOffsets
+    /// InlineArray{StructProperty}: deathVolOffsets
     /// </summary>
     public InlineArray<System.Numerics.Vector3> deathVolOffsets => new(4, Ptr + 8512);
 
@@ -5334,7 +5334,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
         => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8548);
 
     /// <summary>
-    /// InlineArray<StructProperty>: deathVolOffsetRots
+    /// InlineArray{StructProperty}: deathVolOffsetRots
     /// </summary>
     public InlineArray<BmSDK.Rotator> deathVolOffsetRots => new(4, Ptr + 8560);
 
@@ -5543,7 +5543,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: hardCodedSmashReturnOffsets
+    /// InlineArray{StructProperty}: hardCodedSmashReturnOffsets
     /// </summary>
     public InlineArray<System.Numerics.Vector3> hardCodedSmashReturnOffsets => new(2, Ptr + 8708);
 

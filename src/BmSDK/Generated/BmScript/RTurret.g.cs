@@ -626,7 +626,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: MuzzleFlashFx
+    /// InlineArray{ComponentProperty}: MuzzleFlashFx
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 704);
 
@@ -656,7 +656,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: BulletTrailFX
+    /// InlineArray{ComponentProperty}: BulletTrailFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 716);
 
@@ -686,7 +686,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: ImpactFX
+    /// InlineArray{ComponentProperty}: ImpactFX
     /// </summary>
     public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 728);
 
@@ -827,7 +827,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ObjectProperty>: XrayMats
+    /// InlineArray{ObjectProperty}: XrayMats
     /// </summary>
     public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 808);
 
@@ -857,7 +857,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     }
 
     /// <summary>
-    /// InlineArray<ComponentProperty>: allMeshes
+    /// InlineArray{ComponentProperty}: allMeshes
     /// </summary>
     public InlineArray<BmSDK.Engine.SkeletalMeshComponent> allMeshes => new(3, Ptr + 820);
 

@@ -97,7 +97,7 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// InlineArray<IntProperty>: Subdivisions
+    /// InlineArray{IntProperty}: Subdivisions
     /// </summary>
     public InlineArray<int> Subdivisions => new(3, Ptr + 488);
 

@@ -307,7 +307,7 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     }
 
     /// <summary>
-    /// InlineArray<StructProperty>: AvailableGadgets
+    /// InlineArray{StructProperty}: AvailableGadgets
     /// </summary>
     public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> AvailableGadgets => new(4, Ptr + 476);
 
@@ -333,7 +333,7 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 512);
 
     /// <summary>
-    /// InlineArray<StructProperty>: BatarangGadgets
+    /// InlineArray{StructProperty}: BatarangGadgets
     /// </summary>
     public InlineArray<BmSDK.BmGame.RInventoryManager.FGadgetDirection> BatarangGadgets => new(4, Ptr + 524);
 
