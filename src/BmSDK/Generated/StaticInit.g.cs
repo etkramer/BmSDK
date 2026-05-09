@@ -6495,10 +6495,10 @@ internal static partial class StaticInit
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RGargoyleBomb)] = "BmScript.RGargoyleBomb";
         _classPathToManagedTypeMap["BmScript.RHidePoint_Gargoyle"] = typeof(BmSDK.BmScript.RHidePoint_Gargoyle);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RHidePoint_Gargoyle)] = "BmScript.RHidePoint_Gargoyle";
-        _classPathToManagedTypeMap["BmScript.RLadder"] = typeof(BmSDK.BmScript.RLadder);
-        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder)] = "BmScript.RLadder";
-        _classPathToManagedTypeMap["BmScript.RLadder"] = typeof(BmSDK.BmScript.RLadder);
-        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder)] = "BmScript.RLadder";
+        _classPathToManagedTypeMap["BmScript.RLadder_384"] = typeof(BmSDK.BmScript.RLadder_384);
+        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder_384)] = "BmScript.RLadder_384";
+        _classPathToManagedTypeMap["BmScript.RLadder_512"] = typeof(BmSDK.BmScript.RLadder_512);
+        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder_512)] = "BmScript.RLadder_512";
         _classPathToManagedTypeMap["BmScript.RLiftBrakeSwitch"] = typeof(BmSDK.BmScript.RLiftBrakeSwitch);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLiftBrakeSwitch)] = "BmScript.RLiftBrakeSwitch";
         _classPathToManagedTypeMap["BmScript.RPawnVillainGun"] = typeof(BmSDK.BmScript.RPawnVillainGun);

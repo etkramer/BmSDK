@@ -3233,16 +3233,16 @@ public partial class GameObject : BmSDK.IGameObject
     public partial record struct FRChannel32
     {
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_0
         /// </summary>
-        public unsafe bool Channel
+        public unsafe bool Channel_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_1
         /// </summary>
         public unsafe bool Channel_1
         {
@@ -3251,7 +3251,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_2
         /// </summary>
         public unsafe bool Channel_2
         {
@@ -3260,7 +3260,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_3
         /// </summary>
         public unsafe bool Channel_3
         {
@@ -3269,7 +3269,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_4
         /// </summary>
         public unsafe bool Channel_4
         {
@@ -3278,7 +3278,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_5
         /// </summary>
         public unsafe bool Channel_5
         {
@@ -3287,7 +3287,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_6
         /// </summary>
         public unsafe bool Channel_6
         {
@@ -3296,7 +3296,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_7
         /// </summary>
         public unsafe bool Channel_7
         {
@@ -3305,7 +3305,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_8
         /// </summary>
         public unsafe bool Channel_8
         {
@@ -3314,7 +3314,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_9
         /// </summary>
         public unsafe bool Channel_9
         {
@@ -3323,7 +3323,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_10
         /// </summary>
         public unsafe bool Channel_10
         {
@@ -3332,7 +3332,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_11
         /// </summary>
         public unsafe bool Channel_11
         {
@@ -3341,7 +3341,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_12
         /// </summary>
         public unsafe bool Channel_12
         {
@@ -3350,7 +3350,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_13
         /// </summary>
         public unsafe bool Channel_13
         {
@@ -3359,7 +3359,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_14
         /// </summary>
         public unsafe bool Channel_14
         {
@@ -3368,7 +3368,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_15
         /// </summary>
         public unsafe bool Channel_15
         {
@@ -3377,7 +3377,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_16
         /// </summary>
         public unsafe bool Channel_16
         {
@@ -3386,7 +3386,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_17
         /// </summary>
         public unsafe bool Channel_17
         {
@@ -3395,7 +3395,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_18
         /// </summary>
         public unsafe bool Channel_18
         {
@@ -3404,7 +3404,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_19
         /// </summary>
         public unsafe bool Channel_19
         {
@@ -3413,7 +3413,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_20
         /// </summary>
         public unsafe bool Channel_20
         {
@@ -3422,7 +3422,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_21
         /// </summary>
         public unsafe bool Channel_21
         {
@@ -3431,7 +3431,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_22
         /// </summary>
         public unsafe bool Channel_22
         {
@@ -3440,7 +3440,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_23
         /// </summary>
         public unsafe bool Channel_23
         {
@@ -3449,7 +3449,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_24
         /// </summary>
         public unsafe bool Channel_24
         {
@@ -3458,7 +3458,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_25
         /// </summary>
         public unsafe bool Channel_25
         {
@@ -3467,7 +3467,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_26
         /// </summary>
         public unsafe bool Channel_26
         {
@@ -3476,7 +3476,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_27
         /// </summary>
         public unsafe bool Channel_27
         {
@@ -3485,7 +3485,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_28
         /// </summary>
         public unsafe bool Channel_28
         {
@@ -3494,7 +3494,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_29
         /// </summary>
         public unsafe bool Channel_29
         {
@@ -3503,7 +3503,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_30
         /// </summary>
         public unsafe bool Channel_30
         {
@@ -3512,7 +3512,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_31
         /// </summary>
         public unsafe bool Channel_31
         {
@@ -3528,16 +3528,16 @@ public partial class GameObject : BmSDK.IGameObject
     public partial record struct FRChannel8
     {
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_0
         /// </summary>
-        public unsafe bool Channel
+        public unsafe bool Channel_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_1
         /// </summary>
         public unsafe bool Channel_1
         {
@@ -3546,7 +3546,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_2
         /// </summary>
         public unsafe bool Channel_2
         {
@@ -3555,7 +3555,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_3
         /// </summary>
         public unsafe bool Channel_3
         {
@@ -3564,7 +3564,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_4
         /// </summary>
         public unsafe bool Channel_4
         {
@@ -3573,7 +3573,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_5
         /// </summary>
         public unsafe bool Channel_5
         {
@@ -3582,7 +3582,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_6
         /// </summary>
         public unsafe bool Channel_6
         {
@@ -3591,7 +3591,7 @@ public partial class GameObject : BmSDK.IGameObject
         }
 
         /// <summary>
-        /// BoolProperty: Channel
+        /// BoolProperty: Channel_7
         /// </summary>
         public unsafe bool Channel_7
         {

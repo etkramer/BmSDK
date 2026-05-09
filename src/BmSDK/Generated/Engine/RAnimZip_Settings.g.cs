@@ -467,10 +467,10 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public enum EAnimZipTranslationScaleCodec : byte
     {
-        AZTSC_Float = 0,
-        AZTSC_NoScale_Float = 1,
-        AZTSC_NoScale_Interval_Fixed = 2,
-        AZTSC_NoScale_Interval_Fixed_2 = 3,
+        AZTSC_Float_128 = 0,
+        AZTSC_NoScale_Float_96 = 1,
+        AZTSC_NoScale_Interval_Fixed_48 = 2,
+        AZTSC_NoScale_Interval_Fixed_24 = 3,
         AZTSC_MAX = 4,
     }
 
@@ -479,13 +479,13 @@ public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public enum EAnimZipRotationCodec : byte
     {
-        AZRC_QuatMax = 0,
-        AZRC_QuatMax_2 = 1,
-        AZRC_QuatRelative = 2,
-        AZRC_QuatRelative_2 = 3,
-        AZRC_QuatRelative_3 = 4,
-        AZRC_FixedAxis = 5,
-        AZRC_FixedAxis_2 = 6,
+        AZRC_QuatMax_48 = 0,
+        AZRC_QuatMax_40 = 1,
+        AZRC_QuatRelative_32 = 2,
+        AZRC_QuatRelative_24 = 3,
+        AZRC_QuatRelative_16 = 4,
+        AZRC_FixedAxis_16 = 5,
+        AZRC_FixedAxis_8 = 6,
         AZRC_MAX = 7,
     }
 

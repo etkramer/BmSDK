@@ -79,7 +79,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     public enum ENavMeshGroup : byte
     {
         NavMeshGroup_All = 0,
-        NavMeshGroup = 1,
+        NavMeshGroup_1 = 1,
         NavMeshGroup_1a = 2,
         NavMeshGroup_1b = 3,
         NavMeshGroup_1c = 4,
@@ -112,7 +112,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         NavMeshGroup_8b = 31,
         NavMeshGroup_8c = 32,
         NavMeshGroup_9 = 33,
-        NavMeshGroup_10 = 34,
+        NavMeshGroup_0 = 34,
         NavMeshGroup_MAX = 35,
     }
 
@@ -122,7 +122,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     public enum ELightingGroup : byte
     {
         LightingGroup_All = 0,
-        LightingGroup = 1,
+        LightingGroup_1 = 1,
         LightingGroup_2 = 2,
         LightingGroup_3 = 3,
         LightingGroup_4 = 4,
@@ -131,7 +131,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         LightingGroup_7 = 7,
         LightingGroup_8 = 8,
         LightingGroup_9 = 9,
-        LightingGroup_10 = 10,
+        LightingGroup_0 = 10,
         LightingGroup_MAX = 11,
     }
 

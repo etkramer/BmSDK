@@ -2365,8 +2365,8 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// </summary>
     public enum eGrundyVeinColourScheme : byte
     {
-        eGVCS = 0,
-        eGVCS_2 = 1,
+        eGVCS_0 = 0,
+        eGVCS_1 = 1,
         eGVCS_Health = 2,
         eGVCS_Charging = 3,
         eGVCS_MAX = 4,

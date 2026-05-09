@@ -1066,9 +1066,9 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public enum EListenerID : byte
     {
-        AK_LISTENER_PLAYER = 0,
-        AK_LISTENER_CAMERA = 1,
-        AK_LISTENER_COMPOSITE = 2,
+        AK_LISTENER_PLAYER_1 = 0,
+        AK_LISTENER_CAMERA_1 = 1,
+        AK_LISTENER_COMPOSITE_1 = 2,
         AK_LISTENER_MAX = 3,
     }
 
