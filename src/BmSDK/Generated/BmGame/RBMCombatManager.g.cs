@@ -2221,7 +2221,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         WEAPONCONFIG_PredatorRifle = 13,
         WEAPONCONFIG_PredatorShotgun = 14,
         WEAPONCONFIG_LitePredatorRifle = 15,
-        WEAPONCONFIG_CrowdCourtB1 = 16,
+        WEAPONCONFIG_CrowdCourtB1_1 = 16,
         WEAPONCONFIG_CrowdCourtB1_2 = 17,
         WEAPONCONFIG_CrowdCourtB1_3 = 18,
         WEAPONCONFIG_CrowdCourtB1_4 = 19,

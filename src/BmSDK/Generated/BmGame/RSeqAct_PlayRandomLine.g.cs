@@ -123,7 +123,7 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
     public enum WhichSpeaker : byte
     {
         Speaker_Any = 0,
-        Speaker_Thug = 1,
+        Speaker_Thug_1 = 1,
         Speaker_Thug_2 = 2,
         Speaker_Thug_3 = 3,
         Speaker_Thug_4 = 4,

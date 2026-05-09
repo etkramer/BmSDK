@@ -4,78 +4,78 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RLadder<br/>
+/// Class: RLadder_512<br/>
 /// (size = 560)
 /// (flags = 8389138)
 /// </summary>
-public partial class RLadder : BmSDK.BmGame.RLadder, BmSDK.IGameObject
+public partial class RLadder_512 : BmSDK.BmGame.RLadder, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
     {
         if (s_staticClass is null)
         {
-            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmScript.RLadder", false);
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmScript.RLadder_512", false);
             s_staticClass.AddToRoot();
         }
         return s_staticClass;
     }
 
     /// <summary>
-    /// Gets the class default object as RLadder.
+    /// Gets the class default object as RLadder_512.
     /// </summary>
-    public static RLadder DefaultObject => (RLadder)StaticClass().DefaultObject;
+    public static RLadder_512 DefaultObject => (RLadder_512)StaticClass().DefaultObject;
 
-    internal RLadder() { }
+    internal RLadder_512() { }
 
     /// <summary>
-    /// Constructs a new RLadder
+    /// Constructs a new RLadder_512
     /// </summary>
-    public RLadder(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
+    public RLadder_512(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    protected RLadder(nint ptr) : base(ptr) { }
+    protected RLadder_512(nint ptr) : base(ptr) { }
 
     /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
     /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
-        where TComponent : class, Framework.IScriptComponent<RLadder>, new()
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>, new()
         => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
     /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
     /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
     /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
     /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
     public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
 
     /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
     /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
     public void DetachScriptComponents<TComponent>()
-        where TComponent : class, Framework.IScriptComponent<RLadder>
+        where TComponent : class, Framework.IScriptComponent<RLadder_512>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
 }

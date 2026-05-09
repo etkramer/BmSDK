@@ -687,7 +687,7 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     public enum EInputPlatformType : byte
     {
         IPT_PC = 0,
-        IPT = 1,
+        IPT_360 = 1,
         IPT_PS3 = 2,
         IPT_MAX = 3,
     }

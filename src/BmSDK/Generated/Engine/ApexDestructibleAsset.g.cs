@@ -423,16 +423,16 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_0
         /// </summary>
-        public unsafe bool USER_FLAG
+        public unsafe bool USER_FLAG_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 16) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_1
         /// </summary>
         public unsafe bool USER_FLAG_1
         {
@@ -441,7 +441,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_2
         /// </summary>
         public unsafe bool USER_FLAG_2
         {
@@ -450,7 +450,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_3
         /// </summary>
         public unsafe bool USER_FLAG_3
         {

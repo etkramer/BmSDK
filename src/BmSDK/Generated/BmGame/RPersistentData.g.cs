@@ -3168,7 +3168,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     public enum EBatmanChallenge : byte
     {
         EBatChal_None = 0,
-        EBatChal = 1,
+        EBatChal_1 = 1,
         EBatChal_2 = 2,
         EBatChal_3 = 3,
         EBatChal_4 = 4,
@@ -3473,7 +3473,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         ConceptArt_Wondercity_reveal = 74,
         ConceptArt_Mechanical_Guardian_poster = 75,
         ConceptArt_Wondercity_robot = 76,
-        ConceptArt_Lazarus_pit = 77,
+        ConceptArt_Lazarus_pit_1 = 77,
         ConceptArt_Desert = 78,
         ConceptArt_H_Strange_tower = 79,
         ConceptArt_Theater = 80,
