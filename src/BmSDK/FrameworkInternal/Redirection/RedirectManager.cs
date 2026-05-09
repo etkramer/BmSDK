@@ -92,7 +92,7 @@ internal static class RedirectManager
             {
                 // Call redirect if exists
                 var redir = lastCall.NextRedirect();
-                if (redir != null)
+                if (redir is not null)
                 {
                     redir.Run(selfObj, funcObj, stackPtr, Result);
                     return true;
@@ -100,9 +100,11 @@ internal static class RedirectManager
                 // Call base implementation only once after redirects
                 else if (lastCall.TargetFunc != funcObj)
                 {
-                    stackPtr->Node = lastCall.TargetFunc.Ptr;
+                    lastCall.RunOriginal(stackPtr, Result);
+                    return true;
                 }
 
+                // Let base implementation run from RunOriginal call
                 return false;
             }
         }

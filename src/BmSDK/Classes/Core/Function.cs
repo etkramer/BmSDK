@@ -44,4 +44,11 @@ public partial class Function
                 && !prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
             );
     }
+
+    public Property? GetReturnParam() =>
+        EnumerateFields()
+            .OfType<Property>()
+            .FirstOrDefault(prop =>
+                prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
+            );
 }

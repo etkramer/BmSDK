@@ -111,4 +111,37 @@ internal sealed record RedirectCall(
 
     public IGenericRedirect? NextRedirect() =>
         _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
+
+    public unsafe void RunOriginal(FFrame* stackPtr, IntPtr result)
+    {
+        // Copy over args to new buffer for call to original function
+        var paramsSize = TargetFunc.EnumerateParams().Sum(p => p.ElementSize);
+        var argsPtr = stackalloc byte[TargetFunc.PropertiesSize];
+        Buffer.MemoryCopy(
+            stackPtr->Locals.ToPointer(),
+            argsPtr,
+            paramsSize,
+            paramsSize
+        );
+
+        // Call the actual target function and not an override
+        GameFunctions.ProcessEvent(
+            TargetObj.Ptr,
+            TargetFunc.Ptr,
+            (IntPtr)argsPtr,
+            IntPtr.Zero
+        );
+
+        // If there is a return value, pass it through
+        var returnField = TargetFunc.GetReturnParam();
+        if (returnField is not null)
+        {
+            Buffer.MemoryCopy(
+                argsPtr + returnField.Offset,
+                result.ToPointer(),
+                returnField.ElementSize,
+                returnField.ElementSize
+            );
+        }
+    }
 }
