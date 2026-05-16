@@ -8,7 +8,5 @@ public class ModTemplateScript : Script
     public override void Main()
     {
         Debug.Log("Hello from ModTemplate!");
-
-        compilerror
     }
 }
