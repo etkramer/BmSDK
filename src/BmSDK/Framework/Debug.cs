@@ -14,21 +14,7 @@ public static class Debug
         [CallerFilePath] string? callerFilePath = null
     )
     {
-        var msgText = msg?.ToString() ?? "null";
-
-        if (skipSender)
-        {
-            Trace.WriteLine(msg);
-            return;
-        }
-
-        // Get sender, else fall back to the source file name.
-        if (!s_senderStack.TryPeek(out var sender))
-        {
-            sender = callerFilePath is null ? "UNKNOWN" : Path.GetFileName(callerFilePath);
-        }
-
-        Trace.WriteLine($"{sender}: {msgText}");
+        Trace.WriteLine(FormatLine(msg, skipSender, callerFilePath));
     }
 
     public static void LogWarning(
@@ -48,9 +34,29 @@ public static class Debug
         [CallerFilePath] string? callerFilePath = null
     )
     {
+        var line = FormatLine(msg, skipSender, callerFilePath);
+        ErrorOverlay.Add(line);
+
         Console.ForegroundColor = ConsoleColor.Red;
-        Log(msg, skipSender, callerFilePath);
+        Trace.WriteLine(line);
         Console.ForegroundColor = s_defaultColor;
+    }
+
+    private static string FormatLine(object? msg, bool skipSender, string? callerFilePath)
+    {
+        var msgText = msg?.ToString() ?? "null";
+        if (skipSender)
+        {
+            return msgText;
+        }
+
+        // Get sender, else fall back to the source file name.
+        if (!s_senderStack.TryPeek(out var sender))
+        {
+            sender = callerFilePath is null ? "UNKNOWN" : Path.GetFileName(callerFilePath);
+        }
+
+        return $"{sender}: {msgText}";
     }
 
     internal static void PushSender(string sender)

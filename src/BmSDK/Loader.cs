@@ -42,6 +42,9 @@ internal static class Loader
         // Find/load scripts
         ScriptManager.Init();
 
+        // Register BmSDK's internal redirectors.
+        RedirectManager.Global.RegisterRedirectors(typeof(Loader).Assembly);
+
         // Create function detours
         _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
             GameInfo.FuncOffsets.EngineTick,
