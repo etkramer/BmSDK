@@ -54,7 +54,6 @@ internal static class ErrorOverlay
 
     private static void Draw(Canvas canvas, string[] lines)
     {
-        // canvas.Font = _Engine.GetSmallFont();
         canvas.SetDrawColor(255, 64, 64, 255);
 
         var y = MarginY;
