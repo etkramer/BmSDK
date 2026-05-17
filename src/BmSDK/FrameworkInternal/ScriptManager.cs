@@ -219,6 +219,8 @@ internal static class ScriptManager
     {
         lock (s_lockObj)
         {
+            ErrorOverlay.Clear();
+
             try
             {
                 var scriptsDir = FileUtils.GetScriptsPath();
